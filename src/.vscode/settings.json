@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "compare": "c",
+        "new": "c",
+        "decimal.h": "c",
+        "bit_lib.h": "c",
+        "type_traits": "c"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/emmonbea/Desktop/new_dec/src",
+            "binaryPath": "/home/emmonbea/Desktop/new_dec/src/test",
+            "binaryArgs": []
+        }
+    ]
+}
