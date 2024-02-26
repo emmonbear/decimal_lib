@@ -17,6 +17,7 @@
 #define ERRORS
 
 #include "./../../s21_decimal.h"
+#include <stdio.h>
 
 #define GREEN "\033[0;32m"
 #define ORANGE "\033[1;33m"
@@ -29,6 +30,7 @@
 
 void print_decimal_bits(s21_decimal value_1);
 void both_decimal_bits(s21_decimal value_1, s21_decimal value_2);
+void both_float_values(float value_1, float value_2);
 void print_line();
 
 #endif // DEBUG_H_

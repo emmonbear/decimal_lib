@@ -58,6 +58,11 @@ void both_decimal_bits(s21_decimal value_1, s21_decimal value_2) {
   print_decimal_bits(value_2);
 }
 
+void both_float_values(float value_1, float value_2) {
+  printf("implement: %f\n", value_1);
+  printf("calculate: %f\n", value_2);
+}
+
 void print_line() {
   printf(ORANGE"\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n"YELLOW);
 }
