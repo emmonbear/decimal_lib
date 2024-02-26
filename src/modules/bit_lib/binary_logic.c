@@ -11,6 +11,13 @@
 
 #include "../include/bit_lib.h"
 
+/**
+ * @brief Check if all bits of ${value} are zeros.
+ * 
+ * @param[in] value number of uint192_t type, bits of which must be checked.
+ * @return true - all bits are zero.
+ * @return false - not all bits are zero.
+ */
 bool is_eq_zero(uint192_t value) {
   bool res = true;
 
@@ -24,6 +31,13 @@ bool is_eq_zero(uint192_t value) {
   return res;
 }
 
+/**
+ * @brief Bitwise AND of two positive numbers of uint192_t type
+ *
+ * @param[in] value_1 uint192_t type number 
+ * @param[in] value_2 uint192_t type number 
+ * @return uint192_t - value_1 & value_2
+ */
 uint192_t binary_and(uint192_t value_1, uint192_t value_2) {
   uint192_t res = SET_ZERO;
 
@@ -34,6 +48,13 @@ uint192_t binary_and(uint192_t value_1, uint192_t value_2) {
   return res;
 }
 
+/**
+ * @brief Bitwise Exclusive OR of two positive numbers of uint192_t type
+ * 
+ * @param[in] value_1 uint192_t type number
+ * @param[in] value_2 uint192_t type number
+ * @return uint192_t - value_1 ^ value_2
+ */
 uint192_t binary_xor(uint192_t value_1, uint192_t value_2) {
   uint192_t res = SET_ZERO;
 
@@ -44,6 +65,12 @@ uint192_t binary_xor(uint192_t value_1, uint192_t value_2) {
   return res;
 }
 
+/**
+ * @brief Bitwise NOT for positive number uint192_t
+ * 
+ * @param[in] value uint192_t type number
+ * @return uint192_t - ~value
+ */
 uint192_t binary_not(uint192_t value) {
   uint192_t res = SET_ZERO;
 
@@ -54,12 +81,47 @@ uint192_t binary_not(uint192_t value) {
   return res;
 }
 
+/**
+ * @brief Get the high bit object
+ * 
+ * @param[in] value uint192_t type number
+ * @return int - high bit index
+ */
 int get_high_bit(uint192_t value) {
   int res = -1;
 
   for (int16_t i = MAX_BITS - 1; i >= 0; i--) {
     if (IS_SET_BIT(value, i)) {
       res = i;
+      break;
+    }
+  }
+
+  return res;
+}
+
+/**
+ * @brief
+ *
+ * @param value_1
+ * @param value_2
+ * @retval LESS = -1 - value_1 < value_2
+ * @retval EQUAL = 0 - value_1 = value_2
+ * @retval GREAT = 1 - value_1 > value_2
+ *
+ */
+int binary_compare(uint192_t value_1, uint192_t value_2) {
+  int res = EQUAL;
+
+  for (int i = MAX_BITS - 1; i >= 0; i--) {
+    bool bit_1 = IS_SET_BIT(value_1, i);
+    bool bit_2 = IS_SET_BIT(value_2, i);
+
+    if ((!bit_1) && (bit_2)) {
+      res = LESS;
+      break;
+    } else if ((bit_1) && (!bit_2)) {
+      res = GREATER;
       break;
     }
   }
