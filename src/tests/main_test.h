@@ -22,19 +22,19 @@
 // #define LESS_OR_EQUAL
 // #define IS_GREATER
 // #define GREATER_OR_EQUAL
-#define INT_TO_DECIMAL
+// #define INT_TO_DECIMAL
 // #define FLOAT_TO_DECIMAL
-#define DECIMAL_TO_INT
-#define DECIMAL_TO_FLOAT
+// #define DECIMAL_TO_INT
+// #define DECIMAL_TO_FLOAT
 // #define ROUND
 // #define FLOOR
-// #define TRUNCATE
+#define TRUNCATE
 // #define NEGATE
 
 #include "./debug/debug_test.h"
 #include "./test_modules/include/arithmetic_test.h"
 // #include "./test_modules/include/comparison.h"
 #include "./test_modules/include/convertors_test.h"
-// #include "./test_modules/include/rounders.h"
+#include "./test_modules/include/rounders_test.h"
 
 #endif  // TESTS_H_
