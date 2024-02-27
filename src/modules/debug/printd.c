@@ -305,7 +305,9 @@ static void insert_dot(char *str, int pos) {
     str[i + 1] = str[i];
   }
 
-  str[pos] = '.';
+  if(str[pos] != '\0') {
+    str[pos] = '.';
+  }
 }
 
 void printLd(uint192_t value, char *new_line) {
