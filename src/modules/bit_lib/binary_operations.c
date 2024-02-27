@@ -4,16 +4,16 @@
  * @brief Bit operations module
  * @version 0.1
  * @date 2024-02-26
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "../include/bit_lib.h"
 
 /**
  * @brief Bitwise addition of two positive numbers of uint192_t type
- * 
+ *
  * @param[in] value_1 first summand
  * @param[in] value_2 second summand
  * @return uint192_t - value_1 + value_2
@@ -34,7 +34,7 @@ uint192_t binary_add(uint192_t value_1, uint192_t value_2) {
 
 /**
  * @brief Bitwise subtraction of two positive numbers of uint192_t type
- * 
+ *
  * @param[in] value_1 removable
  * @param[in] value_2 subtracted
  * @return uint192_t - value_1 - value_2
@@ -50,7 +50,7 @@ uint192_t binary_sub(uint192_t value_1, uint192_t value_2) {
 
 /**
  * @brief Bitwise multiplication of two positive numbers of uint192_t type
- * 
+ *
  * @param[in] value_1 multiplied
  * @param[in] value_2 multiplier
  * @return uint192_t - value_1 * value_2
@@ -73,7 +73,7 @@ uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
 
 /**
  * @brief Bitwise division of two positive numbers of uint192_t type
- * 
+ *
  * @param[in] value_1 divisible
  * @param[in] value_2 divider
  * @param[out] remainder remainder of division
@@ -180,4 +180,51 @@ void shift_right(uint192_t *value, unsigned int shift) {
       carry = temp;
     }
   }
+}
+
+/**
+ * @brief Normalization the orders of powers of the numbers value_1 and value_2
+ *
+ * @param[out] value_1 Pointer to number of uint192_t type
+ * @param[out] value_2 Pointer to number of uint192_t type
+ */
+void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2)
+{
+  uint8_t power_1 = GET_POWER(Lvalue_1->Lbits[DEC_SIZE - 1]);
+  uint8_t power_2 = GET_POWER(Lvalue_2->Lbits[DEC_SIZE - 1]);
+
+  zero_service_bits(Lvalue_1, Lvalue_2);
+  if (power_1 > power_2) {
+    *Lvalue_2 = binary_mul(*Lvalue_2, get_ten_pow(power_1 - power_2));
+  } else if (power_1 < power_2) {
+    *Lvalue_1 = binary_mul(*Lvalue_1, get_ten_pow(power_2 - power_1));
+  }
+
+}
+
+void zero_service_bits(uint192_t *value_1, uint192_t *value_2)
+{
+  value_1->Lbits[DEC_SIZE] = 0;
+  value_2->Lbits[DEC_SIZE] = 0;
+}
+
+uint192_t decimal_to_uint192(decimal_t value) {
+  uint192_t res = SET_ZERO;
+
+  for (uint8_t i = 0; i < DEC_SIZE; i++) {
+    res.Lbits[i] = value.bits[i];
+  }
+
+  return res;
+}
+
+uint192_t get_ten_pow(uint8_t pow) {
+  uint192_t res = {{1}};
+  uint192_t ten = {{10}};
+
+  for (uint8_t i = 0; i < pow; i++) {
+    res = binary_mul(res, ten);
+  }
+
+  return res;
 }
