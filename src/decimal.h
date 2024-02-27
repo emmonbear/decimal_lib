@@ -15,5 +15,6 @@
 #include "./modules/include/bit_lib.h"
 #include "./modules/include/common.h"
 #include "./modules/include/macros.h"
+#include "./modules/include/convertors.h"
 
 #endif  // DECIMAL_H
