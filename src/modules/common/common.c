@@ -39,5 +39,5 @@ decimal_t dcml_abs(decimal_t value) {
 }
 
 void dcml_set_sign(decimal_t *value) {
-  value->bits[DEC_SIZE -1] |= 0x80000000;
+  value->bits[DEC_SIZE - 1] |= 0x80000000;
 }
