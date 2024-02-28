@@ -4,7 +4,12 @@
         "new": "c",
         "decimal.h": "c",
         "bit_lib.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "system_error": "c"
     },
     "makefile.launchConfigurations": [
         {
