@@ -19,11 +19,11 @@ int s21_is_less(decimal_t value_1, decimal_t value_2) {
   if ((s21_is_equal(value_1, (decimal_t)DCML_ZERO)) &&
       (s21_is_equal(value_2, (decimal_t)DCML_ZERO))) {
     err_code = COMPARISON_FALSE;
-  } else if ((sign_1 == NEGATIVE) && (sign_1 == POSITIVE)) {
+  } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
     err_code = COMPARISON_FALSE;
-  } else if ((sign_1 == POSITIVE) && (sign_1 == NEGATIVE)) {
+  } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
     err_code = COMPARISON_FALSE;
-  } else if ((sign_1 == NEGATIVE) && (sign_1 == NEGATIVE)) {
+  } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
     err_code = is_less_positive(dcml_abs(value_2), dcml_abs(value_1));
   } else {
     err_code = is_less_positive(value_1, value_2);
