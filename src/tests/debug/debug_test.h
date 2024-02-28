@@ -4,9 +4,9 @@
  * @brief Header for debug module
  * @version 1.0
  * @date 2024-02-23
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #ifndef DEBUG_H_
@@ -16,8 +16,9 @@
 #define CALCULATOR
 #define ERRORS
 
-#include "./../../s21_decimal.h"
 #include <stdio.h>
+
+#include "./../../s21_decimal.h"
 
 #define GREEN "\033[0;32m"
 #define ORANGE "\033[1;33m"
@@ -33,4 +34,4 @@ void both_decimal_bits(s21_decimal value_1, s21_decimal value_2);
 void both_float_values(float value_1, float value_2);
 void print_line();
 
-#endif // DEBUG_H_
+#endif  // DEBUG_H_

@@ -11,7 +11,8 @@
 
 #include "./../../main_test.h"
 
-static void s21_test_from_int_to_decimal(int value, s21_decimal result, int code, char *text, int count);
+static void s21_test_from_int_to_decimal(int value, s21_decimal result,
+                                         int code, char *text, int count);
 
 START_TEST(s21_from_int_to_decimal_1) {
   char *example = "int_to_decimal(1122569138) = 1122569138";
@@ -100022,11 +100023,12 @@ START_TEST(s21_from_int_to_decimal_10000) {
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_1(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №1)\n");
+Suite *s21_from_int_to_decimal_case_1(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №1)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3);
@@ -100137,11 +100139,12 @@ Suite *s21_from_int_to_decimal_case_1(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_2(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №2)\n");
+Suite *s21_from_int_to_decimal_case_2(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №2)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_103);
@@ -100252,11 +100255,12 @@ Suite *s21_from_int_to_decimal_case_2(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_3(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №3)\n");
+Suite *s21_from_int_to_decimal_case_3(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №3)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_203);
@@ -100367,11 +100371,12 @@ Suite *s21_from_int_to_decimal_case_3(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_4(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №4)\n");
+Suite *s21_from_int_to_decimal_case_4(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №4)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_303);
@@ -100482,11 +100487,12 @@ Suite *s21_from_int_to_decimal_case_4(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_5(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №5)\n");
+Suite *s21_from_int_to_decimal_case_5(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №5)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_403);
@@ -100597,11 +100603,12 @@ Suite *s21_from_int_to_decimal_case_5(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_6(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №6)\n");
+Suite *s21_from_int_to_decimal_case_6(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №6)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_503);
@@ -100712,11 +100719,12 @@ Suite *s21_from_int_to_decimal_case_6(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_7(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №7)\n");
+Suite *s21_from_int_to_decimal_case_7(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №7)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_603);
@@ -100827,11 +100835,12 @@ Suite *s21_from_int_to_decimal_case_7(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_8(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №8)\n");
+Suite *s21_from_int_to_decimal_case_8(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №8)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_703);
@@ -100942,11 +100951,12 @@ Suite *s21_from_int_to_decimal_case_8(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_9(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №9)\n");
+Suite *s21_from_int_to_decimal_case_9(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №9)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_803);
@@ -101057,11 +101067,12 @@ Suite *s21_from_int_to_decimal_case_9(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_10(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №10)\n");
+Suite *s21_from_int_to_decimal_case_10(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №10)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_903);
@@ -101172,11 +101183,12 @@ Suite *s21_from_int_to_decimal_case_10(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_11(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №11)\n");
+Suite *s21_from_int_to_decimal_case_11(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №11)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1003);
@@ -101287,11 +101299,12 @@ Suite *s21_from_int_to_decimal_case_11(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_12(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №12)\n");
+Suite *s21_from_int_to_decimal_case_12(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №12)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1103);
@@ -101402,11 +101415,12 @@ Suite *s21_from_int_to_decimal_case_12(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_13(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №13)\n");
+Suite *s21_from_int_to_decimal_case_13(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №13)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1203);
@@ -101517,11 +101531,12 @@ Suite *s21_from_int_to_decimal_case_13(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_14(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №14)\n");
+Suite *s21_from_int_to_decimal_case_14(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №14)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1303);
@@ -101632,11 +101647,12 @@ Suite *s21_from_int_to_decimal_case_14(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_15(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №15)\n");
+Suite *s21_from_int_to_decimal_case_15(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №15)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1403);
@@ -101747,11 +101763,12 @@ Suite *s21_from_int_to_decimal_case_15(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_16(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №16)\n");
+Suite *s21_from_int_to_decimal_case_16(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №16)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1503);
@@ -101862,11 +101879,12 @@ Suite *s21_from_int_to_decimal_case_16(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_17(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №17)\n");
+Suite *s21_from_int_to_decimal_case_17(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №17)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1603);
@@ -101977,11 +101995,12 @@ Suite *s21_from_int_to_decimal_case_17(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_18(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №18)\n");
+Suite *s21_from_int_to_decimal_case_18(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №18)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1703);
@@ -102092,11 +102111,12 @@ Suite *s21_from_int_to_decimal_case_18(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_19(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №19)\n");
+Suite *s21_from_int_to_decimal_case_19(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №19)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1803);
@@ -102207,11 +102227,12 @@ Suite *s21_from_int_to_decimal_case_19(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_20(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №20)\n");
+Suite *s21_from_int_to_decimal_case_20(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №20)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_1903);
@@ -102322,11 +102343,12 @@ Suite *s21_from_int_to_decimal_case_20(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_21(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №21)\n");
+Suite *s21_from_int_to_decimal_case_21(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №21)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2003);
@@ -102437,11 +102459,12 @@ Suite *s21_from_int_to_decimal_case_21(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_22(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №22)\n");
+Suite *s21_from_int_to_decimal_case_22(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №22)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2103);
@@ -102552,11 +102575,12 @@ Suite *s21_from_int_to_decimal_case_22(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_23(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №23)\n");
+Suite *s21_from_int_to_decimal_case_23(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №23)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2203);
@@ -102667,11 +102691,12 @@ Suite *s21_from_int_to_decimal_case_23(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_24(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №24)\n");
+Suite *s21_from_int_to_decimal_case_24(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №24)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2303);
@@ -102782,11 +102807,12 @@ Suite *s21_from_int_to_decimal_case_24(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_25(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №25)\n");
+Suite *s21_from_int_to_decimal_case_25(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №25)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2403);
@@ -102897,11 +102923,12 @@ Suite *s21_from_int_to_decimal_case_25(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_26(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №26)\n");
+Suite *s21_from_int_to_decimal_case_26(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №26)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2503);
@@ -103012,11 +103039,12 @@ Suite *s21_from_int_to_decimal_case_26(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_27(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №27)\n");
+Suite *s21_from_int_to_decimal_case_27(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №27)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2603);
@@ -103127,11 +103155,12 @@ Suite *s21_from_int_to_decimal_case_27(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_28(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №28)\n");
+Suite *s21_from_int_to_decimal_case_28(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №28)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2703);
@@ -103242,11 +103271,12 @@ Suite *s21_from_int_to_decimal_case_28(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_29(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №29)\n");
+Suite *s21_from_int_to_decimal_case_29(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №29)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2803);
@@ -103357,11 +103387,12 @@ Suite *s21_from_int_to_decimal_case_29(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_30(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №30)\n");
+Suite *s21_from_int_to_decimal_case_30(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №30)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_2903);
@@ -103472,11 +103503,12 @@ Suite *s21_from_int_to_decimal_case_30(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_31(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №31)\n");
+Suite *s21_from_int_to_decimal_case_31(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №31)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3003);
@@ -103587,11 +103619,12 @@ Suite *s21_from_int_to_decimal_case_31(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_32(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №32)\n");
+Suite *s21_from_int_to_decimal_case_32(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №32)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3103);
@@ -103702,11 +103735,12 @@ Suite *s21_from_int_to_decimal_case_32(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_33(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №33)\n");
+Suite *s21_from_int_to_decimal_case_33(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №33)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3203);
@@ -103817,11 +103851,12 @@ Suite *s21_from_int_to_decimal_case_33(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_34(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №34)\n");
+Suite *s21_from_int_to_decimal_case_34(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №34)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3303);
@@ -103932,11 +103967,12 @@ Suite *s21_from_int_to_decimal_case_34(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_35(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №35)\n");
+Suite *s21_from_int_to_decimal_case_35(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №35)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3403);
@@ -104047,11 +104083,12 @@ Suite *s21_from_int_to_decimal_case_35(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_36(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №36)\n");
+Suite *s21_from_int_to_decimal_case_36(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №36)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3503);
@@ -104162,11 +104199,12 @@ Suite *s21_from_int_to_decimal_case_36(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_37(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №37)\n");
+Suite *s21_from_int_to_decimal_case_37(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №37)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3603);
@@ -104277,11 +104315,12 @@ Suite *s21_from_int_to_decimal_case_37(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_38(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №38)\n");
+Suite *s21_from_int_to_decimal_case_38(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №38)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3703);
@@ -104392,11 +104431,12 @@ Suite *s21_from_int_to_decimal_case_38(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_39(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №39)\n");
+Suite *s21_from_int_to_decimal_case_39(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №39)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3803);
@@ -104507,11 +104547,12 @@ Suite *s21_from_int_to_decimal_case_39(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_40(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №40)\n");
+Suite *s21_from_int_to_decimal_case_40(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №40)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_3903);
@@ -104622,11 +104663,12 @@ Suite *s21_from_int_to_decimal_case_40(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_41(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №41)\n");
+Suite *s21_from_int_to_decimal_case_41(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №41)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4003);
@@ -104737,11 +104779,12 @@ Suite *s21_from_int_to_decimal_case_41(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_42(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №42)\n");
+Suite *s21_from_int_to_decimal_case_42(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №42)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4103);
@@ -104852,11 +104895,12 @@ Suite *s21_from_int_to_decimal_case_42(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_43(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №43)\n");
+Suite *s21_from_int_to_decimal_case_43(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №43)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4203);
@@ -104967,11 +105011,12 @@ Suite *s21_from_int_to_decimal_case_43(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_44(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №44)\n");
+Suite *s21_from_int_to_decimal_case_44(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №44)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4303);
@@ -105082,11 +105127,12 @@ Suite *s21_from_int_to_decimal_case_44(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_45(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №45)\n");
+Suite *s21_from_int_to_decimal_case_45(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №45)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4403);
@@ -105197,11 +105243,12 @@ Suite *s21_from_int_to_decimal_case_45(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_46(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №46)\n");
+Suite *s21_from_int_to_decimal_case_46(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №46)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4503);
@@ -105312,11 +105359,12 @@ Suite *s21_from_int_to_decimal_case_46(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_47(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №47)\n");
+Suite *s21_from_int_to_decimal_case_47(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №47)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4603);
@@ -105427,11 +105475,12 @@ Suite *s21_from_int_to_decimal_case_47(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_48(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №48)\n");
+Suite *s21_from_int_to_decimal_case_48(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №48)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4703);
@@ -105542,11 +105591,12 @@ Suite *s21_from_int_to_decimal_case_48(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_49(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №49)\n");
+Suite *s21_from_int_to_decimal_case_49(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №49)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4803);
@@ -105657,11 +105707,12 @@ Suite *s21_from_int_to_decimal_case_49(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_50(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №50)\n");
+Suite *s21_from_int_to_decimal_case_50(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №50)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_4903);
@@ -105772,11 +105823,12 @@ Suite *s21_from_int_to_decimal_case_50(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_51(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №51)\n");
+Suite *s21_from_int_to_decimal_case_51(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №51)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5003);
@@ -105887,11 +105939,12 @@ Suite *s21_from_int_to_decimal_case_51(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_52(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №52)\n");
+Suite *s21_from_int_to_decimal_case_52(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №52)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5103);
@@ -106002,11 +106055,12 @@ Suite *s21_from_int_to_decimal_case_52(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_53(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №53)\n");
+Suite *s21_from_int_to_decimal_case_53(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №53)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5203);
@@ -106117,11 +106171,12 @@ Suite *s21_from_int_to_decimal_case_53(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_54(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №54)\n");
+Suite *s21_from_int_to_decimal_case_54(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №54)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5303);
@@ -106232,11 +106287,12 @@ Suite *s21_from_int_to_decimal_case_54(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_55(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №55)\n");
+Suite *s21_from_int_to_decimal_case_55(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №55)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5403);
@@ -106347,11 +106403,12 @@ Suite *s21_from_int_to_decimal_case_55(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_56(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №56)\n");
+Suite *s21_from_int_to_decimal_case_56(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №56)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5503);
@@ -106462,11 +106519,12 @@ Suite *s21_from_int_to_decimal_case_56(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_57(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №57)\n");
+Suite *s21_from_int_to_decimal_case_57(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №57)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5603);
@@ -106577,11 +106635,12 @@ Suite *s21_from_int_to_decimal_case_57(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_58(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №58)\n");
+Suite *s21_from_int_to_decimal_case_58(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №58)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5703);
@@ -106692,11 +106751,12 @@ Suite *s21_from_int_to_decimal_case_58(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_59(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №59)\n");
+Suite *s21_from_int_to_decimal_case_59(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №59)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5803);
@@ -106807,11 +106867,12 @@ Suite *s21_from_int_to_decimal_case_59(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_60(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №60)\n");
+Suite *s21_from_int_to_decimal_case_60(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №60)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_5903);
@@ -106922,11 +106983,12 @@ Suite *s21_from_int_to_decimal_case_60(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_61(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №61)\n");
+Suite *s21_from_int_to_decimal_case_61(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №61)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6003);
@@ -107037,11 +107099,12 @@ Suite *s21_from_int_to_decimal_case_61(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_62(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №62)\n");
+Suite *s21_from_int_to_decimal_case_62(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №62)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6103);
@@ -107152,11 +107215,12 @@ Suite *s21_from_int_to_decimal_case_62(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_63(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №63)\n");
+Suite *s21_from_int_to_decimal_case_63(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №63)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6203);
@@ -107267,11 +107331,12 @@ Suite *s21_from_int_to_decimal_case_63(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_64(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №64)\n");
+Suite *s21_from_int_to_decimal_case_64(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №64)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6303);
@@ -107382,11 +107447,12 @@ Suite *s21_from_int_to_decimal_case_64(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_65(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №65)\n");
+Suite *s21_from_int_to_decimal_case_65(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №65)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6403);
@@ -107497,11 +107563,12 @@ Suite *s21_from_int_to_decimal_case_65(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_66(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №66)\n");
+Suite *s21_from_int_to_decimal_case_66(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №66)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6503);
@@ -107612,11 +107679,12 @@ Suite *s21_from_int_to_decimal_case_66(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_67(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №67)\n");
+Suite *s21_from_int_to_decimal_case_67(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №67)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6603);
@@ -107727,11 +107795,12 @@ Suite *s21_from_int_to_decimal_case_67(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_68(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №68)\n");
+Suite *s21_from_int_to_decimal_case_68(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №68)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6703);
@@ -107842,11 +107911,12 @@ Suite *s21_from_int_to_decimal_case_68(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_69(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №69)\n");
+Suite *s21_from_int_to_decimal_case_69(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №69)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6803);
@@ -107957,11 +108027,12 @@ Suite *s21_from_int_to_decimal_case_69(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_70(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №70)\n");
+Suite *s21_from_int_to_decimal_case_70(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №70)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_6903);
@@ -108072,11 +108143,12 @@ Suite *s21_from_int_to_decimal_case_70(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_71(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №71)\n");
+Suite *s21_from_int_to_decimal_case_71(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №71)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7003);
@@ -108187,11 +108259,12 @@ Suite *s21_from_int_to_decimal_case_71(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_72(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №72)\n");
+Suite *s21_from_int_to_decimal_case_72(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №72)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7103);
@@ -108302,11 +108375,12 @@ Suite *s21_from_int_to_decimal_case_72(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_73(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №73)\n");
+Suite *s21_from_int_to_decimal_case_73(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №73)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7203);
@@ -108417,11 +108491,12 @@ Suite *s21_from_int_to_decimal_case_73(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_74(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №74)\n");
+Suite *s21_from_int_to_decimal_case_74(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №74)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7303);
@@ -108532,11 +108607,12 @@ Suite *s21_from_int_to_decimal_case_74(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_75(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №75)\n");
+Suite *s21_from_int_to_decimal_case_75(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №75)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7403);
@@ -108647,11 +108723,12 @@ Suite *s21_from_int_to_decimal_case_75(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_76(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №76)\n");
+Suite *s21_from_int_to_decimal_case_76(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №76)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7503);
@@ -108762,11 +108839,12 @@ Suite *s21_from_int_to_decimal_case_76(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_77(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №77)\n");
+Suite *s21_from_int_to_decimal_case_77(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №77)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7603);
@@ -108877,11 +108955,12 @@ Suite *s21_from_int_to_decimal_case_77(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_78(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №78)\n");
+Suite *s21_from_int_to_decimal_case_78(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №78)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7703);
@@ -108992,11 +109071,12 @@ Suite *s21_from_int_to_decimal_case_78(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_79(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №79)\n");
+Suite *s21_from_int_to_decimal_case_79(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №79)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7803);
@@ -109107,11 +109187,12 @@ Suite *s21_from_int_to_decimal_case_79(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_80(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №80)\n");
+Suite *s21_from_int_to_decimal_case_80(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №80)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_7903);
@@ -109222,11 +109303,12 @@ Suite *s21_from_int_to_decimal_case_80(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_81(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №81)\n");
+Suite *s21_from_int_to_decimal_case_81(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №81)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8003);
@@ -109337,11 +109419,12 @@ Suite *s21_from_int_to_decimal_case_81(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_82(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №82)\n");
+Suite *s21_from_int_to_decimal_case_82(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №82)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8103);
@@ -109452,11 +109535,12 @@ Suite *s21_from_int_to_decimal_case_82(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_83(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №83)\n");
+Suite *s21_from_int_to_decimal_case_83(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №83)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8203);
@@ -109567,11 +109651,12 @@ Suite *s21_from_int_to_decimal_case_83(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_84(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №84)\n");
+Suite *s21_from_int_to_decimal_case_84(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №84)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8303);
@@ -109682,11 +109767,12 @@ Suite *s21_from_int_to_decimal_case_84(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_85(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №85)\n");
+Suite *s21_from_int_to_decimal_case_85(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №85)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8403);
@@ -109797,11 +109883,12 @@ Suite *s21_from_int_to_decimal_case_85(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_86(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №86)\n");
+Suite *s21_from_int_to_decimal_case_86(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №86)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8503);
@@ -109912,11 +109999,12 @@ Suite *s21_from_int_to_decimal_case_86(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_87(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №87)\n");
+Suite *s21_from_int_to_decimal_case_87(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №87)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8603);
@@ -110027,11 +110115,12 @@ Suite *s21_from_int_to_decimal_case_87(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_88(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №88)\n");
+Suite *s21_from_int_to_decimal_case_88(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №88)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8703);
@@ -110142,11 +110231,12 @@ Suite *s21_from_int_to_decimal_case_88(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_89(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №89)\n");
+Suite *s21_from_int_to_decimal_case_89(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №89)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8803);
@@ -110257,11 +110347,12 @@ Suite *s21_from_int_to_decimal_case_89(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_90(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №90)\n");
+Suite *s21_from_int_to_decimal_case_90(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №90)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_8903);
@@ -110372,11 +110463,12 @@ Suite *s21_from_int_to_decimal_case_90(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_91(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №91)\n");
+Suite *s21_from_int_to_decimal_case_91(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №91)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9001);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9002);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9003);
@@ -110487,11 +110579,12 @@ Suite *s21_from_int_to_decimal_case_91(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_92(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №92)\n");
+Suite *s21_from_int_to_decimal_case_92(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №92)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9101);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9102);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9103);
@@ -110602,11 +110695,12 @@ Suite *s21_from_int_to_decimal_case_92(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_93(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №93)\n");
+Suite *s21_from_int_to_decimal_case_93(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №93)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9201);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9202);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9203);
@@ -110717,11 +110811,12 @@ Suite *s21_from_int_to_decimal_case_93(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_94(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №94)\n");
+Suite *s21_from_int_to_decimal_case_94(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №94)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9301);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9302);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9303);
@@ -110832,11 +110927,12 @@ Suite *s21_from_int_to_decimal_case_94(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_95(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №95)\n");
+Suite *s21_from_int_to_decimal_case_95(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №95)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9401);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9402);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9403);
@@ -110947,11 +111043,12 @@ Suite *s21_from_int_to_decimal_case_95(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_96(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №96)\n");
+Suite *s21_from_int_to_decimal_case_96(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №96)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9501);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9502);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9503);
@@ -111062,11 +111159,12 @@ Suite *s21_from_int_to_decimal_case_96(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_97(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №97)\n");
+Suite *s21_from_int_to_decimal_case_97(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №97)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9601);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9602);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9603);
@@ -111177,11 +111275,12 @@ Suite *s21_from_int_to_decimal_case_97(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_98(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №98)\n");
+Suite *s21_from_int_to_decimal_case_98(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №98)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9701);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9702);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9703);
@@ -111292,11 +111391,12 @@ Suite *s21_from_int_to_decimal_case_98(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_99(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №99)\n");
+Suite *s21_from_int_to_decimal_case_99(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №99)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9801);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9802);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9803);
@@ -111407,11 +111507,12 @@ Suite *s21_from_int_to_decimal_case_99(void)
  *
  * @return Suite*
  */
-Suite *s21_from_int_to_decimal_case_100(void)
-{
-  Suite *decimal = suite_create("\ns21_decimal (s21_from_int_to_decimal case №100)\n");
+Suite *s21_from_int_to_decimal_case_100(void) {
+  Suite *decimal =
+      suite_create("\ns21_decimal (s21_from_int_to_decimal case №100)\n");
 
-  TCase *tc_s21_from_int_to_decimal = tcase_create("s21_from_int_to_decimal_test");
+  TCase *tc_s21_from_int_to_decimal =
+      tcase_create("s21_from_int_to_decimal_test");
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9901);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9902);
   tcase_add_test(tc_s21_from_int_to_decimal, s21_from_int_to_decimal_9903);
@@ -111517,7 +111618,8 @@ Suite *s21_from_int_to_decimal_case_100(void)
   return decimal;
 }
 
-static void s21_test_from_int_to_decimal(int value, s21_decimal result, int code, char *text, int count) {
+static void s21_test_from_int_to_decimal(int value, s21_decimal result,
+                                         int code, char *text, int count) {
   s21_decimal implement_result = {{0x0}};
   int implement_code = s21_from_int_to_decimal(value, &implement_result);
   int res = (implement_code == code);
@@ -111527,21 +111629,24 @@ static void s21_test_from_int_to_decimal(int value, s21_decimal result, int code
   }
 #ifdef DEBUG
 #ifndef ERRORS
-  if(res == 2) {
-    printf("Test №%d: %s\n%s%s\n", count, GREEN"TEST_PASSED", RESET"Subformul:   ", text);
+  if (res == 2) {
+    printf("Test №%d: %s\n%s%s\n", count, GREEN "TEST_PASSED",
+           RESET "Subformul:   ", text);
     both_decimal_bits(implement_result, result);
     print_line();
   }
-#endif // ERRORS
+#endif  // ERRORS
 
-  if(res != 2) {
-    printf("Test №%d: %s\n%s%s\n", count, RED"TEST_FAILED", RESET"Subformul:   ", text);
+  if (res != 2) {
+    printf("Test №%d: %s\n%s%s\n", count, RED "TEST_FAILED",
+           RESET "Subformul:   ", text);
     if (res == 0) {
-      printf("Implementation code = %s%d%s\nOriginal funcs code = %s%d%s\n\n", RED, implement_code, RESET, GREEN, code, RESET);
+      printf("Implementation code = %s%d%s\nOriginal funcs code = %s%d%s\n\n",
+             RED, implement_code, RESET, GREEN, code, RESET);
     }
     both_decimal_bits(implement_result, result);
     print_line();
   }
-#endif // DEBUG
+#endif  // DEBUG
   ck_assert_int_eq(res, 2);
 }

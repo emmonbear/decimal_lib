@@ -12,7 +12,7 @@
 #ifndef TESTS_H_
 #define TESTS_H_
 
-// #define ADD
+#define ADD
 // #define SUB
 // #define MUL
 // #define DIV
@@ -28,7 +28,7 @@
 // #define DECIMAL_TO_FLOAT
 // #define ROUND
 // #define FLOOR
-#define TRUNCATE
+// #define TRUNCATE
 // #define NEGATE
 
 #include "./debug/debug_test.h"
