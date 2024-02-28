@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "./../include/bit_lib.h"
+#include "./../include/common.h"
 #include "./debug.h"
 
 static char *add(char *num_1, char *num_2);
@@ -305,7 +305,7 @@ static void insert_dot(char *str, int pos) {
     str[i + 1] = str[i];
   }
 
-  if(str[pos] != '\0') {
+  if (str[pos] != '\0') {
     str[pos] = '.';
   }
 }
@@ -513,7 +513,7 @@ void printLd(uint192_t value, char *new_line) {
     }
   }
 
-  for (int i = 0; i < (LDEC_SIZE * (UINT_BITS - 1) ); i++) {
+  for (int i = 0; i < (LDEC_SIZE * (UINT_BITS - 1)); i++) {
     iteration = add(bits[i], bits[i + 1]);
     sprintf(bits[i + 1], "%s", iteration);
   }
