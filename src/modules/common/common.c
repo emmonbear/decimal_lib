@@ -34,6 +34,10 @@ uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
 
 decimal_t dcml_abs(decimal_t value) {
   decimal_t res = value;
-  res.bits[DEC_SIZE - 1] |= 0x80000000;
+  res.bits[DEC_SIZE - 1] = (res.bits[DEC_SIZE - 1] << 1) >> 1;
   return res;
+}
+
+void dcml_set_sign(decimal_t *value) {
+  value->bits[DEC_SIZE -1] |= 0x80000000;
 }
