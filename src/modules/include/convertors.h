@@ -19,6 +19,6 @@ typedef enum {
   ERROR,
 } converter_code;
 
-// int s21_from_float_to_decimal(float src, decimal_t *dst);
+int s21_from_float_to_decimal(float src, decimal_t *dst);
 
 #endif  // CONVERTERS_H_

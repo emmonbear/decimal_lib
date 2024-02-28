@@ -15,70 +15,68 @@
 
 #include "./../include/convertors.h"
 
-#define INT_PART(x) log10(x) + 1
+static void get_clean_value(char *str);
+static int get_char_exponent(char *str);
 
-// static int clear_dot(char *str);
+typedef enum {
+  DCML_PRECISION = 28,
+  FLT_PRECISION = 6,
+} constants;
 
-// int s21_from_float_to_decimal(float src, decimal_t *dst) {
-// bool sign = 0;
+int s21_from_float_to_decimal(float src, decimal_t *dst) {
+  *dst = (decimal_t){0};
 
-// if (!dst) {
-//   return ERROR;
-// } else if(src < 0) {
-//   src *= -1;
-//   sign = 1;
-// }
+  if (!dst || src != src || src == 1.0 / 0.0 ||
+      fabs(src) > 79228162514264337593543950335.0) {
+    return ERROR;
+  }
 
-// *dst = (decimal_t){0};
-// int integer_part = INT_PART(src);
-// int significant = 0;
-// short exponent = 0;
-// char src_str[exponent + 8];
+  if (!src) {
+    return OK;
+  }
 
-// while (fabs(src) <= 1) {
-//   src *= 10;
-//   exponent++;
-// }
-// while (fabsf(src) >= 10) {
-//   src /= 10;
-//   exponent--;
-// }
+  char str[15];
+  sprintf(str, "%.6E", fabsf(src));
+  int exponent = get_char_exponent(str);
 
-// sprintf(src_str, "%f", src);
-// clear_dot(src_str);
-// significant = atoi(src_str);
-// dst->bits[0] = significant;
+  if (exponent <= -23) {
+    int correct_scale = exponent + DCML_PRECISION;
+    sprintf(str, "%.*E", correct_scale, fabsf(src));
+    exponent = get_char_exponent(str) + FLT_PRECISION - correct_scale;
+  }
 
-// if(integer_part < 0) {
-//   dst->bits[3] |= exponent << 16;
-// } else if(integer_part > 7) {
-//   uint192_t long_dst = decimal_to_uint192(*dst);
-//   long_dst = binary_mul(long_dst, get_ten_pow(abs(exponent) - 6));
-//   dst->bits[0] = long_dst.Lbits[0];
-//   dst->bits[1] = long_dst.Lbits[1];
-//   dst->bits[2] = long_dst.Lbits[2];
-// } else {
-//   dst->bits[3] |= (7 - (1 + abs(exponent))) << 16;
-// }
+  get_clean_value(str);
 
-// dst->bits[3] |= sign;
+  dst->bits[0] = atoi(str);
 
-// return OK;
-// }
+  if (exponent <= 0) {
+    SET_SCALE(dst->bits[3], (FLT_PRECISION + abs(exponent)));
+  } else if (exponent > FLT_PRECISION) {
+    uint192_t long_dst = DCML_ZERO;
+    long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
+    *dst = uint192_to_decimal(long_dst);
+  } else {
+    SET_SCALE(dst->bits[3], (FLT_PRECISION - abs(exponent)));
+  }
 
-// static int clear_dot(char *str) {
-// bool dot = 0;
-// int after_dot = 0;
+  SET_ZIGN(dst->bits[3], ((src < 0) ? 1 : 0));
 
-// for (size_t i = 0; i < strlen(str); i++) {
-//   if(str[i] == '.') {
-//     dot = 1;
-//   }
-//   if(dot) {
-//     str[i] = str[i + 1];
-//     after_dot++;
-//   }
-// }
+  return OK;
+}
 
-// return after_dot;
-// }
+static void get_clean_value(char *str) {
+  str[strlen(str) - 4] = '\0';
+  char *dot_position = strchr(str, '.');
+
+  if (dot_position) {
+    dot_position++;
+    sprintf(str, "%c%s\n", str[0], dot_position);
+  }
+}
+
+static int get_char_exponent(char *str) {
+  char *ptr = strchr(str, 'E');
+  ptr++;
+
+  return strtol(ptr, NULL, 10);
+}
