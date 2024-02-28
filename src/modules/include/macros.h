@@ -1,12 +1,12 @@
 /**
  * @file macros.h
  * @author emmonbea (https://github.com/emmonbear)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-02-28
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #ifndef MACROS_H
@@ -48,11 +48,15 @@
 
 #define GET_SIGN(value) ((value) >> 31)
 
+#define SET_SCALE(value, scale) value |= (scale) << 16
+/// @todo На вход должна подаваться мантисса, исправить везде на дефайн выше.
 #define SET_POWER(value, power) value.Lbits[DEC_SIZE - 1] |= (power) << 16
 
 // #define DCML_SET_POWER(value, power) value,bits[DEC_SIZE - 1] |= (power) <<
 // 16
 
+#define SET_ZIGN(value, sign) value |= (sign) << 31
+/// @todo Zдесь тоже самое.
 #define SET_SIGN(value, sign) value.Lbits[DEC_SIZE - 1] |= (sign) << 31
 
 #endif  // MACROS_H
