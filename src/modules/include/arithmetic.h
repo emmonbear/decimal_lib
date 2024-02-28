@@ -13,6 +13,7 @@
 #define ARITHMETIC_H
 
 #include "./common.h"
+#include "./comparison.h"
 
 typedef enum {
   OK,
@@ -21,6 +22,9 @@ typedef enum {
   ZERO_DIV,
 } arithmetic_code;
 
-int s21_add_positive(decimal_t value_1, decimal_t value_2, decimal_t *res);
+int s21_add(decimal_t value_1, decimal_t value_2, decimal_t *result);
+int add_positive(decimal_t value_1, decimal_t value_2, decimal_t *res);
+
+int sub_positive(decimal_t value_1, decimal_t value_2, decimal_t *result);
 
 #endif  // ARITHMETIC_H
