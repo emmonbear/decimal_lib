@@ -38,8 +38,8 @@ typedef struct {
 
 /// @brief Enumeration of decimal_t signs
 typedef enum {
-  SIGN_POSITIVE = 0,  ///< Positive sign
-  SIGN_NEGATIVE = 1,  ///< Negative sign
+  POSITIVE = 0,  ///< Positive sign
+  NEGATIVE = 1,  ///< Negative sign
 } decimal_sign;
 
 typedef enum {
@@ -75,7 +75,6 @@ uint192_t decimal_to_uint192(decimal_t value);
 uint192_t get_ten_pow(uint8_t pow);
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2);
 uint8_t get_divider(uint192_t value);
-uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
 decimal_t uint192_to_decimal(uint192_t value);
 //==============================================================================
 
@@ -87,4 +86,10 @@ bool is_eq_zero(uint192_t value);
 int binary_compare(uint192_t value_1, uint192_t value_2);
 bool dcml_is_zero(decimal_t value);
 //==============================================================================
+
+//============================= COMMON FUNCTIONS ===============================
+decimal_t dcml_abs(decimal_t value);
+uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
+//==============================================================================
+
 #endif  // COMMON_H
