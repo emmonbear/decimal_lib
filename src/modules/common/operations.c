@@ -9,7 +9,7 @@
  *
  */
 
-#include "../include/bit_lib.h"
+#include "../include/common.h"
 
 /**
  * @brief Bitwise addition of two positive numbers of uint192_t type
@@ -56,7 +56,7 @@ uint192_t binary_sub(uint192_t value_1, uint192_t value_2) {
  * @return uint192_t - value_1 * value_2
  */
 uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
-  uint192_t res = SET_ZERO;
+  uint192_t res = DCML_ZERO;
   uint192_t tmp = value_1;
   uint8_t high_bit = get_high_bit(value_2);
 
@@ -81,8 +81,8 @@ uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
  */
 uint192_t binary_div(uint192_t value_1, uint192_t value_2,
                      uint192_t *remainder) {
-  uint192_t tmp_remaider = SET_ZERO;
-  uint192_t quotient = SET_ZERO;  // частное
+  uint192_t tmp_remaider = DCML_ZERO;
+  uint192_t quotient = DCML_ZERO;  // частное
 
   if (is_eq_zero(value_1)) {
     if (remainder) {
@@ -143,53 +143,12 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
 }
 
 /**
- * @brief Shift ${value} by ${shift} bits to the left
- *
- * @param[out] value number of uint192_t type to be shifted to the left by
- * ${shift}
- * @param[in] shift number specifying by how much to shift ${value} to the left
- */
-void shift_left(uint192_t *value, unsigned int shift) {
-  for (unsigned int i = 0; i < shift; i++) {
-    bool carry = false;
-
-    for (uint8_t j = 0; j < LDEC_SIZE; j++) {
-      unsigned int temp = (value->Lbits[j] >> 31) & 1;
-      value->Lbits[j] <<= 1;
-      value->Lbits[j] |= carry;
-      carry = temp;
-    }
-  }
-}
-
-/**
- * @brief Shift ${value} by ${shift} bits to the left
- *
- * @param[out] value number of uint192_t type to be shifted to the left by
- * ${shift}
- * @param[in] shift number specifying by how much to shift ${value} to the left
- */
-void shift_right(uint192_t *value, unsigned int shift) {
-  for (unsigned int i = 0; i < shift; i++) {
-    bool carry = false;
-
-    for (int8_t j = LDEC_SIZE - 1; j >= 0; j--) {
-      unsigned int temp = value->Lbits[j] & 1;
-      value->Lbits[j] >>= 1;
-      value->Lbits[j] |= carry ? 1 << 31 : 0;
-      carry = temp;
-    }
-  }
-}
-
-/**
  * @brief Normalization the orders of powers of the numbers value_1 and value_2
  *
  * @param[out] value_1 Pointer to number of uint192_t type
  * @param[out] value_2 Pointer to number of uint192_t type
  */
-void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2)
-{
+void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
   uint8_t power_1 = GET_POWER(Lvalue_1->Lbits[DEC_SIZE - 1]);
   uint8_t power_2 = GET_POWER(Lvalue_2->Lbits[DEC_SIZE - 1]);
 
@@ -199,20 +158,28 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2)
   } else if (power_1 < power_2) {
     *Lvalue_1 = binary_mul(*Lvalue_1, get_ten_pow(power_2 - power_1));
   }
-
 }
 
-void zero_service_bits(uint192_t *value_1, uint192_t *value_2)
-{
-  value_1->Lbits[DEC_SIZE] = 0;
-  value_2->Lbits[DEC_SIZE] = 0;
+void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
+  value_1->Lbits[DEC_SIZE - 1] = 0;
+  value_2->Lbits[DEC_SIZE - 1] = 0;
 }
 
 uint192_t decimal_to_uint192(decimal_t value) {
-  uint192_t res = SET_ZERO;
+  uint192_t res = DCML_ZERO;
 
   for (uint8_t i = 0; i < DEC_SIZE; i++) {
     res.Lbits[i] = value.bits[i];
+  }
+
+  return res;
+}
+
+decimal_t uint192_to_decimal(uint192_t value) {
+  decimal_t res = DCML_ZERO;
+
+  for (uint8_t i = 0; i < DEC_SIZE; i++) {
+    res.bits[i] = value.Lbits[i];
   }
 
   return res;
@@ -224,6 +191,47 @@ uint192_t get_ten_pow(uint8_t pow) {
 
   for (uint8_t i = 0; i < pow; i++) {
     res = binary_mul(res, ten);
+  }
+
+  return res;
+}
+
+uint8_t get_divider(uint192_t value) {
+  uint8_t res = 0;
+  uint192_t max = DCML_MAX;
+  uint192_t quotient = binary_div(value, max, NULL);
+
+  while (1) {
+    int8_t compare = binary_compare(quotient, get_ten_pow(res));
+    if ((compare == LESS) || (compare == EQUAL)) {
+      break;
+    }
+    res++;
+  }
+
+  /// @todo Завалилось без условия 728 тестов
+  // uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
+  // if (tmp.Lbits[3] != 0 || tmp.Lbits[4] != 0 || tmp.Lbits[5] != 0) {
+  //   res++;
+  // }
+
+  return res;
+}
+
+/**
+ * @brief Get the high bit object
+ *
+ * @param[in] value uint192_t type number
+ * @return int - high bit index
+ */
+int get_high_bit(uint192_t value) {
+  int res = -1;
+
+  for (int16_t i = MAX_BITS - 1; i >= 0; i--) {
+    if (IS_SET_BIT(value, i)) {
+      res = i;
+      break;
+    }
   }
 
   return res;

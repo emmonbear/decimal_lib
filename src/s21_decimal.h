@@ -12,9 +12,8 @@
 #define DECIMAL_H
 
 #include "./modules/debug/debug.h"
-#include "./modules/include/bit_lib.h"
 #include "./modules/include/common.h"
-#include "./modules/include/macros.h"
 #include "./modules/include/convertors.h"
+#include "./modules/include/macros.h"
 
 #endif  // DECIMAL_H
