@@ -25,14 +25,7 @@ void s21_print_binary_uint192(uint192_t value) {
       putchar('\n');
     }
   }
-  // s21_print_bit(value.Lbits[4], 0);
-  // s21_print_bit(value.Lbits[3], 0);
-  // putchar('\n');
-  // s21_print_bit(value.Lbits[2], 0);
-  // s21_print_bit(value.Lbits[1], 0);
-  // s21_print_bit(value.Lbits[0], 0);
-  // putchar('\n');
-  // putchar('\n');
+  putchar('\n');
 }
 
 /**
