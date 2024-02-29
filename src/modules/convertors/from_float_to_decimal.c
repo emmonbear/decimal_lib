@@ -27,7 +27,7 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   *dst = (decimal_t){0};
 
   if (!dst || src != src || src == 1.0 / 0.0 ||
-    /// @todo Магическое число убираем
+      /// @todo Магическое число убираем
       fabs(src) > 79228162514264337593543950335.0) {
     return ERROR;
   }
@@ -35,13 +35,13 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   if (!src) {
     return OK;
   }
-/// @todo Магическое число убираем
+  /// @todo Магическое число убираем
   char str[15];
-  
+
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
-/// @todo Магическое число убираем
+  /// @todo Магическое число убираем
   if (exponent <= -23) {
     int correct_scale = exponent + DCML_PRECISION;
     sprintf(str, "%.*E", correct_scale, fabsf(src));

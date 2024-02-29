@@ -1,15 +1,15 @@
 /**
  * @file shifts.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-02-28
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
-#include "../include/common.h" 
+#include "../include/common.h"
 
 /**
  * @brief Shift ${value} by ${shift} bits to the left
