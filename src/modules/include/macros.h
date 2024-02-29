@@ -48,7 +48,7 @@
 
 #define GET_SIGN(value) ((value) >> 31)
 
-#define SET_POWER(value, power) value.Lbits[DEC_SIZE - 1] |= (power) << 16
+#define SET_POWER(value, power) value |= (power) << 16
 
 // #define DCML_SET_POWER(value, power) value,bits[DEC_SIZE - 1] |= (power) <<
 // 16
