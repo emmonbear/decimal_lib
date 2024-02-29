@@ -6,13 +6,13 @@
 #include "./debug.h"
 
 static char *add(char *num_1, char *num_2);
-static char *pars_service_mantiss(decimal_t value, char *math_str);
+static char *pars_service_mantiss(s21_decimal value, char *math_str);
 static void insert_dot(char *str, int pos);
 
 #define GET_DEC_BIT(value, index) \
   GET_BIT(value.bits[(index) / UINT_BITS], (index) % UINT_BITS)
 
-void printd(decimal_t value, char *new_line) {
+void printd(s21_decimal value, char *new_line) {
   char bits[192][60] = {
       "1",                                                           // 2^0
       "2",                                                           // 2^1
@@ -228,7 +228,7 @@ void printd(decimal_t value, char *new_line) {
   free(iteration);
 }
 
-static char *pars_service_mantiss(decimal_t value, char *math_str) {
+static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   char *result = (char *)calloc(strlen(math_str) + 1, sizeof(char));
   sprintf(result, "%s", math_str);
   int reserve = DEC_SIZE * 10;

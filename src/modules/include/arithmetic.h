@@ -25,6 +25,7 @@ typedef enum {
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res);
 
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 
 #endif  // ARITHMETIC_H

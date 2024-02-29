@@ -70,11 +70,11 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
                      uint192_t *remainder);
 int get_high_bit(uint192_t value);
 void binary_normalizaton(uint192_t *value_1, uint192_t *value_2);
-uint192_t decimal_to_uint192(decimal_t value);
+uint192_t decimal_to_uint192(s21_decimal value);
 uint192_t get_ten_pow(uint8_t pow);
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2);
 uint8_t get_divider(uint192_t value);
-decimal_t uint192_to_decimal(uint192_t value);
+s21_decimal uint192_to_decimal(uint192_t value);
 //==============================================================================
 
 //=============================== BINARY_LOGIC =================================
@@ -83,11 +83,11 @@ uint192_t binary_xor(uint192_t value_1, uint192_t value_2);
 uint192_t binary_not(uint192_t value);
 bool is_eq_zero(uint192_t value);
 int binary_compare(uint192_t value_1, uint192_t value_2);
-bool dcml_is_zero(decimal_t value);
+bool dcml_is_zero(s21_decimal value);
 //==============================================================================
 
 //============================= COMMON FUNCTIONS ===============================
-decimal_t dabs(decimal_t value);
+s21_decimal dabs(s21_decimal value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
 //==============================================================================
 
