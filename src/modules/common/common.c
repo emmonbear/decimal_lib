@@ -12,19 +12,18 @@
 #include "../include/common.h"
 
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
-  uint192_t point_five = DCML_POINT_FIVE;
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
 
-  if (binary_compare(fractional, point_five) == EQUAL) {
+  if (binary_compare(fractional, POINT_FIVE) == EQUAL) {
     if (IS_EVEN(integer)) {
       for (uint8_t i = 0; i < (LDEC_SIZE - 1); i++) {
         res.Lbits[i] = integer.Lbits[i];
       }
     } else {
-      res = binary_add(integer, (uint192_t)SET_ONE);
+      res = binary_add(integer, ONE);
     }
-  } else if (binary_compare(fractional, point_five) == GREATER) {
-    res = binary_add(integer, (uint192_t)SET_ONE);
+  } else if (binary_compare(fractional, POINT_FIVE) == GREATER) {
+    res = binary_add(integer, ONE);
   } else {
     res = integer;
   }
@@ -32,8 +31,7 @@ uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
   return res;
 }
 
-decimal_t dcml_abs(decimal_t value) {
-  decimal_t res = value;
-  res.bits[DEC_SIZE - 1] = (res.bits[DEC_SIZE - 1] << 1) >> 1;
-  return res;
+decimal_t dabs(decimal_t value) {
+  value.bits[DEC_SIZE - 1] = (value.bits[DEC_SIZE - 1] << 1) >> 1;
+  return value;
 }

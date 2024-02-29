@@ -52,7 +52,7 @@ bool dcml_is_zero(decimal_t value) {
  * @return uint192_t - value_1 & value_2
  */
 uint192_t binary_and(uint192_t value_1, uint192_t value_2) {
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
 
   for (uint8_t i = 0; i < LDEC_SIZE; i++) {
     res.Lbits[i] = value_1.Lbits[i] & value_2.Lbits[i];
@@ -69,7 +69,7 @@ uint192_t binary_and(uint192_t value_1, uint192_t value_2) {
  * @return uint192_t - value_1 ^ value_2
  */
 uint192_t binary_xor(uint192_t value_1, uint192_t value_2) {
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
 
   for (uint8_t i = 0; i < LDEC_SIZE; i++) {
     res.Lbits[i] = value_1.Lbits[i] ^ value_2.Lbits[i];
@@ -85,7 +85,7 @@ uint192_t binary_xor(uint192_t value_1, uint192_t value_2) {
  * @return uint192_t - ~value
  */
 uint192_t binary_not(uint192_t value) {
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
 
   for (uint8_t i = 0; i < LDEC_SIZE; i++) {
     res.Lbits[i] = ~value.Lbits[i];

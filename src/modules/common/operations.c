@@ -40,9 +40,8 @@ uint192_t binary_add(uint192_t value_1, uint192_t value_2) {
  * @return uint192_t - value_1 - value_2
  */
 uint192_t binary_sub(uint192_t value_1, uint192_t value_2) {
-  uint192_t one = SET_ONE;
   value_2 = binary_not(value_2);
-  value_2 = binary_add(value_2, one);
+  value_2 = binary_add(value_2, ONE);
   uint192_t res = binary_add(value_1, value_2);
 
   return res;
@@ -56,7 +55,7 @@ uint192_t binary_sub(uint192_t value_1, uint192_t value_2) {
  * @return uint192_t - value_1 * value_2
  */
 uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
   uint192_t tmp = value_1;
   uint8_t high_bit = get_high_bit(value_2);
 
@@ -81,22 +80,18 @@ uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
  */
 uint192_t binary_div(uint192_t value_1, uint192_t value_2,
                      uint192_t *remainder) {
-  uint192_t tmp_remaider = DCML_ZERO;
-  uint192_t quotient = DCML_ZERO;  // частное
-
   if (is_eq_zero(value_1)) {
-    if (remainder) {
-      *remainder = tmp_remaider;
-    }
-    return quotient;
+    *remainder = (remainder) ? LDCML_ZERO : *remainder;
+    return LDCML_ZERO;
   }
 
   if (binary_compare(value_1, value_2) == LESS) {
-    if (remainder) {
-      *remainder = value_1;
-    }
-    return quotient;
+    *remainder = (remainder) ? value_1 : *remainder;
+    return LDCML_ZERO;
   }
+
+  uint192_t tmp_remaider = LDCML_ZERO;
+  uint192_t quotient = LDCML_ZERO;  // частное
 
   unsigned int high_bit_1 = get_high_bit(value_1);
   unsigned int high_bit_2 = get_high_bit(value_2);
@@ -166,7 +161,7 @@ void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
 }
 
 uint192_t decimal_to_uint192(decimal_t value) {
-  uint192_t res = DCML_ZERO;
+  uint192_t res = LDCML_ZERO;
 
   for (uint8_t i = 0; i < DEC_SIZE; i++) {
     res.Lbits[i] = value.bits[i];
@@ -186,11 +181,10 @@ decimal_t uint192_to_decimal(uint192_t value) {
 }
 
 uint192_t get_ten_pow(uint8_t pow) {
-  uint192_t res = {{1}};
-  uint192_t ten = {{10}};
+  uint192_t res = ONE;
 
   for (uint8_t i = 0; i < pow; i++) {
-    res = binary_mul(res, ten);
+    res = binary_mul(res, TEN);
   }
 
   return res;
@@ -198,8 +192,7 @@ uint192_t get_ten_pow(uint8_t pow) {
 
 uint8_t get_divider(uint192_t value) {
   uint8_t res = 0;
-  uint192_t max = DCML_MAX;
-  uint192_t quotient = binary_div(value, max, NULL);
+  uint192_t quotient = binary_div(value, DCML_MAX, NULL);
 
   while (1) {
     int8_t compare = binary_compare(quotient, get_ten_pow(res));

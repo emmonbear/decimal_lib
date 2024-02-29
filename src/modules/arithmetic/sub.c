@@ -63,7 +63,7 @@ int sub_positive(decimal_t value_1, decimal_t value_2, decimal_t *res) {
     err_code = BIG;
   }
 
-  uint192_t remainder = DCML_ZERO;
+  uint192_t remainder = LDCML_ZERO;
   res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
   SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
   res_tmp = bank_rouding(res_tmp, remainder);

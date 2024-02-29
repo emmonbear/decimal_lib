@@ -13,25 +13,36 @@
 #define MACROS_H
 
 /// @brief Fill uin196_t with zeros {{0, 0, 0, 0, 0, 0}}
+#define LDCML_ZERO \
+  (uint192_t) {    \
+    { 0 }          \
+  }
+
 #define DCML_ZERO \
-  {               \
+  (decimal_t) {   \
     { 0 }         \
   }
 
-#define SET_ONE \
-  {             \
+#define ONE     \
+  (uint192_t) { \
     { 1 }       \
   }
 
-#define DCML_MAX                              \
-  {                                           \
-    { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0 } \
+#define TEN     \
+  (uint192_t) { \
+    { 10 }      \
   }
 
-#define DCML_POINT_FIVE        \
-  {                            \
+#define DCML_MAX                           \
+  (uint192_t) {                            \
+    { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF } \
+  }
+
+#define POINT_FIVE             \
+  (uint192_t) {                \
     { 0x5, 0x0, 0x0, 0x10000 } \
   }
+
 #define GET_BIT(number, index) ((number) & (1 << (index)))
 
 #define GET_MAX(x, y) ((x) > (y)) ? (x) : (y)
