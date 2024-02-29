@@ -25,8 +25,8 @@ int s21_is_equal(decimal_t value_1, decimal_t value_2) {
 
   binary_normalizaton(&Lvalue_1, &Lvalue_2);
 
-  SET_SIGN(Lvalue_1, sign_1);
-  SET_SIGN(Lvalue_2, sign_2);
+  SET_SIGN(Lvalue_1.Lbits[DEC_SIZE - 1], sign_1);
+  SET_SIGN(Lvalue_2.Lbits[DEC_SIZE - 1], sign_2);
 
   for (uint8_t i = 0; i < (LDEC_SIZE - 1); i++) {
     if (Lvalue_1.Lbits[i] != Lvalue_2.Lbits[i]) {
