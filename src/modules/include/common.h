@@ -90,7 +90,6 @@ bool dcml_is_zero(decimal_t value);
 //============================= COMMON FUNCTIONS ===============================
 decimal_t dcml_abs(decimal_t value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
-void dcml_set_sign(decimal_t *value);
 //==============================================================================
 
 #endif  // COMMON_H
