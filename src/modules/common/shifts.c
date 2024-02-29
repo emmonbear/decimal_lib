@@ -23,7 +23,7 @@ void shift_left(uint192_t *value, unsigned int shift) {
     bool carry = false;
 
     for (uint8_t j = 0; j < LDEC_SIZE; j++) {
-      unsigned int temp = (value->Lbits[j] >> 31) & 1;
+      unsigned int temp = GET_BIT(value->Lbits[j], UINT_BITS - 1);
       value->Lbits[j] <<= 1;
       value->Lbits[j] |= carry;
       carry = temp;
@@ -45,7 +45,7 @@ void shift_right(uint192_t *value, unsigned int shift) {
     for (int8_t j = LDEC_SIZE - 1; j >= 0; j--) {
       unsigned int temp = value->Lbits[j] & 1;
       value->Lbits[j] >>= 1;
-      value->Lbits[j] |= carry ? 1 << 31 : 0;
+      value->Lbits[j] |= (carry) ? 1 << 31 : 0;
       carry = temp;
     }
   }

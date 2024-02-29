@@ -18,33 +18,32 @@
 #include "./macros.h"
 #include "stdbool.h"
 
-/// @brief enumerations with array sizes
+/// @brief Enumerations with array sizes.
 typedef enum {
-  DEC_SIZE = 4,  ///< Size bits array used for the final result
-  LDEC_SIZE =
-      (DEC_SIZE - 1) *
-      2,  ///< Size of decimal_t array used for intermediate calculations
+  DEC_SIZE = 4,                    ///< Int array used for the final result.
+  LDEC_SIZE = (DEC_SIZE - 1) * 2,  ///< Int array used for precise calculations.
 } array_size;
 
-/// @brief Decimal representation
+/// @brief Decimal representation. Basic project type.
 typedef struct {
-  unsigned int bits[DEC_SIZE];  ///< 128 bits
+  unsigned int bits[DEC_SIZE];  ///< Bits: 96 - significant, 32 - service.
 } decimal_t;
 
-/// @brief
+/// @brief Long decimal representation. Intended for calculation accuracy.
 typedef struct {
-  unsigned int Lbits[LDEC_SIZE];  ///< 192 bits
+  unsigned int Lbits[LDEC_SIZE];  ///< Bits: twice of basic type significants.
 } uint192_t;
 
-/// @brief Enumeration of decimal_t signs
+/// @brief Enumeration of decimal_t signs.
 typedef enum {
-  POSITIVE = 0,  ///< Positive sign
-  NEGATIVE = 1,  ///< Negative sign
+  POSITIVE = 0,  ///< Positive sign.
+  NEGATIVE = 1,  ///< Negative sign.
 } decimal_sign;
 
+/// @brief Enumeration of bits counts.
 typedef enum {
-  UINT_BITS = 32,
-  MAX_BITS = LDEC_SIZE * UINT_BITS,
+  UINT_BITS = 32,                    ///< Number of bits in uint.
+  MAX_BITS = LDEC_SIZE * UINT_BITS,  ///< Number of bits in uint192_t.
 } bits_count;
 
 typedef enum {

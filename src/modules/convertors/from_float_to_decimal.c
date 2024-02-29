@@ -69,7 +69,7 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
     SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION - abs(exponent)));
   }
 
-  SET_SIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? 1 : 0));
+  SET_SIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? POSITIVE : NEGATIVE));
 
   return OK;
 }
