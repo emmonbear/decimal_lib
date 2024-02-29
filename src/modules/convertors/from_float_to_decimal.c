@@ -9,11 +9,11 @@
  *
  */
 
-#include "./../include/convertors.h"
-
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "./../include/convertors.h"
 
 static void get_clean_value(char *str);
 static int get_char_exponent(char *str);
@@ -35,7 +35,7 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
-  if(exponent < -(DCML_PRECISION + 1)) {
+  if (exponent < -(DCML_PRECISION + 1)) {
     return ERROR;
   } else if (exponent <= -(DCML_PRECISION - FLT_PRECISION)) {
     int correct = (exponent >= -DCML_PRECISION) ? exponent + DCML_PRECISION : 0;
@@ -46,19 +46,19 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   get_clean_value(str);
   dst->bits[0] = atoi(str);
 
-  if(!dst->bits[0]) {
+  if (!dst->bits[0]) {
     return ERROR;
   } else if (exponent <= 0) {
-    SET_SCALE(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
+    SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = DCML_ZERO;
     long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
     *dst = uint192_to_decimal(long_dst);
   } else {
-    SET_SCALE(dst->bits[DEC_SIZE - 1], (FLT_PRECISION - abs(exponent)));
+    SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION - abs(exponent)));
   }
 
-  SET_ZIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? 1 : 0));
+  SET_SIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? 1 : 0));
 
   return OK;
 }
