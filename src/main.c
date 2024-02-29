@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
-#include "./decimal.h"
+#include "./s21_decimal.h"
 #include "stdbool.h"
 
 #define MINUS 0x80000000
@@ -8,10 +8,12 @@
 
 int main()
 {
-  decimal_t value_1 = {{0x1, 0x0, 0x0, 0x0, 0x0, 0x0, (E * 60) | MINUS}};
-
-  // uint192_t value_2= {{2321}};
-  printd(value_1, "\n");
+  decimal_t value_1 = {{0xFFFFFF, 0xABCD, 0xBBB, 0x0}};
+  decimal_t value_2 = {{0x14523, 0xAB43, 0x0, 0x0}};
+  uint192_t result = binary_div(decimal_to_uint192(value_2), decimal_to_uint192(value_1), NULL);
+  printd(value_1, " / ");
+  printd(value_2, " = ");
+  printLd(result, "\n\n");
   // s21_print_binary_uint192(value_2);
 
   // uint192_t res = binary_mul(value_1, value_2);

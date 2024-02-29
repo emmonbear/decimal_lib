@@ -171,7 +171,8 @@ clang_check:
 	clang-format -style=Google -n $(ALL_FILES)
 
 clang_fix:
-	clang-format -style=Google -i $(ALL_FILES)
+	clang-format -style=Google -i $(MODULES_C) $(MODULES_H)
+# clang-format -style=Google -i $(ALL_FILES)
 
 m: $(LIBRARY)
 	$(CC) $(CFLAGS) main.c $(LIBRARY) $(LDFLAGS)
