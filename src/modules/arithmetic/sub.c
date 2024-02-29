@@ -11,38 +11,39 @@
 
 #include "../include/arithmetic.h"
 
-// int s21_sub(decimal_t value_1, decimal_t value_2, decimal_t *result) {
+int s21_sub(decimal_t value_1, decimal_t value_2, decimal_t *result) {
+  int err_code = OK;
 
-//   int err_code = OK;
+  uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
+  uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
 
-//   uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
-//   uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
+  if ((sign_1 == POSITIVE) && (sign_2 == POSITIVE)) {
+    if (s21_is_greater_or_equal(value_1, value_2)) {
+      err_code = sub_positive(value_1, value_2, result);
+    } else {
+      err_code = sub_positive(value_2, value_1, result);
+      SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+    }
+  } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
+    err_code = s21_add(value_1, dabs(value_2), result);
+  } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
+    err_code = s21_add(dabs(value_1), value_2, result);
+    SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+  } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
+    if (s21_is_greater_or_equal(value_1, value_2)) {
+      err_code = sub_positive(dabs(value_2), dabs(value_1), result);
+    } else {
+      err_code = sub_positive(dabs(value_1), dabs(value_2), result);
+      SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+    }
+  }
 
-//   decimal_t res_tmp = DCML_ZERO;
-//   if((sign_1 == POSITIVE) && (sign_2 == POSITIVE)) {
-//     if (s21_is_greater_or_equal(value_1, value_2)) {
-//       err_code = sub_positive(value_1, value_2, result);
-//     } else {
-//       err_code = sub_positive(value_2, value_1, result);
-//       dcml_set_sign(result);
-//     }
-//   } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
-//     err_code = s21_add(value_1, dcml_abs(value_2), &res_tmp);
-//   } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
-//     err_code = s21_add(dcml_abs(value_1), value_2, &res_tmp);
-//     dcml_set_sign(&res_tmp);
-//   } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
-//     if (s21_is_greater_or_equal(value_1, value_2)) {
-//       err_code = sub_positive(dcml_abs(value_2), dcml_abs(value_1),
-//       &res_tmp);
-//     } else {
-//       err_code = sub_positive(dcml_abs(value_1), dcml_abs(value_2),
-//       &res_tmp); dcml_set_sign(&res_tmp);
-//     }
-//   }
+  if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+    err_code = SMALL;
+  }
 
-//   return err_code;
-// }
+  return err_code;
+}
 
 int sub_positive(decimal_t value_1, decimal_t value_2, decimal_t *res) {
   int err_code = OK;
