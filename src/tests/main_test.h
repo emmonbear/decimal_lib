@@ -12,29 +12,29 @@
 #ifndef TESTS_H_
 #define TESTS_H_
 
-#define ADD
-// #define SUB
-// #define MUL
-// #define DIV
-// #define IS_EQUAL
-// #define NOT_EQUAL
-// #define IS_LESS
-// #define LESS_OR_EQUAL
-// #define IS_GREATER
-// #define GREATER_OR_EQUAL
-// #define INT_TO_DECIMAL
-// #define FLOAT_TO_DECIMAL
-// #define DECIMAL_TO_INT
-// #define DECIMAL_TO_FLOAT
-// #define ROUND
-// #define FLOOR
-// #define TRUNCATE
-// #define NEGATE
+// #define TEST_ADD
+#define TEST_SUB
+// #define TEST_MUL
+// #define TEST_DIV
+// #define TEST_IS_EQUAL
+// #define TEST_NOT_EQUAL
+// #define TEST_IS_LESS
+// #define TEST_LESS_OR_EQUAL
+// #define TEST_IS_GREATER
+// #define TEST_GREATER_OR_EQUAL
+// #define TEST_INT_TO_DECIMAL
+// #define TEST_FLOAT_TO_DECIMAL
+// #define TEST_DECIMAL_TO_INT
+// #define TEST_DECIMAL_TO_FLOAT
+// #define TEST_ROUND
+// #define TEST_FLOOR
+// #define TEST_TRUNCATE
+// #define TEST_NEGATE
 
 #include "./debug/debug_test.h"
 #include "./test_modules/include/arithmetic_test.h"
 // #include "./test_modules/include/comparison.h"
-#include "./test_modules/include/convertors_test.h"
-#include "./test_modules/include/rounders_test.h"
+// #include "./test_modules/include/convertors_test.h"
+// #include "./test_modules/include/rounders_test.h"
 
 #endif  // TESTS_H_

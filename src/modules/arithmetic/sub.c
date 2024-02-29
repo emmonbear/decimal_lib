@@ -62,14 +62,14 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
 
   if (res_power < 0) {
     err_code = BIG;
+  } else {
+    uint192_t remainder = LDCML_ZERO;
+    res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
+    SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
+    res_tmp = bank_rouding(res_tmp, remainder);
+    SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
+    *res = uint192_to_decimal(res_tmp);
   }
-
-  uint192_t remainder = LDCML_ZERO;
-  res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
-  SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
-  res_tmp = bank_rouding(res_tmp, remainder);
-  SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
-  *res = uint192_to_decimal(res_tmp);
 
   return err_code;
 }

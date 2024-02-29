@@ -30,7 +30,7 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
     err_code = s21_sub(value_1, dabs(value_2), result);
   } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
-    err_code = s21_sub(dabs(value_1), value_2, result);
+    err_code = s21_sub(dabs(value_2), value_1, result);
     SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
   } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
     err_code = add_positive(dabs(value_1), dabs(value_2), result);

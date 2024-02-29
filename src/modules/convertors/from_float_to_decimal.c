@@ -23,23 +23,23 @@ static int get_char_exponent(char *str);
  *
  * @param src convertible number.
  * @param dst conversion result.
- * @return int - error code.
- * @retval OK = 0 - successful conversion. A valid number that fits into a
+ * @return int - CONVERSION_ERROR code.
+ * @retval CONVERSION_OK = 0 - successful conversion. A valid number that fits into a
  * decimal.
- * @retval ERROR = 1 - conversion error. Invalid number or does not fit into
+ * @retval CONVERSION_ERROR = 1 - conversion CONVERSION_ERROR. Invalid number or does not fit into
  * decimal.
  */
 int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!dst) {
-    return ERROR;
+    return CONVERSION_ERROR;
   } else {
     *dst = (s21_decimal){0};
   }
 
   if (IS_NAN(src) || IS_INF(src) || fabs(src) > DECIMAL_MAX) {
-    return ERROR;
+    return CONVERSION_ERROR;
   } else if (!src) {
-    return OK;
+    return CONVERSION_OK;
   }
 
   char str[MIN_NEED_SIZE];
@@ -47,7 +47,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   int exponent = get_char_exponent(str);
 
   if (exponent < -(DCML_PRECISION + 1)) {
-    return ERROR;
+    return CONVERSION_ERROR;
   } else if (exponent <= -(DCML_PRECISION - FLT_PRECISION)) {
     int correct = (exponent >= -DCML_PRECISION) ? exponent + DCML_PRECISION : 0;
     sprintf(str, "%.*E", correct, fabsf(src));
@@ -58,7 +58,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   dst->bits[0] = atoi(str);
 
   if (!dst->bits[0]) {
-    return ERROR;
+    return CONVERSION_ERROR;
   } else if (exponent <= 0) {
     SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
@@ -71,7 +71,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
 
   SET_SIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? NEGATIVE : POSITIVE));
 
-  return OK;
+  return CONVERSION_OK;
 }
 
 /**

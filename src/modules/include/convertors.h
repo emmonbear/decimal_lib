@@ -19,8 +19,8 @@
 #define IS_INF(x) x == 1.0 / 0.0
 
 typedef enum {
-  OK,
-  ERROR,
+  CONVERSION_OK,
+  CONVERSION_ERROR,
 } converter_code;
 
 typedef enum {

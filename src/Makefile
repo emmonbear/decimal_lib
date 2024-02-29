@@ -120,8 +120,8 @@ $(LIBRARY): $(OBJ_DIR) $(MODULES_O) $(MODULES_H) $(MAIN_H)
 	ranlib $@
 
 .PHONY: $(TARGET)
-$(TARGET): $(OBJ_DIR) $(TEST_O)
-# $(TARGET): $(OBJ_DIR) $(LIBRARY) $(TEST_O)
+# $(TARGET): $(OBJ_DIR) $(TEST_O)
+$(TARGET): $(OBJ_DIR) $(LIBRARY) $(TEST_O)
 	$(CC) $(TEST_OBJ_PATH) $(LIBRARY) $(LDFLAGS) -o $@
 	-./$@
 
