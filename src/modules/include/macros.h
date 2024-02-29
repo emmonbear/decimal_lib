@@ -41,6 +41,7 @@
   GET_BIT(value.Lbits[(index) / UINT_BITS], (index) % UINT_BITS)
 
 #define IS_EVEN(value) (!(value.Lbits[0] & 1))
+
 #define SET_BIT(value, index) \
   (value.Lbits[(index) / UINT_BITS] |= (1 << ((index) % UINT_BITS)))
 
@@ -48,15 +49,8 @@
 
 #define GET_SIGN(value) ((value) >> 31)
 
-#define SET_SCALE(value, scale) value |= (scale) << 16
-/// @todo На вход должна подаваться мантисса, исправить везде на дефайн выше.
-#define SET_POWER(value, power) value.Lbits[DEC_SIZE - 1] |= (power) << 16
+#define SET_POWER(value, scale) value |= (scale) << 16
 
-// #define DCML_SET_POWER(value, power) value,bits[DEC_SIZE - 1] |= (power) <<
-// 16
-
-#define SET_ZIGN(value, sign) value |= (sign) << 31
-/// @todo Zдесь тоже самое.
-#define SET_SIGN(value, sign) value.Lbits[DEC_SIZE - 1] |= (sign) << 31
+#define SET_SIGN(value, sign) value |= (sign) << 31
 
 #endif  // MACROS_H
