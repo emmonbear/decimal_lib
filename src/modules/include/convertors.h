@@ -14,10 +14,21 @@
 
 #include "./common.h"
 
+#define DECIMAL_MAX 79228162514264337593543950335.0
+#define IS_NAN(x) x != x
+#define IS_INF(x) x == 1.0 / 0.0
+
 typedef enum {
   OK,
   ERROR,
 } converter_code;
+
+typedef enum {
+  DCML_PRECISION = 28,
+  FLT_PRECISION = 6,
+  MIN_NEED_SIZE = 15,
+  EXP_LEN = 4,
+} constants;
 
 int s21_from_float_to_decimal(float src, decimal_t *dst);
 

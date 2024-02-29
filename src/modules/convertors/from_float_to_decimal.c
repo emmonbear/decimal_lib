@@ -9,67 +9,62 @@
  *
  */
 
+#include "./../include/convertors.h"
+
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "./../include/convertors.h"
-
 static void get_clean_value(char *str);
 static int get_char_exponent(char *str);
 
-typedef enum {
-  DCML_PRECISION = 28,
-  FLT_PRECISION = 6,
-} constants;
-
 int s21_from_float_to_decimal(float src, decimal_t *dst) {
-  *dst = (decimal_t){0};
-
-  if (!dst || src != src || src == 1.0 / 0.0 ||
-      /// @todo Магическое число убираем
-      fabs(src) > 79228162514264337593543950335.0) {
+  if (!dst) {
     return ERROR;
+  } else {
+    *dst = (decimal_t){0};
   }
 
-  if (!src) {
+  if (IS_NAN(src) || IS_INF(src) || fabs(src) > DECIMAL_MAX) {
+    return ERROR;
+  } else if (!src) {
     return OK;
   }
-  /// @todo Магическое число убираем
-  char str[15];
 
+  char str[MIN_NEED_SIZE];
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
-  /// @todo Магическое число убираем
-  if (exponent <= -23) {
-    int correct_scale = exponent + DCML_PRECISION;
-    sprintf(str, "%.*E", correct_scale, fabsf(src));
-    exponent = get_char_exponent(str) + FLT_PRECISION - correct_scale;
+  if(exponent < -(DCML_PRECISION + 1)) {
+    return ERROR;
+  } else if (exponent <= -(DCML_PRECISION - FLT_PRECISION)) {
+    int correct = (exponent >= -DCML_PRECISION) ? exponent + DCML_PRECISION : 0;
+    sprintf(str, "%.*E", correct, fabsf(src));
+    exponent = get_char_exponent(str) + FLT_PRECISION - correct;
   }
 
   get_clean_value(str);
-
   dst->bits[0] = atoi(str);
 
-  if (exponent <= 0) {
-    SET_POWER(dst->bits[3], (FLT_PRECISION + abs(exponent)));
+  if(!dst->bits[0]) {
+    return ERROR;
+  } else if (exponent <= 0) {
+    SET_SCALE(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = DCML_ZERO;
     long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
     *dst = uint192_to_decimal(long_dst);
   } else {
-    /// @todo DEC_SIZE - 1
-    SET_POWER(dst->bits[3], (FLT_PRECISION - abs(exponent)));
+    SET_SCALE(dst->bits[DEC_SIZE - 1], (FLT_PRECISION - abs(exponent)));
   }
-  /// @todo DEC_SIZE - 1
-  SET_SIGN(dst->bits[3], ((src < 0) ? 1 : 0));
+
+  SET_ZIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? 1 : 0));
 
   return OK;
 }
 
 static void get_clean_value(char *str) {
-  str[strlen(str) - 4] = '\0';
+  str[strlen(str) - EXP_LEN] = '\0';
   char *dot_position = strchr(str, '.');
 
   if (dot_position) {
