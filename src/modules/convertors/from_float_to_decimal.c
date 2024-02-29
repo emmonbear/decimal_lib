@@ -18,6 +18,15 @@
 static void get_clean_value(char *str);
 static int get_char_exponent(char *str);
 
+/**
+ * @brief Converting a float number to a decimal number.
+ * 
+ * @param src convertible number.
+ * @param dst conversion result.
+ * @return int - error code.
+ * @retval OK = 0 - successful conversion. A valid number that fits into a decimal.
+ * @retval ERROR = 1 - conversion error. Invalid number or does not fit into decimal.
+ */
 int s21_from_float_to_decimal(float src, decimal_t *dst) {
   if (!dst) {
     return ERROR;
@@ -63,6 +72,11 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   return OK;
 }
 
+/**
+ * @brief Extracts all digits from a normalized number.
+ * 
+ * @param str string with a normalized number.
+ */
 static void get_clean_value(char *str) {
   str[strlen(str) - EXP_LEN] = '\0';
   char *dot_position = strchr(str, '.');
@@ -73,6 +87,12 @@ static void get_clean_value(char *str) {
   }
 }
 
+/**
+ * @brief Extracts the power from a normalized number.
+ * 
+ * @param str string with a normalized number.
+ * @return int - normalized number power.
+ */
 static int get_char_exponent(char *str) {
   char *ptr = strchr(str, 'E');
   ptr++;
