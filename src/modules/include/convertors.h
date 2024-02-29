@@ -30,6 +30,6 @@ typedef enum {
   EXP_LEN = 4,
 } constants;
 
-int s21_from_float_to_decimal(float src, decimal_t *dst);
+int s21_from_float_to_decimal(float src, s21_decimal *dst);
 
 #endif  // CONVERTERS_H_

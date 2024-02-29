@@ -7,10 +7,10 @@
 #include "./debug.h"
 
 /**
- * @brief Вывести decimal_t в двоичной системе счисления
- * @param value decimal_t
+ * @brief Вывести s21_decimal в двоичной системе счисления
+ * @param value s21_decimal
  */
-void s21_print_binary_decimal(decimal_t value) {
+void s21_print_binary_decimal(s21_decimal value) {
   s21_print_bit(value.bits[3], 1);
   s21_print_bit(value.bits[2], 0);
   s21_print_bit(value.bits[1], 0);
@@ -32,7 +32,7 @@ void s21_print_binary_uint192(uint192_t value) {
  * @brief Вывести s21_big_decimal для калькулятора
  * @param value
  */
-void s21_print_int128_for_calc(decimal_t value) {
+void s21_print_int128_for_calc(s21_decimal value) {
   printf("%u*2^96+%u*2^64+%u*2^32+%u*2^0\n", value.bits[3], value.bits[2],
          value.bits[1], value.bits[0]);
 }

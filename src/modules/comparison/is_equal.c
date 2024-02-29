@@ -11,7 +11,7 @@
 
 #include "../include/comparison.h"
 
-int s21_is_equal(decimal_t value_1, decimal_t value_2) {
+int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {
   if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
     return COMPARISON_TRUE;
   }

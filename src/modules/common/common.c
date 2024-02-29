@@ -31,7 +31,7 @@ uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
   return res;
 }
 
-decimal_t dabs(decimal_t value) {
+s21_decimal dabs(s21_decimal value) {
   value.bits[DEC_SIZE - 1] = (value.bits[DEC_SIZE - 1] << 1) >> 1;
   return value;
 }

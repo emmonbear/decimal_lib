@@ -22,9 +22,9 @@ typedef enum {
   ZERO_DIV,
 } arithmetic_code;
 
-int s21_add(decimal_t value_1, decimal_t value_2, decimal_t *result);
-int add_positive(decimal_t value_1, decimal_t value_2, decimal_t *res);
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res);
 
-int sub_positive(decimal_t value_1, decimal_t value_2, decimal_t *result);
+int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 
 #endif  // ARITHMETIC_H

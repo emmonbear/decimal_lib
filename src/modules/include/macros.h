@@ -14,7 +14,7 @@
 
 /// @brief Buffer decimal equal to 0.
 #define DCML_ZERO \
-  (decimal_t) {   \
+  (s21_decimal) {   \
     { 0 }         \
   }
 

@@ -8,8 +8,8 @@
 
 int main()
 {
-  decimal_t value_1 = {{0xFFFFFF, 0xABCD, 0xBBB, 0x0}};
-  decimal_t value_2 = {{0x14523, 0xAB43, 0x0, 0x0}};
+  s21_decimal value_1 = {{0xFFFFFF, 0xABCD, 0xBBB, 0x0}};
+  s21_decimal value_2 = {{0x14523, 0xAB43, 0x0, 0x0}};
   uint192_t result = binary_div(decimal_to_uint192(value_2), decimal_to_uint192(value_1), NULL);
   printd(value_1, " / ");
   printd(value_2, " = ");

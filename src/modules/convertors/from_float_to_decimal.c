@@ -29,11 +29,11 @@ static int get_char_exponent(char *str);
  * @retval ERROR = 1 - conversion error. Invalid number or does not fit into
  * decimal.
  */
-int s21_from_float_to_decimal(float src, decimal_t *dst) {
+int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!dst) {
     return ERROR;
   } else {
-    *dst = (decimal_t){0};
+    *dst = (s21_decimal){0};
   }
 
   if (IS_NAN(src) || IS_INF(src) || fabs(src) > DECIMAL_MAX) {

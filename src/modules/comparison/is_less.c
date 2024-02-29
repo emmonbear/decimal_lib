@@ -11,7 +11,7 @@
 
 #include "../include/comparison.h"
 
-int s21_is_less(decimal_t value_1, decimal_t value_2) {
+int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
   int err_code = COMPARISON_FALSE;
   int sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
   int sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
@@ -32,7 +32,7 @@ int s21_is_less(decimal_t value_1, decimal_t value_2) {
   return err_code;
 }
 
-int is_less_positive(decimal_t value_1, decimal_t value_2) {
+int is_less_positive(s21_decimal value_1, s21_decimal value_2) {
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
 

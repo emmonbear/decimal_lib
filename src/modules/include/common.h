@@ -27,7 +27,7 @@ typedef enum {
 /// @brief Decimal representation. Basic project type.
 typedef struct {
   unsigned int bits[DEC_SIZE];  ///< Bits: 96 - significant, 32 - service.
-} decimal_t;
+} s21_decimal;
 
 /// @brief Long decimal representation. Intended for calculation accuracy.
 typedef struct {

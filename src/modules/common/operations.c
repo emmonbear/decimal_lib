@@ -160,7 +160,7 @@ void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
   value_2->Lbits[DEC_SIZE - 1] = 0;
 }
 
-uint192_t decimal_to_uint192(decimal_t value) {
+uint192_t decimal_to_uint192(s21_decimal value) {
   uint192_t res = LDCML_ZERO;
 
   for (uint8_t i = 0; i < DEC_SIZE; i++) {
@@ -170,8 +170,8 @@ uint192_t decimal_to_uint192(decimal_t value) {
   return res;
 }
 
-decimal_t uint192_to_decimal(uint192_t value) {
-  decimal_t res = DCML_ZERO;
+s21_decimal uint192_to_decimal(uint192_t value) {
+  s21_decimal res = DCML_ZERO;
 
   for (uint8_t i = 0; i < DEC_SIZE; i++) {
     res.bits[i] = value.Lbits[i];

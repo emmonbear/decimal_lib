@@ -11,7 +11,7 @@
 
 #include "../include/arithmetic.h"
 
-int s21_sub(decimal_t value_1, decimal_t value_2, decimal_t *result) {
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
@@ -45,7 +45,7 @@ int s21_sub(decimal_t value_1, decimal_t value_2, decimal_t *result) {
   return err_code;
 }
 
-int sub_positive(decimal_t value_1, decimal_t value_2, decimal_t *res) {
+int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;
 
   int8_t power_1 = GET_POWER(value_1.bits[3]);

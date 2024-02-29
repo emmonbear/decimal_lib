@@ -31,7 +31,7 @@ bool is_eq_zero(uint192_t value) {
   return res;
 }
 
-bool dcml_is_zero(decimal_t value) {
+bool dcml_is_zero(s21_decimal value) {
   bool res = true;
 
   for (uint8_t i = 0; i < (DEC_SIZE - 1); i++) {
