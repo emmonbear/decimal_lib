@@ -27,6 +27,7 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   *dst = (decimal_t){0};
 
   if (!dst || src != src || src == 1.0 / 0.0 ||
+    /// @todo Магическое число убираем
       fabs(src) > 79228162514264337593543950335.0) {
     return ERROR;
   }
@@ -34,11 +35,13 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   if (!src) {
     return OK;
   }
-
+/// @todo Магическое число убираем
   char str[15];
+  
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
+/// @todo Магическое число убираем
   if (exponent <= -23) {
     int correct_scale = exponent + DCML_PRECISION;
     sprintf(str, "%.*E", correct_scale, fabsf(src));
@@ -50,16 +53,17 @@ int s21_from_float_to_decimal(float src, decimal_t *dst) {
   dst->bits[0] = atoi(str);
 
   if (exponent <= 0) {
-    SET_SCALE(dst->bits[3], (FLT_PRECISION + abs(exponent)));
+    SET_POWER(dst->bits[3], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = DCML_ZERO;
     long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
     *dst = uint192_to_decimal(long_dst);
   } else {
-    SET_SCALE(dst->bits[3], (FLT_PRECISION - abs(exponent)));
+    /// @todo DEC_SIZE - 1
+    SET_POWER(dst->bits[3], (FLT_PRECISION - abs(exponent)));
   }
-
-  SET_ZIGN(dst->bits[3], ((src < 0) ? 1 : 0));
+  /// @todo DEC_SIZE - 1
+  SET_SIGN(dst->bits[3], ((src < 0) ? 1 : 0));
 
   return OK;
 }
