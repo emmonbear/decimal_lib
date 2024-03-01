@@ -30,11 +30,11 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
     err_code = s21_sub(value_1, dabs(value_2), result);
   } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
-    err_code = s21_sub(dabs(value_2), value_1, result);
-    SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+    err_code = s21_sub(dabs(value_1), value_2, result);
+    SET_SIGN(result->bits[DEC_SIZE - 1], !GET_SIGN(result->bits[DEC_SIZE - 1]));
   } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
     err_code = add_positive(dabs(value_1), dabs(value_2), result);
-    SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+    SET_SIGN(result->bits[DEC_SIZE - 1], !GET_SIGN(result->bits[DEC_SIZE - 1]));
   }
 
   if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
@@ -64,8 +64,7 @@ int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   binary_normalizaton(&Lvalue_1, &Lvalue_2);
   uint192_t res_tmp = binary_add(Lvalue_1, Lvalue_2);
   uint8_t power_tmp = get_divider(res_tmp);
-
-  int8_t res_power = GET_MAX(power_1, power_2) - power_tmp;
+  int8_t res_power = (GET_MAX(power_1, power_2)) - power_tmp;
 
   if (res_power < 0) {
     err_code = BIG;
@@ -76,6 +75,10 @@ int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
     res_tmp = bank_rouding(res_tmp, remainder);
     SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
     *res = uint192_to_decimal(res_tmp);
+  }
+
+  if (!is_correct(*res)) {
+    err_code = BIG;
   }
 
   return err_code;
