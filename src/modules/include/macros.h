@@ -13,20 +13,20 @@
 #define MACROS_H
 
 /// @brief Buffer decimal equal to 0.
-#define DCML_ZERO \
-  (s21_decimal) { \
-    { 0 }         \
+#define DCML_ZERO  \
+  (s21_decimal) {  \
+    { 0, 0, 0, 0 } \
   }
 
 /// @brief Buffer long decimal equal to 0.
-#define LDCML_ZERO \
-  (uint192_t) {    \
-    { 0 }          \
+#define LDCML_ZERO       \
+  (uint192_t) {          \
+    { 0, 0, 0, 0, 0, 0 } \
   }
 
 /// @brief Buffer long decimal equal to 0.5.
 #define POINT_FIVE             \
-  (uint192_t) {                \
+  (s21_decimal) {              \
     { 0x5, 0x0, 0x0, 0x10000 } \
   }
 
@@ -127,6 +127,6 @@
  * @param uint service mantissa of decimal number.
  * @param sign setting sign. POSITIVE = 0, NEGATIVE = 1.
  */
-#define SET_SIGN(uint, sign) uint |= (sign) << 31
+#define SET_SIGN(uint, sign) uint = (((uint) << 1) >> 1) | ((sign) << 31)
 
 #endif  // MACROS_H

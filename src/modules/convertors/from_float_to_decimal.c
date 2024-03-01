@@ -24,10 +24,10 @@ static int get_char_exponent(char *str);
  * @param src convertible number.
  * @param dst conversion result.
  * @return int - CONVERSION_ERROR code.
- * @retval CONVERSION_OK = 0 - successful conversion. A valid number that fits into a
- * decimal.
- * @retval CONVERSION_ERROR = 1 - conversion CONVERSION_ERROR. Invalid number or does not fit into
- * decimal.
+ * @retval CONVERSION_OK = 0 - successful conversion. A valid number that fits
+ * into a decimal.
+ * @retval CONVERSION_ERROR = 1 - conversion CONVERSION_ERROR. Invalid number or
+ * does not fit into decimal.
  */
 int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!dst) {

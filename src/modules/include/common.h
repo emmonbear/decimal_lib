@@ -89,6 +89,7 @@ bool dcml_is_zero(s21_decimal value);
 //============================= COMMON FUNCTIONS ===============================
 s21_decimal dabs(s21_decimal value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
+int is_correct(s21_decimal value);
 //==============================================================================
 
 #endif  // COMMON_H
