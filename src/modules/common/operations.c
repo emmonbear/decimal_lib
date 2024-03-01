@@ -91,7 +91,7 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
   }
 
   uint192_t tmp_remaider = LDCML_ZERO;
-  uint192_t quotient = LDCML_ZERO;  // частное
+  uint192_t quotient = LDCML_ZERO;
 
   unsigned int high_bit_1 = get_high_bit(value_1);
   unsigned int high_bit_2 = get_high_bit(value_2);
@@ -201,12 +201,11 @@ uint8_t get_divider(uint192_t value) {
     }
     res++;
   }
-
-  /// @todo Завалилось без условия 728 тестов
-  // uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
-  // if (tmp.Lbits[3] != 0 || tmp.Lbits[4] != 0 || tmp.Lbits[5] != 0) {
-  //   res++;
-  // }
+  
+  uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
+  if (tmp.Lbits[3] != 0 || tmp.Lbits[4] != 0 || tmp.Lbits[5] != 0) {
+    res++;
+  }
 
   return res;
 }
