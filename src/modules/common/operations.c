@@ -11,8 +11,6 @@
 
 #include "../include/common.h"
 
-static void zero_service_bits(uint192_t *value_1, uint192_t *value_2);
-
 /**
  * @brief Bitwise addition of two positive numbers of uint192_t type
  *
@@ -157,7 +155,7 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
   }
 }
 
-static void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
+void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
   value_1->Lbits[DEC_SIZE - 1] = 0;
   value_2->Lbits[DEC_SIZE - 1] = 0;
 }
