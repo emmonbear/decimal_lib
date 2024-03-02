@@ -99,15 +99,10 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
 
   uint192_t shifted_divisor = value_2;
   shift_left(&shifted_divisor, shift);
-  uint192_t dividend = value_1;
   bool operation = SUB;
 
-  while (shift >= 0) {
-    if (operation == SUB) {
-      tmp_remaider = binary_sub(dividend, shifted_divisor);
-    } else {
-      tmp_remaider = binary_add(dividend, shifted_divisor);
-    }
+  for(uint192_t dividend = value_1; shift >= 0; shift--) {
+    tmp_remaider = (operation == SUB) ? binary_sub(dividend, shifted_divisor) : binary_add(dividend, shifted_divisor);
 
     shift_left(&quotient, 1);
 
@@ -118,23 +113,18 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
     dividend = tmp_remaider;
     shift_left(&dividend, 1);
 
-    if (!IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) {
-      operation = SUB;
-    } else {
-      operation = ADD;
-    }
-    --shift;
+    operation = (!IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) ? SUB : ADD; 
   }
+
   if (IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) {
     tmp_remaider = binary_add(tmp_remaider, shifted_divisor);
   }
 
   shift_right(&tmp_remaider, (high_bit_1 - high_bit_2));
-  uint192_t res = quotient;
-  if (remainder) {
-    *remainder = tmp_remaider;
-  }
-  return res;
+
+  *remainder = (remainder) ? tmp_remaider : *remainder;
+
+  return quotient;
 }
 
 /**
