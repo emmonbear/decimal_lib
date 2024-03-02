@@ -14,10 +14,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/time.h> 
 
 static void test_function(Suite *(**array)(void), size_t size, char *name,
                           int *passed_count, int *failed_count);
-static void conclusion(int passed_count, int failed_count);
+static void conclusion(int passed_count, int failed_count, double time);
 static void function_declaration(char *function);
 static int test_suite(Suite *test, int *passed_count);
 static void greetings();
@@ -31,11 +32,14 @@ static void line();
  * @retval EXIT_FAILURE = 1 - if the tests pass unsuccessful.
  */
 int main(void) {
+  
   int failed_count = 0;
   int passed_count = 0;
 
   greetings();
-
+  struct timeval start, end;
+  
+  gettimeofday(&start, NULL);
 #ifdef TEST_ADD
   Suite *(*s21_add_cases[])(void) = {
       s21_add_case_1,  s21_add_case_2,  s21_add_case_3,  s21_add_case_4,
@@ -70,32 +74,31 @@ int main(void) {
 
 #ifdef TEST_SUB
   Suite *(*s21_sub_cases[])(void) = {
-      s21_sub_case_1,  
-    //   s21_sub_case_2,  s21_sub_case_3,  s21_sub_case_4,
-    //   s21_sub_case_5,  s21_sub_case_6,  s21_sub_case_7,  s21_sub_case_8,
-    //   s21_sub_case_9,  s21_sub_case_10, s21_sub_case_11, s21_sub_case_12,
-    //   s21_sub_case_13, s21_sub_case_14, s21_sub_case_15, s21_sub_case_16,
-    //   s21_sub_case_17, s21_sub_case_18, s21_sub_case_19, s21_sub_case_20,
-    //   s21_sub_case_21, s21_sub_case_22, s21_sub_case_23, s21_sub_case_24,
-    //   s21_sub_case_25, s21_sub_case_26, s21_sub_case_27, s21_sub_case_28,
-    //   s21_sub_case_29, s21_sub_case_30, s21_sub_case_31, s21_sub_case_32,
-    //   s21_sub_case_33, s21_sub_case_34, s21_sub_case_35, s21_sub_case_36,
-    //   s21_sub_case_37, s21_sub_case_38, s21_sub_case_39, s21_sub_case_40,
-    //   s21_sub_case_41, s21_sub_case_42, s21_sub_case_43, s21_sub_case_44,
-    //   s21_sub_case_45, s21_sub_case_46, s21_sub_case_47, s21_sub_case_48,
-    //   s21_sub_case_49, s21_sub_case_50, s21_sub_case_51, s21_sub_case_52,
-    //   s21_sub_case_53, s21_sub_case_54, s21_sub_case_55, s21_sub_case_56,
-    //   s21_sub_case_57, s21_sub_case_58, s21_sub_case_59, s21_sub_case_60,
-    //   s21_sub_case_61, s21_sub_case_62, s21_sub_case_63, s21_sub_case_64,
-    //   s21_sub_case_65, s21_sub_case_66, s21_sub_case_67, s21_sub_case_68,
-    //   s21_sub_case_69, s21_sub_case_70, s21_sub_case_71, s21_sub_case_72,
-    //   s21_sub_case_73, s21_sub_case_74, s21_sub_case_75, s21_sub_case_76,
-    //   s21_sub_case_77, s21_sub_case_78, s21_sub_case_79, s21_sub_case_80,
-    //   s21_sub_case_81, s21_sub_case_82, s21_sub_case_83, s21_sub_case_84,
-    //   s21_sub_case_85, s21_sub_case_86, s21_sub_case_87, s21_sub_case_88,
-    //   s21_sub_case_89, s21_sub_case_90, s21_sub_case_91, s21_sub_case_92,
-    //   s21_sub_case_93, s21_sub_case_94, s21_sub_case_95, s21_sub_case_96,
-    //   s21_sub_case_97, s21_sub_case_98, s21_sub_case_99, s21_sub_case_100,
+      s21_sub_case_1,  s21_sub_case_2,  s21_sub_case_3,  s21_sub_case_4,
+      s21_sub_case_5,  s21_sub_case_6,  s21_sub_case_7,  s21_sub_case_8,
+      s21_sub_case_9,  s21_sub_case_10, s21_sub_case_11, s21_sub_case_12,
+      s21_sub_case_13, s21_sub_case_14, s21_sub_case_15, s21_sub_case_16,
+      s21_sub_case_17, s21_sub_case_18, s21_sub_case_19, s21_sub_case_20,
+      s21_sub_case_21, s21_sub_case_22, s21_sub_case_23, s21_sub_case_24,
+      s21_sub_case_25, s21_sub_case_26, s21_sub_case_27, s21_sub_case_28,
+      s21_sub_case_29, s21_sub_case_30, s21_sub_case_31, s21_sub_case_32,
+      s21_sub_case_33, s21_sub_case_34, s21_sub_case_35, s21_sub_case_36,
+      s21_sub_case_37, s21_sub_case_38, s21_sub_case_39, s21_sub_case_40,
+      s21_sub_case_41, s21_sub_case_42, s21_sub_case_43, s21_sub_case_44,
+      s21_sub_case_45, s21_sub_case_46, s21_sub_case_47, s21_sub_case_48,
+      s21_sub_case_49, s21_sub_case_50, s21_sub_case_51, s21_sub_case_52,
+      s21_sub_case_53, s21_sub_case_54, s21_sub_case_55, s21_sub_case_56,
+      s21_sub_case_57, s21_sub_case_58, s21_sub_case_59, s21_sub_case_60,
+      s21_sub_case_61, s21_sub_case_62, s21_sub_case_63, s21_sub_case_64,
+      s21_sub_case_65, s21_sub_case_66, s21_sub_case_67, s21_sub_case_68,
+      s21_sub_case_69, s21_sub_case_70, s21_sub_case_71, s21_sub_case_72,
+      s21_sub_case_73, s21_sub_case_74, s21_sub_case_75, s21_sub_case_76,
+      s21_sub_case_77, s21_sub_case_78, s21_sub_case_79, s21_sub_case_80,
+      s21_sub_case_81, s21_sub_case_82, s21_sub_case_83, s21_sub_case_84,
+      s21_sub_case_85, s21_sub_case_86, s21_sub_case_87, s21_sub_case_88,
+      s21_sub_case_89, s21_sub_case_90, s21_sub_case_91, s21_sub_case_92,
+      s21_sub_case_93, s21_sub_case_94, s21_sub_case_95, s21_sub_case_96,
+      s21_sub_case_97, s21_sub_case_98, s21_sub_case_99, s21_sub_case_100,
   };
   test_function(s21_sub_cases, sizeof(s21_sub_cases) / sizeof(s21_sub_cases[0]),
                 "SUB", &passed_count, &failed_count);
@@ -552,8 +555,9 @@ int main(void) {
 #ifdef TEST_NEGATE
 
 #endif  // TEST_NEGATE
-
-  conclusion(passed_count, failed_count);
+  gettimeofday(&end, NULL);
+  double micros = (((double)((end.tv_sec - start.tv_sec) * 1000000.0) + (double)end.tv_usec) - (double)(start.tv_usec)) / 1000000.0;
+  conclusion(passed_count, failed_count, micros);
 
   return (failed_count) ? EXIT_FAILURE : EXIT_SUCCESS;
 }
@@ -714,7 +718,16 @@ static void line() {
  * @param[in] passed_count number of tests passed.
  * @param[in] failed_count number of failed tests.
  */
-static void conclusion(int passed_count, int failed_count) {
+static void conclusion(int passed_count, int failed_count, double time) {
+  char result[] = "                                                               ";
+  char temp[50];
+  sprintf(temp, "%d", passed_count);
+  result[strlen(result) - strlen(temp)] = '\0';
+  sprintf(temp, "%d", failed_count);
+  result[strlen(result) - strlen(temp)] = '\0';
+  sprintf(temp, "%.2lf", time);
+  result[strlen(result) - strlen(temp)] = '\0';
+
   printf(ORANGE
          "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
          "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -728,10 +741,7 @@ static void conclusion(int passed_count, int failed_count) {
       "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       "~~~~~~~~~~~\n\n");
-  printf(
-      "                                                            PASSED %d "
-      "tests from %d\n\n",
-      passed_count, passed_count + failed_count);
+  printf("%sPASSED %d tests from %d for %.2lf seconds\n\n", result, passed_count, passed_count + failed_count, time);
   printf(
       "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
