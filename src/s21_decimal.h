@@ -13,10 +13,11 @@
 
 #include "./modules/debug/debug.h"
 #include "./modules/include/common.h"
-#include "./modules/include/convertors.h"
 #include "./modules/include/macros.h"
+#include "./modules/include/convertors.h"
 #include "./modules/include/comparison.h"
 #include "./modules/include/arithmetic.h"
+#include "./modules/include/rounders.h"
 
 
 

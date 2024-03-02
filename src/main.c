@@ -9,20 +9,22 @@
 
 int main()
 {
-// char *example =
-//       "1442836296606862626875055847 + -1.9952280371801951234980360 = "
-//       "1442836296606862626875055845.0";
-  s21_decimal value_1 = {{1}};
-  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0}};
-  s21_decimal result = {{0x76791EE5, 0x5DB90EC1, 0x4A97C78, 0x0}};
-  // int code = 0;
-  // int count = 9995;
+  // char *example = "truncate(-783.60048511462222060164039) = -783";
+  // s21_decimal value = {{0xDFAD93C7, 0xBDDA2485, 0x40D162, 0x80170000}};
+  // s21_decimal result = {{0x30F, 0x0, 0x0, 0x80000000}};
 
-  s21_decimal res = DCML_ZERO;
-  s21_add(value_1, value_2, &res);
+  // s21_decimal res = DCML_ZERO;
+  // s21_truncate(value, &res);
 
-  s21_print_binary_decimal(result);
-  s21_print_binary_decimal(res);
-  both_decimal_bits(result, res);
+  // printf("\ntruncate(");
+  // printd(value, ") = ");
+  // printd(res, "\n\n");
+
+  // both_decimal_bits(res, result);
+
+  s21_decimal value = {{0x30D56CC1, 0x2E84, 0x0, 0x80010000}};
+  int res = 0;
+  s21_from_decimal_to_int(value, &res);
+  printf("\n\nresult = %d\n\n", res);
   return 0;
 }
