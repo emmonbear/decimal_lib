@@ -11,6 +11,8 @@
 
 #include "../include/common.h"
 
+static void zero_service_bits(uint192_t *value_1, uint192_t *value_2);
+
 /**
  * @brief Bitwise addition of two positive numbers of uint192_t type
  *
@@ -155,7 +157,7 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
   }
 }
 
-void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
+static void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
   value_1->Lbits[DEC_SIZE - 1] = 0;
   value_2->Lbits[DEC_SIZE - 1] = 0;
 }
@@ -192,7 +194,7 @@ uint192_t get_ten_pow(uint8_t pow) {
 
 uint8_t get_divider(uint192_t value) {
   uint8_t res = 0;
-  uint192_t quotient = binary_div(value, DCML_MAX, NULL);
+  uint192_t quotient = binary_div(value, LDCML_MAX, NULL);
 
   while (1) {
     int8_t compare = binary_compare(quotient, get_ten_pow(res));
@@ -201,7 +203,7 @@ uint8_t get_divider(uint192_t value) {
     }
     res++;
   }
-  
+
   uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
   if (tmp.Lbits[3] != 0 || tmp.Lbits[4] != 0 || tmp.Lbits[5] != 0) {
     res++;
