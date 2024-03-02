@@ -17,6 +17,14 @@
 #define DECIMAL_MAX 79228162514264337593543950335.0
 #define IS_NAN(x) x != x
 #define IS_INF(x) x == 1.0 / 0.0
+#define DCML_INT_MAX \
+  (s21_decimal) {    \
+    { 0x7FFFFFFF }   \
+  }
+#define DCML_INT_MIN                     \
+  (s21_decimal) {                        \
+    { 0x80000000, 0x0, 0x0, 0x80000000 } \
+  }
 
 typedef enum {
   CONVERSION_OK,
@@ -31,5 +39,6 @@ typedef enum {
 } constants;
 
 int s21_from_float_to_decimal(float src, s21_decimal *dst);
+int s21_from_decimal_to_int(s21_decimal src, int *dst);
 
 #endif  // CONVERTERS_H_
