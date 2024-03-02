@@ -42,8 +42,14 @@
     { 10 }      \
   }
 
-/// @brief Buffer long decimal equal to decimal max number (2^96 - 1).
+/// @brief Buffer decimal equal to decimal max number (2^96 - 1).
 #define DCML_MAX                           \
+  (s21_decimal) {                          \
+    { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF } \
+  }
+
+/// @brief Buffer long decimal equal to decimal max number (2^96 - 1).
+#define LDCML_MAX                          \
   (uint192_t) {                            \
     { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF } \
   }
