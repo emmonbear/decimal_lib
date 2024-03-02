@@ -13,7 +13,13 @@
 
 #include "../include/comparison.h"
 
-uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
+uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
+  if (s21_is_equal(uint192_to_decimal(integer), uint192_to_decimal(DCML_MAX)) &&
+      !s21_is_equal(uint192_to_decimal(fractional), DCML_ZERO)) {
+    *code = (GET_SIGN(integer.Lbits[3])) ? 2 : 1;
+    return LDCML_ZERO;
+  }
+  
   uint192_t res = LDCML_ZERO;
 
   if (s21_is_equal(uint192_to_decimal(fractional), POINT_FIVE)) {
