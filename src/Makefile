@@ -69,20 +69,20 @@ MAIN_H = $(shell find ./ -maxdepth 1 -name "*.h")
 
 
 #====================== LIST OF FILE AND DIRS IN MODULES ======================#
-MODULES_OBJ_PATH = $(OBJ_DIR)/*.o
 MODULES_DIRS = $(shell find $(MODULES_DIR) -type d)
 MODULES_C = $(shell find $(MODULES_DIR) -type f -name "*.c")
 MODULES_H = $(shell find $(MODULES_DIR) -type f -name "*.h")
 MODULES_O = $(notdir $(MODULES_C:%.c=%.o))
+MODULES_OBJ_PATH = $(addprefix $(OBJ_DIR)/, $(MODULES_O))
 #==============================================================================#
 
 
 #==================== LIST OF FILE AND DIRS IN TEST MODULES ===================#
-TEST_OBJ_PATH = $(OBJ_DIR)/*_test.o
 TEST_DIRS = $(shell find $(TEST_DIR) -type d)
 TEST_C = $(shell find $(TEST_DIR) -type f -name "*.c")
 TEST_H = $(shell find $(TEST_DIR) -type f -name "*.h")
 TEST_O = $(notdir $(TEST_C:%.c=%.o))
+TEST_OBJ_PATH = $(OBJ_DIR)/*_test.o
 #==============================================================================#
 
 
@@ -116,12 +116,12 @@ all: $(TARGET) dvi
 
 .PHONY: $(LIBRARY)
 $(LIBRARY): $(OBJ_DIR) $(MODULES_O) $(MODULES_H) $(MAIN_H)
+	@echo $(MODULES_OBJ_PATH)
 	ar rcs $@ $(MODULES_OBJ_PATH)
 	ranlib $@
 
 .PHONY: $(TARGET)
-# $(TARGET): $(OBJ_DIR) $(TEST_O)
-$(TARGET): $(OBJ_DIR) $(LIBRARY) $(TEST_O)
+$(TARGET): $(OBJ_DIR) $(TEST_O)
 	$(CC) $(TEST_OBJ_PATH) $(LIBRARY) $(LDFLAGS) -o $@
 	-./$@
 
@@ -161,7 +161,10 @@ $(REPORT_DIR):
 
 
 #============================== OBJECTIVE TARGETS =============================#
-%.o: %.c ${H_FILES}
+%.o: %.c ${MODULES_H}
+	$(CC) $(CFLAGS) -c -o $(addprefix ${OBJ_DIR}/, $@) $<
+
+%_test.o: %_test.c ${TEST_H} ${MAIN_H}
 	$(CC) $(CFLAGS) -c -o $(addprefix ${OBJ_DIR}/, $@) $<
 #==============================================================================#
 
