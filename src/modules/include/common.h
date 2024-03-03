@@ -58,8 +58,8 @@ typedef enum {
 } div_operation;
 
 //============================== SHIFTS ========================================
-void shift_left(uint192_t *value, unsigned int shift);
-void shift_right(uint192_t *value, unsigned int shift);
+uint192_t shift_left(uint192_t value, unsigned int shift);
+uint192_t shift_right(uint192_t value, unsigned int shift);
 //==============================================================================
 
 //========================== BINARY_OPERATIONS =================================
@@ -72,6 +72,7 @@ int get_high_bit(uint192_t value);
 void binary_normalizaton(uint192_t *value_1, uint192_t *value_2);
 uint192_t decimal_to_uint192(s21_decimal value);
 uint192_t get_ten_pow(uint8_t pow);
+uint192_t ten_mul(uint192_t num, uint8_t pow);
 uint8_t get_divider(uint192_t value);
 s21_decimal uint192_to_decimal(uint192_t value);
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2);

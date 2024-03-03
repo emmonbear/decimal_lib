@@ -22,9 +22,11 @@ int main()
 
   // both_decimal_bits(res, result);
 
-  s21_decimal value = {{0x30D56CC1, 0x2E84, 0x0, 0x80010000}};
-  int res = 0;
-  s21_from_decimal_to_int(value, &res);
+  int v1 = 125;
+
+  // s21_decimal value = {{0x30D56CC1, 0x2E84, 0x0, 0x80010000}};
+  int res = (v1 >> 1) + (v1 >> 2);
+  // s21_from_decimal_to_int(value, &res);
   printf("\n\nresult = %d\n\n", res);
   return 0;
 }

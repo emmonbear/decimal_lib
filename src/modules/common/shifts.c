@@ -18,17 +18,22 @@
  * ${shift}
  * @param[in] shift number specifying by how much to shift ${value} to the left
  */
-void shift_left(uint192_t *value, unsigned int shift) {
-  for (unsigned int i = 0; i < shift; i++) {
-    bool carry = false;
-
-    for (uint8_t j = 0; j < LDEC_SIZE; j++) {
-      unsigned int temp = GET_BIT(value->Lbits[j], UINT_BITS - 1);
-      value->Lbits[j] <<= 1;
-      value->Lbits[j] |= carry;
-      carry = temp;
+uint192_t shift_left(uint192_t num, unsigned int shift) {
+  for (; shift >= UINT_BITS; shift -= UINT_BITS) {
+    for (int16_t i = LDEC_SIZE - 1; i >= 0; i--) {
+      num.Lbits[i] = num.Lbits[i - 1];
     }
+
+    num.Lbits[0] = 0;
   }
+
+  for (uint32_t prev = 0, crnt = 0, i = 0; i < LDEC_SIZE && shift; i++) {
+    prev = num.Lbits[i] >> (UINT_BITS - shift);
+    num.Lbits[i] = num.Lbits[i] << shift | crnt;
+    crnt = prev;
+  }
+
+  return num;
 }
 
 /**
@@ -38,15 +43,20 @@ void shift_left(uint192_t *value, unsigned int shift) {
  * ${shift}
  * @param[in] shift number specifying by how much to shift ${value} to the left
  */
-void shift_right(uint192_t *value, unsigned int shift) {
-  for (unsigned int i = 0; i < shift; i++) {
-    bool carry = false;
-
-    for (int8_t j = LDEC_SIZE - 1; j >= 0; j--) {
-      unsigned int temp = value->Lbits[j] & 1;
-      value->Lbits[j] >>= 1;
-      value->Lbits[j] |= (carry) ? 1 << 31 : 0;
-      carry = temp;
+uint192_t shift_right(uint192_t num, unsigned int shift) {
+  for (; shift >= UINT_BITS; shift -= UINT_BITS) {
+    for (int16_t i = 0; i < LDEC_SIZE - 1; i++) {
+      num.Lbits[i] = num.Lbits[i + 1];
     }
+
+    num.Lbits[LDEC_SIZE - 1] = 0;
   }
+
+  for (uint32_t prev = 0, crnt = 0, i = LDEC_SIZE; i != 0 && shift; i--) {
+    crnt = num.Lbits[i - 1] << (UINT_BITS - shift);
+    num.Lbits[i - 1] = num.Lbits[i - 1] >> shift | prev;
+    prev = crnt;
+  }
+
+  return num;
 }

@@ -111544,4 +111544,6 @@ static void s21_test_truncate(s21_decimal value, s21_decimal result, int code, c
   }
 #endif // DEBUG
   ck_assert_int_eq(res, 2);
+  (void)text;
+  (void)count;
 }

@@ -111544,4 +111544,6 @@ static void s21_test_from_decimal_to_int(s21_decimal value, int result, int code
   }
 #endif // DEBUG
   ck_assert_int_eq(res, 2);
+  (void)text;
+  (void)count;
 }

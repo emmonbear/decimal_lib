@@ -24,7 +24,7 @@ uint192_t binary_add(uint192_t value_1, uint192_t value_2) {
 
   while (!is_eq_zero(tmp)) {
     uint192_t overflow_bits = binary_and(res, tmp);
-    shift_left(&overflow_bits, 1);
+    overflow_bits = shift_left(overflow_bits, 1);
     res = binary_xor(res, tmp);
     tmp = overflow_bits;
   }
@@ -64,7 +64,7 @@ uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
       res = binary_add(res, tmp);
     }
 
-    shift_left(&tmp, 1);
+    tmp = shift_left(tmp, 1);
   }
 
   return res;
@@ -97,32 +97,31 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
   unsigned int high_bit_2 = get_high_bit(value_2);
   int shift = high_bit_1 - high_bit_2;
 
-  uint192_t shifted_divisor = value_2;
-  shift_left(&shifted_divisor, shift);
+  uint192_t shifted_divisor = shift_left(value_2, shift);
   bool operation = SUB;
 
-  for(uint192_t dividend = value_1; shift >= 0; shift--) {
-    tmp_remaider = (operation == SUB) ? binary_sub(dividend, shifted_divisor) : binary_add(dividend, shifted_divisor);
+  for (uint192_t dividend = value_1; shift >= 0; shift--) {
+    tmp_remaider = (operation == SUB) ? binary_sub(dividend, shifted_divisor)
+                                      : binary_add(dividend, shifted_divisor);
 
-    shift_left(&quotient, 1);
+    quotient = shift_left(quotient, 1);
 
     if (!IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) {
-      SET_BIT(quotient, 0);
+      quotient.Lbits[0] |= 1;
     }
 
-    dividend = tmp_remaider;
-    shift_left(&dividend, 1);
+    dividend = shift_left(tmp_remaider, 1);
 
-    operation = (!IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) ? SUB : ADD; 
+    operation = (!IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) ? SUB : ADD;
   }
 
   if (IS_SET_BIT(tmp_remaider, (MAX_BITS - 1))) {
     tmp_remaider = binary_add(tmp_remaider, shifted_divisor);
   }
 
-  shift_right(&tmp_remaider, (high_bit_1 - high_bit_2));
-
-  *remainder = (remainder) ? tmp_remaider : *remainder;
+  *remainder = (remainder)
+                   ? shift_right(tmp_remaider, (high_bit_1 - high_bit_2))
+                   : *remainder;
 
   return quotient;
 }
@@ -139,9 +138,9 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
 
   zero_service_bits(Lvalue_1, Lvalue_2);
   if (power_1 > power_2) {
-    *Lvalue_2 = binary_mul(*Lvalue_2, get_ten_pow(power_1 - power_2));
+    *Lvalue_2 = ten_mul(*Lvalue_2, power_1 - power_2);
   } else if (power_1 < power_2) {
-    *Lvalue_1 = binary_mul(*Lvalue_1, get_ten_pow(power_2 - power_1));
+    *Lvalue_1 = ten_mul(*Lvalue_1, power_2 - power_1);
   }
 }
 
@@ -174,10 +173,18 @@ uint192_t get_ten_pow(uint8_t pow) {
   uint192_t res = ONE;
 
   for (uint8_t i = 0; i < pow; i++) {
-    res = binary_mul(res, TEN);
+    res = binary_add(shift_left(res, 3), shift_left(res, 1));
   }
 
   return res;
+}
+
+uint192_t ten_mul(uint192_t num, uint8_t pow) {
+  for (uint8_t i = 0; i < pow; i++) {
+    num = binary_add(shift_left(num, 3), shift_left(num, 1));
+  }
+
+  return num;
 }
 
 uint8_t get_divider(uint192_t value) {
