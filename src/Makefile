@@ -40,7 +40,7 @@ DVI_DIR = ./../docs
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=c11 -g
 
 # OPTIMIZATION
-OPTIMIZE = -O2
+# OPTIMIZE = -O2
 
 # CHECK LIBRARIES FOR LINKING
 LDFLAGS = -lcheck -lsubunit -lm

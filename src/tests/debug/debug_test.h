@@ -12,9 +12,9 @@
 #ifndef DEBUG_H_
 #define DEBUG_H_
 
-// #define DEBUG
+#define DEBUG
 // #define CALCULATOR
-// #define ERRORS
+#define ERRORS
 
 #include <stdio.h>
 

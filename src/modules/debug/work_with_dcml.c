@@ -8,10 +8,11 @@ static char *decimal_bits(int index);
 void printd(s21_decimal value, char *new_line) {
   char result[100];
   char *temp;
+  char *bit;
   sprintf(result, "%s", "0");
   for (int i = 0; i < ((DEC_SIZE - 1) * UINT_BITS); i++) {
     if (GET_DEC_BIT(value, i)) {
-      char *bit = decimal_bits(i);
+      bit = decimal_bits(i);
       temp = add(result, bit);
       sprintf(result, "%s", temp);
       free(temp);
@@ -91,7 +92,9 @@ s21_decimal filld(char *input) {
     scale = strlen(dot) - 1;
     dot[0] = '\0';
   }
-  mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
+  char *bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+  mantiss = divide(full, bit_ptr);
+  free(bit_ptr);
   if (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
     fprintf(stderr, "\nERROR: Number %s exceeds of decimal size.\n", input);
     free(mantiss);
@@ -107,11 +110,15 @@ s21_decimal filld(char *input) {
   }
 
   free(mantiss);
-  mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
+  bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+  mantiss = divide(full, bit_ptr);
+  free(bit_ptr);
   while (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
     free(mantiss);
     full[strlen(full) - 1] = '\0';
-    mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
+    bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+    mantiss = divide(full, bit_ptr);
+    free(bit_ptr);
     scale--;
   }
 
@@ -120,11 +127,15 @@ s21_decimal filld(char *input) {
     if (i == 0) {
       num.bits[i] = atoi(full);
     } else {
-      mantiss = divide(full, decimal_bits(i * 32));
+      bit_ptr = decimal_bits(i * 32);
+      mantiss = divide(full, bit_ptr);
+      free(bit_ptr);
       num.bits[i] = atoi(mantiss);
-      char *temp = multiply(mantiss, decimal_bits(i * 32));
+      bit_ptr = decimal_bits(i * 32);
+      char *temp = multiply(mantiss, bit_ptr);
       char *temp2 = subtract(full, temp);
       sprintf(full, "%s", temp2);
+      free(bit_ptr);
       free(temp);
       free(temp2);
     }
