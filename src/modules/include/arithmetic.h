@@ -31,4 +31,9 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 
+int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
+                   s21_decimal *result);
+int calc_fract_part(uint192_t *quotient, uint192_t divider,
+                    uint192_t *remainder);
 #endif  // ARITHMETIC_H
