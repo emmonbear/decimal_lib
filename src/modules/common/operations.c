@@ -214,7 +214,7 @@ uint8_t get_divider(uint192_t value) {
  * @return int - high bit index
  */
 int get_high_bit(uint192_t value) {
-  int res = -1;
+  int res = 0;
 
   for (int16_t i = MAX_BITS - 1; i >= 0; i--) {
     if (IS_SET_BIT(value, i)) {
