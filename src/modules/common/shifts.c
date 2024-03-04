@@ -20,7 +20,7 @@
  */
 uint192_t shift_left(uint192_t num, unsigned int shift) {
   for (; shift >= UINT_BITS; shift -= UINT_BITS) {
-    for (int16_t i = LDEC_SIZE - 1; i >= 0; i--) {
+    for (int16_t i = LDEC_SIZE - 1; i > 0; i--) {
       num.Lbits[i] = num.Lbits[i - 1];
     }
 

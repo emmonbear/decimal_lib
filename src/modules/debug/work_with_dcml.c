@@ -27,7 +27,6 @@ void printd(s21_decimal value, char *new_line) {
 static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   char *result = (char *)calloc(strlen(math_str) + 1, sizeof(char));
   sprintf(result, "%s", math_str);
-  int reserve = DEC_SIZE * 10;
 
   int scale = (value.bits[DEC_SIZE - 1] << 1) >> 17;
   int sign = value.bits[DEC_SIZE - 1] >> 31;
@@ -36,13 +35,13 @@ static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   if (scale > (DEC_SIZE - 1) * 10) {
     sprintf(result, "%s", "0");
   } else if (scale == len) {
-    result = (char *)realloc(result, (len + reserve) * sizeof(char));
+    result = (char *)realloc(result, 103 * sizeof(char));
     sprintf(result, "0.%s", math_str);
   } else if (scale < len) {
-    result = (char *)realloc(result, (len + reserve) * sizeof(char));
+    result = (char *)realloc(result, 103 * sizeof(char));
     insert_dot(result, len - scale);
   } else if (scale > len) {
-    result = (char *)realloc(result, (len + reserve) * sizeof(char));
+    result = (char *)realloc(result, 103 * sizeof(char));
     char temp[scale + 4];
     for (int i = 0; i < scale - len; i++) {
       strcpy(temp, result);
