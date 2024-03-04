@@ -32,7 +32,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!dst) {
     return CONVERSION_ERROR;
   }
-  
+
   *dst = DCML_ZERO;
 
   if (IS_NAN(src) || IS_INF(src) || fabs(src) > DECIMAL_MAX) {
