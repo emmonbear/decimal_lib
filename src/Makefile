@@ -179,7 +179,7 @@ clang_fix:
 
 m: $(LIBRARY)
 	$(CC) $(CFLAGS) main.c $(LIBRARY) $(LDFLAGS)
-	./a.out
+	valgrind $(VAL) ./a.out
 
 cppcheck:
 	$@ $(CPPCHECK) $(MODULES_C) $(MODULES_H)
