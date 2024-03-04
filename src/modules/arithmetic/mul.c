@@ -33,8 +33,7 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     err_code = SMALL;
   }
 
-  if ((err_code == OK) &&
-      (s21_is_not_equal(value_1, DCML_ZERO)) &&
+  if ((err_code == OK) && (s21_is_not_equal(value_1, DCML_ZERO)) &&
       (s21_is_not_equal(value_2, DCML_ZERO)) &&
       (s21_is_equal(*result, DCML_ZERO))) {
     err_code = SMALL;
