@@ -39,6 +39,9 @@ DVI_DIR = ./../docs
 # MAIN FLAGS FOR COMPILER
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=c11 -g
 
+# OPTIMIZATION
+OPTIMIZE = -O2
+
 # CHECK LIBRARIES FOR LINKING
 LDFLAGS = -lcheck -lsubunit -lm
 
@@ -162,7 +165,7 @@ $(REPORT_DIR):
 
 #============================== OBJECTIVE TARGETS =============================#
 %.o: %.c ${MODULES_H}
-	$(CC) $(CFLAGS) -c -o $(addprefix ${OBJ_DIR}/, $@) $<
+	$(CC) $(CFLAGS) $(OPTIMIZE) -c -o $(addprefix ${OBJ_DIR}/, $@) $<
 
 %_test.o: %_test.c ${TEST_H} ${MAIN_H}
 	$(CC) $(CFLAGS) -c -o $(addprefix ${OBJ_DIR}/, $@) $<
