@@ -1,29 +1,29 @@
 /**
  * @file char_arithmetic.c
  * @author kossadda (https://github.com/kossadda)
- * @brief 
+ * @brief
  * @version 1.0
  * @date 2024-03-03
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "debug.h"
 
 /**
- * @brief 
- * 
- * @param num_1 
- * @param num_2 
- * @return char* 
+ * @brief
+ *
+ * @param num_1
+ * @param num_2
+ * @return char*
  */
-char *add(char *num_1, char *num_2) {
+char* add(char* num_1, char* num_2) {
   int remind = 0;
   int len_1 = strlen(num_1);
   int len_2 = strlen(num_2);
   int max_len = (len_1 > len_2) ? len_1 : len_2;
-  char *result = (char *)calloc((max_len + 2), sizeof(char));
+  char* result = (char*)calloc((max_len + 2), sizeof(char));
   char temp[max_len + 2];
   temp[max_len + 1] = 0;
 
@@ -53,18 +53,18 @@ char *add(char *num_1, char *num_2) {
 }
 
 /**
- * @brief 
- * 
- * @param num_1 
- * @param num_2 
- * @return char* 
+ * @brief
+ *
+ * @param num_1
+ * @param num_2
+ * @return char*
  */
-char *subtract(char *num_1, char *num_2) {
+char* subtract(char* num_1, char* num_2) {
   int borrow = 0;
   int len_1 = strlen(num_1);
   int len_2 = strlen(num_2);
   int max_len = (len_1 > len_2) ? len_1 : len_2;
-  char *result = (char *)calloc((max_len + 1), sizeof(char));
+  char* result = (char*)calloc((max_len + 1), sizeof(char));
   result[max_len] = '\0';
 
   for (int i = 0; i < max_len; i++) {
@@ -75,7 +75,7 @@ char *subtract(char *num_1, char *num_2) {
       if (digit_1 == 0) {
         digit_1 = 9;
       } else {
-          digit_1 -= 1;
+        digit_1 -= 1;
         borrow = 0;
       }
     }
@@ -90,13 +90,13 @@ char *subtract(char *num_1, char *num_2) {
   }
 
   int start = 0;
-  
+
   while (result[start] == '0' && start < max_len - 1) {
     start++;
   }
 
   if (start > 0) {
-    char *trimmed_result = (char *)calloc((max_len - start + 1), sizeof(char));
+    char* trimmed_result = (char*)calloc((max_len - start + 1), sizeof(char));
     strcpy(trimmed_result, &result[start]);
     free(result);
     return trimmed_result;
@@ -106,37 +106,37 @@ char *subtract(char *num_1, char *num_2) {
 }
 
 /**
- * @brief 
+ * @brief
  * for divide
- * @param num1 
- * @param num2 
- * @return int 
+ * @param num1
+ * @param num2
+ * @return int
  */
-static int compareStrings(const char *num1, const char *num2) {
+static int compareStrings(const char* num1, const char* num2) {
   int len1 = strlen(num1), len2 = strlen(num2);
   return (len1 != len2) ? len1 - len2 : strcmp(num1, num2);
 }
 
 /**
- * @brief 
- * 
- * @param num1 
- * @param num2 
- * @return char* 
+ * @brief
+ *
+ * @param num1
+ * @param num2
+ * @return char*
  */
 char* divide(char* num1, char* num2) {
   int len1 = strlen(num1), len2 = strlen(num2);
 
   if (compareStrings(num1, num2) < 0) {
-    char* result = (char *)malloc(2);
+    char* result = (char*)malloc(2);
     strcpy(result, "0");
     return result;
   } else if (compareStrings(num1, num2) == 0) {
-    char *result = (char*)malloc(2);
+    char* result = (char*)malloc(2);
     strcpy(result, "1");
     return result;
   }
-  
+
   char* result = calloc(len1 + 1, sizeof(char));
   char* dividendPart = calloc(len2 + 2, sizeof(char));
   int resultPos = 0;
@@ -180,9 +180,9 @@ char* divide(char* num1, char* num2) {
 }
 
 /**
- * @brief 
+ * @brief
  * for multiply
- * @param str 
+ * @param str
  */
 void strrev(char* str) {
   int len = strlen(str);
@@ -195,11 +195,11 @@ void strrev(char* str) {
 }
 
 /**
- * @brief 
- * 
- * @param num1 
- * @param num2 
- * @return char* 
+ * @brief
+ *
+ * @param num1
+ * @param num2
+ * @return char*
  */
 char* multiply(char* num1, char* num2) {
   int len1 = strlen(num1), len2 = strlen(num2);

@@ -79,7 +79,7 @@ s21_decimal filld(char *input) {
   int sign = 0;
   int scale = 0;
 
-  if(input[0] == '-') {
+  if (input[0] == '-') {
     sign = 1;
     input++;
   }
@@ -88,19 +88,19 @@ s21_decimal filld(char *input) {
   char full[len + 1];
   sprintf(full, "%s", input);
   char *dot = strchr(full, '.');
-  if(dot) {
+  if (dot) {
     scale = strlen(dot) - 1;
     dot[0] = '\0';
   }
   mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
-  if(strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
+  if (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
     fprintf(stderr, "\nERROR: Number %s exceeds of decimal size.\n", input);
     free(mantiss);
     exit(1);
-  } 
-  if(dot) {
+  }
+  if (dot) {
     int shift = len - strlen(full) - 1;
-    for(int i = 0; i < shift; i++) {
+    for (int i = 0; i < shift; i++) {
       char remind = dot[i + 1];
       dot[i + 1] = dot[i];
       dot[i] = remind;
@@ -109,16 +109,16 @@ s21_decimal filld(char *input) {
 
   free(mantiss);
   mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
-  while(strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
+  while (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
     free(mantiss);
     full[strlen(full) - 1] = '\0';
     mantiss = divide(full, decimal_bits((DEC_SIZE - 1) * UINT_BITS));
     scale--;
   }
 
-  for(int i = DEC_SIZE - 2; i >= 0; i--) {
+  for (int i = DEC_SIZE - 2; i >= 0; i--) {
     free(mantiss);
-    if(i == 0) {
+    if (i == 0) {
       num.bits[i] = atoi(full);
     } else {
       mantiss = divide(full, decimal_bits(i * 32));

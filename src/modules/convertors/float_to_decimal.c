@@ -1,5 +1,5 @@
 /**
- * @file from_float_to_decimal.c
+ * @file float_to_decimal.c
  * @author kossadda (https://github.com/kossadda)
  * @brief
  * @version 1.0
@@ -10,7 +10,6 @@
  */
 
 #include <math.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "./../include/convertors.h"
@@ -32,9 +31,9 @@ static int get_char_exponent(char *str);
 int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   if (!dst) {
     return CONVERSION_ERROR;
-  } else {
-    *dst = (s21_decimal){0};
   }
+  
+  *dst = DCML_ZERO;
 
   if (IS_NAN(src) || IS_INF(src) || fabs(src) > DECIMAL_MAX) {
     return CONVERSION_ERROR;

@@ -12,6 +12,8 @@
 #ifndef CONVERTERS_H_
 #define CONVERTERS_H_
 
+#include <stdlib.h>
+
 #include "./common.h"
 
 #define DECIMAL_MAX 79228162514264337593543950335.0
@@ -38,7 +40,9 @@ typedef enum {
   EXP_LEN = 4,
 } constants;
 
+int s21_from_int_to_decimal(int src, s21_decimal *dst);
 int s21_from_float_to_decimal(float src, s21_decimal *dst);
 int s21_from_decimal_to_int(s21_decimal src, int *dst);
+int s21_from_decimal_to_float(s21_decimal src, float *dst);
 
 #endif  // CONVERTERS_H_

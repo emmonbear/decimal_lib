@@ -1,5 +1,5 @@
 /**
- * @file from_decimal_to_int.c
+ * @file decimal_to_int.c
  * @author kossadda (https://github.com/kossadda)
  * @brief
  * @version 1.0
