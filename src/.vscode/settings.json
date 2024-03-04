@@ -9,7 +9,9 @@
         "functional": "cpp",
         "tuple": "cpp",
         "utility": "cpp",
-        "system_error": "c"
+        "system_error": "c",
+        "arithmetic.h": "c",
+        "cmath": "c"
     },
     "makefile.launchConfigurations": [
         {
