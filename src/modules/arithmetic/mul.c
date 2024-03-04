@@ -33,6 +33,13 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     err_code = SMALL;
   }
 
+  // if ((err_code == OK) && 
+  //     (s21_is_not_equal(value_1, DCML_ZERO)) &&
+  //     (s21_is_not_equal(value_2, DCML_ZERO)) &&
+  //     (s21_is_equal(*result, DCML_ZERO))) {
+  //   err_code = SMALL;
+  // }
+
   return err_code;
 }
 
@@ -62,30 +69,30 @@ int mul_positive(s21_decimal value_1, s21_decimal value_2,
   int8_t res_power = (power_1 + power_2) - power_tmp;
 
   if (res_power < 0) {
-    err_code = BIG;
-  } else {
-    while (power_tmp > 28) {
-      res_tmp = binary_div(res_tmp, get_ten_pow(1), NULL);
-      --power_tmp;
-    }
-
-    if (res_power > 28) {
-      power_tmp = res_power - 28 + power_tmp;
-      res_power = 28;
-    }
-
-    uint192_t remainder = LDCML_ZERO;
-    res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
-    SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
-    res_tmp = bank_rouding(res_tmp, remainder, &err_code);
-
-    if (!((res_tmp.Lbits[0] == 0) && (res_tmp.Lbits[1] == 0) &&
-          (res_tmp.Lbits[2] == 0))) {
-      SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
-    }
-
-    *result = uint192_to_decimal(res_tmp);
+    return BIG;
   }
+
+  // while (power_tmp > 28) {
+  //   res_tmp = binary_div(res_tmp, get_ten_pow(1), NULL);
+  //   --power_tmp;
+  // }
+
+  // if (res_power > 28) {
+  //   power_tmp = res_power - 28 + power_tmp;
+  //   res_power = 28;
+  // }
+
+  uint192_t remainder = LDCML_ZERO;
+  res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
+  SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
+  res_tmp = bank_rouding(res_tmp, remainder, &err_code);
+
+  // if (!((res_tmp.Lbits[0] == 0) && (res_tmp.Lbits[1] == 0) &&
+  //       (res_tmp.Lbits[2] == 0))) {
+  //   SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
+  // }
+
+  *result = uint192_to_decimal(res_tmp);
 
   if (!is_correct(*result)) {
     err_code = BIG;
