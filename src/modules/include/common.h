@@ -18,6 +18,8 @@
 #include "./macros.h"
 #include "stdbool.h"
 
+#define MAX_SCALE 28
+
 /// @brief Enumerations with array sizes.
 typedef enum {
   DEC_SIZE = 4,                    ///< Int array used for the final result.
@@ -92,7 +94,7 @@ bool dcml_is_zero(s21_decimal value);
 //============================= COMMON FUNCTIONS ===============================
 s21_decimal dabs(s21_decimal value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code);
-int is_correct(s21_decimal value);
+bool is_correct(s21_decimal value);
 bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 //==============================================================================
 

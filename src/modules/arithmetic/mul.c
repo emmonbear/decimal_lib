@@ -104,14 +104,14 @@ int mul_positive(s21_decimal value_1, s21_decimal value_2,
     return BIG;
   }
 
-  while (power_tmp > 28) {
+  while (power_tmp > MAX_SCALE) {
     res_tmp = binary_div(res_tmp, get_ten_pow(1), NULL);
     --power_tmp;
   }
 
-  if (res_power > 28) {
-    power_tmp = res_power - 28 + power_tmp;
-    res_power = 28;
+  if (res_power > MAX_SCALE) {
+    power_tmp = res_power - MAX_SCALE + power_tmp;
+    res_power = MAX_SCALE;
   }
 
   uint192_t remainder = LDCML_ZERO;

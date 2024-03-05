@@ -67,25 +67,25 @@ s21_decimal dabs(s21_decimal value) {
  * Bits 0 through 15 must be zero
  * Bits 24 through 30 must be zero
  *
- * @param[in] value
- * @retval 0 - incorrect decimal
- * @retval 1 - correct decimal
+ * @param[in] value number being checked
+ * @retval false - incorrect decimal
+ * @retval true - correct decimal
  */
-int is_correct(s21_decimal value) {
+bool is_correct(s21_decimal value) {
   unsigned int empty = value.bits[DEC_SIZE - 1] & 0x7F00FFFF;
   uint8_t power = GET_POWER(value.bits[DEC_SIZE - 1]);
 
-  return ((empty) || (power > 28)) ? 0 : 1;
+  return ((empty) || (power > MAX_SCALE)) ? false : true;
 }
 
 /**
  * @brief Input arguments validation
  *
- * @param[in] value_1
- * @param[in] value_2
- * @param[in] result
- * @return true
- * @return false
+ * @param[in] value_1 first number
+ * @param[in] value_2 second number
+ * @param[in] result result number
+ * @return true - all arguments is valid
+ * @return false - contains one or more invalid arguments
  */
 bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   return (!result || !is_correct(value_1) || !is_correct(value_2)) ? false

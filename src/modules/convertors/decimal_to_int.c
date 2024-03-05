@@ -1,7 +1,7 @@
 /**
  * @file decimal_to_int.c
  * @author kossadda (https://github.com/kossadda)
- * @brief Decimal_to_int module
+ * @brief Main module for s21_from_int_to_decimal function
  * @version 1.0
  * @date 2024-03-02
  *

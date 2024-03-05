@@ -11,7 +11,7 @@
 
 #include "../include/arithmetic.h"
 
-static int check_overflow(uint192_t value, uint8_t index);
+static bool check_overflow(uint192_t value, uint8_t index);
 
 /**
  * @brief Division two decimals
@@ -138,7 +138,7 @@ int calc_fract_part(uint192_t *quotient, uint192_t divider,
   uint192_t number = *quotient;
   uint192_t remainder_tmp = *remainder;
 
-  while (!(is_eq_zero(*remainder)) && power < 28) {
+  while (!(is_eq_zero(*remainder)) && power < MAX_SCALE) {
     uint192_t number_storage = number;
     uint192_t remainder_storage = remainder_tmp;
     number = ten_mul(number, 1);
@@ -164,15 +164,15 @@ int calc_fract_part(uint192_t *quotient, uint192_t divider,
  *
  * @param value checked number decimal_t
  * @return int - error code
- * @retval 0 - all bits zero
- * @retval 1 - not all bits are zeros
+ * @retval false - all bits zero
+ * @retval true - not all bits are zeros
  */
-static int check_overflow(uint192_t value, uint8_t index) {
-  int err_code = 0;
+static bool check_overflow(uint192_t value, uint8_t index) {
+  int err_code = false;
 
   for (uint8_t i = index; i < LDEC_SIZE - 1; i++) {
     if (value.Lbits[i]) {
-      err_code = 1;
+      err_code = true;
       break;
     }
   }

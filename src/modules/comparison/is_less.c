@@ -20,14 +20,13 @@
  * @retval COMPARISON_FALSE - !(value_1 < value_2)
  */
 int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
+  if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
+    return COMPARISON_FALSE;
+  }
+
   int err_code = COMPARISON_FALSE;
   int sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
   int sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
-
-  if ((s21_is_equal(value_1, DCML_ZERO)) &&
-      (s21_is_equal(value_2, DCML_ZERO))) {
-    return COMPARISON_FALSE;
-  }
 
   if (sign_1 == NEGATIVE) {
     err_code = (sign_2 == POSITIVE)
@@ -49,7 +48,7 @@ int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
  * @retval COMPARISON_TRUE - value_1 < value_2
  * @retval COMPARISON_FALSE - !(value_1 < value_2)
  */
-int is_less_positive(s21_decimal value_1, s21_decimal value_2) {
+bool is_less_positive(s21_decimal value_1, s21_decimal value_2) {
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
 

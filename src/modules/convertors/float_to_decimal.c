@@ -1,7 +1,7 @@
 /**
  * @file float_to_decimal.c
  * @author kossadda (https://github.com/kossadda)
- * @brief Float_to_decimal module
+ * @brief Main module for s21_from_float_to_decimal function
  * @version 1.0
  * @date 2024-02-27
  *

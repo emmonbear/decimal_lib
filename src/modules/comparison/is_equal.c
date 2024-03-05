@@ -23,6 +23,7 @@ int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {
   if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
     return COMPARISON_TRUE;
   }
+  
   int err_code = COMPARISON_TRUE;
 
   int8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);

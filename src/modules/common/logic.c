@@ -35,8 +35,8 @@ bool is_eq_zero(uint192_t value) {
  * @brief Check if all significant bits of a decimal_t number are zero
  *
  * @param[in] value Checked number decimal_t
- * @retval true
- * @retval false
+ * @retval true - no significant bits
+ * @retval false - contains significant bits
  */
 bool dcml_is_zero(s21_decimal value) {
   bool res = true;
