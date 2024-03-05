@@ -1,7 +1,7 @@
 /**
  * @file binary_logic.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Binary logic module
  * @version 0.1
  * @date 2024-02-25
  *
@@ -15,8 +15,8 @@
  * @brief Check if all bits of ${value} are zeros.
  *
  * @param[in] value number of uint192_t type, bits of which must be checked.
- * @return true - all bits are zero.
- * @return false - not all bits are zero.
+ * @retval true - all bits are zero.
+ * @retval false - not all bits are zero.
  */
 bool is_eq_zero(uint192_t value) {
   bool res = true;
@@ -31,6 +31,13 @@ bool is_eq_zero(uint192_t value) {
   return res;
 }
 
+/**
+ * @brief Check if all significant bits of a decimal_t number are zero
+ *
+ * @param[in] value Checked number decimal_t
+ * @retval true
+ * @retval false
+ */
 bool dcml_is_zero(s21_decimal value) {
   bool res = true;
 

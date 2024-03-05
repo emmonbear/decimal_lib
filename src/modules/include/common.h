@@ -46,15 +46,17 @@ typedef enum {
   MAX_BITS = LDEC_SIZE * UINT_BITS,  ///< Number of bits in uint192_t.
 } bits_count;
 
+/// @brief Enumeration of bit comparison codes
 typedef enum {
-  LESS = -1,
-  EQUAL,
-  GREATER,
+  LESS = -1,  ///< value_1 < value_2
+  EQUAL,      ///< value_1 = value_2
+  GREATER,    ///< value_1 > value_2
 } compare_code;
 
+/// @brief Enumeration of operations in binary division
 typedef enum {
-  ADD,
-  SUB,
+  ADD,  ///< Addition
+  SUB,  ///< Subtraction
 } div_operation;
 
 //============================== SHIFTS ========================================

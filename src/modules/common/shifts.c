@@ -1,7 +1,7 @@
 /**
  * @file shifts.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Shift module
  * @version 0.1
  * @date 2024-02-28
  *
@@ -12,11 +12,10 @@
 #include "../include/common.h"
 
 /**
- * @brief Shift ${value} by ${shift} bits to the left
+ * @brief Shift value by shift bits to the left
  *
- * @param[out] value number of uint192_t type to be shifted to the left by
- * ${shift}
- * @param[in] shift number specifying by how much to shift ${value} to the left
+ * @param[out] value number of uint192_t type to be shifted to the left by shift
+ * @param[in] shift number specifying by how much to shift value to the left
  */
 uint192_t shift_left(uint192_t num, unsigned int shift) {
   for (; shift >= UINT_BITS; shift -= UINT_BITS) {
@@ -37,11 +36,10 @@ uint192_t shift_left(uint192_t num, unsigned int shift) {
 }
 
 /**
- * @brief Shift ${value} by ${shift} bits to the left
+ * @brief Shift value by shift bits to the left
  *
- * @param[out] value number of uint192_t type to be shifted to the left by
- * ${shift}
- * @param[in] shift number specifying by how much to shift ${value} to the left
+ * @param[out] value number of uint192_t type to be shifted to the left by shift
+ * @param[in] shift number specifying by how much to shift value to the left
  */
 uint192_t shift_right(uint192_t num, unsigned int shift) {
   for (; shift >= UINT_BITS; shift -= UINT_BITS) {

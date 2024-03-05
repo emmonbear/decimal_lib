@@ -1,7 +1,7 @@
 /**
  * @file add.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Addition module
  * @version 0.1
  * @date 2024-02-26
  *
@@ -12,12 +12,15 @@
 #include "../include/arithmetic.h"
 
 /**
- * @brief
+ * @brief Adding two decimals
  *
- * @param value_1
- * @param value_2
- * @param result
- * @return int
+ * @param[in] value_1 first summand
+ * @param[in] value_2 second summand
+ * @param[out] result amount
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
@@ -45,12 +48,15 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 }
 
 /**
- * @brief
+ * @brief Adding two positive decimals
  *
- * @param value_1
- * @param value_2
- * @param res
- * @return int
+ * @param[in] value_1 first summand
+ * @param[in] value_2 second summand
+ * @param[out] result amount
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;

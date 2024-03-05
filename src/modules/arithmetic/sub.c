@@ -1,7 +1,7 @@
 /**
  * @file sub.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Subtraction module
  * @version 0.1
  * @date 2024-02-28
  *
@@ -11,6 +11,17 @@
 
 #include "../include/arithmetic.h"
 
+/**
+ * @brief Subtracting two decimal
+ *
+ * @param[in] value_1 diminishable
+ * @param[in] value_2 subtracted
+ * @param[out] result difference
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
+ */
 int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
 
@@ -45,6 +56,17 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   return err_code;
 }
 
+/**
+ * @brief Subtracting two positive decimal
+ *
+ * @param[in] value_1 diminishable
+ * @param[in] value_2 subtracted
+ * @param[out] result difference
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
+ */
 int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;
 

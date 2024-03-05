@@ -1,7 +1,7 @@
 /**
  * @file round.c
  * @author kossadda (https://github.com/kossadda)
- * @brief
+ * @brief Round module
  * @version 1.0
  * @date 2024-03-04
  *
@@ -11,6 +11,16 @@
 
 #include "./../include/rounders.h"
 
+/**
+ * @brief Round decimal_t to the nearest integer.
+ *
+ * @param[in] value decimal_t to be rounded
+ * @param[out] result rounded decimal_t
+ * @return int - ROUND_ERROR code
+ * @retval ROUND_OK = 0 - successful rounding. A valid number that fits
+ * into a decimal.
+ * @retval ROUND_ERROR = 1 - invalid number or does not fit into decimal.
+ */
 int s21_round(s21_decimal value, s21_decimal *result) {
   if (!result) {
     return ROUND_ERROR;

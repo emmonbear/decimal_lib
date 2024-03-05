@@ -1,7 +1,7 @@
 /**
  * @file div.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Division two decimals
  * @version 0.1
  * @date 2024-03-04
  *
@@ -12,12 +12,15 @@
 #include "../include/arithmetic.h"
 
 /**
- * @brief
+ * @brief Division two decimals
  *
- * @param value_1
- * @param value_2
- * @param result
- * @return int
+ * @param[in] value_1 divisible
+ * @param[in] value_2 divider
+ * @param[out] result quotient
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
@@ -72,13 +75,16 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 }
 
 /**
- * @brief
+ * @brief Auxiliary function of division
  *
- * @param divider
- * @param quotient
- * @param remainder
- * @param result
- * @return int
+ * @param[in] divider
+ * @param[in] quotient
+ * @param[in] remainder
+ * @param[out] result
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
                    s21_decimal *result) {
@@ -105,12 +111,16 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
 }
 
 /**
- * @brief
+ * @brief Calculate the resulting degree of the result and relate the quotient
+ * to the remainder
  *
  * @param quotient
  * @param divider
  * @param remainder
- * @return int
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int calc_fract_part(uint192_t *quotient, uint192_t divider,
                     uint192_t *remainder) {

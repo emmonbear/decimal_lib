@@ -1,7 +1,7 @@
 /**
  * @file mul.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Multiplication module
  * @version 0.1
  * @date 2024-03-02
  *
@@ -11,6 +11,17 @@
 
 #include "../include/arithmetic.h"
 
+/**
+ * @brief Multiplication two decimals
+ *
+ * @param[in] value_1 multiplied
+ * @param[in] value_2 multiplier
+ * @param[out] result multiplication
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
+ */
 int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
 
@@ -43,12 +54,15 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 }
 
 /**
- * @brief
+ * @brief Multiplication two positive decimals
  *
- * @param value_1
- * @param value_2
- * @param result
- * @return int
+ * @param[in] value_1 multiplied
+ * @param[in] value_2 multiplier
+ * @param[out] result multiplication
+ * @retval 0 - OK;
+ * @retval 1 - the number is too large or equal to infinity;
+ * @retval 2 - number is too small or equal to negative infinity;
+ * @retval 3 - division by 0;
  */
 int mul_positive(s21_decimal value_1, s21_decimal value_2,
                  s21_decimal *result) {
@@ -87,9 +101,8 @@ int mul_positive(s21_decimal value_1, s21_decimal value_2,
   SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
   res_tmp = bank_rouding(res_tmp, remainder, &err_code);
 
-/// @todo Может функцию? С названием беда
-  if ((res_tmp.Lbits[0]) || (res_tmp.Lbits[1]) ||
-        (res_tmp.Lbits[2])) {
+  /// @todo Может функцию? С названием беда
+  if ((res_tmp.Lbits[0]) || (res_tmp.Lbits[1]) || (res_tmp.Lbits[2])) {
     SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
   }
 

@@ -1,7 +1,7 @@
 /**
  * @file bank_rouding.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Common module
  * @version 0.1
  * @date 2024-02-27
  *
@@ -13,6 +13,14 @@
 
 #include "../include/comparison.h"
 
+/**
+ * @brief Function of bank rounding of a number of uint192_t type
+ *
+ * @param[in] integer integer part of a number
+ * @param[in] fractional fractional part of a number
+ * @param[out] code error code
+ * @return uint192_t - rounded number
+ */
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
   if (s21_is_equal(uint192_to_decimal(integer), DCML_MAX) &&
       !s21_is_equal(uint192_to_decimal(fractional), DCML_ZERO)) {
@@ -39,15 +47,27 @@ uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
   return res;
 }
 
+/**
+ * @brief Return the modulus of a number of type decimal_t
+ *
+ * @param[in] value the number whose modulus is to be returned
+ * @return s21_decimal - modulus of value
+ */
 s21_decimal dabs(s21_decimal value) {
   value.bits[DEC_SIZE - 1] = (value.bits[DEC_SIZE - 1] << 1) >> 1;
   return value;
 }
 
 /**
- * @brief
+ * @brief Checking a number of decimal_t type for correctness
  *
- * @param value
+ * @details
+ *
+ * The degree of a decimal number cannot be greater than 28
+ * Bits 0 through 15 must be zero
+ * Bits 24 through 30 must be zero
+ *
+ * @param[in] value
  * @retval 0 - incorrect decimal
  * @retval 1 - correct decimal
  */

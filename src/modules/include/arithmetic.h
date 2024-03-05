@@ -1,7 +1,7 @@
 /**
  * @file arithmetic.h
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Arithmetic header
  * @version 0.1
  * @date 2024-02-26
  *
@@ -15,11 +15,12 @@
 #include "./common.h"
 #include "./comparison.h"
 
+/// @brief Enumeration of arithmetic error codes
 typedef enum {
-  OK,
-  BIG,
-  SMALL,
-  ZERO_DIV,
+  OK,        ///< correct result
+  BIG,       ///< the number is too large or equal to infinity
+  SMALL,     ///< the number is too small or equal to negative infinity
+  ZERO_DIV,  ///< division by 0
 } arithmetic_code;
 
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);

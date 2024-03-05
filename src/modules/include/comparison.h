@@ -1,7 +1,7 @@
 /**
  * @file is_equal.h
  * @author emmonbea (https://github.com/emmonbear)
- * @brief
+ * @brief Comparison header
  * @version 0.1
  * @date 2024-02-28
  *
@@ -14,9 +14,10 @@
 
 #include "./common.h"
 
+/// @brief Enumeration of comparison error codes
 typedef enum {
-  COMPARISON_FALSE,
-  COMPARISON_TRUE,
+  COMPARISON_FALSE,  ///< Comparison error
+  COMPARISON_TRUE,   ///< Comparison ok
 } comparison_code;
 
 int s21_is_equal(s21_decimal value_1, s21_decimal value_2);

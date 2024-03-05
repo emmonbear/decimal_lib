@@ -1,7 +1,7 @@
 /**
  * @file convertors.h
  * @author kossadda (https://github.com/kossadda)
- * @brief
+ * @brief Convertors header
  * @version 1.0
  * @date 2024-02-27
  *
@@ -16,23 +16,29 @@
 
 #include "./common.h"
 
-#define DECIMAL_MAX 79228162514264337593543950335.0
-#define IS_NAN(x) x != x
-#define IS_INF(x) x == 1.0 / 0.0
+#define DECIMAL_MAX \
+  79228162514264337593543950335.0  ///< {{0xFFFFFFF, 0xFFFFFFF, 0xFFFFFFF, 0}}
+#define IS_NAN(x) x != x           ///< is not a number check
+#define IS_INF(x) x == 1.0 / 0.0   ///< is infinity check
+
+/// @brief INT_MAX as decimal
 #define DCML_INT_MAX \
   (s21_decimal) {    \
     { 0x7FFFFFFF }   \
   }
+/// @brief INT_MIN as decimal
 #define DCML_INT_MIN                     \
   (s21_decimal) {                        \
     { 0x80000000, 0x0, 0x0, 0x80000000 } \
   }
 
+/// @brief Enumeration of conversion error codes
 typedef enum {
-  CONVERSION_OK,
-  CONVERSION_ERROR,
+  CONVERSION_OK,     ///< conversion error
+  CONVERSION_ERROR,  ///< conversion ok
 } converter_code;
 
+/// @todo Добавить описание
 typedef enum {
   DCML_PRECISION = 28,
   FLT_PRECISION = 6,

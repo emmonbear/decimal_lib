@@ -11,7 +11,8 @@
         "utility": "cpp",
         "system_error": "c",
         "arithmetic.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "comparison.h": "c"
     },
     "makefile.launchConfigurations": [
         {

@@ -1,7 +1,7 @@
 /**
  * @file float_to_decimal.c
  * @author kossadda (https://github.com/kossadda)
- * @brief
+ * @brief Float_to_decimal module
  * @version 1.0
  * @date 2024-02-27
  *
@@ -18,10 +18,10 @@ static void get_clean_value(char *str);
 static int get_char_exponent(char *str);
 
 /**
- * @brief Converting a float number to a decimal number.
+ * @brief Converting a float number to a decimal_t number.
  *
- * @param src convertible number.
- * @param dst conversion result.
+ * @param[in] src convertible number.
+ * @param[out] dst conversion result.
  * @return int - CONVERSION_ERROR code.
  * @retval CONVERSION_OK = 0 - successful conversion. A valid number that fits
  * into a decimal.

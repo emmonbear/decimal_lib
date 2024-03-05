@@ -144,11 +144,23 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
   }
 }
 
+/**
+ * @brief Zero out decimal_t[3]
+ *
+ * @param[out] value_1
+ * @param[out] value_2
+ */
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
   value_1->Lbits[DEC_SIZE - 1] = 0;
   value_2->Lbits[DEC_SIZE - 1] = 0;
 }
 
+/**
+ * @brief Convert decimal_t number to uint192_t
+ *
+ * @param[in] value conversion number
+ * @return uint192_t - converted number
+ */
 uint192_t decimal_to_uint192(s21_decimal value) {
   uint192_t res = LDCML_ZERO;
 
@@ -159,6 +171,12 @@ uint192_t decimal_to_uint192(s21_decimal value) {
   return res;
 }
 
+/**
+ * @brief Convert uint192_t number to uint192_t decimal_t
+ *
+ * @param[in] value conversion number
+ * @return s21_decimal - converted number
+ */
 s21_decimal uint192_to_decimal(uint192_t value) {
   s21_decimal res = DCML_ZERO;
 
@@ -169,6 +187,12 @@ s21_decimal uint192_to_decimal(uint192_t value) {
   return res;
 }
 
+/**
+ * @brief Return 10 to degree index as uint192_t
+ *
+ * @param[in] pow power of ten
+ * @return uint192_t - multiplication result
+ */
 uint192_t get_ten_pow(uint8_t pow) {
   uint192_t res = ONE;
 
@@ -179,6 +203,13 @@ uint192_t get_ten_pow(uint8_t pow) {
   return res;
 }
 
+/**
+ * @brief Multiply a number of uint192_t type by 10e (index)
+ *
+ * @param[in] num multiplied number
+ * @param[in] pow power of ten
+ * @return uint192_t - multiplication result
+ */
 uint192_t ten_mul(uint192_t num, uint8_t pow) {
   for (uint8_t i = 0; i < pow; i++) {
     num = binary_add(shift_left(num, 3), shift_left(num, 1));
@@ -187,6 +218,17 @@ uint192_t ten_mul(uint192_t num, uint8_t pow) {
   return num;
 }
 
+/**
+ * @brief Return the degree 10 required to fit a uint192_t into a decimal_t
+ *
+ * @details
+ *
+ * In fact, this function shows how much decimal_t MAX is possessed in the
+ * number of uint192_t The usual abbreviation
+ *
+ * @param[in] value number to be reduced
+ * @return uint8_t - power of ten
+ */
 uint8_t get_divider(uint192_t value) {
   uint8_t res = 0;
   uint192_t quotient = binary_div(value, LDCML_MAX, NULL);

@@ -1,7 +1,7 @@
 /**
  * @file decimal_to_float.c
  * @author kossadda (https://github.com/kossadda)
- * @brief
+ * @brief Decimal_to_float module
  * @version 1.0
  * @date 2024-03-04
  *
@@ -13,6 +13,17 @@
 
 #include "./../include/convertors.h"
 
+/**
+ * @brief Converting a decimal_t number to a float number.
+ *
+ * @param[in] src source
+ * @param[out] dst destination
+ * @return int - CONVERSION_ERROR code.
+ * @retval CONVERSION_OK = 0 - successful conversion. A valid number that fits
+ * into a decimal.
+ * @retval CONVERSION_ERROR = 1 - conversion CONVERSION_ERROR. Invalid number or
+ * does not fit into decimal.
+ */
 int s21_from_decimal_to_float(s21_decimal src, float *dst) {
   if (!dst) {
     return CONVERSION_ERROR;
