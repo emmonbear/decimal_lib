@@ -35,11 +35,8 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
 
   if (sign_1 == POSITIVE) {
-    if (sign_2 == POSITIVE) {
-      err_code = add_positive(value_1, value_2, result);
-    } else {
-      err_code = s21_sub(value_1, dabs(value_2), result);
-    }
+    err_code = (sign_2 == POSITIVE) ? add_positive(value_1, value_2, result)
+                                    : s21_sub(value_1, dabs(value_2), result);
   } else {
     if (sign_2 == POSITIVE) {
       err_code = s21_sub(dabs(value_1), value_2, result);
@@ -47,7 +44,8 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
                !GET_SIGN(result->bits[DEC_SIZE - 1]));
     } else {
       err_code = add_positive(dabs(value_1), dabs(value_2), result);
-      SET_SIGN(result->bits[DEC_SIZE - 1], !GET_SIGN(result->bits[DEC_SIZE - 1]));
+      SET_SIGN(result->bits[DEC_SIZE - 1],
+               !GET_SIGN(result->bits[DEC_SIZE - 1]));
     }
   }
 
