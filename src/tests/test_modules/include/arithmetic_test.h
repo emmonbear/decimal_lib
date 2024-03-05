@@ -114,6 +114,7 @@ Suite *s21_add_case_97(void);
 Suite *s21_add_case_98(void);
 Suite *s21_add_case_99(void);
 Suite *s21_add_case_100(void);
+Suite *s21_add_edge_case(void);
 
 Suite *s21_sub_case_1(void);
 Suite *s21_sub_case_2(void);
@@ -215,6 +216,8 @@ Suite *s21_sub_case_97(void);
 Suite *s21_sub_case_98(void);
 Suite *s21_sub_case_99(void);
 Suite *s21_sub_case_100(void);
+Suite *s21_sub_edge_case(void);
+
 Suite *s21_mul_case_1(void);
 Suite *s21_mul_case_2(void);
 Suite *s21_mul_case_3(void);
@@ -315,6 +318,7 @@ Suite *s21_mul_case_97(void);
 Suite *s21_mul_case_98(void);
 Suite *s21_mul_case_99(void);
 Suite *s21_mul_case_100(void);
+Suite *s21_mul_edge_case(void);
 
 Suite *s21_div_case_1(void);
 Suite *s21_div_case_2(void);
