@@ -93,6 +93,7 @@ bool dcml_is_zero(s21_decimal value);
 s21_decimal dabs(s21_decimal value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code);
 int is_correct(s21_decimal value);
+bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 //==============================================================================
 
 #endif  // COMMON_H
