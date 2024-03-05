@@ -11,19 +11,27 @@
 
 #include "../include/arithmetic.h"
 
+static int check_overflow(uint192_t value, uint8_t index);
+
 /**
  * @brief Division two decimals
  *
  * @param[in] value_1 divisible
  * @param[in] value_2 divider
  * @param[out] result quotient
- * @retval 0 - OK;
- * @retval 1 - the number is too large or equal to infinity;
- * @retval 2 - number is too small or equal to negative infinity;
- * @retval 3 - division by 0;
+ * @return int - error code
+ * @retval OK = 0 - OK;
+ * @retval BIG = 1 - the number is too large or equal to infinity;
+ * @retval SMALL = 2 - number is too small or equal to negative infinity;
+ * @retval ZERO_DIV = 3 - division by 0;
+ * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
+
+  if (!check_args(value_1, value_2, result)) {
+    return INCORRECT;
+  }
 
   if (s21_is_equal(value_2, DCML_ZERO)) {
     return ZERO_DIV;
@@ -45,30 +53,28 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   uint192_t remainder = LDCML_ZERO;
   uint192_t res = binary_div(Lvalue_1, Lvalue_2, &remainder);
 
-  if (res.Lbits[DEC_SIZE - 1] ||
-      (res.Lbits[LDEC_SIZE - 1] && res.Lbits[LDEC_SIZE - 2])) {
-    err_code = (sign_1 != sign_2) ? SMALL : BIG;
+  if (check_overflow(res, DEC_SIZE - 1)) {
     *result = DCML_ZERO;
-  } else {
-    err_code = div_additional(Lvalue_2, res, remainder, result);
+    return (sign_1 != sign_2) ? SMALL : BIG;
+  }
 
-    if (sign_1 != sign_2) {
-      SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
-    }
+  err_code = div_additional(Lvalue_2, res, remainder, result);
 
-    if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) &&
-        (err_code == BIG)) {
-      err_code = SMALL;
-    }
+  if (sign_1 != sign_2) {
+    SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+  }
 
-    if ((err_code == OK) && (!s21_is_equal(value_1, DCML_ZERO)) &&
-        (s21_is_equal(*result, DCML_ZERO))) {
-      err_code = SMALL;
-    }
+  if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+    err_code = SMALL;
+  }
 
-    if (err_code == OK && s21_is_equal(*result, DCML_ZERO)) {
-      err_code = SMALL;
-    }
+  if ((err_code == OK) && (!s21_is_equal(value_1, DCML_ZERO)) &&
+      (s21_is_equal(*result, DCML_ZERO))) {
+    err_code = SMALL;
+  }
+
+  if (err_code == OK && s21_is_equal(*result, DCML_ZERO)) {
+    err_code = SMALL;
   }
 
   return err_code;
@@ -81,10 +87,12 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @param[in] quotient
  * @param[in] remainder
  * @param[out] result
- * @retval 0 - OK;
- * @retval 1 - the number is too large or equal to infinity;
- * @retval 2 - number is too small or equal to negative infinity;
- * @retval 3 - division by 0;
+ * @return int - error code
+ * @retval OK = 0 - OK;
+ * @retval BIG = 1 - the number is too large or equal to infinity;
+ * @retval SMALL = 2 - number is too small or equal to negative infinity;
+ * @retval ZERO_DIV = 3 - division by 0;
+ * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
                    s21_decimal *result) {
@@ -98,9 +106,8 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
   quotient = bank_rouding(quotient, res_tmp, &err_code);
   SET_POWER(quotient.Lbits[DEC_SIZE - 1], power_1);
 
-  if (((quotient.Lbits[LDEC_SIZE - 1] != 0) &&
-       (quotient.Lbits[LDEC_SIZE - 2] != 0)) ||
-      (!is_correct(uint192_to_decimal(quotient)))) {
+  if (check_overflow(quotient, DEC_SIZE) ||
+      !is_correct(uint192_to_decimal(quotient))) {
     err_code = BIG;
     *result = DCML_ZERO;
   } else {
@@ -117,10 +124,12 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
  * @param quotient
  * @param divider
  * @param remainder
- * @retval 0 - OK;
- * @retval 1 - the number is too large or equal to infinity;
- * @retval 2 - number is too small or equal to negative infinity;
- * @retval 3 - division by 0;
+ * @return int - error code
+ * @retval OK = 0 - OK;
+ * @retval BIG = 1 - the number is too large or equal to infinity;
+ * @retval SMALL = 2 - number is too small or equal to negative infinity;
+ * @retval ZERO_DIV = 3 - division by 0;
+ * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int calc_fract_part(uint192_t *quotient, uint192_t divider,
                     uint192_t *remainder) {
@@ -147,4 +156,25 @@ int calc_fract_part(uint192_t *quotient, uint192_t divider,
   *remainder = remainder_tmp;
 
   return power;
+}
+
+/**
+ * @brief Check that insignificant bits are zero
+ *
+ * @param value checked number decimal_t
+ * @return int - error code
+ * @retval 0 - all bits zero
+ * @retval 1 - not all bits are zeros
+ */
+static int check_overflow(uint192_t value, uint8_t index) {
+  int err_code = 0;
+
+  for (uint8_t i = index; i < LDEC_SIZE - 1; i++) {
+    if (value.Lbits[i]) {
+      err_code = 1;
+      break;
+    }
+  }
+
+  return err_code;
 }
