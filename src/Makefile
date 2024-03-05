@@ -40,7 +40,7 @@ DVI_DIR = ./../docs
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=c11 -g
 
 # OPTIMIZATION
-# OPTIMIZE = -O2
+OPTIMIZE = -O2
 
 # CHECK LIBRARIES FOR LINKING
 LDFLAGS = -lcheck -lsubunit -lm
@@ -86,6 +86,7 @@ TEST_C = $(shell find $(TEST_DIR) -type f -name "*.c")
 TEST_H = $(shell find $(TEST_DIR) -type f -name "*.h")
 TEST_O = $(notdir $(TEST_C:%.c=%.o))
 TEST_OBJ_PATH = $(OBJ_DIR)/*_test.o
+GCOV_MODULES_C = $(shell find $(MODULES_DIR) -type f -name "*.c" -not -path "./modules/debug/*")
 #==============================================================================#
 
 
@@ -119,7 +120,6 @@ all: $(TARGET) dvi
 
 .PHONY: $(LIBRARY)
 $(LIBRARY): $(OBJ_DIR) $(MODULES_O) $(MODULES_H) $(MAIN_H)
-	@echo $(MODULES_OBJ_PATH)
 	ar rcs $@ $(MODULES_OBJ_PATH)
 	ranlib $@
 
@@ -129,7 +129,7 @@ $(TARGET): $(OBJ_DIR) $(TEST_O)
 	-./$@
 
 $(GCOV): $(OBJ_DIR) $(REPORT_DIR) $(TEST_O)
-	$(CC) $(TEST_OBJ_PATH) $(MODULES_C) $(LDFLAGS) $(GCOV_FLAGS) -o $(TARGET)
+	$(CC) $(TEST_OBJ_PATH) $(GCOV_MODULES_C) $(LDFLAGS) $(GCOV_FLAGS) -o $(TARGET)
 	-./$(TARGET)
 	gcovr -r . --html --html-details -o $(REPORT_DIR)/coverage.html
 	xdg-open $(REPORT_DIR)/coverage.html
