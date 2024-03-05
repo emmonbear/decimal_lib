@@ -2146,7 +2146,7 @@ START_TEST(s21_is_less_213) {
 START_TEST(s21_is_less_214) {
   char *example = "( -96459306763 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x756C370B, 0x16, 0x0, 0x80000000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 214;
 
@@ -3025,7 +3025,7 @@ START_TEST(s21_is_less_301) {
 
 START_TEST(s21_is_less_302) {
   char *example = "( -79228162514264337593543950335 < -3.608269856078849375119 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xB1ABFB8F, 0x9ACDACAB, 0xC3, 0x80150000}};
   int code = 1;
   int count = 302;
@@ -3046,7 +3046,7 @@ START_TEST(s21_is_less_303) {
 START_TEST(s21_is_less_304) {
   char *example = "( 188556510738 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xE6D80612, 0x2B, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 304;
 
@@ -4485,7 +4485,7 @@ START_TEST(s21_is_less_447) {
 
 START_TEST(s21_is_less_448) {
   char *example = "( -79228162514264337593543950335 < -755.98688144659957 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x385915F5, 0x10C949B, 0x0, 0x800E0000}};
   int code = 1;
   int count = 448;
@@ -4775,7 +4775,7 @@ START_TEST(s21_is_less_476) {
 
 START_TEST(s21_is_less_477) {
   char *example = "( -79228162514264337593543950335 < 172 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xAC, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 477;
@@ -6015,7 +6015,7 @@ START_TEST(s21_is_less_600) {
 
 START_TEST(s21_is_less_601) {
   char *example = "( -79228162514264337593543950335 < 109351471 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x684922F, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 601;
@@ -6366,7 +6366,7 @@ START_TEST(s21_is_less_635) {
 START_TEST(s21_is_less_636) {
   char *example = "( 1127554748079 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x87800EAF, 0x106, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 636;
 
@@ -7106,7 +7106,7 @@ START_TEST(s21_is_less_709) {
 START_TEST(s21_is_less_710) {
   char *example = "( 7.0699182725490573E-10 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x3843678D, 0xFB2C88, 0x0, 0x1A0000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 710;
 
@@ -8225,7 +8225,7 @@ START_TEST(s21_is_less_821) {
 
 START_TEST(s21_is_less_822) {
   char *example = "( -79228162514264337593543950335 < 1296148548536491148857245141 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x9756FDD5, 0x9BFF01D1, 0x4302621, 0x0}};
   int code = 1;
   int count = 822;
@@ -13146,7 +13146,7 @@ START_TEST(s21_is_less_1313) {
 START_TEST(s21_is_less_1314) {
   char *example = "( -3609.3193474 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x67526D02, 0x8, 0x0, 0x80070000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 1314;
 
@@ -16436,7 +16436,7 @@ START_TEST(s21_is_less_1642) {
 START_TEST(s21_is_less_1643) {
   char *example = "( 15142563 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xE70EA3, 0x0, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 1643;
 
@@ -17265,7 +17265,7 @@ START_TEST(s21_is_less_1725) {
 
 START_TEST(s21_is_less_1726) {
   char *example = "( -79228162514264337593543950335 < 1249995063433728980928601780 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xC7869EB4, 0x2B261BDA, 0x409F8C0, 0x0}};
   int code = 1;
   int count = 1726;
@@ -17856,7 +17856,7 @@ START_TEST(s21_is_less_1784) {
 START_TEST(s21_is_less_1785) {
   char *example = "( -98.3490994286 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xFCA1A06E, 0xE4, 0x0, 0x800A0000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 1785;
 
@@ -19296,7 +19296,7 @@ START_TEST(s21_is_less_1928) {
 START_TEST(s21_is_less_1929) {
   char *example = "( 17568938858 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x1730BB6A, 0x4, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 1929;
 
@@ -19546,7 +19546,7 @@ START_TEST(s21_is_less_1953) {
 START_TEST(s21_is_less_1954) {
   char *example = "( 1453720794577583601461279705 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xCC58BBD9, 0x2EF483AB, 0x4B27D5A, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 1954;
 
@@ -21025,7 +21025,7 @@ START_TEST(s21_is_less_2101) {
 
 START_TEST(s21_is_less_2102) {
   char *example = "( -79228162514264337593543950335 < 1994492434904290345704 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x8A22C2E8, 0x1F248E45, 0x6C, 0x0}};
   int code = 1;
   int count = 2102;
@@ -21766,7 +21766,7 @@ START_TEST(s21_is_less_2175) {
 START_TEST(s21_is_less_2176) {
   char *example = "( 1916460520 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x723ADDE8, 0x0, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 2176;
 
@@ -22356,7 +22356,7 @@ START_TEST(s21_is_less_2234) {
 START_TEST(s21_is_less_2235) {
   char *example = "( 0.5686974092261377661702 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x18F75B06, 0x4A9EA608, 0x134, 0x160000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 2235;
 
@@ -26185,7 +26185,7 @@ START_TEST(s21_is_less_2617) {
 
 START_TEST(s21_is_less_2618) {
   char *example = "( -79228162514264337593543950335 < -5187.9571 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x3179E93, 0x0, 0x0, 0x80040000}};
   int code = 1;
   int count = 2618;
@@ -29135,7 +29135,7 @@ START_TEST(s21_is_less_2912) {
 
 START_TEST(s21_is_less_2913) {
   char *example = "( -79228162514264337593543950335 < 135375766450103987859515648 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x14F26900, 0x11D62E9, 0x6FFAEF, 0x0}};
   int code = 1;
   int count = 2913;
@@ -29666,7 +29666,7 @@ START_TEST(s21_is_less_2965) {
 START_TEST(s21_is_less_2966) {
   char *example = "( 1894881786735351784507856427 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x8832562B, 0x7D349E2D, 0x61F68D3, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 2966;
 
@@ -30126,7 +30126,7 @@ START_TEST(s21_is_less_3011) {
 START_TEST(s21_is_less_3012) {
   char *example = "( -16.627057 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xFDB571, 0x0, 0x0, 0x80060000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 3012;
 
@@ -32655,7 +32655,7 @@ START_TEST(s21_is_less_3264) {
 
 START_TEST(s21_is_less_3265) {
   char *example = "( -79228162514264337593543950335 < -8669453.157508936 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x5BD9A748, 0x1ECCD2, 0x0, 0x80090000}};
   int code = 1;
   int count = 3265;
@@ -36195,7 +36195,7 @@ START_TEST(s21_is_less_3618) {
 
 START_TEST(s21_is_less_3619) {
   char *example = "( -79228162514264337593543950335 < 1.1616983338308090E-10 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xF8862E99, 0x4208E, 0x0, 0x190000}};
   int code = 1;
   int count = 3619;
@@ -36845,7 +36845,7 @@ START_TEST(s21_is_less_3683) {
 
 START_TEST(s21_is_less_3684) {
   char *example = "( -79228162514264337593543950335 < 138999008454376675860856 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x300BE178, 0x26BEACF2, 0x1D6F, 0x0}};
   int code = 1;
   int count = 3684;
@@ -38346,7 +38346,7 @@ START_TEST(s21_is_less_3833) {
 START_TEST(s21_is_less_3834) {
   char *example = "( 1743997788686774008086256455 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xCCE3DB47, 0x90B153D8, 0x5A299E5, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 3834;
 
@@ -40256,7 +40256,7 @@ START_TEST(s21_is_less_4024) {
 START_TEST(s21_is_less_4025) {
   char *example = "( -12.3835 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x1E3BB, 0x0, 0x0, 0x80040000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 4025;
 
@@ -40376,7 +40376,7 @@ START_TEST(s21_is_less_4036) {
 START_TEST(s21_is_less_4037) {
   char *example = "( 1905857308403514808270405285 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x43813EA5, 0xB5FF126B, 0x6287CFB, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 4037;
 
@@ -40655,7 +40655,7 @@ START_TEST(s21_is_less_4064) {
 
 START_TEST(s21_is_less_4065) {
   char *example = "( -79228162514264337593543950335 < 1658 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x67A, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 4065;
@@ -40696,7 +40696,7 @@ START_TEST(s21_is_less_4068) {
 START_TEST(s21_is_less_4069) {
   char *example = "( 17248717069 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x41A890D, 0x4, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 4069;
 
@@ -41686,7 +41686,7 @@ START_TEST(s21_is_less_4167) {
 START_TEST(s21_is_less_4168) {
   char *example = "( 1206407037834 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xE376838A, 0x118, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 4168;
 
@@ -45276,7 +45276,7 @@ START_TEST(s21_is_less_4526) {
 START_TEST(s21_is_less_4527) {
   char *example = "( -6.49 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x289, 0x0, 0x0, 0x80020000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 4527;
 
@@ -49655,7 +49655,7 @@ START_TEST(s21_is_less_4964) {
 
 START_TEST(s21_is_less_4965) {
   char *example = "( -79228162514264337593543950335 < 9.6001255627915298E-10 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x23B18022, 0x15510A2, 0x0, 0x1A0000}};
   int code = 1;
   int count = 4965;
@@ -50295,7 +50295,7 @@ START_TEST(s21_is_less_5028) {
 
 START_TEST(s21_is_less_5029) {
   char *example = "( -79228162514264337593543950335 < 1839140068375930917151216745 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x2DF29469, 0xE1C54223, 0x5F14D0E, 0x0}};
   int code = 1;
   int count = 5029;
@@ -55105,7 +55105,7 @@ START_TEST(s21_is_less_5509) {
 
 START_TEST(s21_is_less_5510) {
   char *example = "( -79228162514264337593543950335 < -628.696885013 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x61412715, 0x92, 0x0, 0x80090000}};
   int code = 1;
   int count = 5510;
@@ -56395,7 +56395,7 @@ START_TEST(s21_is_less_5638) {
 
 START_TEST(s21_is_less_5639) {
   char *example = "( -79228162514264337593543950335 < -0 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x0, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 5639;
@@ -58585,7 +58585,7 @@ START_TEST(s21_is_less_5857) {
 
 START_TEST(s21_is_less_5858) {
   char *example = "( -79228162514264337593543950335 < 138399459372301573466103 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x8E0CA7F7, 0xA6547358, 0x1D4E, 0x0}};
   int code = 1;
   int count = 5858;
@@ -61206,7 +61206,7 @@ START_TEST(s21_is_less_6119) {
 START_TEST(s21_is_less_6120) {
   char *example = "( -65.4051 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x9FAE3, 0x0, 0x0, 0x80040000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 6120;
 
@@ -62456,7 +62456,7 @@ START_TEST(s21_is_less_6244) {
 START_TEST(s21_is_less_6245) {
   char *example = "( 1841343680681824868950645047 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xD3D49937, 0xF1C32E4F, 0x5F31FB0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 6245;
 
@@ -65405,7 +65405,7 @@ START_TEST(s21_is_less_6539) {
 
 START_TEST(s21_is_less_6540) {
   char *example = "( -79228162514264337593543950335 < -75591 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x12747, 0x0, 0x0, 0x80000000}};
   int code = 1;
   int count = 6540;
@@ -65516,7 +65516,7 @@ START_TEST(s21_is_less_6550) {
 START_TEST(s21_is_less_6551) {
   char *example = "( 1155479327258697500829 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x61FF889D, 0xA37F3626, 0x3E, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 6551;
 
@@ -65625,7 +65625,7 @@ START_TEST(s21_is_less_6561) {
 
 START_TEST(s21_is_less_6562) {
   char *example = "( -79228162514264337593543950335 < 1126248603930902773156 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x8111BDA4, 0xDD6D227, 0x3D, 0x0}};
   int code = 1;
   int count = 6562;
@@ -65905,7 +65905,7 @@ START_TEST(s21_is_less_6589) {
 
 START_TEST(s21_is_less_6590) {
   char *example = "( -79228162514264337593543950335 < -5263.319480 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x1F5F302C, 0x0, 0x0, 0x80050000}};
   int code = 1;
   int count = 6590;
@@ -69765,7 +69765,7 @@ START_TEST(s21_is_less_6975) {
 
 START_TEST(s21_is_less_6976) {
   char *example = "( -79228162514264337593543950335 < -68.1 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x2A9, 0x0, 0x0, 0x80010000}};
   int code = 1;
   int count = 6976;
@@ -71485,7 +71485,7 @@ START_TEST(s21_is_less_7147) {
 
 START_TEST(s21_is_less_7148) {
   char *example = "( -79228162514264337593543950335 < -200.00 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xC8, 0x0, 0x0, 0x80000000}};
   int code = 1;
   int count = 7148;
@@ -71555,7 +71555,7 @@ START_TEST(s21_is_less_7154) {
 
 START_TEST(s21_is_less_7155) {
   char *example = "( -79228162514264337593543950335 < 168239126475024 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x395EF110, 0x9903, 0x0, 0x0}};
   int code = 1;
   int count = 7155;
@@ -71646,7 +71646,7 @@ START_TEST(s21_is_less_7163) {
 START_TEST(s21_is_less_7164) {
   char *example = "( 1776749545675450301368524604 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x12845F3C, 0xDE83BF69, 0x5BDB159, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 7164;
 
@@ -77545,7 +77545,7 @@ START_TEST(s21_is_less_7753) {
 
 START_TEST(s21_is_less_7754) {
   char *example = "( -79228162514264337593543950335 < -903.30451072047327873131317 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x3250E335, 0x908FE1C5, 0x4AB837, 0x80170000}};
   int code = 1;
   int count = 7754;
@@ -78915,7 +78915,7 @@ START_TEST(s21_is_less_7890) {
 
 START_TEST(s21_is_less_7891) {
   char *example = "( -79228162514264337593543950335 < 1212537722646768750071817513 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xB182A529, 0xA7DCC884, 0x3EAFCD9, 0x0}};
   int code = 1;
   int count = 7891;
@@ -79795,7 +79795,7 @@ START_TEST(s21_is_less_7978) {
 
 START_TEST(s21_is_less_7979) {
   char *example = "( -79228162514264337593543950335 < -23936.27520 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xE4462C0, 0x0, 0x0, 0x80040000}};
   int code = 1;
   int count = 7979;
@@ -85425,7 +85425,7 @@ START_TEST(s21_is_less_8541) {
 
 START_TEST(s21_is_less_8542) {
   char *example = "( -79228162514264337593543950335 < 129 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x81, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 8542;
@@ -87046,7 +87046,7 @@ START_TEST(s21_is_less_8703) {
 START_TEST(s21_is_less_8704) {
   char *example = "( 1318560764670695952122860063 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xAD03521F, 0x47CF3AD3, 0x442B01A, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 8704;
 
@@ -91925,7 +91925,7 @@ START_TEST(s21_is_less_9191) {
 
 START_TEST(s21_is_less_9192) {
   char *example = "( -79228162514264337593543950335 < 10813519600776238608 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xCFFDD610, 0x961156C8, 0x0, 0x0}};
   int code = 1;
   int count = 9192;
@@ -92816,7 +92816,7 @@ START_TEST(s21_is_less_9280) {
 START_TEST(s21_is_less_9281) {
   char *example = "( 1692778745 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x64E5C0F9, 0x0, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 9281;
 
@@ -93776,7 +93776,7 @@ START_TEST(s21_is_less_9376) {
 START_TEST(s21_is_less_9377) {
   char *example = "( 178638332752275179 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xFEF7A6EB, 0x27AA69D, 0x0, 0x0}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 9377;
 
@@ -94596,7 +94596,7 @@ START_TEST(s21_is_less_9458) {
 START_TEST(s21_is_less_9459) {
   char *example = "( -3189380.78 < -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x13029BDE, 0x0, 0x0, 0x80020000}};
-  s21_decimal value_2 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
   int count = 9459;
 
@@ -96605,7 +96605,7 @@ START_TEST(s21_is_less_9659) {
 
 START_TEST(s21_is_less_9660) {
   char *example = "( -79228162514264337593543950335 < 15 ) = True";
-  s21_decimal value_1 = {{0x9999999A, 0x99999999, 0x19999999, 0x10000}};
+  s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xF, 0x0, 0x0, 0x0}};
   int code = 1;
   int count = 9660;
