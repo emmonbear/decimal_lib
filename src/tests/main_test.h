@@ -17,8 +17,8 @@
 // #define TEST_MUL
 // #define TEST_DIV
 // #define TEST_IS_EQUAL
-#define TEST_NOT_EQUAL
-// #define TEST_IS_LESS
+// #define TEST_NOT_EQUAL
+#define TEST_IS_LESS
 // #define TEST_LESS_OR_EQUAL
 // #define TEST_IS_GREATER
 // #define TEST_GREATER_OR_EQUAL
