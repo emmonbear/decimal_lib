@@ -420,5 +420,6 @@ Suite *s21_div_case_97(void);
 Suite *s21_div_case_98(void);
 Suite *s21_div_case_99(void);
 Suite *s21_div_case_100(void);
+Suite *s21_div_edge_case(void);
 
 #endif  // ARITHMETIC_TEST_H_

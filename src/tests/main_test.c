@@ -166,6 +166,7 @@ int main(void) {
       s21_div_case_89, s21_div_case_90, s21_div_case_91, s21_div_case_92,
       s21_div_case_93, s21_div_case_94, s21_div_case_95, s21_div_case_96,
       s21_div_case_97, s21_div_case_98, s21_div_case_99, s21_div_case_100,
+      s21_div_edge_case,
   };
   test_function(s21_div_cases, sizeof(s21_div_cases) / sizeof(s21_div_cases[0]),
                 "DIV", &passed_count, &failed_count);
