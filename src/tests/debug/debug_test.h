@@ -14,7 +14,7 @@
 
 #define DEBUG
 #define CALCULATOR
-// #define ERRORS
+#define ERRORS
 
 #include <stdio.h>
 
