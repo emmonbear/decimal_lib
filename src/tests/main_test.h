@@ -22,14 +22,14 @@
 #define TEST_LESS_OR_EQUAL
 #define TEST_IS_GREATER
 #define TEST_GREATER_OR_EQUAL
-// #define TEST_INT_TO_DECIMAL
-// #define TEST_FLOAT_TO_DECIMAL
-// #define TEST_DECIMAL_TO_INT
-// #define TEST_DECIMAL_TO_FLOAT
-// #define TEST_ROUND
-// #define TEST_FLOOR
-// #define TEST_TRUNCATE
-// #define TEST_NEGATE
+#define TEST_INT_TO_DECIMAL
+#define TEST_FLOAT_TO_DECIMAL
+#define TEST_DECIMAL_TO_INT
+#define TEST_DECIMAL_TO_FLOAT
+#define TEST_ROUND
+#define TEST_FLOOR
+#define TEST_TRUNCATE
+#define TEST_NEGATE
 
 #include "./debug/debug_test.h"
 #include "./test_modules/include/arithmetic_test.h"

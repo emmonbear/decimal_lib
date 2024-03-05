@@ -13,6 +13,16 @@
 
 static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_is_not_equal_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  s21_decimal value_2 = {{0x342ED654, 0x114C, 0x0, 0x0}};
+  int code = 1;
+  int my_code = s21_is_not_equal(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_is_not_equal_1) {
   char *example = "( -3.99876565460614972 != 1411275808592106290159497609 ) = True";
   s21_decimal value_1 = {{0x1E487F3C, 0x58CA59E, 0x0, 0x80110000}};
@@ -111512,6 +111522,17 @@ Suite *s21_is_not_equal_case_100(void)
   tcase_add_test(tc_s21_is_not_equal, s21_is_not_equal_9998);
   tcase_add_test(tc_s21_is_not_equal, s21_is_not_equal_9999);
   tcase_add_test(tc_s21_is_not_equal, s21_is_not_equal_10000);
+  suite_add_tcase(decimal, tc_s21_is_not_equal);
+
+  return decimal;
+}
+
+Suite *s21_is_not_equal_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal edge case)\n");
+
+  TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
+  tcase_add_test(tc_s21_is_not_equal, s21_is_not_equal_edge_1);
+
   suite_add_tcase(decimal, tc_s21_is_not_equal);
 
   return decimal;

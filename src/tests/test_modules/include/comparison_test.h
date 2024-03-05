@@ -114,6 +114,7 @@ Suite *s21_is_equal_case_97(void);
 Suite *s21_is_equal_case_98(void);
 Suite *s21_is_equal_case_99(void);
 Suite *s21_is_equal_case_100(void);
+Suite *s21_is_equal_edge_case(void);
 
 Suite *s21_is_not_equal_case_1(void);
 Suite *s21_is_not_equal_case_2(void);
@@ -215,6 +216,7 @@ Suite *s21_is_not_equal_case_97(void);
 Suite *s21_is_not_equal_case_98(void);
 Suite *s21_is_not_equal_case_99(void);
 Suite *s21_is_not_equal_case_100(void);
+Suite *s21_is_not_equal_edge_case(void);
 
 Suite *s21_is_less_case_1(void);
 Suite *s21_is_less_case_2(void);
@@ -316,6 +318,7 @@ Suite *s21_is_less_case_97(void);
 Suite *s21_is_less_case_98(void);
 Suite *s21_is_less_case_99(void);
 Suite *s21_is_less_case_100(void);
+Suite *s21_is_less_edge_case(void);
 
 Suite *s21_is_less_or_equal_case_1(void);
 Suite *s21_is_less_or_equal_case_2(void);
@@ -417,6 +420,7 @@ Suite *s21_is_less_or_equal_case_97(void);
 Suite *s21_is_less_or_equal_case_98(void);
 Suite *s21_is_less_or_equal_case_99(void);
 Suite *s21_is_less_or_equal_case_100(void);
+Suite *s21_is_less_or_equal_edge_case(void);
 
 Suite *s21_is_greater_case_1(void);
 Suite *s21_is_greater_case_2(void);
@@ -518,6 +522,7 @@ Suite *s21_is_greater_case_97(void);
 Suite *s21_is_greater_case_98(void);
 Suite *s21_is_greater_case_99(void);
 Suite *s21_is_greater_case_100(void);
+Suite *s21_is_greater_edge_case(void);
 
 Suite *s21_is_greater_or_equal_case_1(void);
 Suite *s21_is_greater_or_equal_case_2(void);
@@ -619,5 +624,6 @@ Suite *s21_is_greater_or_equal_case_97(void);
 Suite *s21_is_greater_or_equal_case_98(void);
 Suite *s21_is_greater_or_equal_case_99(void);
 Suite *s21_is_greater_or_equal_case_100(void);
+Suite *s21_is_greater_or_equal_edge_case(void);
 
 #endif  // COMPARISON_TEST_H_

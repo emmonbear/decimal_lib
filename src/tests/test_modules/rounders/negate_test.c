@@ -13,6 +13,16 @@
 
 static void s21_test_negate(s21_decimal value, s21_decimal result, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_negate_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x0}};
+  s21_decimal *value_2 = NULL;
+  int code = 1;
+  int my_code = s21_negate(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_negate_1) {
   char *example = "negate(19098936919503535661) = -19098936919503535661";
   s21_decimal value = {{0x1299FE2D, 0x90D0DF0, 0x1, 0x0}};
@@ -1127,6 +1137,17 @@ Suite *s21_negate_case_1(void)
   tcase_add_test(tc_s21_negate, s21_negate_98);
   tcase_add_test(tc_s21_negate, s21_negate_99);
   tcase_add_test(tc_s21_negate, s21_negate_100);
+  suite_add_tcase(decimal, tc_s21_negate);
+
+  return decimal;
+}
+
+Suite *s21_negate_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_negate edge case)\n");
+
+  TCase *tc_s21_negate = tcase_create("s21_negate_test");
+  tcase_add_test(tc_s21_negate, s21_negate_edge_1);
+
   suite_add_tcase(decimal, tc_s21_negate);
 
   return decimal;

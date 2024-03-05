@@ -13,6 +13,16 @@
 
 static void s21_test_round(s21_decimal value, s21_decimal result, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_round_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x0}};
+  s21_decimal *value_2 = NULL;
+  int code = 1;
+  int my_code = s21_round(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_round_1) {
   char *example = "round(19598377783329) = 19598377783329";
   s21_decimal value = {{0x1A589021, 0x11D3, 0x0, 0x0}};
@@ -111512,6 +111522,17 @@ Suite *s21_round_case_100(void)
   tcase_add_test(tc_s21_round, s21_round_9998);
   tcase_add_test(tc_s21_round, s21_round_9999);
   tcase_add_test(tc_s21_round, s21_round_10000);
+  suite_add_tcase(decimal, tc_s21_round);
+
+  return decimal;
+}
+
+Suite *s21_round_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_round edge case)\n");
+
+  TCase *tc_s21_round = tcase_create("s21_round_test");
+  tcase_add_test(tc_s21_round, s21_round_edge_1);
+
   suite_add_tcase(decimal, tc_s21_round);
 
   return decimal;

@@ -114,6 +114,7 @@ Suite *s21_from_float_to_decimal_case_97(void);
 Suite *s21_from_float_to_decimal_case_98(void);
 Suite *s21_from_float_to_decimal_case_99(void);
 Suite *s21_from_float_to_decimal_case_100(void);
+Suite *s21_from_float_to_decimal_edge_case(void);
 
 Suite *s21_from_int_to_decimal_case_1(void);
 Suite *s21_from_int_to_decimal_case_2(void);
@@ -215,6 +216,7 @@ Suite *s21_from_int_to_decimal_case_97(void);
 Suite *s21_from_int_to_decimal_case_98(void);
 Suite *s21_from_int_to_decimal_case_99(void);
 Suite *s21_from_int_to_decimal_case_100(void);
+Suite *s21_from_int_to_decimal_edge_case(void);
 
 Suite *s21_from_decimal_to_int_case_1(void);
 Suite *s21_from_decimal_to_int_case_2(void);
@@ -316,6 +318,7 @@ Suite *s21_from_decimal_to_int_case_97(void);
 Suite *s21_from_decimal_to_int_case_98(void);
 Suite *s21_from_decimal_to_int_case_99(void);
 Suite *s21_from_decimal_to_int_case_100(void);
+Suite *s21_from_decimal_to_int_edge_case(void);
 
 Suite *s21_from_decimal_to_float_case_1(void);
 Suite *s21_from_decimal_to_float_case_2(void);
@@ -417,5 +420,6 @@ Suite *s21_from_decimal_to_float_case_97(void);
 Suite *s21_from_decimal_to_float_case_98(void);
 Suite *s21_from_decimal_to_float_case_99(void);
 Suite *s21_from_decimal_to_float_case_100(void);
+Suite *s21_from_decimal_to_float_edge_case(void);
 
 #endif  // CONVERTORS_TEST_H_
