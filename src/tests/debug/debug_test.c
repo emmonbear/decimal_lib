@@ -66,6 +66,11 @@ void both_float_values(float value_1, float value_2) {
   printf("calculate: %f\n", value_2);
 }
 
+void both_int_values(int value_1, int value_2) {
+  printf("implement: %d\n", value_1);
+  printf("calculate: %d\n", value_2);
+}
+
 void print_line() {
   printf(ORANGE
          "\n-------------------------------------------------------------------"

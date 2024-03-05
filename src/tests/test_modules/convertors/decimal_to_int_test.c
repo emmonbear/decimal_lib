@@ -111529,7 +111529,7 @@ static void s21_test_from_decimal_to_int(s21_decimal value, int result, int code
 #ifndef ERRORS
   if(res == 2) {
     printf("Test №%d: %s\n%s%s\n", count, GREEN"TEST_PASSED", RESET"Subformul:   ", text);
-//     both_decimal_bits(implement_result, result);
+    both_int_values(implement_result, result);
     print_line();
   }
 #endif // ERRORS
@@ -111539,7 +111539,7 @@ static void s21_test_from_decimal_to_int(s21_decimal value, int result, int code
     if (res == 0) {
       printf("Implementation code = %s%d%s\nOriginal funcs code = %s%d%s\n\n", RED, implement_code, RESET, GREEN, code, RESET);
     }
-//     both_decimal_bits(implement_result, result);
+    both_int_values(implement_result, result);
     print_line();
   }
 #endif // DEBUG

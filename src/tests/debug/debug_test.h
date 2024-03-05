@@ -13,8 +13,8 @@
 #define DEBUG_H_
 
 #define DEBUG
-// #define CALCULATOR
-#define ERRORS
+#define CALCULATOR
+// #define ERRORS
 
 #include <stdio.h>
 
@@ -32,6 +32,7 @@
 void print_decimal_bits(s21_decimal value_1);
 void both_decimal_bits(s21_decimal value_1, s21_decimal value_2);
 void both_float_values(float value_1, float value_2);
+void both_int_values(int value_1, int value_2);
 void print_line();
 
 #endif  // DEBUG_H_
