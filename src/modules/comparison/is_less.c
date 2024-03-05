@@ -26,15 +26,13 @@ int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
 
   if ((s21_is_equal(value_1, DCML_ZERO)) &&
       (s21_is_equal(value_2, DCML_ZERO))) {
-    err_code = COMPARISON_FALSE;
-  } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
-    err_code = COMPARISON_TRUE;
-  } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
-    err_code = COMPARISON_FALSE;
-  } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
-    err_code = is_less_positive(dabs(value_2), dabs(value_1));
+    return COMPARISON_FALSE;
+  }
+
+  if (sign_1 == NEGATIVE) {
+    err_code = (sign_2 == POSITIVE) ? COMPARISON_TRUE : is_less_positive(dabs(value_2), dabs(value_1));
   } else {
-    err_code = is_less_positive(value_1, value_2);
+    err_code = (sign_2 == POSITIVE) ? is_less_positive(value_1, value_2) : COMPARISON_FALSE;
   }
 
   return err_code;
