@@ -17,10 +17,11 @@
 
 /// @brief Enumeration of arithmetic error codes
 typedef enum {
-  OK,        ///< correct result
-  BIG,       ///< the number is too large or equal to infinity
-  SMALL,     ///< the number is too small or equal to negative infinity
-  ZERO_DIV,  ///< division by 0
+  OK,         ///< correct result
+  BIG,        ///< the number is too large or equal to infinity
+  SMALL,      ///< the number is too small or equal to negative infinity
+  ZERO_DIV,   ///< division by 0
+  INCORRECT,  ///< incorrect decimal_t
 } arithmetic_code;
 
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);

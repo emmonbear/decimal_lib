@@ -17,13 +17,19 @@
  * @param[in] value_1 first summand
  * @param[in] value_2 second summand
  * @param[out] result amount
- * @retval 0 - OK;
- * @retval 1 - the number is too large or equal to infinity;
- * @retval 2 - number is too small or equal to negative infinity;
- * @retval 3 - division by 0;
+ * @return int - error code
+ * @retval OK = 0 - OK;
+ * @retval BIG = 1 - the number is too large or equal to infinity;
+ * @retval SMALL = 2 - number is too small or equal to negative infinity;
+ * @retval ZERO_DIV = 3 - division by 0;
+ * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
+
+  if (!check_args(value_1, value_2, result)) {
+    return INCORRECT;
+  }
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
   uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
@@ -53,10 +59,12 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @param[in] value_1 first summand
  * @param[in] value_2 second summand
  * @param[out] result amount
- * @retval 0 - OK;
- * @retval 1 - the number is too large or equal to infinity;
- * @retval 2 - number is too small or equal to negative infinity;
- * @retval 3 - division by 0;
+ * @return int - error code
+ * @retval OK = 0 - OK;
+ * @retval BIG = 1 - the number is too large or equal to infinity;
+ * @retval SMALL = 2 - number is too small or equal to negative infinity;
+ * @retval ZERO_DIV = 3 - division by 0;
+ * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;

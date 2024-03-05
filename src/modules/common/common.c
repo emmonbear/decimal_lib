@@ -77,3 +77,17 @@ int is_correct(s21_decimal value) {
 
   return ((empty) || (power > 28)) ? 0 : 1;
 }
+
+/**
+ * @brief Input arguments validation
+ *
+ * @param[in] value_1
+ * @param[in] value_2
+ * @param[in] result
+ * @return true
+ * @return false
+ */
+bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
+  return (!result || !is_correct(value_1) || !is_correct(value_2)) ? false
+                                                                   : true;
+}
