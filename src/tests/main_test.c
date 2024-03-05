@@ -67,6 +67,7 @@ int main(void) {
       s21_add_case_89, s21_add_case_90, s21_add_case_91, s21_add_case_92,
       s21_add_case_93, s21_add_case_94, s21_add_case_95, s21_add_case_96,
       s21_add_case_97, s21_add_case_98, s21_add_case_99, s21_add_case_100,
+      s21_add_edge_case,
   };
   test_function(s21_add_cases, sizeof(s21_add_cases) / sizeof(s21_add_cases[0]),
                 "ADD", &passed_count, &failed_count);
@@ -99,6 +100,7 @@ int main(void) {
       s21_sub_case_89, s21_sub_case_90, s21_sub_case_91, s21_sub_case_92,
       s21_sub_case_93, s21_sub_case_94, s21_sub_case_95, s21_sub_case_96,
       s21_sub_case_97, s21_sub_case_98, s21_sub_case_99, s21_sub_case_100,
+      s21_sub_edge_case,
   };
   test_function(s21_sub_cases, sizeof(s21_sub_cases) / sizeof(s21_sub_cases[0]),
                 "SUB", &passed_count, &failed_count);
@@ -131,6 +133,7 @@ int main(void) {
       s21_mul_case_89, s21_mul_case_90, s21_mul_case_91, s21_mul_case_92,
       s21_mul_case_93, s21_mul_case_94, s21_mul_case_95, s21_mul_case_96,
       s21_mul_case_97, s21_mul_case_98, s21_mul_case_99, s21_mul_case_100,
+      s21_mul_edge_case,
   };
   test_function(s21_mul_cases, sizeof(s21_mul_cases) / sizeof(s21_mul_cases[0]),
                 "MUL", &passed_count, &failed_count);
