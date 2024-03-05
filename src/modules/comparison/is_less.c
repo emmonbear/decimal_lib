@@ -28,7 +28,7 @@ int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
       (s21_is_equal(value_2, DCML_ZERO))) {
     err_code = COMPARISON_FALSE;
   } else if ((sign_1 == NEGATIVE) && (sign_2 == POSITIVE)) {
-    err_code = COMPARISON_FALSE;
+    err_code = COMPARISON_TRUE;
   } else if ((sign_1 == POSITIVE) && (sign_2 == NEGATIVE)) {
     err_code = COMPARISON_FALSE;
   } else if ((sign_1 == NEGATIVE) && (sign_2 == NEGATIVE)) {
