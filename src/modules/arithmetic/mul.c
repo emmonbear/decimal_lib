@@ -33,7 +33,7 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return INCORRECT;
   }
 
-  if(s21_is_equal(value_1, DCML_ZERO) || s21_is_equal(value_2, DCML_ZERO)) {
+  if (s21_is_equal(value_1, DCML_ZERO) || s21_is_equal(value_2, DCML_ZERO)) {
     *result = DCML_ZERO;
     return OK;
   }
@@ -42,20 +42,22 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
 
   if (sign_1 == POSITIVE) {
-    if(sign_2 == POSITIVE) {
+    if (sign_2 == POSITIVE) {
       err_code = mul_positive(value_1, value_2, result);
     } else {
       err_code = mul_positive(value_1, dabs(value_2), result);
-      SET_SIGN(result->bits[DEC_SIZE - 1], !GET_SIGN(result->bits[DEC_SIZE - 1]));
+      SET_SIGN(result->bits[DEC_SIZE - 1],
+               !GET_SIGN(result->bits[DEC_SIZE - 1]));
     }
   } else {
-    if(sign_2 == POSITIVE) {
+    if (sign_2 == POSITIVE) {
       err_code = mul_positive(dabs(value_1), value_2, result);
-      SET_SIGN(result->bits[DEC_SIZE - 1], !GET_SIGN(result->bits[DEC_SIZE - 1]));
+      SET_SIGN(result->bits[DEC_SIZE - 1],
+               !GET_SIGN(result->bits[DEC_SIZE - 1]));
     } else {
       err_code = mul_positive(dabs(value_1), dabs(value_2), result);
     }
-  } 
+  }
 
   if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
     err_code = SMALL;
@@ -145,4 +147,3 @@ static int check_overflow(uint192_t value) {
 
   return err_code;
 }
-

@@ -30,9 +30,12 @@ int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
   }
 
   if (sign_1 == NEGATIVE) {
-    err_code = (sign_2 == POSITIVE) ? COMPARISON_TRUE : is_less_positive(dabs(value_2), dabs(value_1));
+    err_code = (sign_2 == POSITIVE)
+                   ? COMPARISON_TRUE
+                   : is_less_positive(dabs(value_2), dabs(value_1));
   } else {
-    err_code = (sign_2 == POSITIVE) ? is_less_positive(value_1, value_2) : COMPARISON_FALSE;
+    err_code = (sign_2 == POSITIVE) ? is_less_positive(value_1, value_2)
+                                    : COMPARISON_FALSE;
   }
 
   return err_code;

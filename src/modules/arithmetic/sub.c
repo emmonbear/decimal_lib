@@ -51,10 +51,10 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
       SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
     } else {
       if (s21_is_greater_or_equal(value_1, value_2)) {
-      err_code = sub_positive(dabs(value_2), dabs(value_1), result);
+        err_code = sub_positive(dabs(value_2), dabs(value_1), result);
       } else {
-      err_code = sub_positive(dabs(value_1), dabs(value_2), result);
-      SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+        err_code = sub_positive(dabs(value_1), dabs(value_2), result);
+        SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
       }
     }
   }

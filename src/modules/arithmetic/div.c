@@ -64,7 +64,8 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
   }
 
-  // if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+  // if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code ==
+  // BIG)) {
   //   err_code = SMALL;
   // }
 
@@ -111,7 +112,7 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
   //   err_code = BIG;
   //   *result = DCML_ZERO;
   // } else {
-    *result = uint192_to_decimal(quotient);
+  *result = uint192_to_decimal(quotient);
   // }
 
   return err_code;
