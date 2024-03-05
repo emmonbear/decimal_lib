@@ -9,24 +9,29 @@
 
 int main()
 {
-  // char *example = "truncate(-783.60048511462222060164039) = -783";
-  // s21_decimal value = {{0xDFAD93C7, 0xBDDA2485, 0x40D162, 0x80170000}};
-  // s21_decimal result = {{0x30F, 0x0, 0x0, 0x80000000}};
+    // 0.4999999999999999999999999999
+  s21_decimal decimal1 = {{0x87FFFFFF, 0x1F128130, 0x1027E72F, 0x1C0000}};
+  // 0.0000000000000000000000000001
+  s21_decimal decimal2 = {{0x1, 0x0, 0x0, 0x1C0000}};
+  // 0.0000000000000000000000000000
+  s21_decimal decimal_check = {{0x0, 0x0, 0x0, 0x1C0000}};
 
-  // s21_decimal res = DCML_ZERO;
-  // s21_truncate(value, &res);
+  s21_decimal res = DCML_ZERO;
+  int code = s21_mul(decimal1, decimal2, &res); 
 
-  // printf("\ntruncate(");
-  // printd(value, ") = ");
-  // printd(res, "\n\n");
+  printd(decimal1, "\n");
+  s21_print_binary_decimal(decimal1);
 
-  // both_decimal_bits(res, result);
+  printd(decimal2, "\n");
+  s21_print_binary_decimal(decimal2);
 
-  int v1 = 125;
+  printd(decimal_check, "\n");
+  s21_print_binary_decimal(decimal_check);
 
-  // s21_decimal value = {{0x30D56CC1, 0x2E84, 0x0, 0x80010000}};
-  int res = (v1 >> 1) + (v1 >> 2);
-  // s21_from_decimal_to_int(value, &res);
-  printf("\n\nresult = %d\n\n", res);
+  printd(res, "\n");
+  s21_print_binary_decimal(res);
+
+  printf("\ncode = %d\n", code);
+
   return 0;
 }
