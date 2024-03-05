@@ -64,14 +64,14 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
   }
 
-  if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
-    err_code = SMALL;
-  }
+  // if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+  //   err_code = SMALL;
+  // }
 
-  if ((err_code == OK) && (!s21_is_equal(value_1, DCML_ZERO)) &&
-      (s21_is_equal(*result, DCML_ZERO))) {
-    err_code = SMALL;
-  }
+  // if ((err_code == OK) && (!s21_is_equal(value_1, DCML_ZERO)) &&
+  //     (s21_is_equal(*result, DCML_ZERO))) {
+  //   err_code = SMALL;
+  // }
 
   if (err_code == OK && s21_is_equal(*result, DCML_ZERO)) {
     err_code = SMALL;
@@ -106,13 +106,13 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
   quotient = bank_rouding(quotient, res_tmp, &err_code);
   SET_POWER(quotient.Lbits[DEC_SIZE - 1], power_1);
 
-  if (check_overflow(quotient, DEC_SIZE) ||
-      !is_correct(uint192_to_decimal(quotient))) {
-    err_code = BIG;
-    *result = DCML_ZERO;
-  } else {
+  // if (check_overflow(quotient, DEC_SIZE) ||
+  //     !is_correct(uint192_to_decimal(quotient))) {
+  //   err_code = BIG;
+  //   *result = DCML_ZERO;
+  // } else {
     *result = uint192_to_decimal(quotient);
-  }
+  // }
 
   return err_code;
 }
