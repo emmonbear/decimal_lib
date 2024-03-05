@@ -14,6 +14,11 @@
 
 #include "./common.h"
 
+#define DCML_ONE  \
+  (s21_decimal) { \
+    { 1 }         \
+  }
+
 /// @brief Enumeration of Rounders error codes
 typedef enum {
   ROUND_OK,     ///< round error
@@ -22,5 +27,6 @@ typedef enum {
 
 int s21_truncate(s21_decimal value, s21_decimal *result);
 int s21_round(s21_decimal value, s21_decimal *result);
+int s21_floor(s21_decimal value, s21_decimal *result);
 
 #endif  // ROUNDERS_H_
