@@ -71,7 +71,7 @@ int mul_positive(s21_decimal value_1, s21_decimal value_2,
     return BIG;
   }
 
-  /// @todo проверить покрытие по gcov_report
+  /// @todo edge case
   while (power_tmp > 28) {
     res_tmp = binary_div(res_tmp, get_ten_pow(1), NULL);
     --power_tmp;
@@ -87,8 +87,9 @@ int mul_positive(s21_decimal value_1, s21_decimal value_2,
   SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
   res_tmp = bank_rouding(res_tmp, remainder, &err_code);
 
-  if (!((res_tmp.Lbits[0] == 0) && (res_tmp.Lbits[1] == 0) &&
-        (res_tmp.Lbits[2] == 0))) {
+/// @todo Может функцию? С названием беда
+  if ((res_tmp.Lbits[0]) || (res_tmp.Lbits[1]) ||
+        (res_tmp.Lbits[2])) {
     SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
   }
 
