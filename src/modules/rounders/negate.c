@@ -1,12 +1,12 @@
 /**
  * @file negate.c
  * @author kossadda (https://github.com/kossadda)
- * @brief 
+ * @brief
  * @version 1.0
  * @date 2024-03-05
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "./../include/rounders.h"
