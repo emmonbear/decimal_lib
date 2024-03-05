@@ -13,6 +13,16 @@
 
 static void s21_test_from_decimal_to_int(s21_decimal value, int result, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_from_decimal_to_int_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  int value_2 = 0;
+  int code = 1;
+  int my_code = s21_from_decimal_to_int(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_from_decimal_to_int_1) {
   char *example = "decimal_to_int(16) = 16";
   s21_decimal value = {{0x10, 0x0, 0x0, 0x0}};
@@ -111512,6 +111522,17 @@ Suite *s21_from_decimal_to_int_case_100(void)
   tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_9998);
   tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_9999);
   tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_10000);
+  suite_add_tcase(decimal, tc_s21_from_decimal_to_int);
+
+  return decimal;
+}
+
+Suite *s21_from_decimal_to_int_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_from_decimal_to_int edge case)\n");
+
+  TCase *tc_s21_from_decimal_to_int = tcase_create("s21_from_decimal_to_int_test");
+  tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_edge_1);
+
   suite_add_tcase(decimal, tc_s21_from_decimal_to_int);
 
   return decimal;

@@ -13,6 +13,16 @@
 
 static void s21_test_is_greater(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_is_greater_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  s21_decimal value_2 = {{0x342ED654, 0x114C, 0x0, 0x0}};
+  int code = 1;
+  int my_code = s21_is_greater(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_is_greater_1) {
   char *example = "( -80.9704 > -4.7195493427531678211885836 ) = False";
   s21_decimal value_1 = {{0xC5AE8, 0x0, 0x0, 0x80040000}};
@@ -111512,6 +111522,17 @@ Suite *s21_is_greater_case_100(void)
   tcase_add_test(tc_s21_is_greater, s21_is_greater_9998);
   tcase_add_test(tc_s21_is_greater, s21_is_greater_9999);
   tcase_add_test(tc_s21_is_greater, s21_is_greater_10000);
+  suite_add_tcase(decimal, tc_s21_is_greater);
+
+  return decimal;
+}
+
+Suite *s21_is_greater_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_is_greater edge case)\n");
+
+  TCase *tc_s21_is_greater = tcase_create("s21_is_greater_test");
+  tcase_add_test(tc_s21_is_greater, s21_is_greater_edge_1);
+
   suite_add_tcase(decimal, tc_s21_is_greater);
 
   return decimal;

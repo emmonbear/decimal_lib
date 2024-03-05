@@ -13,6 +13,16 @@
 
 static void s21_test_is_less_or_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_is_less_or_equal_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  s21_decimal value_2 = {{0x342ED654, 0x114C, 0x0, 0x0}};
+  int code = 1;
+  int my_code = s21_is_less_or_equal(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_is_less_or_equal_1) {
   char *example = "( 11075459551816 <= 1029572090328641956 ) = True";
   s21_decimal value_1 = {{0xB4D51248, 0xA12, 0x0, 0x0}};
@@ -111512,6 +111522,17 @@ Suite *s21_is_less_or_equal_case_100(void)
   tcase_add_test(tc_s21_is_less_or_equal, s21_is_less_or_equal_9998);
   tcase_add_test(tc_s21_is_less_or_equal, s21_is_less_or_equal_9999);
   tcase_add_test(tc_s21_is_less_or_equal, s21_is_less_or_equal_10000);
+  suite_add_tcase(decimal, tc_s21_is_less_or_equal);
+
+  return decimal;
+}
+
+Suite *s21_is_less_or_equal_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_is_less_or_equal edge case)\n");
+
+  TCase *tc_s21_is_less_or_equal = tcase_create("s21_is_less_or_equal_test");
+  tcase_add_test(tc_s21_is_less_or_equal, s21_is_less_or_equal_edge_1);
+
   suite_add_tcase(decimal, tc_s21_is_less_or_equal);
 
   return decimal;

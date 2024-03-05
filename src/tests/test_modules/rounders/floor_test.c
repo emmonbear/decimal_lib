@@ -13,6 +13,16 @@
 
 static void s21_test_floor(s21_decimal value, s21_decimal result, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_floor_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x0}};
+  s21_decimal *value_2 = NULL;
+  int code = 1;
+  int my_code = s21_floor(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_floor_1) {
   char *example = "floor(0.13131218687183025964841) = 0";
   s21_decimal value = {{0x8B7D8729, 0xD8443FD0, 0x2C7, 0x170000}};
@@ -111512,6 +111522,17 @@ Suite *s21_floor_case_100(void)
   tcase_add_test(tc_s21_floor, s21_floor_9998);
   tcase_add_test(tc_s21_floor, s21_floor_9999);
   tcase_add_test(tc_s21_floor, s21_floor_10000);
+  suite_add_tcase(decimal, tc_s21_floor);
+
+  return decimal;
+}
+
+Suite *s21_floor_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_floor edge case)\n");
+
+  TCase *tc_s21_floor = tcase_create("s21_floor_test");
+  tcase_add_test(tc_s21_floor, s21_floor_edge_1);
+
   suite_add_tcase(decimal, tc_s21_floor);
 
   return decimal;

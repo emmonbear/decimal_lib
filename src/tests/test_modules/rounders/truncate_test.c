@@ -13,6 +13,16 @@
 
 static void s21_test_truncate(s21_decimal value, s21_decimal result, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_truncate_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x0}};
+  s21_decimal *value_2 = NULL;
+  int code = 1;
+  int my_code = s21_truncate(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_truncate_1) {
   char *example = "truncate(1405589528850076747816101547) = 1405589528850076747816101547";
   s21_decimal value = {{0x6AC5E6AB, 0xA446B43, 0x48AAD29, 0x0}};
@@ -111512,6 +111522,17 @@ Suite *s21_truncate_case_100(void)
   tcase_add_test(tc_s21_truncate, s21_truncate_9998);
   tcase_add_test(tc_s21_truncate, s21_truncate_9999);
   tcase_add_test(tc_s21_truncate, s21_truncate_10000);
+  suite_add_tcase(decimal, tc_s21_truncate);
+
+  return decimal;
+}
+
+Suite *s21_truncate_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_truncate edge case)\n");
+
+  TCase *tc_s21_truncate = tcase_create("s21_truncate_test");
+  tcase_add_test(tc_s21_truncate, s21_truncate_edge_1);
+
   suite_add_tcase(decimal, tc_s21_truncate);
 
   return decimal;

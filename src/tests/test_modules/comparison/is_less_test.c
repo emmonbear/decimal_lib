@@ -13,6 +13,16 @@
 
 static void s21_test_is_less(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
 
+//############################# EDGE CASE #####################################
+START_TEST(s21_is_less_edge_1) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  s21_decimal value_2 = {{0x342ED654, 0x114C, 0x0, 0x0}};
+  int code = 1;
+  int my_code = s21_is_less(value_1, value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_is_less_1) {
   char *example = "( 158382833564051774 < 15333093 ) = False";
   s21_decimal value_1 = {{0x151AE93E, 0x232B059, 0x0, 0x0}};
@@ -111512,6 +111522,17 @@ Suite *s21_is_less_case_100(void)
   tcase_add_test(tc_s21_is_less, s21_is_less_9998);
   tcase_add_test(tc_s21_is_less, s21_is_less_9999);
   tcase_add_test(tc_s21_is_less, s21_is_less_10000);
+  suite_add_tcase(decimal, tc_s21_is_less);
+
+  return decimal;
+}
+
+Suite *s21_is_less_edge_case(void) {
+  Suite *decimal = suite_create("\ns21_decimal (s21_is_less edge case)\n");
+
+  TCase *tc_s21_is_less = tcase_create("s21_is_less_test");
+  tcase_add_test(tc_s21_is_less, s21_is_less_edge_1);
+
   suite_add_tcase(decimal, tc_s21_is_less);
 
   return decimal;
