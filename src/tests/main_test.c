@@ -551,7 +551,12 @@ int main(void) {
                 sizeof(s21_truncate_cases) / sizeof(s21_truncate_cases[0]),
                 "TRUNCATE", &passed_count, &failed_count);
 #endif  // TEST_TRUNCATE
-
+  Suite *(*s21_negate_cases[])(void) = {
+    s21_negate_case_1,
+  };
+  test_function(s21_negate_cases,
+                sizeof(s21_negate_cases) / sizeof(s21_negate_cases[0]),
+                "NEGATE", &passed_count, &failed_count);
 #ifdef TEST_NEGATE
 
 #endif  // TEST_NEGATE
@@ -675,31 +680,18 @@ static void test_function(Suite *(**array)(void), size_t size, char *name,
  * @param[in] function name of testing function.
  */
 static void function_declaration(char *function) {
-  char space[10] = {0};
-  int str_len = strlen(function);
-  if (str_len == 3) {
-    strcpy(space, "      ");
-  } else if (str_len == 8) {
-    strcpy(space, " ");
-  }
-  printf(ORANGE
-         "\n\n "
-         "_____________________________________________________________________"
-         "_____________________________________________________________________"
-         "______________\n");
-  printf(
-      "|                                                                       "
-      "                                                                        "
-      "         |\n");
-  printf(
-      "|                                                                    %s "
-      "TESTS %s                                                                "
-      "    |\n",
-      function, space);
-  printf(
-      "|_______________________________________________________________________"
-      "________________________________________________________________________"
-      "_________|\n\n\n" RESET);
+  char space[] = "                                                                         ";
+  char space1[100];
+  char space2[100];
+  sprintf(space1, "%s", space);
+  sprintf(space2, "%s", space);
+  int len = strlen(function) / 2;
+  space1[strlen(space1) - len] = '\0';
+  space2[strlen(space2) - (len + ((strlen(function) % 2) ? 1 : 0))] = '\0';
+  printf(ORANGE"\n\n__________________________________________________________________________________________________________________________________________________________\n");
+  printf("|                                                                                                                                                         |\n");
+  printf("|%s%s TESTS %s|\n", space1, function, space2);
+  printf("|_________________________________________________________________________________________________________________________________________________________|\n\n\n" RESET);
 }
 
 /**
