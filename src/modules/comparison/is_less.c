@@ -20,6 +20,10 @@
  * @retval COMPARISON_FALSE - !(value_1 < value_2)
  */
 int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
+  if (!is_correct(value_1) || !is_correct(value_2)) {
+    return COMPARISON_FALSE;
+  }
+  
   if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
     return COMPARISON_FALSE;
   }

@@ -25,7 +25,7 @@
  * does not fit into decimal.
  */
 int s21_from_decimal_to_int(s21_decimal src, int *dst) {
-  if (!dst) {
+  if (!dst || !is_correct(src)) {
     return CONVERSION_ERROR;
   }
 

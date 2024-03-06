@@ -22,7 +22,7 @@
  * @retval ROUND_ERROR = 1 - invalid number or does not fit into decimal.
  */
 int s21_round(s21_decimal value, s21_decimal *result) {
-  if (!result) {
+  if (!result || !is_correct(value)) {
     return ROUND_ERROR;
   }
 

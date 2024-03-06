@@ -14,7 +14,7 @@
 #include "./../include/rounders.h"
 
 int s21_floor(s21_decimal value, s21_decimal *result) {
-  if (!result) {
+  if (!result || !is_correct(value)) {
     return ROUND_ERROR;
   }
 

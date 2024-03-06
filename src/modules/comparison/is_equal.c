@@ -20,6 +20,10 @@
  * @retval COMPARISON_FALSE - numbers is not equal
  */
 int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {
+  if (!is_correct(value_1) || !is_correct(value_2)) {
+    return COMPARISON_FALSE;
+  }
+  
   if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
     return COMPARISON_TRUE;
   }
