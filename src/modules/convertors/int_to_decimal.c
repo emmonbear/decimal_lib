@@ -27,7 +27,10 @@ int s21_from_int_to_decimal(int src, s21_decimal *dst) {
     return CONVERSION_ERROR;
   }
 
-  *dst = (s21_decimal){{abs(src), 0, 0, (src > 0) ? 0 : 1 << 31}};
+  *dst = DCML_ZERO;
+
+  dst->bits[0] = abs(src);
+  SET_SIGN(dst->bits[SERVICE], (src > 0) ? POSITIVE : NEGATIVE);
 
   return CONVERSION_OK;
 }

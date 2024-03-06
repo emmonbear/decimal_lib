@@ -26,16 +26,16 @@ int s21_round(s21_decimal value, s21_decimal *result) {
     return ROUND_ERROR;
   }
 
-  bool sign = GET_SIGN(value.bits[DEC_SIZE - 1]);
-  uint8_t power = GET_POWER(value.bits[DEC_SIZE - 1]);
-  value.bits[DEC_SIZE - 1] = 0;
+  bool sign = GET_SIGN(value.bits[SERVICE]);
+  uint8_t power = GET_POWER(value.bits[SERVICE]);
+  value.bits[SERVICE] = 0;
 
   uint192_t fractional = LDCML_ZERO;
   uint192_t integer =
       binary_div(decimal_to_uint192(value), get_ten_pow(power), &fractional);
-  SET_POWER(fractional.Lbits[DEC_SIZE - 1], power);
+  SET_POWER(fractional.Lbits[SERVICE], power);
   *result = uint192_to_decimal(bank_rouding(integer, fractional, NULL));
-  SET_SIGN(result->bits[DEC_SIZE - 1], sign);
+  SET_SIGN(result->bits[SERVICE], sign);
 
   return ROUND_OK;
 }

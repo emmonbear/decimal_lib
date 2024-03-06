@@ -31,8 +31,8 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return INCORRECT;
   }
 
-  uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
-  uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
+  uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
+  uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);
 
   if (sign_1 == POSITIVE) {
     if (sign_2 == POSITIVE) {
@@ -40,7 +40,7 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
         err_code = sub_positive(value_1, value_2, result);
       } else {
         err_code = sub_positive(value_2, value_1, result);
-        SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+        SET_SIGN(result->bits[SERVICE], NEGATIVE);
       }
     } else {
       err_code = s21_add(value_1, dabs(value_2), result);
@@ -48,18 +48,18 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   } else {
     if (sign_2 == POSITIVE) {
       err_code = s21_add(dabs(value_1), value_2, result);
-      SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+      SET_SIGN(result->bits[SERVICE], NEGATIVE);
     } else {
       if (s21_is_greater_or_equal(value_1, value_2)) {
         err_code = sub_positive(dabs(value_2), dabs(value_1), result);
       } else {
         err_code = sub_positive(dabs(value_1), dabs(value_2), result);
-        SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+        SET_SIGN(result->bits[SERVICE], NEGATIVE);
       }
     }
   }
 
-  if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+  if (err_code == BIG && GET_SIGN(result->bits[SERVICE])) {
     err_code = SMALL;
   }
 
@@ -82,8 +82,8 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;
 
-  int8_t power_1 = GET_POWER(value_1.bits[3]);
-  int8_t power_2 = GET_POWER(value_2.bits[3]);
+  int8_t power_1 = GET_POWER(value_1.bits[SERVICE]);
+  int8_t power_2 = GET_POWER(value_2.bits[SERVICE]);
 
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
@@ -95,9 +95,9 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int8_t res_power = GET_MAX(power_1, power_2) - power_tmp;
   uint192_t remainder = LDCML_ZERO;
   res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
-  SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
+  SET_POWER(remainder.Lbits[SERVICE], power_tmp);
   res_tmp = bank_rouding(res_tmp, remainder, &err_code);
-  SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
+  SET_POWER(res_tmp.Lbits[SERVICE], res_power);
   *res = uint192_to_decimal(res_tmp);
 
   return err_code;

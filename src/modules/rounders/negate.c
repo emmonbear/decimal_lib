@@ -17,7 +17,7 @@ int s21_negate(s21_decimal value, s21_decimal *result) {
   }
 
   *result = value;
-  SET_SIGN(result->bits[DEC_SIZE - 1], !(GET_SIGN(value.bits[DEC_SIZE - 1])));
+  SET_SIGN(result->bits[SERVICE], !(GET_SIGN(value.bits[SERVICE])));
 
   return ROUND_OK;
 }

@@ -29,13 +29,13 @@ int s21_truncate(s21_decimal value, s21_decimal *result) {
 
   *result = DCML_ZERO;
 
-  bool sign = GET_SIGN(value.bits[DEC_SIZE - 1]);
-  uint8_t power = GET_POWER(value.bits[DEC_SIZE - 1]);
-  value.bits[DEC_SIZE - 1] = 0;
+  bool sign = GET_SIGN(value.bits[SERVICE]);
+  uint8_t power = GET_POWER(value.bits[SERVICE]);
+  value.bits[SERVICE] = 0;
 
   *result = uint192_to_decimal(
       binary_div(decimal_to_uint192(value), get_ten_pow(power), NULL));
-  SET_SIGN(result->bits[DEC_SIZE - 1], sign);
+  SET_SIGN(result->bits[SERVICE], sign);
 
   return ROUND_OK;
 }

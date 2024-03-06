@@ -29,9 +29,9 @@ int s21_from_decimal_to_int(s21_decimal src, int *dst) {
     return CONVERSION_ERROR;
   }
 
-  *dst = (GET_SIGN(src.bits[3])) ? -1 : 1;
+  *dst = (GET_SIGN(src.bits[SERVICE])) ? -1 : 1;
   if ((*dst > 0) ? s21_is_greater(src, DCML_INT_MAX)
-                 : s21_is_less(src, DCML_INT_MIN)) {
+                 : s21_is_greater(dabs(src), DCML_INT_MIN)) {
     *dst = 0;
     return CONVERSION_ERROR;
   }

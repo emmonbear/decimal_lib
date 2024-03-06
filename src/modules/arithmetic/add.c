@@ -25,14 +25,14 @@
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
-  int err_code = OK;
-
   if (!check_args(value_1, value_2, result)) {
     return INCORRECT;
   }
 
-  uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
-  uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
+  int err_code = OK;
+
+  uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
+  uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);
 
   if (sign_1 == POSITIVE) {
     err_code = (sign_2 == POSITIVE) ? add_positive(value_1, value_2, result)
@@ -40,16 +40,14 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   } else {
     if (sign_2 == POSITIVE) {
       err_code = s21_sub(dabs(value_1), value_2, result);
-      SET_SIGN(result->bits[DEC_SIZE - 1],
-               !GET_SIGN(result->bits[DEC_SIZE - 1]));
+      SET_SIGN(result->bits[SERVICE], !GET_SIGN(result->bits[SERVICE]));
     } else {
       err_code = add_positive(dabs(value_1), dabs(value_2), result);
-      SET_SIGN(result->bits[DEC_SIZE - 1],
-               !GET_SIGN(result->bits[DEC_SIZE - 1]));
+      SET_SIGN(result->bits[SERVICE], !GET_SIGN(result->bits[SERVICE]));
     }
   }
 
-  if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code == BIG)) {
+  if (err_code && GET_SIGN(result->bits[SERVICE])) {
     err_code = SMALL;
   }
 
@@ -72,8 +70,8 @@ int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
 int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   int err_code = OK;
 
-  int8_t power_1 = GET_POWER(value_1.bits[3]);
-  int8_t power_2 = GET_POWER(value_2.bits[3]);
+  int8_t power_1 = GET_POWER(value_1.bits[SERVICE]);
+  int8_t power_2 = GET_POWER(value_2.bits[SERVICE]);
 
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
@@ -88,9 +86,9 @@ int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   } else {
     uint192_t remainder = LDCML_ZERO;
     res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
-    SET_POWER(remainder.Lbits[DEC_SIZE - 1], power_tmp);
+    SET_POWER(remainder.Lbits[SERVICE], power_tmp);
     res_tmp = bank_rouding(res_tmp, remainder, &err_code);
-    SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], res_power);
+    SET_POWER(res_tmp.Lbits[SERVICE], res_power);
     *res = uint192_to_decimal(res_tmp);
   }
 

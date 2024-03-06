@@ -10,7 +10,7 @@ void printd(s21_decimal value, char *new_line) {
   char *temp;
   char *bit;
   sprintf(result, "%s", "0");
-  for (int i = 0; i < ((DEC_SIZE - 1) * UINT_BITS); i++) {
+  for (int i = 0; i < (SERVICE * UINT_BITS); i++) {
     if (GET_DEC_BIT(value, i)) {
       bit = decimal_bits(i);
       temp = add(result, bit);
@@ -29,11 +29,11 @@ static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   char *result = (char *)calloc(strlen(math_str) + 1, sizeof(char));
   sprintf(result, "%s", math_str);
 
-  int scale = (value.bits[DEC_SIZE - 1] << 1) >> 17;
-  int sign = value.bits[DEC_SIZE - 1] >> 31;
+  int scale = (value.bits[SERVICE] << 1) >> 17;
+  int sign = value.bits[SERVICE] >> 31;
   int len = strlen(result);
 
-  if (scale > (DEC_SIZE - 1) * 10) {
+  if (scale > (SERVICE)*10) {
     sprintf(result, "%s", "0");
   } else if (scale == len) {
     result = (char *)realloc(result, 103 * sizeof(char));
@@ -92,7 +92,7 @@ s21_decimal filld(char *input) {
     scale = strlen(dot) - 1;
     dot[0] = '\0';
   }
-  char *bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+  char *bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
   mantiss = divide(full, bit_ptr);
   free(bit_ptr);
   if (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
@@ -110,13 +110,13 @@ s21_decimal filld(char *input) {
   }
 
   free(mantiss);
-  bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+  bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
   mantiss = divide(full, bit_ptr);
   free(bit_ptr);
   while (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
     free(mantiss);
     full[strlen(full) - 1] = '\0';
-    bit_ptr = decimal_bits((DEC_SIZE - 1) * UINT_BITS);
+    bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
     mantiss = divide(full, bit_ptr);
     free(bit_ptr);
     scale--;
@@ -141,7 +141,7 @@ s21_decimal filld(char *input) {
     }
   }
 
-  num.bits[DEC_SIZE - 1] = (scale << 16) | (sign << (UINT_BITS - 1));
+  num.bits[SERVICE] = (scale << 16) | (sign << (UINT_BITS - 1));
 
   return num;
 }

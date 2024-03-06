@@ -18,20 +18,20 @@ int s21_floor(s21_decimal value, s21_decimal *result) {
     return ROUND_ERROR;
   }
 
-  bool sign = GET_SIGN(value.bits[3]);
-  uint8_t power = GET_POWER(value.bits[3]);
-  value.bits[DEC_SIZE - 1] = 0;
+  bool sign = GET_SIGN(value.bits[SERVICE]);
+  uint8_t power = GET_POWER(value.bits[SERVICE]);
+  value.bits[SERVICE] = 0;
 
   uint192_t fractional = LDCML_ZERO;
   uint192_t integer =
       binary_div(decimal_to_uint192(value), get_ten_pow(power), &fractional);
-  SET_POWER(fractional.Lbits[3], power);
+  SET_POWER(fractional.Lbits[SERVICE], power);
   *result = uint192_to_decimal(integer);
   if (sign && s21_is_greater(uint192_to_decimal(fractional), DCML_ZERO)) {
     add_positive(*result, DCML_ONE, result);
   }
 
-  SET_SIGN(result->bits[DEC_SIZE - 1], sign);
+  SET_SIGN(result->bits[SERVICE], sign);
 
   return ROUND_OK;
 }

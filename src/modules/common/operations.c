@@ -133,8 +133,8 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
  * @param[out] value_2 Pointer to number of uint192_t type
  */
 void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
-  uint8_t power_1 = GET_POWER(Lvalue_1->Lbits[DEC_SIZE - 1]);
-  uint8_t power_2 = GET_POWER(Lvalue_2->Lbits[DEC_SIZE - 1]);
+  uint8_t power_1 = GET_POWER(Lvalue_1->Lbits[SERVICE]);
+  uint8_t power_2 = GET_POWER(Lvalue_2->Lbits[SERVICE]);
 
   zero_service_bits(Lvalue_1, Lvalue_2);
   if (power_1 > power_2) {
@@ -151,8 +151,8 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
  * @param[out] value_2
  */
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2) {
-  value_1->Lbits[DEC_SIZE - 1] = 0;
-  value_2->Lbits[DEC_SIZE - 1] = 0;
+  value_1->Lbits[SERVICE] = 0;
+  value_2->Lbits[SERVICE] = 0;
 }
 
 /**
@@ -231,7 +231,7 @@ uint192_t ten_mul(uint192_t num, uint8_t pow) {
  */
 uint8_t get_divider(uint192_t value) {
   uint8_t res = 0;
-  uint192_t quotient = binary_div(value, LDCML_MAX, NULL);
+  uint192_t quotient = binary_div(value, dcml_max(), NULL);
 
   while (1) {
     int8_t compare = binary_compare(quotient, get_ten_pow(res));
@@ -242,7 +242,7 @@ uint8_t get_divider(uint192_t value) {
   }
 
   uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
-  if (tmp.Lbits[3] != 0 || tmp.Lbits[4] != 0 || tmp.Lbits[5] != 0) {
+  if (check_overflow(tmp)) {
     res++;
   }
 

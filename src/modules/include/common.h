@@ -18,12 +18,12 @@
 #include "./macros.h"
 #include "stdbool.h"
 
-#define MAX_SCALE 28
-
 /// @brief Enumerations with array sizes.
 typedef enum {
   DEC_SIZE = 4,                    ///< Int array used for the final result.
   LDEC_SIZE = (DEC_SIZE - 1) * 2,  ///< Int array used for precise calculations.
+  SERVICE = DEC_SIZE - 1,
+  MAX_SCALE = (DEC_SIZE * 9) - 8,
 } array_size;
 
 /// @brief Decimal representation. Basic project type.
@@ -96,6 +96,8 @@ s21_decimal dabs(s21_decimal value);
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code);
 bool is_correct(s21_decimal value);
 bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+bool check_overflow(uint192_t value);
+uint192_t dcml_max();
 //==============================================================================
 
 #endif  // COMMON_H

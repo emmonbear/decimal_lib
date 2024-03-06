@@ -20,17 +20,14 @@
  * @retval COMPARISON_FALSE - !(value_1 < value_2)
  */
 int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
-  if (!is_correct(value_1) || !is_correct(value_2)) {
-    return COMPARISON_FALSE;
-  }
-  
-  if ((dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
+  if (!is_correct(value_1) || !is_correct(value_2) ||
+      (dcml_is_zero(value_1) && dcml_is_zero(value_2))) {
     return COMPARISON_FALSE;
   }
 
   int err_code = COMPARISON_FALSE;
-  int sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
-  int sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
+  int sign_1 = GET_SIGN(value_1.bits[SERVICE]);
+  int sign_2 = GET_SIGN(value_2.bits[SERVICE]);
 
   if (sign_1 == NEGATIVE) {
     err_code = (sign_2 == POSITIVE)

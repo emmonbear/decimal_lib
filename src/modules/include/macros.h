@@ -13,45 +13,21 @@
 #define MACROS_H
 
 /// @brief Buffer decimal equal to 0.
-#define DCML_ZERO  \
-  (s21_decimal) {  \
-    { 0, 0, 0, 0 } \
+#define DCML_ZERO \
+  (s21_decimal) { \
+    { 0 }         \
   }
 
 /// @brief Buffer long decimal equal to 0.
-#define LDCML_ZERO       \
-  (uint192_t) {          \
-    { 0, 0, 0, 0, 0, 0 } \
-  }
-
-/// @brief Buffer long decimal equal to 0.5.
-#define POINT_FIVE             \
-  (s21_decimal) {              \
-    { 0x5, 0x0, 0x0, 0x10000 } \
+#define LDCML_ZERO \
+  (uint192_t) {    \
+    { 0 }          \
   }
 
 /// @brief Buffer long decimal equal to 1.
 #define ONE     \
   (uint192_t) { \
     { 1 }       \
-  }
-
-/// @brief Buffer long decimal equal to 10.
-#define TEN     \
-  (uint192_t) { \
-    { 10 }      \
-  }
-
-/// @brief Buffer decimal equal to decimal max number (2^96 - 1).
-#define DCML_MAX                           \
-  (s21_decimal) {                          \
-    { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF } \
-  }
-
-/// @brief Buffer long decimal equal to decimal max number (2^96 - 1).
-#define LDCML_MAX                          \
-  (uint192_t) {                            \
-    { 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF } \
   }
 
 /**

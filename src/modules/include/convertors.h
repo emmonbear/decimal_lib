@@ -26,10 +26,11 @@
   (s21_decimal) {    \
     { 0x7FFFFFFF }   \
   }
+
 /// @brief INT_MIN as decimal
-#define DCML_INT_MIN                     \
-  (s21_decimal) {                        \
-    { 0x80000000, 0x0, 0x0, 0x80000000 } \
+#define DCML_INT_MIN \
+  (s21_decimal) {    \
+    { 0x80000000 }   \
   }
 
 /// @brief Enumeration of conversion error codes
@@ -40,7 +41,6 @@ typedef enum {
 
 /// @todo Добавить описание
 typedef enum {
-  DCML_PRECISION = 28,
   FLT_PRECISION = 6,
   MIN_NEED_SIZE = 15,
   EXP_LEN = 4,

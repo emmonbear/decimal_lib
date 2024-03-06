@@ -11,8 +11,6 @@
 
 #include "../include/arithmetic.h"
 
-static bool check_overflow(uint192_t value, uint8_t index);
-
 /**
  * @brief Division two decimals
  *
@@ -42,8 +40,8 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return OK;
   }
 
-  uint8_t sign_1 = GET_SIGN(value_1.bits[DEC_SIZE - 1]);
-  uint8_t sign_2 = GET_SIGN(value_2.bits[DEC_SIZE - 1]);
+  uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
+  uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);
 
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
@@ -53,7 +51,7 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   uint192_t remainder = LDCML_ZERO;
   uint192_t res = binary_div(Lvalue_1, Lvalue_2, &remainder);
 
-  if (check_overflow(res, DEC_SIZE - 1)) {
+  if (check_overflow(res)) {
     *result = DCML_ZERO;
     return (sign_1 != sign_2) ? SMALL : BIG;
   }
@@ -61,18 +59,8 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   err_code = div_additional(Lvalue_2, res, remainder, result);
 
   if (sign_1 != sign_2) {
-    SET_SIGN(result->bits[DEC_SIZE - 1], NEGATIVE);
+    SET_SIGN(result->bits[SERVICE], NEGATIVE);
   }
-
-  // if ((GET_SIGN(result->bits[DEC_SIZE - 1]) == NEGATIVE) && (err_code ==
-  // BIG)) {
-  //   err_code = SMALL;
-  // }
-
-  // if ((err_code == OK) && (!s21_is_equal(value_1, DCML_ZERO)) &&
-  //     (s21_is_equal(*result, DCML_ZERO))) {
-  //   err_code = SMALL;
-  // }
 
   if (err_code == OK && s21_is_equal(*result, DCML_ZERO)) {
     err_code = SMALL;
@@ -102,18 +90,12 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
   uint8_t power_1 = calc_fract_part(&quotient, divider, &remainder);
   uint192_t res_tmp = LDCML_ZERO;
   uint8_t power_2 = calc_fract_part(&res_tmp, divider, &remainder);
-  SET_POWER(res_tmp.Lbits[DEC_SIZE - 1], power_2);
+  SET_POWER(res_tmp.Lbits[SERVICE], power_2);
 
   quotient = bank_rouding(quotient, res_tmp, &err_code);
-  SET_POWER(quotient.Lbits[DEC_SIZE - 1], power_1);
+  SET_POWER(quotient.Lbits[SERVICE], power_1);
 
-  // if (check_overflow(quotient, DEC_SIZE) ||
-  //     !is_correct(uint192_to_decimal(quotient))) {
-  //   err_code = BIG;
-  //   *result = DCML_ZERO;
-  // } else {
   *result = uint192_to_decimal(quotient);
-  // }
 
   return err_code;
 }
@@ -157,25 +139,4 @@ int calc_fract_part(uint192_t *quotient, uint192_t divider,
   *remainder = remainder_tmp;
 
   return power;
-}
-
-/**
- * @brief Check that insignificant bits are zero
- *
- * @param value checked number decimal_t
- * @return int - error code
- * @retval false - all bits zero
- * @retval true - not all bits are zeros
- */
-static bool check_overflow(uint192_t value, uint8_t index) {
-  int err_code = false;
-
-  for (uint8_t i = index; i < LDEC_SIZE - 1; i++) {
-    if (value.Lbits[i]) {
-      err_code = true;
-      break;
-    }
-  }
-
-  return err_code;
 }

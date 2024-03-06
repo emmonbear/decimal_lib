@@ -22,23 +22,23 @@
  * @return uint192_t - rounded number
  */
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
-  if (s21_is_equal(uint192_to_decimal(integer), DCML_MAX) &&
+  if (binary_compare(integer, dcml_max()) == EQUAL &&
       !s21_is_equal(uint192_to_decimal(fractional), DCML_ZERO)) {
-    *code = (GET_SIGN(integer.Lbits[3])) ? 2 : 1;
+    *code = (GET_SIGN(integer.Lbits[SERVICE])) ? 2 : 1;
     return LDCML_ZERO;
   }
 
   uint192_t res = LDCML_ZERO;
+  s21_decimal point_five = {{5}};
+  SET_POWER(point_five.bits[SERVICE], 1);
 
-  if (s21_is_equal(uint192_to_decimal(fractional), POINT_FIVE)) {
+  if (s21_is_equal(uint192_to_decimal(fractional), point_five)) {
     if (IS_EVEN(integer)) {
-      for (uint8_t i = 0; i < (LDEC_SIZE - 1); i++) {
-        res.Lbits[i] = integer.Lbits[i];
-      }
+      res = integer;
     } else {
       res = binary_add(integer, ONE);
     }
-  } else if (s21_is_greater(uint192_to_decimal(fractional), POINT_FIVE)) {
+  } else if (s21_is_greater(uint192_to_decimal(fractional), point_five)) {
     res = binary_add(integer, ONE);
   } else {
     res = integer;
@@ -54,7 +54,7 @@ uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
  * @return s21_decimal - modulus of value
  */
 s21_decimal dabs(s21_decimal value) {
-  value.bits[DEC_SIZE - 1] = (value.bits[DEC_SIZE - 1] << 1) >> 1;
+  value.bits[SERVICE] = (value.bits[SERVICE] << 1) >> 1;
   return value;
 }
 
@@ -72,8 +72,8 @@ s21_decimal dabs(s21_decimal value) {
  * @retval true - correct decimal
  */
 bool is_correct(s21_decimal value) {
-  unsigned int empty = value.bits[DEC_SIZE - 1] & 0x7F00FFFF;
-  uint8_t power = GET_POWER(value.bits[DEC_SIZE - 1]);
+  unsigned int empty = value.bits[SERVICE] & 0x7F00FFFF;
+  uint8_t power = GET_POWER(value.bits[SERVICE]);
 
   return ((empty) || (power > MAX_SCALE)) ? false : true;
 }
@@ -90,4 +90,81 @@ bool is_correct(s21_decimal value) {
 bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   return (!result || !is_correct(value_1) || !is_correct(value_2)) ? false
                                                                    : true;
+}
+
+/**
+ * @brief Check that insignificant bits are zero
+ *
+ * @param value checked number decimal_t
+ * @retval false - all bits zero
+ * @retval true - not all bits are zeros
+ */
+bool check_overflow(uint192_t value) {
+  int err_code = false;
+
+  for (uint8_t i = SERVICE; i < LDEC_SIZE; i++) {
+    if (value.Lbits[i]) {
+      err_code = true;
+      break;
+    }
+  }
+
+  return err_code;
+}
+
+/**
+ * @brief Check if all bits of ${value} are zeros.
+ *
+ * @param[in] value number of uint192_t type, bits of which must be checked.
+ * @retval true - all bits are zero.
+ * @retval false - not all bits are zero.
+ */
+bool is_eq_zero(uint192_t value) {
+  bool res = true;
+
+  for (uint8_t i = 0; i < LDEC_SIZE; i++) {
+    if (value.Lbits[i]) {
+      res = false;
+      break;
+    }
+  }
+
+  return res;
+}
+
+/**
+ * @brief Check if all significant bits of a decimal_t number are zero
+ *
+ * @param[in] value Checked number decimal_t
+ * @retval true - no significant bits
+ * @retval false - contains significant bits
+ */
+bool dcml_is_zero(s21_decimal value) {
+  bool res = true;
+
+  for (uint8_t i = 0; i < SERVICE; i++) {
+    if (value.bits[i]) {
+      res = false;
+      break;
+    }
+  }
+
+  return res;
+}
+
+/**
+ * @brief Check if all significant bits of a decimal_t number are zero
+ *
+ * @param[in] value Checked number decimal_t
+ * @retval true - no significant bits
+ * @retval false - contains significant bits
+ */
+uint192_t dcml_max() {
+  uint192_t value = LDCML_ZERO;
+
+  for (uint8_t i = 0; i < SERVICE; i++) {
+    value.Lbits[i] = 0xFFFFFFFF;
+  }
+
+  return value;
 }

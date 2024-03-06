@@ -29,11 +29,12 @@ int s21_from_decimal_to_float(s21_decimal src, float *dst) {
     return CONVERSION_ERROR;
   }
 
-  *dst =
-      ((GET_SIGN(src.bits[3])) ? -1 : 1) *
-      ((long double)src.bits[2] * powl(2.0, 64.0) +
-       (long double)src.bits[1] * powl(2.0, 32.0) + (long double)src.bits[0]) /
-      powl(10.0, GET_POWER(src.bits[3]));
+  long double tmp = 0;
+  for (int i = SERVICE - 1; i >= 0; i--) {
+    tmp += powl(2.0, i * UINT_BITS) * src.bits[i];
+  }
+  *dst = ((GET_SIGN(src.bits[SERVICE])) ? -1 : 1) * tmp /
+         powl(10.0, GET_POWER(src.bits[SERVICE]));
 
   return CONVERSION_OK;
 }

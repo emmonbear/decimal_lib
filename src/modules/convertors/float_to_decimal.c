@@ -45,18 +45,18 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
-  if (exponent == -(DCML_PRECISION + 1)) {
-    if((str[0] - '0') < 5) {
+  if (exponent == -(MAX_SCALE + 1)) {
+    if ((str[0] - '0') < 5) {
       return CONVERSION_ERROR;
     } else {
       dst->bits[0] = 1;
-      SET_POWER(dst->bits[DEC_SIZE - 1], DCML_PRECISION);
+      SET_POWER(dst->bits[SERVICE], MAX_SCALE);
       return CONVERSION_OK;
     }
-  } else if (exponent < -DCML_PRECISION) {
+  } else if (exponent < -MAX_SCALE) {
     return CONVERSION_ERROR;
-  } else if (exponent <= -(DCML_PRECISION - FLT_PRECISION)) {
-    int correct = (exponent >= -DCML_PRECISION) ? exponent + DCML_PRECISION : 0;
+  } else if (exponent <= -(MAX_SCALE - FLT_PRECISION)) {
+    int correct = (exponent >= -MAX_SCALE) ? exponent + MAX_SCALE : 0;
     sprintf(str, "%.*E", correct, fabsf(src));
     exponent = get_char_exponent(str) + FLT_PRECISION - correct;
   }
@@ -65,16 +65,16 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   dst->bits[0] = atoi(str);
 
   if (exponent <= 0) {
-    SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
+    SET_POWER(dst->bits[SERVICE], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = decimal_to_uint192(*dst);
     long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
     *dst = uint192_to_decimal(long_dst);
   } else {
-    SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION - abs(exponent)));
+    SET_POWER(dst->bits[SERVICE], (FLT_PRECISION - abs(exponent)));
   }
 
-  SET_SIGN(dst->bits[DEC_SIZE - 1], ((src < 0) ? NEGATIVE : POSITIVE));
+  SET_SIGN(dst->bits[SERVICE], ((src < 0) ? NEGATIVE : POSITIVE));
 
   return CONVERSION_OK;
 }

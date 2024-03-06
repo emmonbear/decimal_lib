@@ -12,46 +12,6 @@
 #include "../include/common.h"
 
 /**
- * @brief Check if all bits of ${value} are zeros.
- *
- * @param[in] value number of uint192_t type, bits of which must be checked.
- * @retval true - all bits are zero.
- * @retval false - not all bits are zero.
- */
-bool is_eq_zero(uint192_t value) {
-  bool res = true;
-
-  for (uint8_t i = 0; i < LDEC_SIZE; i++) {
-    if (value.Lbits[i] != 0) {
-      res = false;
-      break;
-    }
-  }
-
-  return res;
-}
-
-/**
- * @brief Check if all significant bits of a decimal_t number are zero
- *
- * @param[in] value Checked number decimal_t
- * @retval true - no significant bits
- * @retval false - contains significant bits
- */
-bool dcml_is_zero(s21_decimal value) {
-  bool res = true;
-
-  for (uint8_t i = 0; i < (DEC_SIZE - 1); i++) {
-    if (value.bits[i] != 0) {
-      res = false;
-      break;
-    }
-  }
-
-  return res;
-}
-
-/**
  * @brief Bitwise AND of two positive numbers of uint192_t type
  *
  * @param[in] value_1 uint192_t type number
