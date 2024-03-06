@@ -62,6 +62,31 @@ START_TEST(s21_from_float_to_decimal_edge_6) {
   ck_assert_int_eq(code, my_code);
 }
 
+START_TEST(s21_from_float_to_decimal_edge_7) {
+  float value_1 = 1.14038629E-29;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_8) {
+  float value_1 = 7.1403869E-29;
+  s21_decimal value_2 = {{0}};
+  int code = 0;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_9) {
+  float value_1 = 7.1403869E-30;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+//#############################################################################
+
 START_TEST(s21_from_float_to_decimal_1) {
   char *example = "float_to_decimal(0.659987) = 0.659987";
   float value = 0.659987;
@@ -111576,6 +111601,9 @@ Suite *s21_from_float_to_decimal_edge_case(void) {
   tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_4);
   tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_5);
   tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_6);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_7);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_8);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_9);
 
   suite_add_tcase(decimal, tc_s21_from_float_to_decimal);
 
