@@ -1,17 +1,18 @@
 /**
  * @file is_equal_test.c
  * @author kossadda (https://github.com/kossadda)
- * @brief 
+ * @brief
  * @version 1.0
  * @date 2024-03-05
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "./../../main_test.h"
 
-static void s21_test_is_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
+static void s21_test_is_equal(s21_decimal value_1, s21_decimal value_2,
+                              int code, char *text, int count);
 
 //############################# EDGE CASE #####################################
 START_TEST(s21_is_equal_edge_1) {
@@ -24,7 +25,8 @@ START_TEST(s21_is_equal_edge_1) {
 //#############################################################################
 
 START_TEST(s21_is_equal_1) {
-  char *example = "( 160011115872532659445635711 == -9.9778466651207648706252058 ) = False";
+  char *example =
+      "( 160011115872532659445635711 == -9.9778466651207648706252058 ) = False";
   s21_decimal value_1 = {{0x17FB1A7F, 0xF8F87A8E, 0x845BAB, 0x0}};
   s21_decimal value_2 = {{0x896F4D1A, 0x83F97C2A, 0x5288E9, 0x80190000}};
   int code = 0;
@@ -44,7 +46,9 @@ START_TEST(s21_is_equal_2) {
 }
 
 START_TEST(s21_is_equal_3) {
-  char *example = "( 1246897382054801025977728736 == 0.27276370436179458947744097 ) = False";
+  char *example =
+      "( 1246897382054801025977728736 == 0.27276370436179458947744097 ) = "
+      "False";
   s21_decimal value_1 = {{0x9A92BEE0, 0x8646A038, 0x40768CA, 0x0}};
   s21_decimal value_2 = {{0x1AEF0161, 0x114A4F4, 0x168FFF, 0x1A0000}};
   int code = 0;
@@ -74,7 +78,8 @@ START_TEST(s21_is_equal_5) {
 }
 
 START_TEST(s21_is_equal_6) {
-  char *example = "( 1955266257769122170183574 == -3150.20626362674364058757 ) = False";
+  char *example =
+      "( 1955266257769122170183574 == -3150.20626362674364058757 ) = False";
   s21_decimal value_1 = {{0xAECC9F96, 0x323BAC65, 0x19E0B, 0x0}};
   s21_decimal value_2 = {{0xA4B88C85, 0x4D68620A, 0x42B5, 0x80140000}};
   int code = 0;
@@ -114,7 +119,9 @@ START_TEST(s21_is_equal_9) {
 }
 
 START_TEST(s21_is_equal_10) {
-  char *example = "( 1199433656700264215440824257 == -879.23426746916917292851675 ) = False";
+  char *example =
+      "( 1199433656700264215440824257 == -879.23426746916917292851675 ) = "
+      "False";
   s21_decimal value_1 = {{0x8E2497C1, 0xD13CBB97, 0x3E025F4, 0x0}};
   s21_decimal value_2 = {{0x8A4061DB, 0x83BAC91A, 0x48BA82, 0x80170000}};
   int code = 0;
@@ -194,7 +201,8 @@ START_TEST(s21_is_equal_17) {
 }
 
 START_TEST(s21_is_equal_18) {
-  char *example = "( 1471576226542439156324502475 == 1481662962221029598913 ) = False";
+  char *example =
+      "( 1471576226542439156324502475 == 1481662962221029598913 ) = False";
   s21_decimal value_1 = {{0xB6440BCB, 0x16FAF2C8, 0x4C14263, 0x0}};
   s21_decimal value_2 = {{0x57D26C1, 0x523445F4, 0x50, 0x0}};
   int code = 0;
@@ -224,7 +232,8 @@ START_TEST(s21_is_equal_20) {
 }
 
 START_TEST(s21_is_equal_21) {
-  char *example = "( 17528048071488511 == 1498673844455379657902469622 ) = False";
+  char *example =
+      "( 17528048071488511 == 1498673844455379657902469622 ) = False";
   s21_decimal value_1 = {{0xB6E833FF, 0x3E45AA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x158731F6, 0xE679295D, 0x4D7AC87, 0x0}};
   int code = 0;
@@ -244,7 +253,9 @@ START_TEST(s21_is_equal_22) {
 }
 
 START_TEST(s21_is_equal_23) {
-  char *example = "( -70.210039682630969457549930 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( -70.210039682630969457549930 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xB6DE4371, 0x6344F5FD, 0x5CEC1, 0x80170000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -274,7 +285,8 @@ START_TEST(s21_is_equal_25) {
 }
 
 START_TEST(s21_is_equal_26) {
-  char *example = "( 136856022529472333959 == 1784253932945438638238518802 ) = False";
+  char *example =
+      "( 136856022529472333959 == 1784253932945438638238518802 ) = False";
   s21_decimal value_1 = {{0x720E0887, 0x6B424365, 0x7, 0x0}};
   s21_decimal value_2 = {{0x1152CE12, 0x84ACDA03, 0x5C3E677, 0x0}};
   int code = 0;
@@ -284,7 +296,8 @@ START_TEST(s21_is_equal_26) {
 }
 
 START_TEST(s21_is_equal_27) {
-  char *example = "( 189687257174345933989981 == 197249641917343899023660 ) = False";
+  char *example =
+      "( 189687257174345933989981 == 197249641917343899023660 ) = False";
   s21_decimal value_1 = {{0x1039285D, 0xF78141E8, 0x282A, 0x0}};
   s21_decimal value_2 = {{0x7BA7792C, 0xECACFA6E, 0x29C4, 0x0}};
   int code = 0;
@@ -314,7 +327,8 @@ START_TEST(s21_is_equal_29) {
 }
 
 START_TEST(s21_is_equal_30) {
-  char *example = "( 1483176200409839750 == 11699438140416112575283874 ) = False";
+  char *example =
+      "( 1483176200409839750 == 11699438140416112575283874 ) = False";
   s21_decimal value_1 = {{0x64BDF886, 0x14954CE5, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDC282A2, 0xCFFBBC93, 0x9AD73, 0x0}};
   int code = 0;
@@ -324,7 +338,8 @@ START_TEST(s21_is_equal_30) {
 }
 
 START_TEST(s21_is_equal_31) {
-  char *example = "( 16054889263399336247559 == 1186848215265624159068960106 ) = False";
+  char *example =
+      "( 16054889263399336247559 == 1186848215265624159068960106 ) = False";
   s21_decimal value_1 = {{0xDE498107, 0x5658B29C, 0x366, 0x0}};
   s21_decimal value_2 = {{0xD60D356A, 0xAB8A24FA, 0x3D5BCE2, 0x0}};
   int code = 0;
@@ -374,7 +389,9 @@ START_TEST(s21_is_equal_35) {
 }
 
 START_TEST(s21_is_equal_36) {
-  char *example = "( -859.30364267198060610909094 == 1553469060286824819131901574 ) = False";
+  char *example =
+      "( -859.30364267198060610909094 == 1553469060286824819131901574 ) = "
+      "False";
   s21_decimal value_1 = {{0xA7D2F3A6, 0x618C6263, 0x471476, 0x80170000}};
   s21_decimal value_2 = {{0x8AF6686, 0x80AA5CD1, 0x504FFDE, 0x0}};
   int code = 0;
@@ -404,7 +421,8 @@ START_TEST(s21_is_equal_38) {
 }
 
 START_TEST(s21_is_equal_39) {
-  char *example = "( 0.606064121715697483 == 1481353409802261727689271370 ) = False";
+  char *example =
+      "( 0.606064121715697483 == 1481353409802261727689271370 ) = False";
   s21_decimal value_1 = {{0x8DF9274B, 0x8692C1B, 0x0, 0x120000}};
   s21_decimal value_2 = {{0x4233684A, 0x419E4261, 0x4C958C9, 0x0}};
   int code = 0;
@@ -524,7 +542,8 @@ START_TEST(s21_is_equal_50) {
 }
 
 START_TEST(s21_is_equal_51) {
-  char *example = "( 16780270507694675628797650 == 170954857091226649 ) = False";
+  char *example =
+      "( 16780270507694675628797650 == 170954857091226649 ) = False";
   s21_decimal value_1 = {{0x62E2ED2, 0x4976A8D5, 0xDE15C, 0x0}};
   s21_decimal value_2 = {{0x698CDC19, 0x25F5A89, 0x0, 0x0}};
   int code = 0;
@@ -534,7 +553,8 @@ START_TEST(s21_is_equal_51) {
 }
 
 START_TEST(s21_is_equal_52) {
-  char *example = "( 199337394104507488922070 == 107560715424800343735 ) = False";
+  char *example =
+      "( 199337394104507488922070 == 107560715424800343735 ) = False";
   s21_decimal value_1 = {{0x8E45E9D6, 0x1A0EBB45, 0x2A36, 0x0}};
   s21_decimal value_2 = {{0x3A1A86B7, 0xD4B46CCC, 0x5, 0x0}};
   int code = 0;
@@ -594,7 +614,8 @@ START_TEST(s21_is_equal_57) {
 }
 
 START_TEST(s21_is_equal_58) {
-  char *example = "( 1435030940653859913765292325 == 10710754095622241 ) = False";
+  char *example =
+      "( 1435030940653859913765292325 == 10710754095622241 ) = False";
   s21_decimal value_1 = {{0xC9C90925, 0x2C0AEB00, 0x4A3079F, 0x0}};
   s21_decimal value_2 = {{0xC5256861, 0x260D5F, 0x0, 0x0}};
   int code = 0;
@@ -634,7 +655,9 @@ START_TEST(s21_is_equal_61) {
 }
 
 START_TEST(s21_is_equal_62) {
-  char *example = "( 1446820681778681273818535167 == 1035272869473301015422061636 ) = False";
+  char *example =
+      "( 1446820681778681273818535167 == 1035272869473301015422061636 ) = "
+      "False";
   s21_decimal value_1 = {{0xF6B7D4FF, 0x51AE966E, 0x4ACC832, 0x0}};
   s21_decimal value_2 = {{0xBB844C44, 0xB5BCD791, 0x3585B8E, 0x0}};
   int code = 0;
@@ -674,7 +697,8 @@ START_TEST(s21_is_equal_65) {
 }
 
 START_TEST(s21_is_equal_66) {
-  char *example = "( 1004998209480352906859704446 == 18193566218703878042147 ) = False";
+  char *example =
+      "( 1004998209480352906859704446 == 18193566218703878042147 ) = False";
   s21_decimal value_1 = {{0x7496F07E, 0x1A66DC6D, 0x33F50A6, 0x0}};
   s21_decimal value_2 = {{0x1F793223, 0x46739244, 0x3DA, 0x0}};
   int code = 0;
@@ -694,7 +718,8 @@ START_TEST(s21_is_equal_67) {
 }
 
 START_TEST(s21_is_equal_68) {
-  char *example = "( -4.4783135745785289702 == 1426938142065026753371058294 ) = False";
+  char *example =
+      "( -4.4783135745785289702 == 1426938142065026753371058294 ) = False";
   s21_decimal value_1 = {{0x87A15BE6, 0x6D7DA8B0, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0x394C3076, 0xAE7497D0, 0x49C55E7, 0x0}};
   int code = 0;
@@ -704,7 +729,9 @@ START_TEST(s21_is_equal_68) {
 }
 
 START_TEST(s21_is_equal_69) {
-  char *example = "( 1664492861313325933735865615 == -82511.709390186263058294699 ) = False";
+  char *example =
+      "( 1664492861313325933735865615 == -82511.709390186263058294699 ) = "
+      "False";
   s21_decimal value_1 = {{0x2A126D0F, 0xD0EDA35F, 0x560D612, 0x0}};
   s21_decimal value_2 = {{0x5127A7AB, 0xBA93B9FA, 0x444088, 0x80150000}};
   int code = 0;
@@ -744,7 +771,8 @@ START_TEST(s21_is_equal_72) {
 }
 
 START_TEST(s21_is_equal_73) {
-  char *example = "( 134473641415162167 == -8079.0611114016701237083758 ) = False";
+  char *example =
+      "( 134473641415162167 == -8079.0611114016701237083758 ) = False";
   s21_decimal value_1 = {{0x7C343937, 0x1DDBF10, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC51EBE6E, 0xCDE76B3D, 0x42D413, 0x80160000}};
   int code = 0;
@@ -794,7 +822,9 @@ START_TEST(s21_is_equal_77) {
 }
 
 START_TEST(s21_is_equal_78) {
-  char *example = "( 1362595081602962442520437425 == -4824.7603807571071110581245 ) = False";
+  char *example =
+      "( 1362595081602962442520437425 == -4824.7603807571071110581245 ) = "
+      "False";
   s21_decimal value_1 = {{0x8DD922B1, 0x62752124, 0x4671CBB, 0x0}};
   s21_decimal value_2 = {{0x8D598BFD, 0xD7E0813F, 0x27E8D3, 0x80160000}};
   int code = 0;
@@ -834,7 +864,8 @@ START_TEST(s21_is_equal_81) {
 }
 
 START_TEST(s21_is_equal_82) {
-  char *example = "( 0.48124991364384725308727885 == 1989124676702806443 ) = False";
+  char *example =
+      "( 0.48124991364384725308727885 == 1989124676702806443 ) = False";
   s21_decimal value_1 = {{0x2336E24D, 0x26867D5, 0x27CEDD, 0x1A0000}};
   s21_decimal value_2 = {{0xC8D5A1AB, 0x1B9ACA5A, 0x0, 0x0}};
   int code = 0;
@@ -854,7 +885,8 @@ START_TEST(s21_is_equal_83) {
 }
 
 START_TEST(s21_is_equal_84) {
-  char *example = "( 1649719271721273383920679663 == 5.6449522252322855E-10 ) = False";
+  char *example =
+      "( 1649719271721273383920679663 == 5.6449522252322855E-10 ) = False";
   s21_decimal value_1 = {{0xC1C53AEF, 0xEB68F7E6, 0x5549DA4, 0x0}};
   s21_decimal value_2 = {{0x99971827, 0xC88C8A, 0x0, 0x1A0000}};
   int code = 0;
@@ -894,7 +926,8 @@ START_TEST(s21_is_equal_87) {
 }
 
 START_TEST(s21_is_equal_88) {
-  char *example = "( -8.844495891067895684 == -6.57055897419307733303 ) = False";
+  char *example =
+      "( -8.844495891067895684 == -6.57055897419307733303 ) = False";
   s21_decimal value_1 = {{0x1C80FF84, 0x7ABDF627, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xB556D137, 0x9E7B7978, 0x23, 0x80140000}};
   int code = 0;
@@ -1024,7 +1057,8 @@ START_TEST(s21_is_equal_100) {
 }
 
 START_TEST(s21_is_equal_101) {
-  char *example = "( 178146667946877307737589702 == -21838.419267591558828160919 ) = False";
+  char *example =
+      "( 178146667946877307737589702 == -21838.419267591558828160919 ) = False";
   s21_decimal value_1 = {{0x105FC7C6, 0x386F9A0D, 0x935C06, 0x0}};
   s21_decimal value_2 = {{0xCE447797, 0x14A75A5A, 0x121077, 0x80150000}};
   int code = 0;
@@ -1054,7 +1088,8 @@ START_TEST(s21_is_equal_103) {
 }
 
 START_TEST(s21_is_equal_104) {
-  char *example = "( 11358504185189625889039477 == 174262001764678426359203 ) = False";
+  char *example =
+      "( 11358504185189625889039477 == 174262001764678426359203 ) = False";
   s21_decimal value_1 = {{0x96D42475, 0xBEE56F98, 0x96541, 0x0}};
   s21_decimal value_2 = {{0xD7D6F5A3, 0xC3155D51, 0x24E6, 0x0}};
   int code = 0;
@@ -1064,7 +1099,8 @@ START_TEST(s21_is_equal_104) {
 }
 
 START_TEST(s21_is_equal_105) {
-  char *example = "( 1626332967949209597102083480 == -9959.801967177513461566 ) = False";
+  char *example =
+      "( 1626332967949209597102083480 == -9959.801967177513461566 ) = False";
   s21_decimal value_1 = {{0x10E54D98, 0xDA0D5FA4, 0x5414566, 0x0}};
   s21_decimal value_2 = {{0x472673E, 0xEC04AFDB, 0x21B, 0x80120000}};
   int code = 0;
@@ -1244,7 +1280,9 @@ START_TEST(s21_is_equal_122) {
 }
 
 START_TEST(s21_is_equal_123) {
-  char *example = "( 1550865558930791201200451225 == 1877738786472604162343135956 ) = False";
+  char *example =
+      "( 1550865558930791201200451225 == 1877738786472604162343135956 ) = "
+      "False";
   s21_decimal value_1 = {{0x6034AE99, 0x694A019B, 0x502D88E, 0x0}};
   s21_decimal value_2 = {{0x7F1D6AD4, 0x952B794C, 0x6113AA7, 0x0}};
   int code = 0;
@@ -1314,7 +1352,8 @@ START_TEST(s21_is_equal_129) {
 }
 
 START_TEST(s21_is_equal_130) {
-  char *example = "( -79228162514264337593543950335 == 165653525549175 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 165653525549175 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x378BD077, 0x96A9, 0x0, 0x0}};
   int code = 0;
@@ -1484,7 +1523,9 @@ START_TEST(s21_is_equal_146) {
 }
 
 START_TEST(s21_is_equal_147) {
-  char *example = "( 1143331605805869660320780042 == -4.1379718986173247566016913 ) = False";
+  char *example =
+      "( 1143331605805869660320780042 == -4.1379718986173247566016913 ) = "
+      "False";
   s21_decimal value_1 = {{0xFDE34F0A, 0x8B577492, 0x3B1BDE2, 0x0}};
   s21_decimal value_2 = {{0xD6827191, 0xFA31936, 0x223A7F, 0x80190000}};
   int code = 0;
@@ -1524,7 +1565,9 @@ START_TEST(s21_is_equal_150) {
 }
 
 START_TEST(s21_is_equal_151) {
-  char *example = "( 0.33304252664834445777825344 == 1011552511274657944123512317 ) = False";
+  char *example =
+      "( 0.33304252664834445777825344 == 1011552511274657944123512317 ) = "
+      "False";
   s21_decimal value_1 = {{0xD477EE40, 0x279495DA, 0x1B8C73, 0x1A0000}};
   s21_decimal value_2 = {{0xE6D495FD, 0x83EE79A7, 0x344BC93, 0x0}};
   int code = 0;
@@ -1534,7 +1577,8 @@ START_TEST(s21_is_equal_151) {
 }
 
 START_TEST(s21_is_equal_152) {
-  char *example = "( -9.865747839538046 == 1846007776620891641103633207 ) = False";
+  char *example =
+      "( -9.865747839538046 == 1846007776620891641103633207 ) = False";
   s21_decimal value_1 = {{0x6B6B537E, 0x230CD8, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xE37DCB37, 0x1785242B, 0x5F6FB5A, 0x0}};
   int code = 0;
@@ -1554,7 +1598,8 @@ START_TEST(s21_is_equal_153) {
 }
 
 START_TEST(s21_is_equal_154) {
-  char *example = "( -45937.0447703619088009787 == 1089883522743518083 ) = False";
+  char *example =
+      "( -45937.0447703619088009787 == 1089883522743518083 ) = False";
   s21_decimal value_1 = {{0xE3CDCA3B, 0x8599317F, 0x6146, 0x80130000}};
   s21_decimal value_2 = {{0x1BADC383, 0xF200B4A, 0x0, 0x0}};
   int code = 0;
@@ -1584,7 +1629,8 @@ START_TEST(s21_is_equal_156) {
 }
 
 START_TEST(s21_is_equal_157) {
-  char *example = "( 1230028388631876 == 1015012323360314280038398464 ) = False";
+  char *example =
+      "( 1230028388631876 == 1015012323360314280038398464 ) = False";
   s21_decimal value_1 = {{0x4D2B0544, 0x45EB4, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB6DC7A00, 0x4DE94409, 0x3479938, 0x0}};
   int code = 0;
@@ -1634,7 +1680,8 @@ START_TEST(s21_is_equal_161) {
 }
 
 START_TEST(s21_is_equal_162) {
-  char *example = "( 1086677341226175731416606554 == -431004.70542394820143 ) = False";
+  char *example =
+      "( 1086677341226175731416606554 == -431004.70542394820143 ) = False";
   s21_decimal value_1 = {{0xD33AA75A, 0xB518CB45, 0x382E0E0, 0x0}};
   s21_decimal value_2 = {{0x2BA1862F, 0x5623A19A, 0x2, 0x800E0000}};
   int code = 0;
@@ -1694,7 +1741,9 @@ START_TEST(s21_is_equal_167) {
 }
 
 START_TEST(s21_is_equal_168) {
-  char *example = "( 1027674753024299425267414299 == 1441211424481185202745779563 ) = False";
+  char *example =
+      "( 1027674753024299425267414299 == 1441211424481185202745779563 ) = "
+      "False";
   s21_decimal value_1 = {{0x34B3751B, 0xFDEB5AE3, 0x3521297, 0x0}};
   s21_decimal value_2 = {{0x7556256B, 0xDF25DC9F, 0x4A82463, 0x0}};
   int code = 0;
@@ -1714,7 +1763,9 @@ START_TEST(s21_is_equal_169) {
 }
 
 START_TEST(s21_is_equal_170) {
-  char *example = "( 1176033225074913070739047780 == 1794068316755630619325744805 ) = False";
+  char *example =
+      "( 1176033225074913070739047780 == 1794068316755630619325744805 ) = "
+      "False";
   s21_decimal value_1 = {{0xE3F34564, 0xE087830D, 0x3CCCAB8, 0x0}};
   s21_decimal value_2 = {{0x7A41C6A5, 0x54A8519F, 0x5CC04BE, 0x0}};
   int code = 0;
@@ -1944,7 +1995,8 @@ START_TEST(s21_is_equal_192) {
 }
 
 START_TEST(s21_is_equal_193) {
-  char *example = "( -517.74763252472796311258210 == -685.927800894680454 ) = False";
+  char *example =
+      "( -517.74763252472796311258210 == -685.927800894680454 ) = False";
   s21_decimal value_1 = {{0xC6234D3D, 0x8DD25F2B, 0x4485F, 0x80160000}};
   s21_decimal value_2 = {{0x61E46D86, 0x984E7B3, 0x0, 0x800F0000}};
   int code = 0;
@@ -1954,7 +2006,8 @@ START_TEST(s21_is_equal_193) {
 }
 
 START_TEST(s21_is_equal_194) {
-  char *example = "( 0.434601034840288610443 == 1744687447701748832399165549 ) = False";
+  char *example =
+      "( 0.434601034840288610443 == 1744687447701748832399165549 ) = False";
   s21_decimal value_1 = {{0x8091488B, 0x8F4D0A92, 0x17, 0x150000}};
   s21_decimal value_2 = {{0xDBAE886D, 0xE298962, 0x5A32BF0, 0x0}};
   int code = 0;
@@ -1984,7 +2037,8 @@ START_TEST(s21_is_equal_196) {
 }
 
 START_TEST(s21_is_equal_197) {
-  char *example = "( 1.7348812306209593E-10 == 1451001368323401818286668231 ) = False";
+  char *example =
+      "( 1.7348812306209593E-10 == 1451001368323401818286668231 ) = False";
   s21_decimal value_1 = {{0x22C95B39, 0x3DA2A7, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x8C1139C7, 0xCA70CB23, 0x4B03D7D, 0x0}};
   int code = 0;
@@ -2004,7 +2058,8 @@ START_TEST(s21_is_equal_198) {
 }
 
 START_TEST(s21_is_equal_199) {
-  char *example = "( 0.2583926303340429816 == 0.283868102142284053935588 ) = False";
+  char *example =
+      "( 0.2583926303340429816 == 0.283868102142284053935588 ) = False";
   s21_decimal value_1 = {{0x5C6501F8, 0x23DBF348, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x6784F5E4, 0x854974BE, 0x3C1C, 0x180000}};
   int code = 0;
@@ -2034,7 +2089,8 @@ START_TEST(s21_is_equal_201) {
 }
 
 START_TEST(s21_is_equal_202) {
-  char *example = "( 0.10474689438623564636777 == 1754810901371322770636037714 ) = False";
+  char *example =
+      "( 0.10474689438623564636777 == 1754810901371322770636037714 ) = False";
   s21_decimal value_1 = {{0x1D692269, 0xD5847325, 0x237, 0x170000}};
   s21_decimal value_2 = {{0x53FA5E52, 0x94122297, 0x5AB8BA9, 0x0}};
   int code = 0;
@@ -2054,7 +2110,8 @@ START_TEST(s21_is_equal_203) {
 }
 
 START_TEST(s21_is_equal_204) {
-  char *example = "( 1233739569575627 == -90.958393172279500873538391 ) = False";
+  char *example =
+      "( 1233739569575627 == -90.958393172279500873538391 ) = False";
   s21_decimal value_1 = {{0x60CA36CB, 0x46214, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC0EA1B57, 0x5FC8DF18, 0x4B3D30, 0x80180000}};
   int code = 0;
@@ -2084,7 +2141,8 @@ START_TEST(s21_is_equal_206) {
 }
 
 START_TEST(s21_is_equal_207) {
-  char *example = "( 0.1478877380724755076 == -8.8176914336063586850278850 ) = False";
+  char *example =
+      "( 0.1478877380724755076 == -8.8176914336063586850278850 ) = False";
   s21_decimal value_1 = {{0x70758A84, 0x14860724, 0x0, 0x130000}};
   s21_decimal value_2 = {{0xED518E2D, 0x2AB9D84, 0x74B38, 0x80180000}};
   int code = 0;
@@ -2114,7 +2172,9 @@ START_TEST(s21_is_equal_209) {
 }
 
 START_TEST(s21_is_equal_210) {
-  char *example = "( 79228162514264337593543950335 == 1422103902584412206823494282 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 1422103902584412206823494282 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xF0D5D28A, 0x8BB375E, 0x4985637, 0x0}};
   int code = 0;
@@ -2174,7 +2234,8 @@ START_TEST(s21_is_equal_215) {
 }
 
 START_TEST(s21_is_equal_216) {
-  char *example = "( 1572730339671570325616377919 == 166810278818383858 ) = False";
+  char *example =
+      "( 1572730339671570325616377919 == 166810278818383858 ) = False";
   s21_decimal value_1 = {{0x4DBAC03F, 0x8CDFBEFB, 0x514EE9A, 0x0}};
   s21_decimal value_2 = {{0x95DA87F2, 0x250A110, 0x0, 0x0}};
   int code = 0;
@@ -2194,7 +2255,8 @@ START_TEST(s21_is_equal_217) {
 }
 
 START_TEST(s21_is_equal_218) {
-  char *example = "( 1403603863863932034772534477 == 18950950743940922 ) = False";
+  char *example =
+      "( 1403603863863932034772534477 == 18950950743940922 ) = False";
   s21_decimal value_1 = {{0xC2AE84CD, 0xECEEA0A1, 0x48908AD, 0x0}};
   s21_decimal value_2 = {{0xF3F9F3A, 0x4353CA, 0x0, 0x0}};
   int code = 0;
@@ -2244,7 +2306,8 @@ START_TEST(s21_is_equal_222) {
 }
 
 START_TEST(s21_is_equal_223) {
-  char *example = "( 1462543073916110432779791544 == 19236663701632797210440051 ) = False";
+  char *example =
+      "( 1462543073916110432779791544 == 19236663701632797210440051 ) = False";
   s21_decimal value_1 = {{0x1FC26CB8, 0xE798B299, 0x4B9C98A, 0x0}};
   s21_decimal value_2 = {{0x7AF9F173, 0xA0FB46A2, 0xFE985, 0x0}};
   int code = 0;
@@ -2254,7 +2317,9 @@ START_TEST(s21_is_equal_223) {
 }
 
 START_TEST(s21_is_equal_224) {
-  char *example = "( -29665.640049852523354516814 == 1557493799804718468412509207 ) = False";
+  char *example =
+      "( -29665.640049852523354516814 == 1557493799804718468412509207 ) = "
+      "False";
   s21_decimal value_1 = {{0x1E53ED4E, 0x91CB7BA8, 0x1889F1, 0x80150000}};
   s21_decimal value_2 = {{0x56288C17, 0x11AD3138, 0x5085424, 0x0}};
   int code = 0;
@@ -2274,7 +2339,8 @@ START_TEST(s21_is_equal_225) {
 }
 
 START_TEST(s21_is_equal_226) {
-  char *example = "( -64407637.649196761554949189 == -10.441398174668 ) = False";
+  char *example =
+      "( -64407637.649196761554949189 == -10.441398174668 ) = False";
   s21_decimal value_1 = {{0x8E051445, 0x87F8708, 0x3546D9, 0x80120000}};
   s21_decimal value_2 = {{0x13D443CC, 0x97F, 0x0, 0x800C0000}};
   int code = 0;
@@ -2284,7 +2350,8 @@ START_TEST(s21_is_equal_226) {
 }
 
 START_TEST(s21_is_equal_227) {
-  char *example = "( -813139.24511195981184384033 == 63409.95407468455 ) = False";
+  char *example =
+      "( -813139.24511195981184384033 == 63409.95407468455 ) = False";
   s21_decimal value_1 = {{0xA4AA3C21, 0xAE2FE096, 0x4342E4, 0x80140000}};
   s21_decimal value_2 = {{0xAC8D7A7, 0x16871A, 0x0, 0xB0000}};
   int code = 0;
@@ -2294,7 +2361,9 @@ START_TEST(s21_is_equal_227) {
 }
 
 START_TEST(s21_is_equal_228) {
-  char *example = "( -43.330297212227901321025973 == 1923922078697376357029062545 ) = False";
+  char *example =
+      "( -43.330297212227901321025973 == 1923922078697376357029062545 ) = "
+      "False";
   s21_decimal value_1 = {{0x15EE99B5, 0x1E5C5F8F, 0x23D78C, 0x80180000}};
   s21_decimal value_2 = {{0x43312791, 0xDEEE767B, 0x6376E58, 0x0}};
   int code = 0;
@@ -2344,7 +2413,8 @@ START_TEST(s21_is_equal_232) {
 }
 
 START_TEST(s21_is_equal_233) {
-  char *example = "( -26859.75306896794264392518 == 11369778316963379966 ) = False";
+  char *example =
+      "( -26859.75306896794264392518 == 11369778316963379966 ) = False";
   s21_decimal value_1 = {{0x9ED1D346, 0x35DBB8C, 0x238C7, 0x80140000}};
   s21_decimal value_2 = {{0xBD8A7AFE, 0x9DC99123, 0x0, 0x0}};
   int code = 0;
@@ -2374,7 +2444,8 @@ START_TEST(s21_is_equal_235) {
 }
 
 START_TEST(s21_is_equal_236) {
-  char *example = "( -5244191205.7364934543651763 == -851637.90398638262744073 ) = False";
+  char *example =
+      "( -5244191205.7364934543651763 == -851637.90398638262744073 ) = False";
   s21_decimal value_1 = {{0x2BE9B3B3, 0xBFC4A740, 0x2B6101, 0x80100000}};
   s21_decimal value_2 = {{0x30667409, 0xBD031676, 0x1208, 0x80110000}};
   int code = 0;
@@ -2414,7 +2485,8 @@ START_TEST(s21_is_equal_239) {
 }
 
 START_TEST(s21_is_equal_240) {
-  char *example = "( -71.670221016356241938026753 == 196335354694423332303899 ) = False";
+  char *example =
+      "( -71.670221016356241938026753 == 196335354694423332303899 ) = False";
   s21_decimal value_1 = {{0x25A79101, 0x776776C6, 0x3B48C2, 0x80180000}};
   s21_decimal value_2 = {{0x60E4B41B, 0x5C644149, 0x2993, 0x0}};
   int code = 0;
@@ -2444,7 +2516,9 @@ START_TEST(s21_is_equal_242) {
 }
 
 START_TEST(s21_is_equal_243) {
-  char *example = "( 1509146166187529398390011418 == -1.5377830257502087741861115 ) = False";
+  char *example =
+      "( 1509146166187529398390011418 == -1.5377830257502087741861115 ) = "
+      "False";
   s21_decimal value_1 = {{0xF12B61A, 0x9953C50C, 0x4E05621, 0x0}};
   s21_decimal value_2 = {{0xD39E6CFB, 0xD9421992, 0xCB861, 0x80190000}};
   int code = 0;
@@ -2524,7 +2598,8 @@ START_TEST(s21_is_equal_250) {
 }
 
 START_TEST(s21_is_equal_251) {
-  char *example = "( 1362200655379055293928306383 == 3.3205879724871068E-10 ) = False";
+  char *example =
+      "( 1362200655379055293928306383 == 3.3205879724871068E-10 ) = False";
   s21_decimal value_1 = {{0xD8AFF6CF, 0x7F042D49, 0x466C935, 0x0}};
   s21_decimal value_2 = {{0x59748D9C, 0x75F892, 0x0, 0x1A0000}};
   int code = 0;
@@ -2574,7 +2649,8 @@ START_TEST(s21_is_equal_255) {
 }
 
 START_TEST(s21_is_equal_256) {
-  char *example = "( 9.3716684639903602E-10 == 0.261403294119510802173 ) = False";
+  char *example =
+      "( 9.3716684639903602E-10 == 0.261403294119510802173 ) = False";
   s21_decimal value_1 = {{0x17D1F72, 0x14CF2D4, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x1665FEFD, 0x2BB30F07, 0xE, 0x150000}};
   int code = 0;
@@ -2714,7 +2790,8 @@ START_TEST(s21_is_equal_269) {
 }
 
 START_TEST(s21_is_equal_270) {
-  char *example = "( -12.346480477752604302534454 == 0.5696219485305880619 ) = False";
+  char *example =
+      "( -12.346480477752604302534454 == 0.5696219485305880619 ) = False";
   s21_decimal value_1 = {{0xA9B86736, 0xC3E5AE2, 0xA3678, 0x80180000}};
   s21_decimal value_2 = {{0x2850C02B, 0x4F0D0971, 0x0, 0x130000}};
   int code = 0;
@@ -2744,7 +2821,8 @@ START_TEST(s21_is_equal_272) {
 }
 
 START_TEST(s21_is_equal_273) {
-  char *example = "( 1206195392765850938686320517 == 1165829008285999865025 ) = False";
+  char *example =
+      "( 1206195392765850938686320517 == 1165829008285999865025 ) = False";
   s21_decimal value_1 = {{0x5A4C2F85, 0x439161A4, 0x3E5BDCF, 0x0}};
   s21_decimal value_2 = {{0x94F49CC1, 0x3320AA35, 0x3F, 0x0}};
   int code = 0;
@@ -2774,7 +2852,8 @@ START_TEST(s21_is_equal_275) {
 }
 
 START_TEST(s21_is_equal_276) {
-  char *example = "( 1383771816996439403250963 == 1649650721864638244027006182 ) = False";
+  char *example =
+      "( 1383771816996439403250963 == 1649650721864638244027006182 ) = False";
   s21_decimal value_1 = {{0xADEFC513, 0x6BA694F5, 0x12506, 0x0}};
   s21_decimal value_2 = {{0xA6567CE6, 0xD30B9EF2, 0x5548F20, 0x0}};
   int code = 0;
@@ -2824,7 +2903,8 @@ START_TEST(s21_is_equal_280) {
 }
 
 START_TEST(s21_is_equal_281) {
-  char *example = "( 1958700832271175367133542084 == 197826858055690395118 ) = False";
+  char *example =
+      "( 1958700832271175367133542084 == 197826858055690395118 ) = False";
   s21_decimal value_1 = {{0x6E54B6C4, 0xE13FBAF9, 0x6543308, 0x0}};
   s21_decimal value_2 = {{0x210C9DEE, 0xB9662F45, 0xA, 0x0}};
   int code = 0;
@@ -2904,7 +2984,8 @@ START_TEST(s21_is_equal_288) {
 }
 
 START_TEST(s21_is_equal_289) {
-  char *example = "( -96279.144660119130616612660 == -9.5216689445815759 ) = False";
+  char *example =
+      "( -96279.144660119130616612660 == -9.5216689445815759 ) = False";
   s21_decimal value_1 = {{0x390BFA52, 0x49FDB8C4, 0x7F6CA, 0x80140000}};
   s21_decimal value_2 = {{0x171B45CF, 0x1524713, 0x0, 0x80100000}};
   int code = 0;
@@ -2914,7 +2995,8 @@ START_TEST(s21_is_equal_289) {
 }
 
 START_TEST(s21_is_equal_290) {
-  char *example = "( -9.605889630638141790 == 1277167528795470369251823478 ) = False";
+  char *example =
+      "( -9.605889630638141790 == 1277167528795470369251823478 ) = False";
   s21_decimal value_1 = {{0x8E945823, 0xD54B292, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xAA3A8F76, 0x77A7800F, 0x42072BE, 0x0}};
   int code = 0;
@@ -2924,7 +3006,9 @@ START_TEST(s21_is_equal_290) {
 }
 
 START_TEST(s21_is_equal_291) {
-  char *example = "( 1610755832569365083931254426 == 1143203231693968152051389516 ) = False";
+  char *example =
+      "( 1610755832569365083931254426 == 1143203231693968152051389516 ) = "
+      "False";
   s21_decimal value_1 = {{0x181B9E9A, 0xA698DF6D, 0x53462D0, 0x0}};
   s21_decimal value_2 = {{0xEF91144C, 0x5EA81958, 0x3B1A2B3, 0x0}};
   int code = 0;
@@ -2944,7 +3028,9 @@ START_TEST(s21_is_equal_292) {
 }
 
 START_TEST(s21_is_equal_293) {
-  char *example = "( -5.0853723636311931207931903 == 1974167090852737868966731166 ) = False";
+  char *example =
+      "( -5.0853723636311931207931903 == 1974167090852737868966731166 ) = "
+      "False";
   s21_decimal value_1 = {{0x7E89D7FF, 0xE1DCAA6E, 0x2A10B1, 0x80190000}};
   s21_decimal value_2 = {{0x6FD11D9E, 0x70065027, 0x660FE24, 0x0}};
   int code = 0;
@@ -2954,7 +3040,8 @@ START_TEST(s21_is_equal_293) {
 }
 
 START_TEST(s21_is_equal_294) {
-  char *example = "( 1146000651543529557575518552 == 10909340447117564752 ) = False";
+  char *example =
+      "( 1146000651543529557575518552 == 10909340447117564752 ) = False";
   s21_decimal value_1 = {{0x2182C958, 0xCDBCFBDE, 0x3B3F313, 0x0}};
   s21_decimal value_2 = {{0x243E5B50, 0x9765C356, 0x0, 0x0}};
   int code = 0;
@@ -3004,7 +3091,9 @@ START_TEST(s21_is_equal_298) {
 }
 
 START_TEST(s21_is_equal_299) {
-  char *example = "( -43758.424541884053028143056 == 1838307787306617792768336571 ) = False";
+  char *example =
+      "( -43758.424541884053028143056 == 1838307787306617792768336571 ) = "
+      "False";
   s21_decimal value_1 = {{0x5090FFD0, 0xF298B605, 0x243234, 0x80150000}};
   s21_decimal value_2 = {{0x8C1162BB, 0xD5B1B3F1, 0x5F09CD0, 0x0}};
   int code = 0;
@@ -3044,7 +3133,8 @@ START_TEST(s21_is_equal_302) {
 }
 
 START_TEST(s21_is_equal_303) {
-  char *example = "( -7.1695185840625847563679505 == -6659.276394890178434322 ) = False";
+  char *example =
+      "( -7.1695185840625847563679505 == -6659.276394890178434322 ) = False";
   s21_decimal value_1 = {{0x2BAF7711, 0xCFF022AC, 0x3B4E0B, 0x80190000}};
   s21_decimal value_2 = {{0x4CFD9512, 0x656CB, 0x169, 0x80120000}};
   int code = 0;
@@ -3074,7 +3164,8 @@ START_TEST(s21_is_equal_305) {
 }
 
 START_TEST(s21_is_equal_306) {
-  char *example = "( 1.0761508528795E-11 == -5741576.3010128176155099351 ) = False";
+  char *example =
+      "( 1.0761508528795E-11 == -5741576.3010128176155099351 ) = False";
   s21_decimal value_1 = {{0x9BE4A29B, 0x9C9, 0x0, 0x180000}};
   s21_decimal value_2 = {{0x6B5E80D7, 0xBFE0D9A6, 0x2F7E42, 0x80130000}};
   int code = 0;
@@ -3114,7 +3205,8 @@ START_TEST(s21_is_equal_309) {
 }
 
 START_TEST(s21_is_equal_310) {
-  char *example = "( 1130125260420136342741342030 == 16954213022002084 ) = False";
+  char *example =
+      "( 1130125260420136342741342030 == 16954213022002084 ) = False";
   s21_decimal value_1 = {{0x7A04574E, 0x205C98C3, 0x3A6D155, 0x0}};
   s21_decimal value_2 = {{0x549F6BA4, 0x3C3BC4, 0x0, 0x0}};
   int code = 0;
@@ -3244,7 +3336,9 @@ START_TEST(s21_is_equal_322) {
 }
 
 START_TEST(s21_is_equal_323) {
-  char *example = "( 1375075959839090028470408075 == 1889853606158454850269214697 ) = False";
+  char *example =
+      "( 1375075959839090028470408075 == 1889853606158454850269214697 ) = "
+      "False";
   s21_decimal value_1 = {{0x7109138B, 0x2646103B, 0x4716FA9, 0x0}};
   s21_decimal value_2 = {{0xD213F7E9, 0x461998DE, 0x61B4011, 0x0}};
   int code = 0;
@@ -3304,7 +3398,9 @@ START_TEST(s21_is_equal_328) {
 }
 
 START_TEST(s21_is_equal_329) {
-  char *example = "( 1517732904999667604426002718 == -47741418.641468030269639478 ) = False";
+  char *example =
+      "( 1517732904999667604426002718 == -47741418.641468030269639478 ) = "
+      "False";
   s21_decimal value_1 = {{0x7EE7111E, 0xA485F0B6, 0x4E77071, 0x0}};
   s21_decimal value_2 = {{0xA465CB36, 0x7D8CE27B, 0x277DA3, 0x80120000}};
   int code = 0;
@@ -3314,7 +3410,8 @@ START_TEST(s21_is_equal_329) {
 }
 
 START_TEST(s21_is_equal_330) {
-  char *example = "( 1622550462832813809586153252 == 0.2611046595998026648738 ) = False";
+  char *example =
+      "( 1622550462832813809586153252 == 0.2611046595998026648738 ) = False";
   s21_decimal value_1 = {{0xCCA42724, 0xD6AA38AD, 0x53E246C, 0x0}};
   s21_decimal value_2 = {{0x77414CA2, 0x8B8CF524, 0x8D, 0x160000}};
   int code = 0;
@@ -3414,7 +3511,8 @@ START_TEST(s21_is_equal_339) {
 }
 
 START_TEST(s21_is_equal_340) {
-  char *example = "( -57664.990525956604607918211 == -849499.8701924643853 ) = False";
+  char *example =
+      "( -57664.990525956604607918211 == -849499.8701924643853 ) = False";
   s21_decimal value_1 = {{0x65A4F083, 0x667577A2, 0x2FB309, 0x80150000}};
   s21_decimal value_2 = {{0x9B9F740D, 0x75E44C4F, 0x0, 0x800D0000}};
   int code = 0;
@@ -3504,7 +3602,9 @@ START_TEST(s21_is_equal_348) {
 }
 
 START_TEST(s21_is_equal_349) {
-  char *example = "( 0.00233778338002093955038221 == 1718560510511831051863217848 ) = False";
+  char *example =
+      "( 0.00233778338002093955038221 == 1718560510511831051863217848 ) = "
+      "False";
   s21_decimal value_1 = {{0x6D0F3C0D, 0x262B3A2F, 0x3181, 0x1A0000}};
   s21_decimal value_2 = {{0x2C8A56B8, 0xF3C5C116, 0x58D8F57, 0x0}};
   int code = 0;
@@ -3564,7 +3664,9 @@ START_TEST(s21_is_equal_354) {
 }
 
 START_TEST(s21_is_equal_355) {
-  char *example = "( -3.9883602830665071536873958 == 0.41122088630391941596358662 ) = False";
+  char *example =
+      "( -3.9883602830665071536873958 == 0.41122088630391941596358662 ) = "
+      "False";
   s21_decimal value_1 = {{0x4E4FA1E6, 0x711859A5, 0x20FDAE, 0x80190000}};
   s21_decimal value_2 = {{0xEFBEA806, 0xE43A0A3D, 0x2203F0, 0x1A0000}};
   int code = 0;
@@ -3574,7 +3676,8 @@ START_TEST(s21_is_equal_355) {
 }
 
 START_TEST(s21_is_equal_356) {
-  char *example = "( 1539925052843581898955899780 == 15247214528897955 ) = False";
+  char *example =
+      "( 1539925052843581898955899780 == 15247214528897955 ) = False";
   s21_decimal value_1 = {{0xCDA74384, 0x634CFA46, 0x4F9CBD0, 0x0}};
   s21_decimal value_2 = {{0xC5CF23A3, 0x362B42, 0x0, 0x0}};
   int code = 0;
@@ -3644,7 +3747,8 @@ START_TEST(s21_is_equal_362) {
 }
 
 START_TEST(s21_is_equal_363) {
-  char *example = "( -866.37929997043502443 == 1261870475769922148502459459 ) = False";
+  char *example =
+      "( -866.37929997043502443 == 1261870475769922148502459459 ) = False";
   s21_decimal value_1 = {{0xCF00D6B, 0xB257C24E, 0x4, 0x80110000}};
   s21_decimal value_2 = {{0x9D7DD443, 0x8FAE4C69, 0x413CB77, 0x0}};
   int code = 0;
@@ -3684,7 +3788,8 @@ START_TEST(s21_is_equal_366) {
 }
 
 START_TEST(s21_is_equal_367) {
-  char *example = "( -82.752279071897 == -4.7754673061651614929633105 ) = False";
+  char *example =
+      "( -82.752279071897 == -4.7754673061651614929633105 ) = False";
   s21_decimal value_1 = {{0x4432CC99, 0x4B43, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x7FD9BF51, 0x394C686, 0x278072, 0x80190000}};
   int code = 0;
@@ -3714,7 +3819,9 @@ START_TEST(s21_is_equal_369) {
 }
 
 START_TEST(s21_is_equal_370) {
-  char *example = "( 1144075861225735991827954071 == 1885181433288504882895396180 ) = False";
+  char *example =
+      "( 1144075861225735991827954071 == 1885181433288504882895396180 ) = "
+      "False";
   s21_decimal value_1 = {{0xF220F997, 0xB62222C9, 0x3B25B7C, 0x0}};
   s21_decimal value_2 = {{0x99361D54, 0x4668CE28, 0x61762B2, 0x0}};
   int code = 0;
@@ -3864,7 +3971,8 @@ START_TEST(s21_is_equal_384) {
 }
 
 START_TEST(s21_is_equal_385) {
-  char *example = "( -3.4645504153953471095442914 == 191971752001839092 ) = False";
+  char *example =
+      "( -3.4645504153953471095442914 == 191971752001839092 ) = False";
   s21_decimal value_1 = {{0x9C950DE2, 0x8B24B0A8, 0x1CA878, 0x80190000}};
   s21_decimal value_2 = {{0x94FA9FF4, 0x2AA054A, 0x0, 0x0}};
   int code = 0;
@@ -3924,7 +4032,9 @@ START_TEST(s21_is_equal_390) {
 }
 
 START_TEST(s21_is_equal_391) {
-  char *example = "( 1096693265633164327691741232 == 1236967667836916688116975250 ) = False";
+  char *example =
+      "( 1096693265633164327691741232 == 1236967667836916688116975250 ) = "
+      "False";
   s21_decimal value_1 = {{0x2A27E830, 0xEB7558F, 0x38B29D5, 0x0}};
   s21_decimal value_2 = {{0x91BB0692, 0xA35E2B19, 0x3FF3217, 0x0}};
   int code = 0;
@@ -4034,7 +4144,8 @@ START_TEST(s21_is_equal_401) {
 }
 
 START_TEST(s21_is_equal_402) {
-  char *example = "( -26.5999604537838016 == 1993388156959072230810770599 ) = False";
+  char *example =
+      "( -26.5999604537838016 == 1993388156959072230810770599 ) = False";
   s21_decimal value_1 = {{0x22DF49C0, 0x3B1053B, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xA3DADCA7, 0x84E36A76, 0x670E45C, 0x0}};
   int code = 0;
@@ -4194,7 +4305,8 @@ START_TEST(s21_is_equal_417) {
 }
 
 START_TEST(s21_is_equal_418) {
-  char *example = "( 1717569166805044533573812614 == -14482240.233764 ) = False";
+  char *example =
+      "( 1717569166805044533573812614 == -14482240.233764 ) = False";
   s21_decimal value_1 = {{0x1D818186, 0x1A2A42D0, 0x58CBD6B, 0x0}};
   s21_decimal value_2 = {{0xE8C8E124, 0xD2B, 0x0, 0x80060000}};
   int code = 0;
@@ -4214,7 +4326,9 @@ START_TEST(s21_is_equal_419) {
 }
 
 START_TEST(s21_is_equal_420) {
-  char *example = "( 1490658952414243605852787293 == 1981239176617692220908326813 ) = False";
+  char *example =
+      "( 1490658952414243605852787293 == 1981239176617692220908326813 ) = "
+      "False";
   s21_decimal value_1 = {{0x2675125D, 0xBB6C821D, 0x4D10B4F, 0x0}};
   s21_decimal value_2 = {{0x28E34F9D, 0xF9A11DE2, 0x666D7B6, 0x0}};
   int code = 0;
@@ -4344,7 +4458,9 @@ START_TEST(s21_is_equal_432) {
 }
 
 START_TEST(s21_is_equal_433) {
-  char *example = "( 1607567712255314253559532559 == 1982687185455354854854934080 ) = False";
+  char *example =
+      "( 1607567712255314253559532559 == 1982687185455354854854934080 ) = "
+      "False";
   s21_decimal value_1 = {{0x47028C0F, 0x4D5F7B8D, 0x531BFB4, 0x0}};
   s21_decimal value_2 = {{0xD704BE40, 0xB105B46C, 0x6680A57, 0x0}};
   int code = 0;
@@ -4354,7 +4470,9 @@ START_TEST(s21_is_equal_433) {
 }
 
 START_TEST(s21_is_equal_434) {
-  char *example = "( -55711337.846518074724054517 == -7.5704227885941643206315300 ) = False";
+  char *example =
+      "( -55711337.846518074724054517 == -7.5704227885941643206315300 ) = "
+      "False";
   s21_decimal value_1 = {{0x73E3F5F5, 0xAD1F99CE, 0x2E1555, 0x80120000}};
   s21_decimal value_2 = {{0x303CB2B1, 0x581B88BE, 0xA04F, 0x80170000}};
   int code = 0;
@@ -4514,7 +4632,8 @@ START_TEST(s21_is_equal_449) {
 }
 
 START_TEST(s21_is_equal_450) {
-  char *example = "( 175278679714632818929485679 == 1380437077348505688760891022 ) = False";
+  char *example =
+      "( 175278679714632818929485679 == 1380437077348505688760891022 ) = False";
   s21_decimal value_1 = {{0x1CC76F, 0x44504495, 0x90FCB4, 0x0}};
   s21_decimal value_2 = {{0x18FFB68E, 0xE97B6BDA, 0x475DEEB, 0x0}};
   int code = 0;
@@ -4524,7 +4643,8 @@ START_TEST(s21_is_equal_450) {
 }
 
 START_TEST(s21_is_equal_451) {
-  char *example = "( -667153826.56923628345066169 == 169712955033782229 ) = False";
+  char *example =
+      "( -667153826.56923628345066169 == 169712955033782229 ) = False";
   s21_decimal value_1 = {{0x4A2982B9, 0x2407A98B, 0x372F88, 0x80110000}};
   s21_decimal value_2 = {{0x8E9207D5, 0x25AF108, 0x0, 0x0}};
   int code = 0;
@@ -4604,7 +4724,8 @@ START_TEST(s21_is_equal_458) {
 }
 
 START_TEST(s21_is_equal_459) {
-  char *example = "( 1429534970086713744643805650 == 0.75908921840965364923 ) = False";
+  char *example =
+      "( 1429534970086713744643805650 == 0.75908921840965364923 ) = False";
   s21_decimal value_1 = {{0x524B51D2, 0x2B6BB9B, 0x49E7BCE, 0x0}};
   s21_decimal value_2 = {{0x4DA1ACBB, 0x1D72AA3B, 0x4, 0x140000}};
   int code = 0;
@@ -4634,7 +4755,9 @@ START_TEST(s21_is_equal_461) {
 }
 
 START_TEST(s21_is_equal_462) {
-  char *example = "( 1764080064554130187374573884 == 1741860167532952608823078648 ) = False";
+  char *example =
+      "( 1764080064554130187374573884 == 1741860167532952608823078648 ) = "
+      "False";
   s21_decimal value_1 = {{0xC8393C, 0xEBE0BAA1, 0x5B3367B, 0x0}};
   s21_decimal value_2 = {{0xF3C06EF8, 0xE3E80D8C, 0x5A0D53C, 0x0}};
   int code = 0;
@@ -4694,7 +4817,8 @@ START_TEST(s21_is_equal_467) {
 }
 
 START_TEST(s21_is_equal_468) {
-  char *example = "( 0.86077110675591272119188329 == 131091559349472934895 ) = False";
+  char *example =
+      "( 0.86077110675591272119188329 == 131091559349472934895 ) = False";
   s21_decimal value_1 = {{0xB51CBB69, 0x8510CC38, 0x473389, 0x1A0000}};
   s21_decimal value_2 = {{0xED5F3BEF, 0x1B42C6AC, 0x7, 0x0}};
   int code = 0;
@@ -4714,7 +4838,8 @@ START_TEST(s21_is_equal_469) {
 }
 
 START_TEST(s21_is_equal_470) {
-  char *example = "( 9.08523645551192589138634091 == 16369154052963356502 ) = False";
+  char *example =
+      "( 9.08523645551192589138634091 == 16369154052963356502 ) = False";
   s21_decimal value_1 = {{0xEA43A56B, 0x83576B76, 0x2EF835D, 0x1A0000}};
   s21_decimal value_2 = {{0x3886CF56, 0xE32AEAE2, 0x0, 0x0}};
   int code = 0;
@@ -4854,7 +4979,8 @@ START_TEST(s21_is_equal_483) {
 }
 
 START_TEST(s21_is_equal_484) {
-  char *example = "( 1558800577939364899682 == 1305593134929341948401050409 ) = False";
+  char *example =
+      "( 1558800577939364899682 == 1305593134929341948401050409 ) = False";
   s21_decimal value_1 = {{0xA573EB62, 0x80B422C1, 0x54, 0x0}};
   s21_decimal value_2 = {{0xD486329, 0xA9E38050, 0x437F619, 0x0}};
   int code = 0;
@@ -4864,7 +4990,8 @@ START_TEST(s21_is_equal_484) {
 }
 
 START_TEST(s21_is_equal_485) {
-  char *example = "( 1544104548644999685307322341 == 145173187630115677383 ) = False";
+  char *example =
+      "( 1544104548644999685307322341 == 145173187630115677383 ) = False";
   s21_decimal value_1 = {{0xAE0B4FE5, 0x4F2D29F3, 0x4FD40DB, 0x0}};
   s21_decimal value_2 = {{0x342D64C7, 0xDEAEC4FD, 0x7, 0x0}};
   int code = 0;
@@ -4874,7 +5001,9 @@ START_TEST(s21_is_equal_485) {
 }
 
 START_TEST(s21_is_equal_486) {
-  char *example = "( 0.50837185466845976247802347 == 1494893620261787728631600759 ) = False";
+  char *example =
+      "( 0.50837185466845976247802347 == 1494893620261787728631600759 ) = "
+      "False";
   s21_decimal value_1 = {{0x6D7619EB, 0x58A7C81F, 0x2A0D31, 0x1A0000}};
   s21_decimal value_2 = {{0xEBF49677, 0x893FA7A9, 0x4D48C09, 0x0}};
   int code = 0;
@@ -4894,7 +5023,8 @@ START_TEST(s21_is_equal_487) {
 }
 
 START_TEST(s21_is_equal_488) {
-  char *example = "( 1010562193038360352460502318 == -17.429479989459867 ) = False";
+  char *example =
+      "( 1010562193038360352460502318 == -17.429479989459867 ) = False";
   s21_decimal value_1 = {{0xAD81F52E, 0x419603E2, 0x343EADE, 0x0}};
   s21_decimal value_2 = {{0xB643B9B, 0x3DEC05, 0x0, 0x800F0000}};
   int code = 0;
@@ -5044,7 +5174,8 @@ START_TEST(s21_is_equal_502) {
 }
 
 START_TEST(s21_is_equal_503) {
-  char *example = "( -1.4871715814715049896571 == 152628090426960061459 ) = False";
+  char *example =
+      "( -1.4871715814715049896571 == 152628090426960061459 ) = False";
   s21_decimal value_1 = {{0x8987EA7B, 0x328433C1, 0x326, 0x80160000}};
   s21_decimal value_2 = {{0xC5272413, 0x4623E795, 0x8, 0x0}};
   int code = 0;
@@ -5054,7 +5185,8 @@ START_TEST(s21_is_equal_503) {
 }
 
 START_TEST(s21_is_equal_504) {
-  char *example = "( -5786.2843139446968207068609 == 1776759341310588873 ) = False";
+  char *example =
+      "( -5786.2843139446968207068609 == 1776759341310588873 ) = False";
   s21_decimal value_1 = {{0xB08CDC1, 0x30BCD0C, 0x2FDCEF, 0x80160000}};
   s21_decimal value_2 = {{0xE2CB7C9, 0x18A85135, 0x0, 0x0}};
   int code = 0;
@@ -5104,7 +5236,8 @@ START_TEST(s21_is_equal_508) {
 }
 
 START_TEST(s21_is_equal_509) {
-  char *example = "( 1284352450495546588671380764 == 1356222011043526626220 ) = False";
+  char *example =
+      "( 1284352450495546588671380764 == 1356222011043526626220 ) = False";
   s21_decimal value_1 = {{0x11320D1C, 0xDA6C78B9, 0x4266435, 0x0}};
   s21_decimal value_2 = {{0xCF4E4BAC, 0x855C7D78, 0x49, 0x0}};
   int code = 0;
@@ -5124,7 +5257,9 @@ START_TEST(s21_is_equal_510) {
 }
 
 START_TEST(s21_is_equal_511) {
-  char *example = "( -1.1726477157510398010759779 == -3869.8563365365781397212637 ) = False";
+  char *example =
+      "( -1.1726477157510398010759779 == -3869.8563365365781397212637 ) = "
+      "False";
   s21_decimal value_1 = {{0x83F09A63, 0x99B9A0F9, 0x9B32D, 0x80190000}};
   s21_decimal value_2 = {{0x146F8DDD, 0x52DA101E, 0x2002BD, 0x80160000}};
   int code = 0;
@@ -5174,7 +5309,9 @@ START_TEST(s21_is_equal_515) {
 }
 
 START_TEST(s21_is_equal_516) {
-  char *example = "( -4161.8524028950291760345490 == -11.725667028878432674431517 ) = False";
+  char *example =
+      "( -4161.8524028950291760345490 == -11.725667028878432674431517 ) = "
+      "False";
   s21_decimal value_1 = {{0x973EE4F5, 0x7888E9F5, 0x3714E, 0x80150000}};
   s21_decimal value_2 = {{0x98E6C21D, 0xAEEE8E72, 0x9B301, 0x80180000}};
   int code = 0;
@@ -5254,7 +5391,9 @@ START_TEST(s21_is_equal_523) {
 }
 
 START_TEST(s21_is_equal_524) {
-  char *example = "( 1565671532518383456415281094 == 1790792774014719113412982242 ) = False";
+  char *example =
+      "( 1565671532518383456415281094 == 1790792774014719113412982242 ) = "
+      "False";
   s21_decimal value_1 = {{0x6F426FC6, 0xD9069AAD, 0x50F17D7, 0x0}};
   s21_decimal value_2 = {{0x3BBBB5E2, 0xCD8B2FD5, 0x5C94F1E, 0x0}};
   int code = 0;
@@ -5314,7 +5453,9 @@ START_TEST(s21_is_equal_529) {
 }
 
 START_TEST(s21_is_equal_530) {
-  char *example = "( -281.15324690090262878654429 == 1203924588441617068134205949 ) = False";
+  char *example =
+      "( -281.15324690090262878654429 == 1203924588441617068134205949 ) = "
+      "False";
   s21_decimal value_1 = {{0x8E468FDD, 0xCE3266B0, 0x1741A6, 0x80170000}};
   s21_decimal value_2 = {{0xCF1389FD, 0xB700CBE1, 0x3E3DCF2, 0x0}};
   int code = 0;
@@ -5354,7 +5495,8 @@ START_TEST(s21_is_equal_533) {
 }
 
 START_TEST(s21_is_equal_534) {
-  char *example = "( -18.464509792638645730275000 == 104610126990322591 ) = False";
+  char *example =
+      "( -18.464509792638645730275000 == 104610126990322591 ) = False";
   s21_decimal value_1 = {{0x3C167BE3, 0xF68C833D, 0x3E8, 0x80150000}};
   s21_decimal value_2 = {{0x332AAB9F, 0x173A65B, 0x0, 0x0}};
   int code = 0;
@@ -5364,7 +5506,8 @@ START_TEST(s21_is_equal_534) {
 }
 
 START_TEST(s21_is_equal_535) {
-  char *example = "( 1416484161539755893242735 == 96.5638223060301881757 ) = False";
+  char *example =
+      "( 1416484161539755893242735 == 96.5638223060301881757 ) = False";
   s21_decimal value_1 = {{0x352EBB6F, 0xC2A081AD, 0x12BF3, 0x0}};
   s21_decimal value_2 = {{0xE8B5A19D, 0x58EC1FB3, 0x34, 0x130000}};
   int code = 0;
@@ -5384,7 +5527,8 @@ START_TEST(s21_is_equal_536) {
 }
 
 START_TEST(s21_is_equal_537) {
-  char *example = "( 1538596600008853273353135889 == -2.94052607624023 ) = False";
+  char *example =
+      "( 1538596600008853273353135889 == -2.94052607624023 ) = False";
   s21_decimal value_1 = {{0x36302711, 0xD0BF655D, 0x4F8B280, 0x0}};
   s21_decimal value_2 = {{0x75390357, 0x10B70, 0x0, 0x800E0000}};
   int code = 0;
@@ -5444,7 +5588,8 @@ START_TEST(s21_is_equal_542) {
 }
 
 START_TEST(s21_is_equal_543) {
-  char *example = "( 1283291997219789677 == 1529406132420900732724132432 ) = False";
+  char *example =
+      "( 1283291997219789677 == 1529406132420900732724132432 ) = False";
   s21_decimal value_1 = {{0xB5631B6D, 0x11CF2B45, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7E093A50, 0x91B51AB4, 0x4F11858, 0x0}};
   int code = 0;
@@ -5464,7 +5609,8 @@ START_TEST(s21_is_equal_544) {
 }
 
 START_TEST(s21_is_equal_545) {
-  char *example = "( 13817936060758608 == 1126768020253770771688422759 ) = False";
+  char *example =
+      "( 13817936060758608 == 1126768020253770771688422759 ) = False";
   s21_decimal value_1 = {{0xF26E3A50, 0x311756, 0x0, 0x0}};
   s21_decimal value_2 = {{0x36AD7D67, 0xC5B68803, 0x3A40A68, 0x0}};
   int code = 0;
@@ -5534,7 +5680,8 @@ START_TEST(s21_is_equal_551) {
 }
 
 START_TEST(s21_is_equal_552) {
-  char *example = "( 10557493000771113028 == -65148.822326745557431626795 ) = False";
+  char *example =
+      "( 10557493000771113028 == -65148.822326745557431626795 ) = False";
   s21_decimal value_1 = {{0xBDA29044, 0x9283BFF2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x833E2C2B, 0xBC2DF8F0, 0x35E3CC, 0x80150000}};
   int code = 0;
@@ -5574,7 +5721,9 @@ START_TEST(s21_is_equal_555) {
 }
 
 START_TEST(s21_is_equal_556) {
-  char *example = "( 1304844338829658649062268936 == 1035272869473301015422061636 ) = False";
+  char *example =
+      "( 1304844338829658649062268936 == 1035272869473301015422061636 ) = "
+      "False";
   s21_decimal value_1 = {{0x57B7E008, 0x5881861E, 0x4375789, 0x0}};
   s21_decimal value_2 = {{0xBB844C44, 0xB5BCD791, 0x3585B8E, 0x0}};
   int code = 0;
@@ -5604,7 +5753,9 @@ START_TEST(s21_is_equal_558) {
 }
 
 START_TEST(s21_is_equal_559) {
-  char *example = "( 1592524906604357722647032041 == 1100069645260960368840666563 ) = False";
+  char *example =
+      "( 1592524906604357722647032041 == 1100069645260960368840666563 ) = "
+      "False";
   s21_decimal value_1 = {{0xDF0BF0E9, 0x2C83CAB8, 0x5254E44, 0x0}};
   s21_decimal value_2 = {{0x3147EDC3, 0xF6BFD41C, 0x38DF4CE, 0x0}};
   int code = 0;
@@ -5624,7 +5775,8 @@ START_TEST(s21_is_equal_560) {
 }
 
 START_TEST(s21_is_equal_561) {
-  char *example = "( 13635658660727468054960408 == -1307.8424796553086002310765 ) = False";
+  char *example =
+      "( 13635658660727468054960408 == -1307.8424796553086002310765 ) = False";
   s21_decimal value_1 = {{0x4DAA5918, 0x89836BC6, 0xB4776, 0x0}};
   s21_decimal value_2 = {{0xF748AE6D, 0xD42FE0B7, 0xAD176, 0x80160000}};
   int code = 0;
@@ -5634,7 +5786,9 @@ START_TEST(s21_is_equal_561) {
 }
 
 START_TEST(s21_is_equal_562) {
-  char *example = "( -591.86304232425456513340141 == 1446243585082121693071996512 ) = False";
+  char *example =
+      "( -591.86304232425456513340141 == 1446243585082121693071996512 ) = "
+      "False";
   s21_decimal value_1 = {{0x463C52ED, 0xFB442F97, 0x30F52F, 0x80170000}};
   s21_decimal value_2 = {{0xE34CF660, 0xD82EBAD5, 0x4AC4DFD, 0x0}};
   int code = 0;
@@ -5644,7 +5798,8 @@ START_TEST(s21_is_equal_562) {
 }
 
 START_TEST(s21_is_equal_563) {
-  char *example = "( 0.746914304952392317358 == -79.722900196852979562067796 ) = False";
+  char *example =
+      "( 0.746914304952392317358 == -79.722900196852979562067796 ) = False";
   s21_decimal value_1 = {{0x592179AE, 0x7D84AB08, 0x28, 0x150000}};
   s21_decimal value_2 = {{0xF9963754, 0x145B01B8, 0x41F1FB, 0x80180000}};
   int code = 0;
@@ -5744,7 +5899,8 @@ START_TEST(s21_is_equal_572) {
 }
 
 START_TEST(s21_is_equal_573) {
-  char *example = "( 1815669916503617602532305 == 149414759635912147411762858 ) = False";
+  char *example =
+      "( 1815669916503617602532305 == 149414759635912147411762858 ) = False";
   s21_decimal value_1 = {{0x34333D1, 0xA9D48C89, 0x1807B, 0x0}};
   s21_decimal value_2 = {{0x9C117EAA, 0x599531AC, 0x7B97CE, 0x0}};
   int code = 0;
@@ -5754,7 +5910,9 @@ START_TEST(s21_is_equal_573) {
 }
 
 START_TEST(s21_is_equal_574) {
-  char *example = "( 1061853708986291818083018421 == 1601911556908139653835405959 ) = False";
+  char *example =
+      "( 1061853708986291818083018421 == 1601911556908139653835405959 ) = "
+      "False";
   s21_decimal value_1 = {{0xD66666B5, 0xE840A534, 0x36E5844, 0x0}};
   s21_decimal value_2 = {{0xCADE3A87, 0x81A827A2, 0x52D11F7, 0x0}};
   int code = 0;
@@ -5764,7 +5922,8 @@ START_TEST(s21_is_equal_574) {
 }
 
 START_TEST(s21_is_equal_575) {
-  char *example = "( 1532555350731106560181875 == 10674309629105550554 ) = False";
+  char *example =
+      "( 1532555350731106560181875 == 10674309629105550554 ) = False";
   s21_decimal value_1 = {{0x757F0673, 0xFDF60FB1, 0x14487, 0x0}};
   s21_decimal value_2 = {{0x815E34DA, 0x9422C40D, 0x0, 0x0}};
   int code = 0;
@@ -5794,7 +5953,8 @@ START_TEST(s21_is_equal_577) {
 }
 
 START_TEST(s21_is_equal_578) {
-  char *example = "( 1399817432239647344 == 1047860088869193192597009376 ) = False";
+  char *example =
+      "( 1399817432239647344 == 1047860088869193192597009376 ) = False";
   s21_decimal value_1 = {{0xBF0B2A70, 0x136D2689, 0x0, 0x0}};
   s21_decimal value_2 = {{0x60CEB3E0, 0x3D9AB0F1, 0x362C501, 0x0}};
   int code = 0;
@@ -5834,7 +5994,8 @@ START_TEST(s21_is_equal_581) {
 }
 
 START_TEST(s21_is_equal_582) {
-  char *example = "( -24.595278307624659601935362 == -8.98137265457549675261 ) = False";
+  char *example =
+      "( -24.595278307624659601935362 == -8.98137265457549675261 ) = False";
   s21_decimal value_1 = {{0xCC314C02, 0xB56D6742, 0x145840, 0x80180000}};
   s21_decimal value_2 = {{0x1F60AFD, 0xB0288C66, 0x30, 0x80140000}};
   int code = 0;
@@ -5854,7 +6015,8 @@ START_TEST(s21_is_equal_583) {
 }
 
 START_TEST(s21_is_equal_584) {
-  char *example = "( 1988373122781134521 == 1253891051926577547613141853 ) = False";
+  char *example =
+      "( 1988373122781134521 == 1253891051926577547613141853 ) = False";
   s21_decimal value_1 = {{0x4DBEB9, 0x1B981ED2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3217B5D, 0x20C119EC, 0x40D31C2, 0x0}};
   int code = 0;
@@ -5864,7 +6026,9 @@ START_TEST(s21_is_equal_584) {
 }
 
 START_TEST(s21_is_equal_585) {
-  char *example = "( -51.541792712902761220452600 == -58.648993118971455883291890 ) = False";
+  char *example =
+      "( -51.541792712902761220452600 == -58.648993118971455883291890 ) = "
+      "False";
   s21_decimal value_1 = {{0xC58B5DEE, 0xDCA002A2, 0x6D24, 0x80160000}};
   s21_decimal value_2 = {{0x7E6C2AE5, 0xD42A2A25, 0x4D9F0, 0x80170000}};
   int code = 0;
@@ -5964,7 +6128,8 @@ START_TEST(s21_is_equal_594) {
 }
 
 START_TEST(s21_is_equal_595) {
-  char *example = "( -326.1834528374405 == 0.48416431271259917268458250 ) = False";
+  char *example =
+      "( -326.1834528374405 == 0.48416431271259917268458250 ) = False";
   s21_decimal value_1 = {{0x8613E85, 0xB969F, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xCA650F81, 0xFFF59C66, 0x40141, 0x190000}};
   int code = 0;
@@ -5984,7 +6149,9 @@ START_TEST(s21_is_equal_596) {
 }
 
 START_TEST(s21_is_equal_597) {
-  char *example = "( -99.890642899827458999393015 == 1338389928661043027548885126 ) = False";
+  char *example =
+      "( -99.890642899827458999393015 == 1338389928661043027548885126 ) = "
+      "False";
   s21_decimal value_1 = {{0x78D51AF7, 0x9A2664A5, 0x52A0AA, 0x80180000}};
   s21_decimal value_2 = {{0x23ECD086, 0x6A12EA07, 0x4531717, 0x0}};
   int code = 0;
@@ -6004,7 +6171,8 @@ START_TEST(s21_is_equal_598) {
 }
 
 START_TEST(s21_is_equal_599) {
-  char *example = "( 1122636023130976319664465395 == 0.25159072793754414516123 ) = False";
+  char *example =
+      "( 1122636023130976319664465395 == 0.25159072793754414516123 ) = False";
   s21_decimal value_1 = {{0x9112A5F3, 0xC26B9D79, 0x3A09F6C, 0x0}};
   s21_decimal value_2 = {{0x667A879B, 0xE0460F70, 0x553, 0x170000}};
   int code = 0;
@@ -6014,7 +6182,9 @@ START_TEST(s21_is_equal_599) {
 }
 
 START_TEST(s21_is_equal_600) {
-  char *example = "( 1698502221018429908830313965 == 0.14666933080802634576278122 ) = False";
+  char *example =
+      "( 1698502221018429908830313965 == 0.14666933080802634576278122 ) = "
+      "False";
   s21_decimal value_1 = {{0x7A26DDED, 0xE6653527, 0x57CF7D5, 0x0}};
   s21_decimal value_2 = {{0x7489B26A, 0x9163816, 0xC21D8, 0x1A0000}};
   int code = 0;
@@ -6094,7 +6264,9 @@ START_TEST(s21_is_equal_607) {
 }
 
 START_TEST(s21_is_equal_608) {
-  char *example = "( -1.4672474391697691030392748 == 1882923908206029673338977389 ) = False";
+  char *example =
+      "( -1.4672474391697691030392748 == 1882923908206029673338977389 ) = "
+      "False";
   s21_decimal value_1 = {{0xA65D0FAC, 0x6E393C04, 0xC2304, 0x80190000}};
   s21_decimal value_2 = {{0x701F3C6D, 0x98580F76, 0x61584A5, 0x0}};
   int code = 0;
@@ -6174,7 +6346,8 @@ START_TEST(s21_is_equal_615) {
 }
 
 START_TEST(s21_is_equal_616) {
-  char *example = "( -5709408.7540159682794857 == 1125979238002560530 ) = False";
+  char *example =
+      "( -5709408.7540159682794857 == 1125979238002560530 ) = False";
   s21_decimal value_1 = {{0xC1D15569, 0x13A1C855, 0xC17, 0x80100000}};
   s21_decimal value_2 = {{0xB99B8E12, 0xFA04826, 0x0, 0x0}};
   int code = 0;
@@ -6254,7 +6427,8 @@ START_TEST(s21_is_equal_623) {
 }
 
 START_TEST(s21_is_equal_624) {
-  char *example = "( 5.110617294893E-10 == 1459752537232985767005110142 ) = False";
+  char *example =
+      "( 5.110617294893E-10 == 1459752537232985767005110142 ) = False";
   s21_decimal value_1 = {{0xE887482D, 0x4A5, 0x0, 0x160000}};
   s21_decimal value_2 = {{0xC1D3BF7E, 0x9BA35DB6, 0x4B77A9F, 0x0}};
   int code = 0;
@@ -6264,7 +6438,8 @@ START_TEST(s21_is_equal_624) {
 }
 
 START_TEST(s21_is_equal_625) {
-  char *example = "( 119519380640223641214188187 == 0.915039428412938 ) = False";
+  char *example =
+      "( 119519380640223641214188187 == 0.915039428412938 ) = False";
   s21_decimal value_1 = {{0x1D30FA9B, 0x9B72494B, 0x62DD36, 0x0}};
   s21_decimal value_2 = {{0x3816060A, 0x34039, 0x0, 0xF0000}};
   int code = 0;
@@ -6324,7 +6499,8 @@ START_TEST(s21_is_equal_630) {
 }
 
 START_TEST(s21_is_equal_631) {
-  char *example = "( 198.573809040945522041778813 == 105575310767766684 ) = False";
+  char *example =
+      "( 198.573809040945522041778813 == 105575310767766684 ) = False";
   s21_decimal value_1 = {{0xD95727D, 0xC20F4926, 0xA441A3, 0x180000}};
   s21_decimal value_2 = {{0x8F5D3C9C, 0x177142F, 0x0, 0x0}};
   int code = 0;
@@ -6364,7 +6540,8 @@ START_TEST(s21_is_equal_634) {
 }
 
 START_TEST(s21_is_equal_635) {
-  char *example = "( 1813019500142863657502077098 == 1969253436569232307892 ) = False";
+  char *example =
+      "( 1813019500142863657502077098 == 1969253436569232307892 ) = False";
   s21_decimal value_1 = {{0xFEE970AA, 0xA699934, 0x5DBB1D0, 0x0}};
   s21_decimal value_2 = {{0x25376B4, 0xC0E19F02, 0x6A, 0x0}};
   int code = 0;
@@ -6414,7 +6591,8 @@ START_TEST(s21_is_equal_639) {
 }
 
 START_TEST(s21_is_equal_640) {
-  char *example = "( 1116660784027172743854579 == 0.47879747588214935 ) = False";
+  char *example =
+      "( 1116660784027172743854579 == 0.47879747588214935 ) = False";
   s21_decimal value_1 = {{0x54F6B9F3, 0x4D69FE51, 0xEC76, 0x0}};
   s21_decimal value_2 = {{0x72EE5097, 0xAA1A60, 0x0, 0x110000}};
   int code = 0;
@@ -6544,7 +6722,8 @@ START_TEST(s21_is_equal_652) {
 }
 
 START_TEST(s21_is_equal_653) {
-  char *example = "( -8.5662540630949608966857974 == 143680794111678503 ) = False";
+  char *example =
+      "( -8.5662540630949608966857974 == 143680794111678503 ) = False";
   s21_decimal value_1 = {{0xCF5424F6, 0xA1F460DC, 0x46DBBF, 0x80190000}};
   s21_decimal value_2 = {{0xC6129827, 0x1FE74EB, 0x0, 0x0}};
   int code = 0;
@@ -6564,7 +6743,8 @@ START_TEST(s21_is_equal_654) {
 }
 
 START_TEST(s21_is_equal_655) {
-  char *example = "( 79228162514264337593543950335 == 182676897198986390196 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 182676897198986390196 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x88226AB4, 0xE726B623, 0x9, 0x0}};
   int code = 0;
@@ -6574,7 +6754,8 @@ START_TEST(s21_is_equal_655) {
 }
 
 START_TEST(s21_is_equal_656) {
-  char *example = "( 1607993455426263160888247008 == -8885.5413024814504 ) = False";
+  char *example =
+      "( 1607993455426263160888247008 == -8885.5413024814504 ) = False";
   s21_decimal value_1 = {{0xD1F042E0, 0xE2C29196, 0x53219DB, 0x0}};
   s21_decimal value_2 = {{0x1B6F5A8, 0x13BAD87, 0x0, 0x800D0000}};
   int code = 0;
@@ -6744,7 +6925,8 @@ START_TEST(s21_is_equal_672) {
 }
 
 START_TEST(s21_is_equal_673) {
-  char *example = "( 1442626632250353718739458559 == 88.67719993568622467200211 ) = False";
+  char *example =
+      "( 1442626632250353718739458559 == 88.67719993568622467200211 ) = False";
   s21_decimal value_1 = {{0xFDC9D9FF, 0x7045BB45, 0x4A95012, 0x0}};
   s21_decimal value_2 = {{0x3DDB4D3, 0x1068EC87, 0x755D0, 0x170000}};
   int code = 0;
@@ -6784,7 +6966,9 @@ START_TEST(s21_is_equal_676) {
 }
 
 START_TEST(s21_is_equal_677) {
-  char *example = "( 1541078947424925252190500836 == 1324827070303976420085822328 ) = False";
+  char *example =
+      "( 1541078947424925252190500836 == 1324827070303976420085822328 ) = "
+      "False";
   s21_decimal value_1 = {{0x299477E4, 0x2374028C, 0x4FAC029, 0x0}};
   s21_decimal value_2 = {{0x2B877378, 0x63BA2144, 0x447DF0B, 0x0}};
   int code = 0;
@@ -6794,7 +6978,8 @@ START_TEST(s21_is_equal_677) {
 }
 
 START_TEST(s21_is_equal_678) {
-  char *example = "( 187037469399396719 == 1933673931285841814097947499 ) = False";
+  char *example =
+      "( 187037469399396719 == 1933673931285841814097947499 ) = False";
   s21_decimal value_1 = {{0x633D316F, 0x2987D96, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3F8EEB6B, 0xDBE3266E, 0x63F7F61, 0x0}};
   int code = 0;
@@ -6914,7 +7099,9 @@ START_TEST(s21_is_equal_689) {
 }
 
 START_TEST(s21_is_equal_690) {
-  char *example = "( 1910864052620206705203170279 == -48056.017653377744854778253 ) = False";
+  char *example =
+      "( 1910864052620206705203170279 == -48056.017653377744854778253 ) = "
+      "False";
   s21_decimal value_1 = {{0xF1434BE7, 0xDBD7F7F2, 0x62CA133, 0x0}};
   s21_decimal value_2 = {{0xE2DB018D, 0xEFE1D55D, 0x27C041, 0x80150000}};
   int code = 0;
@@ -6934,7 +7121,9 @@ START_TEST(s21_is_equal_691) {
 }
 
 START_TEST(s21_is_equal_692) {
-  char *example = "( 1999016179127017588777252151 == -77.259194091961801999057671 ) = False";
+  char *example =
+      "( 1999016179127017588777252151 == -77.259194091961801999057671 ) = "
+      "False";
   s21_decimal value_1 = {{0x17377537, 0x3650115B, 0x6758C24, 0x0}};
   s21_decimal value_2 = {{0xFB70307, 0x4DCF9D94, 0x3FE845, 0x80180000}};
   int code = 0;
@@ -6954,7 +7143,9 @@ START_TEST(s21_is_equal_693) {
 }
 
 START_TEST(s21_is_equal_694) {
-  char *example = "( -99.479809326267407035823786 == 1384475105207364554289726923 ) = False";
+  char *example =
+      "( -99.479809326267407035823786 == 1384475105207364554289726923 ) = "
+      "False";
   s21_decimal value_1 = {{0x2D8C76AA, 0x44FDE557, 0x5249AB, 0x80180000}};
   s21_decimal value_2 = {{0xC85645CB, 0xD744F778, 0x4793601, 0x0}};
   int code = 0;
@@ -6974,7 +7165,8 @@ START_TEST(s21_is_equal_695) {
 }
 
 START_TEST(s21_is_equal_696) {
-  char *example = "( 1539244484636750624479408078 == -10046.9705744052 ) = False";
+  char *example =
+      "( 1539244484636750624479408078 == -10046.9705744052 ) = False";
   s21_decimal value_1 = {{0x4B2A6FCE, 0xB6233621, 0x4F93BB2, 0x0}};
   s21_decimal value_2 = {{0x6D1F1EB4, 0x5B60, 0x0, 0x800A0000}};
   int code = 0;
@@ -7054,7 +7246,8 @@ START_TEST(s21_is_equal_703) {
 }
 
 START_TEST(s21_is_equal_704) {
-  char *example = "( 18968662098171655481 == 1991143979834373981720517 ) = False";
+  char *example =
+      "( 18968662098171655481 == 1991143979834373981720517 ) = False";
   s21_decimal value_1 = {{0x91EFF539, 0x73E39AD, 0x1, 0x0}};
   s21_decimal value_2 = {{0xE721CFC5, 0x21A59E6C, 0x1A5A4, 0x0}};
   int code = 0;
@@ -7114,7 +7307,9 @@ START_TEST(s21_is_equal_709) {
 }
 
 START_TEST(s21_is_equal_710) {
-  char *example = "( 1296469464299116150439784686 == -6270724.9042593426671846495 ) = False";
+  char *example =
+      "( 1296469464299116150439784686 == -6270724.9042593426671846495 ) = "
+      "False";
   s21_decimal value_1 = {{0x25EBB0EE, 0x7CDAA0AD, 0x4306A16, 0x0}};
   s21_decimal value_2 = {{0x94AEC45F, 0xC839923F, 0x33DEC6, 0x80130000}};
   int code = 0;
@@ -7124,7 +7319,8 @@ START_TEST(s21_is_equal_710) {
 }
 
 START_TEST(s21_is_equal_711) {
-  char *example = "( 18732192531894513368 == 1784168971063077991228681841 ) = False";
+  char *example =
+      "( 18732192531894513368 == 1784168971063077991228681841 ) = False";
   s21_decimal value_1 = {{0x3FCC2ED8, 0x3F61DDC, 0x1, 0x0}};
   s21_decimal value_2 = {{0x45A0AE71, 0xB9B33659, 0x5C3D479, 0x0}};
   int code = 0;
@@ -7144,7 +7340,8 @@ START_TEST(s21_is_equal_712) {
 }
 
 START_TEST(s21_is_equal_713) {
-  char *example = "( 18474838125386812611782951 == -7.9767345343404813170121945 ) = False";
+  char *example =
+      "( 18474838125386812611782951 == -7.9767345343404813170121945 ) = False";
   s21_decimal value_1 = {{0xC0D66927, 0xFB49AFCD, 0xF4832, 0x0}};
   s21_decimal value_2 = {{0xF54E1CD9, 0x74AB1E22, 0x41FB64, 0x80190000}};
   int code = 0;
@@ -7164,7 +7361,9 @@ START_TEST(s21_is_equal_714) {
 }
 
 START_TEST(s21_is_equal_715) {
-  char *example = "( 1612212552446341821787283461 == -8.9865478699715430123771766 ) = False";
+  char *example =
+      "( 1612212552446341821787283461 == -8.9865478699715430123771766 ) = "
+      "False";
   s21_decimal value_1 = {{0xC0282005, 0x97F1FD14, 0x5359749, 0x0}};
   s21_decimal value_2 = {{0xB8BB1776, 0x5CA46F1E, 0x4A55C1, 0x80190000}};
   int code = 0;
@@ -7194,7 +7393,9 @@ START_TEST(s21_is_equal_717) {
 }
 
 START_TEST(s21_is_equal_718) {
-  char *example = "( 1672247967439475109950891778 == 1987472655043360299562607646 ) = False";
+  char *example =
+      "( 1672247967439475109950891778 == 1987472655043360299562607646 ) = "
+      "False";
   s21_decimal value_1 = {{0x575BA702, 0xF62C8ED3, 0x5674047, 0x0}};
   s21_decimal value_2 = {{0xD7A4A41E, 0x84867EDA, 0x66BFFB4, 0x0}};
   int code = 0;
@@ -7224,7 +7425,8 @@ START_TEST(s21_is_equal_720) {
 }
 
 START_TEST(s21_is_equal_721) {
-  char *example = "( -16125732.343794116050051218 == 178702978603922289682627533 ) = False";
+  char *example =
+      "( -16125732.343794116050051218 == 178702978603922289682627533 ) = False";
   s21_decimal value_1 = {{0xB9186092, 0xB3B67917, 0xD56C1, 0x80120000}};
   s21_decimal value_2 = {{0x55413BCD, 0xE1B08C47, 0x93D1D3, 0x0}};
   int code = 0;
@@ -7294,7 +7496,8 @@ START_TEST(s21_is_equal_727) {
 }
 
 START_TEST(s21_is_equal_728) {
-  char *example = "( 1285586694182242797671885255 == -20.198144434097998 ) = False";
+  char *example =
+      "( 1285586694182242797671885255 == -20.198144434097998 ) = False";
   s21_decimal value_1 = {{0x6A7329C7, 0x56692B9C, 0x4276992, 0x0}};
   s21_decimal value_2 = {{0xF81DCF4E, 0x47C21A, 0x0, 0x800F0000}};
   int code = 0;
@@ -7354,7 +7557,8 @@ START_TEST(s21_is_equal_733) {
 }
 
 START_TEST(s21_is_equal_734) {
-  char *example = "( -7352596.3285886912857 == 1083069918015900189207 ) = False";
+  char *example =
+      "( -7352596.3285886912857 == 1083069918015900189207 ) = False";
   s21_decimal value_1 = {{0x1FB3C959, 0xFC60B20D, 0x3, 0x800D0000}};
   s21_decimal value_2 = {{0xC92D8217, 0xB69D5015, 0x3A, 0x0}};
   int code = 0;
@@ -7414,7 +7618,9 @@ START_TEST(s21_is_equal_739) {
 }
 
 START_TEST(s21_is_equal_740) {
-  char *example = "( 1672690325406567375015523672 == -267934.30725151680820106944 ) = False";
+  char *example =
+      "( 1672690325406567375015523672 == -267934.30725151680820106944 ) = "
+      "False";
   s21_decimal value_1 = {{0xB2443558, 0x3C2D2C48, 0x5679DF4, 0x0}};
   s21_decimal value_2 = {{0xB92756C0, 0xCA3F3D70, 0x1629BA, 0x80140000}};
   int code = 0;
@@ -7434,7 +7640,9 @@ START_TEST(s21_is_equal_741) {
 }
 
 START_TEST(s21_is_equal_742) {
-  char *example = "( 1297256800183948525897984039 == -9.6379645464862894291966213 ) = False";
+  char *example =
+      "( 1297256800183948525897984039 == -9.6379645464862894291966213 ) = "
+      "False";
   s21_decimal value_1 = {{0x189B2827, 0xD327B6C, 0x43110D0, 0x0}};
   s21_decimal value_2 = {{0x995C5905, 0xCC0F608, 0x4FB92F, 0x80190000}};
   int code = 0;
@@ -7444,7 +7652,8 @@ START_TEST(s21_is_equal_742) {
 }
 
 START_TEST(s21_is_equal_743) {
-  char *example = "( 2.6435751325025263E-10 == -1.1528245850345386309885890 ) = False";
+  char *example =
+      "( 2.6435751325025263E-10 == -1.1528245850345386309885890 ) = False";
   s21_decimal value_1 = {{0xFF1943EF, 0x5DEB2C, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xCA4F432D, 0xBEF8827C, 0xF41E, 0x80180000}};
   int code = 0;
@@ -7564,7 +7773,8 @@ START_TEST(s21_is_equal_754) {
 }
 
 START_TEST(s21_is_equal_755) {
-  char *example = "( 16257813704897955662138 == 145326026713301506841306953 ) = False";
+  char *example =
+      "( 16257813704897955662138 == 145326026713301506841306953 ) = False";
   s21_decimal value_1 = {{0x1808893A, 0x567D2304, 0x371, 0x0}};
   s21_decimal value_2 = {{0xA5EEE749, 0xB1AE12C1, 0x7835FB, 0x0}};
   int code = 0;
@@ -7574,7 +7784,8 @@ START_TEST(s21_is_equal_755) {
 }
 
 START_TEST(s21_is_equal_756) {
-  char *example = "( -8.45577351725276462304246 == 1623072102236781511031845152 ) = False";
+  char *example =
+      "( -8.45577351725276462304246 == 1623072102236781511031845152 ) = False";
   s21_decimal value_1 = {{0xA093CBF6, 0xD70FF552, 0xB30E, 0x80170000}};
   s21_decimal value_2 = {{0xA446F120, 0xF7A0194A, 0x53E92E2, 0x0}};
   int code = 0;
@@ -7594,7 +7805,9 @@ START_TEST(s21_is_equal_757) {
 }
 
 START_TEST(s21_is_equal_758) {
-  char *example = "( -5.2069885181700455520870304 == 1471596289873982804704572762 ) = False";
+  char *example =
+      "( -5.2069885181700455520870304 == 1471596289873982804704572762 ) = "
+      "False";
   s21_decimal value_1 = {{0x64AD1FA0, 0x21BA9945, 0x2B123A, 0x80190000}};
   s21_decimal value_2 = {{0x599B355A, 0xB9A35DA5, 0x4C146A2, 0x0}};
   int code = 0;
@@ -7674,7 +7887,9 @@ START_TEST(s21_is_equal_765) {
 }
 
 START_TEST(s21_is_equal_766) {
-  char *example = "( 1250448213809495205874328951 == 1691728999663571430334841094 ) = False";
+  char *example =
+      "( 1250448213809495205874328951 == 1691728999663571430334841094 ) = "
+      "False";
   s21_decimal value_1 = {{0xD1B96577, 0x7FE8A5A5, 0x40A58B5, 0x0}};
   s21_decimal value_2 = {{0x570C106, 0xD5A8421D, 0x5775D8C, 0x0}};
   int code = 0;
@@ -7754,7 +7969,9 @@ START_TEST(s21_is_equal_773) {
 }
 
 START_TEST(s21_is_equal_774) {
-  char *example = "( 1514479949318177709867476519 == 0.18269142704759275782904199 ) = False";
+  char *example =
+      "( 1514479949318177709867476519 == 0.18269142704759275782904199 ) = "
+      "False";
   s21_decimal value_1 = {{0x392D2627, 0x8FD3C782, 0x4E4BF9A, 0x0}};
   s21_decimal value_2 = {{0xE6CB9987, 0x35E3281A, 0xF1CA4, 0x1A0000}};
   int code = 0;
@@ -7824,7 +8041,8 @@ START_TEST(s21_is_equal_780) {
 }
 
 START_TEST(s21_is_equal_781) {
-  char *example = "( 0.519368715035285539900 == -184032.18654979521201508779 ) = False";
+  char *example =
+      "( 0.519368715035285539900 == -184032.18654979521201508779 ) = False";
   s21_decimal value_1 = {{0x274AF167, 0x4813AEF2, 0x0, 0x130000}};
   s21_decimal value_2 = {{0xD36711AB, 0x7B798096, 0xF3908, 0x80140000}};
   int code = 0;
@@ -7864,7 +8082,8 @@ START_TEST(s21_is_equal_784) {
 }
 
 START_TEST(s21_is_equal_785) {
-  char *example = "( 1009337769729125557618548 == -6035.1103775729747042067202 ) = False";
+  char *example =
+      "( 1009337769729125557618548 == -6035.1103775729747042067202 ) = False";
   s21_decimal value_1 = {{0x8D664774, 0x4F650BF1, 0xD5BC, 0x0}};
   s21_decimal value_2 = {{0xA0C16302, 0xE42ABE5E, 0x31EBD7, 0x80160000}};
   int code = 0;
@@ -7914,7 +8133,9 @@ START_TEST(s21_is_equal_789) {
 }
 
 START_TEST(s21_is_equal_790) {
-  char *example = "( -3442.1505952260206333726812 == -96.877401896474818800470544 ) = False";
+  char *example =
+      "( -3442.1505952260206333726812 == -96.877401896474818800470544 ) = "
+      "False";
   s21_decimal value_1 = {{0x77A7105C, 0x93A181F8, 0x1C7909, 0x80160000}};
   s21_decimal value_2 = {{0x52734A10, 0x7AE4427A, 0x502296, 0x80180000}};
   int code = 0;
@@ -7964,7 +8185,8 @@ START_TEST(s21_is_equal_794) {
 }
 
 START_TEST(s21_is_equal_795) {
-  char *example = "( 15309299278311132901877505 == 1859268719015687758409508188 ) = False";
+  char *example =
+      "( 15309299278311132901877505 == 1859268719015687758409508188 ) = False";
   s21_decimal value_1 = {{0xDD932701, 0xC6DEE816, 0xCA9DE, 0x0}};
   s21_decimal value_2 = {{0x37AE255C, 0x3834EB3F, 0x601F377, 0x0}};
   int code = 0;
@@ -8074,7 +8296,8 @@ START_TEST(s21_is_equal_805) {
 }
 
 START_TEST(s21_is_equal_806) {
-  char *example = "( 1191983711333251746410964459 == -26.994355016543029561 ) = False";
+  char *example =
+      "( 1191983711333251746410964459 == -26.994355016543029561 ) = False";
   s21_decimal value_1 = {{0x63B6A5EB, 0x784107FA, 0x3D9FC5E, 0x0}};
   s21_decimal value_2 = {{0x85D4C939, 0x769F36DD, 0x1, 0x80120000}};
   int code = 0;
@@ -8114,7 +8337,9 @@ START_TEST(s21_is_equal_809) {
 }
 
 START_TEST(s21_is_equal_810) {
-  char *example = "( -1.7825157385413111148582954 == 1920284534665099929049812984 ) = False";
+  char *example =
+      "( -1.7825157385413111148582954 == 1920284534665099929049812984 ) = "
+      "False";
   s21_decimal value_1 = {{0x88BE182A, 0xB7D5EDCE, 0xEBE9F, 0x80190000}};
   s21_decimal value_2 = {{0x373ECFF8, 0x36B5C156, 0x6346C11, 0x0}};
   int code = 0;
@@ -8134,7 +8359,9 @@ START_TEST(s21_is_equal_811) {
 }
 
 START_TEST(s21_is_equal_812) {
-  char *example = "( 1877153076250415410723410408 == 1107386899000412701897009309 ) = False";
+  char *example =
+      "( 1877153076250415410723410408 == 1107386899000412701897009309 ) = "
+      "False";
   s21_decimal value_1 = {{0x76C3D1E8, 0x2AFD4A62, 0x610BEA0, 0x0}};
   s21_decimal value_2 = {{0x5A64289D, 0x157B3C27, 0x394024C, 0x0}};
   int code = 0;
@@ -8184,7 +8411,8 @@ START_TEST(s21_is_equal_816) {
 }
 
 START_TEST(s21_is_equal_817) {
-  char *example = "( 19270558963063197543 == 1883112796321264411132895895 ) = False";
+  char *example =
+      "( 19270558963063197543 == 1883112796321264411132895895 ) = False";
   s21_decimal value_1 = {{0xF09A0F67, 0xB6EC746, 0x1, 0x0}};
   s21_decimal value_2 = {{0xBC7D2297, 0x3D86D154, 0x615ACA5, 0x0}};
   int code = 0;
@@ -8294,7 +8522,8 @@ START_TEST(s21_is_equal_827) {
 }
 
 START_TEST(s21_is_equal_828) {
-  char *example = "( 1865075860270168030205678930 == -8.62578757430860054 ) = False";
+  char *example =
+      "( 1865075860270168030205678930 == -8.62578757430860054 ) = False";
   s21_decimal value_1 = {{0xD3E39552, 0xFA4E700C, 0x606C12C, 0x0}};
   s21_decimal value_2 = {{0x4B76D916, 0xBF87ECF, 0x0, 0x80110000}};
   int code = 0;
@@ -8374,7 +8603,8 @@ START_TEST(s21_is_equal_835) {
 }
 
 START_TEST(s21_is_equal_836) {
-  char *example = "( 1100494326679156105856097897 == 1130220853465328 ) = False";
+  char *example =
+      "( 1100494326679156105856097897 == 1130220853465328 ) = False";
   s21_decimal value_1 = {{0xD2AF1E69, 0xFD5B628B, 0x38E4EBC, 0x0}};
   s21_decimal value_2 = {{0xC7D10F0, 0x403EE, 0x0, 0x0}};
   int code = 0;
@@ -8424,7 +8654,9 @@ START_TEST(s21_is_equal_840) {
 }
 
 START_TEST(s21_is_equal_841) {
-  char *example = "( 1066106264199603705770166601 == 1796309589320593696410499919 ) = False";
+  char *example =
+      "( 1066106264199603705770166601 == 1796309589320593696410499919 ) = "
+      "False";
   s21_decimal value_1 = {{0x81A84949, 0x6324D536, 0x371DCC8, 0x0}};
   s21_decimal value_2 = {{0xBFAFB4F, 0xF5BBC890, 0x5CDDF59, 0x0}};
   int code = 0;
@@ -8494,7 +8726,9 @@ START_TEST(s21_is_equal_847) {
 }
 
 START_TEST(s21_is_equal_848) {
-  char *example = "( 1809582671906413471918342134 == 1524880279205888177223263960 ) = False";
+  char *example =
+      "( 1809582671906413471918342134 == 1524880279205888177223263960 ) = "
+      "False";
   s21_decimal value_1 = {{0xA52E3FF6, 0x356A462A, 0x5D8DA09, 0x0}};
   s21_decimal value_2 = {{0xFAD466D8, 0x9323E2CF, 0x4ED59F5, 0x0}};
   int code = 0;
@@ -8504,7 +8738,8 @@ START_TEST(s21_is_equal_848) {
 }
 
 START_TEST(s21_is_equal_849) {
-  char *example = "( 1876114927901673330589 == -19.347387672533168697814329 ) = False";
+  char *example =
+      "( 1876114927901673330589 == -19.347387672533168697814329 ) = False";
   s21_decimal value_1 = {{0xFAD5179D, 0xB4532AD7, 0x65, 0x0}};
   s21_decimal value_2 = {{0x4DF2AD39, 0xFCC143C8, 0x1000F7, 0x80180000}};
   int code = 0;
@@ -8574,7 +8809,8 @@ START_TEST(s21_is_equal_855) {
 }
 
 START_TEST(s21_is_equal_856) {
-  char *example = "( 1243394534578723831012618560 == 1846445155209069025 ) = False";
+  char *example =
+      "( 1243394534578723831012618560 == 1846445155209069025 ) = False";
   s21_decimal value_1 = {{0x9A677140, 0xC8479D56, 0x4048308, 0x0}};
   s21_decimal value_2 = {{0xF57A41E1, 0x199FE415, 0x0, 0x0}};
   int code = 0;
@@ -8594,7 +8830,9 @@ START_TEST(s21_is_equal_857) {
 }
 
 START_TEST(s21_is_equal_858) {
-  char *example = "( 0.20435710685404610997148086 == 1185625596987735955527329086 ) = False";
+  char *example =
+      "( 0.20435710685404610997148086 == 1185625596987735955527329086 ) = "
+      "False";
   s21_decimal value_1 = {{0xDB1E59B6, 0x18980BE8, 0x10E76E, 0x1A0000}};
   s21_decimal value_2 = {{0xC386653E, 0x668256EA, 0x3D4B9FC, 0x0}};
   int code = 0;
@@ -8674,7 +8912,9 @@ START_TEST(s21_is_equal_865) {
 }
 
 START_TEST(s21_is_equal_866) {
-  char *example = "( 1719995559995201792308329787 == -3.5109044301253803693114020 ) = False";
+  char *example =
+      "( 1719995559995201792308329787 == -3.5109044301253803693114020 ) = "
+      "False";
   s21_decimal value_1 = {{0xC09ABD3B, 0x23FF14C0, 0x58EBF3A, 0x0}};
   s21_decimal value_2 = {{0xA8AAE6AA, 0x82B1DE22, 0x2E776, 0x80180000}};
   int code = 0;
@@ -8724,7 +8964,8 @@ START_TEST(s21_is_equal_870) {
 }
 
 START_TEST(s21_is_equal_871) {
-  char *example = "( 1005276972290080867341982711 == 1449649155757541928708084 ) = False";
+  char *example =
+      "( 1005276972290080867341982711 == 1449649155757541928708084 ) = False";
   s21_decimal value_1 = {{0xAF3E5BF7, 0xDD861F57, 0x33F8BAD, 0x0}};
   s21_decimal value_2 = {{0x31E3A7F4, 0xA3611F15, 0x132F9, 0x0}};
   int code = 0;
@@ -8764,7 +9005,8 @@ START_TEST(s21_is_equal_874) {
 }
 
 START_TEST(s21_is_equal_875) {
-  char *example = "( 1694412595524174808343932876 == -184.458400947859 ) = False";
+  char *example =
+      "( 1694412595524174808343932876 == -184.458400947859 ) = False";
   s21_decimal value_1 = {{0xB8786FCC, 0xDB9298A5, 0x57995D2, 0x0}};
   s21_decimal value_2 = {{0x9176DE93, 0xA7C3, 0x0, 0x800C0000}};
   int code = 0;
@@ -8774,7 +9016,8 @@ START_TEST(s21_is_equal_875) {
 }
 
 START_TEST(s21_is_equal_876) {
-  char *example = "( 0.31840071870184051502379400 == 828.206631022439038366340 ) = False";
+  char *example =
+      "( 0.31840071870184051502379400 == 828.206631022439038366340 ) = False";
   s21_decimal value_1 = {{0x365143B2, 0x899CAC04, 0x436C, 0x180000}};
   s21_decimal value_2 = {{0xBD3711DA, 0xB796B0CF, 0x1189, 0x140000}};
   int code = 0;
@@ -8854,7 +9097,9 @@ START_TEST(s21_is_equal_883) {
 }
 
 START_TEST(s21_is_equal_884) {
-  char *example = "( 0.45954196035230892694518979 == 1310956908342305267102545519 ) = False";
+  char *example =
+      "( 0.45954196035230892694518979 == 1310956908342305267102545519 ) = "
+      "False";
   s21_decimal value_1 = {{0x81FD3CC3, 0xF574A500, 0x26032D, 0x1A0000}};
   s21_decimal value_2 = {{0x9C94766F, 0x6729B8F2, 0x43C65EC, 0x0}};
   int code = 0;
@@ -8884,7 +9129,8 @@ START_TEST(s21_is_equal_886) {
 }
 
 START_TEST(s21_is_equal_887) {
-  char *example = "( 1439225840738002329252975310 == 1454197528004028281644 ) = False";
+  char *example =
+      "( 1439225840738002329252975310 == 1454197528004028281644 ) = False";
   s21_decimal value_1 = {{0x4048D2CE, 0x29490D57, 0x4A67FED, 0x0}};
   s21_decimal value_2 = {{0xB44332C, 0xD50B730D, 0x4E, 0x0}};
   int code = 0;
@@ -8934,7 +9180,8 @@ START_TEST(s21_is_equal_891) {
 }
 
 START_TEST(s21_is_equal_892) {
-  char *example = "( 1034690520398861351849666012 == 14851219152521700254 ) = False";
+  char *example =
+      "( 1034690520398861351849666012 == 14851219152521700254 ) = False";
   s21_decimal value_1 = {{0xA001A5DC, 0x80DA3E53, 0x357E03D, 0x0}};
   s21_decimal value_2 = {{0x5388A39E, 0xCE1A2122, 0x0, 0x0}};
   int code = 0;
@@ -8954,7 +9201,8 @@ START_TEST(s21_is_equal_893) {
 }
 
 START_TEST(s21_is_equal_894) {
-  char *example = "( 1948040908506287156810764847 == 1690381576705167224896114 ) = False";
+  char *example =
+      "( 1948040908506287156810764847 == 1690381576705167224896114 ) = False";
   s21_decimal value_1 = {{0x33BC522F, 0x41313DD2, 0x64B61B5, 0x0}};
   s21_decimal value_2 = {{0x14A67A72, 0xC4D5F3EB, 0x165F3, 0x0}};
   int code = 0;
@@ -8964,7 +9212,8 @@ START_TEST(s21_is_equal_894) {
 }
 
 START_TEST(s21_is_equal_895) {
-  char *example = "( 1745539181773253538 == 1610639684724238231862250 ) = False";
+  char *example =
+      "( 1745539181773253538 == 1610639684724238231862250 ) = False";
   s21_decimal value_1 = {{0x371EEBA2, 0x183966A3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9C4FBEA, 0xF3C789EA, 0x15510, 0x0}};
   int code = 0;
@@ -9054,7 +9303,8 @@ START_TEST(s21_is_equal_903) {
 }
 
 START_TEST(s21_is_equal_904) {
-  char *example = "( -46.25084138212650763982 == 1428220660435431379081287207 ) = False";
+  char *example =
+      "( -46.25084138212650763982 == 1428220660435431379081287207 ) = False";
   s21_decimal value_1 = {{0x5AB9C6CE, 0xB9EFAEF5, 0xFA, 0x80140000}};
   s21_decimal value_2 = {{0x3582D627, 0x24427145, 0x49D657D, 0x0}};
   int code = 0;
@@ -9154,7 +9404,8 @@ START_TEST(s21_is_equal_913) {
 }
 
 START_TEST(s21_is_equal_914) {
-  char *example = "( 19852721294588592 == 1466552448230962243008965379 ) = False";
+  char *example =
+      "( 19852721294588592 == 1466552448230962243008965379 ) = False";
   s21_decimal value_1 = {{0xE096BAB0, 0x4687F1, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA513AB03, 0x859480C8, 0x4BD1A8F, 0x0}};
   int code = 0;
@@ -9174,7 +9425,8 @@ START_TEST(s21_is_equal_915) {
 }
 
 START_TEST(s21_is_equal_916) {
-  char *example = "( -87.10759020438288489020546 == -87.70855904937812 ) = False";
+  char *example =
+      "( -87.10759020438288489020546 == -87.70855904937812 ) = False";
   s21_decimal value_1 = {{0x9E707C82, 0x3154A55D, 0x73493, 0x80170000}};
   s21_decimal value_2 = {{0x6970754, 0x1F290C, 0x0, 0x800E0000}};
   int code = 0;
@@ -9194,7 +9446,8 @@ START_TEST(s21_is_equal_917) {
 }
 
 START_TEST(s21_is_equal_918) {
-  char *example = "( -1.6360409668161 == 1690569824619220331018156832 ) = False";
+  char *example =
+      "( -1.6360409668161 == 1690569824619220331018156832 ) = False";
   s21_decimal value_1 = {{0x34681A41, 0xEE1, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xB1897B20, 0xD45C1163, 0x5766815, 0x0}};
   int code = 0;
@@ -9204,7 +9457,9 @@ START_TEST(s21_is_equal_918) {
 }
 
 START_TEST(s21_is_equal_919) {
-  char *example = "( 0.18249189437585374568288685 == 1961349611947867318691789279 ) = False";
+  char *example =
+      "( 0.18249189437585374568288685 == 1961349611947867318691789279 ) = "
+      "False";
   s21_decimal value_1 = {{0xDA8091AD, 0x8AADEE61, 0xF186A, 0x1A0000}};
   s21_decimal value_2 = {{0x359F79DF, 0x838D3E1D, 0x65663EF, 0x0}};
   int code = 0;
@@ -9214,7 +9469,9 @@ START_TEST(s21_is_equal_919) {
 }
 
 START_TEST(s21_is_equal_920) {
-  char *example = "( -19492.667383389922038980981 == 0.37292424544186580532669808 ) = False";
+  char *example =
+      "( -19492.667383389922038980981 == 0.37292424544186580532669808 ) = "
+      "False";
   s21_decimal value_1 = {{0x41A52175, 0x9DC1471A, 0x101FBB, 0x80150000}};
   s21_decimal value_2 = {{0x414F2D70, 0x62A9C467, 0x1ED8FA, 0x1A0000}};
   int code = 0;
@@ -9324,7 +9581,8 @@ START_TEST(s21_is_equal_930) {
 }
 
 START_TEST(s21_is_equal_931) {
-  char *example = "( -51174.991800435023214020787 == 1388633337330574923 ) = False";
+  char *example =
+      "( -51174.991800435023214020787 == 1388633337330574923 ) = False";
   s21_decimal value_1 = {{0x85008B3, 0xDD45E8B3, 0x2A54B9, 0x80150000}};
   s21_decimal value_2 = {{0xBADAA64B, 0x13456AA9, 0x0, 0x0}};
   int code = 0;
@@ -9384,7 +9642,8 @@ START_TEST(s21_is_equal_936) {
 }
 
 START_TEST(s21_is_equal_937) {
-  char *example = "( 1837660920682170 == 1758536044105834274393368541 ) = False";
+  char *example =
+      "( 1837660920682170 == 1758536044105834274393368541 ) = False";
   s21_decimal value_1 = {{0xC66516BA, 0x68757, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBC7727DD, 0xF87E84B8, 0x5AEA07D, 0x0}};
   int code = 0;
@@ -9394,7 +9653,9 @@ START_TEST(s21_is_equal_937) {
 }
 
 START_TEST(s21_is_equal_938) {
-  char *example = "( 1490696346574389229813702942 == 1793414712337303660500447478 ) = False";
+  char *example =
+      "( 1490696346574389229813702942 == 1793414712337303660500447478 ) = "
+      "False";
   s21_decimal value_1 = {{0xA803211E, 0xDFA4C3CE, 0x4D1133A, 0x0}};
   s21_decimal value_2 = {{0x977170F6, 0x5D3ACDE0, 0x5CB7A56, 0x0}};
   int code = 0;
@@ -9464,7 +9725,8 @@ START_TEST(s21_is_equal_944) {
 }
 
 START_TEST(s21_is_equal_945) {
-  char *example = "( 1901695655493276805995 == -3.3152154297446201138019548 ) = False";
+  char *example =
+      "( 1901695655493276805995 == -3.3152154297446201138019548 ) = False";
   s21_decimal value_1 = {{0x44642B6B, 0x17542B0E, 0x67, 0x0}};
   s21_decimal value_2 = {{0x18C6FCDC, 0xE2B63DEF, 0x1B6C3D, 0x80190000}};
   int code = 0;
@@ -9474,7 +9736,8 @@ START_TEST(s21_is_equal_945) {
 }
 
 START_TEST(s21_is_equal_946) {
-  char *example = "( 104648963327475865128 == 1321882618026016657228210 ) = False";
+  char *example =
+      "( 104648963327475865128 == 1321882618026016657228210 ) = False";
   s21_decimal value_1 = {{0x3F145628, 0xAC4BCDB1, 0x5, 0x0}};
   s21_decimal value_2 = {{0xBEF5C1B2, 0x667AD463, 0x117EB, 0x0}};
   int code = 0;
@@ -9504,7 +9767,8 @@ START_TEST(s21_is_equal_948) {
 }
 
 START_TEST(s21_is_equal_949) {
-  char *example = "( 1970826965137397958807090625 == 1425696199073786482976716 ) = False";
+  char *example =
+      "( 1970826965137397958807090625 == 1425696199073786482976716 ) = False";
   s21_decimal value_1 = {{0x6DC375C1, 0xDC1882FE, 0x65E3AD7, 0x0}};
   s21_decimal value_2 = {{0x27E8E7CC, 0x25544369, 0x12DE7, 0x0}};
   int code = 0;
@@ -9544,7 +9808,8 @@ START_TEST(s21_is_equal_952) {
 }
 
 START_TEST(s21_is_equal_953) {
-  char *example = "( -395597099885.511292545079 == 1340625889280452627262483063 ) = False";
+  char *example =
+      "( -395597099885.511292545079 == 1340625889280452627262483063 ) = False";
   s21_decimal value_1 = {{0xBFE0E837, 0x5C9C0E9B, 0x53C5, 0x800C0000}};
   s21_decimal value_2 = {{0x43322A77, 0x1518BFF9, 0x454F093, 0x0}};
   int code = 0;
@@ -9584,7 +9849,8 @@ START_TEST(s21_is_equal_956) {
 }
 
 START_TEST(s21_is_equal_957) {
-  char *example = "( -2250.307455926835320102 == -316.38317752537943275010629 ) = False";
+  char *example =
+      "( -2250.307455926835320102 == -316.38317752537943275010629 ) = False";
   s21_decimal value_1 = {{0x8C039526, 0xFD4A1486, 0x79, 0x80120000}};
   s21_decimal value_2 = {{0x4D7CFA45, 0xA45DADA3, 0x1A2BAC, 0x80170000}};
   int code = 0;
@@ -9694,7 +9960,9 @@ START_TEST(s21_is_equal_967) {
 }
 
 START_TEST(s21_is_equal_968) {
-  char *example = "( -50.355190723897910206926452 == 1543209048073318795661436203 ) = False";
+  char *example =
+      "( -50.355190723897910206926452 == 1543209048073318795661436203 ) = "
+      "False";
   s21_decimal value_1 = {{0xC5A00E74, 0x5BE36673, 0x29A720, 0x80180000}};
   s21_decimal value_2 = {{0xED22652B, 0x2042C78D, 0x4FC833A, 0x0}};
   int code = 0;
@@ -9844,7 +10112,8 @@ START_TEST(s21_is_equal_982) {
 }
 
 START_TEST(s21_is_equal_983) {
-  char *example = "( 1933720387076172920384 == 18196441259917861792302 ) = False";
+  char *example =
+      "( 1933720387076172920384 == 18196441259917861792302 ) = False";
   s21_decimal value_1 = {{0x8E25B640, 0xD3C2DEC1, 0x68, 0x0}};
   s21_decimal value_2 = {{0x81952A2E, 0x6E59C504, 0x3DA, 0x0}};
   int code = 0;
@@ -9904,7 +10173,8 @@ START_TEST(s21_is_equal_988) {
 }
 
 START_TEST(s21_is_equal_989) {
-  char *example = "( 1739229084093869781411361321 == 11199592710409768 ) = False";
+  char *example =
+      "( 1739229084093869781411361321 == 11199592710409768 ) = False";
   s21_decimal value_1 = {{0x5D1AF229, 0x923BF539, 0x59EA815, 0x0}};
   s21_decimal value_2 = {{0x61220E28, 0x27C9F8, 0x0, 0x0}};
   int code = 0;
@@ -9964,7 +10234,8 @@ START_TEST(s21_is_equal_994) {
 }
 
 START_TEST(s21_is_equal_995) {
-  char *example = "( 155117760349410306775 == 1251920736260948137479480633 ) = False";
+  char *example =
+      "( 155117760349410306775 == 1251920736260948137479480633 ) = False";
   s21_decimal value_1 = {{0x4CC62AD7, 0x68B0FD30, 0x8, 0x0}};
   s21_decimal value_2 = {{0xE0C3A539, 0x1A0843C5, 0x40B9087, 0x0}};
   int code = 0;
@@ -10024,7 +10295,9 @@ START_TEST(s21_is_equal_1000) {
 }
 
 START_TEST(s21_is_equal_1001) {
-  char *example = "( -9781.9466373477559883971067 == 1711213097459208624615300779 ) = False";
+  char *example =
+      "( -9781.9466373477559883971067 == 1711213097459208624615300779 ) = "
+      "False";
   s21_decimal value_1 = {{0x975EB9FB, 0xE5CE04F4, 0x50EA13, 0x80160000}};
   s21_decimal value_2 = {{0x5B019EAB, 0xE47DE7BB, 0x5877B77, 0x0}};
   int code = 0;
@@ -10034,7 +10307,8 @@ START_TEST(s21_is_equal_1001) {
 }
 
 START_TEST(s21_is_equal_1002) {
-  char *example = "( -32.193171249841381341647789 == -3.37039572537218142350 ) = False";
+  char *example =
+      "( -32.193171249841381341647789 == -3.37039572537218142350 ) = False";
   s21_decimal value_1 = {{0x677BD3AD, 0x4F77474B, 0x1AA12B, 0x80180000}};
   s21_decimal value_2 = {{0x1109F4DB, 0xD3BC828D, 0x1, 0x80130000}};
   int code = 0;
@@ -10064,7 +10338,8 @@ START_TEST(s21_is_equal_1004) {
 }
 
 START_TEST(s21_is_equal_1005) {
-  char *example = "( 1520830359507406573192121050 == 12107546562596688174305476 ) = False";
+  char *example =
+      "( 1520830359507406573192121050 == 12107546562596688174305476 ) = False";
   s21_decimal value_1 = {{0x7FCC8ADA, 0xFCED0BFA, 0x4EA005A, 0x0}};
   s21_decimal value_2 = {{0xA298D0C4, 0x6A11A6B7, 0xA03DF, 0x0}};
   int code = 0;
@@ -10074,7 +10349,8 @@ START_TEST(s21_is_equal_1005) {
 }
 
 START_TEST(s21_is_equal_1006) {
-  char *example = "( 134253428680239781 == -3.5825009292065708997239871 ) = False";
+  char *example =
+      "( 134253428680239781 == -3.5825009292065708997239871 ) = False";
   s21_decimal value_1 = {{0x365D2AA5, 0x1DCF6C8, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5AFE643F, 0xA52B13AF, 0x1DA23D, 0x80190000}};
   int code = 0;
@@ -10114,7 +10390,9 @@ START_TEST(s21_is_equal_1009) {
 }
 
 START_TEST(s21_is_equal_1010) {
-  char *example = "( 1802626333265027636009397998 == -7676.0527514941884892125380 ) = False";
+  char *example =
+      "( 1802626333265027636009397998 == -7676.0527514941884892125380 ) = "
+      "False";
   s21_decimal value_1 = {{0x7E546EEE, 0x55D4A775, 0x5D318F9, 0x0}};
   s21_decimal value_2 = {{0xE17B827A, 0xA7496D78, 0x65977, 0x80150000}};
   int code = 0;
@@ -10154,7 +10432,8 @@ START_TEST(s21_is_equal_1013) {
 }
 
 START_TEST(s21_is_equal_1014) {
-  char *example = "( 1851128330291953 == -89596.487162887459005999147 ) = False";
+  char *example =
+      "( 1851128330291953 == -89596.487162887459005999147 ) = False";
   s21_decimal value_1 = {{0x668F8AF1, 0x69397, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA127282B, 0x4D2C1052, 0x4A1CCB, 0x80150000}};
   int code = 0;
@@ -10194,7 +10473,8 @@ START_TEST(s21_is_equal_1017) {
 }
 
 START_TEST(s21_is_equal_1018) {
-  char *example = "( 1077995120189984670856691005 == 0.652754749444455849363224 ) = False";
+  char *example =
+      "( 1077995120189984670856691005 == 0.652754749444455849363224 ) = False";
   s21_decimal value_1 = {{0x46EEBD3D, 0x8FDB260A, 0x37BB258, 0x0}};
   s21_decimal value_2 = {{0xDD18718, 0xE7E740D9, 0x8A39, 0x180000}};
   int code = 0;
@@ -10414,7 +10694,8 @@ START_TEST(s21_is_equal_1039) {
 }
 
 START_TEST(s21_is_equal_1040) {
-  char *example = "( 117810167918739744990012903 == 4.0521289871437374E-10 ) = False";
+  char *example =
+      "( 117810167918739744990012903 == 4.0521289871437374E-10 ) = False";
   s21_decimal value_1 = {{0x5AA5A5E7, 0xFFFAB0CD, 0x617345, 0x0}};
   s21_decimal value_2 = {{0xA0AE3E, 0x8FF5E6, 0x0, 0x1A0000}};
   int code = 0;
@@ -10424,7 +10705,8 @@ START_TEST(s21_is_equal_1040) {
 }
 
 START_TEST(s21_is_equal_1041) {
-  char *example = "( -759.5828908678514013124568 == 1463388110158443316 ) = False";
+  char *example =
+      "( -759.5828908678514013124568 == 1463388110158443316 ) = False";
   s21_decimal value_1 = {{0x871837D8, 0xB5D1B0C0, 0x6487A, 0x80160000}};
   s21_decimal value_2 = {{0x9A863334, 0x144EFFBB, 0x0, 0x0}};
   int code = 0;
@@ -10454,7 +10736,9 @@ START_TEST(s21_is_equal_1043) {
 }
 
 START_TEST(s21_is_equal_1044) {
-  char *example = "( 1087594923736009687826349261 == 1975741760155035312776392601 ) = False";
+  char *example =
+      "( 1087594923736009687826349261 == 1975741760155035312776392601 ) = "
+      "False";
   s21_decimal value_1 = {{0xDEEBCCD, 0xF476E8C3, 0x383A32E, 0x0}};
   s21_decimal value_2 = {{0x16ADAF99, 0x6E782C27, 0x6624B97, 0x0}};
   int code = 0;
@@ -10564,7 +10848,8 @@ START_TEST(s21_is_equal_1054) {
 }
 
 START_TEST(s21_is_equal_1055) {
-  char *example = "( 173456437540502650988 == -7168.5184584234256805145569 ) = False";
+  char *example =
+      "( 173456437540502650988 == -7168.5184584234256805145569 ) = False";
   s21_decimal value_1 = {{0x7664406C, 0x67310EEE, 0x9, 0x0}};
   s21_decimal value_2 = {{0xB77C2BE1, 0xA49FBF72, 0x3B4BED, 0x80160000}};
   int code = 0;
@@ -10574,7 +10859,8 @@ START_TEST(s21_is_equal_1055) {
 }
 
 START_TEST(s21_is_equal_1056) {
-  char *example = "( 18977790867027465212 == 1469566452267972765747689411 ) = False";
+  char *example =
+      "( 18977790867027465212 == 1469566452267972765747689411 ) = False";
   s21_decimal value_1 = {{0xB2D313FC, 0x75EA83E, 0x1, 0x0}};
   s21_decimal value_2 = {{0x272EB7C3, 0x20EC012, 0x4BF98CD, 0x0}};
   int code = 0;
@@ -10664,7 +10950,8 @@ START_TEST(s21_is_equal_1064) {
 }
 
 START_TEST(s21_is_equal_1065) {
-  char *example = "( 0.63771123943360901 == -95468.372245989147581750729 ) = False";
+  char *example =
+      "( 0.63771123943360901 == -95468.372245989147581750729 ) = False";
   s21_decimal value_1 = {{0xD5924985, 0xE28F7F, 0x0, 0x110000}};
   s21_decimal value_2 = {{0x89061DC9, 0xD46324CC, 0x4EF836, 0x80150000}};
   int code = 0;
@@ -10714,7 +11001,9 @@ START_TEST(s21_is_equal_1069) {
 }
 
 START_TEST(s21_is_equal_1070) {
-  char *example = "( 1421086612540463438508980022 == 1798076167733327768335506624 ) = False";
+  char *example =
+      "( 1421086612540463438508980022 == 1798076167733327768335506624 ) = "
+      "False";
   s21_decimal value_1 = {{0xE439F736, 0xA15CC59D, 0x4977ECB, 0x0}};
   s21_decimal value_2 = {{0x5F4D5CC0, 0x5E1760A1, 0x5CF5570, 0x0}};
   int code = 0;
@@ -10724,7 +11013,8 @@ START_TEST(s21_is_equal_1070) {
 }
 
 START_TEST(s21_is_equal_1071) {
-  char *example = "( 1842434040698265 == -6.6786624165371422474298012 ) = False";
+  char *example =
+      "( 1842434040698265 == -6.6786624165371422474298012 ) = False";
   s21_decimal value_1 = {{0x1A849599, 0x68BAF, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC994E29C, 0x2691391F, 0x373E9E, 0x80190000}};
   int code = 0;
@@ -10734,7 +11024,9 @@ START_TEST(s21_is_equal_1071) {
 }
 
 START_TEST(s21_is_equal_1072) {
-  char *example = "( 1.51048514247541242765065026 == 1333085718967433371689833292 ) = False";
+  char *example =
+      "( 1.51048514247541242765065026 == 1333085718967433371689833292 ) = "
+      "False";
   s21_decimal value_1 = {{0xAE0D3B42, 0x5D69BB6C, 0x7CF1C4, 0x1A0000}};
   s21_decimal value_2 = {{0x5A06534C, 0xA1753370, 0x44EB3E1, 0x0}};
   int code = 0;
@@ -10844,7 +11136,9 @@ START_TEST(s21_is_equal_1082) {
 }
 
 START_TEST(s21_is_equal_1083) {
-  char *example = "( -9.4747758852715691719415141 == 1030893610658136808218673517 ) = False";
+  char *example =
+      "( -9.4747758852715691719415141 == 1030893610658136808218673517 ) = "
+      "False";
   s21_decimal value_1 = {{0xB84E5565, 0x4C9FBBFA, 0x4E5F9E, 0x80190000}};
   s21_decimal value_2 = {{0xE1E3C16D, 0x9D253354, 0x354BC36, 0x0}};
   int code = 0;
@@ -10874,7 +11168,9 @@ START_TEST(s21_is_equal_1085) {
 }
 
 START_TEST(s21_is_equal_1086) {
-  char *example = "( -79.627540610862503339497469 == 1919578000070282351970806140 ) = False";
+  char *example =
+      "( -79.627540610862503339497469 == 1919578000070282351970806140 ) = "
+      "False";
   s21_decimal value_1 = {{0xDDF817FD, 0xA041741F, 0x41DDC9, 0x80180000}};
   s21_decimal value_2 = {{0xC372E97C, 0xE5863377, 0x633D673, 0x0}};
   int code = 0;
@@ -10894,7 +11190,9 @@ START_TEST(s21_is_equal_1087) {
 }
 
 START_TEST(s21_is_equal_1088) {
-  char *example = "( 1158726162464902417781826798 == 1299723379347565974467288482 ) = False";
+  char *example =
+      "( 1158726162464902417781826798 == 1299723379347565974467288482 ) = "
+      "False";
   s21_decimal value_1 = {{0xB82324EE, 0x220D1204, 0x3BE79CF, 0x0}};
   s21_decimal value_2 = {{0xE0E9DA2, 0x9370E8FE, 0x4331B21, 0x0}};
   int code = 0;
@@ -10944,7 +11242,8 @@ START_TEST(s21_is_equal_1092) {
 }
 
 START_TEST(s21_is_equal_1093) {
-  char *example = "( 121085816538350478905973 == 1646135497632175057111270223 ) = False";
+  char *example =
+      "( 121085816538350478905973 == 1646135497632175057111270223 ) = False";
   s21_decimal value_1 = {{0x839B5275, 0x1344B97A, 0x19A4, 0x0}};
   s21_decimal value_2 = {{0x7EC34F, 0x230CE5DF, 0x551A6C0, 0x0}};
   int code = 0;
@@ -10964,7 +11263,8 @@ START_TEST(s21_is_equal_1094) {
 }
 
 START_TEST(s21_is_equal_1095) {
-  char *example = "( -864.15347774408474114384921 == 1219902605829433120030731 ) = False";
+  char *example =
+      "( -864.15347774408474114384921 == 1219902605829433120030731 ) = False";
   s21_decimal value_1 = {{0x5A8FE419, 0x63C07183, 0x477B29, 0x80170000}};
   s21_decimal value_2 = {{0xB9D0800B, 0xD8288DB, 0x10253, 0x0}};
   int code = 0;
@@ -10984,7 +11284,8 @@ START_TEST(s21_is_equal_1096) {
 }
 
 START_TEST(s21_is_equal_1097) {
-  char *example = "( 1570229868880472579998949855 == 1891264403344376 ) = False";
+  char *example =
+      "( 1570229868880472579998949855 == 1891264403344376 ) = False";
   s21_decimal value_1 = {{0x9B7F21DF, 0xC1D0C59E, 0x512DD1B, 0x0}};
   s21_decimal value_2 = {{0x4EF00BF8, 0x6B818, 0x0, 0x0}};
   int code = 0;
@@ -11004,7 +11305,8 @@ START_TEST(s21_is_equal_1098) {
 }
 
 START_TEST(s21_is_equal_1099) {
-  char *example = "( 1981590884019267108763926151 == 184947118655559436780775733 ) = False";
+  char *example =
+      "( 1981590884019267108763926151 == 184947118655559436780775733 ) = False";
   s21_decimal value_1 = {{0x4CC8FE87, 0x1251A091, 0x6672231, 0x0}};
   s21_decimal value_2 = {{0x8712935, 0x645E5867, 0x98FC13, 0x0}};
   int code = 0;
@@ -11024,7 +11326,9 @@ START_TEST(s21_is_equal_1100) {
 }
 
 START_TEST(s21_is_equal_1101) {
-  char *example = "( 1044369029473703238187154276 == 1887844640901945501244348818 ) = False";
+  char *example =
+      "( 1044369029473703238187154276 == 1887844640901945501244348818 ) = "
+      "False";
   s21_decimal value_1 = {{0x480CFB64, 0x8816D43A, 0x35FE1BE, 0x0}};
   s21_decimal value_2 = {{0xC8EE5992, 0xC8E8FB9, 0x61996A7, 0x0}};
   int code = 0;
@@ -11094,7 +11398,8 @@ START_TEST(s21_is_equal_1107) {
 }
 
 START_TEST(s21_is_equal_1108) {
-  char *example = "( 1151995727228507827 == 1427858108548371945373751155 ) = False";
+  char *example =
+      "( 1151995727228507827 == 1427858108548371945373751155 ) = False";
   s21_decimal value_1 = {{0xA83916B3, 0xFFCB602, 0x0, 0x0}};
   s21_decimal value_2 = {{0x363AD773, 0x2A1A02F0, 0x49D18B7, 0x0}};
   int code = 0;
@@ -11134,7 +11439,8 @@ START_TEST(s21_is_equal_1111) {
 }
 
 START_TEST(s21_is_equal_1112) {
-  char *example = "( 0.03810948957952994661968395 == 1077750478598597737074839 ) = False";
+  char *example =
+      "( 0.03810948957952994661968395 == 1077750478598597737074839 ) = False";
   s21_decimal value_1 = {{0x7DE92A0B, 0xF4FC214F, 0x326FF, 0x1A0000}};
   s21_decimal value_2 = {{0x8E365097, 0xF873A6A9, 0xE438, 0x0}};
   int code = 0;
@@ -11174,7 +11480,9 @@ START_TEST(s21_is_equal_1115) {
 }
 
 START_TEST(s21_is_equal_1116) {
-  char *example = "( 1810645606417472488486212281 == 0.27722098033023916483680421 ) = False";
+  char *example =
+      "( 1810645606417472488486212281 == 0.27722098033023916483680421 ) = "
+      "False";
   s21_decimal value_1 = {{0xAD9012B9, 0x10361F0, 0x5D9BB1F, 0x0}};
   s21_decimal value_2 = {{0xA9A218A5, 0xF216F8F7, 0x16EE61, 0x1A0000}};
   int code = 0;
@@ -11234,7 +11542,9 @@ START_TEST(s21_is_equal_1121) {
 }
 
 START_TEST(s21_is_equal_1122) {
-  char *example = "( 1912026567652054199060661425 == 1472725547837342841909488299 ) = False";
+  char *example =
+      "( 1912026567652054199060661425 == 1472725547837342841909488299 ) = "
+      "False";
   s21_decimal value_1 = {{0xB00C04B1, 0xECC76CA1, 0x62D975F, 0x0}};
   s21_decimal value_2 = {{0xBD072AAB, 0xEC08B07C, 0x4C235C3, 0x0}};
   int code = 0;
@@ -11244,7 +11554,9 @@ START_TEST(s21_is_equal_1122) {
 }
 
 START_TEST(s21_is_equal_1123) {
-  char *example = "( 1080425404537180274895123841 == 1181287072834555178349875880 ) = False";
+  char *example =
+      "( 1080425404537180274895123841 == 1181287072834555178349875880 ) = "
+      "False";
   s21_decimal value_1 = {{0x22E87581, 0x8A56CE1F, 0x37DB4FA, 0x0}};
   s21_decimal value_2 = {{0xBD81D2A8, 0x88E9871E, 0x3D12344, 0x0}};
   int code = 0;
@@ -11284,7 +11596,8 @@ START_TEST(s21_is_equal_1126) {
 }
 
 START_TEST(s21_is_equal_1127) {
-  char *example = "( -9.98212728718057935431916 == 1246375503198395101613013358 ) = False";
+  char *example =
+      "( -9.98212728718057935431916 == 1246375503198395101613013358 ) = False";
   s21_decimal value_1 = {{0xFB3768EC, 0x386FAB5E, 0xD361, 0x80170000}};
   s21_decimal value_2 = {{0xD4AE396E, 0x6A3ECBB7, 0x406FA47, 0x0}};
   int code = 0;
@@ -11334,7 +11647,9 @@ START_TEST(s21_is_equal_1131) {
 }
 
 START_TEST(s21_is_equal_1132) {
-  char *example = "( -79228162514264337593543950335 == -3.2931264281237979650450137 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == -3.2931264281237979650450137 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x3169E2D9, 0x69F02605, 0x1B3D77, 0x80190000}};
   int code = 0;
@@ -11364,7 +11679,8 @@ START_TEST(s21_is_equal_1134) {
 }
 
 START_TEST(s21_is_equal_1135) {
-  char *example = "( 803.036509977749585249261878 == 127640203726403690044714095 ) = False";
+  char *example =
+      "( 803.036509977749585249261878 == 127640203726403690044714095 ) = False";
   s21_decimal value_1 = {{0x67655936, 0x6F662A78, 0x2984198, 0x180000}};
   s21_decimal value_2 = {{0xDFF1EC6F, 0x4F0FAD53, 0x6994DD, 0x0}};
   int code = 0;
@@ -11404,7 +11720,8 @@ START_TEST(s21_is_equal_1138) {
 }
 
 START_TEST(s21_is_equal_1139) {
-  char *example = "( 1866754889642350972963341691 == 158507559865291300895850 ) = False";
+  char *example =
+      "( 1866754889642350972963341691 == 158507559865291300895850 ) = False";
   s21_decimal value_1 = {{0x41F457B, 0x57A81990, 0x60824B9, 0x0}};
   s21_decimal value_2 = {{0xBDB7C6A, 0xB6482070, 0x2190, 0x0}};
   int code = 0;
@@ -11494,7 +11811,9 @@ START_TEST(s21_is_equal_1147) {
 }
 
 START_TEST(s21_is_equal_1148) {
-  char *example = "( 1278370143834824661177900641 == 0.85468156379217018740374206 ) = False";
+  char *example =
+      "( 1278370143834824661177900641 == 0.85468156379217018740374206 ) = "
+      "False";
   s21_decimal value_1 = {{0x355A9E61, 0x5BFC253B, 0x4217168, 0x0}};
   s21_decimal value_2 = {{0x13D7ABE, 0xA8E4DFA, 0x46B296, 0x1A0000}};
   int code = 0;
@@ -11544,7 +11863,9 @@ START_TEST(s21_is_equal_1152) {
 }
 
 START_TEST(s21_is_equal_1153) {
-  char *example = "( -765152.66907932057738454464 == 1639573123253883865669790750 ) = False";
+  char *example =
+      "( -765152.66907932057738454464 == 1639573123253883865669790750 ) = "
+      "False";
   s21_decimal value_1 = {{0xFB78A5C0, 0xEE34E1AB, 0x3F4ABC, 0x80140000}};
   s21_decimal value_2 = {{0x5B9F6C1E, 0x1BE9BB9E, 0x54C391D, 0x0}};
   int code = 0;
@@ -11614,7 +11935,8 @@ START_TEST(s21_is_equal_1159) {
 }
 
 START_TEST(s21_is_equal_1160) {
-  char *example = "( 184863216150785148988771212 == 102607464274091772 ) = False";
+  char *example =
+      "( 184863216150785148988771212 == 102607464274091772 ) = False";
   s21_decimal value_1 = {{0xBCA14B8C, 0x735F2B5, 0x98EA4F, 0x0}};
   s21_decimal value_2 = {{0xF35C5EFC, 0x16C88F1, 0x0, 0x0}};
   int code = 0;
@@ -11714,7 +12036,8 @@ START_TEST(s21_is_equal_1169) {
 }
 
 START_TEST(s21_is_equal_1170) {
-  char *example = "( 1325333232527015900311516539 == -8.985085735420359141938 ) = False";
+  char *example =
+      "( 1325333232527015900311516539 == -8.985085735420359141938 ) = False";
   s21_decimal value_1 = {{0xDECCF57B, 0x7FA79D47, 0x4484A3A, 0x0}};
   s21_decimal value_2 = {{0x1FF0EA32, 0x151CFF57, 0x1E7, 0x80150000}};
   int code = 0;
@@ -11724,7 +12047,8 @@ START_TEST(s21_is_equal_1170) {
 }
 
 START_TEST(s21_is_equal_1171) {
-  char *example = "( 0.75079500768671119207954 == 1885553834237039288579428717 ) = False";
+  char *example =
+      "( 0.75079500768671119207954 == 1885553834237039288579428717 ) = False";
   s21_decimal value_1 = {{0xE5706E12, 0x116160DC, 0xFE6, 0x170000}};
   s21_decimal value_2 = {{0xD9FE916D, 0x2BC0A969, 0x617B18E, 0x0}};
   int code = 0;
@@ -11784,7 +12108,8 @@ START_TEST(s21_is_equal_1176) {
 }
 
 START_TEST(s21_is_equal_1177) {
-  char *example = "( -878917.512993530333554 == -20.538987658989734224208691 ) = False";
+  char *example =
+      "( -878917.512993530333554 == -20.538987658989734224208691 ) = False";
   s21_decimal value_1 = {{0xF1264972, 0xA56E455C, 0x2F, 0x800F0000}};
   s21_decimal value_2 = {{0xC9DC2333, 0xC084CEB8, 0x10FD4C, 0x80180000}};
   int code = 0;
@@ -11884,7 +12209,8 @@ START_TEST(s21_is_equal_1186) {
 }
 
 START_TEST(s21_is_equal_1187) {
-  char *example = "( 0.34539411931651824399434498 == -1.31596273422700 ) = False";
+  char *example =
+      "( 0.34539411931651824399434498 == -1.31596273422700 ) = False";
   s21_decimal value_1 = {{0xCA184302, 0x45CB4DFE, 0x1C9201, 0x1A0000}};
   s21_decimal value_2 = {{0x657DC693, 0x132, 0x0, 0x800C0000}};
   int code = 0;
@@ -11894,7 +12220,9 @@ START_TEST(s21_is_equal_1187) {
 }
 
 START_TEST(s21_is_equal_1188) {
-  char *example = "( 1692133726047969553460214665 == -1.0586556443943930259243872 ) = False";
+  char *example =
+      "( 1692133726047969553460214665 == -1.0586556443943930259243872 ) = "
+      "False";
   s21_decimal value_1 = {{0x7CBFBB89, 0x188A47EB, 0x577B341, 0x0}};
   s21_decimal value_2 = {{0x78BB0360, 0x5FF1CB0E, 0x8C1CA, 0x80190000}};
   int code = 0;
@@ -11974,7 +12302,8 @@ START_TEST(s21_is_equal_1195) {
 }
 
 START_TEST(s21_is_equal_1196) {
-  char *example = "( 10286723606592199236826 == 1635171034898259390455429446 ) = False";
+  char *example =
+      "( 10286723606592199236826 == 1635171034898259390455429446 ) = False";
   s21_decimal value_1 = {{0x51229CDA, 0xA4F7AACC, 0x22D, 0x0}};
   s21_decimal value_2 = {{0x3F693946, 0x6BCD6ADB, 0x54894EF, 0x0}};
   int code = 0;
@@ -12054,7 +12383,9 @@ START_TEST(s21_is_equal_1203) {
 }
 
 START_TEST(s21_is_equal_1204) {
-  char *example = "( 0.55858789329507963358161718 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 0.55858789329507963358161718 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xD5142B36, 0x9842DAB, 0x2E348F, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -12084,7 +12415,8 @@ START_TEST(s21_is_equal_1206) {
 }
 
 START_TEST(s21_is_equal_1207) {
-  char *example = "( 1763681623183613125643242751 == 1115004128498294989862 ) = False";
+  char *example =
+      "( 1763681623183613125643242751 == 1115004128498294989862 ) = False";
   s21_decimal value_1 = {{0x910C8CFF, 0x5F157E37, 0x5B2E21C, 0x0}};
   s21_decimal value_2 = {{0xFAE02426, 0x71CA6B52, 0x3C, 0x0}};
   int code = 0;
@@ -12104,7 +12436,8 @@ START_TEST(s21_is_equal_1208) {
 }
 
 START_TEST(s21_is_equal_1209) {
-  char *example = "( 0.03606390859936670465052464 == 14680070000470675413537 ) = False";
+  char *example =
+      "( 0.03606390859936670465052464 == 14680070000470675413537 ) = False";
   s21_decimal value_1 = {{0x607ECF30, 0xD71B32B7, 0x2FBAE, 0x1A0000}};
   s21_decimal value_2 = {{0x7317DA21, 0xCEE57F15, 0x31B, 0x0}};
   int code = 0;
@@ -12174,7 +12507,9 @@ START_TEST(s21_is_equal_1215) {
 }
 
 START_TEST(s21_is_equal_1216) {
-  char *example = "( 1045591287074674590562071953 == -36.791966832204522236199640 ) = False";
+  char *example =
+      "( 1045591287074674590562071953 == -36.791966832204522236199640 ) = "
+      "False";
   s21_decimal value_1 = {{0xCDAF3591, 0x3FB8D15C, 0x360E491, 0x0}};
   s21_decimal value_2 = {{0x2C02137C, 0xA6DF7988, 0x30B19, 0x80170000}};
   int code = 0;
@@ -12194,7 +12529,9 @@ START_TEST(s21_is_equal_1217) {
 }
 
 START_TEST(s21_is_equal_1218) {
-  char *example = "( 1520924578971630452902164165 == 0.35778686081474044011563594 ) = False";
+  char *example =
+      "( 1520924578971630452902164165 == 0.35778686081474044011563594 ) = "
+      "False";
   s21_decimal value_1 = {{0x277776C5, 0xA2A8677B, 0x4EA144E, 0x0}};
   s21_decimal value_2 = {{0x3EF14A4A, 0x757B2974, 0x1D986E, 0x1A0000}};
   int code = 0;
@@ -12234,7 +12571,8 @@ START_TEST(s21_is_equal_1221) {
 }
 
 START_TEST(s21_is_equal_1222) {
-  char *example = "( 0.66481102502313703722505169 == 19022379532838182143 ) = False";
+  char *example =
+      "( 0.66481102502313703722505169 == 19022379532838182143 ) = False";
   s21_decimal value_1 = {{0x72A8D3D1, 0xC9C1B546, 0x36FDEB, 0x1A0000}};
   s21_decimal value_2 = {{0x757B1CFF, 0x7FD1166, 0x1, 0x0}};
   int code = 0;
@@ -12244,7 +12582,8 @@ START_TEST(s21_is_equal_1222) {
 }
 
 START_TEST(s21_is_equal_1223) {
-  char *example = "( -44607.17994519431120723 == 1719817108576328582934757221 ) = False";
+  char *example =
+      "( -44607.17994519431120723 == 1719817108576328582934757221 ) = False";
   s21_decimal value_1 = {{0x5B8E8753, 0xD0E5D61E, 0xF1, 0x80110000}};
   s21_decimal value_2 = {{0x1D8AFF65, 0x45123FB5, 0x58E9970, 0x0}};
   int code = 0;
@@ -12314,7 +12653,9 @@ START_TEST(s21_is_equal_1229) {
 }
 
 START_TEST(s21_is_equal_1230) {
-  char *example = "( -3.6279025960932921978121725 == 1512323168667603536484214982 ) = False";
+  char *example =
+      "( -3.6279025960932921978121725 == 1512323168667603536484214982 ) = "
+      "False";
   s21_decimal value_1 = {{0x589FEDFD, 0xF028F702, 0x1E0261, 0x80190000}};
   s21_decimal value_2 = {{0xC06FA8C6, 0x3F9C4FED, 0x4E2F6E3, 0x0}};
   int code = 0;
@@ -12324,7 +12665,8 @@ START_TEST(s21_is_equal_1230) {
 }
 
 START_TEST(s21_is_equal_1231) {
-  char *example = "( 135012853879831006290896 == 1101465675276428460594812143 ) = False";
+  char *example =
+      "( 135012853879831006290896 == 1101465675276428460594812143 ) = False";
   s21_decimal value_1 = {{0xE71023D0, 0xFBCCAF2, 0x1C97, 0x0}};
   s21_decimal value_2 = {{0x91DBD4EF, 0xE713CC51, 0x38F1C6D, 0x0}};
   int code = 0;
@@ -12424,7 +12766,8 @@ START_TEST(s21_is_equal_1240) {
 }
 
 START_TEST(s21_is_equal_1241) {
-  char *example = "( 1886309939516991483022884000 == -7.4740209803916170756 ) = False";
+  char *example =
+      "( 1886309939516991483022884000 == -7.4740209803916170756 ) = False";
   s21_decimal value_1 = {{0x92673CA0, 0xB8635C78, 0x61851AA, 0x0}};
   s21_decimal value_2 = {{0x78975604, 0xD3A90D3, 0x4, 0x80130000}};
   int code = 0;
@@ -12484,7 +12827,8 @@ START_TEST(s21_is_equal_1246) {
 }
 
 START_TEST(s21_is_equal_1247) {
-  char *example = "( 0.84761113038440449514 == 5.6541410022441811E-10 ) = False";
+  char *example =
+      "( 0.84761113038440449514 == 5.6541410022441811E-10 ) = False";
   s21_decimal value_1 = {{0x8EF945EA, 0x984BF739, 0x4, 0x140000}};
   s21_decimal value_2 = {{0xE37CC353, 0xC8E01C, 0x0, 0x1A0000}};
   int code = 0;
@@ -12504,7 +12848,8 @@ START_TEST(s21_is_equal_1248) {
 }
 
 START_TEST(s21_is_equal_1249) {
-  char *example = "( 1636294598491043 == -411.27912146876831718887439 ) = False";
+  char *example =
+      "( 1636294598491043 == -411.27912146876831718887439 ) = False";
   s21_decimal value_1 = {{0x864A7BA3, 0x5D033, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD2F6D00F, 0x95C0B6EF, 0x22052C, 0x80170000}};
   int code = 0;
@@ -12524,7 +12869,8 @@ START_TEST(s21_is_equal_1250) {
 }
 
 START_TEST(s21_is_equal_1251) {
-  char *example = "( 11378472251981322143 == -25807.448773992552605400386 ) = False";
+  char *example =
+      "( 11378472251981322143 == -25807.448773992552605400386 ) = False";
   s21_decimal value_1 = {{0x39FC579F, 0x9DE8743A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA737BD42, 0x99F24E7A, 0x1558F0, 0x80150000}};
   int code = 0;
@@ -12554,7 +12900,8 @@ START_TEST(s21_is_equal_1253) {
 }
 
 START_TEST(s21_is_equal_1254) {
-  char *example = "( -5.368758224512526923247 == 1443656212267488482778530859 ) = False";
+  char *example =
+      "( -5.368758224512526923247 == 1443656212267488482778530859 ) = False";
   s21_decimal value_1 = {{0x420935EF, 0xA7CC84B, 0x123, 0x80150000}};
   s21_decimal value_2 = {{0x3955C42B, 0x1548069F, 0x4AA2A18, 0x0}};
   int code = 0;
@@ -12564,7 +12911,9 @@ START_TEST(s21_is_equal_1254) {
 }
 
 START_TEST(s21_is_equal_1255) {
-  char *example = "( 1026683740169753999808133264 == 1454470392670096770295653106 ) = False";
+  char *example =
+      "( 1026683740169753999808133264 == 1454470392670096770295653106 ) = "
+      "False";
   s21_decimal value_1 = {{0x1DB3F890, 0x13CF24F5, 0x35140BD, 0x0}};
   s21_decimal value_2 = {{0xCF7BE2F2, 0xFA39637D, 0x4B31C15, 0x0}};
   int code = 0;
@@ -12594,7 +12943,9 @@ START_TEST(s21_is_equal_1257) {
 }
 
 START_TEST(s21_is_equal_1258) {
-  char *example = "( 1584412929894895986008940088 == 1133607330896718295604089784 ) = False";
+  char *example =
+      "( 1584412929894895986008940088 == 1133607330896718295604089784 ) = "
+      "False";
   s21_decimal value_1 = {{0x58605E38, 0x909F9E1, 0x51E987D, 0x0}};
   s21_decimal value_2 = {{0x225B53B8, 0x8B914BFC, 0x3A9B2B0, 0x0}};
   int code = 0;
@@ -12694,7 +13045,8 @@ START_TEST(s21_is_equal_1267) {
 }
 
 START_TEST(s21_is_equal_1268) {
-  char *example = "( -7.897745330105919544214656 == 1103351627824936298 ) = False";
+  char *example =
+      "( -7.897745330105919544214656 == 1103351627824936298 ) = False";
   s21_decimal value_1 = {{0x5053C480, 0xA1D9F338, 0x68869, 0x80180000}};
   s21_decimal value_2 = {{0xAEDAB56A, 0xF4FE475, 0x0, 0x0}};
   int code = 0;
@@ -12774,7 +13126,8 @@ START_TEST(s21_is_equal_1275) {
 }
 
 START_TEST(s21_is_equal_1276) {
-  char *example = "( 1772224007058782192101740845 == 1906379713819158471 ) = False";
+  char *example =
+      "( 1772224007058782192101740845 == 1906379713819158471 ) = False";
   s21_decimal value_1 = {{0x6B13D12D, 0xEDE05EFA, 0x5B9F307, 0x0}};
   s21_decimal value_2 = {{0xD133A7C7, 0x1A74D23F, 0x0, 0x0}};
   int code = 0;
@@ -12814,7 +13167,8 @@ START_TEST(s21_is_equal_1279) {
 }
 
 START_TEST(s21_is_equal_1280) {
-  char *example = "( 1867238318052146192510454690 == 17937186418748685655336 ) = False";
+  char *example =
+      "( 1867238318052146192510454690 == 17937186418748685655336 ) = False";
   s21_decimal value_1 = {{0xA2F18BA2, 0xC8C4CD3, 0x6088B18, 0x0}};
   s21_decimal value_2 = {{0xB4859D28, 0x60778C90, 0x3CC, 0x0}};
   int code = 0;
@@ -12834,7 +13188,8 @@ START_TEST(s21_is_equal_1281) {
 }
 
 START_TEST(s21_is_equal_1282) {
-  char *example = "( 140507372044358556645 == 108844226524089429565113714 ) = False";
+  char *example =
+      "( 140507372044358556645 == 108844226524089429565113714 ) = False";
   s21_decimal value_1 = {{0x33A49BE5, 0x9DEE766F, 0x7, 0x0}};
   s21_decimal value_2 = {{0xE18C0572, 0x57CE97C2, 0x5A08A9, 0x0}};
   int code = 0;
@@ -12854,7 +13209,8 @@ START_TEST(s21_is_equal_1283) {
 }
 
 START_TEST(s21_is_equal_1284) {
-  char *example = "( 1295945888283510123004017750 == 125897682635338750799049680 ) = False";
+  char *example =
+      "( 1295945888283510123004017750 == 125897682635338750799049680 ) = False";
   s21_decimal value_1 = {{0x4A61BC56, 0x6002179D, 0x42FFB37, 0x0}};
   s21_decimal value_2 = {{0xE572F3D0, 0xD1BDA2E, 0x6823DF, 0x0}};
   int code = 0;
@@ -12934,7 +13290,8 @@ START_TEST(s21_is_equal_1291) {
 }
 
 START_TEST(s21_is_equal_1292) {
-  char *example = "( -4439.0582894223066851661598 == 157222002462131048 ) = False";
+  char *example =
+      "( -4439.0582894223066851661598 == 157222002462131048 ) = False";
   s21_decimal value_1 = {{0x9ABF571E, 0x52123BDB, 0x24B812, 0x80160000}};
   s21_decimal value_2 = {{0x7A18368, 0x22E9094, 0x0, 0x0}};
   int code = 0;
@@ -12944,7 +13301,8 @@ START_TEST(s21_is_equal_1292) {
 }
 
 START_TEST(s21_is_equal_1293) {
-  char *example = "( 149967942267718911454 == 1126384313578138532650483457 ) = False";
+  char *example =
+      "( 149967942267718911454 == 1126384313578138532650483457 ) = False";
   s21_decimal value_1 = {{0xA3ACC5DE, 0x213928ED, 0x8, 0x0}};
   s21_decimal value_2 = {{0x6CDCFF01, 0xFDE35D96, 0x3A3B927, 0x0}};
   int code = 0;
@@ -12974,7 +13332,9 @@ START_TEST(s21_is_equal_1295) {
 }
 
 START_TEST(s21_is_equal_1296) {
-  char *example = "( 1282652408037115896066822396 == 1906681558523623096029812392 ) = False";
+  char *example =
+      "( 1282652408037115896066822396 == 1906681558523623096029812392 ) = "
+      "False";
   s21_decimal value_1 = {{0x17550FC, 0x5DEBDCFC, 0x424FC36, 0x0}};
   s21_decimal value_2 = {{0x40A416A8, 0x6643889B, 0x6292B86, 0x0}};
   int code = 0;
@@ -13034,7 +13394,9 @@ START_TEST(s21_is_equal_1301) {
 }
 
 START_TEST(s21_is_equal_1302) {
-  char *example = "( -421736272.31425869313543365 == 1990502943222917808549438892 ) = False";
+  char *example =
+      "( -421736272.31425869313543365 == 1990502943222917808549438892 ) = "
+      "False";
   s21_decimal value_1 = {{0xF2510CC5, 0xE9CDB850, 0x22E29C, 0x80110000}};
   s21_decimal value_2 = {{0x85CEA5AC, 0xC4E0B78A, 0x66E8164, 0x0}};
   int code = 0;
@@ -13074,7 +13436,9 @@ START_TEST(s21_is_equal_1305) {
 }
 
 START_TEST(s21_is_equal_1306) {
-  char *example = "( 1348808952776170604476686087 == -5539.7879304173652071326986 ) = False";
+  char *example =
+      "( 1348808952776170604476686087 == -5539.7879304173652071326986 ) = "
+      "False";
   s21_decimal value_1 = {{0x55CEDF07, 0xD7E87AEE, 0x45BB567, 0x0}};
   s21_decimal value_2 = {{0xC73AA50A, 0xDFC7A16, 0x2DD2F5, 0x80160000}};
   int code = 0;
@@ -13094,7 +13458,8 @@ START_TEST(s21_is_equal_1307) {
 }
 
 START_TEST(s21_is_equal_1308) {
-  char *example = "( -2.1983749856283900920855086 == -169.25592290812133 ) = False";
+  char *example =
+      "( -2.1983749856283900920855086 == -169.25592290812133 ) = False";
   s21_decimal value_1 = {{0x9A39FA2E, 0x77B9BF94, 0x122F3D, 0x80190000}};
   s21_decimal value_2 = {{0x8C1B60E5, 0x3C21BC, 0x0, 0x800E0000}};
   int code = 0;
@@ -13154,7 +13519,8 @@ START_TEST(s21_is_equal_1313) {
 }
 
 START_TEST(s21_is_equal_1314) {
-  char *example = "( 182389871815623410602521 == 1020893818041127484454112535 ) = False";
+  char *example =
+      "( 182389871815623410602521 == 1020893818041127484454112535 ) = False";
   s21_decimal value_1 = {{0x5FBA5219, 0x5FF0795A, 0x269F, 0x0}};
   s21_decimal value_2 = {{0x9B0C8D17, 0xC515954E, 0x34C76AC, 0x0}};
   int code = 0;
@@ -13214,7 +13580,9 @@ START_TEST(s21_is_equal_1319) {
 }
 
 START_TEST(s21_is_equal_1320) {
-  char *example = "( 1233973074830883903620390014 == 1608942723406402895738839122 ) = False";
+  char *example =
+      "( 1233973074830883903620390014 == 1608942723406402895738839122 ) = "
+      "False";
   s21_decimal value_1 = {{0xEEA1C7E, 0x6D0F3204, 0x3FCB7F6, 0x0}};
   s21_decimal value_2 = {{0x4602052, 0xCE5C755E, 0x532E2DF, 0x0}};
   int code = 0;
@@ -13254,7 +13622,8 @@ START_TEST(s21_is_equal_1323) {
 }
 
 START_TEST(s21_is_equal_1324) {
-  char *example = "( 101562890193455016186427024 == 15389566140395963233 ) = False";
+  char *example =
+      "( 101562890193455016186427024 == 15389566140395963233 ) = False";
   s21_decimal value_1 = {{0x21B73690, 0x4F40CD07, 0x5402C7, 0x0}};
   s21_decimal value_2 = {{0x5AE4361, 0xD592B8DE, 0x0, 0x0}};
   int code = 0;
@@ -13324,7 +13693,8 @@ START_TEST(s21_is_equal_1330) {
 }
 
 START_TEST(s21_is_equal_1331) {
-  char *example = "( 72804.3724418079488 == 1912905692893951698716661 ) = False";
+  char *example =
+      "( 72804.3724418079488 == 1912905692893951698716661 ) = False";
   s21_decimal value_1 = {{0xF6E45B00, 0xA1A87E8, 0x0, 0xD0000}};
   s21_decimal value_2 = {{0x3D88C7F5, 0xD34D6652, 0x19512, 0x0}};
   int code = 0;
@@ -13344,7 +13714,8 @@ START_TEST(s21_is_equal_1332) {
 }
 
 START_TEST(s21_is_equal_1333) {
-  char *example = "( -510.03451386334873378822435 == 19585874678378665128899 ) = False";
+  char *example =
+      "( -510.03451386334873378822435 == 19585874678378665128899 ) = False";
   s21_decimal value_1 = {{0xD0231923, 0xA3CE44AD, 0x2A3066, 0x80170000}};
   s21_decimal value_2 = {{0xEE70B3C3, 0xC09CE192, 0x425, 0x0}};
   int code = 0;
@@ -13454,7 +13825,8 @@ START_TEST(s21_is_equal_1343) {
 }
 
 START_TEST(s21_is_equal_1344) {
-  char *example = "( -72051595.26627861715046521 == 1192017020419394577134297470 ) = False";
+  char *example =
+      "( -72051595.26627861715046521 == 1192017020419394577134297470 ) = False";
   s21_decimal value_1 = {{0xA6955079, 0x7B0830C7, 0x5F5C0, 0x80110000}};
   s21_decimal value_2 = {{0xDB40A17E, 0x28AEFFC7, 0x3DA036C, 0x0}};
   int code = 0;
@@ -13494,7 +13866,8 @@ START_TEST(s21_is_equal_1347) {
 }
 
 START_TEST(s21_is_equal_1348) {
-  char *example = "( -3.86044594486642591493629 == 12314519786768587277 ) = False";
+  char *example =
+      "( -3.86044594486642591493629 == 12314519786768587277 ) = False";
   s21_decimal value_1 = {{0x15D16DFD, 0x84F775AE, 0x51BF, 0x80170000}};
   s21_decimal value_2 = {{0x3DDC5A0D, 0xAAE5F680, 0x0, 0x0}};
   int code = 0;
@@ -13504,7 +13877,8 @@ START_TEST(s21_is_equal_1348) {
 }
 
 START_TEST(s21_is_equal_1349) {
-  char *example = "( 0.333045451075403844039 == 0.90263760188187315072617186 ) = False";
+  char *example =
+      "( 0.333045451075403844039 == 0.90263760188187315072617186 ) = False";
   s21_decimal value_1 = {{0xE12F09C7, 0xDEF2133, 0x12, 0x150000}};
   s21_decimal value_2 = {{0xF3634AE2, 0x3EA08A88, 0x4AAA18, 0x1A0000}};
   int code = 0;
@@ -13514,7 +13888,9 @@ START_TEST(s21_is_equal_1349) {
 }
 
 START_TEST(s21_is_equal_1350) {
-  char *example = "( 1376028380767654035335541948 == 1913372809360943919750510586 ) = False";
+  char *example =
+      "( 1376028380767654035335541948 == 1913372809360943919750510586 ) = "
+      "False";
   s21_decimal value_1 = {{0x5881F4BC, 0xFDD2F2D9, 0x4723957, 0x0}};
   s21_decimal value_2 = {{0xBD14F7FA, 0xD58D9190, 0x62EB473, 0x0}};
   int code = 0;
@@ -13534,7 +13910,9 @@ START_TEST(s21_is_equal_1351) {
 }
 
 START_TEST(s21_is_equal_1352) {
-  char *example = "( 1425222825128782910181137696 == 1488855205671975788533100493 ) = False";
+  char *example =
+      "( 1425222825128782910181137696 == 1488855205671975788533100493 ) = "
+      "False";
   s21_decimal value_1 = {{0x8F80DD20, 0x29FDB8AA, 0x49AEAAC, 0x0}};
   s21_decimal value_2 = {{0xC0A1AFCD, 0x6CE0295A, 0x4CF8D5A, 0x0}};
   int code = 0;
@@ -13634,7 +14012,8 @@ START_TEST(s21_is_equal_1361) {
 }
 
 START_TEST(s21_is_equal_1362) {
-  char *example = "( -53531229483464915.12293 == 18184130770665323502560 ) = False";
+  char *example =
+      "( -53531229483464915.12293 == 18184130770665323502560 ) = False";
   s21_decimal value_1 = {{0xD05D25E5, 0x31811F75, 0x122, 0x80050000}};
   s21_decimal value_2 = {{0x24C61BE0, 0xC3822044, 0x3D9, 0x0}};
   int code = 0;
@@ -13704,7 +14083,8 @@ START_TEST(s21_is_equal_1368) {
 }
 
 START_TEST(s21_is_equal_1369) {
-  char *example = "( 1299986037928109021997685126 == -1.815176651137959355310 ) = False";
+  char *example =
+      "( 1299986037928109021997685126 == -1.815176651137959355310 ) = False";
   s21_decimal value_1 = {{0x91B5D986, 0x537CDC17, 0x43352C0, 0x0}};
   s21_decimal value_2 = {{0xFE1F3D2B, 0xD7104AB2, 0x9, 0x80140000}};
   int code = 0;
@@ -13714,7 +14094,8 @@ START_TEST(s21_is_equal_1369) {
 }
 
 START_TEST(s21_is_equal_1370) {
-  char *example = "( 1187754241095039315201 == 185753321312022366560317 ) = False";
+  char *example =
+      "( 1187754241095039315201 == 185753321312022366560317 ) = False";
   s21_decimal value_1 = {{0xC57DED01, 0x6366BD48, 0x40, 0x0}};
   s21_decimal value_2 = {{0x39FCA03D, 0xB52D8202, 0x2755, 0x0}};
   int code = 0;
@@ -13774,7 +14155,9 @@ START_TEST(s21_is_equal_1375) {
 }
 
 START_TEST(s21_is_equal_1376) {
-  char *example = "( 1114437512400388546028689773 == -3150099702.7559027880019923 ) = False";
+  char *example =
+      "( 1114437512400388546028689773 == -3150099702.7559027880019923 ) = "
+      "False";
   s21_decimal value_1 = {{0x4B4CD96D, 0x9A294365, 0x399D752, 0x0}};
   s21_decimal value_2 = {{0x6B18C7D3, 0x787BA9B2, 0x1A0E98, 0x80100000}};
   int code = 0;
@@ -13864,7 +14247,9 @@ START_TEST(s21_is_equal_1384) {
 }
 
 START_TEST(s21_is_equal_1385) {
-  char *example = "( -79228162514264337593543950335 == 1917159760249861720379705166 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 1917159760249861720379705166 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x173474E, 0xDA6D9296, 0x631D65E, 0x0}};
   int code = 0;
@@ -13974,7 +14359,8 @@ START_TEST(s21_is_equal_1395) {
 }
 
 START_TEST(s21_is_equal_1396) {
-  char *example = "( 14071684716038221356678222 == -6.5536290761438098556257034 ) = False";
+  char *example =
+      "( 14071684716038221356678222 == -6.5536290761438098556257034 ) = False";
   s21_decimal value_1 = {{0xC1213C4E, 0x8E966FDA, 0xBA3CB, 0x0}};
   s21_decimal value_2 = {{0x362D030A, 0x70E6020E, 0x3635D9, 0x80190000}};
   int code = 0;
@@ -14004,7 +14390,9 @@ START_TEST(s21_is_equal_1398) {
 }
 
 START_TEST(s21_is_equal_1399) {
-  char *example = "( 1384476018222906179280076135 == 5168.71900815669785405954243 ) = False";
+  char *example =
+      "( 1384476018222906179280076135 == 5168.71900815669785405954243 ) = "
+      "False";
   s21_decimal value_1 = {{0x50C27D67, 0x55E7C537, 0x4793633, 0x0}};
   s21_decimal value_2 = {{0x971418C3, 0xE3577222, 0x1AB8BE1, 0x170000}};
   int code = 0;
@@ -14044,7 +14432,9 @@ START_TEST(s21_is_equal_1402) {
 }
 
 START_TEST(s21_is_equal_1403) {
-  char *example = "( 1899400861886442529462642275 == 1421359022007707980100550644 ) = False";
+  char *example =
+      "( 1899400861886442529462642275 == 1421359022007707980100550644 ) = "
+      "False";
   s21_decimal value_1 = {{0xD2BF6663, 0xB3D6CE7, 0x62325C7, 0x0}};
   s21_decimal value_2 = {{0x39CC3FF4, 0xFA254950, 0x497B87A, 0x0}};
   int code = 0;
@@ -14054,7 +14444,9 @@ START_TEST(s21_is_equal_1403) {
 }
 
 START_TEST(s21_is_equal_1404) {
-  char *example = "( 1767890682789932859597066553 == 1529655776109715229831948085 ) = False";
+  char *example =
+      "( 1767890682789932859597066553 == 1529655776109715229831948085 ) = "
+      "False";
   s21_decimal value_1 = {{0x54591139, 0xF32BC076, 0x5B65D69, 0x0}};
   s21_decimal value_2 = {{0x30156735, 0xC7D92E8A, 0x4F14D35, 0x0}};
   int code = 0;
@@ -14104,7 +14496,8 @@ START_TEST(s21_is_equal_1408) {
 }
 
 START_TEST(s21_is_equal_1409) {
-  char *example = "( -1.6520070417550463 == 1850990374266874930259925509 ) = False";
+  char *example =
+      "( -1.6520070417550463 == 1850990374266874930259925509 ) = False";
   s21_decimal value_1 = {{0xA0E70C7F, 0x3AB0EA, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xBE719A05, 0x4061FC3C, 0x5FB1A75, 0x0}};
   int code = 0;
@@ -14164,7 +14557,9 @@ START_TEST(s21_is_equal_1414) {
 }
 
 START_TEST(s21_is_equal_1415) {
-  char *example = "( 1315056606741785785338407300 == 1484636584921682475154385963 ) = False";
+  char *example =
+      "( 1315056606741785785338407300 == 1484636584921682475154385963 ) = "
+      "False";
   s21_decimal value_1 = {{0xCF3FA984, 0x7FA0836E, 0x43FCA11, 0x0}};
   s21_decimal value_2 = {{0x2CE7AC2B, 0x8942EC40, 0x4CC1006, 0x0}};
   int code = 0;
@@ -14194,7 +14589,9 @@ START_TEST(s21_is_equal_1417) {
 }
 
 START_TEST(s21_is_equal_1418) {
-  char *example = "( 1437460330752869087672519372 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1437460330752869087672519372 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xD07FCACC, 0xAC56CF74, 0x4A50A10, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -14264,7 +14661,9 @@ START_TEST(s21_is_equal_1424) {
 }
 
 START_TEST(s21_is_equal_1425) {
-  char *example = "( 1628108267650042378175275563 == 1419617055844281796283020968 ) = False";
+  char *example =
+      "( 1628108267650042378175275563 == 1419617055844281796283020968 ) = "
+      "False";
   s21_decimal value_1 = {{0xACE2622B, 0xA987E1E, 0x542BD56, 0x0}};
   s21_decimal value_2 = {{0xFEE336A8, 0xCD5C797B, 0x496479A, 0x0}};
   int code = 0;
@@ -14294,7 +14693,9 @@ START_TEST(s21_is_equal_1427) {
 }
 
 START_TEST(s21_is_equal_1428) {
-  char *example = "( 1068717387100364095211133737 == -660321401.78352584135120246 ) = False";
+  char *example =
+      "( 1068717387100364095211133737 == -660321401.78352584135120246 ) = "
+      "False";
   s21_decimal value_1 = {{0x218F5B29, 0xA4B364BF, 0x37405B5, 0x0}};
   s21_decimal value_2 = {{0xD6D59576, 0x7DE41AF9, 0x369ED9, 0x80110000}};
   int code = 0;
@@ -14314,7 +14715,8 @@ START_TEST(s21_is_equal_1429) {
 }
 
 START_TEST(s21_is_equal_1430) {
-  char *example = "( 160858688394097189 == 1065591311814760180247291924 ) = False";
+  char *example =
+      "( 160858688394097189 == 1065591311814760180247291924 ) = False";
   s21_decimal value_1 = {{0xF4C3F225, 0x23B7C1F, 0x0, 0x0}};
   s21_decimal value_2 = {{0x47A1E814, 0xC33744B1, 0x3716FBC, 0x0}};
   int code = 0;
@@ -14324,7 +14726,8 @@ START_TEST(s21_is_equal_1430) {
 }
 
 START_TEST(s21_is_equal_1431) {
-  char *example = "( 1240135358123992542546736485 == -6.76208123806763016245 ) = False";
+  char *example =
+      "( 1240135358123992542546736485 == -6.76208123806763016245 ) = False";
   s21_decimal value_1 = {{0xD183B565, 0x79034427, 0x401D0E0, 0x0}};
   s21_decimal value_2 = {{0xE7796035, 0xA845D9E5, 0x24, 0x80140000}};
   int code = 0;
@@ -14334,7 +14737,9 @@ START_TEST(s21_is_equal_1431) {
 }
 
 START_TEST(s21_is_equal_1432) {
-  char *example = "( 1087101669343849151253268956 == 1372138095932795861174444828 ) = False";
+  char *example =
+      "( 1087101669343849151253268956 == 1372138095932795861174444828 ) = "
+      "False";
   s21_decimal value_1 = {{0x193949DC, 0x94ACC087, 0x3833ABB, 0x0}};
   s21_decimal value_2 = {{0xBD9DE31C, 0x3A5FB7C4, 0x46F018B, 0x0}};
   int code = 0;
@@ -14374,7 +14779,8 @@ START_TEST(s21_is_equal_1435) {
 }
 
 START_TEST(s21_is_equal_1436) {
-  char *example = "( 14332036607677474294349931 == 1980265217292340983146892447 ) = False";
+  char *example =
+      "( 14332036607677474294349931 == 1980265217292340983146892447 ) = False";
   s21_decimal value_1 = {{0x88E2406B, 0x42E52A50, 0xBDAED, 0x0}};
   s21_decimal value_2 = {{0xD9264C9F, 0x88C75898, 0x6660978, 0x0}};
   int code = 0;
@@ -14434,7 +14840,8 @@ START_TEST(s21_is_equal_1441) {
 }
 
 START_TEST(s21_is_equal_1442) {
-  char *example = "( 1911261686112570099683330999 == -5.3992416203925709 ) = False";
+  char *example =
+      "( 1911261686112570099683330999 == -5.3992416203925709 ) = False";
   s21_decimal value_1 = {{0x220C8BB7, 0x9D136FEC, 0x62CF567, 0x0}};
   s21_decimal value_2 = {{0x46668CD, 0xBFD1D1, 0x0, 0x80100000}};
   int code = 0;
@@ -14444,7 +14851,9 @@ START_TEST(s21_is_equal_1442) {
 }
 
 START_TEST(s21_is_equal_1443) {
-  char *example = "( 1430562188957741274116300882 == 1223092698080775345545384098 ) = False";
+  char *example =
+      "( 1430562188957741274116300882 == 1223092698080775345545384098 ) = "
+      "False";
   s21_decimal value_1 = {{0x4D1EA052, 0xA83CF450, 0x49F5553, 0x0}};
   s21_decimal value_2 = {{0x40FF90A2, 0x54094EE, 0x3F3B7F4, 0x0}};
   int code = 0;
@@ -14464,7 +14873,8 @@ START_TEST(s21_is_equal_1444) {
 }
 
 START_TEST(s21_is_equal_1445) {
-  char *example = "( 1980272007261726846948640701 == 113641305288328636847777517 ) = False";
+  char *example =
+      "( 1980272007261726846948640701 == 113641305288328636847777517 ) = False";
   s21_decimal value_1 = {{0x964A87BD, 0x9E88763D, 0x6660AE8, 0x0}};
   s21_decimal value_2 = {{0x7A666ED, 0x80FE96BF, 0x5E007B, 0x0}};
   int code = 0;
@@ -14494,7 +14904,8 @@ START_TEST(s21_is_equal_1447) {
 }
 
 START_TEST(s21_is_equal_1448) {
-  char *example = "( 1110606184839791776593692219 == 158556399392342035048 ) = False";
+  char *example =
+      "( 1110606184839791776593692219 == 158556399392342035048 ) = False";
   s21_decimal value_1 = {{0x45C9463B, 0xEB40C409, 0x396AC01, 0x0}};
   s21_decimal value_2 = {{0xF5824A68, 0x98697D2D, 0x8, 0x0}};
   int code = 0;
@@ -14524,7 +14935,9 @@ START_TEST(s21_is_equal_1450) {
 }
 
 START_TEST(s21_is_equal_1451) {
-  char *example = "( 1492006055209149092234390865 == 1097813049037033540901589532 ) = False";
+  char *example =
+      "( 1492006055209149092234390865 == 1097813049037033540901589532 ) = "
+      "False";
   s21_decimal value_1 = {{0x45F5ED51, 0x522AB828, 0x4D22892, 0x0}};
   s21_decimal value_2 = {{0x1F7AD21C, 0xA32F8DDD, 0x38C16F4, 0x0}};
   int code = 0;
@@ -14594,7 +15007,8 @@ START_TEST(s21_is_equal_1457) {
 }
 
 START_TEST(s21_is_equal_1458) {
-  char *example = "( 1581349029976876429796534270 == 0.782406919422021236488 ) = False";
+  char *example =
+      "( 1581349029976876429796534270 == 0.782406919422021236488 ) = False";
   s21_decimal value_1 = {{0xAEED67FE, 0xB01CC095, 0x51C0FAE, 0x0}};
   s21_decimal value_2 = {{0x45407708, 0x6A13C3D8, 0x2A, 0x150000}};
   int code = 0;
@@ -14644,7 +15058,8 @@ START_TEST(s21_is_equal_1462) {
 }
 
 START_TEST(s21_is_equal_1463) {
-  char *example = "( 1354231246380916583500286138 == 194637830069559594464 ) = False";
+  char *example =
+      "( 1354231246380916583500286138 == 194637830069559594464 ) = False";
   s21_decimal value_1 = {{0x970F08BA, 0xF7FC88A1, 0x460319E, 0x0}};
   s21_decimal value_2 = {{0x7CF18DE0, 0x8D247B36, 0xA, 0x0}};
   int code = 0;
@@ -14654,7 +15069,8 @@ START_TEST(s21_is_equal_1463) {
 }
 
 START_TEST(s21_is_equal_1464) {
-  char *example = "( -46724228.604507172738611833 == 0.0247329459357459 ) = False";
+  char *example =
+      "( -46724228.604507172738611833 == 0.0247329459357459 ) = False";
   s21_decimal value_1 = {{0xBED2BA79, 0x820EA25F, 0x26A63D, 0x80120000}};
   s21_decimal value_2 = {{0xE0914713, 0xE0F1, 0x0, 0x100000}};
   int code = 0;
@@ -14674,7 +15090,9 @@ START_TEST(s21_is_equal_1465) {
 }
 
 START_TEST(s21_is_equal_1466) {
-  char *example = "( 1821978048834811966394410520 == 1784198949982779679450752063 ) = False";
+  char *example =
+      "( 1821978048834811966394410520 == 1784198949982779679450752063 ) = "
+      "False";
   s21_decimal value_1 = {{0x962F2618, 0xF039AEFD, 0x5E31ADB, 0x0}};
   s21_decimal value_2 = {{0x396643F, 0xE2C94FE9, 0x5C3DAD2, 0x0}};
   int code = 0;
@@ -14694,7 +15112,8 @@ START_TEST(s21_is_equal_1467) {
 }
 
 START_TEST(s21_is_equal_1468) {
-  char *example = "( 1039902392497304471205940449 == -3115.179575985489183 ) = False";
+  char *example =
+      "( 1039902392497304471205940449 == -3115.179575985489183 ) = False";
   s21_decimal value_1 = {{0x47518CE1, 0xA7EA8A7F, 0x35C2FE5, 0x0}};
   s21_decimal value_2 = {{0xC62AC51F, 0x2B3B5751, 0x0, 0x800F0000}};
   int code = 0;
@@ -14744,7 +15163,9 @@ START_TEST(s21_is_equal_1472) {
 }
 
 START_TEST(s21_is_equal_1473) {
-  char *example = "( -2.8760608193774277491404202 == 1057168930070371611764259995 ) = False";
+  char *example =
+      "( -2.8760608193774277491404202 == 1057168930070371611764259995 ) = "
+      "False";
   s21_decimal value_1 = {{0xD4FBADAA, 0xB1BCA4C5, 0x17CA4B, 0x80190000}};
   s21_decimal value_2 = {{0x9CC2FC9B, 0x8887E641, 0x36A783A, 0x0}};
   int code = 0;
@@ -14784,7 +15205,8 @@ START_TEST(s21_is_equal_1476) {
 }
 
 START_TEST(s21_is_equal_1477) {
-  char *example = "( 12094742241281412683 == 1763464747200831726756570777 ) = False";
+  char *example =
+      "( 12094742241281412683 == 1763464747200831726756570777 ) = False";
   s21_decimal value_1 = {{0xDD7D8E4B, 0xA7D927FC, 0x0, 0x0}};
   s21_decimal value_2 = {{0xEAC02699, 0x8036DCBC, 0x5B2B42F, 0x0}};
   int code = 0;
@@ -14894,7 +15316,8 @@ START_TEST(s21_is_equal_1487) {
 }
 
 START_TEST(s21_is_equal_1488) {
-  char *example = "( 1080965442526495026670492827 == -24.03963951644003772 ) = False";
+  char *example =
+      "( 1080965442526495026670492827 == -24.03963951644003772 ) = False";
   s21_decimal value_1 = {{0x5C7C5C9B, 0xEF683FE, 0x37E2756, 0x0}};
   s21_decimal value_2 = {{0x2E95CDBC, 0x215C987A, 0x0, 0x80110000}};
   int code = 0;
@@ -14914,7 +15337,8 @@ START_TEST(s21_is_equal_1489) {
 }
 
 START_TEST(s21_is_equal_1490) {
-  char *example = "( 1081435701266992791958543950 == -41.40868592812318 ) = False";
+  char *example =
+      "( 1081435701266992791958543950 == -41.40868592812318 ) = False";
   s21_decimal value_1 = {{0x19FB5E4E, 0xD5FA751F, 0x37E8AEA, 0x0}};
   s21_decimal value_2 = {{0x1989411E, 0xEB619, 0x0, 0x800E0000}};
   int code = 0;
@@ -15004,7 +15428,9 @@ START_TEST(s21_is_equal_1498) {
 }
 
 START_TEST(s21_is_equal_1499) {
-  char *example = "( 1969859922761537509042555337 == -304032.63402936278799972765 ) = False";
+  char *example =
+      "( 1969859922761537509042555337 == -304032.63402936278799972765 ) = "
+      "False";
   s21_decimal value_1 = {{0x97A609C9, 0x6333D002, 0x65D6E10, 0x0}};
   s21_decimal value_2 = {{0x7099799D, 0x362BC950, 0x192624, 0x80140000}};
   int code = 0;
@@ -15014,7 +15440,8 @@ START_TEST(s21_is_equal_1499) {
 }
 
 START_TEST(s21_is_equal_1500) {
-  char *example = "( -57.930845400479562453083252 == 18639307236304031298597 ) = False";
+  char *example =
+      "( -57.930845400479562453083252 == 18639307236304031298597 ) = False";
   s21_decimal value_1 = {{0x6B25E474, 0x6BFEC2C5, 0x2FEB55, 0x80180000}};
   s21_decimal value_2 = {{0xE5BFB425, 0x7059C822, 0x3F2, 0x0}};
   int code = 0;
@@ -15064,7 +15491,9 @@ START_TEST(s21_is_equal_1504) {
 }
 
 START_TEST(s21_is_equal_1505) {
-  char *example = "( -90.806243874119356071241753 == 1741681806346562387310837097 ) = False";
+  char *example =
+      "( -90.806243874119356071241753 == 1741681806346562387310837097 ) = "
+      "False";
   s21_decimal value_1 = {{0xB7976819, 0x581C13F9, 0x4B1CF8, 0x80180000}};
   s21_decimal value_2 = {{0xDDA47D69, 0xE93565B5, 0x5A0AF77, 0x0}};
   int code = 0;
@@ -15144,7 +15573,9 @@ START_TEST(s21_is_equal_1512) {
 }
 
 START_TEST(s21_is_equal_1513) {
-  char *example = "( -5.3207951583626848701823619 == -7172984.4637717793528086430 ) = False";
+  char *example =
+      "( -5.3207951583626848701823619 == -7172984.4637717793528086430 ) = "
+      "False";
   s21_decimal value_1 = {{0x31CBA83, 0xD5C41B1B, 0x2C0338, 0x80190000}};
   s21_decimal value_2 = {{0x480CCCC3, 0x445643F6, 0x5EEF0, 0x80120000}};
   int code = 0;
@@ -15174,7 +15605,8 @@ START_TEST(s21_is_equal_1515) {
 }
 
 START_TEST(s21_is_equal_1516) {
-  char *example = "( 1734718005881721000837597682 == 15089052077939877850574 ) = False";
+  char *example =
+      "( 1734718005881721000837597682 == 15089052077939877850574 ) = False";
   s21_decimal value_1 = {{0x55A149F2, 0x8805849D, 0x59AECD3, 0x0}};
   s21_decimal value_2 = {{0x8031ADCE, 0xFAA9B7A9, 0x331, 0x0}};
   int code = 0;
@@ -15264,7 +15696,8 @@ START_TEST(s21_is_equal_1524) {
 }
 
 START_TEST(s21_is_equal_1525) {
-  char *example = "( -1608.672114121872208 == -52.519923212615841127697423 ) = False";
+  char *example =
+      "( -1608.672114121872208 == -52.519923212615841127697423 ) = False";
   s21_decimal value_1 = {{0xC24F9350, 0x165326C3, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xB3F58C0F, 0xBE070322, 0x2B7186, 0x80180000}};
   int code = 0;
@@ -15284,7 +15717,9 @@ START_TEST(s21_is_equal_1526) {
 }
 
 START_TEST(s21_is_equal_1527) {
-  char *example = "( -8.0946850683771434869850056 == 1469742070982064527647744359 ) = False";
+  char *example =
+      "( -8.0946850683771434869850056 == 1469742070982064527647744359 ) = "
+      "False";
   s21_decimal value_1 = {{0x1041FFC8, 0x91800E74, 0x42F529, 0x80190000}};
   s21_decimal value_2 = {{0xFB0CA167, 0x514E8EB3, 0x4BFBDFD, 0x0}};
   int code = 0;
@@ -15314,7 +15749,9 @@ START_TEST(s21_is_equal_1529) {
 }
 
 START_TEST(s21_is_equal_1530) {
-  char *example = "( 1468541658165604121577045172 == 1885384587176565135998858800 ) = False";
+  char *example =
+      "( 1468541658165604121577045172 == 1885384587176565135998858800 ) = "
+      "False";
   s21_decimal value_1 = {{0x2B18BCB4, 0xCEF54FA5, 0x4BEBFCA, 0x0}};
   s21_decimal value_2 = {{0x823A3630, 0x44F5D187, 0x6178DB7, 0x0}};
   int code = 0;
@@ -15394,7 +15831,8 @@ START_TEST(s21_is_equal_1537) {
 }
 
 START_TEST(s21_is_equal_1538) {
-  char *example = "( 1557241315231999940595926454 == -341251.772957081 ) = False";
+  char *example =
+      "( 1557241315231999940595926454 == -341251.772957081 ) = False";
   s21_decimal value_1 = {{0x40CDC5B6, 0xDA5A0251, 0x5081EAC, 0x0}};
   s21_decimal value_2 = {{0xDEB4C199, 0x1365D, 0x0, 0x80090000}};
   int code = 0;
@@ -15424,7 +15862,9 @@ START_TEST(s21_is_equal_1540) {
 }
 
 START_TEST(s21_is_equal_1541) {
-  char *example = "( 0.56648866865723007574700333 == -4.5871674640002368567539721 ) = False";
+  char *example =
+      "( 0.56648866865723007574700333 == -4.5871674640002368567539721 ) = "
+      "False";
   s21_decimal value_1 = {{0x11A7712D, 0x39EA6710, 0x2EDBDD, 0x1A0000}};
   s21_decimal value_2 = {{0xDE887809, 0x770B05BF, 0x25F1B4, 0x80190000}};
   int code = 0;
@@ -15504,7 +15944,8 @@ START_TEST(s21_is_equal_1548) {
 }
 
 START_TEST(s21_is_equal_1549) {
-  char *example = "( -6.656998977668438243399 == 14730872564713584277764 ) = False";
+  char *example =
+      "( -6.656998977668438243399 == 14730872564713584277764 ) = False";
   s21_decimal value_1 = {{0xB1CF3847, 0xE06B53E5, 0x168, 0x80150000}};
   s21_decimal value_2 = {{0x64A33904, 0x8FEC7619, 0x31E, 0x0}};
   int code = 0;
@@ -15534,7 +15975,8 @@ START_TEST(s21_is_equal_1551) {
 }
 
 START_TEST(s21_is_equal_1552) {
-  char *example = "( 10754356398938954868 == 1003260994725140670120348612 ) = False";
+  char *example =
+      "( 10754356398938954868 == 1003260994725140670120348612 ) = False";
   s21_decimal value_1 = {{0x72B49C74, 0x953F262A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCE7E4BC4, 0x80A70124, 0x33DE0C7, 0x0}};
   int code = 0;
@@ -15574,7 +16016,8 @@ START_TEST(s21_is_equal_1555) {
 }
 
 START_TEST(s21_is_equal_1556) {
-  char *example = "( -46.30404713747759 == 1409551812626283668474412665 ) = False";
+  char *example =
+      "( -46.30404713747759 == 1409551812626283668474412665 ) = False";
   s21_decimal value_1 = {{0x1C21152F, 0x107354, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xE09BBE79, 0xDFBF7049, 0x48DF434, 0x0}};
   int code = 0;
@@ -15634,7 +16077,8 @@ START_TEST(s21_is_equal_1561) {
 }
 
 START_TEST(s21_is_equal_1562) {
-  char *example = "( -2.1169572795070 == -86.570376362891538146951376 ) = False";
+  char *example =
+      "( -2.1169572795070 == -86.570376362891538146951376 ) = False";
   s21_decimal value_1 = {{0xE47C9513, 0x1EC, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x85E80D0, 0x819B5A32, 0x479BFD, 0x80180000}};
   int code = 0;
@@ -15814,7 +16258,8 @@ START_TEST(s21_is_equal_1579) {
 }
 
 START_TEST(s21_is_equal_1580) {
-  char *example = "( 1270287286675154425614276 == -95.1301074540656441 ) = False";
+  char *example =
+      "( 1270287286675154425614276 == -95.1301074540656441 ) = False";
   s21_decimal value_1 = {{0xD0540FC4, 0x696B608F, 0x10CFE, 0x0}};
   s21_decimal value_2 = {{0x7E717739, 0xD33B349, 0x0, 0x80100000}};
   int code = 0;
@@ -15934,7 +16379,8 @@ START_TEST(s21_is_equal_1591) {
 }
 
 START_TEST(s21_is_equal_1592) {
-  char *example = "( 12602983176444045 == -1.7699649543795727089104248 ) = False";
+  char *example =
+      "( 12602983176444045 == -1.7699649543795727089104248 ) = False";
   s21_decimal value_1 = {{0xAF57988D, 0x2CC658, 0x0, 0x0}};
   s21_decimal value_2 = {{0x13E97578, 0xECA437D7, 0xEA40B, 0x80190000}};
   int code = 0;
@@ -16014,7 +16460,8 @@ START_TEST(s21_is_equal_1599) {
 }
 
 START_TEST(s21_is_equal_1600) {
-  char *example = "( 3.68352592161E-11 == 1716019884850650560773969646 ) = False";
+  char *example =
+      "( 3.68352592161E-11 == 1716019884850650560773969646 ) = False";
   s21_decimal value_1 = {{0xC3868121, 0x55, 0x0, 0x160000}};
   s21_decimal value_2 = {{0x561B56EE, 0x5BF29116, 0x58B7558, 0x0}};
   int code = 0;
@@ -16054,7 +16501,8 @@ START_TEST(s21_is_equal_1603) {
 }
 
 START_TEST(s21_is_equal_1604) {
-  char *example = "( -9.1922580670036342836695678 == -5.94247063486777105598 ) = False";
+  char *example =
+      "( -9.1922580670036342836695678 == -5.94247063486777105598 ) = False";
   s21_decimal value_1 = {{0x3F32127E, 0x154914A4, 0x4C095D, 0x80190000}};
   s21_decimal value_2 = {{0xC599CBE, 0x36D5ABC9, 0x20, 0x80140000}};
   int code = 0;
@@ -16074,7 +16522,8 @@ START_TEST(s21_is_equal_1605) {
 }
 
 START_TEST(s21_is_equal_1606) {
-  char *example = "( 128761587680066895791879819 == 1314886089471780777018046141 ) = False";
+  char *example =
+      "( 128761587680066895791879819 == 1314886089471780777018046141 ) = False";
   s21_decimal value_1 = {{0x2F19768B, 0xA79F0B31, 0x6A8253, 0x0}};
   s21_decimal value_2 = {{0xB88B6BD, 0xBD22E518, 0x43FA5F5, 0x0}};
   int code = 0;
@@ -16234,7 +16683,8 @@ START_TEST(s21_is_equal_1621) {
 }
 
 START_TEST(s21_is_equal_1622) {
-  char *example = "( 1508349108100677121033231775 == 1533734641816753516191 ) = False";
+  char *example =
+      "( 1508349108100677121033231775 == 1533734641816753516191 ) = False";
   s21_decimal value_1 = {{0x6681DD9F, 0xFE53CFA2, 0x4DFAD58, 0x0}};
   s21_decimal value_2 = {{0x6E91AE9F, 0x24D80AA8, 0x53, 0x0}};
   int code = 0;
@@ -16404,7 +16854,8 @@ START_TEST(s21_is_equal_1638) {
 }
 
 START_TEST(s21_is_equal_1639) {
-  char *example = "( 1064205370594876359768 == 18066305488804444674455468 ) = False";
+  char *example =
+      "( 1064205370594876359768 == 18066305488804444674455468 ) = False";
   s21_decimal value_1 = {{0x828A8458, 0xB0D0FA27, 0x39, 0x0}};
   s21_decimal value_2 = {{0x9ED7F7AC, 0x620B76D0, 0xEF1B0, 0x0}};
   int code = 0;
@@ -16434,7 +16885,9 @@ START_TEST(s21_is_equal_1641) {
 }
 
 START_TEST(s21_is_equal_1642) {
-  char *example = "( 1045708662342335054715889599 == 0.06988793836094220590018288 ) = False";
+  char *example =
+      "( 1045708662342335054715889599 == 0.06988793836094220590018288 ) = "
+      "False";
   s21_decimal value_1 = {{0xE69927BF, 0x2CC7C9BB, 0x360FD6C, 0x0}};
   s21_decimal value_2 = {{0x54A6EF0, 0x45E3CEFE, 0x5C7EF, 0x1A0000}};
   int code = 0;
@@ -16454,7 +16907,8 @@ START_TEST(s21_is_equal_1643) {
 }
 
 START_TEST(s21_is_equal_1644) {
-  char *example = "( 1935041797245712451368511076 == 116140334844205865 ) = False";
+  char *example =
+      "( 1935041797245712451368511076 == 116140334844205865 ) = False";
   s21_decimal value_1 = {{0xEDA9E664, 0x56D8C50, 0x640A10A, 0x0}};
   s21_decimal value_2 = {{0xEA7BDB29, 0x19C9D04, 0x0, 0x0}};
   int code = 0;
@@ -16514,7 +16968,8 @@ START_TEST(s21_is_equal_1649) {
 }
 
 START_TEST(s21_is_equal_1650) {
-  char *example = "( 1058500563834926066863502553 == 11177923949272333898524269 ) = False";
+  char *example =
+      "( 1058500563834926066863502553 == 11177923949272333898524269 ) = False";
   s21_decimal value_1 = {{0xE088F4D9, 0x8B5A6278, 0x36B9236, 0x0}};
   s21_decimal value_2 = {{0xDE4CA66D, 0x78B32BE9, 0x93F04, 0x0}};
   int code = 0;
@@ -16584,7 +17039,9 @@ START_TEST(s21_is_equal_1656) {
 }
 
 START_TEST(s21_is_equal_1657) {
-  char *example = "( -63.420602568498242985968108 == -356.08169016072066184787548 ) = False";
+  char *example =
+      "( -63.420602568498242985968108 == -356.08169016072066184787548 ) = "
+      "False";
   s21_decimal value_1 = {{0x5344C1EC, 0xC116DFB7, 0x3475D5, 0x80180000}};
   s21_decimal value_2 = {{0xC3C4365C, 0xB5D4707C, 0x1D7452, 0x80170000}};
   int code = 0;
@@ -16614,7 +17071,8 @@ START_TEST(s21_is_equal_1659) {
 }
 
 START_TEST(s21_is_equal_1660) {
-  char *example = "( -3487263.0211083743697228161 == 159946866465633582 ) = False";
+  char *example =
+      "( -3487263.0211083743697228161 == 159946866465633582 ) = False";
   s21_decimal value_1 = {{0x8C06D181, 0x125EAB37, 0x1CD891, 0x80130000}};
   s21_decimal value_2 = {{0xDE9EF52E, 0x2383ED3, 0x0, 0x0}};
   int code = 0;
@@ -16764,7 +17222,8 @@ START_TEST(s21_is_equal_1674) {
 }
 
 START_TEST(s21_is_equal_1675) {
-  char *example = "( 11304930093170530 == -7040.0140898400117612421506 ) = False";
+  char *example =
+      "( 11304930093170530 == -7040.0140898400117612421506 ) = False";
   s21_decimal value_1 = {{0x2669FF62, 0x2829C6, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF252182, 0x49073A8B, 0x3A3BCF, 0x80160000}};
   int code = 0;
@@ -16854,7 +17313,8 @@ START_TEST(s21_is_equal_1683) {
 }
 
 START_TEST(s21_is_equal_1684) {
-  char *example = "( -3.0952930902841591 == 1981373344384673492659516261 ) = False";
+  char *example =
+      "( -3.0952930902841591 == 1981373344384673492659516261 ) = False";
   s21_decimal value_1 = {{0xD33898F7, 0x6DF786, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xEFAB365, 0x396E200E, 0x666F420, 0x0}};
   int code = 0;
@@ -16874,7 +17334,9 @@ START_TEST(s21_is_equal_1685) {
 }
 
 START_TEST(s21_is_equal_1686) {
-  char *example = "( 1494995245372551789660602910 == 1729401575891500744982889905 ) = False";
+  char *example =
+      "( 1494995245372551789660602910 == 1729401575891500744982889905 ) = "
+      "False";
   s21_decimal value_1 = {{0xBBC021E, 0xA4F8C6AA, 0x4D4A18E, 0x0}};
   s21_decimal value_2 = {{0x58EF85B1, 0x48B8E097, 0x5968707, 0x0}};
   int code = 0;
@@ -17064,7 +17526,8 @@ START_TEST(s21_is_equal_1704) {
 }
 
 START_TEST(s21_is_equal_1705) {
-  char *example = "( 112939216327877538589049 == 127039661542868156421133 ) = False";
+  char *example =
+      "( 112939216327877538589049 == 127039661542868156421133 ) = False";
   s21_decimal value_1 = {{0x597FA979, 0x727AB897, 0x17EA, 0x0}};
   s21_decimal value_2 = {{0xBDC4140D, 0xD5775043, 0x1AE6, 0x0}};
   int code = 0;
@@ -17104,7 +17567,9 @@ START_TEST(s21_is_equal_1708) {
 }
 
 START_TEST(s21_is_equal_1709) {
-  char *example = "( 1607915583946193636304540924 == 1916959111265569434030758952 ) = False";
+  char *example =
+      "( 1607915583946193636304540924 == 1916959111265569434030758952 ) = "
+      "False";
   s21_decimal value_1 = {{0xEE46D4FC, 0x76E22323, 0x532095E, 0x0}};
   s21_decimal value_2 = {{0xCC56DC28, 0xA66670A1, 0x631ABE1, 0x0}};
   int code = 0;
@@ -17204,7 +17669,9 @@ START_TEST(s21_is_equal_1718) {
 }
 
 START_TEST(s21_is_equal_1719) {
-  char *example = "( 1079622380738888574353659686 == 1175290568680072603845444524 ) = False";
+  char *example =
+      "( 1079622380738888574353659686 == 1175290568680072603845444524 ) = "
+      "False";
   s21_decimal value_1 = {{0x5321D726, 0x8876363F, 0x37D0AEE, 0x0}};
   s21_decimal value_2 = {{0xA3CEC3AC, 0x64AAE9DD, 0x3CC2D75, 0x0}};
   int code = 0;
@@ -17244,7 +17711,9 @@ START_TEST(s21_is_equal_1722) {
 }
 
 START_TEST(s21_is_equal_1723) {
-  char *example = "( -5.8157685882971423645325007 == 1535764260841690868684098932 ) = False";
+  char *example =
+      "( -5.8157685882971423645325007 == 1535764260841690868684098932 ) = "
+      "False";
   s21_decimal value_1 = {{0xCDE756CF, 0x7813D0BB, 0x301B5E, 0x80190000}};
   s21_decimal value_2 = {{0x7CAB0D74, 0x66C93735, 0x4F65ABB, 0x0}};
   int code = 0;
@@ -17254,7 +17723,8 @@ START_TEST(s21_is_equal_1723) {
 }
 
 START_TEST(s21_is_equal_1724) {
-  char *example = "( 1105939004582316116781082128 == 6.0243909091643848E-10 ) = False";
+  char *example =
+      "( 1105939004582316116781082128 == 6.0243909091643848E-10 ) = False";
   s21_decimal value_1 = {{0x6B28A610, 0x91FA9AB6, 0x392CFB1, 0x0}};
   s21_decimal value_2 = {{0x2149D1C8, 0xD60784, 0x0, 0x1A0000}};
   int code = 0;
@@ -17314,7 +17784,8 @@ START_TEST(s21_is_equal_1729) {
 }
 
 START_TEST(s21_is_equal_1730) {
-  char *example = "( 1717606186792459243988 == -44.256732938743249802955275 ) = False";
+  char *example =
+      "( 1717606186792459243988 == -44.256732938743249802955275 ) = False";
   s21_decimal value_1 = {{0xC1C511D4, 0x1C92FE9E, 0x5D, 0x0}};
   s21_decimal value_2 = {{0x1BD0A0B, 0x4CCA7E6C, 0x249BBA, 0x80180000}};
   int code = 0;
@@ -17344,7 +17815,8 @@ START_TEST(s21_is_equal_1732) {
 }
 
 START_TEST(s21_is_equal_1733) {
-  char *example = "( -93.48594674525720 == -493.35817019342900698917194 ) = False";
+  char *example =
+      "( -93.48594674525720 == -493.35817019342900698917194 ) = False";
   s21_decimal value_1 = {{0xEE78F09C, 0x3523F, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x5F99A94A, 0xFFEB6B07, 0x28CF43, 0x80170000}};
   int code = 0;
@@ -17384,7 +17856,8 @@ START_TEST(s21_is_equal_1736) {
 }
 
 START_TEST(s21_is_equal_1737) {
-  char *example = "( 1975770382637697816960670416 == 104713676173015013584 ) = False";
+  char *example =
+      "( 1975770382637697816960670416 == 104713676173015013584 ) = False";
   s21_decimal value_1 = {{0xA9739AD0, 0xF35D949, 0x66251A7, 0x0}};
   s21_decimal value_2 = {{0xB9D858D0, 0xAD31B5AE, 0x5, 0x0}};
   int code = 0;
@@ -17414,7 +17887,9 @@ START_TEST(s21_is_equal_1739) {
 }
 
 START_TEST(s21_is_equal_1740) {
-  char *example = "( -9239052197857.9959936492079 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -9239052197857.9959936492079 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x9E98A22F, 0x3B78D1C0, 0x4C6C74, 0x800D0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -17444,7 +17919,8 @@ START_TEST(s21_is_equal_1742) {
 }
 
 START_TEST(s21_is_equal_1743) {
-  char *example = "( 140972129754668789 == 1389253095413419826314876666 ) = False";
+  char *example =
+      "( 140972129754668789 == 1389253095413419826314876666 ) = False";
   s21_decimal value_1 = {{0xB541DEF5, 0x1F4D567, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF1D616FA, 0x357F31AE, 0x47D29C9, 0x0}};
   int code = 0;
@@ -17504,7 +17980,9 @@ START_TEST(s21_is_equal_1748) {
 }
 
 START_TEST(s21_is_equal_1749) {
-  char *example = "( -1.4722547734834844627422914 == 0.43599617957293748004951505 ) = False";
+  char *example =
+      "( -1.4722547734834844627422914 == 0.43599617957293748004951505 ) = "
+      "False";
   s21_decimal value_1 = {{0x3284CEC2, 0xE9745751, 0xC2D9E, 0x80190000}};
   s21_decimal value_2 = {{0xE6ED95D1, 0x6835A7B, 0x241094, 0x1A0000}};
   int code = 0;
@@ -17534,7 +18012,9 @@ START_TEST(s21_is_equal_1751) {
 }
 
 START_TEST(s21_is_equal_1752) {
-  char *example = "( 1974960195758103752565132718 == -6145.5926992285605373912980 ) = False";
+  char *example =
+      "( 1974960195758103752565132718 == -6145.5926992285605373912980 ) = "
+      "False";
   s21_decimal value_1 = {{0x79B50DAE, 0xBD9C548B, 0x661A616, 0x0}};
   s21_decimal value_2 = {{0xC58390C2, 0x3F6EE2C3, 0x51561, 0x80150000}};
   int code = 0;
@@ -17684,7 +18164,8 @@ START_TEST(s21_is_equal_1766) {
 }
 
 START_TEST(s21_is_equal_1767) {
-  char *example = "( 1.60802129368997075808925604 == 175021937336617830 ) = False";
+  char *example =
+      "( 1.60802129368997075808925604 == 175021937336617830 ) = False";
   s21_decimal value_1 = {{0x1563B7A4, 0xE66D7BD2, 0x85032C, 0x1A0000}};
   s21_decimal value_2 = {{0x52D98B66, 0x26DCD86, 0x0, 0x0}};
   int code = 0;
@@ -17704,7 +18185,9 @@ START_TEST(s21_is_equal_1768) {
 }
 
 START_TEST(s21_is_equal_1769) {
-  char *example = "( 0.01749152327779593424872219 == 1223867767963779606560267625 ) = False";
+  char *example =
+      "( 0.01749152327779593424872219 == 1223867767963779606560267625 ) = "
+      "False";
   s21_decimal value_1 = {{0x1536231B, 0xBCD93553, 0x17265, 0x1A0000}};
   s21_decimal value_2 = {{0xC6465D69, 0xA49FF511, 0x3F45C14, 0x0}};
   int code = 0;
@@ -17734,7 +18217,8 @@ START_TEST(s21_is_equal_1771) {
 }
 
 START_TEST(s21_is_equal_1772) {
-  char *example = "( 1223826215836054 == 1579666863272300235150145481 ) = False";
+  char *example =
+      "( 1223826215836054 == 1579666863272300235150145481 ) = False";
   s21_decimal value_1 = {{0x3EDC9996, 0x45910, 0x0, 0x0}};
   s21_decimal value_2 = {{0x85BD37C9, 0x3F8761B5, 0x51AAB78, 0x0}};
   int code = 0;
@@ -17744,7 +18228,8 @@ START_TEST(s21_is_equal_1772) {
 }
 
 START_TEST(s21_is_equal_1773) {
-  char *example = "( 199576979556330256174897082 == 0.677986544276820 ) = False";
+  char *example =
+      "( 199576979556330256174897082 == 0.677986544276820 ) = False";
   s21_decimal value_1 = {{0xD38757BA, 0xBD9B7661, 0xA51611, 0x0}};
   s21_decimal value_2 = {{0x9AB6A222, 0x3DA9, 0x0, 0xE0000}};
   int code = 0;
@@ -17794,7 +18279,8 @@ START_TEST(s21_is_equal_1777) {
 }
 
 START_TEST(s21_is_equal_1778) {
-  char *example = "( 1130450504663846891562287862 == -521.47696565860321022 ) = False";
+  char *example =
+      "( 1130450504663846891562287862 == -521.47696565860321022 ) = False";
   s21_decimal value_1 = {{0x98F142F6, 0xA6F62DA6, 0x3A71634, 0x0}};
   s21_decimal value_2 = {{0x7EF646FE, 0xD3B1D5BC, 0x2, 0x80110000}};
   int code = 0;
@@ -17804,7 +18290,9 @@ START_TEST(s21_is_equal_1778) {
 }
 
 START_TEST(s21_is_equal_1779) {
-  char *example = "( -86.090843504135522346244581 == 1258428975651655853918323920 ) = False";
+  char *example =
+      "( -86.090843504135522346244581 == 1258428975651655853918323920 ) = "
+      "False";
   s21_decimal value_1 = {{0xB8A699E5, 0xFA589D92, 0x473671, 0x80180000}};
   s21_decimal value_2 = {{0xCBF704D0, 0x774C8A4F, 0x410F2B3, 0x0}};
   int code = 0;
@@ -17984,7 +18472,9 @@ START_TEST(s21_is_equal_1796) {
 }
 
 START_TEST(s21_is_equal_1797) {
-  char *example = "( 1404883726648039404517905872 == 1034991246944832859742717759 ) = False";
+  char *example =
+      "( 1404883726648039404517905872 == 1034991246944832859742717759 ) = "
+      "False";
   s21_decimal value_1 = {{0x3E36D5D0, 0x6D12B6A2, 0x48A17B3, 0x0}};
   s21_decimal value_2 = {{0xD28CC73F, 0xEC0BB1E2, 0x3581FEB, 0x0}};
   int code = 0;
@@ -18014,7 +18504,8 @@ START_TEST(s21_is_equal_1799) {
 }
 
 START_TEST(s21_is_equal_1800) {
-  char *example = "( 186427327712609361280669747 == -4.831597223345120 ) = False";
+  char *example =
+      "( 186427327712609361280669747 == -4.831597223345120 ) = False";
   s21_decimal value_1 = {{0x625C9833, 0xAF92CF9C, 0x9A3585, 0x0}};
   s21_decimal value_2 = {{0x639E9930, 0x1B76E, 0x0, 0x800E0000}};
   int code = 0;
@@ -18034,7 +18525,8 @@ START_TEST(s21_is_equal_1801) {
 }
 
 START_TEST(s21_is_equal_1802) {
-  char *example = "( 16845549086484267911 == 1860458419940888234513124513 ) = False";
+  char *example =
+      "( 16845549086484267911 == 1860458419940888234513124513 ) = False";
   s21_decimal value_1 = {{0x824D0387, 0xE9C769A4, 0x0, 0x0}};
   s21_decimal value_2 = {{0x466BCCA1, 0x9338F6E, 0x602EF65, 0x0}};
   int code = 0;
@@ -18044,7 +18536,9 @@ START_TEST(s21_is_equal_1802) {
 }
 
 START_TEST(s21_is_equal_1803) {
-  char *example = "( -2.1236306809019631319604500 == -97.149577331855152169390716 ) = False";
+  char *example =
+      "( -2.1236306809019631319604500 == -97.149577331855152169390716 ) = "
+      "False";
   s21_decimal value_1 = {{0xF33B460D, 0x3998E046, 0x2CF8, 0x80170000}};
   s21_decimal value_2 = {{0x8A74927C, 0x23D491A1, 0x505C39, 0x80180000}};
   int code = 0;
@@ -18134,7 +18628,8 @@ START_TEST(s21_is_equal_1811) {
 }
 
 START_TEST(s21_is_equal_1812) {
-  char *example = "( -49829.2755614692 == 0.65671102636545531906945011 ) = False";
+  char *example =
+      "( -49829.2755614692 == 0.65671102636545531906945011 ) = False";
   s21_decimal value_1 = {{0xD2B14BE4, 0x1C531, 0x0, 0x800A0000}};
   s21_decimal value_2 = {{0xE4EFF3, 0x9B7EC457, 0x365265, 0x1A0000}};
   int code = 0;
@@ -18144,7 +18639,9 @@ START_TEST(s21_is_equal_1812) {
 }
 
 START_TEST(s21_is_equal_1813) {
-  char *example = "( 1597280369326154345189057915 == 1670918433794493300931346701 ) = False";
+  char *example =
+      "( 1597280369326154345189057915 == 1670918433794493300931346701 ) = "
+      "False";
   s21_decimal value_1 = {{0x4215A57B, 0x53188B6B, 0x5293D46, 0x0}};
   s21_decimal value_2 = {{0x5A54C10D, 0xCC5D9B05, 0x56626BD, 0x0}};
   int code = 0;
@@ -18234,7 +18731,8 @@ START_TEST(s21_is_equal_1821) {
 }
 
 START_TEST(s21_is_equal_1822) {
-  char *example = "( -9.92635664368378364137029 == 0.73382252741264050 ) = False";
+  char *example =
+      "( -9.92635664368378364137029 == 0.73382252741264050 ) = False";
   s21_decimal value_1 = {{0x9718E45, 0xE31EDDE4, 0xD232, 0x80170000}};
   s21_decimal value_2 = {{0xB6BF0045, 0x1A1213, 0x0, 0x100000}};
   int code = 0;
@@ -18274,7 +18772,8 @@ START_TEST(s21_is_equal_1825) {
 }
 
 START_TEST(s21_is_equal_1826) {
-  char *example = "( 1578457233055651944716596581 == -66.18467256954991008569 ) = False";
+  char *example =
+      "( 1578457233055651944716596581 == -66.18467256954991008569 ) = False";
   s21_decimal value_1 = {{0x4B887565, 0x100E67A6, 0x519AB52, 0x0}};
   s21_decimal value_2 = {{0xE439DB39, 0xC9AF280E, 0x166, 0x80140000}};
   int code = 0;
@@ -18314,7 +18813,8 @@ START_TEST(s21_is_equal_1829) {
 }
 
 START_TEST(s21_is_equal_1830) {
-  char *example = "( 1113172966201889636167 == 1560702035214413009475008447 ) = False";
+  char *example =
+      "( 1113172966201889636167 == 1560702035214413009475008447 ) = False";
   s21_decimal value_1 = {{0xDF8BBF47, 0x5860D2EA, 0x3C, 0x0}};
   s21_decimal value_2 = {{0x7666F7BF, 0xDBEE06B4, 0x50AFB82, 0x0}};
   int code = 0;
@@ -18344,7 +18844,9 @@ START_TEST(s21_is_equal_1832) {
 }
 
 START_TEST(s21_is_equal_1833) {
-  char *example = "( 1002551586890097096461903171 == -6.9366707007654877648338601 ) = False";
+  char *example =
+      "( 1002551586890097096461903171 == -6.9366707007654877648338601 ) = "
+      "False";
   s21_decimal value_1 = {{0x617FE543, 0x6D3F98CF, 0x33D4A8E, 0x0}};
   s21_decimal value_2 = {{0xDF33EA9, 0xB8C7712A, 0x3960F8, 0x80190000}};
   int code = 0;
@@ -18364,7 +18866,9 @@ START_TEST(s21_is_equal_1834) {
 }
 
 START_TEST(s21_is_equal_1835) {
-  char *example = "( 1671638139082788533360869578 == -2244.1184331123155360617142 ) = False";
+  char *example =
+      "( 1671638139082788533360869578 == -2244.1184331123155360617142 ) = "
+      "False";
   s21_decimal value_1 = {{0x1F7F40CA, 0x19A4097E, 0x566BF25, 0x0}};
   s21_decimal value_2 = {{0xBAD12B6, 0xA4DAA2A, 0x12901B, 0x80160000}};
   int code = 0;
@@ -18414,7 +18918,9 @@ START_TEST(s21_is_equal_1839) {
 }
 
 START_TEST(s21_is_equal_1840) {
-  char *example = "( -32.292726100426596486361541 == 1275260488642646056971677820 ) = False";
+  char *example =
+      "( -32.292726100426596486361541 == 1275260488642646056971677820 ) = "
+      "False";
   s21_decimal value_1 = {{0xDDAA31C5, 0x308EBE57, 0x1AB640, 0x80180000}};
   s21_decimal value_2 = {{0x223A307C, 0x9D128A1D, 0x41EDEE9, 0x0}};
   int code = 0;
@@ -18424,7 +18930,9 @@ START_TEST(s21_is_equal_1840) {
 }
 
 START_TEST(s21_is_equal_1841) {
-  char *example = "( 1852614082858662713769822250 == -5.7187711058047065201050502 ) = False";
+  char *example =
+      "( 1852614082858662713769822250 == -5.7187711058047065201050502 ) = "
+      "False";
   s21_decimal value_1 = {{0xA1E7882A, 0xABAE6A68, 0x5FC724A, 0x0}};
   s21_decimal value_2 = {{0xEC2C0386, 0x74736E7, 0x2F4DF8, 0x80190000}};
   int code = 0;
@@ -18534,7 +19042,9 @@ START_TEST(s21_is_equal_1851) {
 }
 
 START_TEST(s21_is_equal_1852) {
-  char *example = "( 1453527734182663943279382277 == -73.198284014356886050763188 ) = False";
+  char *example =
+      "( 1453527734182663943279382277 == -73.198284014356886050763188 ) = "
+      "False";
   s21_decimal value_1 = {{0x85888F05, 0x5BC2A60D, 0x4B25478, 0x0}};
   s21_decimal value_2 = {{0xD0D2F1B4, 0xED72879D, 0x3C8C56, 0x80180000}};
   int code = 0;
@@ -18574,7 +19084,8 @@ START_TEST(s21_is_equal_1855) {
 }
 
 START_TEST(s21_is_equal_1856) {
-  char *example = "( 1144970994307876532647987576 == 10185127113792593 ) = False";
+  char *example =
+      "( 1144970994307876532647987576 == 10185127113792593 ) = False";
   s21_decimal value_1 = {{0x37B18978, 0xF91B6748, 0x3B31909, 0x0}};
   s21_decimal value_2 = {{0xB39C1C51, 0x242F51, 0x0, 0x0}};
   int code = 0;
@@ -18624,7 +19135,8 @@ START_TEST(s21_is_equal_1860) {
 }
 
 START_TEST(s21_is_equal_1861) {
-  char *example = "( 1162201540566258274192598365 == 1461898504877230 ) = False";
+  char *example =
+      "( 1162201540566258274192598365 == 1461898504877230 ) = False";
   s21_decimal value_1 = {{0x20F0255D, 0xC1E4C2D4, 0x3C159BF, 0x0}};
   s21_decimal value_2 = {{0xC514B4AE, 0x53196, 0x0, 0x0}};
   int code = 0;
@@ -18634,7 +19146,8 @@ START_TEST(s21_is_equal_1861) {
 }
 
 START_TEST(s21_is_equal_1862) {
-  char *example = "( 12615731407446752222 == 1317757002985735500251322846 ) = False";
+  char *example =
+      "( 12615731407446752222 == 1317757002985735500251322846 ) = False";
   s21_decimal value_1 = {{0xC29A3BDE, 0xAF1414DF, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE1E0D9DE, 0x45B29336, 0x44205E6, 0x0}};
   int code = 0;
@@ -18644,7 +19157,8 @@ START_TEST(s21_is_equal_1862) {
 }
 
 START_TEST(s21_is_equal_1863) {
-  char *example = "( 1658871277660421448125515946 == 1692001109378896683032 ) = False";
+  char *example =
+      "( 1658871277660421448125515946 == 1692001109378896683032 ) = False";
   s21_decimal value_1 = {{0x252608AA, 0x27D97170, 0x55C2FA8, 0x0}};
   s21_decimal value_2 = {{0xBFFEE018, 0xB93B7C5F, 0x5B, 0x0}};
   int code = 0;
@@ -18724,7 +19238,8 @@ START_TEST(s21_is_equal_1870) {
 }
 
 START_TEST(s21_is_equal_1871) {
-  char *example = "( 193621547129064531999393989 == -16.75891089889360 ) = False";
+  char *example =
+      "( 193621547129064531999393989 == -16.75891089889360 ) = False";
   s21_decimal value_1 = {{0x24B908C5, 0x1A13F184, 0xA028F5, 0x0}};
   s21_decimal value_2 = {{0xE14F3C08, 0x986B, 0x0, 0x800D0000}};
   int code = 0;
@@ -18754,7 +19269,8 @@ START_TEST(s21_is_equal_1873) {
 }
 
 START_TEST(s21_is_equal_1874) {
-  char *example = "( 1698570495369371719802138072 == 141619811587413937 ) = False";
+  char *example =
+      "( 1698570495369371719802138072 == 141619811587413937 ) = False";
   s21_decimal value_1 = {{0x817DADD8, 0xF59B5B7, 0x57D064B, 0x0}};
   s21_decimal value_2 = {{0xE2D357B1, 0x1F72277, 0x0, 0x0}};
   int code = 0;
@@ -18764,7 +19280,8 @@ START_TEST(s21_is_equal_1874) {
 }
 
 START_TEST(s21_is_equal_1875) {
-  char *example = "( 4.9286929747139647E-10 == 13561767963629492793077 ) = False";
+  char *example =
+      "( 4.9286929747139647E-10 == 13561767963629492793077 ) = False";
   s21_decimal value_1 = {{0x93A5DC3F, 0xAF1A33, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x489A6EF5, 0x2F568D98, 0x2DF, 0x0}};
   int code = 0;
@@ -18834,7 +19351,8 @@ START_TEST(s21_is_equal_1881) {
 }
 
 START_TEST(s21_is_equal_1882) {
-  char *example = "( 13577441808512290719 == 1731632210159860226149169523 ) = False";
+  char *example =
+      "( 13577441808512290719 == 1731632210159860226149169523 ) = False";
   s21_decimal value_1 = {{0x72E98F9F, 0xBC6CC363, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE75DB973, 0x35C67AAB, 0x5985F62, 0x0}};
   int code = 0;
@@ -18894,7 +19412,9 @@ START_TEST(s21_is_equal_1887) {
 }
 
 START_TEST(s21_is_equal_1888) {
-  char *example = "( 0.66610591762976125860342704 == 0.12178063128064707474040006 ) = False";
+  char *example =
+      "( 0.66610591762976125860342704 == 0.12178063128064707474040006 ) = "
+      "False";
   s21_decimal value_1 = {{0xE51E6BB0, 0x6A3D523D, 0x371957, 0x1A0000}};
   s21_decimal value_2 = {{0xCE1D24C6, 0x20005F1A, 0xA12CE, 0x1A0000}};
   int code = 0;
@@ -18914,7 +19434,9 @@ START_TEST(s21_is_equal_1889) {
 }
 
 START_TEST(s21_is_equal_1890) {
-  char *example = "( -8.2999926821289928802143906 == 1277182157622857926676004645 ) = False";
+  char *example =
+      "( -8.2999926821289928802143906 == 1277182157622857926676004645 ) = "
+      "False";
   s21_decimal value_1 = {{0x8FF38EA2, 0xC7D6FF3, 0x44A7EB, 0x80190000}};
   s21_decimal value_2 = {{0x4233F25, 0x7F6AAA32, 0x42075D7, 0x0}};
   int code = 0;
@@ -18934,7 +19456,8 @@ START_TEST(s21_is_equal_1891) {
 }
 
 START_TEST(s21_is_equal_1892) {
-  char *example = "( 15567445047099494 == -6.6896739719803673418964403 ) = False";
+  char *example =
+      "( 15567445047099494 == -6.6896739719803673418964403 ) = False";
   s21_decimal value_1 = {{0x4017C066, 0x374E82, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7DD49DB3, 0x86DDB40B, 0x3755EF, 0x80190000}};
   int code = 0;
@@ -18974,7 +19497,8 @@ START_TEST(s21_is_equal_1895) {
 }
 
 START_TEST(s21_is_equal_1896) {
-  char *example = "( 109070404960976971868845578 == -3.9419721103779027120598902 ) = False";
+  char *example =
+      "( 109070404960976971868845578 == -3.9419721103779027120598902 ) = False";
   s21_decimal value_1 = {{0x7C22B60A, 0x80292C43, 0x5A388E, 0x0}};
   s21_decimal value_2 = {{0x62CAF76, 0x5CEBE583, 0x209B73, 0x80190000}};
   int code = 0;
@@ -18984,7 +19508,9 @@ START_TEST(s21_is_equal_1896) {
 }
 
 START_TEST(s21_is_equal_1897) {
-  char *example = "( 1907057842657248036251499368 == 1176845891495265652259182344 ) = False";
+  char *example =
+      "( 1907057842657248036251499368 == 1176845891495265652259182344 ) = "
+      "False";
   s21_decimal value_1 = {{0xC59FFB68, 0xCDA02DB4, 0x6297B34, 0x0}};
   s21_decimal value_2 = {{0x9F885708, 0x9CAB667F, 0x3CD76CF, 0x0}};
   int code = 0;
@@ -19014,7 +19540,9 @@ START_TEST(s21_is_equal_1899) {
 }
 
 START_TEST(s21_is_equal_1900) {
-  char *example = "( 1670003487082466244526637261 == 1400813214971321688016151330 ) = False";
+  char *example =
+      "( 1670003487082466244526637261 == 1400813214971321688016151330 ) = "
+      "False";
   s21_decimal value_1 = {{0x1C1480CD, 0x700A69DA, 0x56564FE, 0x0}};
   s21_decimal value_2 = {{0x388DE322, 0x8BC11F08, 0x486B9BC, 0x0}};
   int code = 0;
@@ -19034,7 +19562,8 @@ START_TEST(s21_is_equal_1901) {
 }
 
 START_TEST(s21_is_equal_1902) {
-  char *example = "( -4.1769418941017915448265675 == -343.4350054280330775746249 ) = False";
+  char *example =
+      "( -4.1769418941017915448265675 == -343.4350054280330775746249 ) = False";
   s21_decimal value_1 = {{0xCA7A8BCB, 0xBCEB4D96, 0x228D04, 0x80190000}};
   s21_decimal value_2 = {{0x8325D6C9, 0x7D4FA187, 0x2D740, 0x80160000}};
   int code = 0;
@@ -19244,7 +19773,8 @@ START_TEST(s21_is_equal_1922) {
 }
 
 START_TEST(s21_is_equal_1923) {
-  char *example = "( 1991803981125276174634198251 == 6.0951782136632228E-10 ) = False";
+  char *example =
+      "( 1991803981125276174634198251 == 6.0951782136632228E-10 ) = False";
   s21_decimal value_1 = {{0x48F824EB, 0x2CD1103D, 0x66F94E6, 0x0}};
   s21_decimal value_2 = {{0xAAAE53A4, 0xD88B52, 0x0, 0x1A0000}};
   int code = 0;
@@ -19314,7 +19844,8 @@ START_TEST(s21_is_equal_1929) {
 }
 
 START_TEST(s21_is_equal_1930) {
-  char *example = "( 1165844996741901819481911131 == 15250244021549052283891 ) = False";
+  char *example =
+      "( 1165844996741901819481911131 == 15250244021549052283891 ) = False";
   s21_decimal value_1 = {{0xDFF6F5B, 0xE996147D, 0x3C45D47, 0x0}};
   s21_decimal value_2 = {{0xD7D54BF3, 0xB7A68A57, 0x33A, 0x0}};
   int code = 0;
@@ -19324,7 +19855,9 @@ START_TEST(s21_is_equal_1930) {
 }
 
 START_TEST(s21_is_equal_1931) {
-  char *example = "( -7699528.7939494391808044394 == 1807054594643050853192109523 ) = False";
+  char *example =
+      "( -7699528.7939494391808044394 == 1807054594643050853192109523 ) = "
+      "False";
   s21_decimal value_1 = {{0xB12CAD6A, 0xEC39D330, 0x3FB062, 0x80130000}};
   s21_decimal value_2 = {{0xD7CF0DD3, 0xDD97A942, 0x5D6C2B1, 0x0}};
   int code = 0;
@@ -19414,7 +19947,9 @@ START_TEST(s21_is_equal_1939) {
 }
 
 START_TEST(s21_is_equal_1940) {
-  char *example = "( -3887.8340026346260446761911 == 1364722159125128729309995967 ) = False";
+  char *example =
+      "( -3887.8340026346260446761911 == 1364722159125128729309995967 ) = "
+      "False";
   s21_decimal value_1 = {{0x86A6D3B7, 0x934A84A, 0x2028CF, 0x80160000}};
   s21_decimal value_2 = {{0x4013E3BF, 0x7CF5FFAB, 0x468DF28, 0x0}};
   int code = 0;
@@ -19554,7 +20089,9 @@ START_TEST(s21_is_equal_1953) {
 }
 
 START_TEST(s21_is_equal_1954) {
-  char *example = "( 1569256480762119008961707930 == -4.8412043940713750425489317 ) = False";
+  char *example =
+      "( 1569256480762119008961707930 == -4.8412043940713750425489317 ) = "
+      "False";
   s21_decimal value_1 = {{0xA23C3F9A, 0x480DEA53, 0x5120EFC, 0x0}};
   s21_decimal value_2 = {{0x98BBCFA5, 0x2926DD59, 0x280BA6, 0x80190000}};
   int code = 0;
@@ -19594,7 +20131,8 @@ START_TEST(s21_is_equal_1957) {
 }
 
 START_TEST(s21_is_equal_1958) {
-  char *example = "( -16.311525461830255928945015 == 188051377300549781 ) = False";
+  char *example =
+      "( -16.311525461830255928945015 == 188051377300549781 ) = False";
   s21_decimal value_1 = {{0x8BA02977, 0x912E58D5, 0xD7E19, 0x80180000}};
   s21_decimal value_2 = {{0x3785B095, 0x29C17BB, 0x0, 0x0}};
   int code = 0;
@@ -19604,7 +20142,8 @@ START_TEST(s21_is_equal_1958) {
 }
 
 START_TEST(s21_is_equal_1959) {
-  char *example = "( 0.8330270991837907146 == -1627.6268559741071071791227 ) = False";
+  char *example =
+      "( 0.8330270991837907146 == -1627.6268559741071071791227 ) = False";
   s21_decimal value_1 = {{0xD73D48CA, 0x739B1154, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x2C9E487B, 0x496005CB, 0xD76A2, 0x80160000}};
   int code = 0;
@@ -19614,7 +20153,9 @@ START_TEST(s21_is_equal_1959) {
 }
 
 START_TEST(s21_is_equal_1960) {
-  char *example = "( 1705285349546950327352858394 == 1840540258181094135668092983 ) = False";
+  char *example =
+      "( 1705285349546950327352858394 == 1840540258181094135668092983 ) = "
+      "False";
   s21_decimal value_1 = {{0x181A971A, 0x8C98B46, 0x5829438, 0x0}};
   s21_decimal value_2 = {{0xA7AF3037, 0x52C6FA8D, 0x5F2758F, 0x0}};
   int code = 0;
@@ -19704,7 +20245,8 @@ START_TEST(s21_is_equal_1968) {
 }
 
 START_TEST(s21_is_equal_1969) {
-  char *example = "( 0.964840059340880 == 1706151151370374174527485957 ) = False";
+  char *example =
+      "( 0.964840059340880 == 1706151151370374174527485957 ) = False";
   s21_decimal value_1 = {{0x6EE67408, 0x57C0, 0x0, 0xE0000}};
   s21_decimal value_2 = {{0x690C7805, 0x3EC6C09A, 0x5834B8F, 0x0}};
   int code = 0;
@@ -19764,7 +20306,9 @@ START_TEST(s21_is_equal_1974) {
 }
 
 START_TEST(s21_is_equal_1975) {
-  char *example = "( 1632867723222019475636904719 == 1511002429682021659438151226 ) = False";
+  char *example =
+      "( 1632867723222019475636904719 == 1511002429682021659438151226 ) = "
+      "False";
   s21_decimal value_1 = {{0x81DA630F, 0xA51AB2EE, 0x546AD30, 0x0}};
   s21_decimal value_2 = {{0x7AC2F63A, 0xD8381C42, 0x4E1DF35, 0x0}};
   int code = 0;
@@ -19794,7 +20338,8 @@ START_TEST(s21_is_equal_1977) {
 }
 
 START_TEST(s21_is_equal_1978) {
-  char *example = "( 0.50930294937561656055690394 == 1373054490997137 ) = False";
+  char *example =
+      "( 0.50930294937561656055690394 == 1373054490997137 ) = False";
   s21_decimal value_1 = {{0x4851F49A, 0xD22204EA, 0x2A20E8, 0x1A0000}};
   s21_decimal value_2 = {{0x29317191, 0x4E0C9, 0x0, 0x0}};
   int code = 0;
@@ -19814,7 +20359,9 @@ START_TEST(s21_is_equal_1979) {
 }
 
 START_TEST(s21_is_equal_1980) {
-  char *example = "( 1757182691910413143751050828 == 1610290986411440770182884287 ) = False";
+  char *example =
+      "( 1757182691910413143751050828 == 1610290986411440770182884287 ) = "
+      "False";
   s21_decimal value_1 = {{0x55CCC64C, 0x99E59C71, 0x5AD81E8, 0x0}};
   s21_decimal value_2 = {{0xCB452BBF, 0x4A4113C2, 0x5340061, 0x0}};
   int code = 0;
@@ -19854,7 +20401,9 @@ START_TEST(s21_is_equal_1983) {
 }
 
 START_TEST(s21_is_equal_1984) {
-  char *example = "( 1253964170141627263827683484 == 1726531570474797767430424256 ) = False";
+  char *example =
+      "( 1253964170141627263827683484 == 1726531570474797767430424256 ) = "
+      "False";
   s21_decimal value_1 = {{0x7EDDA89C, 0xDFD3E0BB, 0x40D413D, 0x0}};
   s21_decimal value_2 = {{0xC45EC6C0, 0xFA8AB9A0, 0x5942747, 0x0}};
   int code = 0;
@@ -19914,7 +20463,8 @@ START_TEST(s21_is_equal_1989) {
 }
 
 START_TEST(s21_is_equal_1990) {
-  char *example = "( 1377118069131581329085303 == 1070017848632309864967780741 ) = False";
+  char *example =
+      "( 1377118069131581329085303 == 1070017848632309864967780741 ) = False";
   s21_decimal value_1 = {{0x36999377, 0xB85986F0, 0x1239D, 0x0}};
   s21_decimal value_2 = {{0xB413985, 0xCDE4B0EE, 0x3751917, 0x0}};
   int code = 0;
@@ -20064,7 +20614,8 @@ START_TEST(s21_is_equal_2004) {
 }
 
 START_TEST(s21_is_equal_2005) {
-  char *example = "( 1767725418722612470057862454 == 164467022364921819178336 ) = False";
+  char *example =
+      "( 1767725418722612470057862454 == 164467022364921819178336 ) = False";
   s21_decimal value_1 = {{0x97790536, 0xF7832B1F, 0x5B63A6A, 0x0}};
   s21_decimal value_2 = {{0x1E622560, 0xC6701144, 0x22D3, 0x0}};
   int code = 0;
@@ -20084,7 +20635,8 @@ START_TEST(s21_is_equal_2006) {
 }
 
 START_TEST(s21_is_equal_2007) {
-  char *example = "( 1005442131756807716514744425 == -64523587.80992401 ) = False";
+  char *example =
+      "( 1005442131756807716514744425 == -64523587.80992401 ) = False";
   s21_decimal value_1 = {{0xD78EC869, 0x2D8EBF0D, 0x33FAEA7, 0x0}};
   s21_decimal value_2 = {{0xD91ABB91, 0x16EC62, 0x0, 0x80080000}};
   int code = 0;
@@ -20094,7 +20646,9 @@ START_TEST(s21_is_equal_2007) {
 }
 
 START_TEST(s21_is_equal_2008) {
-  char *example = "( 1326716681646187602901464638 == 1940728467775226307912986075 ) = False";
+  char *example =
+      "( 1326716681646187602901464638 == 1940728467775226307912986075 ) = "
+      "False";
   s21_decimal value_1 = {{0x5FB7F63E, 0x6CF9385E, 0x4496F2F, 0x0}};
   s21_decimal value_2 = {{0xC61CEDDB, 0xC5E956B, 0x645553D, 0x0}};
   int code = 0;
@@ -20144,7 +20698,8 @@ START_TEST(s21_is_equal_2012) {
 }
 
 START_TEST(s21_is_equal_2013) {
-  char *example = "( 1694681535808978430573604 == 0.77024112150737840321 ) = False";
+  char *example =
+      "( 1694681535808978430573604 == 0.77024112150737840321 ) = False";
   s21_decimal value_1 = {{0xC295BC24, 0xDEC17AAC, 0x166DC, 0x0}};
   s21_decimal value_2 = {{0xEC93E8C1, 0x2CEC9DE8, 0x4, 0x140000}};
   int code = 0;
@@ -20154,7 +20709,8 @@ START_TEST(s21_is_equal_2013) {
 }
 
 START_TEST(s21_is_equal_2014) {
-  char *example = "( 1842735695563066 == -64.609725693257649676791994 ) = False";
+  char *example =
+      "( 1842735695563066 == -64.609725693257649676791994 ) = False";
   s21_decimal value_1 = {{0x568C893A, 0x68BF5, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB3A2B0BA, 0x3F7DFC10, 0x3571A4, 0x80180000}};
   int code = 0;
@@ -20164,7 +20720,8 @@ START_TEST(s21_is_equal_2014) {
 }
 
 START_TEST(s21_is_equal_2015) {
-  char *example = "( -861.753679785182543032 == 1729066143331097964240572290 ) = False";
+  char *example =
+      "( -861.753679785182543032 == 1729066143331097964240572290 ) = False";
   s21_decimal value_1 = {{0x7986BCB8, 0xB73C15FF, 0x2E, 0x80120000}};
   s21_decimal value_2 = {{0x67860F82, 0x72D33822, 0x5963FFF, 0x0}};
   int code = 0;
@@ -20214,7 +20771,9 @@ START_TEST(s21_is_equal_2019) {
 }
 
 START_TEST(s21_is_equal_2020) {
-  char *example = "( 1990170196419603216891822339 == 1966158704210305972065123296 ) = False";
+  char *example =
+      "( 1990170196419603216891822339 == 1966158704210305972065123296 ) = "
+      "False";
   s21_decimal value_1 = {{0x9642C103, 0x8759010A, 0x66E3AEE, 0x0}};
   s21_decimal value_2 = {{0xFED5BBE0, 0xED849F40, 0x65A5E4C, 0x0}};
   int code = 0;
@@ -20414,7 +20973,8 @@ START_TEST(s21_is_equal_2039) {
 }
 
 START_TEST(s21_is_equal_2040) {
-  char *example = "( -66.752467908135750 == 1665055756476027183591109828 ) = False";
+  char *example =
+      "( -66.752467908135750 == 1665055756476027183591109828 ) = False";
   s21_decimal value_1 = {{0x1C12787, 0x17B71A, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xD610B4C4, 0x6C8DE5C4, 0x5614D45, 0x0}};
   int code = 0;
@@ -20494,7 +21054,8 @@ START_TEST(s21_is_equal_2047) {
 }
 
 START_TEST(s21_is_equal_2048) {
-  char *example = "( -89.76835297777790283515013 == 1183260007073215279119621138 ) = False";
+  char *example =
+      "( -89.76835297777790283515013 == 1183260007073215279119621138 ) = False";
   s21_decimal value_1 = {{0x59058485, 0x3772C11B, 0x76CEB, 0x80170000}};
   s21_decimal value_2 = {{0x3D4A5C12, 0x83A296E3, 0x3D2C50D, 0x0}};
   int code = 0;
@@ -20514,7 +21075,8 @@ START_TEST(s21_is_equal_2049) {
 }
 
 START_TEST(s21_is_equal_2050) {
-  char *example = "( 4.51100958984001245 == -3.4904157415278935307460837 ) = False";
+  char *example =
+      "( 4.51100958984001245 == -3.4904157415278935307460837 ) = False";
   s21_decimal value_1 = {{0xA21456DD, 0x642A1EE, 0x0, 0x110000}};
   s21_decimal value_2 = {{0xFD0820E5, 0x2A384474, 0x1CDF3E, 0x80190000}};
   int code = 0;
@@ -20564,7 +21126,9 @@ START_TEST(s21_is_equal_2054) {
 }
 
 START_TEST(s21_is_equal_2055) {
-  char *example = "( -478.38807220267113732038771 == 1458659348275706582246942582 ) = False";
+  char *example =
+      "( -478.38807220267113732038771 == 1458659348275706582246942582 ) = "
+      "False";
   s21_decimal value_1 = {{0xD8AEE073, 0xEF94F171, 0x279242, 0x80170000}};
   s21_decimal value_2 = {{0x94E0E776, 0xB741539F, 0x4B69321, 0x0}};
   int code = 0;
@@ -20684,7 +21248,8 @@ START_TEST(s21_is_equal_2066) {
 }
 
 START_TEST(s21_is_equal_2067) {
-  char *example = "( -9.1656295958709700541621949 == 1614675120787879396768 ) = False";
+  char *example =
+      "( -9.1656295958709700541621949 == 1614675120787879396768 ) = False";
   s21_decimal value_1 = {{0x40BD26BD, 0xC290B1ED, 0x4BD0F9, 0x80190000}};
   s21_decimal value_2 = {{0xEE8085A0, 0x881E6370, 0x57, 0x0}};
   int code = 0;
@@ -20714,7 +21279,8 @@ START_TEST(s21_is_equal_2069) {
 }
 
 START_TEST(s21_is_equal_2070) {
-  char *example = "( -3.2528182216686 == 1284956870493992465514305484 ) = False";
+  char *example =
+      "( -3.2528182216686 == 1284956870493992465514305484 ) = False";
   s21_decimal value_1 = {{0x8EBF07EE, 0x1D95, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x740B17CC, 0x86E8B0D9, 0x426E433, 0x0}};
   int code = 0;
@@ -20764,7 +21330,8 @@ START_TEST(s21_is_equal_2074) {
 }
 
 START_TEST(s21_is_equal_2075) {
-  char *example = "( 1369236360200223047746546405 == -2491588.5078966653 ) = False";
+  char *example =
+      "( 1369236360200223047746546405 == -2491588.5078966653 ) = False";
   s21_decimal value_1 = {{0xADE76AE5, 0xD19A579B, 0x46C9B13, 0x0}};
   s21_decimal value_2 = {{0x8F65717D, 0x5884DD, 0x0, 0x800A0000}};
   int code = 0;
@@ -20774,7 +21341,8 @@ START_TEST(s21_is_equal_2075) {
 }
 
 START_TEST(s21_is_equal_2076) {
-  char *example = "( 1789258116931958878719547864 == -3.98567327936039233615680 ) = False";
+  char *example =
+      "( 1789258116931958878719547864 == -3.98567327936039233615680 ) = False";
   s21_decimal value_1 = {{0xEAE999D8, 0xE030FF19, 0x5C80A24, 0x0}};
   s21_decimal value_2 = {{0x1847BF20, 0xA347C9C3, 0x870, 0x80160000}};
   int code = 0;
@@ -20804,7 +21372,8 @@ START_TEST(s21_is_equal_2078) {
 }
 
 START_TEST(s21_is_equal_2079) {
-  char *example = "( -25.525458134492867008805638 == 1679872587760933675183079 ) = False";
+  char *example =
+      "( -25.525458134492867008805638 == 1679872587760933675183079 ) = False";
   s21_decimal value_1 = {{0x8AEA3B06, 0xDBB00FF4, 0x151D39, 0x80180000}};
   s21_decimal value_2 = {{0xC88FABE7, 0x13512E25, 0x163BA, 0x0}};
   int code = 0;
@@ -20884,7 +21453,8 @@ START_TEST(s21_is_equal_2086) {
 }
 
 START_TEST(s21_is_equal_2087) {
-  char *example = "( -3.8608872215809385111498 == 1970375949462736966793678753 ) = False";
+  char *example =
+      "( -3.8608872215809385111498 == 1970375949462736966793678753 ) = False";
   s21_decimal value_1 = {{0xE7211FCA, 0xFDBC71B4, 0x82C, 0x80160000}};
   s21_decimal value_2 = {{0x6641CFA1, 0x4043CA47, 0x65DDB56, 0x0}};
   int code = 0;
@@ -20914,7 +21484,8 @@ START_TEST(s21_is_equal_2089) {
 }
 
 START_TEST(s21_is_equal_2090) {
-  char *example = "( 1549586074656700099341724634 == 1983407328446950 ) = False";
+  char *example =
+      "( 1549586074656700099341724634 == 1983407328446950 ) = False";
   s21_decimal value_1 = {{0xFB622BDA, 0x6E07A1F7, 0x501C99D, 0x0}};
   s21_decimal value_2 = {{0x141C9E6, 0x70BE6, 0x0, 0x0}};
   int code = 0;
@@ -20924,7 +21495,8 @@ START_TEST(s21_is_equal_2090) {
 }
 
 START_TEST(s21_is_equal_2091) {
-  char *example = "( 18003937225749841757151593 == 1406317782322539950790186029 ) = False";
+  char *example =
+      "( 18003937225749841757151593 == 1406317782322539950790186029 ) = False";
   s21_decimal value_1 = {{0x90ED2169, 0x64862FDF, 0xEE47B, 0x0}};
   s21_decimal value_2 = {{0x9650942D, 0xBD6DAC48, 0x48B475F, 0x0}};
   int code = 0;
@@ -20964,7 +21536,8 @@ START_TEST(s21_is_equal_2094) {
 }
 
 START_TEST(s21_is_equal_2095) {
-  char *example = "( 0.5687647614027963138 == -729900.05129430200756122334 ) = False";
+  char *example =
+      "( 0.5687647614027963138 == -729900.05129430200756122334 ) = False";
   s21_decimal value_1 = {{0xD9BC1B02, 0x4EEE955E, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x6EFAB2DE, 0x1B470B9F, 0x3C603C, 0x80140000}};
   int code = 0;
@@ -20984,7 +21557,8 @@ START_TEST(s21_is_equal_2096) {
 }
 
 START_TEST(s21_is_equal_2097) {
-  char *example = "( 1700835473520338934359338559 == 14961677657757841 ) = False";
+  char *example =
+      "( 1700835473520338934359338559 == 14961677657757841 ) = False";
   s21_decimal value_1 = {{0x90EF2E3F, 0xC584D5D7, 0x57EE5EB, 0x0}};
   s21_decimal value_2 = {{0xA08D891, 0x352791, 0x0, 0x0}};
   int code = 0;
@@ -20994,7 +21568,8 @@ START_TEST(s21_is_equal_2097) {
 }
 
 START_TEST(s21_is_equal_2098) {
-  char *example = "( 0.18229655710718706672461554 == 17798783638293394134792862 ) = False";
+  char *example =
+      "( 0.18229655710718706672461554 == 17798783638293394134792862 ) = False";
   s21_decimal value_1 = {{0xAE6BE6F2, 0x9DC34B44, 0xF1447, 0x1A0000}};
   s21_decimal value_2 = {{0x6E7DFA9E, 0xFE91C686, 0xEB909, 0x0}};
   int code = 0;
@@ -21034,7 +21609,9 @@ START_TEST(s21_is_equal_2101) {
 }
 
 START_TEST(s21_is_equal_2102) {
-  char *example = "( 1661093422433870458917925649 == -8688325.2045668274076663133 ) = False";
+  char *example =
+      "( 1661093422433870458917925649 == -8688325.2045668274076663133 ) = "
+      "False";
   s21_decimal value_1 = {{0xA24EB311, 0xDD7E59B7, 0x55E0636, 0x0}};
   s21_decimal value_2 = {{0x64283D5D, 0x87F15139, 0x47DE3E, 0x80130000}};
   int code = 0;
@@ -21044,7 +21621,8 @@ START_TEST(s21_is_equal_2102) {
 }
 
 START_TEST(s21_is_equal_2103) {
-  char *example = "( 0.16243152683724 == -74.704766766885584778346994 ) = False";
+  char *example =
+      "( 0.16243152683724 == -74.704766766885584778346994 ) = False";
   s21_decimal value_1 = {{0xE75882CC, 0xEC5, 0x0, 0xE0000}};
   s21_decimal value_2 = {{0xEF4CC1F2, 0x856C50C3, 0x3DCB59, 0x80180000}};
   int code = 0;
@@ -21054,7 +21632,8 @@ START_TEST(s21_is_equal_2103) {
 }
 
 START_TEST(s21_is_equal_2104) {
-  char *example = "( 120008435577853210779126957 == 128761328140539332186902914 ) = False";
+  char *example =
+      "( 120008435577853210779126957 == 128761328140539332186902914 ) = False";
   s21_decimal value_1 = {{0xDCBB0CAD, 0x5418E346, 0x6344C6, 0x0}};
   s21_decimal value_2 = {{0xEDB89182, 0x95C969F8, 0x6A8245, 0x0}};
   int code = 0;
@@ -21094,7 +21673,8 @@ START_TEST(s21_is_equal_2107) {
 }
 
 START_TEST(s21_is_equal_2108) {
-  char *example = "( -50.257830988280179010480 == 1694952354153565691089356 ) = False";
+  char *example =
+      "( -50.257830988280179010480 == 1694952354153565691089356 ) = False";
   s21_decimal value_1 = {{0xDDEC1DF8, 0x72C05CA4, 0x110, 0x80140000}};
   s21_decimal value_2 = {{0x499491CC, 0x8D1D8438, 0x166EB, 0x0}};
   int code = 0;
@@ -21104,7 +21684,8 @@ START_TEST(s21_is_equal_2108) {
 }
 
 START_TEST(s21_is_equal_2109) {
-  char *example = "( -6950.76324227933 == -80763.182060476108696084166 ) = False";
+  char *example =
+      "( -6950.76324227933 == -80763.182060476108696084166 ) = False";
   s21_decimal value_1 = {{0x1165BB5D, 0x2782B, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x28325EC6, 0xDF51B56D, 0x42CE44, 0x80150000}};
   int code = 0;
@@ -21184,7 +21765,9 @@ START_TEST(s21_is_equal_2116) {
 }
 
 START_TEST(s21_is_equal_2117) {
-  char *example = "( 1698471352983644063740517667 == -774418.76290790702644339347 ) = False";
+  char *example =
+      "( 1698471352983644063740517667 == -774418.76290790702644339347 ) = "
+      "False";
   s21_decimal value_1 = {{0x208CDD23, 0x8A5BC949, 0x57CF14C, 0x0}};
   s21_decimal value_2 = {{0x2FEA2293, 0x869A44B1, 0x400EF4, 0x80140000}};
   int code = 0;
@@ -21194,7 +21777,9 @@ START_TEST(s21_is_equal_2117) {
 }
 
 START_TEST(s21_is_equal_2118) {
-  char *example = "( 1364556603267129219787895356 == 1050300124379211771731772425 ) = False";
+  char *example =
+      "( 1364556603267129219787895356 == 1050300124379211771731772425 ) = "
+      "False";
   s21_decimal value_1 = {{0xCEA1B23C, 0xAFE4ADA4, 0x468BC19, 0x0}};
   s21_decimal value_2 = {{0x36A80409, 0xD4A7E4A5, 0x364C9B3, 0x0}};
   int code = 0;
@@ -21214,7 +21799,8 @@ START_TEST(s21_is_equal_2119) {
 }
 
 START_TEST(s21_is_equal_2120) {
-  char *example = "( 1866777418702833446456785682 == 154631773244133706338 ) = False";
+  char *example =
+      "( 1866777418702833446456785682 == 154631773244133706338 ) = False";
   s21_decimal value_1 = {{0x4739FB12, 0xA52D724B, 0x608297E, 0x0}};
   s21_decimal value_2 = {{0xC5578A62, 0x61F26A7D, 0x8, 0x0}};
   int code = 0;
@@ -21224,7 +21810,9 @@ START_TEST(s21_is_equal_2120) {
 }
 
 START_TEST(s21_is_equal_2121) {
-  char *example = "( 1859600644370381347537126649 == 1766511772923854720236681128 ) = False";
+  char *example =
+      "( 1859600644370381347537126649 == 1766511772923854720236681128 ) = "
+      "False";
   s21_decimal value_1 = {{0x8CF184F9, 0xEDD8E12A, 0x60239C0, 0x0}};
   s21_decimal value_2 = {{0xF8B677A8, 0x18A4B3F9, 0x5B5396B, 0x0}};
   int code = 0;
@@ -21284,7 +21872,9 @@ START_TEST(s21_is_equal_2126) {
 }
 
 START_TEST(s21_is_equal_2127) {
-  char *example = "( 1542637380271757406042019349 == 1097039143023543561862468804 ) = False";
+  char *example =
+      "( 1542637380271757406042019349 == 1097039143023543561862468804 ) = "
+      "False";
   s21_decimal value_1 = {{0xF6C75615, 0xF3D0714A, 0x4FC0A2B, 0x0}};
   s21_decimal value_2 = {{0xFDCB54C4, 0x1BBF5284, 0x38B7313, 0x0}};
   int code = 0;
@@ -21314,7 +21904,9 @@ START_TEST(s21_is_equal_2129) {
 }
 
 START_TEST(s21_is_equal_2130) {
-  char *example = "( 1302300258696716510561705423 == 1980544458348047025437444927 ) = False";
+  char *example =
+      "( 1302300258696716510561705423 == 1980544458348047025437444927 ) = "
+      "False";
   s21_decimal value_1 = {{0x5761DCF, 0x7C41417A, 0x4353CCE, 0x0}};
   s21_decimal value_2 = {{0xBD3C8B3F, 0x38E5A2B8, 0x666449A, 0x0}};
   int code = 0;
@@ -21354,7 +21946,9 @@ START_TEST(s21_is_equal_2133) {
 }
 
 START_TEST(s21_is_equal_2134) {
-  char *example = "( 0.57068175224820650987858834 == -4.7796535548711544089177270 ) = False";
+  char *example =
+      "( 0.57068175224820650987858834 == -4.7796535548711544089177270 ) = "
+      "False";
   s21_decimal value_1 = {{0x4929AB92, 0xFA596778, 0x2F34A7, 0x1A0000}};
   s21_decimal value_2 = {{0xF59B8ADF, 0x89D45174, 0x3F421, 0x80180000}};
   int code = 0;
@@ -21384,7 +21978,8 @@ START_TEST(s21_is_equal_2136) {
 }
 
 START_TEST(s21_is_equal_2137) {
-  char *example = "( 111610220581657742 == -3.5509734884052895108901339 ) = False";
+  char *example =
+      "( 111610220581657742 == -3.5509734884052895108901339 ) = False";
   s21_decimal value_1 = {{0x7F129C8E, 0x18C84E7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2F7729DB, 0x95D5276F, 0x1D5F7A, 0x80190000}};
   int code = 0;
@@ -21404,7 +21999,8 @@ START_TEST(s21_is_equal_2138) {
 }
 
 START_TEST(s21_is_equal_2139) {
-  char *example = "( 1872695285897207820 == 1313290320715514502354993170 ) = False";
+  char *example =
+      "( 1872695285897207820 == 1313290320715514502354993170 ) = False";
   s21_decimal value_1 = {{0xC873A00C, 0x19FD2670, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4FC28012, 0xF0F24E24, 0x43E540A, 0x0}};
   int code = 0;
@@ -21414,7 +22010,8 @@ START_TEST(s21_is_equal_2139) {
 }
 
 START_TEST(s21_is_equal_2140) {
-  char *example = "( 0.884498523748114 == 1104342917960033896389999325 ) = False";
+  char *example =
+      "( 0.884498523748114 == 1104342917960033896389999325 ) = False";
   s21_decimal value_1 = {{0x5C4FF712, 0x32472, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0x599CFADD, 0x8A831262, 0x3917DB5, 0x0}};
   int code = 0;
@@ -21504,7 +22101,8 @@ START_TEST(s21_is_equal_2148) {
 }
 
 START_TEST(s21_is_equal_2149) {
-  char *example = "( 1950909911094209117178062212 == -74222.4360604339994702086 ) = False";
+  char *example =
+      "( 1950909911094209117178062212 == -74222.4360604339994702086 ) = False";
   s21_decimal value_1 = {{0xECFC6584, 0x3253DDA9, 0x64DC13E, 0x0}};
   s21_decimal value_2 = {{0x51193106, 0x102EA872, 0x9D2C, 0x80130000}};
   int code = 0;
@@ -21594,7 +22192,9 @@ START_TEST(s21_is_equal_2157) {
 }
 
 START_TEST(s21_is_equal_2158) {
-  char *example = "( 0.07238607903593988538149611 == 1481504240578975268122502677 ) = False";
+  char *example =
+      "( 0.07238607903593988538149611 == 1481504240578975268122502677 ) = "
+      "False";
   s21_decimal value_1 = {{0x39DAAAEB, 0xB8829260, 0x5FCD5, 0x1A0000}};
   s21_decimal value_2 = {{0xF7EDA615, 0xCF21DFA3, 0x4C978B9, 0x0}};
   int code = 0;
@@ -21604,7 +22204,9 @@ START_TEST(s21_is_equal_2158) {
 }
 
 START_TEST(s21_is_equal_2159) {
-  char *example = "( 1916575471662152698819779221 == -86.187788329591929852654500 ) = False";
+  char *example =
+      "( 1916575471662152698819779221 == -86.187788329591929852654500 ) = "
+      "False";
   s21_decimal value_1 = {{0xE941A95, 0x8163A6D8, 0x6315AA4, 0x0}};
   s21_decimal value_2 = {{0x9F0B3D51, 0x7E6170E7, 0xB682, 0x80160000}};
   int code = 0;
@@ -21744,7 +22346,9 @@ START_TEST(s21_is_equal_2172) {
 }
 
 START_TEST(s21_is_equal_2173) {
-  char *example = "( 1020121839457794944735032438 == -3.8949877504779536150852595 ) = False";
+  char *example =
+      "( 1020121839457794944735032438 == -3.8949877504779536150852595 ) = "
+      "False";
   s21_decimal value_1 = {{0xF342B476, 0xBA1CD630, 0x34BD333, 0x0}};
   s21_decimal value_2 = {{0xECDC73F3, 0x1726D58C, 0x2037F5, 0x80190000}};
   int code = 0;
@@ -21754,7 +22358,8 @@ START_TEST(s21_is_equal_2173) {
 }
 
 START_TEST(s21_is_equal_2174) {
-  char *example = "( 1422203411076974096188527276 == 19128894209253209140 ) = False";
+  char *example =
+      "( 1422203411076974096188527276 == 19128894209253209140 ) = False";
   s21_decimal value_1 = {{0xF0A552AC, 0x6679E5D1, 0x4986B49, 0x0}};
   s21_decimal value_2 = {{0x20907434, 0x9777BEF, 0x1, 0x0}};
   int code = 0;
@@ -21814,7 +22419,8 @@ START_TEST(s21_is_equal_2179) {
 }
 
 START_TEST(s21_is_equal_2180) {
-  char *example = "( -497.637575361300 == 1061377215574708296871431618 ) = False";
+  char *example =
+      "( -497.637575361300 == 1061377215574708296871431618 ) = False";
   s21_decimal value_1 = {{0xA71BEB8D, 0x486, 0x0, 0x800A0000}};
   s21_decimal value_2 = {{0x6019CDC2, 0x25CB7449, 0x36DF35E, 0x0}};
   int code = 0;
@@ -21844,7 +22450,8 @@ START_TEST(s21_is_equal_2182) {
 }
 
 START_TEST(s21_is_equal_2183) {
-  char *example = "( 1869001653674711130654271502 == 3.888263250836E-10 ) = False";
+  char *example =
+      "( 1869001653674711130654271502 == 3.888263250836E-10 ) = False";
   s21_decimal value_1 = {{0x1A5A680E, 0xAA26E71B, 0x60A007E, 0x0}};
   s21_decimal value_2 = {{0x4E8CC394, 0x389, 0x0, 0x160000}};
   int code = 0;
@@ -21904,7 +22511,8 @@ START_TEST(s21_is_equal_2188) {
 }
 
 START_TEST(s21_is_equal_2189) {
-  char *example = "( -6.8410811135848640463598052 == 144151653712311423307678305 ) = False";
+  char *example =
+      "( -6.8410811135848640463598052 == 144151653712311423307678305 ) = False";
   s21_decimal value_1 = {{0x1971E4, 0x80B42AC7, 0x38968D, 0x80190000}};
   s21_decimal value_2 = {{0x6290261, 0xCE5D711A, 0x773D4C, 0x0}};
   int code = 0;
@@ -21944,7 +22552,8 @@ START_TEST(s21_is_equal_2192) {
 }
 
 START_TEST(s21_is_equal_2193) {
-  char *example = "( 1984347608912970962851116364 == 158506076186885642 ) = False";
+  char *example =
+      "( 1984347608912970962851116364 == 158506076186885642 ) = False";
   s21_decimal value_1 = {{0xFB5CB54C, 0x6D702DC2, 0x66969F3, 0x0}};
   s21_decimal value_2 = {{0xBDDC3E0A, 0x233206F, 0x0, 0x0}};
   int code = 0;
@@ -22004,7 +22613,9 @@ START_TEST(s21_is_equal_2198) {
 }
 
 START_TEST(s21_is_equal_2199) {
-  char *example = "( 1319356078736299901926301987 == 1450992966561425365374126255 ) = False";
+  char *example =
+      "( 1319356078736299901926301987 == 1450992966561425365374126255 ) = "
+      "False";
   s21_decimal value_1 = {{0x3470E123, 0x57A70B1B, 0x4435884, 0x0}};
   s21_decimal value_2 = {{0x685CC8AF, 0x549217FF, 0x4B03BB6, 0x0}};
   int code = 0;
@@ -22034,7 +22645,8 @@ START_TEST(s21_is_equal_2201) {
 }
 
 START_TEST(s21_is_equal_2202) {
-  char *example = "( 1810662174812816654296763114 == 11266040473921560702397 ) = False";
+  char *example =
+      "( 1810662174812816654296763114 == 11266040473921560702397 ) = False";
   s21_decimal value_1 = {{0x94994AEA, 0x2DB02856, 0x5D9BEA1, 0x0}};
   s21_decimal value_2 = {{0xB412EDBD, 0xBBB818FD, 0x262, 0x0}};
   int code = 0;
@@ -22084,7 +22696,9 @@ START_TEST(s21_is_equal_2206) {
 }
 
 START_TEST(s21_is_equal_2207) {
-  char *example = "( -83041.956978744251415703788 == 1742863271516528232348733633 ) = False";
+  char *example =
+      "( -83041.956978744251415703788 == 1742863271516528232348733633 ) = "
+      "False";
   s21_decimal value_1 = {{0xFBA6B0EC, 0x8218BF56, 0x44B0D1, 0x80150000}};
   s21_decimal value_2 = {{0xBD750C1, 0x4423C2E6, 0x5A1A9A7, 0x0}};
   int code = 0;
@@ -22124,7 +22738,9 @@ START_TEST(s21_is_equal_2210) {
 }
 
 START_TEST(s21_is_equal_2211) {
-  char *example = "( 1270697230558770715526738221 == 787.545661589247339830866252 ) = False";
+  char *example =
+      "( 1270697230558770715526738221 == 787.545661589247339830866252 ) = "
+      "False";
   s21_decimal value_1 = {{0x9554B12D, 0xE5AC0F01, 0x41B189A, 0x0}};
   s21_decimal value_2 = {{0x824A714C, 0xDC801BF9, 0x28B7147, 0x180000}};
   int code = 0;
@@ -22144,7 +22760,8 @@ START_TEST(s21_is_equal_2212) {
 }
 
 START_TEST(s21_is_equal_2213) {
-  char *example = "( 17948705469075071079395248 == 0.26016186034826563301907067 ) = False";
+  char *example =
+      "( 17948705469075071079395248 == 0.26016186034826563301907067 ) = False";
   s21_decimal value_1 = {{0xCC91AFB0, 0x45ECBE8E, 0xED8C9, 0x0}};
   s21_decimal value_2 = {{0x9039A7B, 0x455C259B, 0x158524, 0x1A0000}};
   int code = 0;
@@ -22184,7 +22801,9 @@ START_TEST(s21_is_equal_2216) {
 }
 
 START_TEST(s21_is_equal_2217) {
-  char *example = "( -28.177727057534311116910752 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( -28.177727057534311116910752 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x962130A0, 0xA502CF23, 0x174EDD, 0x80180000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -22264,7 +22883,9 @@ START_TEST(s21_is_equal_2224) {
 }
 
 START_TEST(s21_is_equal_2225) {
-  char *example = "( 0.09232794116694114759739916 == -670.18742765528979547468085 ) = False";
+  char *example =
+      "( 0.09232794116694114759739916 == -670.18742765528979547468085 ) = "
+      "False";
   s21_decimal value_1 = {{0x6FCA0A0C, 0xC59FED8F, 0x7A31E, 0x1A0000}};
   s21_decimal value_2 = {{0x149B135, 0x533F1B5F, 0x376FC5, 0x80170000}};
   int code = 0;
@@ -22274,7 +22895,8 @@ START_TEST(s21_is_equal_2225) {
 }
 
 START_TEST(s21_is_equal_2226) {
-  char *example = "( 1835957782030636 == -4.4841589378235599914179610 ) = False";
+  char *example =
+      "( 1835957782030636 == -4.4841589378235599914179610 ) = False";
   s21_decimal value_1 = {{0x3B6BA92C, 0x685CB, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD57FDC69, 0xBE3C523F, 0x3B58E, 0x80180000}};
   int code = 0;
@@ -22314,7 +22936,8 @@ START_TEST(s21_is_equal_2229) {
 }
 
 START_TEST(s21_is_equal_2230) {
-  char *example = "( 11153114947282211655927 == -1407632379.0542029904523976 ) = False";
+  char *example =
+      "( 11153114947282211655927 == -1407632379.0542029904523976 ) = False";
   s21_decimal value_1 = {{0x4FC350F7, 0x9C9008D1, 0x25C, 0x0}};
   s21_decimal value_2 = {{0xC125B2C8, 0xAADE232, 0xBA4C7, 0x80100000}};
   int code = 0;
@@ -22354,7 +22977,9 @@ START_TEST(s21_is_equal_2233) {
 }
 
 START_TEST(s21_is_equal_2234) {
-  char *example = "( 1762852364740198689630379821 == -846.75134299212480468884367 ) = False";
+  char *example =
+      "( 1762852364740198689630379821 == -846.75134299212480468884367 ) = "
+      "False";
   s21_decimal value_1 = {{0x6750DF2D, 0x2E5E5052, 0x5B23282, 0x0}};
   s21_decimal value_2 = {{0xDCEE1B8F, 0x3A6714E6, 0x460AA8, 0x80170000}};
   int code = 0;
@@ -22384,7 +23009,8 @@ START_TEST(s21_is_equal_2236) {
 }
 
 START_TEST(s21_is_equal_2237) {
-  char *example = "( 14231486265081366382 == 1895519949392599481934338842 ) = False";
+  char *example =
+      "( 14231486265081366382 == 1895519949392599481934338842 ) = False";
   s21_decimal value_1 = {{0x4006876E, 0xC580655B, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB6C6DB1A, 0x5B26524A, 0x61FEFF6, 0x0}};
   int code = 0;
@@ -22394,7 +23020,8 @@ START_TEST(s21_is_equal_2237) {
 }
 
 START_TEST(s21_is_equal_2238) {
-  char *example = "( 1344461455965436067280242578 == 13646067660253274148 ) = False";
+  char *example =
+      "( 1344461455965436067280242578 == 13646067660253274148 ) = False";
   s21_decimal value_1 = {{0x9C72C792, 0x91AC712A, 0x4581CC9, 0x0}};
   s21_decimal value_2 = {{0xAE57A024, 0xBD60923C, 0x0, 0x0}};
   int code = 0;
@@ -22454,7 +23081,8 @@ START_TEST(s21_is_equal_2243) {
 }
 
 START_TEST(s21_is_equal_2244) {
-  char *example = "( -2.99428398117640354805752 == 0.18940116770113007710279931 ) = False";
+  char *example =
+      "( -2.99428398117640354805752 == 0.18940116770113007710279931 ) = False";
   s21_decimal value_1 = {{0x543A37F8, 0xBC5D059, 0x3F68, 0x80170000}};
   s21_decimal value_2 = {{0xE44A98FB, 0xC997425D, 0xFAAB9, 0x1A0000}};
   int code = 0;
@@ -22474,7 +23102,9 @@ START_TEST(s21_is_equal_2245) {
 }
 
 START_TEST(s21_is_equal_2246) {
-  char *example = "( -77.850527167683498956212258 == -71.942630368174341593131650 ) = False";
+  char *example =
+      "( -77.850527167683498956212258 == -71.942630368174341593131650 ) = "
+      "False";
   s21_decimal value_1 = {{0x3116C822, 0x88C2758D, 0x40657D, 0x80180000}};
   s21_decimal value_2 = {{0xF897710D, 0xC7DBCA45, 0x5F371, 0x80170000}};
   int code = 0;
@@ -22524,7 +23154,9 @@ START_TEST(s21_is_equal_2250) {
 }
 
 START_TEST(s21_is_equal_2251) {
-  char *example = "( 1569646365727737061671305800 == 1563032623825179558795936790 ) = False";
+  char *example =
+      "( 1569646365727737061671305800 == 1563032623825179558795936790 ) = "
+      "False";
   s21_decimal value_1 = {{0xAD220248, 0xFCE06CDD, 0x512618B, 0x0}};
   s21_decimal value_2 = {{0xF94E0416, 0x52232735, 0x50CE908, 0x0}};
   int code = 0;
@@ -22554,7 +23186,9 @@ START_TEST(s21_is_equal_2253) {
 }
 
 START_TEST(s21_is_equal_2254) {
-  char *example = "( -722.06802086191470755254504 == 1460725245429093786219757298 ) = False";
+  char *example =
+      "( -722.06802086191470755254504 == 1460725245429093786219757298 ) = "
+      "False";
   s21_decimal value_1 = {{0x711110E8, 0x95A20D90, 0x3BBA62, 0x80170000}};
   s21_decimal value_2 = {{0x50C8BEF2, 0x3995290F, 0x4B8489A, 0x0}};
   int code = 0;
@@ -22724,7 +23358,9 @@ START_TEST(s21_is_equal_2270) {
 }
 
 START_TEST(s21_is_equal_2271) {
-  char *example = "( -79228162514264337593543950335 == 1469434174517290133819002549 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 1469434174517290133819002549 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xDE508EB5, 0x37807FC6, 0x4BF7CCA, 0x0}};
   int code = 0;
@@ -22754,7 +23390,8 @@ START_TEST(s21_is_equal_2273) {
 }
 
 START_TEST(s21_is_equal_2274) {
-  char *example = "( 1630827711382137536276082 == 1067266797457742697 ) = False";
+  char *example =
+      "( 1630827711382137536276082 == 1067266797457742697 ) = False";
   s21_decimal value_1 = {{0x36346672, 0x58EDFE86, 0x15957, 0x0}};
   s21_decimal value_2 = {{0x67099B69, 0xECFB17F, 0x0, 0x0}};
   int code = 0;
@@ -22884,7 +23521,8 @@ START_TEST(s21_is_equal_2286) {
 }
 
 START_TEST(s21_is_equal_2287) {
-  char *example = "( 1634956808701237345109485467 == 192483519026264826351648795 ) = False";
+  char *example =
+      "( 1634956808701237345109485467 == 192483519026264826351648795 ) = False";
   s21_decimal value_1 = {{0xBD9D279B, 0x3218E657, 0x5486792, 0x0}};
   s21_decimal value_2 = {{0x9063001B, 0x798C447C, 0x9F37F8, 0x0}};
   int code = 0;
@@ -22904,7 +23542,8 @@ START_TEST(s21_is_equal_2288) {
 }
 
 START_TEST(s21_is_equal_2289) {
-  char *example = "( 1557413678428807497566442398 == 0.71977443294315855193 ) = False";
+  char *example =
+      "( 1557413678428807497566442398 == 0.71977443294315855193 ) = False";
   s21_decimal value_1 = {{0x5970D39E, 0xAE39076F, 0x508432C, 0x0}};
   s21_decimal value_2 = {{0xC684BD59, 0xE6E33F52, 0x3, 0x140000}};
   int code = 0;
@@ -22914,7 +23553,9 @@ START_TEST(s21_is_equal_2289) {
 }
 
 START_TEST(s21_is_equal_2290) {
-  char *example = "( -61.293213648016342806729859 == 1771147976920487978873751384 ) = False";
+  char *example =
+      "( -61.293213648016342806729859 == 1771147976920487978873751384 ) = "
+      "False";
   s21_decimal value_1 = {{0xA1F89483, 0xC510F2FF, 0x32B357, 0x80180000}};
   s21_decimal value_2 = {{0x66E98758, 0x37F14066, 0x5B90F2C, 0x0}};
   int code = 0;
@@ -22924,7 +23565,9 @@ START_TEST(s21_is_equal_2290) {
 }
 
 START_TEST(s21_is_equal_2291) {
-  char *example = "( 1771359092731848701517279338 == 1079522998744724388305908763 ) = False";
+  char *example =
+      "( 1771359092731848701517279338 == 1079522998744724388305908763 ) = "
+      "False";
   s21_decimal value_1 = {{0x6094B06A, 0xD4601578, 0x5B93BE0, 0x0}};
   s21_decimal value_2 = {{0xC5A3341B, 0x63C1E4A, 0x37CF5E3, 0x0}};
   int code = 0;
@@ -22944,7 +23587,8 @@ START_TEST(s21_is_equal_2292) {
 }
 
 START_TEST(s21_is_equal_2293) {
-  char *example = "( 1751344096629870094 == 1255603967639708020819844139 ) = False";
+  char *example =
+      "( 1751344096629870094 == 1255603967639708020819844139 ) = False";
   s21_decimal value_1 = {{0x4719CE0E, 0x184E062D, 0x0, 0x0}};
   s21_decimal value_2 = {{0x318B5C2B, 0x798DC5AF, 0x40E9C7B, 0x0}};
   int code = 0;
@@ -23114,7 +23758,8 @@ START_TEST(s21_is_equal_2309) {
 }
 
 START_TEST(s21_is_equal_2310) {
-  char *example = "( -94508967919811079.358759139 == 146533503325589242 ) = False";
+  char *example =
+      "( -94508967919811079.358759139 == 146533503325589242 ) = False";
   s21_decimal value_1 = {{0xD3E1C0E3, 0x6ABA07D1, 0x4E2D0D, 0x80090000}};
   s21_decimal value_2 = {{0xE56A4EFA, 0x2089771, 0x0, 0x0}};
   int code = 0;
@@ -23134,7 +23779,8 @@ START_TEST(s21_is_equal_2311) {
 }
 
 START_TEST(s21_is_equal_2312) {
-  char *example = "( 110551582333523858 == 1507002914055825333419804190 ) = False";
+  char *example =
+      "( 110551582333523858 == 1507002914055825333419804190 ) = False";
   s21_decimal value_1 = {{0x1258D792, 0x188C214, 0x0, 0x0}};
   s21_decimal value_2 = {{0x733C861E, 0xAB0658AA, 0x4DE9047, 0x0}};
   int code = 0;
@@ -23214,7 +23860,8 @@ START_TEST(s21_is_equal_2319) {
 }
 
 START_TEST(s21_is_equal_2320) {
-  char *example = "( 1821152229554646817555769422 == 0.632655213361012666 ) = False";
+  char *example =
+      "( 1821152229554646817555769422 == 0.632655213361012666 ) = False";
   s21_decimal value_1 = {{0xB0AA684E, 0x2F7CD2DA, 0x5E26BFC, 0x0}};
   s21_decimal value_2 = {{0x89AE9FBA, 0x8C7A490, 0x0, 0x120000}};
   int code = 0;
@@ -23284,7 +23931,9 @@ START_TEST(s21_is_equal_2326) {
 }
 
 START_TEST(s21_is_equal_2327) {
-  char *example = "( 1578167351777891242926337987 == 1653777175881021311683501749 ) = False";
+  char *example =
+      "( 1578167351777891242926337987 == 1653777175881021311683501749 ) = "
+      "False";
   s21_decimal value_1 = {{0xEEFEEFC3, 0x9131AD1F, 0x5196DEF, 0x0}};
   s21_decimal value_2 = {{0xC86D9EB5, 0x584890F7, 0x557F8F0, 0x0}};
   int code = 0;
@@ -23314,7 +23963,8 @@ START_TEST(s21_is_equal_2329) {
 }
 
 START_TEST(s21_is_equal_2330) {
-  char *example = "( -29.30502340417162658 == 0.99658381902093713864470856 ) = False";
+  char *example =
+      "( -29.30502340417162658 == 0.99658381902093713864470856 ) = False";
   s21_decimal value_1 = {{0x26040DA2, 0x28AB3C5A, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xA3153148, 0xB54EB14F, 0x526F7B, 0x1A0000}};
   int code = 0;
@@ -23384,7 +24034,8 @@ START_TEST(s21_is_equal_2336) {
 }
 
 START_TEST(s21_is_equal_2337) {
-  char *example = "( -27.764487097179359810327882 == 197104623529062777935754 ) = False";
+  char *example =
+      "( -27.764487097179359810327882 == 197104623529062777935754 ) = False";
   s21_decimal value_1 = {{0xB4BA954A, 0xDC870774, 0x16F75B, 0x80180000}};
   s21_decimal value_2 = {{0x57C2D78A, 0x10242AA1, 0x29BD, 0x0}};
   int code = 0;
@@ -23394,7 +24045,8 @@ START_TEST(s21_is_equal_2337) {
 }
 
 START_TEST(s21_is_equal_2338) {
-  char *example = "( 1281313836280982641273990113 == 11328268174410724771 ) = False";
+  char *example =
+      "( 1281313836280982641273990113 == 11328268174410724771 ) = False";
   s21_decimal value_1 = {{0xAE5FEBE1, 0x3F1FCAE7, 0x423E0C2, 0x0}};
   s21_decimal value_2 = {{0x881D35A3, 0x9D3617E2, 0x0, 0x0}};
   int code = 0;
@@ -23494,7 +24146,9 @@ START_TEST(s21_is_equal_2347) {
 }
 
 START_TEST(s21_is_equal_2348) {
-  char *example = "( 0.62068562740267935002024995 == -750.35649912610861050681343 ) = False";
+  char *example =
+      "( 0.62068562740267935002024995 == -750.35649912610861050681343 ) = "
+      "False";
   s21_decimal value_1 = {{0x62705C23, 0x873ED645, 0x335787, 0x1A0000}};
   s21_decimal value_2 = {{0x267AD7FF, 0xBB8237DD, 0x3E116A, 0x80170000}};
   int code = 0;
@@ -23514,7 +24168,8 @@ START_TEST(s21_is_equal_2349) {
 }
 
 START_TEST(s21_is_equal_2350) {
-  char *example = "( 167922285390694888702720237 == 8.0114562790176427E-10 ) = False";
+  char *example =
+      "( 167922285390694888702720237 == 8.0114562790176427E-10 ) = False";
   s21_decimal value_1 = {{0x9643B8ED, 0x54DAF697, 0x8AE6ED, 0x0}};
   s21_decimal value_2 = {{0x3871B6AB, 0x11C9FC5, 0x0, 0x1A0000}};
   int code = 0;
@@ -23564,7 +24219,9 @@ START_TEST(s21_is_equal_2354) {
 }
 
 START_TEST(s21_is_equal_2355) {
-  char *example = "( 1543057803350752837408507995 == 1219386574358221110533675811 ) = False";
+  char *example =
+      "( 1543057803350752837408507995 == 1219386574358221110533675811 ) = "
+      "False";
   s21_decimal value_1 = {{0xECFDC85B, 0x221812B2, 0x4FC6333, 0x0}};
   s21_decimal value_2 = {{0x5EDFDB23, 0xA6A422E4, 0x3F0A726, 0x0}};
   int code = 0;
@@ -23584,7 +24241,8 @@ START_TEST(s21_is_equal_2356) {
 }
 
 START_TEST(s21_is_equal_2357) {
-  char *example = "( 150267675059104719335093136 == -606.89275665645384313383568 ) = False";
+  char *example =
+      "( 150267675059104719335093136 == -606.89275665645384313383568 ) = False";
   s21_decimal value_1 = {{0xBC107390, 0xFCD807BB, 0x7C4C6A, 0x0}};
   s21_decimal value_2 = {{0xFF6CAA90, 0x39E5D52D, 0x323374, 0x80170000}};
   int code = 0;
@@ -23634,7 +24292,8 @@ START_TEST(s21_is_equal_2361) {
 }
 
 START_TEST(s21_is_equal_2362) {
-  char *example = "( 5.765590736529320E-10 == -355.68685387765052842924387 ) = False";
+  char *example =
+      "( 5.765590736529320E-10 == -355.68685387765052842924387 ) = False";
   s21_decimal value_1 = {{0x9EC6F0C4, 0x20C60, 0x0, 0x180000}};
   s21_decimal value_2 = {{0xB3975963, 0x4C6A107C, 0x1D6BF6, 0x80170000}};
   int code = 0;
@@ -23664,7 +24323,8 @@ START_TEST(s21_is_equal_2364) {
 }
 
 START_TEST(s21_is_equal_2365) {
-  char *example = "( 1962826930961707520298936811 == 1491633726340373337 ) = False";
+  char *example =
+      "( 1962826930961707520298936811 == 1491633726340373337 ) = False";
   s21_decimal value_1 = {{0x48C569EB, 0x2359AA2F, 0x6579CC5, 0x0}};
   s21_decimal value_2 = {{0x99829B59, 0x14B358F8, 0x0, 0x0}};
   int code = 0;
@@ -23674,7 +24334,9 @@ START_TEST(s21_is_equal_2365) {
 }
 
 START_TEST(s21_is_equal_2366) {
-  char *example = "( 1494644984778805411640298908 == 1269014474923941297312222719 ) = False";
+  char *example =
+      "( 1494644984778805411640298908 == 1269014474923941297312222719 ) = "
+      "False";
   s21_decimal value_1 = {{0x4ED8CD9C, 0xFAC63A7E, 0x4D45762, 0x0}};
   s21_decimal value_2 = {{0x2483CDFF, 0x880A1F1C, 0x419B444, 0x0}};
   int code = 0;
@@ -23684,7 +24346,8 @@ START_TEST(s21_is_equal_2366) {
 }
 
 START_TEST(s21_is_equal_2367) {
-  char *example = "( 1608322679444987037103524103 == 15992364388489400 ) = False";
+  char *example =
+      "( 1608322679444987037103524103 == 15992364388489400 ) = False";
   s21_decimal value_1 = {{0x8BB18907, 0x27D54758, 0x5325F93, 0x0}};
   s21_decimal value_2 = {{0x7E7E98B8, 0x38D0F8, 0x0, 0x0}};
   int code = 0;
@@ -23894,7 +24557,8 @@ START_TEST(s21_is_equal_2387) {
 }
 
 START_TEST(s21_is_equal_2388) {
-  char *example = "( 11557964195084406 == -49.870714950734242527677835 ) = False";
+  char *example =
+      "( 11557964195084406 == -49.870714950734242527677835 ) = False";
   s21_decimal value_1 = {{0x3E2CB876, 0x290FE8, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE3518D8B, 0xDFE908C0, 0x294088, 0x80180000}};
   int code = 0;
@@ -23934,7 +24598,8 @@ START_TEST(s21_is_equal_2391) {
 }
 
 START_TEST(s21_is_equal_2392) {
-  char *example = "( 6.0938245826666220E-10 == 132500222242901425188360 ) = False";
+  char *example =
+      "( 6.0938245826666220E-10 == 132500222242901425188360 ) = False";
   s21_decimal value_1 = {{0x1992C97E, 0x15A64D, 0x0, 0x190000}};
   s21_decimal value_2 = {{0x831CEE08, 0xD9F801A7, 0x1C0E, 0x0}};
   int code = 0;
@@ -23964,7 +24629,8 @@ START_TEST(s21_is_equal_2394) {
 }
 
 START_TEST(s21_is_equal_2395) {
-  char *example = "( 18156460104077788327 == 1467381814201981474437665922 ) = False";
+  char *example =
+      "( 18156460104077788327 == 1467381814201981474437665922 ) = False";
   s21_decimal value_1 = {{0x821BC4A7, 0xFBF8B444, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE2291482, 0x8A8A7988, 0x4BDCA2F, 0x0}};
   int code = 0;
@@ -24064,7 +24730,9 @@ START_TEST(s21_is_equal_2404) {
 }
 
 START_TEST(s21_is_equal_2405) {
-  char *example = "( 1392812075052924945095139787 == -60.142908039015292825288062 ) = False";
+  char *example =
+      "( 1392812075052924945095139787 == -60.142908039015292825288062 ) = "
+      "False";
   s21_decimal value_1 = {{0xA5F321CB, 0xE1BF0950, 0x4801B6D, 0x0}};
   s21_decimal value_2 = {{0xAD18BD7E, 0x93E90CDC, 0x31BFC1, 0x80180000}};
   int code = 0;
@@ -24224,7 +24892,8 @@ START_TEST(s21_is_equal_2420) {
 }
 
 START_TEST(s21_is_equal_2421) {
-  char *example = "( 189415046660441979958412 == 1801221472790085127507391 ) = False";
+  char *example =
+      "( 189415046660441979958412 == 1801221472790085127507391 ) = False";
   s21_decimal value_1 = {{0x7483348C, 0x35D33DBE, 0x281C, 0x0}};
   s21_decimal value_2 = {{0x8A4E0DBF, 0x6964EE36, 0x17D6C, 0x0}};
   int code = 0;
@@ -24244,7 +24913,9 @@ START_TEST(s21_is_equal_2422) {
 }
 
 START_TEST(s21_is_equal_2423) {
-  char *example = "( 1335826627467187128680549752 == 1390579245768612144465002797 ) = False";
+  char *example =
+      "( 1335826627467187128680549752 == 1390579245768612144465002797 ) = "
+      "False";
   s21_decimal value_1 = {{0xC1CF8D78, 0x94049DDD, 0x450F84A, 0x0}};
   s21_decimal value_2 = {{0x3577412D, 0xF6BA3B62, 0x47E429B, 0x0}};
   int code = 0;
@@ -24294,7 +24965,8 @@ START_TEST(s21_is_equal_2427) {
 }
 
 START_TEST(s21_is_equal_2428) {
-  char *example = "( -640.15379134825149036 == 3.9210330976987105E-10 ) = False";
+  char *example =
+      "( -640.15379134825149036 == 3.9210330976987105E-10 ) = False";
   s21_decimal value_1 = {{0xB534B26C, 0x78645027, 0x3, 0x80110000}};
   s21_decimal value_2 = {{0x9968A7E1, 0x8B4D96, 0x0, 0x1A0000}};
   int code = 0;
@@ -24304,7 +24976,9 @@ START_TEST(s21_is_equal_2428) {
 }
 
 START_TEST(s21_is_equal_2429) {
-  char *example = "( 1571333512512172604631927644 == 0.82333121996878167815270319 ) = False";
+  char *example =
+      "( 1571333512512172604631927644 == 0.82333121996878167815270319 ) = "
+      "False";
   s21_decimal value_1 = {{0x93E5CB5C, 0x65F3A239, 0x513C6D0, 0x0}};
   s21_decimal value_2 = {{0xBB5CAFAF, 0x7CA0A8D3, 0x441AB7, 0x1A0000}};
   int code = 0;
@@ -24344,7 +25018,8 @@ START_TEST(s21_is_equal_2432) {
 }
 
 START_TEST(s21_is_equal_2433) {
-  char *example = "( 1088675178737527891551652899 == 150048283019971381328 ) = False";
+  char *example =
+      "( 1088675178737527891551652899 == 150048283019971381328 ) = False";
   s21_decimal value_1 = {{0x57490C23, 0xB2276546, 0x38487EF, 0x0}};
   s21_decimal value_2 = {{0xB2ABC850, 0x2256966A, 0x8, 0x0}};
   int code = 0;
@@ -24414,7 +25089,8 @@ START_TEST(s21_is_equal_2439) {
 }
 
 START_TEST(s21_is_equal_2440) {
-  char *example = "( 1565786255008173107597056061 == 136915411603163190789100 ) = False";
+  char *example =
+      "( 1565786255008173107597056061 == 136915411603163190789100 ) = False";
   s21_decimal value_1 = {{0x67E4983D, 0xF7655890, 0x50F3022, 0x0}};
   s21_decimal value_2 = {{0xF9D603EC, 0x3307A422, 0x1CFE, 0x0}};
   int code = 0;
@@ -24434,7 +25110,8 @@ START_TEST(s21_is_equal_2441) {
 }
 
 START_TEST(s21_is_equal_2442) {
-  char *example = "( -556.27073512532428641 == 3.1406365727446370E-10 ) = False";
+  char *example =
+      "( -556.27073512532428641 == 3.1406365727446370E-10 ) = False";
   s21_decimal value_1 = {{0x81094761, 0x3FB10A2, 0x3, 0x80110000}};
   s21_decimal value_2 = {{0x6F497BBD, 0xB2864, 0x0, 0x190000}};
   int code = 0;
@@ -24494,7 +25171,8 @@ START_TEST(s21_is_equal_2447) {
 }
 
 START_TEST(s21_is_equal_2448) {
-  char *example = "( -3.1792951888887252475600447 == 1740397879280775423230779 ) = False";
+  char *example =
+      "( -3.1792951888887252475600447 == 1740397879280775423230779 ) = False";
   s21_decimal value_1 = {{0x33AA5E3F, 0x60191891, 0x1A4C6B, 0x80190000}};
   s21_decimal value_2 = {{0xA282833B, 0x287846B4, 0x1708B, 0x0}};
   int code = 0;
@@ -24584,7 +25262,8 @@ START_TEST(s21_is_equal_2456) {
 }
 
 START_TEST(s21_is_equal_2457) {
-  char *example = "( 1300430627323060449394949824 == 129909817606197787732 ) = False";
+  char *example =
+      "( 1300430627323060449394949824 == 129909817606197787732 ) = False";
   s21_decimal value_1 = {{0xDDD5FEC0, 0x90C5C0D8, 0x433B0E5, 0x0}};
   s21_decimal value_2 = {{0x3534BC54, 0xADC62D2, 0x7, 0x0}};
   int code = 0;
@@ -24654,7 +25333,8 @@ START_TEST(s21_is_equal_2463) {
 }
 
 START_TEST(s21_is_equal_2464) {
-  char *example = "( -4844.5362571799224797863 == -5.1488478133900857684169377 ) = False";
+  char *example =
+      "( -4844.5362571799224797863 == -5.1488478133900857684169377 ) = False";
   s21_decimal value_1 = {{0x19324AA7, 0x3A764885, 0xA42, 0x80130000}};
   s21_decimal value_2 = {{0xE21A92A1, 0xFE16EE18, 0x2A971B, 0x80190000}};
   int code = 0;
@@ -24664,7 +25344,9 @@ START_TEST(s21_is_equal_2464) {
 }
 
 START_TEST(s21_is_equal_2465) {
-  char *example = "( -39.812240159010314588366448 == 1771656601281277187289715060 ) = False";
+  char *example =
+      "( -39.812240159010314588366448 == 1771656601281277187289715060 ) = "
+      "False";
   s21_decimal value_1 = {{0x7CE9A670, 0xDD149B48, 0x20EE91, 0x80180000}};
   s21_decimal value_2 = {{0xCE971174, 0xCCE532D3, 0x5B97AE0, 0x0}};
   int code = 0;
@@ -24734,7 +25416,8 @@ START_TEST(s21_is_equal_2471) {
 }
 
 START_TEST(s21_is_equal_2472) {
-  char *example = "( 139835751118224311332303 == 11675327330027755819284645 ) = False";
+  char *example =
+      "( 139835751118224311332303 == 11675327330027755819284645 ) = False";
   s21_decimal value_1 = {{0x7C722DCF, 0x82E1C876, 0x1D9C, 0x0}};
   s21_decimal value_2 = {{0x8B3CB8A5, 0xC345DCE9, 0x9A858, 0x0}};
   int code = 0;
@@ -24744,7 +25427,9 @@ START_TEST(s21_is_equal_2472) {
 }
 
 START_TEST(s21_is_equal_2473) {
-  char *example = "( 1377683704059307648165168674 == -9.4827333800810857565871088 ) = False";
+  char *example =
+      "( 1377683704059307648165168674 == -9.4827333800810857565871088 ) = "
+      "False";
   s21_decimal value_1 = {{0x2E394622, 0x3F380B22, 0x47397DF, 0x0}};
   s21_decimal value_2 = {{0x73715BF0, 0x10DE5263, 0x4E7078, 0x80190000}};
   int code = 0;
@@ -24774,7 +25459,9 @@ START_TEST(s21_is_equal_2475) {
 }
 
 START_TEST(s21_is_equal_2476) {
-  char *example = "( 1380627016221639643736876411 == 1075167193889485648476763543 ) = False";
+  char *example =
+      "( 1380627016221639643736876411 == 1075167193889485648476763543 ) = "
+      "False";
   s21_decimal value_1 = {{0x8534A57B, 0x84DC23E7, 0x4760724, 0x0}};
   s21_decimal value_2 = {{0x8E07F597, 0x5EB8B9DC, 0x3795B82, 0x0}};
   int code = 0;
@@ -24824,7 +25511,8 @@ START_TEST(s21_is_equal_2480) {
 }
 
 START_TEST(s21_is_equal_2481) {
-  char *example = "( 15638461511380391400734 == 1325141333160557359660236215 ) = False";
+  char *example =
+      "( 15638461511380391400734 == 1325141333160557359660236215 ) = False";
   s21_decimal value_1 = {{0xF69F951E, 0xC340207A, 0x34F, 0x0}};
   s21_decimal value_2 = {{0xCD37DB7, 0x9CF771A8, 0x4482197, 0x0}};
   int code = 0;
@@ -24864,7 +25552,9 @@ START_TEST(s21_is_equal_2484) {
 }
 
 START_TEST(s21_is_equal_2485) {
-  char *example = "( 1962550971969149684640823583 == -2495.9758451479987309340122 ) = False";
+  char *example =
+      "( 1962550971969149684640823583 == -2495.9758451479987309340122 ) = "
+      "False";
   s21_decimal value_1 = {{0xFD3EB91F, 0x5F02043C, 0x6576255, 0x0}};
   s21_decimal value_2 = {{0xBE3D65DA, 0x3786211D, 0x14A56F, 0x80160000}};
   int code = 0;
@@ -24944,7 +25634,8 @@ START_TEST(s21_is_equal_2492) {
 }
 
 START_TEST(s21_is_equal_2493) {
-  char *example = "( -7.1276142020925397 == 1632820444414646174748087837 ) = False";
+  char *example =
+      "( -7.1276142020925397 == 1632820444414646174748087837 ) = False";
   s21_decimal value_1 = {{0x61E17D5, 0xFD3946, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x8B45961D, 0xA7D906C5, 0x546A32D, 0x0}};
   int code = 0;
@@ -25004,7 +25695,8 @@ START_TEST(s21_is_equal_2498) {
 }
 
 START_TEST(s21_is_equal_2499) {
-  char *example = "( -7239.4809894596223234440 == -78.799366569896180285 ) = False";
+  char *example =
+      "( -7239.4809894596223234440 == -78.799366569896180285 ) = False";
   s21_decimal value_1 = {{0xD63AE4F4, 0x73FB237F, 0x188, 0x80120000}};
   s21_decimal value_2 = {{0xFC73FA3D, 0x458F9665, 0x4, 0x80120000}};
   int code = 0;
@@ -25024,7 +25716,9 @@ START_TEST(s21_is_equal_2500) {
 }
 
 START_TEST(s21_is_equal_2501) {
-  char *example = "( 1916729638968258249830571364 == -8.6620080091348061885191968 ) = False";
+  char *example =
+      "( 1916729638968258249830571364 == -8.6620080091348061885191968 ) = "
+      "False";
   s21_decimal value_1 = {{0xA4D61D64, 0xEE8CE072, 0x6317B49, 0x0}};
   s21_decimal value_2 = {{0x9C565720, 0xF36753C3, 0x47A683, 0x80190000}};
   int code = 0;
@@ -25134,7 +25828,8 @@ START_TEST(s21_is_equal_2511) {
 }
 
 START_TEST(s21_is_equal_2512) {
-  char *example = "( 1966122717282306572888644100 == 1099521689771366 ) = False";
+  char *example =
+      "( 1966122717282306572888644100 == 1099521689771366 ) = False";
   s21_decimal value_1 = {{0x6C1D1A04, 0x129142B7, 0x65A56AE, 0x0}};
   s21_decimal value_2 = {{0x57BDDD66, 0x3E802, 0x0, 0x0}};
   int code = 0;
@@ -25184,7 +25879,9 @@ START_TEST(s21_is_equal_2516) {
 }
 
 START_TEST(s21_is_equal_2517) {
-  char *example = "( 1234770256939244111773593449 == 1614477947952346715192420740 ) = False";
+  char *example =
+      "( 1234770256939244111773593449 == 1614477947952346715192420740 ) = "
+      "False";
   s21_decimal value_1 = {{0x2AE46F69, 0xC1340FCC, 0x3FD60C5, 0x0}};
   s21_decimal value_2 = {{0xC319E984, 0xEE1410BB, 0x5377700, 0x0}};
   int code = 0;
@@ -25194,7 +25891,9 @@ START_TEST(s21_is_equal_2517) {
 }
 
 START_TEST(s21_is_equal_2518) {
-  char *example = "( 1768952664481200082000143971 == 1905021069464338688339700172 ) = False";
+  char *example =
+      "( 1768952664481200082000143971 == 1905021069464338688339700172 ) = "
+      "False";
   s21_decimal value_1 = {{0xC7E1E663, 0x17BCF3DA, 0x5B73E4C, 0x0}};
   s21_decimal value_2 = {{0x200969CC, 0x1B711D86, 0x627CBE7, 0x0}};
   int code = 0;
@@ -25364,7 +26063,8 @@ START_TEST(s21_is_equal_2534) {
 }
 
 START_TEST(s21_is_equal_2535) {
-  char *example = "( 0.8908439774134975400553168 == 14286050111541993833 ) = False";
+  char *example =
+      "( 0.8908439774134975400553168 == 14286050111541993833 ) = False";
   s21_decimal value_1 = {{0x4CF0AAD0, 0x7CE256FB, 0x75E6F, 0x190000}};
   s21_decimal value_2 = {{0xBDE3E169, 0xC6423EE2, 0x0, 0x0}};
   int code = 0;
@@ -25394,7 +26094,8 @@ START_TEST(s21_is_equal_2537) {
 }
 
 START_TEST(s21_is_equal_2538) {
-  char *example = "( 19920663825916022 == 1582577288353704070957132964 ) = False";
+  char *example =
+      "( 19920663825916022 == 1582577288353704070957132964 ) = False";
   s21_decimal value_1 = {{0xFB08A076, 0x46C5BC, 0x0, 0x0}};
   s21_decimal value_2 = {{0x86226CA4, 0xB53D358A, 0x51D13C6, 0x0}};
   int code = 0;
@@ -25404,7 +26105,8 @@ START_TEST(s21_is_equal_2538) {
 }
 
 START_TEST(s21_is_equal_2539) {
-  char *example = "( 12679772359599638226760047 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 12679772359599638226760047 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x9CD716F, 0xD64206B1, 0xA7D0B, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -25474,7 +26176,8 @@ START_TEST(s21_is_equal_2545) {
 }
 
 START_TEST(s21_is_equal_2546) {
-  char *example = "( 151192652117614136790 == 1689819443886568023470324329 ) = False";
+  char *example =
+      "( 151192652117614136790 == 1689819443886568023470324329 ) = False";
   s21_decimal value_1 = {{0x479A0DD6, 0x3238340C, 0x8, 0x0}};
   s21_decimal value_2 = {{0xA9173A69, 0x9BC6DDA0, 0x575C92F, 0x0}};
   int code = 0;
@@ -25504,7 +26207,9 @@ START_TEST(s21_is_equal_2548) {
 }
 
 START_TEST(s21_is_equal_2549) {
-  char *example = "( 1347859008029581588193467359 == 1970093577132793732833206143 ) = False";
+  char *example =
+      "( 1347859008029581588193467359 == 1970093577132793732833206143 ) = "
+      "False";
   s21_decimal value_1 = {{0x9929DBDF, 0x3C492B31, 0x45AEC3F, 0x0}};
   s21_decimal value_2 = {{0x646FDF7F, 0xD0FCAFA1, 0x65D9F8A, 0x0}};
   int code = 0;
@@ -25584,7 +26289,9 @@ START_TEST(s21_is_equal_2556) {
 }
 
 START_TEST(s21_is_equal_2557) {
-  char *example = "( 1492062215068831266039021926 == 1921321428535680996201429349 ) = False";
+  char *example =
+      "( 1492062215068831266039021926 == 1921321428535680996201429349 ) = "
+      "False";
   s21_decimal value_1 = {{0xCD6E4166, 0xC0C86967, 0x4D23476, 0x0}};
   s21_decimal value_2 = {{0x46537965, 0x57D33BA4, 0x63547A3, 0x0}};
   int code = 0;
@@ -25604,7 +26311,8 @@ START_TEST(s21_is_equal_2558) {
 }
 
 START_TEST(s21_is_equal_2559) {
-  char *example = "( 1607282709812743947154088 == -9.9666105440875351227402404 ) = False";
+  char *example =
+      "( 1607282709812743947154088 == -9.9666105440875351227402404 ) = False";
   s21_decimal value_1 = {{0xEE8BF2A8, 0xF864D9EC, 0x1545A, 0x0}};
   s21_decimal value_2 = {{0xE36688A4, 0x66F09225, 0x52711E, 0x80190000}};
   int code = 0;
@@ -25634,7 +26342,9 @@ START_TEST(s21_is_equal_2561) {
 }
 
 START_TEST(s21_is_equal_2562) {
-  char *example = "( -94.292326471239036721710517 == -3.9162697088966174911367771 ) = False";
+  char *example =
+      "( -94.292326471239036721710517 == -3.9162697088966174911367771 ) = "
+      "False";
   s21_decimal value_1 = {{0x71F045B5, 0x42AC4B22, 0x4DFF2D, 0x80180000}};
   s21_decimal value_2 = {{0xEC220A5B, 0x102EB0D0, 0x206506, 0x80190000}};
   int code = 0;
@@ -25644,7 +26354,8 @@ START_TEST(s21_is_equal_2562) {
 }
 
 START_TEST(s21_is_equal_2563) {
-  char *example = "( 1673683810171909065959184373 == -47.427930040973136581 ) = False";
+  char *example =
+      "( 1673683810171909065959184373 == -47.427930040973136581 ) = False";
   s21_decimal value_1 = {{0x3A7297F5, 0x26F0AEAC, 0x5687055, 0x0}};
   s21_decimal value_2 = {{0x9C4812C5, 0x9231DB16, 0x2, 0x80120000}};
   int code = 0;
@@ -25664,7 +26375,8 @@ START_TEST(s21_is_equal_2564) {
 }
 
 START_TEST(s21_is_equal_2565) {
-  char *example = "( -7727.8824383217019 == -74.075184360439107208920697 ) = False";
+  char *example =
+      "( -7727.8824383217019 == -74.075184360439107208920697 ) = False";
   s21_decimal value_1 = {{0x6C057D7B, 0x1128CAE, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x6718BE79, 0xCA61003E, 0x3D4607, 0x80180000}};
   int code = 0;
@@ -25674,7 +26386,8 @@ START_TEST(s21_is_equal_2565) {
 }
 
 START_TEST(s21_is_equal_2566) {
-  char *example = "( 1385517029809286850976778784 == 141053651052326250147 ) = False";
+  char *example =
+      "( 1385517029809286850976778784 == 141053651052326250147 ) = False";
   s21_decimal value_1 = {{0x2518A20, 0xAFCE7EAB, 0x47A12A4, 0x0}};
   s21_decimal value_2 = {{0x3DCF66A3, 0xA5833C4C, 0x7, 0x0}};
   int code = 0;
@@ -25784,7 +26497,9 @@ START_TEST(s21_is_equal_2576) {
 }
 
 START_TEST(s21_is_equal_2577) {
-  char *example = "( 1001525456896928562262676872 == -9.7587089581628818543012263 ) = False";
+  char *example =
+      "( 1001525456896928562262676872 == -9.7587089581628818543012263 ) = "
+      "False";
   s21_decimal value_1 = {{0xB7D19588, 0xCEF0A3BC, 0x33C7143, 0x0}};
   s21_decimal value_2 = {{0xDC06E9A7, 0xB9FEFB88, 0x50B8DE, 0x80190000}};
   int code = 0;
@@ -25814,7 +26529,8 @@ START_TEST(s21_is_equal_2579) {
 }
 
 START_TEST(s21_is_equal_2580) {
-  char *example = "( 1110335515361958022 == -56830.834847748238344925 ) = False";
+  char *example =
+      "( 1110335515361958022 == -56830.834847748238344925 ) = False";
   s21_decimal value_1 = {{0xB6A65886, 0xF68B444, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFC8002DD, 0xCE44575B, 0xC08, 0x80120000}};
   int code = 0;
@@ -25844,7 +26560,8 @@ START_TEST(s21_is_equal_2582) {
 }
 
 START_TEST(s21_is_equal_2583) {
-  char *example = "( -17.552670427485735 == -490.36210244087349651786302 ) = False";
+  char *example =
+      "( -17.552670427485735 == -490.36210244087349651786302 ) = False";
   s21_decimal value_1 = {{0x8DB09627, 0x3E5C0F, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x29B14A3E, 0x48AAB4D5, 0x288FD2, 0x80170000}};
   int code = 0;
@@ -25854,7 +26571,9 @@ START_TEST(s21_is_equal_2583) {
 }
 
 START_TEST(s21_is_equal_2584) {
-  char *example = "( -3.5532586391237566310606786 == 1278332024924465228063862161 ) = False";
+  char *example =
+      "( -3.5532586391237566310606786 == 1278332024924465228063862161 ) = "
+      "False";
   s21_decimal value_1 = {{0x352367C2, 0x5E334F6B, 0x1D6451, 0x80190000}};
   s21_decimal value_2 = {{0x3CD26D91, 0xEDD5E3F8, 0x4216955, 0x0}};
   int code = 0;
@@ -25864,7 +26583,9 @@ START_TEST(s21_is_equal_2584) {
 }
 
 START_TEST(s21_is_equal_2585) {
-  char *example = "( -1.2031152520498777423873561 == 1240270335698301515575290953 ) = False";
+  char *example =
+      "( -1.2031152520498777423873561 == 1240270335698301515575290953 ) = "
+      "False";
   s21_decimal value_1 = {{0x43200619, 0x15C34FA6, 0x9F3B2, 0x80190000}};
   s21_decimal value_2 = {{0x6976C49, 0x9F25D854, 0x401ED75, 0x0}};
   int code = 0;
@@ -25894,7 +26615,8 @@ START_TEST(s21_is_equal_2587) {
 }
 
 START_TEST(s21_is_equal_2588) {
-  char *example = "( 56930.8484723710304 == 1128789926844470243835427883 ) = False";
+  char *example =
+      "( 56930.8484723710304 == 1128789926844470243835427883 ) = False";
   s21_decimal value_1 = {{0xEF929960, 0x7E6970C, 0x0, 0xD0000}};
   s21_decimal value_2 = {{0x720ABC2B, 0x8C5890F2, 0x3A5B690, 0x0}};
   int code = 0;
@@ -25904,7 +26626,9 @@ START_TEST(s21_is_equal_2588) {
 }
 
 START_TEST(s21_is_equal_2589) {
-  char *example = "( 1257901011730402638819787233 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1257901011730402638819787233 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xC94881E1, 0x7C079740, 0x41082E6, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -25914,7 +26638,8 @@ START_TEST(s21_is_equal_2589) {
 }
 
 START_TEST(s21_is_equal_2590) {
-  char *example = "( 1553104538444912748217846782 == 142570357993282154837988868 ) = False";
+  char *example =
+      "( 1553104538444912748217846782 == 142570357993282154837988868 ) = False";
   s21_decimal value_1 = {{0x73B94BFE, 0xBBE46147, 0x504B2AD, 0x0}};
   s21_decimal value_2 = {{0xDD8E5604, 0x97EA37C4, 0x75EE72, 0x0}};
   int code = 0;
@@ -25944,7 +26669,8 @@ START_TEST(s21_is_equal_2592) {
 }
 
 START_TEST(s21_is_equal_2593) {
-  char *example = "( 10550659712450412519 == 1410898533891741533214492615 ) = False";
+  char *example =
+      "( 10550659712450412519 == 1410898533891741533214492615 ) = False";
   s21_decimal value_1 = {{0xD2A1BFE7, 0x926B791B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x592A47C7, 0xC7B4C326, 0x48F1162, 0x0}};
   int code = 0;
@@ -26014,7 +26740,9 @@ START_TEST(s21_is_equal_2599) {
 }
 
 START_TEST(s21_is_equal_2600) {
-  char *example = "( 1982490699652422052544522711 == 1961624617992087727624897430 ) = False";
+  char *example =
+      "( 1982490699652422052544522711 == 1961624617992087727624897430 ) = "
+      "False";
   s21_decimal value_1 = {{0x17D829D7, 0x2CBDEF71, 0x667E0BC, 0x0}};
   s21_decimal value_2 = {{0x8E1F4396, 0x9F144C1B, 0x6569E2B, 0x0}};
   int code = 0;
@@ -26024,7 +26752,8 @@ START_TEST(s21_is_equal_2600) {
 }
 
 START_TEST(s21_is_equal_2601) {
-  char *example = "( 1950058796749036151714058626 == 11133972145970549032841 ) = False";
+  char *example =
+      "( 1950058796749036151714058626 == 11133972145970549032841 ) = False";
   s21_decimal value_1 = {{0x9C079182, 0x320B8BEA, 0x64D0D03, 0x0}};
   s21_decimal value_2 = {{0x943B0789, 0x92E72472, 0x25B, 0x0}};
   int code = 0;
@@ -26064,7 +26793,8 @@ START_TEST(s21_is_equal_2604) {
 }
 
 START_TEST(s21_is_equal_2605) {
-  char *example = "( 152197233172239224488237 == 1041649121106497047774 ) = False";
+  char *example =
+      "( 152197233172239224488237 == 1041649121106497047774 ) = False";
   s21_decimal value_1 = {{0x8969412D, 0xA0E82AA6, 0x203A, 0x0}};
   s21_decimal value_2 = {{0xB69B0CDE, 0x77C914C0, 0x38, 0x0}};
   int code = 0;
@@ -26144,7 +26874,8 @@ START_TEST(s21_is_equal_2612) {
 }
 
 START_TEST(s21_is_equal_2613) {
-  char *example = "( -7.97455906878327337 == 1475172373183079350031777352 ) = False";
+  char *example =
+      "( -7.97455906878327337 == 1475172373183079350031777352 ) = False";
   s21_decimal value_1 = {{0x15850A29, 0xB1121EC, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x38E7E48, 0x96FC1F8E, 0x4C43BE6, 0x0}};
   int code = 0;
@@ -26204,7 +26935,8 @@ START_TEST(s21_is_equal_2618) {
 }
 
 START_TEST(s21_is_equal_2619) {
-  char *example = "( -6.976755435429780 == 1327754535307242559375299155 ) = False";
+  char *example =
+      "( -6.976755435429780 == 1327754535307242559375299155 ) = False";
   s21_decimal value_1 = {{0x3EF0FCC2, 0x27A88, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xEFAE5253, 0x95DB717C, 0x44A4AF5, 0x0}};
   int code = 0;
@@ -26234,7 +26966,8 @@ START_TEST(s21_is_equal_2621) {
 }
 
 START_TEST(s21_is_equal_2622) {
-  char *example = "( 145190608938208377323581962 == 1343010634375239452706907327 ) = False";
+  char *example =
+      "( 145190608938208377323581962 == 1343010634375239452706907327 ) = False";
   s21_decimal value_1 = {{0x58EAF20A, 0xAE8825AD, 0x78194E, 0x0}};
   s21_decimal value_2 = {{0x2B36A4BF, 0x5F7F7392, 0x456E990, 0x0}};
   int code = 0;
@@ -26274,7 +27007,8 @@ START_TEST(s21_is_equal_2625) {
 }
 
 START_TEST(s21_is_equal_2626) {
-  char *example = "( 1298475926394616274420224 == 1402602596153131655341966385 ) = False";
+  char *example =
+      "( 1298475926394616274420224 == 1402602596153131655341966385 ) = False";
   s21_decimal value_1 = {{0x26AB0200, 0x85614B99, 0x112F6, 0x0}};
   s21_decimal value_2 = {{0xD3968431, 0x181A5360, 0x48834A7, 0x0}};
   int code = 0;
@@ -26304,7 +27038,8 @@ START_TEST(s21_is_equal_2628) {
 }
 
 START_TEST(s21_is_equal_2629) {
-  char *example = "( 1829559490086927852 == 1009151291307718994878437306 ) = False";
+  char *example =
+      "( 1829559490086927852 == 1009151291307718994878437306 ) = False";
   s21_decimal value_1 = {{0xAE137DEC, 0x1963E6A9, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCC6A97BA, 0x1EC01F50, 0x342C019, 0x0}};
   int code = 0;
@@ -26364,7 +27099,8 @@ START_TEST(s21_is_equal_2634) {
 }
 
 START_TEST(s21_is_equal_2635) {
-  char *example = "( 1530582844742173 == 1027209355111291703627634664 ) = False";
+  char *example =
+      "( 1530582844742173 == 1027209355111291703627634664 ) = False";
   s21_decimal value_1 = {{0x96C29A1D, 0x5700E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC07857E8, 0xB86FBA2F, 0x351B00A, 0x0}};
   int code = 0;
@@ -26404,7 +27140,8 @@ START_TEST(s21_is_equal_2638) {
 }
 
 START_TEST(s21_is_equal_2639) {
-  char *example = "( 116965382933423957118 == 1133499363989328147865713039 ) = False";
+  char *example =
+      "( 116965382933423957118 == 1133499363989328147865713039 ) = False";
   s21_decimal value_1 = {{0x9C45A47E, 0x57388411, 0x6, 0x0}};
   s21_decimal value_2 = {{0x4D80B98F, 0xA5BC8DD6, 0x3A99BD3, 0x0}};
   int code = 0;
@@ -26434,7 +27171,9 @@ START_TEST(s21_is_equal_2641) {
 }
 
 START_TEST(s21_is_equal_2642) {
-  char *example = "( 1940143292760243683928950777 == 1787334627661915816871810797 ) = False";
+  char *example =
+      "( 1940143292760243683928950777 == 1787334627661915816871810797 ) = "
+      "False";
   s21_decimal value_1 = {{0xA0C1C7F9, 0xA5AE5CD4, 0x644D952, 0x0}};
   s21_decimal value_2 = {{0xF98756ED, 0x504049DB, 0x5C672D4, 0x0}};
   int code = 0;
@@ -26464,7 +27203,9 @@ START_TEST(s21_is_equal_2644) {
 }
 
 START_TEST(s21_is_equal_2645) {
-  char *example = "( 1744176241721853563978363724 == -38215.431631782135005435953 ) = False";
+  char *example =
+      "( 1744176241721853563978363724 == -38215.431631782135005435953 ) = "
+      "False";
   s21_decimal value_1 = {{0x5FEBB34C, 0x860C1400, 0x5A2BFAF, 0x0}};
   s21_decimal value_2 = {{0xD42BD831, 0xB32B7F6B, 0x1F9C6E, 0x80150000}};
   int code = 0;
@@ -26574,7 +27315,8 @@ START_TEST(s21_is_equal_2655) {
 }
 
 START_TEST(s21_is_equal_2656) {
-  char *example = "( -1431.43764439142 == -771910.57742990994902036688 ) = False";
+  char *example =
+      "( -1431.43764439142 == -771910.57742990994902036688 ) = False";
   s21_decimal value_1 = {{0x413B3066, 0x8230, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x5E1730D0, 0xA0049A7A, 0x3FD9D7, 0x80140000}};
   int code = 0;
@@ -26604,7 +27346,8 @@ START_TEST(s21_is_equal_2658) {
 }
 
 START_TEST(s21_is_equal_2659) {
-  char *example = "( 0.483145083259468193479 == -684.56667774859055822473617 ) = False";
+  char *example =
+      "( 0.483145083259468193479 == -684.56667774859055822473617 ) = False";
   s21_decimal value_1 = {{0x81211EC7, 0x30FC2569, 0x1A, 0x150000}};
   s21_decimal value_2 = {{0x27D70991, 0x6568D7DD, 0x38A043, 0x80170000}};
   int code = 0;
@@ -26624,7 +27367,8 @@ START_TEST(s21_is_equal_2660) {
 }
 
 START_TEST(s21_is_equal_2661) {
-  char *example = "( 1405381630742236953589098495 == 1675313595268484018 ) = False";
+  char *example =
+      "( 1405381630742236953589098495 == 1675313595268484018 ) = False";
   s21_decimal value_1 = {{0x8710A7FF, 0xDC70E65A, 0x48A8122, 0x0}};
   s21_decimal value_2 = {{0xB55C4BB2, 0x173FE8D6, 0x0, 0x0}};
   int code = 0;
@@ -26744,7 +27488,8 @@ START_TEST(s21_is_equal_2672) {
 }
 
 START_TEST(s21_is_equal_2673) {
-  char *example = "( 4.68586874821036086686127170 == -77785878.1748007414102312 ) = False";
+  char *example =
+      "( 4.68586874821036086686127170 == -77785878.1748007414102312 ) = False";
   s21_decimal value_1 = {{0xCB3C686D, 0x89D44EAA, 0x26C2B6, 0x190000}};
   s21_decimal value_2 = {{0x76917928, 0xCF1E175B, 0xA4B7, 0x80100000}};
   int code = 0;
@@ -26754,7 +27499,8 @@ START_TEST(s21_is_equal_2673) {
 }
 
 START_TEST(s21_is_equal_2674) {
-  char *example = "( 1769758938864110767154273433 == 13899175103426429151659789 ) = False";
+  char *example =
+      "( 1769758938864110767154273433 == 13899175103426429151659789 ) = False";
   s21_decimal value_1 = {{0x25FA1C99, 0x5089FC5C, 0x5B7E908, 0x0}};
   s21_decimal value_2 = {{0x7834C70D, 0xCAC9FC87, 0xB7F43, 0x0}};
   int code = 0;
@@ -26784,7 +27530,9 @@ START_TEST(s21_is_equal_2676) {
 }
 
 START_TEST(s21_is_equal_2677) {
-  char *example = "( 1964763288071928753713860317 == -2.8342570437319698478386235 ) = False";
+  char *example =
+      "( 1964763288071928753713860317 == -2.8342570437319698478386235 ) = "
+      "False";
   s21_decimal value_1 = {{0x9A04EDD, 0x447230BC, 0x65936CF, 0x0}};
   s21_decimal value_2 = {{0x9B7DCC3B, 0xD275084A, 0x1771C5, 0x80190000}};
   int code = 0;
@@ -26804,7 +27552,9 @@ START_TEST(s21_is_equal_2678) {
 }
 
 START_TEST(s21_is_equal_2679) {
-  char *example = "( -3.0399264678085273536480708 == -9.5146728007665208763574944 ) = False";
+  char *example =
+      "( -3.0399264678085273536480708 == -9.5146728007665208763574944 ) = "
+      "False";
   s21_decimal value_1 = {{0x2910C5C4, 0x70B74F7A, 0x19254B, 0x80190000}};
   s21_decimal value_2 = {{0x381B6AA0, 0x75E5F163, 0x4EB41A, 0x80190000}};
   int code = 0;
@@ -26874,7 +27624,8 @@ START_TEST(s21_is_equal_2685) {
 }
 
 START_TEST(s21_is_equal_2686) {
-  char *example = "( 18172878321629803725 == 113924004665905964739352028 ) = False";
+  char *example =
+      "( 18172878321629803725 == 113924004665905964739352028 ) = False";
   s21_decimal value_1 = {{0xAB2434CD, 0xFC33088C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9A2A55DC, 0xAAF84BD4, 0x5E3C58, 0x0}};
   int code = 0;
@@ -26904,7 +27655,9 @@ START_TEST(s21_is_equal_2688) {
 }
 
 START_TEST(s21_is_equal_2689) {
-  char *example = "( -246.32481865356945948843423 == 1005826765062772593116752869 ) = False";
+  char *example =
+      "( -246.32481865356945948843423 == 1005826765062772593116752869 ) = "
+      "False";
   s21_decimal value_1 = {{0xED169D9F, 0x8481DBE0, 0x146021, 0x80170000}};
   s21_decimal value_2 = {{0xD56EABE5, 0x30F62B83, 0x340001A, 0x0}};
   int code = 0;
@@ -26944,7 +27697,9 @@ START_TEST(s21_is_equal_2692) {
 }
 
 START_TEST(s21_is_equal_2693) {
-  char *example = "( 1483995033117814076363905820 == -7.7706881263837858682444724 ) = False";
+  char *example =
+      "( 1483995033117814076363905820 == -7.7706881263837858682444724 ) = "
+      "False";
   s21_decimal value_1 = {{0xC1FA1B1C, 0xF175A913, 0x4CB882B, 0x0}};
   s21_decimal value_2 = {{0xE6751BB4, 0x7962F68E, 0x404712, 0x80190000}};
   int code = 0;
@@ -26964,7 +27719,8 @@ START_TEST(s21_is_equal_2694) {
 }
 
 START_TEST(s21_is_equal_2695) {
-  char *example = "( -2258.3278778439950421205017 == 17901752033989884 ) = False";
+  char *example =
+      "( -2258.3278778439950421205017 == 17901752033989884 ) = False";
   s21_decimal value_1 = {{0x4ECC2019, 0xFEE45424, 0x12AE31, 0x80160000}};
   s21_decimal value_2 = {{0x72D7D4FC, 0x3F998C, 0x0, 0x0}};
   int code = 0;
@@ -27134,7 +27890,8 @@ START_TEST(s21_is_equal_2711) {
 }
 
 START_TEST(s21_is_equal_2712) {
-  char *example = "( 1541544067897654218997314 == 1151153321708448851422489820 ) = False";
+  char *example =
+      "( 1541544067897654218997314 == 1151153321708448851422489820 ) = False";
   s21_decimal value_1 = {{0x566E3E42, 0x45787E67, 0x1466F, 0x0}};
   s21_decimal value_2 = {{0xE3962CDC, 0x9CEE3D67, 0x3B83632, 0x0}};
   int code = 0;
@@ -27154,7 +27911,9 @@ START_TEST(s21_is_equal_2713) {
 }
 
 START_TEST(s21_is_equal_2714) {
-  char *example = "( -46554.930162657411912740987 == 1613901912281033966817090448 ) = False";
+  char *example =
+      "( -46554.930162657411912740987 == 1613901912281033966817090448 ) = "
+      "False";
   s21_decimal value_1 = {{0xB6ACB07B, 0xD234799A, 0x268263, 0x80150000}};
   s21_decimal value_2 = {{0xAC539B90, 0xF9431D93, 0x536FD05, 0x0}};
   int code = 0;
@@ -27164,7 +27923,8 @@ START_TEST(s21_is_equal_2714) {
 }
 
 START_TEST(s21_is_equal_2715) {
-  char *example = "( -7954.203092077190118 == 1037813440585344220740287646 ) = False";
+  char *example =
+      "( -7954.203092077190118 == 1037813440585344220740287646 ) = False";
   s21_decimal value_1 = {{0xAE931BE6, 0x6E630191, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x8F8D7C9E, 0x588A9038, 0x35A758B, 0x0}};
   int code = 0;
@@ -27174,7 +27934,8 @@ START_TEST(s21_is_equal_2715) {
 }
 
 START_TEST(s21_is_equal_2716) {
-  char *example = "( 1460585136017436778946588145 == 117461787414157556561270 ) = False";
+  char *example =
+      "( 1460585136017436778946588145 == 117461787414157556561270 ) = False";
   s21_decimal value_1 = {{0x53E36DF1, 0xE0E5D67D, 0x4B82AEE, 0x0}};
   s21_decimal value_2 = {{0x4E79B576, 0x9DC2E1F4, 0x18DF, 0x0}};
   int code = 0;
@@ -27234,7 +27995,8 @@ START_TEST(s21_is_equal_2721) {
 }
 
 START_TEST(s21_is_equal_2722) {
-  char *example = "( -8.753431909051221324881 == 1125021046802989770512092 ) = False";
+  char *example =
+      "( -8.753431909051221324881 == 1125021046802989770512092 ) = False";
   s21_decimal value_1 = {{0xB776B451, 0x8645479C, 0x1DA, 0x80150000}};
   s21_decimal value_2 = {{0x4C0696DC, 0x835DEA5A, 0xEE3B, 0x0}};
   int code = 0;
@@ -27274,7 +28036,8 @@ START_TEST(s21_is_equal_2725) {
 }
 
 START_TEST(s21_is_equal_2726) {
-  char *example = "( -8456632.0312187230497039056 == 1132799744479636817381017 ) = False";
+  char *example =
+      "( -8456632.0312187230497039056 == 1132799744479636817381017 ) = False";
   s21_decimal value_1 = {{0x17F062D0, 0x68FAEEA6, 0x45F39D, 0x80130000}};
   s21_decimal value_2 = {{0xE39F0699, 0x327B8DF4, 0xEFE1, 0x0}};
   int code = 0;
@@ -27294,7 +28057,8 @@ START_TEST(s21_is_equal_2727) {
 }
 
 START_TEST(s21_is_equal_2728) {
-  char *example = "( 1066528395803957300911107277 == 16580045790066996 ) = False";
+  char *example =
+      "( 1066528395803957300911107277 == 16580045790066996 ) = False";
   s21_decimal value_1 = {{0xB2AF6CCD, 0x2FF9DFB6, 0x372362C, 0x0}};
   s21_decimal value_2 = {{0xBBAD3934, 0x3AE776, 0x0, 0x0}};
   int code = 0;
@@ -27354,7 +28118,8 @@ START_TEST(s21_is_equal_2733) {
 }
 
 START_TEST(s21_is_equal_2734) {
-  char *example = "( 1145816858243774570586101771 == 11365634834236318219 ) = False";
+  char *example =
+      "( 1145816858243774570586101771 == 11365634834236318219 ) = False";
   s21_decimal value_1 = {{0xE936D80B, 0x5952DF57, 0x3B3CC28, 0x0}};
   s21_decimal value_2 = {{0xFD76220B, 0x9DBAD8A9, 0x0, 0x0}};
   int code = 0;
@@ -27404,7 +28169,9 @@ START_TEST(s21_is_equal_2738) {
 }
 
 START_TEST(s21_is_equal_2739) {
-  char *example = "( -9.5178648649017488978658037 == 1814984259805699092749239219 ) = False";
+  char *example =
+      "( -9.5178648649017488978658037 == 1814984259805699092749239219 ) = "
+      "False";
   s21_decimal value_1 = {{0xF2F6C2F5, 0xE1C91C7A, 0x4EBADC, 0x80190000}};
   s21_decimal value_2 = {{0x425843B3, 0xE01B4F33, 0x5DD51DD, 0x0}};
   int code = 0;
@@ -27444,7 +28211,8 @@ START_TEST(s21_is_equal_2742) {
 }
 
 START_TEST(s21_is_equal_2743) {
-  char *example = "( -602.5951429514931109653 == 1937241298110874911319778167 ) = False";
+  char *example =
+      "( -602.5951429514931109653 == 1937241298110874911319778167 ) = False";
   s21_decimal value_1 = {{0xEACE7F15, 0xAAE01248, 0x146, 0x80130000}};
   s21_decimal value_2 = {{0x97BFE377, 0x33B7BE8B, 0x64272CD, 0x0}};
   int code = 0;
@@ -27524,7 +28292,8 @@ START_TEST(s21_is_equal_2750) {
 }
 
 START_TEST(s21_is_equal_2751) {
-  char *example = "( 154211993361688021 == 1103129187189742163643129905 ) = False";
+  char *example =
+      "( 154211993361688021 == 1103129187189742163643129905 ) = False";
   s21_decimal value_1 = {{0xAC6DA5D5, 0x223DEFD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3A88E031, 0x106D1347, 0x3907CB1, 0x0}};
   int code = 0;
@@ -27574,7 +28343,8 @@ START_TEST(s21_is_equal_2755) {
 }
 
 START_TEST(s21_is_equal_2756) {
-  char *example = "( -3.9051376017501889096 == 150534552794137122289648269 ) = False";
+  char *example =
+      "( -3.9051376017501889096 == 150534552794137122289648269 ) = False";
   s21_decimal value_1 = {{0xB968A248, 0x1DF25B95, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0xFC66828D, 0x756BD8DC, 0x7C84EE, 0x0}};
   int code = 0;
@@ -27624,7 +28394,8 @@ START_TEST(s21_is_equal_2760) {
 }
 
 START_TEST(s21_is_equal_2761) {
-  char *example = "( 1188545490761288896186 == 1871013700166951666396335512 ) = False";
+  char *example =
+      "( 1188545490761288896186 == 1871013700166951666396335512 ) = False";
   s21_decimal value_1 = {{0xDAF1CEBA, 0x6E61D2A9, 0x40, 0x0}};
   s21_decimal value_2 = {{0xA4C68D98, 0xEC6E44AD, 0x60BAA8F, 0x0}};
   int code = 0;
@@ -27654,7 +28425,8 @@ START_TEST(s21_is_equal_2763) {
 }
 
 START_TEST(s21_is_equal_2764) {
-  char *example = "( -2643127.4321096937868100673 == 141995554920577747695032119 ) = False";
+  char *example =
+      "( -2643127.4321096937868100673 == 141995554920577747695032119 ) = False";
   s21_decimal value_1 = {{0xA800441, 0x4084B084, 0x15DD0A, 0x80130000}};
   s21_decimal value_2 = {{0xBAC5D737, 0x74D7344F, 0x7574BA, 0x0}};
   int code = 0;
@@ -27754,7 +28526,8 @@ START_TEST(s21_is_equal_2773) {
 }
 
 START_TEST(s21_is_equal_2774) {
-  char *example = "( 1537869928725420726480246008 == -1.3308851277019926193546 ) = False";
+  char *example =
+      "( 1537869928725420726480246008 == -1.3308851277019926193546 ) = False";
   s21_decimal value_1 = {{0xCB2F94F8, 0xE2DEC0ED, 0x4F8189F, 0x0}};
   s21_decimal value_2 = {{0x2C97658A, 0x7969FB22, 0x2D1, 0x80160000}};
   int code = 0;
@@ -27934,7 +28707,8 @@ START_TEST(s21_is_equal_2791) {
 }
 
 START_TEST(s21_is_equal_2792) {
-  char *example = "( -4.75515619337452 == 7.65497094003721580395464552 ) = False";
+  char *example =
+      "( -4.75515619337452 == 7.65497094003721580395464552 ) = False";
   s21_decimal value_1 = {{0x9B9364EC, 0x1B07A, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xBDD18768, 0x9E150DF8, 0x2793450, 0x1A0000}};
   int code = 0;
@@ -27974,7 +28748,8 @@ START_TEST(s21_is_equal_2795) {
 }
 
 START_TEST(s21_is_equal_2796) {
-  char *example = "( 1.7792175483742719E-10 == 1145880942039980920824538832 ) = False";
+  char *example =
+      "( 1.7792175483742719E-10 == 1145880942039980920824538832 ) = False";
   s21_decimal value_1 = {{0xAB7D69FF, 0x3F35E3, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xD88226D0, 0x56A63E83, 0x3B3D9BA, 0x0}};
   int code = 0;
@@ -28004,7 +28779,8 @@ START_TEST(s21_is_equal_2798) {
 }
 
 START_TEST(s21_is_equal_2799) {
-  char *example = "( 110891315576611983848 == 20.9169084123598870896305922 ) = False";
+  char *example =
+      "( 110891315576611983848 == 20.9169084123598870896305922 ) = False";
   s21_decimal value_1 = {{0x53B2D1E8, 0x2ED17FD, 0x6, 0x0}};
   s21_decimal value_2 = {{0xFFD9E702, 0xC56C1517, 0xAD0546, 0x190000}};
   int code = 0;
@@ -28204,7 +28980,8 @@ START_TEST(s21_is_equal_2818) {
 }
 
 START_TEST(s21_is_equal_2819) {
-  char *example = "( 14850454951872288 == 1353701362912865617859307885 ) = False";
+  char *example =
+      "( 14850454951872288 == 1353701362912865617859307885 ) = False";
   s21_decimal value_1 = {{0xFC28C720, 0x34C268, 0x0, 0x0}};
   s21_decimal value_2 = {{0x98B3E96D, 0xEDA76B36, 0x45FC169, 0x0}};
   int code = 0;
@@ -28244,7 +29021,8 @@ START_TEST(s21_is_equal_2822) {
 }
 
 START_TEST(s21_is_equal_2823) {
-  char *example = "( 1335541175038494143239582120 == -6603994.631090807296 ) = False";
+  char *example =
+      "( 1335541175038494143239582120 == -6603994.631090807296 ) = False";
   s21_decimal value_1 = {{0xA23671A8, 0x2BC88D61, 0x450BBD8, 0x0}};
   s21_decimal value_2 = {{0xA4C12200, 0x5BA61A20, 0x0, 0x800C0000}};
   int code = 0;
@@ -28294,7 +29072,8 @@ START_TEST(s21_is_equal_2827) {
 }
 
 START_TEST(s21_is_equal_2828) {
-  char *example = "( 1463549080603041013517135198 == 187743756939410809852631862 ) = False";
+  char *example =
+      "( 1463549080603041013517135198 == 187743756939410809852631862 ) = False";
   s21_decimal value_1 = {{0x270E2D5E, 0xA2EE5219, 0x4BA9E92, 0x0}};
   s21_decimal value_2 = {{0x941D9B36, 0x750C0A8F, 0x9B4C49, 0x0}};
   int code = 0;
@@ -28414,7 +29193,9 @@ START_TEST(s21_is_equal_2839) {
 }
 
 START_TEST(s21_is_equal_2840) {
-  char *example = "( 1400846053716838291477582425 == 1759713860782406456798960230 ) = False";
+  char *example =
+      "( 1400846053716838291477582425 == 1759713860782406456798960230 ) = "
+      "False";
   s21_decimal value_1 = {{0xA15F5259, 0xBCE58340, 0x486C0B0, 0x0}};
   s21_decimal value_2 = {{0x8E095A66, 0x8A687EEB, 0x5AF99E7, 0x0}};
   int code = 0;
@@ -28434,7 +29215,8 @@ START_TEST(s21_is_equal_2841) {
 }
 
 START_TEST(s21_is_equal_2842) {
-  char *example = "( -433.4075001991469190287 == -1.5814288980485000343357732 ) = False";
+  char *example =
+      "( -433.4075001991469190287 == -1.5814288980485000343357732 ) = False";
   s21_decimal value_1 = {{0xD1EFCC8F, 0xF35F8B65, 0xEA, 0x80130000}};
   s21_decimal value_2 = {{0x59508924, 0x52CD791C, 0xD14CE, 0x80190000}};
   int code = 0;
@@ -28474,7 +29256,8 @@ START_TEST(s21_is_equal_2845) {
 }
 
 START_TEST(s21_is_equal_2846) {
-  char *example = "( 0.910972424353537912641 == 1788541300896543926732130837 ) = False";
+  char *example =
+      "( 0.910972424353537912641 == 1788541300896543926732130837 ) = False";
   s21_decimal value_1 = {{0x2908EF41, 0x62483169, 0x31, 0x150000}};
   s21_decimal value_2 = {{0xA3B70A15, 0x335ACB53, 0x5C7725A, 0x0}};
   int code = 0;
@@ -28484,7 +29267,8 @@ START_TEST(s21_is_equal_2846) {
 }
 
 START_TEST(s21_is_equal_2847) {
-  char *example = "( 17073990028833520831496233 == 1395933166799275964890465251 ) = False";
+  char *example =
+      "( 17073990028833520831496233 == 1395933166799275964890465251 ) = False";
   s21_decimal value_1 = {{0xB8210029, 0xDAA723E4, 0xE1F8E, 0x0}};
   s21_decimal value_2 = {{0x97C5C3E3, 0x9ABB16C8, 0x482B058, 0x0}};
   int code = 0;
@@ -28504,7 +29288,8 @@ START_TEST(s21_is_equal_2848) {
 }
 
 START_TEST(s21_is_equal_2849) {
-  char *example = "( -5102.86274125517336 == 1336216444268383479693857890 ) = False";
+  char *example =
+      "( -5102.86274125517336 == 1336216444268383479693857890 ) = False";
   s21_decimal value_1 = {{0xA7025218, 0x714E6A9, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xB32C5462, 0x96DE7404, 0x4514AD6, 0x0}};
   int code = 0;
@@ -28574,7 +29359,9 @@ START_TEST(s21_is_equal_2855) {
 }
 
 START_TEST(s21_is_equal_2856) {
-  char *example = "( 1739017516841947431773213332 == 1017818179463094246300672972 ) = False";
+  char *example =
+      "( 1739017516841947431773213332 == 1017818179463094246300672972 ) = "
+      "False";
   s21_decimal value_1 = {{0x4F951294, 0x7CCE1130, 0x59E7B48, 0x0}};
   s21_decimal value_2 = {{0x6F7363CC, 0x11865BA7, 0x349EB62, 0x0}};
   int code = 0;
@@ -28604,7 +29391,9 @@ START_TEST(s21_is_equal_2858) {
 }
 
 START_TEST(s21_is_equal_2859) {
-  char *example = "( 1289314270700479244116450581 == -4.4256099496218237048601057 ) = False";
+  char *example =
+      "( 1289314270700479244116450581 == -4.4256099496218237048601057 ) = "
+      "False";
   s21_decimal value_1 = {{0x8AD05D15, 0xAA5E48D6, 0x42A7EEA, 0x0}};
   s21_decimal value_2 = {{0x8E0639E1, 0xF602920B, 0x249B97, 0x80190000}};
   int code = 0;
@@ -28614,7 +29403,8 @@ START_TEST(s21_is_equal_2859) {
 }
 
 START_TEST(s21_is_equal_2860) {
-  char *example = "( -162.84354032335395979260668 == 9.5155593214800072E-10 ) = False";
+  char *example =
+      "( -162.84354032335395979260668 == 9.5155593214800072E-10 ) = False";
   s21_decimal value_1 = {{0x90CBF2FC, 0x99D91BA9, 0xD7858, 0x80170000}};
   s21_decimal value_2 = {{0x3F5B0C8, 0x1520F82, 0x0, 0x1A0000}};
   int code = 0;
@@ -28624,7 +29414,8 @@ START_TEST(s21_is_equal_2860) {
 }
 
 START_TEST(s21_is_equal_2861) {
-  char *example = "( 1644437412362921988098246185 == 1201598232733953704731655 ) = False";
+  char *example =
+      "( 1644437412362921988098246185 == 1201598232733953704731655 ) = False";
   s21_decimal value_1 = {{0x6DD64629, 0xC0010D8C, 0x5503F2A, 0x0}};
   s21_decimal value_2 = {{0xADF62407, 0xC54DDB3E, 0xFE72, 0x0}};
   int code = 0;
@@ -28664,7 +29455,8 @@ START_TEST(s21_is_equal_2864) {
 }
 
 START_TEST(s21_is_equal_2865) {
-  char *example = "( 1523190407789517016557922849 == 177885469442703843482446 ) = False";
+  char *example =
+      "( 1523190407789517016557922849 == 177885469442703843482446 ) = False";
   s21_decimal value_1 = {{0x51CBAA21, 0x763387BA, 0x4EBF41D, 0x0}};
   s21_decimal value_2 = {{0x7E515B4E, 0x30CC8C87, 0x25AB, 0x0}};
   int code = 0;
@@ -28704,7 +29496,9 @@ START_TEST(s21_is_equal_2868) {
 }
 
 START_TEST(s21_is_equal_2869) {
-  char *example = "( 1600481627260800209667730251 == 1553239002577377235845613226 ) = False";
+  char *example =
+      "( 1600481627260800209667730251 == 1553239002577377235845613226 ) = "
+      "False";
   s21_decimal value_1 = {{0x3323AB4B, 0xDD6E5461, 0x52BE32A, 0x0}};
   s21_decimal value_2 = {{0x4B2186AA, 0xC971839, 0x504CF27, 0x0}};
   int code = 0;
@@ -28784,7 +29578,8 @@ START_TEST(s21_is_equal_2876) {
 }
 
 START_TEST(s21_is_equal_2877) {
-  char *example = "( 136283860847039910 == 1094084664115039631778941098 ) = False";
+  char *example =
+      "( 136283860847039910 == 1094084664115039631778941098 ) = False";
   s21_decimal value_1 = {{0xA6815A6, 0x1E42D73, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC12688AA, 0x7C5F5A54, 0x3890170, 0x0}};
   int code = 0;
@@ -28794,7 +29589,8 @@ START_TEST(s21_is_equal_2877) {
 }
 
 START_TEST(s21_is_equal_2878) {
-  char *example = "( 1333688990716134892915414520 == 102691744055041924943 ) = False";
+  char *example =
+      "( 1333688990716134892915414520 == 102691744055041924943 ) = False";
   s21_decimal value_1 = {{0x73455F8, 0xEC6D8C3, 0x44F33A1, 0x0}};
   s21_decimal value_2 = {{0x461B1F4F, 0x91225D22, 0x5, 0x0}};
   int code = 0;
@@ -28844,7 +29640,9 @@ START_TEST(s21_is_equal_2882) {
 }
 
 START_TEST(s21_is_equal_2883) {
-  char *example = "( 1969315827353122576694365056 == 1868944343768088263548882000 ) = False";
+  char *example =
+      "( 1969315827353122576694365056 == 1868944343768088263548882000 ) = "
+      "False";
   s21_decimal value_1 = {{0xD1F5CB80, 0xEA93C3A6, 0x65CFAD8, 0x0}};
   s21_decimal value_2 = {{0xC9F64C50, 0xE36DB681, 0x609F45B, 0x0}};
   int code = 0;
@@ -28854,7 +29652,9 @@ START_TEST(s21_is_equal_2883) {
 }
 
 START_TEST(s21_is_equal_2884) {
-  char *example = "( 0.41803138772617175617308372 == -6.5765735374459243459835192 ) = False";
+  char *example =
+      "( 0.41803138772617175617308372 == -6.5765735374459243459835192 ) = "
+      "False";
   s21_decimal value_1 = {{0xA0D106D4, 0xB19645CA, 0x229428, 0x1A0000}};
   s21_decimal value_2 = {{0x6A84F538, 0xA88D3720, 0x36666F, 0x80190000}};
   int code = 0;
@@ -29004,7 +29804,8 @@ START_TEST(s21_is_equal_2898) {
 }
 
 START_TEST(s21_is_equal_2899) {
-  char *example = "( 189474959147068200444 == 1525574806724073993355126258 ) = False";
+  char *example =
+      "( 189474959147068200444 == 1525574806724073993355126258 ) = False";
   s21_decimal value_1 = {{0x80A695FC, 0x457E4776, 0xA, 0x0}};
   s21_decimal value_2 = {{0x319FE5F2, 0xFCAA0C50, 0x4EDED07, 0x0}};
   int code = 0;
@@ -29034,7 +29835,8 @@ START_TEST(s21_is_equal_2901) {
 }
 
 START_TEST(s21_is_equal_2902) {
-  char *example = "( 1175224352632364573395291198 == -8.041062721276998 ) = False";
+  char *example =
+      "( 1175224352632364573395291198 == -8.041062721276998 ) = False";
   s21_decimal value_1 = {{0x92448C3E, 0xD0687711, 0x3CC1F6F, 0x0}};
   s21_decimal value_2 = {{0xCF1E4C46, 0x1C914D, 0x0, 0x800F0000}};
   int code = 0;
@@ -29044,7 +29846,8 @@ START_TEST(s21_is_equal_2902) {
 }
 
 START_TEST(s21_is_equal_2903) {
-  char *example = "( 1021161248435519303001892833 == -393.8930230315448 ) = False";
+  char *example =
+      "( 1021161248435519303001892833 == -393.8930230315448 ) = False";
   s21_decimal value_1 = {{0xECC0E7E1, 0x3359DDB5, 0x34CAF4E, 0x0}};
   s21_decimal value_2 = {{0xA92C49B8, 0xDFE6F, 0x0, 0x800D0000}};
   int code = 0;
@@ -29054,7 +29857,8 @@ START_TEST(s21_is_equal_2903) {
 }
 
 START_TEST(s21_is_equal_2904) {
-  char *example = "( 18388080999953097730574226 == 1020286701977002439 ) = False";
+  char *example =
+      "( 18388080999953097730574226 == 1020286701977002439 ) = False";
   s21_decimal value_1 = {{0x6A084792, 0xDE4F6CCA, 0xF35D3, 0x0}};
   s21_decimal value_2 = {{0x8864E1C7, 0xE28C959, 0x0, 0x0}};
   int code = 0;
@@ -29084,7 +29888,9 @@ START_TEST(s21_is_equal_2906) {
 }
 
 START_TEST(s21_is_equal_2907) {
-  char *example = "( -344.65686598083524539711911 == 7.09542560254018141731870330 ) = False";
+  char *example =
+      "( -344.65686598083524539711911 == 7.09542560254018141731870330 ) = "
+      "False";
   s21_decimal value_1 = {{0x4ACC01A7, 0x9D42432F, 0x1C8264, 0x80170000}};
   s21_decimal value_2 = {{0xC8B17BD9, 0xED2E8ED1, 0x3AB125, 0x190000}};
   int code = 0;
@@ -29114,7 +29920,8 @@ START_TEST(s21_is_equal_2909) {
 }
 
 START_TEST(s21_is_equal_2910) {
-  char *example = "( 185827852258365370 == 1566573714717214779618274814 ) = False";
+  char *example =
+      "( 185827852258365370 == 1566573714717214779618274814 ) = False";
   s21_decimal value_1 = {{0x733BCFBA, 0x2943172, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCDD6ADFE, 0x3E25299D, 0x50FD6E3, 0x0}};
   int code = 0;
@@ -29134,7 +29941,9 @@ START_TEST(s21_is_equal_2911) {
 }
 
 START_TEST(s21_is_equal_2912) {
-  char *example = "( 1135461102742434776759133489 == 1691087980420226609294185537 ) = False";
+  char *example =
+      "( 1135461102742434776759133489 == 1691087980420226609294185537 ) = "
+      "False";
   s21_decimal value_1 = {{0x5897E531, 0xB7E2F2F2, 0x3AB3B3D, 0x0}};
   s21_decimal value_2 = {{0xDA559441, 0x1C9E0D81, 0x576D5CF, 0x0}};
   int code = 0;
@@ -29164,7 +29973,8 @@ START_TEST(s21_is_equal_2914) {
 }
 
 START_TEST(s21_is_equal_2915) {
-  char *example = "( 0.95396745940023061191 == 1591869811130371632064218454 ) = False";
+  char *example =
+      "( 0.95396745940023061191 == 1591869811130371632064218454 ) = False";
   s21_decimal value_1 = {{0xB3432AC7, 0x2BE552FF, 0x5, 0x140000}};
   s21_decimal value_2 = {{0x97E5C556, 0x608870F2, 0x524C38B, 0x0}};
   int code = 0;
@@ -29184,7 +29994,8 @@ START_TEST(s21_is_equal_2916) {
 }
 
 START_TEST(s21_is_equal_2917) {
-  char *example = "( -3425193.0180620972217278503 == -9.1640798458728 ) = False";
+  char *example =
+      "( -3425193.0180620972217278503 == -9.1640798458728 ) = False";
   s21_decimal value_1 = {{0xFA272027, 0xDB0E0307, 0x1C5520, 0x80130000}};
   s21_decimal value_2 = {{0xC93D3368, 0x5358, 0x0, 0x800D0000}};
   int code = 0;
@@ -29244,7 +30055,9 @@ START_TEST(s21_is_equal_2922) {
 }
 
 START_TEST(s21_is_equal_2923) {
-  char *example = "( 1995438552408700641986141477 == 1257955706872328966363921933 ) = False";
+  char *example =
+      "( 1995438552408700641986141477 == 1257955706872328966363921933 ) = "
+      "False";
   s21_decimal value_1 = {{0x96EDD25, 0xADDC42D3, 0x672968C, 0x0}};
   s21_decimal value_2 = {{0x610FBE0D, 0x839A79F7, 0x4108E7B, 0x0}};
   int code = 0;
@@ -29264,7 +30077,8 @@ START_TEST(s21_is_equal_2924) {
 }
 
 START_TEST(s21_is_equal_2925) {
-  char *example = "( 0.41772481632944122988804679 == 1942947879509083611231 ) = False";
+  char *example =
+      "( 0.41772481632944122988804679 == 1942947879509083611231 ) = False";
   s21_decimal value_1 = {{0x33CF3A47, 0xC44ECDA3, 0x228DAA, 0x1A0000}};
   s21_decimal value_2 = {{0x564E05F, 0x53D1823C, 0x69, 0x0}};
   int code = 0;
@@ -29384,7 +30198,9 @@ START_TEST(s21_is_equal_2936) {
 }
 
 START_TEST(s21_is_equal_2937) {
-  char *example = "( 79228162514264337593543950335 == 169807544361917369253888946 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 169807544361917369253888946 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xD04C03B2, 0x6CD21B51, 0x8C7625, 0x0}};
   int code = 0;
@@ -29434,7 +30250,9 @@ START_TEST(s21_is_equal_2941) {
 }
 
 START_TEST(s21_is_equal_2942) {
-  char *example = "( -4505.3806986777801072156381 == 1497623751895918114586961452 ) = False";
+  char *example =
+      "( -4505.3806986777801072156381 == 1497623751895918114586961452 ) = "
+      "False";
   s21_decimal value_1 = {{0xFA1D9EDD, 0xC54BF68B, 0x254483, 0x80160000}};
   s21_decimal value_2 = {{0x9687262C, 0x44C127EA, 0x4D6CE2A, 0x0}};
   int code = 0;
@@ -29484,7 +30302,8 @@ START_TEST(s21_is_equal_2946) {
 }
 
 START_TEST(s21_is_equal_2947) {
-  char *example = "( 1185646541552506698962555505 == 1581174129775292714128755 ) = False";
+  char *example =
+      "( 1185646541552506698962555505 == 1581174129775292714128755 ) = False";
   s21_decimal value_1 = {{0x1EC3D271, 0xCEBC18D9, 0x3D4BE6B, 0x0}};
   s21_decimal value_2 = {{0x96F11573, 0x9F0F6B0C, 0x14ED3, 0x0}};
   int code = 0;
@@ -29514,7 +30333,8 @@ START_TEST(s21_is_equal_2949) {
 }
 
 START_TEST(s21_is_equal_2950) {
-  char *example = "( 1714082367134449553325641351 == 0.8239690890648745686 ) = False";
+  char *example =
+      "( 1714082367134449553325641351 == 0.8239690890648745686 ) = False";
   s21_decimal value_1 = {{0x43CB4E87, 0x50354D16, 0x589DB0F, 0x0}};
   s21_decimal value_2 = {{0x9423F6D6, 0x72594335, 0x0, 0x130000}};
   int code = 0;
@@ -29624,7 +30444,8 @@ START_TEST(s21_is_equal_2960) {
 }
 
 START_TEST(s21_is_equal_2961) {
-  char *example = "( 142871377840076705166909138 == -712.37428034105815843474018 ) = False";
+  char *example =
+      "( 142871377840076705166909138 == -712.37428034105815843474018 ) = False";
   s21_decimal value_1 = {{0x3E31DED2, 0xE97983E9, 0x762E30, 0x0}};
   s21_decimal value_2 = {{0xAA700A62, 0xB63B5581, 0x3AED1C, 0x80170000}};
   int code = 0;
@@ -29714,7 +30535,8 @@ START_TEST(s21_is_equal_2969) {
 }
 
 START_TEST(s21_is_equal_2970) {
-  char *example = "( 161249000574720516534 == 1577051316920315627853067818 ) = False";
+  char *example =
+      "( 161249000574720516534 == 1577051316920315627853067818 ) = False";
   s21_decimal value_1 = {{0x5AF9A1B6, 0xBDC787B0, 0x8, 0x0}};
   s21_decimal value_2 = {{0xC1BC362A, 0x32412632, 0x518819B, 0x0}};
   int code = 0;
@@ -29814,7 +30636,9 @@ START_TEST(s21_is_equal_2979) {
 }
 
 START_TEST(s21_is_equal_2980) {
-  char *example = "( -5587.2309806629476092436120 == 0.44843029256680716838041803 ) = False";
+  char *example =
+      "( -5587.2309806629476092436120 == 0.44843029256680716838041803 ) = "
+      "False";
   s21_decimal value_1 = {{0x4E5AEFDC, 0x65FB9E83, 0x49F24, 0x80150000}};
   s21_decimal value_2 = {{0x3F06F8CB, 0x7CAF0F86, 0x2517E1, 0x1A0000}};
   int code = 0;
@@ -29824,7 +30648,8 @@ START_TEST(s21_is_equal_2980) {
 }
 
 START_TEST(s21_is_equal_2981) {
-  char *example = "( 162161250793191915532 == 1159512574074666758960276760 ) = False";
+  char *example =
+      "( 162161250793191915532 == 1159512574074666758960276760 ) = False";
   s21_decimal value_1 = {{0xE53C400C, 0xCA707E6D, 0x8, 0x0}};
   s21_decimal value_2 = {{0x5936518, 0x97803F68, 0x3BF2056, 0x0}};
   int code = 0;
@@ -29834,7 +30659,9 @@ START_TEST(s21_is_equal_2981) {
 }
 
 START_TEST(s21_is_equal_2982) {
-  char *example = "( -1.3739206088883291139833542 == -44225003.120137169752428306 ) = False";
+  char *example =
+      "( -1.3739206088883291139833542 == -44225003.120137169752428306 ) = "
+      "False";
   s21_decimal value_1 = {{0x6A337EC6, 0xDABFD5B5, 0xB5D63, 0x80190000}};
   s21_decimal value_2 = {{0xDC360F12, 0x3919E7F9, 0x249502, 0x80120000}};
   int code = 0;
@@ -29874,7 +30701,8 @@ START_TEST(s21_is_equal_2985) {
 }
 
 START_TEST(s21_is_equal_2986) {
-  char *example = "( -43.647044793999052 == 0.98742943332761031025133532 ) = False";
+  char *example =
+      "( -43.647044793999052 == 0.98742943332761031025133532 ) = False";
   s21_decimal value_1 = {{0x88711ECC, 0x9B10C1, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x887487DC, 0xAF1752A5, 0x51ADA1, 0x1A0000}};
   int code = 0;
@@ -29884,7 +30712,8 @@ START_TEST(s21_is_equal_2986) {
 }
 
 START_TEST(s21_is_equal_2987) {
-  char *example = "( 1691594715948336155231056873 == 154687813916248643266914406 ) = False";
+  char *example =
+      "( 1691594715948336155231056873 == 154687813916248643266914406 ) = False";
   s21_decimal value_1 = {{0xFAC0F3E9, 0x4CC04D3E, 0x577411D, 0x0}};
   s21_decimal value_2 = {{0x3DCFA866, 0x31FC00C7, 0x7FF46B, 0x0}};
   int code = 0;
@@ -30074,7 +30903,8 @@ START_TEST(s21_is_equal_3005) {
 }
 
 START_TEST(s21_is_equal_3006) {
-  char *example = "( -201.68872873097754408031194 == 10619567027697073774 ) = False";
+  char *example =
+      "( -201.68872873097754408031194 == 10619567027697073774 ) = False";
   s21_decimal value_1 = {{0xFB4E93DA, 0xCA0E3E24, 0x10AEEC, 0x80170000}};
   s21_decimal value_2 = {{0x6255BE6E, 0x936047F2, 0x0, 0x0}};
   int code = 0;
@@ -30094,7 +30924,8 @@ START_TEST(s21_is_equal_3007) {
 }
 
 START_TEST(s21_is_equal_3008) {
-  char *example = "( 128722486809671946043246 == -35183173.047439767320520165 ) = False";
+  char *example =
+      "( 128722486809671946043246 == -35183173.047439767320520165 ) = False";
   s21_decimal value_1 = {{0xA9997F6E, 0xF5BA86E, 0x1B42, 0x0}};
   s21_decimal value_2 = {{0xD551E5E5, 0xA1F53E8E, 0x1D1A53, 0x80120000}};
   int code = 0;
@@ -30134,7 +30965,8 @@ START_TEST(s21_is_equal_3011) {
 }
 
 START_TEST(s21_is_equal_3012) {
-  char *example = "( -7247340.20697284323776858 == 0.009682766347501408 ) = False";
+  char *example =
+      "( -7247340.20697284323776858 == 0.009682766347501408 ) = False";
   s21_decimal value_1 = {{0x9527195A, 0xE8F4D2C5, 0x9977, 0x80110000}};
   s21_decimal value_2 = {{0xB895FF60, 0x22666C, 0x0, 0x120000}};
   int code = 0;
@@ -30144,7 +30976,8 @@ START_TEST(s21_is_equal_3012) {
 }
 
 START_TEST(s21_is_equal_3013) {
-  char *example = "( 161665816046206479 == 1759290332790485600622341223 ) = False";
+  char *example =
+      "( 161665816046206479 == 1759290332790485600622341223 ) = False";
   s21_decimal value_1 = {{0x1C1FE0F, 0x23E5A34, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB717EC67, 0xACE3E5F, 0x5AF4038, 0x0}};
   int code = 0;
@@ -30184,7 +31017,9 @@ START_TEST(s21_is_equal_3016) {
 }
 
 START_TEST(s21_is_equal_3017) {
-  char *example = "( -2.7799733990852741143608576 == -7.0696386158975690603898456 ) = False";
+  char *example =
+      "( -2.7799733990852741143608576 == -7.0696386158975690603898456 ) = "
+      "False";
   s21_decimal value_1 = {{0x964A3D00, 0x99705159, 0x16FED2, 0x80190000}};
   s21_decimal value_2 = {{0xC262658, 0xC5E4C15E, 0x3A7A8A, 0x80190000}};
   int code = 0;
@@ -30204,7 +31039,8 @@ START_TEST(s21_is_equal_3018) {
 }
 
 START_TEST(s21_is_equal_3019) {
-  char *example = "( 1835447782855871468600979368 == 1242338793978072716780223 ) = False";
+  char *example =
+      "( 1835447782855871468600979368 == 1242338793978072716780223 ) = False";
   s21_decimal value_1 = {{0x3326FA8, 0xAECC1B2B, 0x5EE3F2F, 0x0}};
   s21_decimal value_2 = {{0xCE03A2BF, 0x522B1206, 0x10713, 0x0}};
   int code = 0;
@@ -30214,7 +31050,9 @@ START_TEST(s21_is_equal_3019) {
 }
 
 START_TEST(s21_is_equal_3020) {
-  char *example = "( -6.8733688098306617279043117 == -742.45895026407869224610680 ) = False";
+  char *example =
+      "( -6.8733688098306617279043117 == -742.45895026407869224610680 ) = "
+      "False";
   s21_decimal value_1 = {{0xADCD62D, 0xB2AD42D8, 0x38DAEC, 0x80190000}};
   s21_decimal value_2 = {{0x3336D78C, 0xCDAD82B2, 0x62437, 0x80160000}};
   int code = 0;
@@ -30344,7 +31182,8 @@ START_TEST(s21_is_equal_3032) {
 }
 
 START_TEST(s21_is_equal_3033) {
-  char *example = "( 6.9724093275692430E-10 == 1504056986611977584089316984 ) = False";
+  char *example =
+      "( 6.9724093275692430E-10 == 1504056986611977584089316984 ) = False";
   s21_decimal value_1 = {{0x8D32C95B, 0x18C55E, 0x0, 0x190000}};
   s21_decimal value_2 = {{0x184D3E78, 0x9F0FD5AC, 0x4DC2074, 0x0}};
   int code = 0;
@@ -30394,7 +31233,8 @@ START_TEST(s21_is_equal_3037) {
 }
 
 START_TEST(s21_is_equal_3038) {
-  char *example = "( -1.89505775576201729 == 1712869787974484659336307146 ) = False";
+  char *example =
+      "( -1.89505775576201729 == 1712869787974484659336307146 ) = False";
   s21_decimal value_1 = {{0xB41ABA01, 0x2A1427F, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x745AE1CA, 0x43ED10BF, 0x588DA49, 0x0}};
   int code = 0;
@@ -30404,7 +31244,8 @@ START_TEST(s21_is_equal_3038) {
 }
 
 START_TEST(s21_is_equal_3039) {
-  char *example = "( -88556.893209497 == 1793724083553177585943533226 ) = False";
+  char *example =
+      "( -88556.893209497 == 1793724083553177585943533226 ) = False";
   s21_decimal value_1 = {{0xC2298399, 0x508A, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0xE6CB56AA, 0x69514442, 0x5CBBBD9, 0x0}};
   int code = 0;
@@ -30424,7 +31265,9 @@ START_TEST(s21_is_equal_3040) {
 }
 
 START_TEST(s21_is_equal_3041) {
-  char *example = "( 1833665076267717239747914726 == 1893400001032590969839332096 ) = False";
+  char *example =
+      "( 1833665076267717239747914726 == 1893400001032590969839332096 ) = "
+      "False";
   s21_decimal value_1 = {{0x7BC2BE6, 0xF70B1534, 0x5ECC5AE, 0x0}};
   s21_decimal value_2 = {{0x828CAB00, 0xB9A55E57, 0x61E2F0B, 0x0}};
   int code = 0;
@@ -30544,7 +31387,8 @@ START_TEST(s21_is_equal_3052) {
 }
 
 START_TEST(s21_is_equal_3053) {
-  char *example = "( -34117.340247018193561066898 == 105433480506378505 ) = False";
+  char *example =
+      "( -34117.340247018193561066898 == 105433480506378505 ) = False";
   s21_decimal value_1 = {{0x72341D92, 0xB883DF55, 0x1C38A0, 0x80150000}};
   s21_decimal value_2 = {{0x21040909, 0x1769331, 0x0, 0x0}};
   int code = 0;
@@ -30624,7 +31468,9 @@ START_TEST(s21_is_equal_3060) {
 }
 
 START_TEST(s21_is_equal_3061) {
-  char *example = "( 1618931033505459595236256613 == 1871856971089243892291065006 ) = False";
+  char *example =
+      "( 1618931033505459595236256613 == 1871856971089243892291065006 ) = "
+      "False";
   s21_decimal value_1 = {{0xAC22AB65, 0x2E797A77, 0x53B25FB, 0x0}};
   s21_decimal value_2 = {{0xE0ADD4AE, 0xBB5AD4A0, 0x60C5D21, 0x0}};
   int code = 0;
@@ -30684,7 +31530,8 @@ START_TEST(s21_is_equal_3066) {
 }
 
 START_TEST(s21_is_equal_3067) {
-  char *example = "( -6022.46236275235796037 == 1285645196835188350995201640 ) = False";
+  char *example =
+      "( -6022.46236275235796037 == 1285645196835188350995201640 ) = False";
   s21_decimal value_1 = {{0x1566B445, 0xA5D8710E, 0x20, 0x80110000}};
   s21_decimal value_2 = {{0x8C4CFE68, 0xC5D08940, 0x42775F5, 0x0}};
   int code = 0;
@@ -30714,7 +31561,8 @@ START_TEST(s21_is_equal_3069) {
 }
 
 START_TEST(s21_is_equal_3070) {
-  char *example = "( 1192173009838129285002913244 == -2.547324151797198 ) = False";
+  char *example =
+      "( 1192173009838129285002913244 == -2.547324151797198 ) = False";
   s21_decimal value_1 = {{0xE11765DC, 0x5CBCAFA2, 0x3DA2474, 0x0}};
   s21_decimal value_2 = {{0x1F3215CE, 0x90CC7, 0x0, 0x800F0000}};
   int code = 0;
@@ -30774,7 +31622,9 @@ START_TEST(s21_is_equal_3075) {
 }
 
 START_TEST(s21_is_equal_3076) {
-  char *example = "( 0.11626084351929832943584874 == 1704256051267880879196815966 ) = False";
+  char *example =
+      "( 0.11626084351929832943584874 == 1704256051267880879196815966 ) = "
+      "False";
   s21_decimal value_1 = {{0xC187066A, 0x4BABFD54, 0x99DEB, 0x1A0000}};
   s21_decimal value_2 = {{0x2791425E, 0xA9ADED9E, 0x581BA41, 0x0}};
   int code = 0;
@@ -30824,7 +31674,8 @@ START_TEST(s21_is_equal_3080) {
 }
 
 START_TEST(s21_is_equal_3081) {
-  char *example = "( 109441971915797174772 == 0.19793039443315990804327774 ) = False";
+  char *example =
+      "( 109441971915797174772 == 0.19793039443315990804327774 ) = False";
   s21_decimal value_1 = {{0xE75E19F4, 0xEECFFD9B, 0x5, 0x0}};
   s21_decimal value_2 = {{0x8C006D5E, 0xD1774E7B, 0x105F56, 0x1A0000}};
   int code = 0;
@@ -30864,7 +31715,9 @@ START_TEST(s21_is_equal_3084) {
 }
 
 START_TEST(s21_is_equal_3085) {
-  char *example = "( -8.8146905764830579295939401 == 1086912271992838205451257104 ) = False";
+  char *example =
+      "( -8.8146905764830579295939401 == 1086912271992838205451257104 ) = "
+      "False";
   s21_decimal value_1 = {{0x200E6B49, 0x561EA6FF, 0x48E9D5, 0x80190000}};
   s21_decimal value_2 = {{0xB637C510, 0x546D163E, 0x38312A0, 0x0}};
   int code = 0;
@@ -30884,7 +31737,9 @@ START_TEST(s21_is_equal_3086) {
 }
 
 START_TEST(s21_is_equal_3087) {
-  char *example = "( 1897382714809627263646752893 == 1030557938603230454380252133 ) = False";
+  char *example =
+      "( 1897382714809627263646752893 == 1030557938603230454380252133 ) = "
+      "False";
   s21_decimal value_1 = {{0x2CAE07D, 0x1257CAE6, 0x6217A6B, 0x0}};
   s21_decimal value_2 = {{0x73904BE5, 0xCB9824C5, 0x3547521, 0x0}};
   int code = 0;
@@ -30964,7 +31819,8 @@ START_TEST(s21_is_equal_3094) {
 }
 
 START_TEST(s21_is_equal_3095) {
-  char *example = "( -87896.286623462170036488 == -5492.032419965957521 ) = False";
+  char *example =
+      "( -87896.286623462170036488 == -5492.032419965957521 ) = False";
   s21_decimal value_1 = {{0xB5500908, 0xDE03CD8D, 0x129C, 0x80120000}};
   s21_decimal value_2 = {{0x4EFFF591, 0x4C379E63, 0x0, 0x800F0000}};
   int code = 0;
@@ -31044,7 +31900,8 @@ START_TEST(s21_is_equal_3102) {
 }
 
 START_TEST(s21_is_equal_3103) {
-  char *example = "( -891.82986803920859998455710 == -2832.64929867222 ) = False";
+  char *example =
+      "( -891.82986803920859998455710 == -2832.64929867222 ) = False";
   s21_decimal value_1 = {{0x862A00C3, 0xF0B17519, 0x76085, 0x80160000}};
   s21_decimal value_2 = {{0xC185A5D6, 0x101A0, 0x0, 0x800B0000}};
   int code = 0;
@@ -31064,7 +31921,9 @@ START_TEST(s21_is_equal_3104) {
 }
 
 START_TEST(s21_is_equal_3105) {
-  char *example = "( 1982167951310972992445869913 == 1899651123545742221651324689 ) = False";
+  char *example =
+      "( 1982167951310972992445869913 == 1899651123545742221651324689 ) = "
+      "False";
   s21_decimal value_1 = {{0x8A55EF59, 0xF3BE7585, 0x6679C63, 0x0}};
   s21_decimal value_2 = {{0x9561AF11, 0xC171B2E0, 0x6235AC5, 0x0}};
   int code = 0;
@@ -31074,7 +31933,9 @@ START_TEST(s21_is_equal_3105) {
 }
 
 START_TEST(s21_is_equal_3106) {
-  char *example = "( 1646600507254807388023159113 == 1273899233315753446367079526 ) = False";
+  char *example =
+      "( 1646600507254807388023159113 == 1273899233315753446367079526 ) = "
+      "False";
   s21_decimal value_1 = {{0xA14FF949, 0x5BEBFF67, 0x5520938, 0x0}};
   s21_decimal value_2 = {{0xE634AC66, 0xD07E591B, 0x41DBEA7, 0x0}};
   int code = 0;
@@ -31084,7 +31945,9 @@ START_TEST(s21_is_equal_3106) {
 }
 
 START_TEST(s21_is_equal_3107) {
-  char *example = "( 1788365243151596781831011693 == 1614097735380163760218177303 ) = False";
+  char *example =
+      "( 1788365243151596781831011693 == 1614097735380163760218177303 ) = "
+      "False";
   s21_decimal value_1 = {{0x142D3D6D, 0x17540FCF, 0x5C74D12, 0x0}};
   s21_decimal value_2 = {{0xFD03FF17, 0x90AE04E0, 0x537267D, 0x0}};
   int code = 0;
@@ -31094,7 +31957,8 @@ START_TEST(s21_is_equal_3107) {
 }
 
 START_TEST(s21_is_equal_3108) {
-  char *example = "( 139385728706933505 == 1208389242226966469518820746 ) = False";
+  char *example =
+      "( 139385728706933505 == 1208389242226966469518820746 ) = False";
   s21_decimal value_1 = {{0xEE55F301, 0x1EF3294, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6D40058A, 0x14DF1D9C, 0x3E78E60, 0x0}};
   int code = 0;
@@ -31164,7 +32028,9 @@ START_TEST(s21_is_equal_3114) {
 }
 
 START_TEST(s21_is_equal_3115) {
-  char *example = "( 1965234894403706751489540046 == 1316067731882024385620506203 ) = False";
+  char *example =
+      "( 1965234894403706751489540046 == 1316067731882024385620506203 ) = "
+      "False";
   s21_decimal value_1 = {{0xA66DFFCE, 0x190C1B63, 0x6599AAD, 0x0}};
   s21_decimal value_2 = {{0x4E90765B, 0xB3C537D9, 0x440A02E, 0x0}};
   int code = 0;
@@ -31184,7 +32050,8 @@ START_TEST(s21_is_equal_3116) {
 }
 
 START_TEST(s21_is_equal_3117) {
-  char *example = "( 118589444145686817441434198 == -7.3639838281404590749 ) = False";
+  char *example =
+      "( 118589444145686817441434198 == -7.3639838281404590749 ) = False";
   s21_decimal value_1 = {{0x379DCA56, 0xA619BAC3, 0x62184A, 0x0}};
   s21_decimal value_2 = {{0xA0552A9D, 0xFDF542C1, 0x3, 0x80130000}};
   int code = 0;
@@ -31194,7 +32061,8 @@ START_TEST(s21_is_equal_3117) {
 }
 
 START_TEST(s21_is_equal_3118) {
-  char *example = "( 12004598119440196 == 1559008881575157956039107818 ) = False";
+  char *example =
+      "( 12004598119440196 == 1559008881575157956039107818 ) = False";
   s21_decimal value_1 = {{0x4E949F44, 0x2AA61E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x969764EA, 0xD0FF88AE, 0x50994F8, 0x0}};
   int code = 0;
@@ -31244,7 +32112,8 @@ START_TEST(s21_is_equal_3122) {
 }
 
 START_TEST(s21_is_equal_3123) {
-  char *example = "( -3860.63935223791 == -286.14760731308163685904036 ) = False";
+  char *example =
+      "( -3860.63935223791 == -286.14760731308163685904036 ) = False";
   s21_decimal value_1 = {{0x83B837EF, 0x15F1F, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xF6776EA4, 0x4999B8D0, 0x17AB69, 0x80170000}};
   int code = 0;
@@ -31254,7 +32123,8 @@ START_TEST(s21_is_equal_3123) {
 }
 
 START_TEST(s21_is_equal_3124) {
-  char *example = "( 0.58096846738546858199292036 == 14426797102899559 ) = False";
+  char *example =
+      "( 0.58096846738546858199292036 == 14426797102899559 ) = False";
   s21_decimal value_1 = {{0x7F6B1884, 0x5F573631, 0x300E7C, 0x1A0000}};
   s21_decimal value_2 = {{0x7490A167, 0x334118, 0x0, 0x0}};
   int code = 0;
@@ -31274,7 +32144,9 @@ START_TEST(s21_is_equal_3125) {
 }
 
 START_TEST(s21_is_equal_3126) {
-  char *example = "( 1462307054418331718859236396 == -3944990.7793101347269923579 ) = False";
+  char *example =
+      "( 1462307054418331718859236396 == -3944990.7793101347269923579 ) = "
+      "False";
   s21_decimal value_1 = {{0x1BDA242C, 0x431679C0, 0x4B99790, 0x0}};
   s21_decimal value_2 = {{0x37D452FB, 0xC963F83A, 0x20A1D7, 0x80130000}};
   int code = 0;
@@ -31294,7 +32166,8 @@ START_TEST(s21_is_equal_3127) {
 }
 
 START_TEST(s21_is_equal_3128) {
-  char *example = "( -55.804632037504957307755942 == -990.300820955549 ) = False";
+  char *example =
+      "( -55.804632037504957307755942 == -990.300820955549 ) = False";
   s21_decimal value_1 = {{0x5E051DA6, 0x2A1C1291, 0x2E2917, 0x80180000}};
   s21_decimal value_2 = {{0x60A7619D, 0x384AC, 0x0, 0x800C0000}};
   int code = 0;
@@ -31344,7 +32217,8 @@ START_TEST(s21_is_equal_3132) {
 }
 
 START_TEST(s21_is_equal_3133) {
-  char *example = "( 1979028059122916585840155 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1979028059122916585840155 == -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x6FF1E1B, 0x53786041, 0x1A313, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -31394,7 +32268,8 @@ START_TEST(s21_is_equal_3137) {
 }
 
 START_TEST(s21_is_equal_3138) {
-  char *example = "( 18473948205850976 == 185490274597301730375104023 ) = False";
+  char *example =
+      "( 18473948205850976 == 185490274597301730375104023 ) = False";
   s21_decimal value_1 = {{0x4068A160, 0x41A1F5, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF703F617, 0xEF464B80, 0x996F17, 0x0}};
   int code = 0;
@@ -31434,7 +32309,8 @@ START_TEST(s21_is_equal_3141) {
 }
 
 START_TEST(s21_is_equal_3142) {
-  char *example = "( 0.04721036626814138363247236 == 8.9892888235408465E-10 ) = False";
+  char *example =
+      "( 0.04721036626814138363247236 == 8.9892888235408465E-10 ) = False";
   s21_decimal value_1 = {{0x58057A84, 0xE88A3365, 0x3E7B7, 0x1A0000}};
   s21_decimal value_2 = {{0x71AFC51, 0x13F5D1B, 0x0, 0x1A0000}};
   int code = 0;
@@ -31484,7 +32360,9 @@ START_TEST(s21_is_equal_3146) {
 }
 
 START_TEST(s21_is_equal_3147) {
-  char *example = "( 1245007240116408955322066657 == 1034391743000431993622204178 ) = False";
+  char *example =
+      "( 1245007240116408955322066657 == 1034391743000431993622204178 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFC566E1, 0xB98739D1, 0x405D889, 0x0}};
   s21_decimal value_2 = {{0x7E018F12, 0xBF83ED53, 0x357A0F8, 0x0}};
   int code = 0;
@@ -31504,7 +32382,8 @@ START_TEST(s21_is_equal_3148) {
 }
 
 START_TEST(s21_is_equal_3149) {
-  char *example = "( 1096766466005288 == -48884.040698372831042455895 ) = False";
+  char *example =
+      "( 1096766466005288 == -48884.040698372831042455895 ) = False";
   s21_decimal value_1 = {{0xD79B9928, 0x3E580, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDB31C957, 0x28002648, 0x286F99, 0x80150000}};
   int code = 0;
@@ -31564,7 +32443,8 @@ START_TEST(s21_is_equal_3154) {
 }
 
 START_TEST(s21_is_equal_3155) {
-  char *example = "( -37.053997982248321503 == 1919308314811377485610219236 ) = False";
+  char *example =
+      "( -37.053997982248321503 == 1919308314811377485610219236 ) = False";
   s21_decimal value_1 = {{0x27F3C1DF, 0x23A3ED8, 0x2, 0x80120000}};
   s21_decimal value_2 = {{0x40B3F6E4, 0x3AB9EB3B, 0x6339D58, 0x0}};
   int code = 0;
@@ -31584,7 +32464,8 @@ START_TEST(s21_is_equal_3156) {
 }
 
 START_TEST(s21_is_equal_3157) {
-  char *example = "( 79228162514264337593543950335 == -2.5770148204948185016 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -2.5770148204948185016 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x9D1B5FB8, 0x65A1F541, 0x1, 0x80130000}};
   int code = 0;
@@ -31594,7 +32475,8 @@ START_TEST(s21_is_equal_3157) {
 }
 
 START_TEST(s21_is_equal_3158) {
-  char *example = "( 159897312946816881239912 == 1859218349891493001982544748 ) = False";
+  char *example =
+      "( 159897312946816881239912 == 1859218349891493001982544748 ) = False";
   s21_decimal value_1 = {{0x988FA768, 0xCFAE8DB, 0x21DC, 0x0}};
   s21_decimal value_2 = {{0x617E8B6C, 0xB430672C, 0x601E8CC, 0x0}};
   int code = 0;
@@ -31604,7 +32486,9 @@ START_TEST(s21_is_equal_3158) {
 }
 
 START_TEST(s21_is_equal_3159) {
-  char *example = "( 0.73500669998485324084740365 == 0.44213537070816954114931582 ) = False";
+  char *example =
+      "( 0.73500669998485324084740365 == 0.44213537070816954114931582 ) = "
+      "False";
   s21_decimal value_1 = {{0xD957010D, 0x4DF89ED2, 0x3CCC5F, 0x1A0000}};
   s21_decimal value_2 = {{0x9FC7B7E, 0xA5B3A4F9, 0x249294, 0x1A0000}};
   int code = 0;
@@ -31624,7 +32508,9 @@ START_TEST(s21_is_equal_3160) {
 }
 
 START_TEST(s21_is_equal_3161) {
-  char *example = "( -788.69791370146636996303147 == -6.9301821250779126404901936 ) = False";
+  char *example =
+      "( -788.69791370146636996303147 == -6.9301821250779126404901936 ) = "
+      "False";
   s21_decimal value_1 = {{0xB614592B, 0xF514DC95, 0x413D53, 0x80170000}};
   s21_decimal value_2 = {{0x65466C30, 0x42036E24, 0x39533B, 0x80190000}};
   int code = 0;
@@ -31704,7 +32590,8 @@ START_TEST(s21_is_equal_3168) {
 }
 
 START_TEST(s21_is_equal_3169) {
-  char *example = "( 1722840200028474825614775663 == 113714705362455032193567 ) = False";
+  char *example =
+      "( 1722840200028474825614775663 == 113714705362455032193567 ) = False";
   s21_decimal value_1 = {{0x36EF556F, 0x62C48DBE, 0x591199A, 0x0}};
   s21_decimal value_2 = {{0x8B9F621F, 0x7C8D38D2, 0x1814, 0x0}};
   int code = 0;
@@ -31764,7 +32651,9 @@ START_TEST(s21_is_equal_3174) {
 }
 
 START_TEST(s21_is_equal_3175) {
-  char *example = "( -5.2665218810524707589349746 == 1198596647830163245551363950 ) = False";
+  char *example =
+      "( -5.2665218810524707589349746 == 1198596647830163245551363950 ) = "
+      "False";
   s21_decimal value_1 = {{0xEA526172, 0x3B812C2D, 0x2B904B, 0x80190000}};
   s21_decimal value_2 = {{0x94E8A76E, 0x79BEA5D0, 0x3DF74B6, 0x0}};
   int code = 0;
@@ -31814,7 +32703,8 @@ START_TEST(s21_is_equal_3179) {
 }
 
 START_TEST(s21_is_equal_3180) {
-  char *example = "( 1428973064171576 == -5.9765609268469568510147963 ) = False";
+  char *example =
+      "( 1428973064171576 == -5.9765609268469568510147963 ) = False";
   s21_decimal value_1 = {{0xB7E23038, 0x513A4, 0x0, 0x0}};
   s21_decimal value_2 = {{0x410BD7B, 0x2BA1F016, 0x316FDC, 0x80190000}};
   int code = 0;
@@ -31874,7 +32764,9 @@ START_TEST(s21_is_equal_3185) {
 }
 
 START_TEST(s21_is_equal_3186) {
-  char *example = "( -563577542682.78872171988184 == 1054879403303933449264406913 ) = False";
+  char *example =
+      "( -563577542682.78872171988184 == 1054879403303933449264406913 ) = "
+      "False";
   s21_decimal value_1 = {{0x2E35C4D8, 0xFB0F6444, 0x2E9E37, 0x800E0000}};
   s21_decimal value_2 = {{0x668FA181, 0x9E2CB71, 0x3689367, 0x0}};
   int code = 0;
@@ -31914,7 +32806,9 @@ START_TEST(s21_is_equal_3189) {
 }
 
 START_TEST(s21_is_equal_3190) {
-  char *example = "( -386897655.79260277262134987 == 98155.5503890554291634310754 ) = False";
+  char *example =
+      "( -386897655.79260277262134987 == 98155.5503890554291634310754 ) = "
+      "False";
   s21_decimal value_1 = {{0x7B282ECB, 0x650B05D4, 0x2000E0, 0x80110000}};
   s21_decimal value_2 = {{0x6D6C0E62, 0x7C95E3FA, 0x32BEC76, 0x160000}};
   int code = 0;
@@ -31924,7 +32818,8 @@ START_TEST(s21_is_equal_3190) {
 }
 
 START_TEST(s21_is_equal_3191) {
-  char *example = "( 1511383787930417365207132698 == 1411592462166651668 ) = False";
+  char *example =
+      "( 1511383787930417365207132698 == 1411592462166651668 ) = False";
   s21_decimal value_1 = {{0xF2D2AA1A, 0x5111B58E, 0x4E22FF7, 0x0}};
   s21_decimal value_2 = {{0x8B0FF314, 0x1396FBDD, 0x0, 0x0}};
   int code = 0;
@@ -31964,7 +32859,8 @@ START_TEST(s21_is_equal_3194) {
 }
 
 START_TEST(s21_is_equal_3195) {
-  char *example = "( -52.88185442197439212 == 1987298129066834502995501464 ) = False";
+  char *example =
+      "( -52.88185442197439212 == 1987298129066834502995501464 ) = False";
   s21_decimal value_1 = {{0x449202EC, 0x496368A4, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x7C6D6198, 0x720E62E5, 0x66BDABF, 0x0}};
   int code = 0;
@@ -31974,7 +32870,8 @@ START_TEST(s21_is_equal_3195) {
 }
 
 START_TEST(s21_is_equal_3196) {
-  char *example = "( 124875540182225788753955 == 1235952895585355851879387597 ) = False";
+  char *example =
+      "( 124875540182225788753955 == 1235952895585355851879387597 ) = False";
   s21_decimal value_1 = {{0x4A6A5823, 0x843FC0C4, 0x1A71, 0x0}};
   s21_decimal value_2 = {{0x8F1391CD, 0xB9632E55, 0x3FE5B34, 0x0}};
   int code = 0;
@@ -31984,7 +32881,8 @@ START_TEST(s21_is_equal_3196) {
 }
 
 START_TEST(s21_is_equal_3197) {
-  char *example = "( 1445140330341267449 == 1841106369467284423204441889 ) = False";
+  char *example =
+      "( 1445140330341267449 == 1841106369467284423204441889 ) = False";
   s21_decimal value_1 = {{0x4894F7F9, 0x140E2B79, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4C908F21, 0x4715267A, 0x5F2ED70, 0x0}};
   int code = 0;
@@ -32034,7 +32932,9 @@ START_TEST(s21_is_equal_3201) {
 }
 
 START_TEST(s21_is_equal_3202) {
-  char *example = "( -20312.176663322510009291573 == -19036.445392716993170441689 ) = False";
+  char *example =
+      "( -20312.176663322510009291573 == -19036.445392716993170441689 ) = "
+      "False";
   s21_decimal value_1 = {{0xF05FD335, 0x4DA5FF89, 0x10CD45, 0x80150000}};
   s21_decimal value_2 = {{0x858305D9, 0xC5C671C6, 0xFBF1F, 0x80150000}};
   int code = 0;
@@ -32084,7 +32984,8 @@ START_TEST(s21_is_equal_3206) {
 }
 
 START_TEST(s21_is_equal_3207) {
-  char *example = "( 17746573172190291 == 1566047908752315718599113508 ) = False";
+  char *example =
+      "( 17746573172190291 == 1566047908752315718599113508 ) = False";
   s21_decimal value_1 = {{0xDE8AC53, 0x3F0C6A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x721AFB24, 0x3E894551, 0x50F678B, 0x0}};
   int code = 0;
@@ -32094,7 +32995,9 @@ START_TEST(s21_is_equal_3207) {
 }
 
 START_TEST(s21_is_equal_3208) {
-  char *example = "( -8.8577206055769350903247441 == 1400632347416688536820254219 ) = False";
+  char *example =
+      "( -8.8577206055769350903247441 == 1400632347416688536820254219 ) = "
+      "False";
   s21_decimal value_1 = {{0xAF093251, 0xF6404328, 0x4944F3, 0x80190000}};
   s21_decimal value_2 = {{0x32B2060B, 0xB235B98E, 0x486936F, 0x0}};
   int code = 0;
@@ -32134,7 +33037,8 @@ START_TEST(s21_is_equal_3211) {
 }
 
 START_TEST(s21_is_equal_3212) {
-  char *example = "( 1508515909365608996 == 14687428282675279895704508 ) = False";
+  char *example =
+      "( 1508515909365608996 == 14687428282675279895704508 ) = False";
   s21_decimal value_1 = {{0x23C33224, 0x14EF533A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7587B3BC, 0x15264306, 0xC262F, 0x0}};
   int code = 0;
@@ -32154,7 +33058,8 @@ START_TEST(s21_is_equal_3213) {
 }
 
 START_TEST(s21_is_equal_3214) {
-  char *example = "( 1583442890150350078004863007 == 13730620973217182041 ) = False";
+  char *example =
+      "( 1583442890150350078004863007 == 13730620973217182041 ) = False";
   s21_decimal value_1 = {{0x5056A01F, 0x134C8C36, 0x51DCB13, 0x0}};
   s21_decimal value_2 = {{0xF6237159, 0xBE8CF706, 0x0, 0x0}};
   int code = 0;
@@ -32244,7 +33149,8 @@ START_TEST(s21_is_equal_3222) {
 }
 
 START_TEST(s21_is_equal_3223) {
-  char *example = "( -53.537442624221023752660488 == 12891107741417061298112434 ) = False";
+  char *example =
+      "( -53.537442624221023752660488 == 12891107741417061298112434 ) = False";
   s21_decimal value_1 = {{0x1363A608, 0x94831128, 0x2C48FE, 0x80180000}};
   s21_decimal value_2 = {{0xF2C287B2, 0x59D7D2CB, 0xAA9CC, 0x0}};
   int code = 0;
@@ -32384,7 +33290,9 @@ START_TEST(s21_is_equal_3236) {
 }
 
 START_TEST(s21_is_equal_3237) {
-  char *example = "( 1373401592810546030759211991 == 1566709633753010045099801217 ) = False";
+  char *example =
+      "( 1373401592810546030759211991 == 1566709633753010045099801217 ) = "
+      "False";
   s21_decimal value_1 = {{0x5A6173D7, 0x87F06C2F, 0x4700D19, 0x0}};
   s21_decimal value_2 = {{0xCFDD7A81, 0x6DAED77E, 0x50FF3AB, 0x0}};
   int code = 0;
@@ -32434,7 +33342,9 @@ START_TEST(s21_is_equal_3241) {
 }
 
 START_TEST(s21_is_equal_3242) {
-  char *example = "( 1385310524684249210755988965 == -2.3486261340260780381482727 ) = False";
+  char *example =
+      "( 1385310524684249210755988965 == -2.3486261340260780381482727 ) = "
+      "False";
   s21_decimal value_1 = {{0x6863BDE5, 0x58007FA, 0x479E6EA, 0x0}};
   s21_decimal value_2 = {{0x4556AEE7, 0xC7476D88, 0x136D68, 0x80190000}};
   int code = 0;
@@ -32444,7 +33354,9 @@ START_TEST(s21_is_equal_3242) {
 }
 
 START_TEST(s21_is_equal_3243) {
-  char *example = "( 1811145377016090172690751425 == 1809895338151991141386449465 ) = False";
+  char *example =
+      "( 1811145377016090172690751425 == 1809895338151991141386449465 ) = "
+      "False";
   s21_decimal value_1 = {{0xD17F5FC1, 0x9F555A9B, 0x5DA24F3, 0x0}};
   s21_decimal value_2 = {{0x4BC07239, 0xE139D64A, 0x5D91C3E, 0x0}};
   int code = 0;
@@ -32464,7 +33376,8 @@ START_TEST(s21_is_equal_3244) {
 }
 
 START_TEST(s21_is_equal_3245) {
-  char *example = "( -37776.96647762157330055014 == 194348277402725823229 ) = False";
+  char *example =
+      "( -37776.96647762157330055014 == 194348277402725823229 ) = False";
   s21_decimal value_1 = {{0xB5193F66, 0x587ADD08, 0x31FF5, 0x80140000}};
   s21_decimal value_2 = {{0xB28CB2FD, 0x891FC898, 0xA, 0x0}};
   int code = 0;
@@ -32524,7 +33437,8 @@ START_TEST(s21_is_equal_3250) {
 }
 
 START_TEST(s21_is_equal_3251) {
-  char *example = "( 19954530715204044125946224 == 0.3969507030772290463778589 ) = False";
+  char *example =
+      "( 19954530715204044125946224 == 0.3969507030772290463778589 ) = False";
   s21_decimal value_1 = {{0x1054C170, 0x4711F33D, 0x108189, 0x0}};
   s21_decimal value_2 = {{0x43B0C71D, 0x684651C9, 0x34893, 0x190000}};
   int code = 0;
@@ -32554,7 +33468,8 @@ START_TEST(s21_is_equal_3253) {
 }
 
 START_TEST(s21_is_equal_3254) {
-  char *example = "( 13492555279546480 == 1713392969749191159098556123 ) = False";
+  char *example =
+      "( 13492555279546480 == 1713392969749191159098556123 ) = False";
   s21_decimal value_1 = {{0x548CB870, 0x2FEF68, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9A72BEDB, 0x1949077, 0x5894913, 0x0}};
   int code = 0;
@@ -32614,7 +33529,8 @@ START_TEST(s21_is_equal_3259) {
 }
 
 START_TEST(s21_is_equal_3260) {
-  char *example = "( 1342634814230863186154962125 == 16209802178712137527809433 ) = False";
+  char *example =
+      "( 1342634814230863186154962125 == 16209802178712137527809433 ) = False";
   s21_decimal value_1 = {{0xD0B33CCD, 0x1F47C1D1, 0x45699FB, 0x0}};
   s21_decimal value_2 = {{0x3A4D5599, 0x230AF5F5, 0xD688F, 0x0}};
   int code = 0;
@@ -32624,7 +33540,8 @@ START_TEST(s21_is_equal_3260) {
 }
 
 START_TEST(s21_is_equal_3261) {
-  char *example = "( 0.6355365260515920080937 == 0.81792759669034399172213037 ) = False";
+  char *example =
+      "( 0.6355365260515920080937 == 0.81792759669034399172213037 ) = False";
   s21_decimal value_1 = {{0x5D507029, 0x86691845, 0x158, 0x160000}};
   s21_decimal value_2 = {{0xC2A9392D, 0x62E7053B, 0x43A84A, 0x1A0000}};
   int code = 0;
@@ -32644,7 +33561,8 @@ START_TEST(s21_is_equal_3262) {
 }
 
 START_TEST(s21_is_equal_3263) {
-  char *example = "( 19376947608494880266 == 1562026027744201049169326436 ) = False";
+  char *example =
+      "( 19376947608494880266 == 1562026027744201049169326436 ) = False";
   s21_decimal value_1 = {{0xBBB1360A, 0xCE8BF2F, 0x1, 0x0}};
   s21_decimal value_2 = {{0xE701F164, 0xA3513BDC, 0x50C13E0, 0x0}};
   int code = 0;
@@ -32684,7 +33602,8 @@ START_TEST(s21_is_equal_3266) {
 }
 
 START_TEST(s21_is_equal_3267) {
-  char *example = "( 11014005107108932905 == 1506134321410562798407272400 ) = False";
+  char *example =
+      "( 11014005107108932905 == 1506134321410562798407272400 ) = False";
   s21_decimal value_1 = {{0x4B90ED29, 0x98D99B4A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2B3247D0, 0x2A9A3775, 0x4DDD859, 0x0}};
   int code = 0;
@@ -32694,7 +33613,8 @@ START_TEST(s21_is_equal_3267) {
 }
 
 START_TEST(s21_is_equal_3268) {
-  char *example = "( -3.089091697023770 == 1227159887039323307640304237 ) = False";
+  char *example =
+      "( -3.089091697023770 == 1227159887039323307640304237 ) = False";
   s21_decimal value_1 = {{0x8553F5E9, 0x118F3, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xF327326D, 0xC697E1A7, 0x3F71536, 0x0}};
   int code = 0;
@@ -32714,7 +33634,8 @@ START_TEST(s21_is_equal_3269) {
 }
 
 START_TEST(s21_is_equal_3270) {
-  char *example = "( 1561831262347542849861624047 == 1687784044078802 ) = False";
+  char *example =
+      "( 1561831262347542849861624047 == 1687784044078802 ) = False";
   s21_decimal value_1 = {{0x20F2A0EF, 0x62785E87, 0x50BEAA2, 0x0}};
   s21_decimal value_2 = {{0xD867A6D2, 0x5FF07, 0x0, 0x0}};
   int code = 0;
@@ -32854,7 +33775,8 @@ START_TEST(s21_is_equal_3283) {
 }
 
 START_TEST(s21_is_equal_3284) {
-  char *example = "( 8.755597985528646E-11 == -50.133691850508222413484 ) = False";
+  char *example =
+      "( 8.755597985528646E-11 == -50.133691850508222413484 ) = False";
   s21_decimal value_1 = {{0x83B93B46, 0x1F1B2B, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x96793AAC, 0xC0BCCE5A, 0xA9D, 0x80150000}};
   int code = 0;
@@ -32904,7 +33826,8 @@ START_TEST(s21_is_equal_3288) {
 }
 
 START_TEST(s21_is_equal_3289) {
-  char *example = "( -1.7908195233399339539597693 == 13814225314440001384226 ) = False";
+  char *example =
+      "( -1.7908195233399339539597693 == 13814225314440001384226 ) = False";
   s21_decimal value_1 = {{0x45BD897D, 0x357853E8, 0xED035, 0x80190000}};
   s21_decimal value_2 = {{0xA5246F22, 0xDEE33C94, 0x2EC, 0x0}};
   int code = 0;
@@ -33134,7 +34057,8 @@ START_TEST(s21_is_equal_3311) {
 }
 
 START_TEST(s21_is_equal_3312) {
-  char *example = "( 1914308261279629768430840302 == -1.50821494444751 ) = False";
+  char *example =
+      "( 1914308261279629768430840302 == -1.50821494444751 ) = False";
   s21_decimal value_1 = {{0x3365E9EE, 0xC8C8F1AA, 0x62F7A8A, 0x0}};
   s21_decimal value_2 = {{0xDD99D2CF, 0x892B, 0x0, 0x800E0000}};
   int code = 0;
@@ -33244,7 +34168,8 @@ START_TEST(s21_is_equal_3322) {
 }
 
 START_TEST(s21_is_equal_3323) {
-  char *example = "( 1572176298218733629017 == 1476259174626211624065424313 ) = False";
+  char *example =
+      "( 1572176298218733629017 == 1476259174626211624065424313 ) = False";
   s21_decimal value_1 = {{0xA036EE59, 0x3A543D7B, 0x55, 0x0}};
   s21_decimal value_2 = {{0xC47BDBB9, 0x36CD4787, 0x4C5220A, 0x0}};
   int code = 0;
@@ -33464,7 +34389,9 @@ START_TEST(s21_is_equal_3344) {
 }
 
 START_TEST(s21_is_equal_3345) {
-  char *example = "( 1375441979448660788957458703 == -185.26459687023646802805230 ) = False";
+  char *example =
+      "( 1375441979448660788957458703 == -185.26459687023646802805230 ) = "
+      "False";
   s21_decimal value_1 = {{0xAA80B10F, 0x1CBFB1D5, 0x471BD2B, 0x0}};
   s21_decimal value_2 = {{0x604D59CB, 0x23A2FBC6, 0x18850, 0x80160000}};
   int code = 0;
@@ -33474,7 +34401,8 @@ START_TEST(s21_is_equal_3345) {
 }
 
 START_TEST(s21_is_equal_3346) {
-  char *example = "( 1258160992991097879670051226 == -19535.7130087643716 ) = False";
+  char *example =
+      "( 1258160992991097879670051226 == -19535.7130087643716 ) = False";
   s21_decimal value_1 = {{0x30E0519A, 0x18CCB1D2, 0x410B9F4, 0x0}};
   s21_decimal value_2 = {{0x5736BA44, 0x2B60C46, 0x0, 0x800D0000}};
   int code = 0;
@@ -33534,7 +34462,9 @@ START_TEST(s21_is_equal_3351) {
 }
 
 START_TEST(s21_is_equal_3352) {
-  char *example = "( 1758766949430105449103512721 == -7.3891975913985596071442348 ) = False";
+  char *example =
+      "( 1758766949430105449103512721 == -7.3891975913985596071442348 ) = "
+      "False";
   s21_decimal value_1 = {{0xD43A5491, 0x5F969083, 0x5AED163, 0x0}};
   s21_decimal value_2 = {{0xE56577AC, 0xA6F36B9, 0x3D1F3C, 0x80190000}};
   int code = 0;
@@ -33554,7 +34484,8 @@ START_TEST(s21_is_equal_3353) {
 }
 
 START_TEST(s21_is_equal_3354) {
-  char *example = "( 9.5713708939336766E-10 == 1159623392646726900582602210 ) = False";
+  char *example =
+      "( 9.5713708939336766E-10 == 1159623392646726900582602210 ) = False";
   s21_decimal value_1 = {{0x7576DC3E, 0x1540B1C, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x876A55E2, 0x14211225, 0x3BF37CE, 0x0}};
   int code = 0;
@@ -33634,7 +34565,9 @@ START_TEST(s21_is_equal_3361) {
 }
 
 START_TEST(s21_is_equal_3362) {
-  char *example = "( 1394261171253858426538647454 == 1296474531678193198592311991 ) = False";
+  char *example =
+      "( 1394261171253858426538647454 == 1296474531678193198592311991 ) = "
+      "False";
   s21_decimal value_1 = {{0x53FF5F9E, 0x8B55FD98, 0x4814E49, 0x0}};
   s21_decimal value_2 = {{0x6BDA42B7, 0x30DD9720, 0x4306B29, 0x0}};
   int code = 0;
@@ -33644,7 +34577,8 @@ START_TEST(s21_is_equal_3362) {
 }
 
 START_TEST(s21_is_equal_3363) {
-  char *example = "( -82.3751330471431944904333 == -6864145.824142285182746 ) = False";
+  char *example =
+      "( -82.3751330471431944904333 == -6864145.824142285182746 ) = False";
   s21_decimal value_1 = {{0xF8399E8D, 0xA62BB22A, 0xAE6F, 0x80160000}};
   s21_decimal value_2 = {{0x11D5971A, 0x1B28C341, 0x174, 0x800F0000}};
   int code = 0;
@@ -33654,7 +34588,8 @@ START_TEST(s21_is_equal_3363) {
 }
 
 START_TEST(s21_is_equal_3364) {
-  char *example = "( 105798150040041115085988138 == -1.70742702313733021 ) = False";
+  char *example =
+      "( 105798150040041115085988138 == -1.70742702313733021 ) = False";
   s21_decimal value_1 = {{0xAD74612A, 0x34B70AB5, 0x5783A1, 0x0}};
   s21_decimal value_2 = {{0x47667B9D, 0x25E9995, 0x0, 0x80110000}};
   int code = 0;
@@ -33664,7 +34599,8 @@ START_TEST(s21_is_equal_3364) {
 }
 
 START_TEST(s21_is_equal_3365) {
-  char *example = "( 1065466148042762594276594334 == 156288185442197439212 ) = False";
+  char *example =
+      "( 1065466148042762594276594334 == 156288185442197439212 ) = False";
   s21_decimal value_1 = {{0x2797D29E, 0x9EF266F9, 0x371553B, 0x0}};
   s21_decimal value_2 = {{0x8E02EC, 0x78EF2C9C, 0x8, 0x0}};
   int code = 0;
@@ -33684,7 +34620,8 @@ START_TEST(s21_is_equal_3366) {
 }
 
 START_TEST(s21_is_equal_3367) {
-  char *example = "( 1561009135267892080285841084 == -270.957571100149426 ) = False";
+  char *example =
+      "( 1561009135267892080285841084 == -270.957571100149426 ) = False";
   s21_decimal value_1 = {{0x4DEFF6BC, 0xC94EC81A, 0x50B3C8A, 0x0}};
   s21_decimal value_2 = {{0xAEA086B2, 0x3C2A279, 0x0, 0x800F0000}};
   int code = 0;
@@ -33704,7 +34641,8 @@ START_TEST(s21_is_equal_3368) {
 }
 
 START_TEST(s21_is_equal_3369) {
-  char *example = "( 1711648561319612245199193667 == 123548317150509456 ) = False";
+  char *example =
+      "( 1711648561319612245199193667 == 123548317150509456 ) = False";
   s21_decimal value_1 = {{0x2B1A8643, 0x6F8B6269, 0x587D7AE, 0x0}};
   s21_decimal value_2 = {{0x345A7990, 0x1B6EE8A, 0x0, 0x0}};
   int code = 0;
@@ -33744,7 +34682,8 @@ START_TEST(s21_is_equal_3372) {
 }
 
 START_TEST(s21_is_equal_3373) {
-  char *example = "( 1911941049099970197873095193 == 13448583358770608126817 ) = False";
+  char *example =
+      "( 1911941049099970197873095193 == 13448583358770608126817 ) = False";
   s21_decimal value_1 = {{0xB79DF219, 0xF475A4F0, 0x62D8543, 0x0}};
   s21_decimal value_2 = {{0x47D4BB61, 0xC960F27, 0x2D9, 0x0}};
   int code = 0;
@@ -33764,7 +34703,8 @@ START_TEST(s21_is_equal_3374) {
 }
 
 START_TEST(s21_is_equal_3375) {
-  char *example = "( 1421889820499015600492460710 == 190928822905036545886 ) = False";
+  char *example =
+      "( 1421889820499015600492460710 == 190928822905036545886 ) = False";
   s21_decimal value_1 = {{0x67AB3AA6, 0x9EFA0AA8, 0x49828E1, 0x0}};
   s21_decimal value_2 = {{0xE2B1F5E, 0x59AB70D9, 0xA, 0x0}};
   int code = 0;
@@ -33834,7 +34774,8 @@ START_TEST(s21_is_equal_3381) {
 }
 
 START_TEST(s21_is_equal_3382) {
-  char *example = "( 1375588461628178681172434894 == -820680.6943570765912850 ) = False";
+  char *example =
+      "( 1375588461628178681172434894 == -820680.6943570765912850 ) = False";
   s21_decimal value_1 = {{0x30559FCE, 0xED5A9182, 0x471DC2F, 0x0}};
   s21_decimal value_2 = {{0x7679C2B5, 0x7D3B875D, 0x2C, 0x800F0000}};
   int code = 0;
@@ -33844,7 +34785,8 @@ START_TEST(s21_is_equal_3382) {
 }
 
 START_TEST(s21_is_equal_3383) {
-  char *example = "( 1348860890599005554096622677 == 0.524980305268386 ) = False";
+  char *example =
+      "( 1348860890599005554096622677 == 0.524980305268386 ) = False";
   s21_decimal value_1 = {{0x4D924C55, 0x65FE1CF0, 0x45BC067, 0x0}};
   s21_decimal value_2 = {{0x809C0EA2, 0x1DD77, 0x0, 0xF0000}};
   int code = 0;
@@ -33884,7 +34826,9 @@ START_TEST(s21_is_equal_3386) {
 }
 
 START_TEST(s21_is_equal_3387) {
-  char *example = "( 1790942909900129496160584256 == 1071333459126197399360197987 ) = False";
+  char *example =
+      "( 1790942909900129496160584256 == 1071333459126197399360197987 ) = "
+      "False";
   s21_decimal value_1 = {{0x4354C240, 0xAF80F690, 0x5C96EE9, 0x0}};
   s21_decimal value_2 = {{0xFDDD5563, 0x312A4C81, 0x3762FAF, 0x0}};
   int code = 0;
@@ -33944,7 +34888,9 @@ START_TEST(s21_is_equal_3392) {
 }
 
 START_TEST(s21_is_equal_3393) {
-  char *example = "( 1672590824739266940616913085 == 1795491269491758742776162295 ) = False";
+  char *example =
+      "( 1672590824739266940616913085 == 1795491269491758742776162295 ) = "
+      "False";
   s21_decimal value_1 = {{0x44930BD, 0x4B0767AB, 0x56788E2, 0x0}};
   s21_decimal value_2 = {{0x5E51A7F7, 0xC0CA3F71, 0x5CD3210, 0x0}};
   int code = 0;
@@ -33964,7 +34910,8 @@ START_TEST(s21_is_equal_3394) {
 }
 
 START_TEST(s21_is_equal_3395) {
-  char *example = "( 1352800781925401854556511767 == 1370834953824688933 ) = False";
+  char *example =
+      "( 1352800781925401854556511767 == 1370834953824688933 ) = False";
   s21_decimal value_1 = {{0x17681E17, 0x55CE637D, 0x45F02B5, 0x0}};
   s21_decimal value_2 = {{0xA468DB25, 0x13062F20, 0x0, 0x0}};
   int code = 0;
@@ -34014,7 +34961,8 @@ START_TEST(s21_is_equal_3399) {
 }
 
 START_TEST(s21_is_equal_3400) {
-  char *example = "( 12049165102900472 == 1910728684013304523477510334 ) = False";
+  char *example =
+      "( 12049165102900472 == 1910728684013304523477510334 ) = False";
   s21_decimal value_1 = {{0xDDCC64F8, 0x2ACEA6, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4FF868BE, 0x830A8C08, 0x62C8489, 0x0}};
   int code = 0;
@@ -34064,7 +35012,8 @@ START_TEST(s21_is_equal_3404) {
 }
 
 START_TEST(s21_is_equal_3405) {
-  char *example = "( 149790262831450995 == -722.26318412433529387009534 ) = False";
+  char *example =
+      "( 149790262831450995 == -722.26318412433529387009534 ) = False";
   s21_decimal value_1 = {{0x4EE18B73, 0x2142973, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDC0AC5FE, 0x911140C9, 0x3BBE84, 0x80170000}};
   int code = 0;
@@ -34134,7 +35083,8 @@ START_TEST(s21_is_equal_3411) {
 }
 
 START_TEST(s21_is_equal_3412) {
-  char *example = "( 1039675496725486901726641642 == 1867767919118844 ) = False";
+  char *example =
+      "( 1039675496725486901726641642 == 1867767919118844 ) = False";
   s21_decimal value_1 = {{0xB3D7DEA, 0x9C8A57BD, 0x35BFFD9, 0x0}};
   s21_decimal value_2 = {{0x9B5789FC, 0x6A2B9, 0x0, 0x0}};
   int code = 0;
@@ -34144,7 +35094,9 @@ START_TEST(s21_is_equal_3412) {
 }
 
 START_TEST(s21_is_equal_3413) {
-  char *example = "( 1180773843612496566025584220 == 16488.6426962213704106568265 ) = False";
+  char *example =
+      "( 1180773843612496566025584220 == 16488.6426962213704106568265 ) = "
+      "False";
   s21_decimal value_1 = {{0x3F85FE5C, 0x52ABF5C5, 0x3D0B696, 0x0}};
   s21_decimal value_2 = {{0x3D70EA49, 0x1DC53244, 0x88640F, 0x160000}};
   int code = 0;
@@ -34194,7 +35146,9 @@ START_TEST(s21_is_equal_3417) {
 }
 
 START_TEST(s21_is_equal_3418) {
-  char *example = "( 0.31677095212047918165094888 == -430.56650738693383271309131 ) = False";
+  char *example =
+      "( 0.31677095212047918165094888 == -430.56650738693383271309131 ) = "
+      "False";
   s21_decimal value_1 = {{0x9FD371E8, 0xC5B8822C, 0x1A33E2, 0x1A0000}};
   s21_decimal value_2 = {{0xA5B95F4B, 0xB6AAB111, 0x239D99, 0x80170000}};
   int code = 0;
@@ -34234,7 +35188,9 @@ START_TEST(s21_is_equal_3421) {
 }
 
 START_TEST(s21_is_equal_3422) {
-  char *example = "( 1235641113195377844131981588 == -165318.04294656166697240795 ) = False";
+  char *example =
+      "( 1235641113195377844131981588 == -165318.04294656166697240795 ) = "
+      "False";
   s21_decimal value_1 = {{0x393BE914, 0xF7897F3C, 0x3FE192E, 0x0}};
   s21_decimal value_2 = {{0x7ECE08DB, 0xE814E0B9, 0xDACBE, 0x80140000}};
   int code = 0;
@@ -34384,7 +35340,8 @@ START_TEST(s21_is_equal_3436) {
 }
 
 START_TEST(s21_is_equal_3437) {
-  char *example = "( 6.9961906687514944E-10 == 13807284572816411959768 ) = False";
+  char *example =
+      "( 6.9961906687514944E-10 == 13807284572816411959768 ) = False";
   s21_decimal value_1 = {{0xC3EB1940, 0xF88DFB, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xFD53A1D8, 0x7E90C4D8, 0x2EC, 0x0}};
   int code = 0;
@@ -34414,7 +35371,8 @@ START_TEST(s21_is_equal_3439) {
 }
 
 START_TEST(s21_is_equal_3440) {
-  char *example = "( 17326985204417214510970047 == 110480706353960266 ) = False";
+  char *example =
+      "( 17326985204417214510970047 == 110480706353960266 ) = False";
   s21_decimal value_1 = {{0xE16AB4BF, 0xC0041B5F, 0xE5521, 0x0}};
   s21_decimal value_2 = {{0xF8C3154A, 0x188819D, 0x0, 0x0}};
   int code = 0;
@@ -34434,7 +35392,8 @@ START_TEST(s21_is_equal_3441) {
 }
 
 START_TEST(s21_is_equal_3442) {
-  char *example = "( 0.06392127245131167945745110 == 164154185277309225321 ) = False";
+  char *example =
+      "( 0.06392127245131167945745110 == 164154185277309225321 ) = False";
   s21_decimal value_1 = {{0xA1D6D6AF, 0xCA8E0A84, 0x875B, 0x190000}};
   s21_decimal value_2 = {{0x97AC8969, 0xE618D1C8, 0x8, 0x0}};
   int code = 0;
@@ -34574,7 +35533,8 @@ START_TEST(s21_is_equal_3455) {
 }
 
 START_TEST(s21_is_equal_3456) {
-  char *example = "( 1309973147089610042821129592 == 19674538293154810 ) = False";
+  char *example =
+      "( 1309973147089610042821129592 == 19674538293154810 ) = False";
   s21_decimal value_1 = {{0x74353578, 0x993E9924, 0x43B959A, 0x0}};
   s21_decimal value_2 = {{0x6A1553FA, 0x45E5E3, 0x0, 0x0}};
   int code = 0;
@@ -34604,7 +35564,8 @@ START_TEST(s21_is_equal_3458) {
 }
 
 START_TEST(s21_is_equal_3459) {
-  char *example = "( 1388972776533331795239782710 == -39.3852738752505339207 ) = False";
+  char *example =
+      "( 1388972776533331795239782710 == -39.3852738752505339207 ) = False";
   s21_decimal value_1 = {{0xC5504936, 0x178F7AB2, 0x47CEE6D, 0x0}};
   s21_decimal value_2 = {{0x95CE5D47, 0x59CE032C, 0x15, 0x80130000}};
   int code = 0;
@@ -34654,7 +35615,8 @@ START_TEST(s21_is_equal_3463) {
 }
 
 START_TEST(s21_is_equal_3464) {
-  char *example = "( 0.29468730861537589249650149 == -7.7814362556783 ) = False";
+  char *example =
+      "( 0.29468730861537589249650149 == -7.7814362556783 ) = False";
   s21_decimal value_1 = {{0xFC872DE5, 0x19DCACD0, 0x18603F, 0x1A0000}};
   s21_decimal value_2 = {{0x9170496F, 0x46C5, 0x0, 0x800D0000}};
   int code = 0;
@@ -34704,7 +35666,8 @@ START_TEST(s21_is_equal_3468) {
 }
 
 START_TEST(s21_is_equal_3469) {
-  char *example = "( 177733537190152007 == 1278468656817714323703872970 ) = False";
+  char *example =
+      "( 177733537190152007 == 1278468656817714323703872970 ) = False";
   s21_decimal value_1 = {{0xDCE48747, 0x2776FB5, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFADE3DCA, 0xC241FF39, 0x4218644, 0x0}};
   int code = 0;
@@ -34974,7 +35937,9 @@ START_TEST(s21_is_equal_3495) {
 }
 
 START_TEST(s21_is_equal_3496) {
-  char *example = "( 1661731579964569662069633279 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1661731579964569662069633279 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x2BD370FF, 0x744AE523, 0x55E8D59, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -35034,7 +35999,8 @@ START_TEST(s21_is_equal_3501) {
 }
 
 START_TEST(s21_is_equal_3502) {
-  char *example = "( -28.579350563749334630870571 == 124262269994897658596929024 ) = False";
+  char *example =
+      "( -28.579350563749334630870571 == 124262269994897658596929024 ) = False";
   s21_decimal value_1 = {{0x6BA12E2B, 0xB2CF112B, 0x17A3E9, 0x80180000}};
   s21_decimal value_2 = {{0xF05DAE00, 0x2781AC88, 0x66C98F, 0x0}};
   int code = 0;
@@ -35054,7 +36020,8 @@ START_TEST(s21_is_equal_3503) {
 }
 
 START_TEST(s21_is_equal_3504) {
-  char *example = "( -823049.89703151359735734797 == -9462.173597677492 ) = False";
+  char *example =
+      "( -823049.89703151359735734797 == -9462.173597677492 ) = False";
   s21_decimal value_1 = {{0x49B5A20D, 0x6E9FEB93, 0x4414C2, 0x80140000}};
   s21_decimal value_2 = {{0xF817B7B4, 0x219DCB, 0x0, 0x800C0000}};
   int code = 0;
@@ -35094,7 +36061,9 @@ START_TEST(s21_is_equal_3507) {
 }
 
 START_TEST(s21_is_equal_3508) {
-  char *example = "( -6.8481038597594630225098282 == 1948111035395057638082616427 ) = False";
+  char *example =
+      "( -6.8481038597594630225098282 == 1948111035395057638082616427 ) = "
+      "False";
   s21_decimal value_1 = {{0x4DB7762A, 0x8A8423B7, 0x38A56C, 0x80190000}};
   s21_decimal value_2 = {{0xADC41C6B, 0xD7463A64, 0x64B708E, 0x0}};
   int code = 0;
@@ -35114,7 +36083,8 @@ START_TEST(s21_is_equal_3509) {
 }
 
 START_TEST(s21_is_equal_3510) {
-  char *example = "( 0.87632906368152714091147332 == 16482971723569810519976 ) = False";
+  char *example =
+      "( 0.87632906368152714091147332 == 16482971723569810519976 ) = False";
   s21_decimal value_1 = {{0x1C67B044, 0x5F8F2DFF, 0x487CFD, 0x1A0000}};
   s21_decimal value_2 = {{0x4AB637A8, 0x8B2F1C0F, 0x37D, 0x0}};
   int code = 0;
@@ -35194,7 +36164,8 @@ START_TEST(s21_is_equal_3517) {
 }
 
 START_TEST(s21_is_equal_3518) {
-  char *example = "( 12672294725022964372458798 == 19440728587176714965629994 ) = False";
+  char *example =
+      "( 12672294725022964372458798 == 19440728587176714965629994 ) = False";
   s21_decimal value_1 = {{0xA243CD2E, 0x793B6169, 0xA7B76, 0x0}};
   s21_decimal value_2 = {{0x16483C2A, 0x22982BA, 0x1014BC, 0x0}};
   int code = 0;
@@ -35204,7 +36175,8 @@ START_TEST(s21_is_equal_3518) {
 }
 
 START_TEST(s21_is_equal_3519) {
-  char *example = "( -3.6029305284999006 == -4342.6894386158648672589223 ) = False";
+  char *example =
+      "( -3.6029305284999006 == -4342.6894386158648672589223 ) = False";
   s21_decimal value_1 = {{0x5704375E, 0x800076, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xC98B15A7, 0xA97187CF, 0x23EC00, 0x80160000}};
   int code = 0;
@@ -35234,7 +36206,8 @@ START_TEST(s21_is_equal_3521) {
 }
 
 START_TEST(s21_is_equal_3522) {
-  char *example = "( -5.6334213825473794223461617 == 140517877224601361730 ) = False";
+  char *example =
+      "( -5.6334213825473794223461617 == 140517877224601361730 ) = False";
   s21_decimal value_1 = {{0xC70954F1, 0xD9CA3BA8, 0x2E993B, 0x80190000}};
   s21_decimal value_2 = {{0x14511D42, 0x9E13C8D7, 0x7, 0x0}};
   int code = 0;
@@ -35254,7 +36227,8 @@ START_TEST(s21_is_equal_3523) {
 }
 
 START_TEST(s21_is_equal_3524) {
-  char *example = "( -6.7768270363462077756 == -4.0031730701137023248699026 ) = False";
+  char *example =
+      "( -6.7768270363462077756 == -4.0031730701137023248699026 ) = False";
   s21_decimal value_1 = {{0x8CA0D3C, 0xAC7942D8, 0x3, 0x80130000}};
   s21_decimal value_2 = {{0xDA250E92, 0x783FFCCA, 0x211D0C, 0x80190000}};
   int code = 0;
@@ -35264,7 +36238,8 @@ START_TEST(s21_is_equal_3524) {
 }
 
 START_TEST(s21_is_equal_3525) {
-  char *example = "( 9.418784840164546151 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 9.418784840164546151 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xC5D79667, 0x82B63EE8, 0x0, 0x120000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -35314,7 +36289,9 @@ START_TEST(s21_is_equal_3529) {
 }
 
 START_TEST(s21_is_equal_3530) {
-  char *example = "( 1076027310185333301024284946 == 1398207919302288831322966912 ) = False";
+  char *example =
+      "( 1076027310185333301024284946 == 1398207919302288831322966912 ) = "
+      "False";
   s21_decimal value_1 = {{0xA6926112, 0x5E2A57DB, 0x37A11A5, 0x0}};
   s21_decimal value_2 = {{0x4BEECB80, 0x2F486DB1, 0x484920B, 0x0}};
   int code = 0;
@@ -35384,7 +36361,9 @@ START_TEST(s21_is_equal_3536) {
 }
 
 START_TEST(s21_is_equal_3537) {
-  char *example = "( 1777756716647250981837239963 == 1786744554832610580765401361 ) = False";
+  char *example =
+      "( 1777756716647250981837239963 == 1786744554832610580765401361 ) = "
+      "False";
   s21_decimal value_1 = {{0xE21E769B, 0xB78C279E, 0x5BE86A0, 0x0}};
   s21_decimal value_2 = {{0xE828E111, 0x66BC2095, 0x5C5F5E0, 0x0}};
   int code = 0;
@@ -35394,7 +36373,8 @@ START_TEST(s21_is_equal_3537) {
 }
 
 START_TEST(s21_is_equal_3538) {
-  char *example = "( -69253476.72801123725 == 1524898390675951407308765188 ) = False";
+  char *example =
+      "( -69253476.72801123725 == 1524898390675951407308765188 ) = False";
   s21_decimal value_1 = {{0x2F639D8D, 0x601BC704, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xA1A87804, 0x664752A3, 0x4ED5DCB, 0x0}};
   int code = 0;
@@ -35444,7 +36424,8 @@ START_TEST(s21_is_equal_3542) {
 }
 
 START_TEST(s21_is_equal_3543) {
-  char *example = "( -9235.0331128309110370710376 == 13495017740658008 ) = False";
+  char *example =
+      "( -9235.0331128309110370710376 == 13495017740658008 ) = False";
   s21_decimal value_1 = {{0x6A23B368, 0x7B614CAA, 0x4C63F1, 0x80160000}};
   s21_decimal value_2 = {{0xAAAB6558, 0x2FF1A5, 0x0, 0x0}};
   int code = 0;
@@ -35554,7 +36535,8 @@ START_TEST(s21_is_equal_3553) {
 }
 
 START_TEST(s21_is_equal_3554) {
-  char *example = "( 1866106572809616327530901289 == 1630732189575355246828 ) = False";
+  char *example =
+      "( 1866106572809616327530901289 == 1630732189575355246828 ) = False";
   s21_decimal value_1 = {{0x6285EF29, 0x4383F32, 0x6079B70, 0x0}};
   s21_decimal value_2 = {{0xEA0328EC, 0x66F48E6D, 0x58, 0x0}};
   int code = 0;
@@ -35624,7 +36606,8 @@ START_TEST(s21_is_equal_3560) {
 }
 
 START_TEST(s21_is_equal_3561) {
-  char *example = "( 158165573099108084722446 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 158165573099108084722446 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x80AFAB0E, 0x2C431084, 0x217E, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -35674,7 +36657,9 @@ START_TEST(s21_is_equal_3565) {
 }
 
 START_TEST(s21_is_equal_3566) {
-  char *example = "( -8.5922169273838341308591450 == 1706343352055516277635734478 ) = False";
+  char *example =
+      "( -8.5922169273838341308591450 == 1706343352055516277635734478 ) = "
+      "False";
   s21_decimal value_1 = {{0x1A2F4489, 0x3512344, 0x71B79, 0x80180000}};
   s21_decimal value_2 = {{0x39ADBCE, 0x7719EE79, 0x5837442, 0x0}};
   int code = 0;
@@ -35774,7 +36759,8 @@ START_TEST(s21_is_equal_3575) {
 }
 
 START_TEST(s21_is_equal_3576) {
-  char *example = "( 0.19480924415292595 == 1542802976071147574498940376 ) = False";
+  char *example =
+      "( 0.19480924415292595 == 1542802976071147574498940376 ) = False";
   s21_decimal value_1 = {{0x2BAB74B3, 0x4535CC, 0x0, 0x110000}};
   s21_decimal value_2 = {{0xF523D5D8, 0xEB2E1680, 0x4FC2D3C, 0x0}};
   int code = 0;
@@ -35824,7 +36810,9 @@ START_TEST(s21_is_equal_3580) {
 }
 
 START_TEST(s21_is_equal_3581) {
-  char *example = "( 0.66097687460619325659436127 == -3.0792233936731685140587882 ) = False";
+  char *example =
+      "( 0.66097687460619325659436127 == -3.0792233936731685140587882 ) = "
+      "False";
   s21_decimal value_1 = {{0x2498545F, 0xD12A6C31, 0x36ACBA, 0x1A0000}};
   s21_decimal value_2 = {{0x25AC656A, 0x58B3DA06, 0x197882, 0x80190000}};
   int code = 0;
@@ -35844,7 +36832,8 @@ START_TEST(s21_is_equal_3582) {
 }
 
 START_TEST(s21_is_equal_3583) {
-  char *example = "( -4826769.0045019448062827395 == 129351090795219642034206619 ) = False";
+  char *example =
+      "( -4826769.0045019448062827395 == 129351090795219642034206619 ) = False";
   s21_decimal value_1 = {{0x9E2CDB83, 0xB86B0B19, 0x27ED14, 0x80130000}};
   s21_decimal value_2 = {{0x5164B79B, 0xAEC3F140, 0x6AFF28, 0x0}};
   int code = 0;
@@ -35924,7 +36913,8 @@ START_TEST(s21_is_equal_3590) {
 }
 
 START_TEST(s21_is_equal_3591) {
-  char *example = "( 1631728150486705346563960629 == 1130180997239476818 ) = False";
+  char *example =
+      "( 1631728150486705346563960629 == 1130180997239476818 ) = False";
   s21_decimal value_1 = {{0x6D26F35, 0x487DF5D9, 0x545BBE0, 0x0}};
   s21_decimal value_2 = {{0x85B1252, 0xFAF35A1, 0x0, 0x0}};
   int code = 0;
@@ -35944,7 +36934,8 @@ START_TEST(s21_is_equal_3592) {
 }
 
 START_TEST(s21_is_equal_3593) {
-  char *example = "( -975.1740487311740459352 == 171991617587794770193 ) = False";
+  char *example =
+      "( -975.1740487311740459352 == 171991617587794770193 ) = False";
   s21_decimal value_1 = {{0x4AF55958, 0xA495D246, 0x210, 0x80130000}};
   s21_decimal value_2 = {{0x9557911, 0x52DCF8F2, 0x9, 0x0}};
   int code = 0;
@@ -36014,7 +37005,8 @@ START_TEST(s21_is_equal_3599) {
 }
 
 START_TEST(s21_is_equal_3600) {
-  char *example = "( -2.4775461764101561069073260 == 19200156989446015473 ) = False";
+  char *example =
+      "( -2.4775461764101561069073260 == 19200156989446015473 ) = False";
   s21_decimal value_1 = {{0x46EDFEBE, 0xC1ECAD0, 0x20CA4, 0x80180000}};
   s21_decimal value_2 = {{0x1BA9C9F1, 0xA74A90E, 0x1, 0x0}};
   int code = 0;
@@ -36064,7 +37056,8 @@ START_TEST(s21_is_equal_3604) {
 }
 
 START_TEST(s21_is_equal_3605) {
-  char *example = "( -762355.76488599362994937491 == 1951254427424702417639 ) = False";
+  char *example =
+      "( -762355.76488599362994937491 == 1951254427424702417639 ) = False";
   s21_decimal value_1 = {{0xF6AB9E93, 0xE1EA49EF, 0x3F0F82, 0x80140000}};
   s21_decimal value_2 = {{0xC19D4AE7, 0xC7184B8D, 0x69, 0x0}};
   int code = 0;
@@ -36074,7 +37067,8 @@ START_TEST(s21_is_equal_3605) {
 }
 
 START_TEST(s21_is_equal_3606) {
-  char *example = "( -5646373.58277019181 == 1426822744881107437022802478 ) = False";
+  char *example =
+      "( -5646373.58277019181 == 1426822744881107437022802478 ) = False";
   s21_decimal value_1 = {{0x8F04462D, 0x7D5FEAF, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xD312F22E, 0xFCD2C9AD, 0x49C3D77, 0x0}};
   int code = 0;
@@ -36084,7 +37078,9 @@ START_TEST(s21_is_equal_3606) {
 }
 
 START_TEST(s21_is_equal_3607) {
-  char *example = "( 1101545781992270119478732611 == 1377275630702249713198667051 ) = False";
+  char *example =
+      "( 1101545781992270119478732611 == 1377275630702249713198667051 ) = "
+      "False";
   s21_decimal value_1 = {{0xA477A743, 0x7F14EEBC, 0x38F2D64, 0x0}};
   s21_decimal value_2 = {{0xD1CB952B, 0x8BC2783F, 0x4734175, 0x0}};
   int code = 0;
@@ -36094,7 +37090,8 @@ START_TEST(s21_is_equal_3607) {
 }
 
 START_TEST(s21_is_equal_3608) {
-  char *example = "( -1.406837294437206 == -1.5655541406347940184371824 ) = False";
+  char *example =
+      "( -1.406837294437206 == -1.5655541406347940184371824 ) = False";
   s21_decimal value_1 = {{0xD5311356, 0x4FF82, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x3E9AB270, 0x99A75C26, 0xCF330, 0x80190000}};
   int code = 0;
@@ -36104,7 +37101,9 @@ START_TEST(s21_is_equal_3608) {
 }
 
 START_TEST(s21_is_equal_3609) {
-  char *example = "( -243.95099978903791494551639 == -800.15312456002037081878692 ) = False";
+  char *example =
+      "( -243.95099978903791494551639 == -800.15312456002037081878692 ) = "
+      "False";
   s21_decimal value_1 = {{0x2DDCD857, 0x50EC1DF, 0x142DDD, 0x80170000}};
   s21_decimal value_2 = {{0x2A5EB0A4, 0xC7A3EF3E, 0x422FE6, 0x80170000}};
   int code = 0;
@@ -36234,7 +37233,8 @@ START_TEST(s21_is_equal_3621) {
 }
 
 START_TEST(s21_is_equal_3622) {
-  char *example = "( 1457199316943266063071061 == 3.246206592730326E-11 ) = False";
+  char *example =
+      "( 1457199316943266063071061 == 3.246206592730326E-11 ) = False";
   s21_decimal value_1 = {{0xCF003755, 0xEEEA0B07, 0x13492, 0x0}};
   s21_decimal value_2 = {{0x5ED3C4D6, 0xB8868, 0x0, 0x1A0000}};
   int code = 0;
@@ -36324,7 +37324,9 @@ START_TEST(s21_is_equal_3630) {
 }
 
 START_TEST(s21_is_equal_3631) {
-  char *example = "( -287359.70945262954324737982 == 0.51898353569890229908220304 ) = False";
+  char *example =
+      "( -287359.70945262954324737982 == 0.51898353569890229908220304 ) = "
+      "False";
   s21_decimal value_1 = {{0x1E24BFBE, 0x1B3AD976, 0x17C514, 0x80140000}};
   s21_decimal value_2 = {{0xDBC92990, 0x626AF94C, 0x2AEDE7, 0x1A0000}};
   int code = 0;
@@ -36354,7 +37356,8 @@ START_TEST(s21_is_equal_3633) {
 }
 
 START_TEST(s21_is_equal_3634) {
-  char *example = "( -9.153570946949127994773832 == -120142.93681191431480000237 ) = False";
+  char *example =
+      "( -9.153570946949127994773832 == -120142.93681191431480000237 ) = False";
   s21_decimal value_1 = {{0x65C69148, 0x134918D6, 0x79258, 0x80180000}};
   s21_decimal value_2 = {{0xBF9BBEED, 0x2A5E4B93, 0x9F020, 0x80140000}};
   int code = 0;
@@ -36404,7 +37407,8 @@ START_TEST(s21_is_equal_3638) {
 }
 
 START_TEST(s21_is_equal_3639) {
-  char *example = "( -3.3213795297239392908463230 == 2.5648758699699799E-10 ) = False";
+  char *example =
+      "( -3.3213795297239392908463230 == 2.5648758699699799E-10 ) = False";
   s21_decimal value_1 = {{0x991F9473, 0x5857BCFB, 0x2BF54, 0x80180000}};
   s21_decimal value_2 = {{0xFF39AE57, 0x5B1F68, 0x0, 0x1A0000}};
   int code = 0;
@@ -36454,7 +37458,9 @@ START_TEST(s21_is_equal_3643) {
 }
 
 START_TEST(s21_is_equal_3644) {
-  char *example = "( -5.6683799892022533345787071 == -48.616663370785830397081651 ) = False";
+  char *example =
+      "( -5.6683799892022533345787071 == -48.616663370785830397081651 ) = "
+      "False";
   s21_decimal value_1 = {{0x35B43CBF, 0xF30AC760, 0x2EE342, 0x80190000}};
   s21_decimal value_2 = {{0xF18CF833, 0x9A2F07B3, 0x2836FA, 0x80180000}};
   int code = 0;
@@ -36474,7 +37480,9 @@ START_TEST(s21_is_equal_3645) {
 }
 
 START_TEST(s21_is_equal_3646) {
-  char *example = "( -3.4311051563037064826344687 == -637.83541436776297986277023 ) = False";
+  char *example =
+      "( -3.4311051563037064826344687 == -637.83541436776297986277023 ) = "
+      "False";
   s21_decimal value_1 = {{0x63A654EF, 0xD50E07F5, 0x1C61A5, 0x80190000}};
   s21_decimal value_2 = {{0xE07C3E9F, 0xB5B0C611, 0x34C2B0, 0x80170000}};
   int code = 0;
@@ -36494,7 +37502,9 @@ START_TEST(s21_is_equal_3647) {
 }
 
 START_TEST(s21_is_equal_3648) {
-  char *example = "( 1596391122259592724188788261 == -62.920520079673814370368829 ) = False";
+  char *example =
+      "( 1596391122259592724188788261 == -62.920520079673814370368829 ) = "
+      "False";
   s21_decimal value_1 = {{0x97947625, 0x24FF5681, 0x52880F8, 0x0}};
   s21_decimal value_2 = {{0x8B923D3D, 0x3A6C4C7A, 0x340BF0, 0x80180000}};
   int code = 0;
@@ -36564,7 +37574,9 @@ START_TEST(s21_is_equal_3654) {
 }
 
 START_TEST(s21_is_equal_3655) {
-  char *example = "( 1847399751301726885962637606 == -8.2817135854765791314942842 ) = False";
+  char *example =
+      "( 1847399751301726885962637606 == -8.2817135854765791314942842 ) = "
+      "False";
   s21_decimal value_1 = {{0xB1B8E126, 0x30C649E3, 0x5F8221D, 0x0}};
   s21_decimal value_2 = {{0xB1D79B7A, 0xEE3E4E4B, 0x448135, 0x80190000}};
   int code = 0;
@@ -36594,7 +37606,8 @@ START_TEST(s21_is_equal_3657) {
 }
 
 START_TEST(s21_is_equal_3658) {
-  char *example = "( 1089970660559259888776216961 == 108370255779943466 ) = False";
+  char *example =
+      "( 1089970660559259888776216961 == 108370255779943466 ) = False";
   s21_decimal value_1 = {{0xD8B18181, 0xE7FC19AA, 0x3859A43, 0x0}};
   s21_decimal value_2 = {{0x67FB542A, 0x181022C, 0x0, 0x0}};
   int code = 0;
@@ -36634,7 +37647,8 @@ START_TEST(s21_is_equal_3661) {
 }
 
 START_TEST(s21_is_equal_3662) {
-  char *example = "( 115586583890143743 == 1282936978029386202568131050 ) = False";
+  char *example =
+      "( 115586583890143743 == 1282936978029386202568131050 ) = False";
   s21_decimal value_1 = {{0xB992A9FF, 0x19AA562, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2C6701EA, 0xEFE3FA64, 0x4253878, 0x0}};
   int code = 0;
@@ -36684,7 +37698,9 @@ START_TEST(s21_is_equal_3666) {
 }
 
 START_TEST(s21_is_equal_3667) {
-  char *example = "( 1780890048352067226141660949 == 1155478585243831797870048708 ) = False";
+  char *example =
+      "( 1780890048352067226141660949 == 1155478585243831797870048708 ) = "
+      "False";
   s21_decimal value_1 = {{0xAE3B1715, 0xF8141321, 0x5C11E22, 0x0}};
   s21_decimal value_2 = {{0x64135C4, 0x9E7CCFD7, 0x3BBCA1B, 0x0}};
   int code = 0;
@@ -36694,7 +37710,8 @@ START_TEST(s21_is_equal_3667) {
 }
 
 START_TEST(s21_is_equal_3668) {
-  char *example = "( 1900991173369291809 == 1208717712527137938488523377 ) = False";
+  char *example =
+      "( 1900991173369291809 == 1208717712527137938488523377 ) = False";
   s21_decimal value_1 = {{0x79D46421, 0x1A61AD66, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4F7D7A71, 0x7DFF9D53, 0x3E7D3EE, 0x0}};
   int code = 0;
@@ -36714,7 +37731,9 @@ START_TEST(s21_is_equal_3669) {
 }
 
 START_TEST(s21_is_equal_3670) {
-  char *example = "( 1910647948511970879644410588 == 1046550626237594386201663974 ) = False";
+  char *example =
+      "( 1910647948511970879644410588 == 1046550626237594386201663974 ) = "
+      "False";
   s21_decimal value_1 = {{0x2B3CA2DC, 0xD4E2981A, 0x62C7370, 0x0}};
   s21_decimal value_2 = {{0x527559E6, 0x210F8831, 0x361AFB7, 0x0}};
   int code = 0;
@@ -36784,7 +37803,9 @@ START_TEST(s21_is_equal_3676) {
 }
 
 START_TEST(s21_is_equal_3677) {
-  char *example = "( 79228162514264337593543950335 == -2.0710693123804688034779396 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -2.0710693123804688034779396 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x594B5104, 0xEC866161, 0x1121A8, 0x80190000}};
   int code = 0;
@@ -36834,7 +37855,8 @@ START_TEST(s21_is_equal_3681) {
 }
 
 START_TEST(s21_is_equal_3682) {
-  char *example = "( 6.1969262914747E-10 == 1594893044570848190732441119 ) = False";
+  char *example =
+      "( 6.1969262914747E-10 == 1594893044570848190732441119 ) = False";
   s21_decimal value_1 = {{0x57E72CBB, 0x385C, 0x0, 0x170000}};
   s21_decimal value_2 = {{0x8098161F, 0x30B6A11E, 0x52743BD, 0x0}};
   int code = 0;
@@ -36854,7 +37876,9 @@ START_TEST(s21_is_equal_3683) {
 }
 
 START_TEST(s21_is_equal_3684) {
-  char *example = "( 1330218806376531076663781737 == 0.36491114595937652421747646 ) = False";
+  char *example =
+      "( 1330218806376531076663781737 == 0.36491114595937652421747646 ) = "
+      "False";
   s21_decimal value_1 = {{0xFA88A969, 0xFCDB93B3, 0x44C54C9, 0x0}};
   s21_decimal value_2 = {{0x5C48E3BE, 0x493BAA10, 0x1E2F4B, 0x1A0000}};
   int code = 0;
@@ -36904,7 +37928,8 @@ START_TEST(s21_is_equal_3688) {
 }
 
 START_TEST(s21_is_equal_3689) {
-  char *example = "( -8.445714095074693 == 1559525716819961536912312440 ) = False";
+  char *example =
+      "( -8.445714095074693 == 1559525716819961536912312440 ) = False";
   s21_decimal value_1 = {{0xC82ED85, 0x1E0155, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x99F44878, 0x82DB6F0D, 0x50A026A, 0x0}};
   int code = 0;
@@ -36914,7 +37939,8 @@ START_TEST(s21_is_equal_3689) {
 }
 
 START_TEST(s21_is_equal_3690) {
-  char *example = "( -7.6640508705638506200 == 1147138968787189601293538553 ) = False";
+  char *example =
+      "( -7.6640508705638506200 == 1147138968787189601293538553 ) = False";
   s21_decimal value_1 = {{0xB80C5426, 0xAA2D15D, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xDB5B94F9, 0x1AE75970, 0x3B4E420, 0x0}};
   int code = 0;
@@ -37004,7 +38030,8 @@ START_TEST(s21_is_equal_3698) {
 }
 
 START_TEST(s21_is_equal_3699) {
-  char *example = "( 13340503060816495 == -7497.9984402047261877309775 ) = False";
+  char *example =
+      "( 13340503060816495 == -7497.9984402047261877309775 ) = False";
   s21_decimal value_1 = {{0xEA10A26F, 0x2F651D, 0x0, 0x0}};
   s21_decimal value_2 = {{0x135D914F, 0x195D66C9, 0x3E05A1, 0x80160000}};
   int code = 0;
@@ -37034,7 +38061,8 @@ START_TEST(s21_is_equal_3701) {
 }
 
 START_TEST(s21_is_equal_3702) {
-  char *example = "( 1106661519339829434837202161 == -4.9895889766839103911 ) = False";
+  char *example =
+      "( 1106661519339829434837202161 == -4.9895889766839103911 ) = False";
   s21_decimal value_1 = {{0xCC8D74F1, 0x2C78C1D3, 0x39368B1, 0x0}};
   s21_decimal value_2 = {{0x187E31A7, 0xB471CF62, 0x2, 0x80130000}};
   int code = 0;
@@ -37054,7 +38082,8 @@ START_TEST(s21_is_equal_3703) {
 }
 
 START_TEST(s21_is_equal_3704) {
-  char *example = "( 1776429663419712709818174100 == 2.3708103763944426E-10 ) = False";
+  char *example =
+      "( 1776429663419712709818174100 == 2.3708103763944426E-10 ) = False";
   s21_decimal value_1 = {{0xE689CA94, 0x4722EE5, 0x5BD6D9D, 0x0}};
   s21_decimal value_2 = {{0xF25E3EA, 0x543A65, 0x0, 0x1A0000}};
   int code = 0;
@@ -37114,7 +38143,8 @@ START_TEST(s21_is_equal_3709) {
 }
 
 START_TEST(s21_is_equal_3710) {
-  char *example = "( 105289560132620324472425 == 1707757656206207379662547988 ) = False";
+  char *example =
+      "( 105289560132620324472425 == 1707757656206207379662547988 ) = False";
   s21_decimal value_1 = {{0xCD108669, 0xC22C849E, 0x164B, 0x0}};
   s21_decimal value_2 = {{0xB939AC14, 0xC00137D, 0x5849FC0, 0x0}};
   int code = 0;
@@ -37144,7 +38174,8 @@ START_TEST(s21_is_equal_3712) {
 }
 
 START_TEST(s21_is_equal_3713) {
-  char *example = "( -807.546070654421930 == -789842049934.55306177897981 ) = False";
+  char *example =
+      "( -807.546070654421930 == -789842049934.55306177897981 ) = False";
   s21_decimal value_1 = {{0x241CA791, 0x11EE5E3, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x89A5E5FD, 0x55116E76, 0x41558E, 0x800E0000}};
   int code = 0;
@@ -37154,7 +38185,9 @@ START_TEST(s21_is_equal_3713) {
 }
 
 START_TEST(s21_is_equal_3714) {
-  char *example = "( 1973297561321116478420188389 == -3801705080.5434253184846449 ) = False";
+  char *example =
+      "( 1973297561321116478420188389 == -3801705080.5434253184846449 ) = "
+      "False";
   s21_decimal value_1 = {{0x4A867CE5, 0x25B13367, 0x6604603, 0x0}};
   s21_decimal value_2 = {{0xF72BCA71, 0x74281EAF, 0x1F726C, 0x80100000}};
   int code = 0;
@@ -37204,7 +38237,8 @@ START_TEST(s21_is_equal_3718) {
 }
 
 START_TEST(s21_is_equal_3719) {
-  char *example = "( -5.7717429226839831596648599 == -6.77307971311001206 ) = False";
+  char *example =
+      "( -5.7717429226839831596648599 == -6.77307971311001206 ) = False";
   s21_decimal value_1 = {{0xE0EE4897, 0x1B9F64C8, 0x2FBE24, 0x80190000}};
   s21_decimal value_2 = {{0xE9885E76, 0x9664802, 0x0, 0x80110000}};
   int code = 0;
@@ -37214,7 +38248,8 @@ START_TEST(s21_is_equal_3719) {
 }
 
 START_TEST(s21_is_equal_3720) {
-  char *example = "( -5700.773826143245548957 == 1770022371045863388142016201 ) = False";
+  char *example =
+      "( -5700.773826143245548957 == 1770022371045863388142016201 ) = False";
   s21_decimal value_1 = {{0x109FBD9D, 0xA2126E2, 0x135, 0x80120000}};
   s21_decimal value_2 = {{0x101296C9, 0x7588DA, 0x5B820D1, 0x0}};
   int code = 0;
@@ -37234,7 +38269,8 @@ START_TEST(s21_is_equal_3721) {
 }
 
 START_TEST(s21_is_equal_3722) {
-  char *example = "( -684.1629962639464470 == 12049113304692753506450 ) = False";
+  char *example =
+      "( -684.1629962639464470 == 12049113304692753506450 ) = False";
   s21_decimal value_1 = {{0xC8C788CF, 0x97EA29E, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x4992092, 0x2F09A7AE, 0x28D, 0x0}};
   int code = 0;
@@ -37284,7 +38320,8 @@ START_TEST(s21_is_equal_3726) {
 }
 
 START_TEST(s21_is_equal_3727) {
-  char *example = "( 12622475751610311244 == 1664935241136828559967777123 ) = False";
+  char *example =
+      "( 12622475751610311244 == 1664935241136828559967777123 ) = False";
   s21_decimal value_1 = {{0xC0B6E24C, 0xAF2C0AD1, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDF85F163, 0x463FD240, 0x56133C0, 0x0}};
   int code = 0;
@@ -37304,7 +38341,8 @@ START_TEST(s21_is_equal_3728) {
 }
 
 START_TEST(s21_is_equal_3729) {
-  char *example = "( 1270589790791419130 == -14.563449581951671896553372 ) = False";
+  char *example =
+      "( 1270589790791419130 == -14.563449581951671896553372 ) = False";
   s21_decimal value_1 = {{0xCF5C44FA, 0x11A20AAE, 0x0, 0x0}};
   s21_decimal value_2 = {{0x561AB79C, 0x2F0C5236, 0xC0BEE, 0x80180000}};
   int code = 0;
@@ -37404,7 +38442,8 @@ START_TEST(s21_is_equal_3738) {
 }
 
 START_TEST(s21_is_equal_3739) {
-  char *example = "( 189391452102864248743672183 == 1253927327845287214632536089 ) = False";
+  char *example =
+      "( 189391452102864248743672183 == 1253927327845287214632536089 ) = False";
   s21_decimal value_1 = {{0xAE643977, 0x30E5BC57, 0x9CA933, 0x0}};
   s21_decimal value_2 = {{0x3C760819, 0xA641B64F, 0x40D3970, 0x0}};
   int code = 0;
@@ -37434,7 +38473,8 @@ START_TEST(s21_is_equal_3741) {
 }
 
 START_TEST(s21_is_equal_3742) {
-  char *example = "( -52.654849759885243436845893 == 0.4959847833504937083647020 ) = False";
+  char *example =
+      "( -52.654849759885243436845893 == 0.4959847833504937083647020 ) = False";
   s21_decimal value_1 = {{0xE8814B45, 0x2005212B, 0x2B8E19, 0x80180000}};
   s21_decimal value_2 = {{0x87DD2B9E, 0x63944944, 0x6907, 0x180000}};
   int code = 0;
@@ -37444,7 +38484,8 @@ START_TEST(s21_is_equal_3742) {
 }
 
 START_TEST(s21_is_equal_3743) {
-  char *example = "( 17177135036130141 == 0.83529663406332238972798122 ) = False";
+  char *example =
+      "( 17177135036130141 == 0.83529663406332238972798122 ) = False";
   s21_decimal value_1 = {{0x6816635D, 0x3D0683, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7C5F44AA, 0x20694737, 0x451818, 0x1A0000}};
   int code = 0;
@@ -37464,7 +38505,9 @@ START_TEST(s21_is_equal_3744) {
 }
 
 START_TEST(s21_is_equal_3745) {
-  char *example = "( -2.0317484140929538844992538 == 1271820079036771335391970831 ) = False";
+  char *example =
+      "( -2.0317484140929538844992538 == 1271820079036771335391970831 ) = "
+      "False";
   s21_decimal value_1 = {{0xF667241A, 0x5B24AE8, 0x10CE65, 0x80190000}};
   s21_decimal value_2 = {{0xC750860F, 0xA297125D, 0x41C0660, 0x0}};
   int code = 0;
@@ -37484,7 +38527,8 @@ START_TEST(s21_is_equal_3746) {
 }
 
 START_TEST(s21_is_equal_3747) {
-  char *example = "( -4.5554475994295268743359139 == 16265663492601621 ) = False";
+  char *example =
+      "( -4.5554475994295268743359139 == 16265663492601621 ) = False";
   s21_decimal value_1 = {{0x1118AAA3, 0x178B8598, 0x25AE89, 0x80190000}};
   s21_decimal value_2 = {{0xE6833715, 0x39C988, 0x0, 0x0}};
   int code = 0;
@@ -37564,7 +38608,8 @@ START_TEST(s21_is_equal_3754) {
 }
 
 START_TEST(s21_is_equal_3755) {
-  char *example = "( 1389350014517728060483272104 == 17227415681101955780496465 ) = False";
+  char *example =
+      "( 1389350014517728060483272104 == 17227415681101955780496465 ) = False";
   s21_decimal value_1 = {{0xA2937DA8, 0x3442CE99, 0x47D3E4F, 0x0}};
   s21_decimal value_2 = {{0x361ACC51, 0x134CA217, 0xE400C, 0x0}};
   int code = 0;
@@ -37584,7 +38629,8 @@ START_TEST(s21_is_equal_3756) {
 }
 
 START_TEST(s21_is_equal_3757) {
-  char *example = "( 1085481510943638891159489163 == 7.0217180513529843E-10 ) = False";
+  char *example =
+      "( 1085481510943638891159489163 == 7.0217180513529843E-10 ) = False";
   s21_decimal value_1 = {{0x88A60A8B, 0x9E2E8064, 0x381E3A6, 0x0}};
   s21_decimal value_2 = {{0x55A36FF3, 0xF97627, 0x0, 0x1A0000}};
   int code = 0;
@@ -37624,7 +38670,8 @@ START_TEST(s21_is_equal_3760) {
 }
 
 START_TEST(s21_is_equal_3761) {
-  char *example = "( 1415561772929821701004168214 == 1489683827530857 ) = False";
+  char *example =
+      "( 1415561772929821701004168214 == 1489683827530857 ) = False";
   s21_decimal value_1 = {{0xADFD8C16, 0x7992DDBF, 0x492ECDD, 0x0}};
   s21_decimal value_2 = {{0xB5E1C69, 0x54ADC, 0x0, 0x0}};
   int code = 0;
@@ -37634,7 +38681,8 @@ START_TEST(s21_is_equal_3761) {
 }
 
 START_TEST(s21_is_equal_3762) {
-  char *example = "( 1421724144393193156399000796 == -222.0182637514419768 ) = False";
+  char *example =
+      "( 1421724144393193156399000796 == -222.0182637514419768 ) = False";
   s21_decimal value_1 = {{0x2106ECDC, 0x4D22A2C6, 0x49805CC, 0x0}};
   s21_decimal value_2 = {{0x85896E38, 0x1ECFAC58, 0x0, 0x80100000}};
   int code = 0;
@@ -37644,7 +38692,8 @@ START_TEST(s21_is_equal_3762) {
 }
 
 START_TEST(s21_is_equal_3763) {
-  char *example = "( 1875261188839292493961573596 == -9997229.2323615667849010 ) = False";
+  char *example =
+      "( 1875261188839292493961573596 == -9997229.2323615667849010 ) = False";
   s21_decimal value_1 = {{0xAECB34DC, 0xBEF10B30, 0x60F2E00, 0x0}};
   s21_decimal value_2 = {{0x64A4D85, 0xF36D0B3E, 0x21D, 0x800F0000}};
   int code = 0;
@@ -37724,7 +38773,8 @@ START_TEST(s21_is_equal_3770) {
 }
 
 START_TEST(s21_is_equal_3771) {
-  char *example = "( 15247984317947193304 == 1139140144766481106649423 ) = False";
+  char *example =
+      "( 15247984317947193304 == 1139140144766481106649423 ) = False";
   s21_decimal value_1 = {{0x2BF827D8, 0xD39BB8F3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x64EC14F, 0xE93661F6, 0xF138, 0x0}};
   int code = 0;
@@ -37814,7 +38864,9 @@ START_TEST(s21_is_equal_3779) {
 }
 
 START_TEST(s21_is_equal_3780) {
-  char *example = "( 1511478985216070299289314981 == 1138179314972948031413754580 ) = False";
+  char *example =
+      "( 1511478985216070299289314981 == 1138179314972948031413754580 ) = "
+      "False";
   s21_decimal value_1 = {{0xE12AE6A5, 0xF8CCA210, 0x4E2441F, 0x0}};
   s21_decimal value_2 = {{0x11DD1AD4, 0x4C702D20, 0x3AD7AD8, 0x0}};
   int code = 0;
@@ -37854,7 +38906,8 @@ START_TEST(s21_is_equal_3783) {
 }
 
 START_TEST(s21_is_equal_3784) {
-  char *example = "( 1869422965289233706690579690 == 1390472402838347128 ) = False";
+  char *example =
+      "( 1869422965289233706690579690 == 1390472402838347128 ) = False";
   s21_decimal value_1 = {{0x7D108CEA, 0x356DAC9, 0x60A59B6, 0x0}};
   s21_decimal value_2 = {{0x8929DD78, 0x134BF348, 0x0, 0x0}};
   int code = 0;
@@ -37944,7 +38997,8 @@ START_TEST(s21_is_equal_3792) {
 }
 
 START_TEST(s21_is_equal_3793) {
-  char *example = "( 38.56407901931296325553703 == -303340.5111808829 ) = False";
+  char *example =
+      "( 38.56407901931296325553703 == -303340.5111808829 ) = False";
   s21_decimal value_1 = {{0xAB46CE27, 0x4A9039C4, 0x330A0, 0x170000}};
   s21_decimal value_2 = {{0xAA26333D, 0xAC6DD, 0x0, 0x800A0000}};
   int code = 0;
@@ -37964,7 +39018,8 @@ START_TEST(s21_is_equal_3794) {
 }
 
 START_TEST(s21_is_equal_3795) {
-  char *example = "( 16905761638130164208 == -8.2100585818329689337244433 ) = False";
+  char *example =
+      "( 16905761638130164208 == -8.2100585818329689337244433 ) = False";
   s21_decimal value_1 = {{0xAA2CA1F0, 0xEA9D54A3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x561E2B11, 0xACE25076, 0x43E979, 0x80190000}};
   int code = 0;
@@ -37984,7 +39039,8 @@ START_TEST(s21_is_equal_3796) {
 }
 
 START_TEST(s21_is_equal_3797) {
-  char *example = "( -49903.619495510833990 == 1579148563069274328957 ) = False";
+  char *example =
+      "( -49903.619495510833990 == 1579148563069274328957 ) = False";
   s21_decimal value_1 = {{0xC79E3F87, 0x454153C0, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x80A28F7D, 0x9B16B36C, 0x55, 0x0}};
   int code = 0;
@@ -37994,7 +39050,8 @@ START_TEST(s21_is_equal_3797) {
 }
 
 START_TEST(s21_is_equal_3798) {
-  char *example = "( -82.445799636625939862100464 == 1730539666862904901 ) = False";
+  char *example =
+      "( -82.445799636625939862100464 == 1730539666862904901 ) = False";
   s21_decimal value_1 = {{0x578399F0, 0xC100AFB4, 0x443293, 0x80180000}};
   s21_decimal value_2 = {{0x81161645, 0x18041CA8, 0x0, 0x0}};
   int code = 0;
@@ -38024,7 +39081,8 @@ START_TEST(s21_is_equal_3800) {
 }
 
 START_TEST(s21_is_equal_3801) {
-  char *example = "( -8.5768196810576984 == 1937574956598042909772713214 ) = False";
+  char *example =
+      "( -8.5768196810576984 == 1937574956598042909772713214 ) = False";
   s21_decimal value_1 = {{0x77EB9458, 0x130B5B8, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x12A18CFE, 0xDD672769, 0x642B974, 0x0}};
   int code = 0;
@@ -38054,7 +39112,8 @@ START_TEST(s21_is_equal_3803) {
 }
 
 START_TEST(s21_is_equal_3804) {
-  char *example = "( 0.92015467495048937529386 == 1204313095899538676060453010 ) = False";
+  char *example =
+      "( 0.92015467495048937529386 == 1204313095899538676060453010 ) = False";
   s21_decimal value_1 = {{0xF688E02A, 0x2B2207E7, 0x137C, 0x170000}};
   s21_decimal value_2 = {{0x740AF892, 0xBF10DEDA, 0x3E42F37, 0x0}};
   int code = 0;
@@ -38064,7 +39123,8 @@ START_TEST(s21_is_equal_3804) {
 }
 
 START_TEST(s21_is_equal_3805) {
-  char *example = "( 140156999166001282 == -1.5960273181130305264537126 ) = False";
+  char *example =
+      "( 140156999166001282 == -1.5960273181130305264537126 ) = False";
   s21_decimal value_1 = {{0x54130082, 0x1F1F00C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x57FDCE26, 0x248FFE92, 0xD33B8, 0x80190000}};
   int code = 0;
@@ -38124,7 +39184,8 @@ START_TEST(s21_is_equal_3810) {
 }
 
 START_TEST(s21_is_equal_3811) {
-  char *example = "( -437.65080081834519527263036 == 1366116272359251346 ) = False";
+  char *example =
+      "( -437.65080081834519527263036 == 1366116272359251346 ) = False";
   s21_decimal value_1 = {{0x79298B3C, 0xBEC48868, 0x24339D, 0x80170000}};
   s21_decimal value_2 = {{0xFFDA9D92, 0x12F56B82, 0x0, 0x0}};
   int code = 0;
@@ -38194,7 +39255,8 @@ START_TEST(s21_is_equal_3817) {
 }
 
 START_TEST(s21_is_equal_3818) {
-  char *example = "( -760.931777615356369 == 1443481992139902432588804255 ) = False";
+  char *example =
+      "( -760.931777615356369 == 1443481992139902432588804255 ) = False";
   s21_decimal value_1 = {{0x8F11E1D1, 0xA8F5F6B, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xDECB309F, 0x9751A0E7, 0x4AA0533, 0x0}};
   int code = 0;
@@ -38204,7 +39266,8 @@ START_TEST(s21_is_equal_3818) {
 }
 
 START_TEST(s21_is_equal_3819) {
-  char *example = "( 1914597598334729158486604017 == 1216889806007058920 ) = False";
+  char *example =
+      "( 1914597598334729158486604017 == 1216889806007058920 ) = False";
   s21_decimal value_1 = {{0x544738F1, 0xC70A6124, 0x62FB7CF, 0x0}};
   s21_decimal value_2 = {{0xC9D841E8, 0x10E342D4, 0x0, 0x0}};
   int code = 0;
@@ -38254,7 +39317,8 @@ START_TEST(s21_is_equal_3823) {
 }
 
 START_TEST(s21_is_equal_3824) {
-  char *example = "( 0.42693753027285076033702004 == 1272818499135744579868740 ) = False";
+  char *example =
+      "( 0.42693753027285076033702004 == 1272818499135744579868740 ) = False";
   s21_decimal value_1 = {{0x3EEC8874, 0xFD3B5DB1, 0x2350C0, 0x1A0000}};
   s21_decimal value_2 = {{0xB6EA1844, 0xA10C8287, 0x10D87, 0x0}};
   int code = 0;
@@ -38284,7 +39348,8 @@ START_TEST(s21_is_equal_3826) {
 }
 
 START_TEST(s21_is_equal_3827) {
-  char *example = "( 1756297862720855140121442312 == 1915822405014499 ) = False";
+  char *example =
+      "( 1756297862720855140121442312 == 1915822405014499 ) = False";
   s21_decimal value_1 = {{0x87CBF808, 0xEA287767, 0x5ACC689, 0x0}};
   s21_decimal value_2 = {{0x29E753E3, 0x6CE6E, 0x0, 0x0}};
   int code = 0;
@@ -38314,7 +39379,8 @@ START_TEST(s21_is_equal_3829) {
 }
 
 START_TEST(s21_is_equal_3830) {
-  char *example = "( -634.98701964024646612647630 == 1367129216832907646 ) = False";
+  char *example =
+      "( -634.98701964024646612647630 == 1367129216832907646 ) = False";
   s21_decimal value_1 = {{0x671D597B, 0x27315DDD, 0x540A3, 0x80160000}};
   s21_decimal value_2 = {{0x8362297E, 0x12F904C7, 0x0, 0x0}};
   int code = 0;
@@ -38394,7 +39460,8 @@ START_TEST(s21_is_equal_3837) {
 }
 
 START_TEST(s21_is_equal_3838) {
-  char *example = "( -9.80026066986618147244238 == 1223345064057409747378732850 ) = False";
+  char *example =
+      "( -9.80026066986618147244238 == 1223345064057409747378732850 ) = False";
   s21_decimal value_1 = {{0xA80708CE, 0x51CDC3B0, 0xCF87, 0x80170000}};
   s21_decimal value_2 = {{0x74C77F32, 0xCEB9D5AB, 0x3F3ED64, 0x0}};
   int code = 0;
@@ -38424,7 +39491,8 @@ START_TEST(s21_is_equal_3840) {
 }
 
 START_TEST(s21_is_equal_3841) {
-  char *example = "( 139820070123512904 == 1883626965821734594472862962 ) = False";
+  char *example =
+      "( 139820070123512904 == 1883626965821734594472862962 ) = False";
   s21_decimal value_1 = {{0xEC2EA448, 0x1F0BD9C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x256864F2, 0x6CC05C32, 0x6161986, 0x0}};
   int code = 0;
@@ -38514,7 +39582,8 @@ START_TEST(s21_is_equal_3849) {
 }
 
 START_TEST(s21_is_equal_3850) {
-  char *example = "( 10396530179410748013 == 1375517591566979791307999227 ) = False";
+  char *example =
+      "( 10396530179410748013 == 1375517591566979791307999227 ) = False";
   s21_decimal value_1 = {{0x7067E26D, 0x9047E51D, 0x0, 0x0}};
   s21_decimal value_2 = {{0x87B907FB, 0xDAEBACB, 0x471CD2E, 0x0}};
   int code = 0;
@@ -38534,7 +39603,9 @@ START_TEST(s21_is_equal_3851) {
 }
 
 START_TEST(s21_is_equal_3852) {
-  char *example = "( 0.50642597972383316994080965 == 1441620910967101480980897902 ) = False";
+  char *example =
+      "( 0.50642597972383316994080965 == 1441620910967101480980897902 ) = "
+      "False";
   s21_decimal value_1 = {{0xAE66C0C5, 0xBCB27B10, 0x29E3FC, 0x1A0000}};
   s21_decimal value_2 = {{0xBD96E06E, 0x2DB5A917, 0x4A87B1A, 0x0}};
   int code = 0;
@@ -38574,7 +39645,8 @@ START_TEST(s21_is_equal_3855) {
 }
 
 START_TEST(s21_is_equal_3856) {
-  char *example = "( 2.8010427500745143E-10 == 178493119052638343125852128 ) = False";
+  char *example =
+      "( 2.8010427500745143E-10 == 178493119052638343125852128 ) = False";
   s21_decimal value_1 = {{0xDD3051B7, 0x638355, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xCB30DFE0, 0x5F5E1315, 0x93A563, 0x0}};
   int code = 0;
@@ -38774,7 +39846,9 @@ START_TEST(s21_is_equal_3875) {
 }
 
 START_TEST(s21_is_equal_3876) {
-  char *example = "( 1335339305507930640577849193 == 1080082317228821250315417975 ) = False";
+  char *example =
+      "( 1335339305507930640577849193 == 1080082317228821250315417975 ) = "
+      "False";
   s21_decimal value_1 = {{0xCD31E769, 0xCD45FC7C, 0x4509118, 0x0}};
   s21_decimal value_2 = {{0xCC307977, 0xBD79600D, 0x37D6C53, 0x0}};
   int code = 0;
@@ -38784,7 +39858,8 @@ START_TEST(s21_is_equal_3876) {
 }
 
 START_TEST(s21_is_equal_3877) {
-  char *example = "( 1047066642674944078145479675 == 1205323635682920866105111 ) = False";
+  char *example =
+      "( 1047066642674944078145479675 == 1205323635682920866105111 ) = False";
   s21_decimal value_1 = {{0xCA2563FB, 0x6FAEFD7A, 0x3621CFC, 0x0}};
   s21_decimal value_2 = {{0xBA4DC717, 0xB9A7DF4C, 0xFF3C, 0x0}};
   int code = 0;
@@ -38794,7 +39869,8 @@ START_TEST(s21_is_equal_3877) {
 }
 
 START_TEST(s21_is_equal_3878) {
-  char *example = "( 1534433957999269408786588 == 1570145952601287460269773022 ) = False";
+  char *example =
+      "( 1534433957999269408786588 == 1570145952601287460269773022 ) = False";
   s21_decimal value_1 = {{0xA715C89C, 0xD4DFCCCC, 0x144ED, 0x0}};
   s21_decimal value_2 = {{0x5BC6D0DE, 0xA57FD641, 0x512CB56, 0x0}};
   int code = 0;
@@ -38844,7 +39920,8 @@ START_TEST(s21_is_equal_3882) {
 }
 
 START_TEST(s21_is_equal_3883) {
-  char *example = "( 8.37645050977E-10 == 1687929731293414816043710438 ) = False";
+  char *example =
+      "( 8.37645050977E-10 == 1687929731293414816043710438 ) = False";
   s21_decimal value_1 = {{0x7892461, 0xC3, 0x0, 0x150000}};
   s21_decimal value_2 = {{0x4E4B37E6, 0x15642B34, 0x5743906, 0x0}};
   int code = 0;
@@ -38914,7 +39991,8 @@ START_TEST(s21_is_equal_3889) {
 }
 
 START_TEST(s21_is_equal_3890) {
-  char *example = "( -75.1696484434406282 == 1330185824960824229598025452 ) = False";
+  char *example =
+      "( -75.1696484434406282 == 1330185824960824229598025452 ) = False";
   s21_decimal value_1 = {{0x4D9F6B8A, 0xA6E8FF8, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xEE4756EC, 0xFC4D95A, 0x44C4DCE, 0x0}};
   int code = 0;
@@ -38934,7 +40012,8 @@ START_TEST(s21_is_equal_3891) {
 }
 
 START_TEST(s21_is_equal_3892) {
-  char *example = "( 1960872711014598028481003168 == 116146745055052520066944 ) = False";
+  char *example =
+      "( 1960872711014598028481003168 == 116146745055052520066944 ) = False";
   s21_decimal value_1 = {{0x3DC3FEA0, 0xA9982F21, 0x655FEF2, 0x0}};
   s21_decimal value_2 = {{0xC7198F80, 0x53E1E7BD, 0x1898, 0x0}};
   int code = 0;
@@ -38944,7 +40023,9 @@ START_TEST(s21_is_equal_3892) {
 }
 
 START_TEST(s21_is_equal_3893) {
-  char *example = "( 1318781544873245263701648739 == -33669.022788129542231499048 ) = False";
+  char *example =
+      "( 1318781544873245263701648739 == -33669.022788129542231499048 ) = "
+      "False";
   s21_decimal value_1 = {{0x995AA563, 0xCC9CD5C7, 0x442DEDA, 0x0}};
   s21_decimal value_2 = {{0x856B2128, 0x61F33BCD, 0x1BD9B1, 0x80150000}};
   int code = 0;
@@ -38954,7 +40035,9 @@ START_TEST(s21_is_equal_3893) {
 }
 
 START_TEST(s21_is_equal_3894) {
-  char *example = "( -990.46809764125904822514242 == 1870606609707413729230922616 ) = False";
+  char *example =
+      "( -990.46809764125904822514242 == 1870606609707413729230922616 ) = "
+      "False";
   s21_decimal value_1 = {{0x7F62B242, 0x50F28FA5, 0x51EDFA, 0x80170000}};
   s21_decimal value_2 = {{0x29AF2378, 0x816A289E, 0x60B545B, 0x0}};
   int code = 0;
@@ -39004,7 +40087,9 @@ START_TEST(s21_is_equal_3898) {
 }
 
 START_TEST(s21_is_equal_3899) {
-  char *example = "( 1376647705892221196936953876 == 1281229387877123009083220690 ) = False";
+  char *example =
+      "( 1376647705892221196936953876 == 1281229387877123009083220690 ) = "
+      "False";
   s21_decimal value_1 = {{0x91444014, 0xAC7C9F8A, 0x472BC7D, 0x0}};
   s21_decimal value_2 = {{0x970622D2, 0x4A183F63, 0x423CEE0, 0x0}};
   int code = 0;
@@ -39024,7 +40109,8 @@ START_TEST(s21_is_equal_3900) {
 }
 
 START_TEST(s21_is_equal_3901) {
-  char *example = "( 130885465875256953538640 == 1520424461043400627839841725 ) = False";
+  char *example =
+      "( 130885465875256953538640 == 1520424461043400627839841725 ) = False";
   s21_decimal value_1 = {{0xAA500850, 0x50B8F8A0, 0x1BB7, 0x0}};
   s21_decimal value_2 = {{0x358035BD, 0x302BC4CD, 0x4E9AA67, 0x0}};
   int code = 0;
@@ -39034,7 +40120,8 @@ START_TEST(s21_is_equal_3901) {
 }
 
 START_TEST(s21_is_equal_3902) {
-  char *example = "( -2.9057007331332417676734109 == 13761605250349727662752 ) = False";
+  char *example =
+      "( -2.9057007331332417676734109 == 13761605250349727662752 ) = False";
   s21_decimal value_1 = {{0x748D6E9D, 0x861307F7, 0x18090F, 0x80190000}};
   s21_decimal value_2 = {{0x6616C2A0, 0x4A33715, 0x2EA, 0x0}};
   int code = 0;
@@ -39064,7 +40151,9 @@ START_TEST(s21_is_equal_3904) {
 }
 
 START_TEST(s21_is_equal_3905) {
-  char *example = "( 1289202217540738868623260395 == -8141302.6669160149136301743 ) = False";
+  char *example =
+      "( 1289202217540738868623260395 == -8141302.6669160149136301743 ) = "
+      "False";
   s21_decimal value_1 = {{0xB8D3AEB, 0x4064EC0D, 0x42A6730, 0x0}};
   s21_decimal value_2 = {{0x5465DEAF, 0x4E81343, 0x4357E1, 0x80130000}};
   int code = 0;
@@ -39094,7 +40183,9 @@ START_TEST(s21_is_equal_3907) {
 }
 
 START_TEST(s21_is_equal_3908) {
-  char *example = "( 1871590237030974823528239507 == 1586259166911549332732665631 ) = False";
+  char *example =
+      "( 1871590237030974823528239507 == 1586259166911549332732665631 ) = "
+      "False";
   s21_decimal value_1 = {{0xD4B59193, 0xCB16A84, 0x60C24A6, 0x0}};
   s21_decimal value_2 = {{0x157E5F1F, 0xBE995928, 0x5201F71, 0x0}};
   int code = 0;
@@ -39124,7 +40215,8 @@ START_TEST(s21_is_equal_3910) {
 }
 
 START_TEST(s21_is_equal_3911) {
-  char *example = "( 1409070297588033408785569926 == 108747303796830690505 ) = False";
+  char *example =
+      "( 1409070297588033408785569926 == 108747303796830690505 ) = False";
   s21_decimal value_1 = {{0x427DD886, 0xE4387FB0, 0x48D8E3D, 0x0}};
   s21_decimal value_2 = {{0xA394DCC9, 0xE52C08A2, 0x5, 0x0}};
   int code = 0;
@@ -39134,7 +40226,8 @@ START_TEST(s21_is_equal_3911) {
 }
 
 START_TEST(s21_is_equal_3912) {
-  char *example = "( 1689483516275679307582356904 == 192583956586312012 ) = False";
+  char *example =
+      "( 1689483516275679307582356904 == 192583956586312012 ) = False";
   s21_decimal value_1 = {{0x46CF3DA8, 0xEFAC931A, 0x575820C, 0x0}};
   s21_decimal value_2 = {{0x91C4314C, 0x2AC3216, 0x0, 0x0}};
   int code = 0;
@@ -39194,7 +40287,8 @@ START_TEST(s21_is_equal_3917) {
 }
 
 START_TEST(s21_is_equal_3918) {
-  char *example = "( 7.6016307088027658E-10 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 7.6016307088027658E-10 == -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xB51E700A, 0x10E106D, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -39214,7 +40308,8 @@ START_TEST(s21_is_equal_3919) {
 }
 
 START_TEST(s21_is_equal_3920) {
-  char *example = "( 1490811866430476896905592277 == -5.835724051663210420840 ) = False";
+  char *example =
+      "( 1490811866430476896905592277 == -5.835724051663210420840 ) = False";
   s21_decimal value_1 = {{0x9339FDD5, 0x37B1A91C, 0x4D12BB1, 0x0}};
   s21_decimal value_2 = {{0x82E602A4, 0xA2B1AA99, 0x1F, 0x80140000}};
   int code = 0;
@@ -39284,7 +40379,8 @@ START_TEST(s21_is_equal_3926) {
 }
 
 START_TEST(s21_is_equal_3927) {
-  char *example = "( 1480644026865256887759118926 == 124425857336335960186929 ) = False";
+  char *example =
+      "( 1480644026865256887759118926 == 124425857336335960186929 ) = False";
   s21_decimal value_1 = {{0xECFFA24E, 0x87BE745B, 0x4C8C291, 0x0}};
   s21_decimal value_2 = {{0xA8752031, 0x23A55AF3, 0x1A59, 0x0}};
   int code = 0;
@@ -39314,7 +40410,8 @@ START_TEST(s21_is_equal_3929) {
 }
 
 START_TEST(s21_is_equal_3930) {
-  char *example = "( -324.3320203454626 == 1056780008604794669764354252 ) = False";
+  char *example =
+      "( -324.3320203454626 == 1056780008604794669764354252 ) = False";
   s21_decimal value_1 = {{0x549EA8A2, 0xB85C8, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xE7FAA0CC, 0xEF52A43, 0x36A25DF, 0x0}};
   int code = 0;
@@ -39344,7 +40441,8 @@ START_TEST(s21_is_equal_3932) {
 }
 
 START_TEST(s21_is_equal_3933) {
-  char *example = "( 0.4390691601764152 == -9.5456338479361003837882359 ) = False";
+  char *example =
+      "( 0.4390691601764152 == -9.5456338479361003837882359 ) = False";
   s21_decimal value_1 = {{0x8D3DCF38, 0xF994F, 0x0, 0x100000}};
   s21_decimal value_2 = {{0x5EF67FF7, 0x7A53D621, 0x4EF5AA, 0x80190000}};
   int code = 0;
@@ -39364,7 +40462,8 @@ START_TEST(s21_is_equal_3934) {
 }
 
 START_TEST(s21_is_equal_3935) {
-  char *example = "( -592.72999295037 == 1690489391341567047264058668 ) = False";
+  char *example =
+      "( -592.72999295037 == 1690489391341567047264058668 ) = False";
   s21_decimal value_1 = {{0x9211583D, 0x35E8, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x3A833D2C, 0x8866517F, 0x576570D, 0x0}};
   int code = 0;
@@ -39384,7 +40483,8 @@ START_TEST(s21_is_equal_3936) {
 }
 
 START_TEST(s21_is_equal_3937) {
-  char *example = "( -630.380178272273761690 == 1100162032267842281208292649 ) = False";
+  char *example =
+      "( -630.380178272273761690 == 1100162032267842281208292649 ) = False";
   s21_decimal value_1 = {{0x60A11A29, 0x6AD40739, 0x3, 0x80110000}};
   s21_decimal value_2 = {{0x55002529, 0x4606EBDE, 0x38E085F, 0x0}};
   int code = 0;
@@ -39394,7 +40494,8 @@ START_TEST(s21_is_equal_3937) {
 }
 
 START_TEST(s21_is_equal_3938) {
-  char *example = "( 8.0734753478636334E-10 == 107501171635546195691408 ) = False";
+  char *example =
+      "( 8.0734753478636334E-10 == 107501171635546195691408 ) = False";
   s21_decimal value_1 = {{0x9E1F732E, 0x11ED3D4, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x55670790, 0xA672F4E9, 0x16C3, 0x0}};
   int code = 0;
@@ -39414,7 +40515,8 @@ START_TEST(s21_is_equal_3939) {
 }
 
 START_TEST(s21_is_equal_3940) {
-  char *example = "( -2.7680619851905676644699701 == 1945805665937004335 ) = False";
+  char *example =
+      "( -2.7680619851905676644699701 == 1945805665937004335 ) = False";
   s21_decimal value_1 = {{0x1957CE35, 0x68B18AC0, 0x16E599, 0x80190000}};
   s21_decimal value_2 = {{0xA01E172F, 0x1B00E3F1, 0x0, 0x0}};
   int code = 0;
@@ -39434,7 +40536,8 @@ START_TEST(s21_is_equal_3941) {
 }
 
 START_TEST(s21_is_equal_3942) {
-  char *example = "( 144698417634677101261604 == 11324364855996228222524 ) = False";
+  char *example =
+      "( 144698417634677101261604 == 11324364855996228222524 ) = False";
   s21_decimal value_1 = {{0x4F297324, 0x1DEFA1AA, 0x1EA4, 0x0}};
   s21_decimal value_2 = {{0xDCCABE3C, 0xE521ED78, 0x265, 0x0}};
   int code = 0;
@@ -39474,7 +40577,8 @@ START_TEST(s21_is_equal_3945) {
 }
 
 START_TEST(s21_is_equal_3946) {
-  char *example = "( -8135.2333596473032875012576 == 9.8584409106193280E-10 ) = False";
+  char *example =
+      "( -8135.2333596473032875012576 == 9.8584409106193280E-10 ) = False";
   s21_decimal value_1 = {{0xF4B171E0, 0xD7528802, 0x434B06, 0x80160000}};
   s21_decimal value_2 = {{0x248442C0, 0x230633, 0x0, 0x190000}};
   int code = 0;
@@ -39504,7 +40608,8 @@ START_TEST(s21_is_equal_3948) {
 }
 
 START_TEST(s21_is_equal_3949) {
-  char *example = "( 1057600496866253056446137 == 1751515476508021607863300715 ) = False";
+  char *example =
+      "( 1057600496866253056446137 == 1751515476508021607863300715 ) = False";
   s21_decimal value_1 = {{0x74F0EB9, 0xA347EC46, 0xDFF4, 0x0}};
   s21_decimal value_2 = {{0x43BA326B, 0x3D14D368, 0x5A8D1D4, 0x0}};
   int code = 0;
@@ -39524,7 +40629,8 @@ START_TEST(s21_is_equal_3950) {
 }
 
 START_TEST(s21_is_equal_3951) {
-  char *example = "( -324.46192895803659664963789 == -2.04034330924722 ) = False";
+  char *example =
+      "( -324.46192895803659664963789 == -2.04034330924722 ) = False";
   s21_decimal value_1 = {{0x309338CD, 0xA42DEBDA, 0x1AD6BF, 0x80170000}};
   s21_decimal value_2 = {{0x71D116B2, 0xB991, 0x0, 0x800E0000}};
   int code = 0;
@@ -39544,7 +40650,8 @@ START_TEST(s21_is_equal_3952) {
 }
 
 START_TEST(s21_is_equal_3953) {
-  char *example = "( 1225316895118532064806371 == -4.5664235660314991298725497 ) = False";
+  char *example =
+      "( 1225316895118532064806371 == -4.5664235660314991298725497 ) = False";
   s21_decimal value_1 = {{0xE2A785E3, 0x8FDE2728, 0x10378, 0x0}};
   s21_decimal value_2 = {{0xD505C679, 0x2CE65EE5, 0x25C5C7, 0x80190000}};
   int code = 0;
@@ -39554,7 +40661,9 @@ START_TEST(s21_is_equal_3953) {
 }
 
 START_TEST(s21_is_equal_3954) {
-  char *example = "( 1373400566176282482092516864 == 1820353521543918828370311306 ) = False";
+  char *example =
+      "( 1373400566176282482092516864 == 1820353521543918828370311306 ) = "
+      "False";
   s21_decimal value_1 = {{0x3357A600, 0xE086D4D4, 0x4700CE1, 0x0}};
   s21_decimal value_2 = {{0x28CCB88A, 0x2331BE27, 0x5E1C2DA, 0x0}};
   int code = 0;
@@ -39574,7 +40683,8 @@ START_TEST(s21_is_equal_3955) {
 }
 
 START_TEST(s21_is_equal_3956) {
-  char *example = "( 0.213994571203065025225 == 17309289558052844325402926 ) = False";
+  char *example =
+      "( 0.213994571203065025225 == 17309289558052844325402926 ) = False";
   s21_decimal value_1 = {{0xA4BA12C9, 0x99C570B7, 0xB, 0x150000}};
   s21_decimal value_2 = {{0x4FED792E, 0x77973688, 0xE5162, 0x0}};
   int code = 0;
@@ -39584,7 +40694,9 @@ START_TEST(s21_is_equal_3956) {
 }
 
 START_TEST(s21_is_equal_3957) {
-  char *example = "( 1072165730675233818187464997 == 1195947259296220609417041876 ) = False";
+  char *example =
+      "( 1072165730675233818187464997 == 1195947259296220609417041876 ) = "
+      "False";
   s21_decimal value_1 = {{0x81AD0125, 0xB91F097A, 0x376DFEC, 0x0}};
   s21_decimal value_2 = {{0x967FD7D4, 0xD5D9A70A, 0x3DD43AE, 0x0}};
   int code = 0;
@@ -39614,7 +40726,8 @@ START_TEST(s21_is_equal_3959) {
 }
 
 START_TEST(s21_is_equal_3960) {
-  char *example = "( 119512040716168293060112 == -7.0268226766936682019523956 ) = False";
+  char *example =
+      "( 119512040716168293060112 == -7.0268226766936682019523956 ) = False";
   s21_decimal value_1 = {{0xF0190E10, 0xC2BDD56C, 0x194E, 0x0}};
   s21_decimal value_2 = {{0x2CC58D74, 0x34B3F392, 0x3A1FE0, 0x80190000}};
   int code = 0;
@@ -39724,7 +40837,8 @@ START_TEST(s21_is_equal_3970) {
 }
 
 START_TEST(s21_is_equal_3971) {
-  char *example = "( 1665024201386058752751727031 == 15009339981582092147463 ) = False";
+  char *example =
+      "( 1665024201386058752751727031 == 15009339981582092147463 ) = False";
   s21_decimal value_1 = {{0x51B671B7, 0xD1B62183, 0x5614696, 0x0}};
   s21_decimal value_2 = {{0x84AB1B07, 0xA86F765B, 0x32D, 0x0}};
   int code = 0;
@@ -39834,7 +40948,8 @@ START_TEST(s21_is_equal_3981) {
 }
 
 START_TEST(s21_is_equal_3982) {
-  char *example = "( -35.893970139681695575157360 == 163961530508573957954882405 ) = False";
+  char *example =
+      "( -35.893970139681695575157360 == 163961530508573957954882405 ) = False";
   s21_decimal value_1 = {{0x97D75DD8, 0x9A1E2B9E, 0x2F815, 0x80170000}};
   s21_decimal value_2 = {{0xC0924B65, 0x610AE058, 0x87A034, 0x0}};
   int code = 0;
@@ -39844,7 +40959,8 @@ START_TEST(s21_is_equal_3982) {
 }
 
 START_TEST(s21_is_equal_3983) {
-  char *example = "( 19576700729518863216028212 == 1073614251302261737 ) = False";
+  char *example =
+      "( 19576700729518863216028212 == 1073614251302261737 ) = False";
   s21_decimal value_1 = {{0xB602A34, 0x12B38BA0, 0x103187, 0x0}};
   s21_decimal value_2 = {{0x2AAB13E9, 0xEE63E79, 0x0, 0x0}};
   int code = 0;
@@ -39874,7 +40990,9 @@ START_TEST(s21_is_equal_3985) {
 }
 
 START_TEST(s21_is_equal_3986) {
-  char *example = "( 1436492109882178504303912743 == -8.8375253744171192258514735 ) = False";
+  char *example =
+      "( 1436492109882178504303912743 == -8.8375253744171192258514735 ) = "
+      "False";
   s21_decimal value_1 = {{0x36992727, 0x508B6866, 0x4A43D09, 0x0}};
   s21_decimal value_2 = {{0x90D9CF2F, 0x1AEC61D6, 0x491A30, 0x80190000}};
   int code = 0;
@@ -40004,7 +41122,8 @@ START_TEST(s21_is_equal_3998) {
 }
 
 START_TEST(s21_is_equal_3999) {
-  char *example = "( 1780904688776779684971247916 == 164380720050117810 ) = False";
+  char *example =
+      "( 1780904688776779684971247916 == 164380720050117810 ) = False";
   s21_decimal value_1 = {{0x7D33792C, 0xA0C936D1, 0x5C1213C, 0x0}};
   s21_decimal value_2 = {{0xDA829CB2, 0x247FF64, 0x0, 0x0}};
   int code = 0;
@@ -40064,7 +41183,8 @@ START_TEST(s21_is_equal_4004) {
 }
 
 START_TEST(s21_is_equal_4005) {
-  char *example = "( 1903007985514302440795548141 == -4.43532464352842562 ) = False";
+  char *example =
+      "( 1903007985514302440795548141 == -4.43532464352842562 ) = False";
   s21_decimal value_1 = {{0x47E029ED, 0x9B8B3F70, 0x626219D, 0x0}};
   s21_decimal value_2 = {{0x281AD342, 0x627BE6D, 0x0, 0x80110000}};
   int code = 0;
@@ -40084,7 +41204,8 @@ START_TEST(s21_is_equal_4006) {
 }
 
 START_TEST(s21_is_equal_4007) {
-  char *example = "( -6.0224345769512397460610406 == -5.363988046774101883 ) = False";
+  char *example =
+      "( -6.0224345769512397460610406 == -5.363988046774101883 ) = False";
   s21_decimal value_1 = {{0xEAAA1D66, 0x53742863, 0x31D100, 0x80190000}};
   s21_decimal value_2 = {{0x7B69677B, 0x4A70B6B5, 0x0, 0x80120000}};
   int code = 0;
@@ -40164,7 +41285,8 @@ START_TEST(s21_is_equal_4014) {
 }
 
 START_TEST(s21_is_equal_4015) {
-  char *example = "( 14144771996780075219 == 1216843999123554000765663095 ) = False";
+  char *example =
+      "( 14144771996780075219 == 1216843999123554000765663095 ) = False";
   s21_decimal value_1 = {{0x58F818D3, 0xC44C5330, 0x0, 0x0}};
   s21_decimal value_2 = {{0x96533777, 0x5F0C8E18, 0x3EE8CBD, 0x0}};
   int code = 0;
@@ -40174,7 +41296,8 @@ START_TEST(s21_is_equal_4015) {
 }
 
 START_TEST(s21_is_equal_4016) {
-  char *example = "( 0.1178280569054736258 == 1034119065335415191279073055 ) = False";
+  char *example =
+      "( 0.1178280569054736258 == 1034119065335415191279073055 ) = False";
   s21_decimal value_1 = {{0x4C40AF82, 0x105A17EF, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x2739771F, 0xDCBD84BB, 0x357673A, 0x0}};
   int code = 0;
@@ -40194,7 +41317,9 @@ START_TEST(s21_is_equal_4017) {
 }
 
 START_TEST(s21_is_equal_4018) {
-  char *example = "( -8.4867492468098547275433215 == 1711753276096300424868803595 ) = False";
+  char *example =
+      "( -8.4867492468098547275433215 == 1711753276096300424868803595 ) = "
+      "False";
   s21_decimal value_1 = {{0x8E4A84FF, 0xFC40E985, 0x463363, 0x80190000}};
   s21_decimal value_2 = {{0x4376340B, 0x8FEE5A5, 0x587EDDB, 0x0}};
   int code = 0;
@@ -40254,7 +41379,8 @@ START_TEST(s21_is_equal_4023) {
 }
 
 START_TEST(s21_is_equal_4024) {
-  char *example = "( 1858718828242531529649158265 == -9.19374756647502 ) = False";
+  char *example =
+      "( 1858718828242531529649158265 == -9.19374756647502 ) = False";
   s21_decimal value_1 = {{0x75C1F879, 0x94BD47D6, 0x6017F05, 0x0}};
   s21_decimal value_2 = {{0x9DC9124E, 0x3442A, 0x0, 0x800E0000}};
   int code = 0;
@@ -40394,7 +41520,9 @@ START_TEST(s21_is_equal_4037) {
 }
 
 START_TEST(s21_is_equal_4038) {
-  char *example = "( 1787197016935753007915149603 == 1453324125283585755710132249 ) = False";
+  char *example =
+      "( 1787197016935753007915149603 == 1453324125283585755710132249 ) = "
+      "False";
   s21_decimal value_1 = {{0xC4A92923, 0x6BCB19A8, 0x5C655B0, 0x0}};
   s21_decimal value_2 = {{0x53CA9019, 0xB2A9C49F, 0x4B2295A, 0x0}};
   int code = 0;
@@ -40414,7 +41542,8 @@ START_TEST(s21_is_equal_4039) {
 }
 
 START_TEST(s21_is_equal_4040) {
-  char *example = "( -98.6821600347002067948 == 0.64872286855843962067739191 ) = False";
+  char *example =
+      "( -98.6821600347002067948 == 0.64872286855843962067739191 ) = False";
   s21_decimal value_1 = {{0x558D5BEC, 0x7EE6991C, 0x35, 0x80130000}};
   s21_decimal value_2 = {{0x20EDE237, 0xB797D3A8, 0x35A93D, 0x1A0000}};
   int code = 0;
@@ -40434,7 +41563,9 @@ START_TEST(s21_is_equal_4041) {
 }
 
 START_TEST(s21_is_equal_4042) {
-  char *example = "( 1216879017776381554783357561 == 1821442196098537077321706932 ) = False";
+  char *example =
+      "( 1216879017776381554783357561 == 1821442196098537077321706932 ) = "
+      "False";
   s21_decimal value_1 = {{0x640B0A79, 0xBC7B77FB, 0x3EE9427, 0x0}};
   s21_decimal value_2 = {{0xE8C72DB4, 0x4DA7B273, 0x5E2A963, 0x0}};
   int code = 0;
@@ -40444,7 +41575,8 @@ START_TEST(s21_is_equal_4042) {
 }
 
 START_TEST(s21_is_equal_4043) {
-  char *example = "( 19901608232931116690673 == 170855922690699682582 ) = False";
+  char *example =
+      "( 19901608232931116690673 == 170855922690699682582 ) = False";
   s21_decimal value_1 = {{0x80BBACF1, 0xDE4BCC9C, 0x436, 0x0}};
   s21_decimal value_2 = {{0x26C1E316, 0x431A2C74, 0x9, 0x0}};
   int code = 0;
@@ -40464,7 +41596,8 @@ START_TEST(s21_is_equal_4044) {
 }
 
 START_TEST(s21_is_equal_4045) {
-  char *example = "( 19857736276468020843 == 1270340837934055615593091666 ) = False";
+  char *example =
+      "( 19857736276468020843 == 1270340837934055615593091666 ) = False";
   s21_decimal value_1 = {{0xC243B66B, 0x1394D9EE, 0x1, 0x0}};
   s21_decimal value_2 = {{0xDC569252, 0xD07335AC, 0x41ACD22, 0x0}};
   int code = 0;
@@ -40714,7 +41847,8 @@ START_TEST(s21_is_equal_4069) {
 }
 
 START_TEST(s21_is_equal_4070) {
-  char *example = "( 2.099535675216476E-11 == 1650864264940811078292485369 ) = False";
+  char *example =
+      "( 2.099535675216476E-11 == 1650864264940811078292485369 ) = False";
   s21_decimal value_1 = {{0x3E1D525C, 0x77584, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x978034F9, 0x205A275C, 0x555901B, 0x0}};
   int code = 0;
@@ -40724,7 +41858,8 @@ START_TEST(s21_is_equal_4070) {
 }
 
 START_TEST(s21_is_equal_4071) {
-  char *example = "( 1109157596943749026947226967 == -72.5663592809768225 ) = False";
+  char *example =
+      "( 1109157596943749026947226967 == -72.5663592809768225 ) = False";
   s21_decimal value_1 = {{0x163F5D57, 0xCFCF8CC3, 0x3957941, 0x0}};
   s21_decimal value_2 = {{0x63DC2521, 0xA121331, 0x0, 0x80100000}};
   int code = 0;
@@ -40784,7 +41919,8 @@ START_TEST(s21_is_equal_4076) {
 }
 
 START_TEST(s21_is_equal_4077) {
-  char *example = "( -3.6244934467551120573704359 == 1763924120261861014 ) = False";
+  char *example =
+      "( -3.6244934467551120573704359 == 1763924120261861014 ) = False";
   s21_decimal value_1 = {{0xE379A8A7, 0xD5A618BB, 0x1DFB29, 0x80190000}};
   s21_decimal value_2 = {{0x46F39E96, 0x187AB7A4, 0x0, 0x0}};
   int code = 0;
@@ -40854,7 +41990,9 @@ START_TEST(s21_is_equal_4083) {
 }
 
 START_TEST(s21_is_equal_4084) {
-  char *example = "( 0.08565512696714820298359769 == 1187578242364474859745045611 ) = False";
+  char *example =
+      "( 0.08565512696714820298359769 == 1187578242364474859745045611 ) = "
+      "False";
   s21_decimal value_1 = {{0x34C243D9, 0x5FAB8EE0, 0x715D1, 0x1A0000}};
   s21_decimal value_2 = {{0x9571EC6B, 0x84B6205A, 0x3D65779, 0x0}};
   int code = 0;
@@ -40934,7 +42072,8 @@ START_TEST(s21_is_equal_4091) {
 }
 
 START_TEST(s21_is_equal_4092) {
-  char *example = "( 1264344458634275413176938 == 0.472166847439069987004 ) = False";
+  char *example =
+      "( 1264344458634275413176938 == 0.472166847439069987004 ) = False";
   s21_decimal value_1 = {{0xB032326A, 0x401CE7D5, 0x10BBC, 0x0}};
   s21_decimal value_2 = {{0x41D340BC, 0x98A19E19, 0x19, 0x150000}};
   int code = 0;
@@ -40944,7 +42083,8 @@ START_TEST(s21_is_equal_4092) {
 }
 
 START_TEST(s21_is_equal_4093) {
-  char *example = "( -8165.2182141753705753191 == -37018.858777360868831336172 ) = False";
+  char *example =
+      "( -8165.2182141753705753191 == -37018.858777360868831336172 ) = False";
   s21_decimal value_1 = {{0x83B5EA67, 0x5FA8661F, 0x114A, 0x80130000}};
   s21_decimal value_2 = {{0x626316EC, 0x5AFFE9F8, 0x1E9F0C, 0x80150000}};
   int code = 0;
@@ -41004,7 +42144,8 @@ START_TEST(s21_is_equal_4098) {
 }
 
 START_TEST(s21_is_equal_4099) {
-  char *example = "( -67.568205284238366536750935 == 166127934022950390834968630 ) = False";
+  char *example =
+      "( -67.568205284238366536750935 == 166127934022950390834968630 ) = False";
   s21_decimal value_1 = {{0xF609D757, 0xBF7D505D, 0x37E41F, 0x80180000}};
   s21_decimal value_2 = {{0xD364B836, 0x595233F6, 0x896AF5, 0x0}};
   int code = 0;
@@ -41074,7 +42215,8 @@ START_TEST(s21_is_equal_4105) {
 }
 
 START_TEST(s21_is_equal_4106) {
-  char *example = "( 147099017095892675208561970 == 127210156958450075 ) = False";
+  char *example =
+      "( 147099017095892675208561970 == 127210156958450075 ) = False";
   s21_decimal value_1 = {{0xF2E24532, 0xB1FEAFC7, 0x79AD6D, 0x0}};
   s21_decimal value_2 = {{0xB954819B, 0x1C3F0F6, 0x0, 0x0}};
   int code = 0;
@@ -41124,7 +42266,8 @@ START_TEST(s21_is_equal_4110) {
 }
 
 START_TEST(s21_is_equal_4111) {
-  char *example = "( 0.040455924937968 == 1543393109164370200704829046 ) = False";
+  char *example =
+      "( 0.040455924937968 == 1543393109164370200704829046 ) = False";
   s21_decimal value_1 = {{0x6108F4F0, 0x24CB, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0x10DFC676, 0x1906B15A, 0x4FCAA34, 0x0}};
   int code = 0;
@@ -41224,7 +42367,9 @@ START_TEST(s21_is_equal_4120) {
 }
 
 START_TEST(s21_is_equal_4121) {
-  char *example = "( -44.071473237272159896854670 == -45.282008410574104426845972 ) = False";
+  char *example =
+      "( -44.071473237272159896854670 == -45.282008410574104426845972 ) = "
+      "False";
   s21_decimal value_1 = {{0xA3FCFCDB, 0xEF657EA4, 0x3A53F, 0x80170000}};
   s21_decimal value_2 = {{0xC4B61714, 0x983BCE52, 0x2574D6, 0x80180000}};
   int code = 0;
@@ -41234,7 +42379,9 @@ START_TEST(s21_is_equal_4121) {
 }
 
 START_TEST(s21_is_equal_4122) {
-  char *example = "( 1319134808585966156844378230 == 0.06620357747006785612204551 ) = False";
+  char *example =
+      "( 1319134808585966156844378230 == 0.06620357747006785612204551 ) = "
+      "False";
   s21_decimal value_1 = {{0xD77C2876, 0x43753E10, 0x44329A9, 0x0}};
   s21_decimal value_2 = {{0x152CCA07, 0x50065808, 0x579EA, 0x1A0000}};
   int code = 0;
@@ -41334,7 +42481,9 @@ START_TEST(s21_is_equal_4131) {
 }
 
 START_TEST(s21_is_equal_4132) {
-  char *example = "( 79228162514264337593543950335 == 1723273468274057361351924797 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 1723273468274057361351924797 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xDDE65C3D, 0xE78B3982, 0x5917559, 0x0}};
   int code = 0;
@@ -41384,7 +42533,8 @@ START_TEST(s21_is_equal_4136) {
 }
 
 START_TEST(s21_is_equal_4137) {
-  char *example = "( 1804404066899758121364107674 == -25.51385891560588066 ) = False";
+  char *example =
+      "( 1804404066899758121364107674 == -25.51385891560588066 ) = False";
   s21_decimal value_1 = {{0x8FF6319A, 0x77FE065D, 0x5D4916C, 0x0}};
   s21_decimal value_2 = {{0x57698322, 0x236857F3, 0x0, 0x80110000}};
   int code = 0;
@@ -41594,7 +42744,9 @@ START_TEST(s21_is_equal_4157) {
 }
 
 START_TEST(s21_is_equal_4158) {
-  char *example = "( 1158252376705311386711822414 == 1090680133629332606237500087 ) = False";
+  char *example =
+      "( 1158252376705311386711822414 == 1090680133629332606237500087 ) = "
+      "False";
   s21_decimal value_1 = {{0x6B5F104E, 0x27D02683, 0x3BE157B, 0x0}};
   s21_decimal value_2 = {{0x9A4F62B7, 0x84B4E360, 0x3863080, 0x0}};
   int code = 0;
@@ -41624,7 +42776,9 @@ START_TEST(s21_is_equal_4160) {
 }
 
 START_TEST(s21_is_equal_4161) {
-  char *example = "( 1662679616094183926758408480 == 1742723255090323644639381916 ) = False";
+  char *example =
+      "( 1662679616094183926758408480 == 1742723255090323644639381916 ) = "
+      "False";
   s21_decimal value_1 = {{0xCAFC8120, 0x9888929F, 0x55F561A, 0x0}};
   s21_decimal value_2 = {{0x5A08899C, 0xF5E320A5, 0x5A18C00, 0x0}};
   int code = 0;
@@ -41724,7 +42878,9 @@ START_TEST(s21_is_equal_4170) {
 }
 
 START_TEST(s21_is_equal_4171) {
-  char *example = "( 1757176870859714137456846325 == 1774544476862286328527766963 ) = False";
+  char *example =
+      "( 1757176870859714137456846325 == 1774544476862286328527766963 ) = "
+      "False";
   s21_decimal value_1 = {{0xE45725F5, 0xA972AF1, 0x5AD80AD, 0x0}};
   s21_decimal value_2 = {{0xE282C5B3, 0xD96C860E, 0x5BBDE68, 0x0}};
   int code = 0;
@@ -41784,7 +42940,9 @@ START_TEST(s21_is_equal_4176) {
 }
 
 START_TEST(s21_is_equal_4177) {
-  char *example = "( -6778597.3696807191155546980 == 1370250336166583559357512062 ) = False";
+  char *example =
+      "( -6778597.3696807191155546980 == 1370250336166583559357512062 ) = "
+      "False";
   s21_decimal value_1 = {{0x7BA58F8A, 0x7FEE5885, 0x59B6C, 0x80120000}};
   s21_decimal value_2 = {{0xE6CB97E, 0x90E80194, 0x46D71CB, 0x0}};
   int code = 0;
@@ -41894,7 +43052,8 @@ START_TEST(s21_is_equal_4187) {
 }
 
 START_TEST(s21_is_equal_4188) {
-  char *example = "( 0.3144085947081774181892790 == 1910481835720377504244451618 ) = False";
+  char *example =
+      "( 0.3144085947081774181892790 == 1910481835720377504244451618 ) = False";
   s21_decimal value_1 = {{0x93A7F9DF, 0x1FC326F5, 0x4294, 0x180000}};
   s21_decimal value_2 = {{0x78784922, 0xD6CFAD37, 0x62C5043, 0x0}};
   int code = 0;
@@ -41914,7 +43073,8 @@ START_TEST(s21_is_equal_4189) {
 }
 
 START_TEST(s21_is_equal_4190) {
-  char *example = "( 8.9774816361805747E-10 == 1305631069170277371591780599 ) = False";
+  char *example =
+      "( 8.9774816361805747E-10 == 1305631069170277371591780599 ) = False";
   s21_decimal value_1 = {{0x470577B3, 0x13EF1B8, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x9A57E8F7, 0x153C2ADB, 0x437FE22, 0x0}};
   int code = 0;
@@ -41994,7 +43154,8 @@ START_TEST(s21_is_equal_4197) {
 }
 
 START_TEST(s21_is_equal_4198) {
-  char *example = "( 0.04167816648505260420401402 == 8.116683837052078E-11 ) = False";
+  char *example =
+      "( 0.04167816648505260420401402 == 8.116683837052078E-11 ) = False";
   s21_decimal value_1 = {{0x7F7488FA, 0xCB11E089, 0x37291, 0x1A0000}};
   s21_decimal value_2 = {{0xB8DC94AE, 0x1CD614, 0x0, 0x1A0000}};
   int code = 0;
@@ -42214,7 +43375,8 @@ START_TEST(s21_is_equal_4219) {
 }
 
 START_TEST(s21_is_equal_4220) {
-  char *example = "( 13811756643877015467219 == 1196604901445065512274730571 ) = False";
+  char *example =
+      "( 13811756643877015467219 == 1196604901445065512274730571 ) = False";
   s21_decimal value_1 = {{0x7EE734D3, 0xBCA0C1C8, 0x2EC, 0x0}};
   s21_decimal value_2 = {{0x415D9E4B, 0xB00B9C0B, 0x3DDCEF1, 0x0}};
   int code = 0;
@@ -42224,7 +43386,8 @@ START_TEST(s21_is_equal_4220) {
 }
 
 START_TEST(s21_is_equal_4221) {
-  char *example = "( 165131586386112682326 == 192703185939492732322092455 ) = False";
+  char *example =
+      "( 165131586386112682326 == 192703185939492732322092455 ) = False";
   s21_decimal value_1 = {{0xDCFA1956, 0xF3A93EE9, 0x8, 0x0}};
   s21_decimal value_2 = {{0xA3C295A7, 0xA45BAC14, 0x9F667C, 0x0}};
   int code = 0;
@@ -42244,7 +43407,9 @@ START_TEST(s21_is_equal_4222) {
 }
 
 START_TEST(s21_is_equal_4223) {
-  char *example = "( 1947420167201936384640794413 == 1086172266045186141761572896 ) = False";
+  char *example =
+      "( 1947420167201936384640794413 == 1086172266045186141761572896 ) = "
+      "False";
   s21_decimal value_1 = {{0x5579BF2D, 0xCD16472D, 0x64ADE42, 0x0}};
   s21_decimal value_2 = {{0xF7E01020, 0x86E8783C, 0x38275EC, 0x0}};
   int code = 0;
@@ -42254,7 +43419,9 @@ START_TEST(s21_is_equal_4223) {
 }
 
 START_TEST(s21_is_equal_4224) {
-  char *example = "( -661.39793901702536504841840 == -5.8695355320680861224114543 ) = False";
+  char *example =
+      "( -661.39793901702536504841840 == -5.8695355320680861224114543 ) = "
+      "False";
   s21_decimal value_1 = {{0x494EDBD8, 0x8A8AC330, 0x57890, 0x80160000}};
   s21_decimal value_2 = {{0x5193996F, 0x9671D6B2, 0x308D39, 0x80190000}};
   int code = 0;
@@ -42274,7 +43441,8 @@ START_TEST(s21_is_equal_4225) {
 }
 
 START_TEST(s21_is_equal_4226) {
-  char *example = "( 0.3553294299975203016412 == 0.20699992958394499120629836 ) = False";
+  char *example =
+      "( 0.3553294299975203016412 == 0.20699992958394499120629836 ) = False";
   s21_decimal value_1 = {{0xDA45CEDC, 0x9FDD43AA, 0xC0, 0x160000}};
   s21_decimal value_2 = {{0x3126084C, 0xDDE65CB8, 0x111F64, 0x1A0000}};
   int code = 0;
@@ -42294,7 +43462,8 @@ START_TEST(s21_is_equal_4227) {
 }
 
 START_TEST(s21_is_equal_4228) {
-  char *example = "( 1809382898463204662553590 == -15573863.631228387219340960 ) = False";
+  char *example =
+      "( 1809382898463204662553590 == -15573863.631228387219340960 ) = False";
   s21_decimal value_1 = {{0x2D83ABF6, 0xD7ED8ED4, 0x17F26, 0x0}};
   s21_decimal value_2 = {{0xABC23310, 0x157B71A1, 0x149CA, 0x80110000}};
   int code = 0;
@@ -42344,7 +43513,9 @@ START_TEST(s21_is_equal_4232) {
 }
 
 START_TEST(s21_is_equal_4233) {
-  char *example = "( 5891.88859897061471172705439 == 1737669550500106578167127082 ) = False";
+  char *example =
+      "( 5891.88859897061471172705439 == 1737669550500106578167127082 ) = "
+      "False";
   s21_decimal value_1 = {{0x51FC3C9F, 0x18612985, 0x1E75D98, 0x170000}};
   s21_decimal value_2 = {{0x4F74DC2A, 0x15F0D8B2, 0x59D5DD7, 0x0}};
   int code = 0;
@@ -42354,7 +43525,8 @@ START_TEST(s21_is_equal_4233) {
 }
 
 START_TEST(s21_is_equal_4234) {
-  char *example = "( -99434045.290722712024268767 == 13188811875070463437971 ) = False";
+  char *example =
+      "( -99434045.290722712024268767 == 13188811875070463437971 ) = False";
   s21_decimal value_1 = {{0x452C3FDF, 0x656AD1B1, 0x523FFA, 0x80120000}};
   s21_decimal value_2 = {{0x7487EC93, 0xF7885B0E, 0x2CA, 0x0}};
   int code = 0;
@@ -42384,7 +43556,9 @@ START_TEST(s21_is_equal_4236) {
 }
 
 START_TEST(s21_is_equal_4237) {
-  char *example = "( 1885585147042863282531826389 == 1269274082236975677483400367 ) = False";
+  char *example =
+      "( 1885585147042863282531826389 == 1269274082236975677483400367 ) = "
+      "False";
   s21_decimal value_1 = {{0x437AD5, 0xA43A3BFB, 0x617B82F, 0x0}};
   s21_decimal value_2 = {{0x7F163CAF, 0xDF3E4162, 0x419EB3D, 0x0}};
   int code = 0;
@@ -42394,7 +43568,9 @@ START_TEST(s21_is_equal_4237) {
 }
 
 START_TEST(s21_is_equal_4238) {
-  char *example = "( 1409531102677237493985514592 == 1372677695363965381608074927 ) = False";
+  char *example =
+      "( 1409531102677237493985514592 == 1372677695363965381608074927 ) = "
+      "False";
   s21_decimal value_1 = {{0x3A4D1460, 0x2F782CCE, 0x48DEFD2, 0x0}};
   s21_decimal value_2 = {{0x1AE5EEAF, 0xF8C7E822, 0x46F73CE, 0x0}};
   int code = 0;
@@ -42424,7 +43600,8 @@ START_TEST(s21_is_equal_4240) {
 }
 
 START_TEST(s21_is_equal_4241) {
-  char *example = "( 138560575490921888347157422 == 1243131119773219896572049136 ) = False";
+  char *example =
+      "( 138560575490921888347157422 == 1243131119773219896572049136 ) = False";
   s21_decimal value_1 = {{0x10173AE, 0xD9311150, 0x729D57, 0x0}};
   s21_decimal value_2 = {{0xAACCF6F0, 0x980E6F6, 0x4044B41, 0x0}};
   int code = 0;
@@ -42504,7 +43681,8 @@ START_TEST(s21_is_equal_4248) {
 }
 
 START_TEST(s21_is_equal_4249) {
-  char *example = "( -89.57514593913984 == -5069644.0818147277725429352 ) = False";
+  char *example =
+      "( -89.57514593913984 == -5069644.0818147277725429352 ) = False";
   s21_decimal value_1 = {{0xE370CC80, 0x1FD2CF, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xAFA6EE68, 0x904921C3, 0x29EF63, 0x80130000}};
   int code = 0;
@@ -42514,7 +43692,8 @@ START_TEST(s21_is_equal_4249) {
 }
 
 START_TEST(s21_is_equal_4250) {
-  char *example = "( 197051034959661995649 == -22.408115801564957481662220 ) = False";
+  char *example =
+      "( 197051034959661995649 == -22.408115801564957481662220 ) = False";
   s21_decimal value_1 = {{0x51BB9681, 0xAEA1E846, 0xA, 0x0}};
   s21_decimal value_2 = {{0x9500724E, 0xA3A06FC1, 0x1DA82, 0x80170000}};
   int code = 0;
@@ -42524,7 +43703,8 @@ START_TEST(s21_is_equal_4250) {
 }
 
 START_TEST(s21_is_equal_4251) {
-  char *example = "( -309.52961509378425085208452 == 17548052592703185458418011 ) = False";
+  char *example =
+      "( -309.52961509378425085208452 == 17548052592703185458418011 ) = False";
   s21_decimal value_1 = {{0xB2D7A784, 0x67D9C10E, 0x199A8B, 0x80170000}};
   s21_decimal value_2 = {{0x6A4DD15B, 0xD652683E, 0xE83F1, 0x0}};
   int code = 0;
@@ -42574,7 +43754,9 @@ START_TEST(s21_is_equal_4255) {
 }
 
 START_TEST(s21_is_equal_4256) {
-  char *example = "( 1141736428936760641686641113 == 1839796720207382829356985612 ) = False";
+  char *example =
+      "( 1141736428936760641686641113 == 1839796720207382829356985612 ) = "
+      "False";
   s21_decimal value_1 = {{0xA37C99D9, 0xD53C7731, 0x3B06C17, 0x0}};
   s21_decimal value_2 = {{0x3616AD0C, 0xC8D1124, 0x5F1D81C, 0x0}};
   int code = 0;
@@ -42684,7 +43866,8 @@ START_TEST(s21_is_equal_4266) {
 }
 
 START_TEST(s21_is_equal_4267) {
-  char *example = "( -964717.37868243399670 == 1217452511609405133732527423 ) = False";
+  char *example =
+      "( -964717.37868243399670 == 1217452511609405133732527423 ) = False";
   s21_decimal value_1 = {{0x3A1FF1FF, 0x85E1A572, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x1C893D3F, 0xE634C260, 0x3EF0D98, 0x0}};
   int code = 0;
@@ -42704,7 +43887,8 @@ START_TEST(s21_is_equal_4268) {
 }
 
 START_TEST(s21_is_equal_4269) {
-  char *example = "( -59939.81385820662683438389 == 160037422412363269566690899 ) = False";
+  char *example =
+      "( -59939.81385820662683438389 == 160037422412363269566690899 ) = False";
   s21_decimal value_1 = {{0x5C148D35, 0x61CBE172, 0x4F546, 0x80140000}};
   s21_decimal value_2 = {{0x34E8F653, 0xD8C6079, 0x84613E, 0x0}};
   int code = 0;
@@ -42714,7 +43898,8 @@ START_TEST(s21_is_equal_4269) {
 }
 
 START_TEST(s21_is_equal_4270) {
-  char *example = "( 173187535697804743 == 0.99112244199230778684791419 ) = False";
+  char *example =
+      "( 173187535697804743 == 0.99112244199230778684791419 ) = False";
   s21_decimal value_1 = {{0x68CAFDC7, 0x2674925, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA424DA7B, 0x86273908, 0x51FBD5, 0x1A0000}};
   int code = 0;
@@ -42774,7 +43959,9 @@ START_TEST(s21_is_equal_4275) {
 }
 
 START_TEST(s21_is_equal_4276) {
-  char *example = "( 0.38270191738638907910865509 == 1273309662272117543923302884 ) = False";
+  char *example =
+      "( 0.38270191738638907910865509 == 1273309662272117543923302884 ) = "
+      "False";
   s21_decimal value_1 = {{0xF1AB4265, 0x40502E2C, 0x1FA807, 0x1A0000}};
   s21_decimal value_2 = {{0x136B41E4, 0x1AA6FF85, 0x41D41CF, 0x0}};
   int code = 0;
@@ -42924,7 +44111,8 @@ START_TEST(s21_is_equal_4290) {
 }
 
 START_TEST(s21_is_equal_4291) {
-  char *example = "( 1351143713087531151275035422 == -64.021437897423 ) = False";
+  char *example =
+      "( 1351143713087531151275035422 == -64.021437897423 ) = False";
   s21_decimal value_1 = {{0x826B8B1E, 0x74175F0F, 0x45DA3CF, 0x0}};
   s21_decimal value_2 = {{0x27105ACF, 0x3A3A, 0x0, 0x800C0000}};
   int code = 0;
@@ -42944,7 +44132,9 @@ START_TEST(s21_is_equal_4292) {
 }
 
 START_TEST(s21_is_equal_4293) {
-  char *example = "( 1319072707591149553734632780 == 1578940910613641641138197329 ) = False";
+  char *example =
+      "( 1319072707591149553734632780 == 1578940910613641641138197329 ) = "
+      "False";
   s21_decimal value_1 = {{0x84A7C54C, 0xC3077D89, 0x4431C82, 0x0}};
   s21_decimal value_2 = {{0x2A661351, 0x4692CDBF, 0x51A11BE, 0x0}};
   int code = 0;
@@ -43054,7 +44244,8 @@ START_TEST(s21_is_equal_4303) {
 }
 
 START_TEST(s21_is_equal_4304) {
-  char *example = "( 1555629312413848641468109843 == 11904178466583603 ) = False";
+  char *example =
+      "( 1555629312413848641468109843 == 11904178466583603 ) = False";
   s21_decimal value_1 = {{0x857C1413, 0x14BB2AE, 0x506C952, 0x0}};
   s21_decimal value_2 = {{0x88D7F433, 0x2A4AC9, 0x0, 0x0}};
   int code = 0;
@@ -43124,7 +44315,8 @@ START_TEST(s21_is_equal_4310) {
 }
 
 START_TEST(s21_is_equal_4311) {
-  char *example = "( -653.55090376198796149955703 == 1953750989095602269 ) = False";
+  char *example =
+      "( -653.55090376198796149955703 == 1953750989095602269 ) = False";
   s21_decimal value_1 = {{0x4B7A9C77, 0x8C66C3B2, 0x360F7A, 0x80170000}};
   s21_decimal value_2 = {{0x549C885D, 0x1B1D1E2C, 0x0, 0x0}};
   int code = 0;
@@ -43134,7 +44326,8 @@ START_TEST(s21_is_equal_4311) {
 }
 
 START_TEST(s21_is_equal_4312) {
-  char *example = "( 5.602417855139E-10 == -95.368975620022289886638747 ) = False";
+  char *example =
+      "( 5.602417855139E-10 == -95.368975620022289886638747 ) = False";
   s21_decimal value_1 = {{0x6A204AA3, 0x518, 0x0, 0x160000}};
   s21_decimal value_2 = {{0x2060729B, 0x871A71D6, 0x4EE32A, 0x80180000}};
   int code = 0;
@@ -43164,7 +44357,9 @@ START_TEST(s21_is_equal_4314) {
 }
 
 START_TEST(s21_is_equal_4315) {
-  char *example = "( 1768376422245412805146563906 == 1194103471865369260930787046 ) = False";
+  char *example =
+      "( 1768376422245412805146563906 == 1194103471865369260930787046 ) = "
+      "False";
   s21_decimal value_1 = {{0x33EFD542, 0xF043918A, 0x5B6C445, 0x0}};
   s21_decimal value_2 = {{0x7AAE66E6, 0xEB1F4438, 0x3DBBD3E, 0x0}};
   int code = 0;
@@ -43214,7 +44409,8 @@ START_TEST(s21_is_equal_4319) {
 }
 
 START_TEST(s21_is_equal_4320) {
-  char *example = "( 1591768193016901250876627234 == 1961968018884179857 ) = False";
+  char *example =
+      "( 1591768193016901250876627234 == 1961968018884179857 ) = False";
   s21_decimal value_1 = {{0xC826D922, 0xA5EAB379, 0x524AE06, 0x0}};
   s21_decimal value_2 = {{0xAA44B791, 0x1B3A4F84, 0x0, 0x0}};
   int code = 0;
@@ -43224,7 +44420,8 @@ START_TEST(s21_is_equal_4320) {
 }
 
 START_TEST(s21_is_equal_4321) {
-  char *example = "( 629.234419341160392982977657 == -576.656133603277067103392 ) = False";
+  char *example =
+      "( 629.234419341160392982977657 == -576.656133603277067103392 ) = False";
   s21_decimal value_1 = {{0xEF1ADC79, 0x38FD6E56, 0x2087D92, 0x180000}};
   s21_decimal value_2 = {{0xD6A9ACA0, 0x9775D10A, 0x7A1C, 0x80150000}};
   int code = 0;
@@ -43254,7 +44451,8 @@ START_TEST(s21_is_equal_4323) {
 }
 
 START_TEST(s21_is_equal_4324) {
-  char *example = "( 55.38312169984974 == 1077763549422121090522580177 ) = False";
+  char *example =
+      "( 55.38312169984974 == 1077763549422121090522580177 ) = False";
   s21_decimal value_1 = {{0xC98C13CE, 0x13AD10, 0x0, 0xE0000}};
   s21_decimal value_2 = {{0xA2084D1, 0x15E08CA0, 0x37B814F, 0x0}};
   int code = 0;
@@ -43274,7 +44472,8 @@ START_TEST(s21_is_equal_4325) {
 }
 
 START_TEST(s21_is_equal_4326) {
-  char *example = "( 1514414379719696097108726447 == 13957752366722807 ) = False";
+  char *example =
+      "( 1514414379719696097108726447 == 13957752366722807 ) = False";
   s21_decimal value_1 = {{0x883292AF, 0x6DA571A, 0x4E4B1B8, 0x0}};
   s21_decimal value_2 = {{0x77AE6EF7, 0x319680, 0x0, 0x0}};
   int code = 0;
@@ -43314,7 +44513,8 @@ START_TEST(s21_is_equal_4329) {
 }
 
 START_TEST(s21_is_equal_4330) {
-  char *example = "( -5.3346909093479134261609928 == 12381442621353206068682982 ) = False";
+  char *example =
+      "( -5.3346909093479134261609928 == 12381442621353206068682982 ) = False";
   s21_decimal value_1 = {{0x96E705C8, 0xBC9A2151, 0x2C20A5, 0x80190000}};
   s21_decimal value_2 = {{0xCA8E20E6, 0x59742A41, 0xA3DDF, 0x0}};
   int code = 0;
@@ -43364,7 +44564,9 @@ START_TEST(s21_is_equal_4334) {
 }
 
 START_TEST(s21_is_equal_4335) {
-  char *example = "( 1128292377881834433152692901 == 1545445987522912450490140023 ) = False";
+  char *example =
+      "( 1128292377881834433152692901 == 1545445987522912450490140023 ) = "
+      "False";
   s21_decimal value_1 = {{0x838A32A5, 0x5D6B230F, 0x3A54D34, 0x0}};
   s21_decimal value_2 = {{0x6FC40577, 0xDB47FFD5, 0x4FE5CEA, 0x0}};
   int code = 0;
@@ -43394,7 +44596,8 @@ START_TEST(s21_is_equal_4337) {
 }
 
 START_TEST(s21_is_equal_4338) {
-  char *example = "( 1734535609775088844828779695 == 1327824759390319570035 ) = False";
+  char *example =
+      "( 1734535609775088844828779695 == 1327824759390319570035 ) = False";
   s21_decimal value_1 = {{0x9CA724AF, 0xD18E86A8, 0x59AC633, 0x0}};
   s21_decimal value_2 = {{0x64866C73, 0xFB452F8C, 0x47, 0x0}};
   int code = 0;
@@ -43484,7 +44687,8 @@ START_TEST(s21_is_equal_4346) {
 }
 
 START_TEST(s21_is_equal_4347) {
-  char *example = "( 1050158368599991651565810170 == -8291.0899307288445 ) = False";
+  char *example =
+      "( 1050158368599991651565810170 == -8291.0899307288445 ) = False";
   s21_decimal value_1 = {{0xCC47B1FA, 0x3C080240, 0x364ABAF, 0x0}};
   s21_decimal value_2 = {{0xD38177D, 0x1268F06, 0x0, 0x800D0000}};
   int code = 0;
@@ -43494,7 +44698,8 @@ START_TEST(s21_is_equal_4347) {
 }
 
 START_TEST(s21_is_equal_4348) {
-  char *example = "( 1065694167333544192445200727 == 94531.70439818847065 ) = False";
+  char *example =
+      "( 1065694167333544192445200727 == 94531.70439818847065 ) = False";
   s21_decimal value_1 = {{0x84933957, 0x9247CADB, 0x3718584, 0x0}};
   s21_decimal value_2 = {{0x12A02359, 0x8330686E, 0x0, 0xE0000}};
   int code = 0;
@@ -43514,7 +44719,9 @@ START_TEST(s21_is_equal_4349) {
 }
 
 START_TEST(s21_is_equal_4350) {
-  char *example = "( 1707012805539729475085695840 == 1561001645116739997317416760 ) = False";
+  char *example =
+      "( 1707012805539729475085695840 == 1561001645116739997317416760 ) = "
+      "False";
   s21_decimal value_1 = {{0x6D3E7B60, 0x9C809DCD, 0x5840205, 0x0}};
   s21_decimal value_2 = {{0xDC34738, 0xBE9453CE, 0x50B3AF4, 0x0}};
   int code = 0;
@@ -43584,7 +44791,9 @@ START_TEST(s21_is_equal_4356) {
 }
 
 START_TEST(s21_is_equal_4357) {
-  char *example = "( 1688621100083947115142450843 == 1720417016144968204574918376 ) = False";
+  char *example =
+      "( 1688621100083947115142450843 == 1720417016144968204574918376 ) = "
+      "False";
   s21_decimal value_1 = {{0xDF2C0E9B, 0x42C3637C, 0x574CB6D, 0x0}};
   s21_decimal value_2 = {{0x324A06E8, 0x53035EEC, 0x58F1879, 0x0}};
   int code = 0;
@@ -43634,7 +44843,8 @@ START_TEST(s21_is_equal_4361) {
 }
 
 START_TEST(s21_is_equal_4362) {
-  char *example = "( 12010170465418626 == 1099991593732819444367192832 ) = False";
+  char *example =
+      "( 12010170465418626 == 1099991593732819444367192832 ) = False";
   s21_decimal value_1 = {{0xB8487D82, 0x2AAB2F, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA1057300, 0xC83426A8, 0x38DE447, 0x0}};
   int code = 0;
@@ -43644,7 +44854,8 @@ START_TEST(s21_is_equal_4362) {
 }
 
 START_TEST(s21_is_equal_4363) {
-  char *example = "( 17487631276785797625472391 == 1823467127387654810878241331 ) = False";
+  char *example =
+      "( 17487631276785797625472391 == 1823467127387654810878241331 ) = False";
   s21_decimal value_1 = {{0x3532E587, 0x641EDB3B, 0xE7726, 0x0}};
   s21_decimal value_2 = {{0xC95A6A33, 0xC692D41, 0x5E4562F, 0x0}};
   int code = 0;
@@ -43674,7 +44885,9 @@ START_TEST(s21_is_equal_4365) {
 }
 
 START_TEST(s21_is_equal_4366) {
-  char *example = "( 1954325202335302724231639341 == 0.53621572860941261708571079 ) = False";
+  char *example =
+      "( 1954325202335302724231639341 == 0.53621572860941261708571079 ) = "
+      "False";
   s21_decimal value_1 = {{0xB214312D, 0x81792FC9, 0x6509475, 0x0}};
   s21_decimal value_2 = {{0x7F2DB1C7, 0x4A15DD1D, 0x2C5ACF, 0x1A0000}};
   int code = 0;
@@ -43694,7 +44907,8 @@ START_TEST(s21_is_equal_4367) {
 }
 
 START_TEST(s21_is_equal_4368) {
-  char *example = "( 1826051358426938082073465960 == -21.4969168026543389895 ) = False";
+  char *example =
+      "( 1826051358426938082073465960 == -21.4969168026543389895 ) = False";
   s21_decimal value_1 = {{0x44CB5468, 0x7E6B9E8A, 0x5E6796A, 0x0}};
   s21_decimal value_2 = {{0x5B60FCC7, 0xA74BE75D, 0xB, 0x80130000}};
   int code = 0;
@@ -43744,7 +44958,8 @@ START_TEST(s21_is_equal_4372) {
 }
 
 START_TEST(s21_is_equal_4373) {
-  char *example = "( 149641889113825029312012 == 1247523144538438838730703459 ) = False";
+  char *example =
+      "( 149641889113825029312012 == 1247523144538438838730703459 ) = False";
   s21_decimal value_1 = {{0xDE46CE0C, 0x1A626050, 0x1FB0, 0x0}};
   s21_decimal value_2 = {{0x9BF14263, 0x2D3DED14, 0x407ED4D, 0x0}};
   int code = 0;
@@ -43764,7 +44979,8 @@ START_TEST(s21_is_equal_4374) {
 }
 
 START_TEST(s21_is_equal_4375) {
-  char *example = "( -6.8840049516748627014 == 1740559831473280055172955403 ) = False";
+  char *example =
+      "( -6.8840049516748627014 == 1740559831473280055172955403 ) = False";
   s21_decimal value_1 = {{0x261A5C46, 0xBB58FC4E, 0x3, 0x80130000}};
   s21_decimal value_2 = {{0xA8D87D0B, 0x87FDD113, 0x59FC1E1, 0x0}};
   int code = 0;
@@ -43854,7 +45070,9 @@ START_TEST(s21_is_equal_4383) {
 }
 
 START_TEST(s21_is_equal_4384) {
-  char *example = "( -63.677184470177814052258448 == 1636406506656076247652715119 ) = False";
+  char *example =
+      "( -63.677184470177814052258448 == 1636406506656076247652715119 ) = "
+      "False";
   s21_decimal value_1 = {{0xBFDAC290, 0x1646B41B, 0x34AC2B, 0x80180000}};
   s21_decimal value_2 = {{0xD8514A6F, 0x7AB32F5F, 0x5499A8E, 0x0}};
   int code = 0;
@@ -43894,7 +45112,8 @@ START_TEST(s21_is_equal_4387) {
 }
 
 START_TEST(s21_is_equal_4388) {
-  char *example = "( 1198626118702218790896725384 == -6946.307488980005298640 ) = False";
+  char *example =
+      "( 1198626118702218790896725384 == -6946.307488980005298640 ) = False";
   s21_decimal value_1 = {{0xB58ED88, 0x1840ECF6, 0x3DF7AF4, 0x0}};
   s21_decimal value_2 = {{0xB0E269C8, 0xA7F029CF, 0x25, 0x80110000}};
   int code = 0;
@@ -43904,7 +45123,8 @@ START_TEST(s21_is_equal_4388) {
 }
 
 START_TEST(s21_is_equal_4389) {
-  char *example = "( -90.14068487799122124 == 1791269822995206633132087721 ) = False";
+  char *example =
+      "( -90.14068487799122124 == 1791269822995206633132087721 ) = False";
   s21_decimal value_1 = {{0xF44F28CC, 0x7D186787, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xBE2B59A9, 0xAE119F68, 0x5C9B423, 0x0}};
   int code = 0;
@@ -44024,7 +45244,8 @@ START_TEST(s21_is_equal_4400) {
 }
 
 START_TEST(s21_is_equal_4401) {
-  char *example = "( 1608127899705368446636053704 == 1476823885751316 ) = False";
+  char *example =
+      "( 1608127899705368446636053704 == 1476823885751316 ) = False";
   s21_decimal value_1 = {{0xFF0ED4C8, 0x1FEFFB86, 0x5323654, 0x0}};
   s21_decimal value_2 = {{0xDB1B2414, 0x53F29, 0x0, 0x0}};
   int code = 0;
@@ -44074,7 +45295,8 @@ START_TEST(s21_is_equal_4405) {
 }
 
 START_TEST(s21_is_equal_4406) {
-  char *example = "( -2.0513243599156016572200364 == -22.176918662847935608 ) = False";
+  char *example =
+      "( -2.0513243599156016572200364 == -22.176918662847935608 ) = False";
   s21_decimal value_1 = {{0x935EF5AC, 0x29EB49D4, 0x10F7D9, 0x80190000}};
   s21_decimal value_2 = {{0x87C83478, 0x33C43E06, 0x1, 0x80120000}};
   int code = 0;
@@ -44084,7 +45306,8 @@ START_TEST(s21_is_equal_4406) {
 }
 
 START_TEST(s21_is_equal_4407) {
-  char *example = "( -53374.9674314093962044 == 184945325055444346195363881 ) = False";
+  char *example =
+      "( -53374.9674314093962044 == 184945325055444346195363881 ) = False";
   s21_decimal value_1 = {{0x9802233C, 0xEF43C4DC, 0x1C, 0x80100000}};
   s21_decimal value_2 = {{0xD65B4829, 0x292AAEA0, 0x98FBB2, 0x0}};
   int code = 0;
@@ -44114,7 +45337,8 @@ START_TEST(s21_is_equal_4409) {
 }
 
 START_TEST(s21_is_equal_4410) {
-  char *example = "( 1913065351190205013421 == 158514520887259015433992 ) = False";
+  char *example =
+      "( 1913065351190205013421 == 158514520887259015433992 ) = False";
   s21_decimal value_1 = {{0x88159DAD, 0xB51D710D, 0x67, 0x0}};
   s21_decimal value_2 = {{0x472C4F08, 0x16E2A509, 0x2191, 0x0}};
   int code = 0;
@@ -44154,7 +45378,9 @@ START_TEST(s21_is_equal_4413) {
 }
 
 START_TEST(s21_is_equal_4414) {
-  char *example = "( -65113.580843095398520155006 == 1899750819123198108272560893 ) = False";
+  char *example =
+      "( -65113.580843095398520155006 == 1899750819123198108272560893 ) = "
+      "False";
   s21_decimal value_1 = {{0xB0BF6B7E, 0x4A58F280, 0x35DC56, 0x80150000}};
   s21_decimal value_2 = {{0xE1420AFD, 0x43837132, 0x6236FE2, 0x0}};
   int code = 0;
@@ -44244,7 +45470,9 @@ START_TEST(s21_is_equal_4422) {
 }
 
 START_TEST(s21_is_equal_4423) {
-  char *example = "( 1132897462184283504883794437 == -6139.5795722731918296694248 ) = False";
+  char *example =
+      "( 1132897462184283504883794437 == -6139.5795722731918296694248 ) = "
+      "False";
   s21_decimal value_1 = {{0x1FA80205, 0x7C347A2C, 0x3A91C5E, 0x0}};
   s21_decimal value_2 = {{0x6B553DE8, 0xC154FDB0, 0x32C910, 0x80160000}};
   int code = 0;
@@ -44264,7 +45492,8 @@ START_TEST(s21_is_equal_4424) {
 }
 
 START_TEST(s21_is_equal_4425) {
-  char *example = "( 134264593037243002 == 1970636994316616540143454069 ) = False";
+  char *example =
+      "( 134264593037243002 == 1970636994316616540143454069 ) = False";
   s21_decimal value_1 = {{0x9DE5B27A, 0x1DD00EF, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCF0B8775, 0x855AF2D6, 0x65E129D, 0x0}};
   int code = 0;
@@ -44304,7 +45533,8 @@ START_TEST(s21_is_equal_4428) {
 }
 
 START_TEST(s21_is_equal_4429) {
-  char *example = "( 16155372661559565819 == -90212365.430637322113265934 ) = False";
+  char *example =
+      "( 16155372661559565819 == -90212365.430637322113265934 ) = False";
   s21_decimal value_1 = {{0x42509DFB, 0xE03369D7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x83AA310E, 0x21165FE9, 0x4A9F36, 0x80120000}};
   int code = 0;
@@ -44324,7 +45554,8 @@ START_TEST(s21_is_equal_4430) {
 }
 
 START_TEST(s21_is_equal_4431) {
-  char *example = "( -603884.3307422377764681 == 1944549160141562804139311236 ) = False";
+  char *example =
+      "( -603884.3307422377764681 == 1944549160141562804139311236 ) = False";
   s21_decimal value_1 = {{0x3DEE749, 0x5DC938F0, 0x147, 0x80100000}};
   s21_decimal value_2 = {{0x71C1C084, 0x324EF4BC, 0x6487E4D, 0x0}};
   int code = 0;
@@ -44404,7 +45635,8 @@ START_TEST(s21_is_equal_4438) {
 }
 
 START_TEST(s21_is_equal_4439) {
-  char *example = "( 1237682956222511155063948211 == 1011266753346247 ) = False";
+  char *example =
+      "( 1237682956222511155063948211 == 1011266753346247 ) = False";
   s21_decimal value_1 = {{0x98D603B3, 0x7FCDF4FA, 0x3FFC98F, 0x0}};
   s21_decimal value_2 = {{0xE39B3AC7, 0x397BD, 0x0, 0x0}};
   int code = 0;
@@ -44434,7 +45666,8 @@ START_TEST(s21_is_equal_4441) {
 }
 
 START_TEST(s21_is_equal_4442) {
-  char *example = "( -9068.2859123617413900638399 == 5.4064686743051434E-10 ) = False";
+  char *example =
+      "( -9068.2859123617413900638399 == 5.4064686743051434E-10 ) = False";
   s21_decimal value_1 = {{0x686598BF, 0xA4B936E2, 0x4B02D7, 0x80160000}};
   s21_decimal value_2 = {{0xD0365CAA, 0xC0138B, 0x0, 0x1A0000}};
   int code = 0;
@@ -44544,7 +45777,8 @@ START_TEST(s21_is_equal_4452) {
 }
 
 START_TEST(s21_is_equal_4453) {
-  char *example = "( 114595145403914392442911 == 1933323970599635999060441517 ) = False";
+  char *example =
+      "( 114595145403914392442911 == 1933323970599635999060441517 ) = False";
   s21_decimal value_1 = {{0x2AFC181F, 0x371C99C2, 0x1844, 0x0}};
   s21_decimal value_2 = {{0x7050B9AD, 0x73BE396C, 0x63F3546, 0x0}};
   int code = 0;
@@ -44554,7 +45788,9 @@ START_TEST(s21_is_equal_4453) {
 }
 
 START_TEST(s21_is_equal_4454) {
-  char *example = "( -59.167300902429659308407960 == 1372193948861270591123503925 ) = False";
+  char *example =
+      "( -59.167300902429659308407960 == 1372193948861270591123503925 ) = "
+      "False";
   s21_decimal value_1 = {{0xE47112DC, 0x94B5606F, 0x4E4EA, 0x80170000}};
   s21_decimal value_2 = {{0xA8583B35, 0x576B609, 0x46F0D5F, 0x0}};
   int code = 0;
@@ -44704,7 +45940,8 @@ START_TEST(s21_is_equal_4468) {
 }
 
 START_TEST(s21_is_equal_4469) {
-  char *example = "( 106570029507966572 == 1113540523373227738704423681 ) = False";
+  char *example =
+      "( 106570029507966572 == 1113540523373227738704423681 ) = False";
   s21_decimal value_1 = {{0x9086766C, 0x17A9CE0, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2D98AB01, 0xBAC6BC30, 0x3991960, 0x0}};
   int code = 0;
@@ -44714,7 +45951,8 @@ START_TEST(s21_is_equal_4469) {
 }
 
 START_TEST(s21_is_equal_4470) {
-  char *example = "( -44.6014566703977703699298 == -6415904.5017340538385563967 ) = False";
+  char *example =
+      "( -44.6014566703977703699298 == -6415904.5017340538385563967 ) = False";
   s21_decimal value_1 = {{0xE60C7362, 0x7F8412D0, 0x5E72, 0x80160000}};
   s21_decimal value_2 = {{0xA8A3813F, 0xCCB3E202, 0x351234, 0x80130000}};
   int code = 0;
@@ -44814,7 +46052,8 @@ START_TEST(s21_is_equal_4479) {
 }
 
 START_TEST(s21_is_equal_4480) {
-  char *example = "( 187241179068055213000562 == -555.48748304797176944542823 ) = False";
+  char *example =
+      "( 187241179068055213000562 == -555.48748304797176944542823 ) = False";
   s21_decimal value_1 = {{0xC19B4772, 0x5D5A1C1C, 0x27A6, 0x0}};
   s21_decimal value_2 = {{0x22024467, 0xADF6B2F6, 0x2DF2E7, 0x80170000}};
   int code = 0;
@@ -45024,7 +46263,9 @@ START_TEST(s21_is_equal_4500) {
 }
 
 START_TEST(s21_is_equal_4501) {
-  char *example = "( 1301468968376661512456484294 == 1472429872056806783122481983 ) = False";
+  char *example =
+      "( 1301468968376661512456484294 == 1472429872056806783122481983 ) = "
+      "False";
   s21_decimal value_1 = {{0x8627B5C6, 0x25962455, 0x4348CC6, 0x0}};
   s21_decimal value_2 = {{0xDF99233F, 0x4E4AB05D, 0x4C1F727, 0x0}};
   int code = 0;
@@ -45044,7 +46285,9 @@ START_TEST(s21_is_equal_4502) {
 }
 
 START_TEST(s21_is_equal_4503) {
-  char *example = "( 1252737390697726382685510672 == 1898962307206571373064757353 ) = False";
+  char *example =
+      "( 1252737390697726382685510672 == 1898962307206571373064757353 ) = "
+      "False";
   s21_decimal value_1 = {{0x175B5C10, 0x704A8F1, 0x40C3D76, 0x0}};
   s21_decimal value_2 = {{0xBC762069, 0xF273585D, 0x622C8E8, 0x0}};
   int code = 0;
@@ -45064,7 +46307,9 @@ START_TEST(s21_is_equal_4504) {
 }
 
 START_TEST(s21_is_equal_4505) {
-  char *example = "( 0.45051155952262185058387347 == 0.04130750252049027889209587 ) = False";
+  char *example =
+      "( 0.45051155952262185058387347 == 0.04130750252049027889209587 ) = "
+      "False";
   s21_decimal value_1 = {{0x79DD4593, 0xECD6060, 0x2543F4, 0x1A0000}};
   s21_decimal value_2 = {{0x5D89A0F3, 0x6B7C29C7, 0x36AB8, 0x1A0000}};
   int code = 0;
@@ -45074,7 +46319,8 @@ START_TEST(s21_is_equal_4505) {
 }
 
 START_TEST(s21_is_equal_4506) {
-  char *example = "( 1550357962787642 == -3.0588029337493260112457973 ) = False";
+  char *example =
+      "( 1550357962787642 == -3.0588029337493260112457973 ) = False";
   s21_decimal value_1 = {{0xD7A58B3A, 0x5820A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x26EB70F5, 0x649ADD03, 0x194D44, 0x80190000}};
   int code = 0;
@@ -45124,7 +46370,9 @@ START_TEST(s21_is_equal_4510) {
 }
 
 START_TEST(s21_is_equal_4511) {
-  char *example = "( 1081252448466725465809990025 == 1435315489208568429177145438 ) = False";
+  char *example =
+      "( 1081252448466725465809990025 == 1435315489208568429177145438 ) = "
+      "False";
   s21_decimal value_1 = {{0x8ABBB189, 0xAE8044EF, 0x37E641C, 0x0}};
   s21_decimal value_2 = {{0xC45B085E, 0x9481838A, 0x4A343E0, 0x0}};
   int code = 0;
@@ -45184,7 +46432,8 @@ START_TEST(s21_is_equal_4516) {
 }
 
 START_TEST(s21_is_equal_4517) {
-  char *example = "( 1442648127665738176453864426 == -71.53377901289999600 ) = False";
+  char *example =
+      "( 1442648127665738176453864426 == -71.53377901289999600 ) = False";
   s21_decimal value_1 = {{0x928EEBEA, 0xB515FFD8, 0x4A9549F, 0x0}};
   s21_decimal value_2 = {{0xCF81549C, 0xFE2397, 0x0, 0x800F0000}};
   int code = 0;
@@ -45214,7 +46463,8 @@ START_TEST(s21_is_equal_4519) {
 }
 
 START_TEST(s21_is_equal_4520) {
-  char *example = "( 6.1974311934973970E-10 == 165833077579440752682509 ) = False";
+  char *example =
+      "( 6.1974311934973970E-10 == 165833077579440752682509 ) = False";
   s21_decimal value_1 = {{0xE4CEEF35, 0x160487, 0x0, 0x190000}};
   s21_decimal value_2 = {{0x4973E60D, 0xD4431D33, 0x231D, 0x0}};
   int code = 0;
@@ -45224,7 +46474,8 @@ START_TEST(s21_is_equal_4520) {
 }
 
 START_TEST(s21_is_equal_4521) {
-  char *example = "( -280867022.23431373005673216 == -91.78823119011896494165 ) = False";
+  char *example =
+      "( -280867022.23431373005673216 == -91.78823119011896494165 ) = False";
   s21_decimal value_1 = {{0xCDA65300, 0x2DAD94C1, 0x173B97, 0x80110000}};
   s21_decimal value_2 = {{0x8F1E0855, 0x95C27340, 0x1F1, 0x80140000}};
   int code = 0;
@@ -45294,7 +46545,8 @@ START_TEST(s21_is_equal_4527) {
 }
 
 START_TEST(s21_is_equal_4528) {
-  char *example = "( 1666723213416457757124766140 == 1008041540830380801093 ) = False";
+  char *example =
+      "( 1666723213416457757124766140 == 1008041540830380801093 ) = False";
   s21_decimal value_1 = {{0x6B74A9BC, 0x7226F9DF, 0x562AE5E, 0x0}};
   s21_decimal value_2 = {{0x6045BC45, 0xA562F88D, 0x36, 0x0}};
   int code = 0;
@@ -45324,7 +46576,8 @@ START_TEST(s21_is_equal_4530) {
 }
 
 START_TEST(s21_is_equal_4531) {
-  char *example = "( 1201154386004411879692091789 == 18533755463294531 ) = False";
+  char *example =
+      "( 1201154386004411879692091789 == 18533755463294531 ) = False";
   s21_decimal value_1 = {{0x6BDEC18D, 0xBD65174F, 0x3E19255, 0x0}};
   s21_decimal value_2 = {{0x36BE5E43, 0x41D85A, 0x0, 0x0}};
   int code = 0;
@@ -45434,7 +46687,8 @@ START_TEST(s21_is_equal_4541) {
 }
 
 START_TEST(s21_is_equal_4542) {
-  char *example = "( -2.9975720730936186474012319 == 1398711291626406877849273 ) = False";
+  char *example =
+      "( -2.9975720730936186474012319 == 1398711291626406877849273 ) = False";
   s21_decimal value_1 = {{0xADE31E9F, 0x13B0B363, 0x18CB9B, 0x80190000}};
   s21_decimal value_2 = {{0xA98FE6B9, 0x4A82742F, 0x12830, 0x0}};
   int code = 0;
@@ -45484,7 +46738,8 @@ START_TEST(s21_is_equal_4546) {
 }
 
 START_TEST(s21_is_equal_4547) {
-  char *example = "( 1735749454767560531020953631 == 185344554131519754128 ) = False";
+  char *example =
+      "( 1735749454767560531020953631 == 185344554131519754128 ) = False";
   s21_decimal value_1 = {{0xD795381F, 0x7CCB3941, 0x59BC73E, 0x0}};
   s21_decimal value_2 = {{0x2E64CF90, 0xC2C21FC, 0xA, 0x0}};
   int code = 0;
@@ -45604,7 +46859,9 @@ START_TEST(s21_is_equal_4558) {
 }
 
 START_TEST(s21_is_equal_4559) {
-  char *example = "( 1895579604720667386790474602 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1895579604720667386790474602 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xC1AAF36A, 0x47225C93, 0x61FFC98, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -45624,7 +46881,8 @@ START_TEST(s21_is_equal_4560) {
 }
 
 START_TEST(s21_is_equal_4561) {
-  char *example = "( -90.91813604496399613 == -7.6994937344234783226478062 ) = False";
+  char *example =
+      "( -90.91813604496399613 == -7.6994937344234783226478062 ) = False";
   s21_decimal value_1 = {{0x84125CFD, 0x7E2C9C4D, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x7D03DEE, 0xEABD401C, 0x3FB04F, 0x80190000}};
   int code = 0;
@@ -45634,7 +46892,8 @@ START_TEST(s21_is_equal_4561) {
 }
 
 START_TEST(s21_is_equal_4562) {
-  char *example = "( 1734407875856136931463788520 == 17475188622776450 ) = False";
+  char *example =
+      "( 1734407875856136931463788520 == 17475188622776450 ) = False";
   s21_decimal value_1 = {{0x6829F7E8, 0x59556B33, 0x59AAB27, 0x0}};
   s21_decimal value_2 = {{0x6A3E5882, 0x3E1597, 0x0, 0x0}};
   int code = 0;
@@ -45714,7 +46973,8 @@ START_TEST(s21_is_equal_4569) {
 }
 
 START_TEST(s21_is_equal_4570) {
-  char *example = "( 0.49814062965438398917 == 0.98414699497524547510690163 ) = False";
+  char *example =
+      "( 0.49814062965438398917 == 0.98414699497524547510690163 ) = False";
   s21_decimal value_1 = {{0x41E5C1C5, 0xB34F1A57, 0x2, 0x140000}};
   s21_decimal value_2 = {{0x58356173, 0x8CCBE570, 0x51681F, 0x1A0000}};
   int code = 0;
@@ -45724,7 +46984,8 @@ START_TEST(s21_is_equal_4570) {
 }
 
 START_TEST(s21_is_equal_4571) {
-  char *example = "( 155929426855610998 == -754.52216288235325419632354 ) = False";
+  char *example =
+      "( 155929426855610998 == -754.52216288235325419632354 ) = False";
   s21_decimal value_1 = {{0xD1C24A76, 0x229F8FC, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD13B36E2, 0xD7470710, 0x3E69A0, 0x80170000}};
   int code = 0;
@@ -45764,7 +47025,8 @@ START_TEST(s21_is_equal_4574) {
 }
 
 START_TEST(s21_is_equal_4575) {
-  char *example = "( 0.534556268676383303 == -5.2833615396279730859382163 ) = False";
+  char *example =
+      "( 0.534556268676383303 == -5.2833615396279730859382163 ) = False";
   s21_decimal value_1 = {{0x1AEA0247, 0x76B2018, 0x0, 0x120000}};
   s21_decimal value_2 = {{0x96B9593, 0x796D906, 0x2BB3F4, 0x80190000}};
   int code = 0;
@@ -45874,7 +47136,8 @@ START_TEST(s21_is_equal_4585) {
 }
 
 START_TEST(s21_is_equal_4586) {
-  char *example = "( -18.310808865555653306029636 == 188763339818396735860562600 ) = False";
+  char *example =
+      "( -18.310808865555653306029636 == 188763339818396735860562600 ) = False";
   s21_decimal value_1 = {{0x1C031644, 0xF0068FA1, 0xF2576, 0x80180000}};
   s21_decimal value_2 = {{0x329ADAA8, 0x27E4E2A6, 0x9C2431, 0x0}};
   int code = 0;
@@ -45924,7 +47187,9 @@ START_TEST(s21_is_equal_4590) {
 }
 
 START_TEST(s21_is_equal_4591) {
-  char *example = "( -6.8655510420920058939438213 == 1002085713956585400160811943 ) = False";
+  char *example =
+      "( -6.8655510420920058939438213 == 1002085713956585400160811943 ) = "
+      "False";
   s21_decimal value_1 = {{0x1883F485, 0xAD756EDB, 0x38CA5E, 0x80190000}};
   s21_decimal value_2 = {{0xB88CFBA7, 0x67882082, 0x33CE7E7, 0x0}};
   int code = 0;
@@ -46004,7 +47269,9 @@ START_TEST(s21_is_equal_4598) {
 }
 
 START_TEST(s21_is_equal_4599) {
-  char *example = "( 1304409597914816984562215093 == 1986843509673013849391740359 ) = False";
+  char *example =
+      "( 1304409597914816984562215093 == 1986843509673013849391740359 ) = "
+      "False";
   s21_decimal value_1 = {{0x792728B5, 0xFE56A1B5, 0x436FB79, 0x0}};
   s21_decimal value_2 = {{0xAA9DB5C7, 0x7A934FCA, 0x66B7A7A, 0x0}};
   int code = 0;
@@ -46144,7 +47411,8 @@ START_TEST(s21_is_equal_4612) {
 }
 
 START_TEST(s21_is_equal_4613) {
-  char *example = "( -879.5324406757351258 == -5.5232063386243284504960652 ) = False";
+  char *example =
+      "( -879.5324406757351258 == -5.5232063386243284504960652 ) = False";
   s21_decimal value_1 = {{0xC5185F5A, 0x7A0F44F2, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x13685E8C, 0x27DCAECE, 0x2DAFD8, 0x80190000}};
   int code = 0;
@@ -46154,7 +47422,8 @@ START_TEST(s21_is_equal_4613) {
 }
 
 START_TEST(s21_is_equal_4614) {
-  char *example = "( 17273135658842156857560 == 1476967712485399776912914336 ) = False";
+  char *example =
+      "( 17273135658842156857560 == 1476967712485399776912914336 ) = False";
   s21_decimal value_1 = {{0xD3AA78D8, 0x60E954B8, 0x3A8, 0x0}};
   s21_decimal value_2 = {{0x3D72B7A0, 0x20DD90B0, 0x4C5B814, 0x0}};
   int code = 0;
@@ -46194,7 +47463,8 @@ START_TEST(s21_is_equal_4617) {
 }
 
 START_TEST(s21_is_equal_4618) {
-  char *example = "( -143.94115342917850278309136 == -31.8418021026221012888 ) = False";
+  char *example =
+      "( -143.94115342917850278309136 == -31.8418021026221012888 ) = False";
   s21_decimal value_1 = {{0x6F26AD10, 0x8E690433, 0xBE812, 0x80170000}};
   s21_decimal value_2 = {{0x86C43798, 0x42F00F12, 0x11, 0x80130000}};
   int code = 0;
@@ -46324,7 +47594,8 @@ START_TEST(s21_is_equal_4630) {
 }
 
 START_TEST(s21_is_equal_4631) {
-  char *example = "( 134295761659281121908053 == 0.32075116796217121002832206 ) = False";
+  char *example =
+      "( 134295761659281121908053 == 0.32075116796217121002832206 ) = False";
   s21_decimal value_1 = {{0x17229555, 0x301573AD, 0x1C70, 0x0}};
   s21_decimal value_2 = {{0xF7A5414E, 0x90CF0B54, 0x1A882B, 0x1A0000}};
   int code = 0;
@@ -46374,7 +47645,8 @@ START_TEST(s21_is_equal_4635) {
 }
 
 START_TEST(s21_is_equal_4636) {
-  char *example = "( 0.60553908163676913181701513 == -4349.550536596373 ) = False";
+  char *example =
+      "( 0.60553908163676913181701513 == -4349.550536596373 ) = False";
   s21_decimal value_1 = {{0x6670B589, 0xF06DEC9E, 0x3216C9, 0x1A0000}};
   s21_decimal value_2 = {{0xA6AA9B95, 0xF73E4, 0x0, 0x800C0000}};
   int code = 0;
@@ -46484,7 +47756,9 @@ START_TEST(s21_is_equal_4646) {
 }
 
 START_TEST(s21_is_equal_4647) {
-  char *example = "( 1169907341102162746812923728 == 1468432373332582630922079194 ) = False";
+  char *example =
+      "( 1169907341102162746812923728 == 1468432373332582630922079194 ) = "
+      "False";
   s21_decimal value_1 = {{0x323FF50, 0xA9EC6F0, 0x3C7B984, 0x0}};
   s21_decimal value_2 = {{0xD5474BDA, 0x773C2675, 0x4BEA8A6, 0x0}};
   int code = 0;
@@ -46594,7 +47868,8 @@ START_TEST(s21_is_equal_4657) {
 }
 
 START_TEST(s21_is_equal_4658) {
-  char *example = "( 1695582278472779318875548197 == -5.445739145652553404103194 ) = False";
+  char *example =
+      "( 1695582278472779318875548197 == -5.445739145652553404103194 ) = False";
   s21_decimal value_1 = {{0x4126A25, 0x7F55F696, 0x57A8D83, 0x0}};
   s21_decimal value_2 = {{0x1913BA1A, 0x1C51F06E, 0x4812E, 0x80180000}};
   int code = 0;
@@ -46634,7 +47909,9 @@ START_TEST(s21_is_equal_4661) {
 }
 
 START_TEST(s21_is_equal_4662) {
-  char *example = "( 1307794034467567416258556985 == 1215251835555570747453995976 ) = False";
+  char *example =
+      "( 1307794034467567416258556985 == 1215251835555570747453995976 ) = "
+      "False";
   s21_decimal value_1 = {{0x2D2B7439, 0xAAAA9EDC, 0x439C828, 0x0}};
   s21_decimal value_2 = {{0x1AA3FBC8, 0x2E5B172, 0x3ED3B96, 0x0}};
   int code = 0;
@@ -46644,7 +47921,8 @@ START_TEST(s21_is_equal_4662) {
 }
 
 START_TEST(s21_is_equal_4663) {
-  char *example = "( -1.629799914247366776145 == -661.91402012848488688 ) = False";
+  char *example =
+      "( -1.629799914247366776145 == -661.91402012848488688 ) = False";
   s21_decimal value_1 = {{0x3C661551, 0x5A0472F5, 0x58, 0x80150000}};
   s21_decimal value_2 = {{0xE900F0, 0x9697196F, 0x3, 0x80110000}};
   int code = 0;
@@ -46814,7 +48092,9 @@ START_TEST(s21_is_equal_4679) {
 }
 
 START_TEST(s21_is_equal_4680) {
-  char *example = "( 1555515854326911262091093296 == 1197316362666963243673256166 ) = False";
+  char *example =
+      "( 1555515854326911262091093296 == 1197316362666963243673256166 ) = "
+      "False";
   s21_decimal value_1 = {{0xC87BA530, 0x6E0A43D7, 0x506B14B, 0x0}};
   s21_decimal value_2 = {{0x9F4B00E6, 0x13EA94EC, 0x3DE659A, 0x0}};
   int code = 0;
@@ -46834,7 +48114,9 @@ START_TEST(s21_is_equal_4681) {
 }
 
 START_TEST(s21_is_equal_4682) {
-  char *example = "( 1906912044376244778798396616 == -4.9969563296675652449900172 ) = False";
+  char *example =
+      "( 1906912044376244778798396616 == -4.9969563296675652449900172 ) = "
+      "False";
   s21_decimal value_1 = {{0x960FB4C8, 0x1004E9A4, 0x6295C55, 0x0}};
   s21_decimal value_2 = {{0xBB54968C, 0x7447C97B, 0x295577, 0x80190000}};
   int code = 0;
@@ -46844,7 +48126,9 @@ START_TEST(s21_is_equal_4682) {
 }
 
 START_TEST(s21_is_equal_4683) {
-  char *example = "( -5.6481366184843972929645816 == 7885.06491789041726876831633 ) = False";
+  char *example =
+      "( -5.6481366184843972929645816 == 7885.06491789041726876831633 ) = "
+      "False";
   s21_decimal value_1 = {{0x4EFECF8, 0xFF023C39, 0x2EB864, 0x80190000}};
   s21_decimal value_2 = {{0xCC804F91, 0x9221EC64, 0x28C3CBE, 0x170000}};
   int code = 0;
@@ -46854,7 +48138,8 @@ START_TEST(s21_is_equal_4683) {
 }
 
 START_TEST(s21_is_equal_4684) {
-  char *example = "( -9642146513.0536 == 1655628686098205646705555345 ) = False";
+  char *example =
+      "( -9642146513.0536 == 1655628686098205646705555345 ) = False";
   s21_decimal value_1 = {{0xDF2D8628, 0x57B1, 0x0, 0x80040000}};
   s21_decimal value_2 = {{0x744A7791, 0xEA339890, 0x5598102, 0x0}};
   int code = 0;
@@ -46994,7 +48279,8 @@ START_TEST(s21_is_equal_4697) {
 }
 
 START_TEST(s21_is_equal_4698) {
-  char *example = "( 1803514324688965117 == -8881.4492403107443204286092 ) = False";
+  char *example =
+      "( 1803514324688965117 == -8881.4492403107443204286092 ) = False";
   s21_decimal value_1 = {{0xE6A0DFD, 0x19075EB9, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6371E68C, 0x47D43E34, 0x497733, 0x80160000}};
   int code = 0;
@@ -47154,7 +48440,9 @@ START_TEST(s21_is_equal_4713) {
 }
 
 START_TEST(s21_is_equal_4714) {
-  char *example = "( 1266023154247856719889026053 == -3380.5905678012154735570079 ) = False";
+  char *example =
+      "( 1266023154247856719889026053 == -3380.5905678012154735570079 ) = "
+      "False";
   s21_decimal value_1 = {{0x84B5CC05, 0xB66E845F, 0x4173AD4, 0x0}};
   s21_decimal value_2 = {{0xF30D2C9F, 0xD1A68367, 0x1BF6AD, 0x80160000}};
   int code = 0;
@@ -47164,7 +48452,9 @@ START_TEST(s21_is_equal_4714) {
 }
 
 START_TEST(s21_is_equal_4715) {
-  char *example = "( 1024833049814131936628758258 == 1400722435617059271752371302 ) = False";
+  char *example =
+      "( 1024833049814131936628758258 == 1400722435617059271752371302 ) = "
+      "False";
   s21_decimal value_1 = {{0x43D2D6F2, 0xF3C1806F, 0x34FB8D6, 0x0}};
   s21_decimal value_2 = {{0x30554C66, 0x63237AFF, 0x486A683, 0x0}};
   int code = 0;
@@ -47294,7 +48584,8 @@ START_TEST(s21_is_equal_4727) {
 }
 
 START_TEST(s21_is_equal_4728) {
-  char *example = "( 0.68145768157721570057470094 == 107770785777069590 ) = False";
+  char *example =
+      "( 0.68145768157721570057470094 == 107770785777069590 ) = False";
   s21_decimal value_1 = {{0xB551408E, 0x7E7E4E16, 0x385E6D, 0x1A0000}};
   s21_decimal value_2 = {{0x6B682E16, 0x17EE0F5, 0x0, 0x0}};
   int code = 0;
@@ -47354,7 +48645,8 @@ START_TEST(s21_is_equal_4733) {
 }
 
 START_TEST(s21_is_equal_4734) {
-  char *example = "( 1618391379270225069541032342 == 129189270942830299521459 ) = False";
+  char *example =
+      "( 1618391379270225069541032342 == 129189270942830299521459 ) = False";
   s21_decimal value_1 = {{0x48D20196, 0x77822358, 0x53AB3B4, 0x0}};
   s21_decimal value_2 = {{0x55E521B3, 0x5D4A0869, 0x1B5B, 0x0}};
   int code = 0;
@@ -47434,7 +48726,8 @@ START_TEST(s21_is_equal_4741) {
 }
 
 START_TEST(s21_is_equal_4742) {
-  char *example = "( -7.6623454938006 == 1450091061977786674520751520 ) = False";
+  char *example =
+      "( -7.6623454938006 == 1450091061977786674520751520 ) = False";
   s21_decimal value_1 = {{0x49D02396, 0x45B0, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xB89F7DA0, 0xFC22D3E3, 0x4AF7CB9, 0x0}};
   int code = 0;
@@ -47584,7 +48877,8 @@ START_TEST(s21_is_equal_4756) {
 }
 
 START_TEST(s21_is_equal_4757) {
-  char *example = "( -32.17712619159021 == -6992.2842503809152589790176 ) = False";
+  char *example =
+      "( -32.17712619159021 == -6992.2842503809152589790176 ) = False";
   s21_decimal value_1 = {{0x19A77DED, 0xB6E7E, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x6DC7BE0, 0xE32FE556, 0x39D6BC, 0x80160000}};
   int code = 0;
@@ -47604,7 +48898,9 @@ START_TEST(s21_is_equal_4758) {
 }
 
 START_TEST(s21_is_equal_4759) {
-  char *example = "( -6.1667525578143712070528820 == 540316.362370342398033899171 ) = False";
+  char *example =
+      "( -6.1667525578143712070528820 == 540316.362370342398033899171 ) = "
+      "False";
   s21_decimal value_1 = {{0xEDE77E52, 0x5375ECD2, 0x519DC, 0x80180000}};
   s21_decimal value_2 = {{0x4FBAEA3, 0xB210D7FC, 0x1BEF070, 0x150000}};
   int code = 0;
@@ -47614,7 +48910,9 @@ START_TEST(s21_is_equal_4759) {
 }
 
 START_TEST(s21_is_equal_4760) {
-  char *example = "( 1063646837145127658758198976 == -2572.3963922439131230477540 ) = False";
+  char *example =
+      "( 1063646837145127658758198976 == -2572.3963922439131230477540 ) = "
+      "False";
   s21_decimal value_1 = {{0xCC11D6C0, 0x945A623F, 0x36FD3FA, 0x0}};
   s21_decimal value_2 = {{0x6132294A, 0xE34A05A2, 0x220B9, 0x80150000}};
   int code = 0;
@@ -47674,7 +48972,8 @@ START_TEST(s21_is_equal_4765) {
 }
 
 START_TEST(s21_is_equal_4766) {
-  char *example = "( 1416431143702082144681450991 == 10520508895678402191401509 ) = False";
+  char *example =
+      "( 1416431143702082144681450991 == 10520508895678402191401509 ) = False";
   s21_decimal value_1 = {{0x7D1DDDEF, 0x28AD6CDC, 0x493A4F6, 0x0}};
   s21_decimal value_2 = {{0x8D0BA225, 0xEE159E77, 0x8B3CD, 0x0}};
   int code = 0;
@@ -47704,7 +49003,9 @@ START_TEST(s21_is_equal_4768) {
 }
 
 START_TEST(s21_is_equal_4769) {
-  char *example = "( -86.085240196741696946578076 == 1312348505177610532689415543 ) = False";
+  char *example =
+      "( -86.085240196741696946578076 == 1312348505177610532689415543 ) = "
+      "False";
   s21_decimal value_1 = {{0xDDE2229C, 0x38D5CA7B, 0x473542, 0x80180000}};
   s21_decimal value_2 = {{0x9B160D77, 0x4C1E30F, 0x43D8C9B, 0x0}};
   int code = 0;
@@ -47764,7 +49065,8 @@ START_TEST(s21_is_equal_4774) {
 }
 
 START_TEST(s21_is_equal_4775) {
-  char *example = "( 10216455966952386702656 == 1213844806765839794888663798 ) = False";
+  char *example =
+      "( 10216455966952386702656 == 1213844806765839794888663798 ) = False";
   s21_decimal value_1 = {{0xF0F3AD40, 0xD5CEDCD6, 0x229, 0x0}};
   s21_decimal value_2 = {{0x3A8A62F6, 0xD3E9F32B, 0x3EC11A2, 0x0}};
   int code = 0;
@@ -47914,7 +49216,8 @@ START_TEST(s21_is_equal_4789) {
 }
 
 START_TEST(s21_is_equal_4790) {
-  char *example = "( -10549803032.8543606618886 == 1687970081052542883860898323 ) = False";
+  char *example =
+      "( -10549803032.8543606618886 == 1687970081052542883860898323 ) = False";
   s21_decimal value_1 = {{0x44623B06, 0xF476F4A, 0x1657, 0x800D0000}};
   s21_decimal value_2 = {{0xEFE4E213, 0x72C95BFE, 0x5744191, 0x0}};
   int code = 0;
@@ -47924,7 +49227,9 @@ START_TEST(s21_is_equal_4790) {
 }
 
 START_TEST(s21_is_equal_4791) {
-  char *example = "( 1316816903984806254911174872 == 1853725245494347055138385940 ) = False";
+  char *example =
+      "( 1316816903984806254911174872 == 1853725245494347055138385940 ) = "
+      "False";
   s21_decimal value_1 = {{0xE84C38D8, 0x673E8C0A, 0x4413ED3, 0x0}};
   s21_decimal value_2 = {{0x141CB014, 0xEAF5955C, 0x5FD5D96, 0x0}};
   int code = 0;
@@ -47934,7 +49239,9 @@ START_TEST(s21_is_equal_4791) {
 }
 
 START_TEST(s21_is_equal_4792) {
-  char *example = "( 1931659327607453029612536325 == 0.52674220936371915455239473 ) = False";
+  char *example =
+      "( 1931659327607453029612536325 == 0.52674220936371915455239473 ) = "
+      "False";
   s21_decimal value_1 = {{0x31664205, 0xF9859394, 0x63DD4C5, 0x0}};
   s21_decimal value_2 = {{0x758C9531, 0x3D18CEE8, 0x2B9233, 0x1A0000}};
   int code = 0;
@@ -47944,7 +49251,8 @@ START_TEST(s21_is_equal_4792) {
 }
 
 START_TEST(s21_is_equal_4793) {
-  char *example = "( 157451539854727598441 == -6.8230567929628705427813423 ) = False";
+  char *example =
+      "( 157451539854727598441 == -6.8230567929628705427813423 ) = False";
   s21_decimal value_1 = {{0xAB4C5169, 0x89143D48, 0x8, 0x0}};
   s21_decimal value_2 = {{0x5E43F42F, 0x7FBBEB2E, 0x387062, 0x80190000}};
   int code = 0;
@@ -47964,7 +49272,9 @@ START_TEST(s21_is_equal_4794) {
 }
 
 START_TEST(s21_is_equal_4795) {
-  char *example = "( 1529693583644300068458055711 == -417253.21975041741442535853 ) = False";
+  char *example =
+      "( 1529693583644300068458055711 == -417253.21975041741442535853 ) = "
+      "False";
   s21_decimal value_1 = {{0x1A0FC81F, 0x54CA768C, 0x4F15537, 0x0}};
   s21_decimal value_2 = {{0x686051AD, 0x3C9515FF, 0x2283AE, 0x80140000}};
   int code = 0;
@@ -47974,7 +49284,8 @@ START_TEST(s21_is_equal_4795) {
 }
 
 START_TEST(s21_is_equal_4796) {
-  char *example = "( 18618502897062452156619047 == 1308801487824619125718221880 ) = False";
+  char *example =
+      "( 18618502897062452156619047 == 1308801487824619125718221880 ) = False";
   s21_decimal value_1 = {{0x207AD927, 0x10812E37, 0xF669F, 0x0}};
   s21_decimal value_2 = {{0x6D498438, 0xD294F8BD, 0x43A9D7E, 0x0}};
   int code = 0;
@@ -48034,7 +49345,8 @@ START_TEST(s21_is_equal_4801) {
 }
 
 START_TEST(s21_is_equal_4802) {
-  char *example = "( 0.55526564481076347835557248 == 1535966082617575211 ) = False";
+  char *example =
+      "( 0.55526564481076347835557248 == 1535966082617575211 ) = False";
   s21_decimal value_1 = {{0x82A4A580, 0x1790B7CD, 0x2DEE35, 0x1A0000}};
   s21_decimal value_2 = {{0xA578072B, 0x1550D903, 0x0, 0x0}};
   int code = 0;
@@ -48044,7 +49356,8 @@ START_TEST(s21_is_equal_4802) {
 }
 
 START_TEST(s21_is_equal_4803) {
-  char *example = "( 2.8617185534329813E-10 == 0.72576600405674422370887 ) = False";
+  char *example =
+      "( 2.8617185534329813E-10 == 0.72576600405674422370887 ) = False";
   s21_decimal value_1 = {{0xBA3EC3D5, 0x65AB2D, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xDF130247, 0x62A905A6, 0xF5E, 0x170000}};
   int code = 0;
@@ -48084,7 +49397,9 @@ START_TEST(s21_is_equal_4806) {
 }
 
 START_TEST(s21_is_equal_4807) {
-  char *example = "( 0.96118016357154676851586771 == -202942958.38002109317460440 ) = False";
+  char *example =
+      "( 0.96118016357154676851586771 == -202942958.38002109317460440 ) = "
+      "False";
   s21_decimal value_1 = {{0xBF9BB6D3, 0x1B833BD4, 0x4F81C8, 0x1A0000}};
   s21_decimal value_2 = {{0xDD1684FC, 0x99228787, 0x1ADBF, 0x80100000}};
   int code = 0;
@@ -48094,7 +49409,8 @@ START_TEST(s21_is_equal_4807) {
 }
 
 START_TEST(s21_is_equal_4808) {
-  char *example = "( -2.6916882543733183777654327 == -5066193.73385232152330 ) = False";
+  char *example =
+      "( -2.6916882543733183777654327 == -5066193.73385232152330 ) = False";
   s21_decimal value_1 = {{0xCCB0C637, 0x2063C98C, 0x1643DF, 0x80190000}};
   s21_decimal value_2 = {{0x47C66581, 0xBF135B97, 0x2, 0x800D0000}};
   int code = 0;
@@ -48104,7 +49420,8 @@ START_TEST(s21_is_equal_4808) {
 }
 
 START_TEST(s21_is_equal_4809) {
-  char *example = "( 2504.75369028479 == 1502508015878871191733419070 ) = False";
+  char *example =
+      "( 2504.75369028479 == 1502508015878871191733419070 ) = False";
   s21_decimal value_1 = {{0x57655B7F, 0xE3CE, 0x0, 0xB0000}};
   s21_decimal value_2 = {{0x74F43C3E, 0xBFE84414, 0x4DAD872, 0x0}};
   int code = 0;
@@ -48164,7 +49481,8 @@ START_TEST(s21_is_equal_4814) {
 }
 
 START_TEST(s21_is_equal_4815) {
-  char *example = "( 164658600953599813 == 1644949164782290244633324932 ) = False";
+  char *example =
+      "( 164658600953599813 == 1644949164782290244633324932 ) = False";
   s21_decimal value_1 = {{0xB0D5745, 0x248FC20, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9DCF6D84, 0xE77D8074, 0x550AB88, 0x0}};
   int code = 0;
@@ -48174,7 +49492,9 @@ START_TEST(s21_is_equal_4815) {
 }
 
 START_TEST(s21_is_equal_4816) {
-  char *example = "( 1753297754643541723499460545 == 1678774263548753002068994851 ) = False";
+  char *example =
+      "( 1753297754643541723499460545 == 1678774263548753002068994851 ) = "
+      "False";
   s21_decimal value_1 = {{0x787BF7C1, 0xBADC50AF, 0x5AA4B3D, 0x0}};
   s21_decimal value_2 = {{0xB3C6B23, 0x2EBFE458, 0x56CA647, 0x0}};
   int code = 0;
@@ -48184,7 +49504,8 @@ START_TEST(s21_is_equal_4816) {
 }
 
 START_TEST(s21_is_equal_4817) {
-  char *example = "( -9.75731454292440452625178 == 1341894328457309748760187888 ) = False";
+  char *example =
+      "( -9.75731454292440452625178 == 1341894328457309748760187888 ) = False";
   s21_decimal value_1 = {{0x2F3EF31A, 0x8214802B, 0xCE9E, 0x80170000}};
   s21_decimal value_2 = {{0x6F0C93F0, 0x4ED718BD, 0x455FD2D, 0x0}};
   int code = 0;
@@ -48314,7 +49635,8 @@ START_TEST(s21_is_equal_4829) {
 }
 
 START_TEST(s21_is_equal_4830) {
-  char *example = "( 1195573411759611360477259766 == 172448718788667384110 ) = False";
+  char *example =
+      "( 1195573411759611360477259766 == 172448718788667384110 ) = False";
   s21_decimal value_1 = {{0x914527F6, 0x85108E11, 0x3DCF484, 0x0}};
   s21_decimal value_2 = {{0xD9C0212E, 0x5934EC10, 0x9, 0x0}};
   int code = 0;
@@ -48334,7 +49656,8 @@ START_TEST(s21_is_equal_4831) {
 }
 
 START_TEST(s21_is_equal_4832) {
-  char *example = "( -45.569567493904373620934244 == -189.2249567931739271883 ) = False";
+  char *example =
+      "( -45.569567493904373620934244 == -189.2249567931739271883 ) = False";
   s21_decimal value_1 = {{0x13CC0664, 0x342C9DE2, 0x25B1BB, 0x80180000}};
   s21_decimal value_2 = {{0x4DB5F2CB, 0x943CEC77, 0x66, 0x80130000}};
   int code = 0;
@@ -48354,7 +49677,9 @@ START_TEST(s21_is_equal_4833) {
 }
 
 START_TEST(s21_is_equal_4834) {
-  char *example = "( -82.777984258576145997102051 == 1158349702708280399205881455 ) = False";
+  char *example =
+      "( -82.777984258576145997102051 == 1158349702708280399205881455 ) = "
+      "False";
   s21_decimal value_1 = {{0x2F8BFBE3, 0x84B2F9DC, 0x4478EB, 0x80180000}};
   s21_decimal value_2 = {{0x661D66F, 0x356E3391, 0x3BE2A17, 0x0}};
   int code = 0;
@@ -48384,7 +49709,8 @@ START_TEST(s21_is_equal_4836) {
 }
 
 START_TEST(s21_is_equal_4837) {
-  char *example = "( 5.5969009474740629E-10 == 13564115958328356576771 ) = False";
+  char *example =
+      "( 5.5969009474740629E-10 == 13564115958328356576771 ) = False";
   s21_decimal value_1 = {{0x802C2195, 0xC6D784, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x50E11E03, 0x4FEC4E55, 0x2DF, 0x0}};
   int code = 0;
@@ -48434,7 +49760,8 @@ START_TEST(s21_is_equal_4841) {
 }
 
 START_TEST(s21_is_equal_4842) {
-  char *example = "( 1211149709596669918 == -13282.383413751993999018245 ) = False";
+  char *example =
+      "( 1211149709596669918 == -13282.383413751993999018245 ) = False";
   s21_decimal value_1 = {{0x7253B7DE, 0x10CEDE3E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xEB47C905, 0x72991C0E, 0xAFCA7, 0x80150000}};
   int code = 0;
@@ -48444,7 +49771,9 @@ START_TEST(s21_is_equal_4842) {
 }
 
 START_TEST(s21_is_equal_4843) {
-  char *example = "( 1295405287790263457629903751 == 1234699691992434840809118552 ) = False";
+  char *example =
+      "( 1295405287790263457629903751 == 1234699691992434840809118552 ) = "
+      "False";
   s21_decimal value_1 = {{0xCA3C9B87, 0x5D12F7F0, 0x42F88BD, 0x0}};
   s21_decimal value_2 = {{0x88F21B58, 0x6BD849E0, 0x3FD51D4, 0x0}};
   int code = 0;
@@ -48474,7 +49803,8 @@ START_TEST(s21_is_equal_4845) {
 }
 
 START_TEST(s21_is_equal_4846) {
-  char *example = "( 0.19768270249824995 == 10267375073331542991228285 ) = False";
+  char *example =
+      "( 0.19768270249824995 == 10267375073331542991228285 ) = False";
   s21_decimal value_1 = {{0x161092E3, 0x463B23, 0x0, 0x110000}};
   s21_decimal value_2 = {{0x92ECD7D, 0x849C6678, 0x87E33, 0x0}};
   int code = 0;
@@ -48494,7 +49824,8 @@ START_TEST(s21_is_equal_4847) {
 }
 
 START_TEST(s21_is_equal_4848) {
-  char *example = "( 1693271324283089637314216011 == -132.005020026030769824 ) = False";
+  char *example =
+      "( 1693271324283089637314216011 == -132.005020026030769824 ) = False";
   s21_decimal value_1 = {{0xBAA5404B, 0x6B752BDE, 0x578A426, 0x0}};
   s21_decimal value_2 = {{0x33E3C6A0, 0x27F00A52, 0x7, 0x80120000}};
   int code = 0;
@@ -48514,7 +49845,8 @@ START_TEST(s21_is_equal_4849) {
 }
 
 START_TEST(s21_is_equal_4850) {
-  char *example = "( 16841013523176998905938636 == 3.70515590112735497818624 ) = False";
+  char *example =
+      "( 16841013523176998905938636 == 3.70515590112735497818624 ) = False";
   s21_decimal value_1 = {{0x522582CC, 0x2C24A7B7, 0xDEE39, 0x0}};
   s21_decimal value_2 = {{0x8A341200, 0xB0BD33CD, 0x4E75, 0x170000}};
   int code = 0;
@@ -48534,7 +49866,8 @@ START_TEST(s21_is_equal_4851) {
 }
 
 START_TEST(s21_is_equal_4852) {
-  char *example = "( 1521233647966955816407376656 == 0.41969362476225155208 ) = False";
+  char *example =
+      "( 1521233647966955816407376656 == 0.41969362476225155208 ) = False";
   s21_decimal value_1 = {{0x5CD1A310, 0x4C97CA2E, 0x4EA55C1, 0x0}};
   s21_decimal value_2 = {{0x15025088, 0x467120CF, 0x2, 0x140000}};
   int code = 0;
@@ -48684,7 +50017,8 @@ START_TEST(s21_is_equal_4866) {
 }
 
 START_TEST(s21_is_equal_4867) {
-  char *example = "( 171424767592076867110901 == 1728283335377827405148838604 ) = False";
+  char *example =
+      "( 171424767592076867110901 == 1728283335377827405148838604 ) = False";
   s21_decimal value_1 = {{0x449187F5, 0xF48CB5A6, 0x244C, 0x0}};
   s21_decimal value_2 = {{0xD509DACC, 0x5827C2D9, 0x5959A3B, 0x0}};
   int code = 0;
@@ -48734,7 +50068,8 @@ START_TEST(s21_is_equal_4871) {
 }
 
 START_TEST(s21_is_equal_4872) {
-  char *example = "( 17182683915024529858 == -106664.15072754344161880503 ) = False";
+  char *example =
+      "( 17182683915024529858 == -106664.15072754344161880503 ) = False";
   s21_decimal value_1 = {{0xA2DAF9C2, 0xEE7527FB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x98FEA9B7, 0x850CBCFA, 0x8D2B3, 0x80140000}};
   int code = 0;
@@ -48764,7 +50099,9 @@ START_TEST(s21_is_equal_4874) {
 }
 
 START_TEST(s21_is_equal_4875) {
-  char *example = "( -57644.969350593326706273595 == -78.657123111756027966221333 ) = False";
+  char *example =
+      "( -57644.969350593326706273595 == -78.657123111756027966221333 ) = "
+      "False";
   s21_decimal value_1 = {{0x67F72D3B, 0xCD5E377, 0x2FAECC, 0x80150000}};
   s21_decimal value_2 = {{0xC01B6C15, 0x301E3B0C, 0x41104B, 0x80180000}};
   int code = 0;
@@ -48774,7 +50111,8 @@ START_TEST(s21_is_equal_4875) {
 }
 
 START_TEST(s21_is_equal_4876) {
-  char *example = "( 10046256468674203980 == -864456.89136681149585112312 ) = False";
+  char *example =
+      "( 10046256468674203980 == -864456.89136681149585112312 ) = False";
   s21_decimal value_1 = {{0xE9CBD14C, 0x8B6B7907, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9EC73CF8, 0x32BD3915, 0x478196, 0x80140000}};
   int code = 0;
@@ -48834,7 +50172,8 @@ START_TEST(s21_is_equal_4881) {
 }
 
 START_TEST(s21_is_equal_4882) {
-  char *example = "( -6.6221937947748714198801163 == 119575934815689808 ) = False";
+  char *example =
+      "( -6.6221937947748714198801163 == 119575934815689808 ) = False";
   s21_decimal value_1 = {{0x854B1B0B, 0x730FA513, 0x36C70A, 0x80190000}};
   s21_decimal value_2 = {{0xDE5FDC50, 0x1A8D1AD, 0x0, 0x0}};
   int code = 0;
@@ -48864,7 +50203,9 @@ START_TEST(s21_is_equal_4884) {
 }
 
 START_TEST(s21_is_equal_4885) {
-  char *example = "( 1094722865651779719141095979 == -9.2549860221356145810370103 ) = False";
+  char *example =
+      "( 1094722865651779719141095979 == -9.2549860221356145810370103 ) = "
+      "False";
   s21_decimal value_1 = {{0x5597A2B, 0x75E0C2C8, 0x3898895, 0x0}};
   s21_decimal value_2 = {{0x84F06E37, 0xF9CB7C80, 0x4C8E31, 0x80190000}};
   int code = 0;
@@ -48944,7 +50285,8 @@ START_TEST(s21_is_equal_4892) {
 }
 
 START_TEST(s21_is_equal_4893) {
-  char *example = "( 403.837146898767339635344120 == -564467.0709890084211 ) = False";
+  char *example =
+      "( 403.837146898767339635344120 == -564467.0709890084211 ) = False";
   s21_decimal value_1 = {{0x18FC004C, 0x8F5B8076, 0x216795, 0x170000}};
   s21_decimal value_2 = {{0x990CED73, 0x4E55E61A, 0x0, 0x800D0000}};
   int code = 0;
@@ -48964,7 +50306,8 @@ START_TEST(s21_is_equal_4894) {
 }
 
 START_TEST(s21_is_equal_4895) {
-  char *example = "( 0.2671277875450666707 == -79.8354219379259709370780 ) = False";
+  char *example =
+      "( 0.2671277875450666707 == -79.8354219379259709370780 ) = False";
   s21_decimal value_1 = {{0x1E98DED3, 0x25124913, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x914F44F6, 0xE30B9259, 0x10E7, 0x80150000}};
   int code = 0;
@@ -49134,7 +50477,8 @@ START_TEST(s21_is_equal_4911) {
 }
 
 START_TEST(s21_is_equal_4912) {
-  char *example = "( 3.0456914988785159E-10 == 0.46570519243089451470153534 ) = False";
+  char *example =
+      "( 3.0456914988785159E-10 == 0.46570519243089451470153534 ) = False";
   s21_decimal value_1 = {{0x1EDC5E07, 0x6C3467, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x6D81E73E, 0xE827C40E, 0x2685B0, 0x1A0000}};
   int code = 0;
@@ -49164,7 +50508,8 @@ START_TEST(s21_is_equal_4914) {
 }
 
 START_TEST(s21_is_equal_4915) {
-  char *example = "( 0.44215805317878475758216903 == -9.22939231053995768549857 ) = False";
+  char *example =
+      "( 0.44215805317878475758216903 == -9.22939231053995768549857 ) = False";
   s21_decimal value_1 = {{0x1F23A6C7, 0x9BF401BD, 0x24930F, 0x1A0000}};
   s21_decimal value_2 = {{0x55C411E1, 0xA2CEDDFD, 0xC370, 0x80170000}};
   int code = 0;
@@ -49184,7 +50529,8 @@ START_TEST(s21_is_equal_4916) {
 }
 
 START_TEST(s21_is_equal_4917) {
-  char *example = "( 1552098907919925995 == -483.06725839420940746289152 ) = False";
+  char *example =
+      "( 1552098907919925995 == -483.06725839420940746289152 ) = False";
   s21_decimal value_1 = {{0xBED6C2EB, 0x158A29BB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x47A8F000, 0xDAE3C6C1, 0x27F558, 0x80170000}};
   int code = 0;
@@ -49224,7 +50570,8 @@ START_TEST(s21_is_equal_4920) {
 }
 
 START_TEST(s21_is_equal_4921) {
-  char *example = "( -350.63211399198278548 == 1265195426407019267577416864 ) = False";
+  char *example =
+      "( -350.63211399198278548 == 1265195426407019267577416864 ) = False";
   s21_decimal value_1 = {{0xA5A40394, 0xE6998CFE, 0x1, 0x80110000}};
   s21_decimal value_2 = {{0xBDF90CA0, 0x7F180CC3, 0x4168B8D, 0x0}};
   int code = 0;
@@ -49334,7 +50681,8 @@ START_TEST(s21_is_equal_4931) {
 }
 
 START_TEST(s21_is_equal_4932) {
-  char *example = "( -52570658.185662302 == 1596485124523928237052226079 ) = False";
+  char *example =
+      "( -52570658.185662302 == 1596485124523928237052226079 ) = False";
   s21_decimal value_1 = {{0x2EC3CF5E, 0xBAC4BC, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0x3EDB6A1F, 0x479AE50, 0x52894E0, 0x0}};
   int code = 0;
@@ -49484,7 +50832,8 @@ START_TEST(s21_is_equal_4946) {
 }
 
 START_TEST(s21_is_equal_4947) {
-  char *example = "( 1659111935289226896607638486 == 8.2400050276948661E-10 ) = False";
+  char *example =
+      "( 1659111935289226896607638486 == 8.2400050276948661E-10 ) = False";
   s21_decimal value_1 = {{0xC06573D6, 0x3B5B353A, 0x55C629E, 0x0}};
   s21_decimal value_2 = {{0xBE3B5AB5, 0x124BE68, 0x0, 0x1A0000}};
   int code = 0;
@@ -49514,7 +50863,8 @@ START_TEST(s21_is_equal_4949) {
 }
 
 START_TEST(s21_is_equal_4950) {
-  char *example = "( -60.925067844231796 == 0.41023893401143210394566038 ) = False";
+  char *example =
+      "( -60.925067844231796 == 0.41023893401143210394566038 ) = False";
   s21_decimal value_1 = {{0xC2C5A274, 0xD87306, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x90D4BD96, 0xB7ABE524, 0x21EF25, 0x1A0000}};
   int code = 0;
@@ -49554,7 +50904,8 @@ START_TEST(s21_is_equal_4953) {
 }
 
 START_TEST(s21_is_equal_4954) {
-  char *example = "( -92512.164059161461656052958 == 130196084191516409 ) = False";
+  char *example =
+      "( -92512.164059161461656052958 == 130196084191516409 ) = False";
   s21_decimal value_1 = {{0x8A76E4DE, 0x76746B43, 0x4C8636, 0x80150000}};
   s21_decimal value_2 = {{0x1561D6F9, 0x1CE8CA6, 0x0, 0x0}};
   int code = 0;
@@ -49584,7 +50935,9 @@ START_TEST(s21_is_equal_4956) {
 }
 
 START_TEST(s21_is_equal_4957) {
-  char *example = "( 1968739484050603334339894673 == 1930594711024716094952835604 ) = False";
+  char *example =
+      "( 1968739484050603334339894673 == 1930594711024716094952835604 ) = "
+      "False";
   s21_decimal value_1 = {{0xB8B79D91, 0x48853816, 0x65C80CD, 0x0}};
   s21_decimal value_2 = {{0x8BE20A14, 0xFE7D68BC, 0x63CF354, 0x0}};
   int code = 0;
@@ -49594,7 +50947,8 @@ START_TEST(s21_is_equal_4957) {
 }
 
 START_TEST(s21_is_equal_4958) {
-  char *example = "( 1309116955576338993072381798 == -244191.8452572303234567983 ) = False";
+  char *example =
+      "( 1309116955576338993072381798 == -244191.8452572303234567983 ) = False";
   s21_decimal value_1 = {{0x47D51F66, 0x5D19BA2D, 0x43AE04C, 0x0}};
   s21_decimal value_2 = {{0xADB20F2F, 0xAA20F80E, 0x20518, 0x80130000}};
   int code = 0;
@@ -49604,7 +50958,9 @@ START_TEST(s21_is_equal_4958) {
 }
 
 START_TEST(s21_is_equal_4959) {
-  char *example = "( 1274026368301807351565068880 == 0.54421931085494471955646128 ) = False";
+  char *example =
+      "( 1274026368301807351565068880 == 0.54421931085494471955646128 ) = "
+      "False";
   s21_decimal value_1 = {{0x62A32A50, 0xD0DA5B1C, 0x41DD993, 0x0}};
   s21_decimal value_2 = {{0xC2F906B0, 0xCBB22CA5, 0x2D044A, 0x1A0000}};
   int code = 0;
@@ -49614,7 +50970,9 @@ START_TEST(s21_is_equal_4959) {
 }
 
 START_TEST(s21_is_equal_4960) {
-  char *example = "( 1906026114618847180516920411 == -93.987811656504334833624116 ) = False";
+  char *example =
+      "( 1906026114618847180516920411 == -93.987811656504334833624116 ) = "
+      "False";
   s21_decimal value_1 = {{0x35BE8C5B, 0xB6D5598D, 0x628A0BA, 0x0}};
   s21_decimal value_2 = {{0xF0EF2434, 0x7AB0968E, 0x4DBEB1, 0x80180000}};
   int code = 0;
@@ -49704,7 +51062,8 @@ START_TEST(s21_is_equal_4968) {
 }
 
 START_TEST(s21_is_equal_4969) {
-  char *example = "( 1997575752915415122416481518 == 1227394670893578 ) = False";
+  char *example =
+      "( 1997575752915415122416481518 == 1227394670893578 ) = False";
   s21_decimal value_1 = {{0xD5C7B4EE, 0x8CFECE0F, 0x6745B1E, 0x0}};
   s21_decimal value_2 = {{0x175B9A0A, 0x45C4F, 0x0, 0x0}};
   int code = 0;
@@ -49734,7 +51093,9 @@ START_TEST(s21_is_equal_4971) {
 }
 
 START_TEST(s21_is_equal_4972) {
-  char *example = "( -702.29276684660052604840710 == -73.343593146283544008628447 ) = False";
+  char *example =
+      "( -702.29276684660052604840710 == -73.343593146283544008628447 ) = "
+      "False";
   s21_decimal value_1 = {{0xEFD5BDE7, 0xABF8FC55, 0x5CF29, 0x80160000}};
   s21_decimal value_2 = {{0xA52298DF, 0x26BF2E22, 0x3CAB1C, 0x80180000}};
   int code = 0;
@@ -49744,7 +51105,8 @@ START_TEST(s21_is_equal_4972) {
 }
 
 START_TEST(s21_is_equal_4973) {
-  char *example = "( 1593165223370782496818846956 == -6904901167.4873178814 ) = False";
+  char *example =
+      "( 1593165223370782496818846956 == -6904901167.4873178814 ) = False";
   s21_decimal value_1 = {{0x8A0DDCEC, 0xD0BAA26D, 0x525D5DB, 0x0}};
   s21_decimal value_2 = {{0xEC9DAABE, 0xBE3F5E47, 0x3, 0x800A0000}};
   int code = 0;
@@ -49804,7 +51166,8 @@ START_TEST(s21_is_equal_4978) {
 }
 
 START_TEST(s21_is_equal_4979) {
-  char *example = "( 1003660526101450838608734065 == -23723.4170882628 ) = False";
+  char *example =
+      "( 1003660526101450838608734065 == -23723.4170882628 ) = False";
   s21_decimal value_1 = {{0xBC686771, 0x2450BB49, 0x33E3562, 0x0}};
   s21_decimal value_2 = {{0x627BEA44, 0xD7C3, 0x0, 0x800A0000}};
   int code = 0;
@@ -49814,7 +51177,8 @@ START_TEST(s21_is_equal_4979) {
 }
 
 START_TEST(s21_is_equal_4980) {
-  char *example = "( 1542405838533055461570834146 == -669126.9340567054700517 ) = False";
+  char *example =
+      "( 1542405838533055461570834146 == -669126.9340567054700517 ) = False";
   s21_decimal value_1 = {{0x22FAEEE2, 0xCB22495, 0x4FBD924, 0x0}};
   s21_decimal value_2 = {{0xA191CFE5, 0xBC041D61, 0x16A, 0x80100000}};
   int code = 0;
@@ -49834,7 +51198,9 @@ START_TEST(s21_is_equal_4981) {
 }
 
 START_TEST(s21_is_equal_4982) {
-  char *example = "( 1422769942900256860203915883 == 1601223895739817724098642548 ) = False";
+  char *example =
+      "( 1422769942900256860203915883 == 1601223895739817724098642548 ) = "
+      "False";
   s21_decimal value_1 = {{0x35A81A6B, 0x26E7F340, 0x498E341, 0x0}};
   s21_decimal value_2 = {{0xE86C0274, 0x51E113DB, 0x52C8059, 0x0}};
   int code = 0;
@@ -49864,7 +51230,8 @@ START_TEST(s21_is_equal_4984) {
 }
 
 START_TEST(s21_is_equal_4985) {
-  char *example = "( 1484543838875716815815055 == 1748419940027270921872040282 ) = False";
+  char *example =
+      "( 1484543838875716815815055 == 1748419940027270921872040282 ) = False";
   s21_decimal value_1 = {{0xAC1E018F, 0x4863271B, 0x13A5D, 0x0}};
   s21_decimal value_2 = {{0xA1F1615A, 0xDEA66FD7, 0x5A64252, 0x0}};
   int code = 0;
@@ -49884,7 +51251,9 @@ START_TEST(s21_is_equal_4986) {
 }
 
 START_TEST(s21_is_equal_4987) {
-  char *example = "( 1676341314443721482141199324 == -2.6057126474784787808471058 ) = False";
+  char *example =
+      "( 1676341314443721482141199324 == -2.6057126474784787808471058 ) = "
+      "False";
   s21_decimal value_1 = {{0x32046BDC, 0xBF529EFD, 0x56AA314, 0x0}};
   s21_decimal value_2 = {{0xCED4812, 0xA81933DD, 0x158DCF, 0x80190000}};
   int code = 0;
@@ -49964,7 +51333,8 @@ START_TEST(s21_is_equal_4994) {
 }
 
 START_TEST(s21_is_equal_4995) {
-  char *example = "( 1474021232871317499712160018 == 12922078552521513815936717 ) = False";
+  char *example =
+      "( 1474021232871317499712160018 == 12922078552521513815936717 ) = False";
   s21_decimal value_1 = {{0x40ACC112, 0x26004EEA, 0x4C34823, 0x0}};
   s21_decimal value_2 = {{0xA7A8ECD, 0x483013E8, 0xAB05B, 0x0}};
   int code = 0;
@@ -50054,7 +51424,8 @@ START_TEST(s21_is_equal_5003) {
 }
 
 START_TEST(s21_is_equal_5004) {
-  char *example = "( 13075533588576618 == 1055264519918032940510712357 ) = False";
+  char *example =
+      "( 13075533588576618 == 1055264519918032940510712357 ) = False";
   s21_decimal value_1 = {{0xE6CBB96A, 0x2E7420, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDEFB9225, 0x4089A3A8, 0x368E4F4, 0x0}};
   int code = 0;
@@ -50124,7 +51495,8 @@ START_TEST(s21_is_equal_5010) {
 }
 
 START_TEST(s21_is_equal_5011) {
-  char *example = "( 16441600438842244 == 0.33071764104032919461005713 ) = False";
+  char *example =
+      "( 16441600438842244 == 0.33071764104032919461005713 ) = False";
   s21_decimal value_1 = {{0x69B23384, 0x3A698C, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA73B8991, 0xECAA760D, 0x1B5B37, 0x1A0000}};
   int code = 0;
@@ -50144,7 +51516,8 @@ START_TEST(s21_is_equal_5012) {
 }
 
 START_TEST(s21_is_equal_5013) {
-  char *example = "( 0.08151259692370837281445011 == 17488260430719392899911939 ) = False";
+  char *example =
+      "( 0.08151259692370837281445011 == 17488260430719392899911939 ) = False";
   s21_decimal value_1 = {{0x638C1493, 0xAC608A81, 0x6BE18, 0x1A0000}};
   s21_decimal value_2 = {{0x8F3BD103, 0x7F62A46F, 0xE7748, 0x0}};
   int code = 0;
@@ -50164,7 +51537,9 @@ START_TEST(s21_is_equal_5014) {
 }
 
 START_TEST(s21_is_equal_5015) {
-  char *example = "( -4.2601952593223220022521203 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -4.2601952593223220022521203 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xB174AD73, 0x7A498DFA, 0x233D50, 0x80190000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -50174,7 +51549,8 @@ START_TEST(s21_is_equal_5015) {
 }
 
 START_TEST(s21_is_equal_5016) {
-  char *example = "( 188016053269458047 == 1191642309345589749509910717 ) = False";
+  char *example =
+      "( 188016053269458047 == 1191642309345589749509910717 ) = False";
   s21_decimal value_1 = {{0xB3326C7F, 0x29BF79A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3181F0BD, 0x7E97EA5, 0x3D9B413, 0x0}};
   int code = 0;
@@ -50204,7 +51580,8 @@ START_TEST(s21_is_equal_5018) {
 }
 
 START_TEST(s21_is_equal_5019) {
-  char *example = "( 1898676578981953896100443199 == 113780774553435514168868 ) = False";
+  char *example =
+      "( 1898676578981953896100443199 == 113780774553435514168868 ) = False";
   s21_decimal value_1 = {{0x2328B43F, 0x96C753C9, 0x6228C67, 0x0}};
   s21_decimal value_2 = {{0x38B16624, 0x117223F8, 0x1818, 0x0}};
   int code = 0;
@@ -50294,7 +51671,8 @@ START_TEST(s21_is_equal_5027) {
 }
 
 START_TEST(s21_is_equal_5028) {
-  char *example = "( 1025880983690556310585988925 == 1762502652226309917 ) = False";
+  char *example =
+      "( 1025880983690556310585988925 == 1762502652226309917 ) = False";
   s21_decimal value_1 = {{0xEDDDD73D, 0x8FBAC0C4, 0x35096BF, 0x0}};
   s21_decimal value_2 = {{0xF5A20F1D, 0x1875AAD2, 0x0, 0x0}};
   int code = 0;
@@ -50384,7 +51762,8 @@ START_TEST(s21_is_equal_5036) {
 }
 
 START_TEST(s21_is_equal_5037) {
-  char *example = "( 1937606254540220129943991186 == 196662100848168496 ) = False";
+  char *example =
+      "( 1937606254540220129943991186 == 196662100848168496 ) = False";
   s21_decimal value_1 = {{0xD6CBB392, 0x879A71FC, 0x642C015, 0x0}};
   s21_decimal value_2 = {{0x85D64E30, 0x2BAAF23, 0x0, 0x0}};
   int code = 0;
@@ -50404,7 +51783,8 @@ START_TEST(s21_is_equal_5038) {
 }
 
 START_TEST(s21_is_equal_5039) {
-  char *example = "( 1701748435144879438235054542 == 175302760523201940 ) = False";
+  char *example =
+      "( 1701748435144879438235054542 == 175302760523201940 ) = False";
   s21_decimal value_1 = {{0x8AAE31CE, 0x85388F6F, 0x57FA73F, 0x0}};
   s21_decimal value_2 = {{0x91217D94, 0x26ECCEE, 0x0, 0x0}};
   int code = 0;
@@ -50414,7 +51794,8 @@ START_TEST(s21_is_equal_5039) {
 }
 
 START_TEST(s21_is_equal_5040) {
-  char *example = "( 7.0951592737317714844212748 == 117905160899351106473307001 ) = False";
+  char *example =
+      "( 7.0951592737317714844212748 == 117905160899351106473307001 ) = False";
   s21_decimal value_1 = {{0x41845E0C, 0x8CA28D09, 0x3AB095, 0x190000}};
   s21_decimal value_2 = {{0x34D22B79, 0x94684C74, 0x618763, 0x0}};
   int code = 0;
@@ -50474,7 +51855,8 @@ START_TEST(s21_is_equal_5045) {
 }
 
 START_TEST(s21_is_equal_5046) {
-  char *example = "( 1490968786220714027694383714 == -49.350482073939 ) = False";
+  char *example =
+      "( 1490968786220714027694383714 == -49.350482073939 ) = False";
   s21_decimal value_1 = {{0xF1B36262, 0xDB3EE919, 0x4D14CEB, 0x0}};
   s21_decimal value_2 = {{0x4DF41953, 0x2CE2, 0x0, 0x800C0000}};
   int code = 0;
@@ -50484,7 +51866,8 @@ START_TEST(s21_is_equal_5046) {
 }
 
 START_TEST(s21_is_equal_5047) {
-  char *example = "( 1427159472745320745638857292 == 19969110959440340 ) = False";
+  char *example =
+      "( 1427159472745320745638857292 == 19969110959440340 ) = False";
   s21_decimal value_1 = {{0x48488A4C, 0xAAC02FF, 0x49C84C6, 0x0}};
   s21_decimal value_2 = {{0xF537C1D4, 0x46F1CC, 0x0, 0x0}};
   int code = 0;
@@ -50654,7 +52037,8 @@ START_TEST(s21_is_equal_5063) {
 }
 
 START_TEST(s21_is_equal_5064) {
-  char *example = "( 1691844382540823167768252307 == 1347901627556683820467 ) = False";
+  char *example =
+      "( 1691844382540823167768252307 == 1347901627556683820467 ) = False";
   s21_decimal value_1 = {{0x7AD8CF93, 0xC0BE91E2, 0x57775FB, 0x0}};
   s21_decimal value_2 = {{0x1F03ADB3, 0x11E48CC6, 0x49, 0x0}};
   int code = 0;
@@ -50744,7 +52128,9 @@ START_TEST(s21_is_equal_5072) {
 }
 
 START_TEST(s21_is_equal_5073) {
-  char *example = "( 1851953571123977787955221969 == 1508603341805230349214189333 ) = False";
+  char *example =
+      "( 1851953571123977787955221969 == 1508603341805230349214189333 ) = "
+      "False";
   s21_decimal value_1 = {{0x63C815D1, 0x41FB979F, 0x5FBE66C, 0x0}};
   s21_decimal value_2 = {{0x3E5A8715, 0x7BB96E6, 0x4DFE32F, 0x0}};
   int code = 0;
@@ -50774,7 +52160,8 @@ START_TEST(s21_is_equal_5075) {
 }
 
 START_TEST(s21_is_equal_5076) {
-  char *example = "( 1619014269836042793819 == 12099548903827829972113 ) = False";
+  char *example =
+      "( 1619014269836042793819 == 12099548903827829972113 ) = False";
   s21_decimal value_1 = {{0xB9C1735B, 0xC4562482, 0x57, 0x0}};
   s21_decimal value_2 = {{0xB4D45C91, 0xEAF8E5DF, 0x28F, 0x0}};
   int code = 0;
@@ -50784,7 +52171,9 @@ START_TEST(s21_is_equal_5076) {
 }
 
 START_TEST(s21_is_equal_5077) {
-  char *example = "( -13.924370830148216375121073 == 1972597582089131316476339814 ) = False";
+  char *example =
+      "( -13.924370830148216375121073 == 1972597582089131316476339814 ) = "
+      "False";
   s21_decimal value_1 = {{0x30FE94B1, 0xA7BCF550, 0xB8499, 0x80180000}};
   s21_decimal value_2 = {{0xB5676666, 0x3270D9D0, 0x65FB1C9, 0x0}};
   int code = 0;
@@ -50794,7 +52183,8 @@ START_TEST(s21_is_equal_5077) {
 }
 
 START_TEST(s21_is_equal_5078) {
-  char *example = "( 14660676555037956 == 0.15408127658933459622411447 ) = False";
+  char *example =
+      "( 14660676555037956 == 0.15408127658933459622411447 ) = False";
   s21_decimal value_1 = {{0xC23ADD04, 0x3415CE, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD005BCB7, 0x462A98E4, 0xCBECC, 0x1A0000}};
   int code = 0;
@@ -50854,7 +52244,8 @@ START_TEST(s21_is_equal_5083) {
 }
 
 START_TEST(s21_is_equal_5084) {
-  char *example = "( -8.6962088282888515650103181 == 181287645684797437272905205 ) = False";
+  char *example =
+      "( -8.6962088282888515650103181 == 181287645684797437272905205 ) = False";
   s21_decimal value_1 = {{0x63FCA78D, 0x4083ACBF, 0x47EEF0, 0x80190000}};
   s21_decimal value_2 = {{0x4113D5F5, 0xF6FDEB20, 0x95F526, 0x0}};
   int code = 0;
@@ -50864,7 +52255,9 @@ START_TEST(s21_is_equal_5084) {
 }
 
 START_TEST(s21_is_equal_5085) {
-  char *example = "( -66.101156187358808090525472 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( -66.101156187358808090525472 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x39D6BF20, 0xDB6B5BA6, 0x36AD76, 0x80180000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -50874,7 +52267,8 @@ START_TEST(s21_is_equal_5085) {
 }
 
 START_TEST(s21_is_equal_5086) {
-  char *example = "( 14399601284017544571 == 1700466456343527724735259333 ) = False";
+  char *example =
+      "( 14399601284017544571 == 1700466456343527724735259333 ) = False";
   s21_decimal value_1 = {{0x511FDD7B, 0xC7D5A913, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD0B7E2C5, 0x4F7110D7, 0x57E97C7, 0x0}};
   int code = 0;
@@ -50914,7 +52308,8 @@ START_TEST(s21_is_equal_5089) {
 }
 
 START_TEST(s21_is_equal_5090) {
-  char *example = "( -86.14546935547200323546060 == 1146803391531736916974346660 ) = False";
+  char *example =
+      "( -86.14546935547200323546060 == 1146803391531736916974346660 ) = False";
   s21_decimal value_1 = {{0x7B4AF12E, 0x8D717570, 0xB66B, 0x80160000}};
   s21_decimal value_2 = {{0x55D3A1A4, 0x6CF59BB9, 0x3B49D10, 0x0}};
   int code = 0;
@@ -50964,7 +52359,8 @@ START_TEST(s21_is_equal_5094) {
 }
 
 START_TEST(s21_is_equal_5095) {
-  char *example = "( 66.0471093964250 == 1891218420485602943064506110 ) = False";
+  char *example =
+      "( 66.0471093964250 == 1891218420485602943064506110 ) = False";
   s21_decimal value_1 = {{0xCA7E77C9, 0x3C11, 0x0, 0xC0000}};
   s21_decimal value_2 = {{0x428E7EFE, 0x1BAADD8, 0x61C6114, 0x0}};
   int code = 0;
@@ -51024,7 +52420,8 @@ START_TEST(s21_is_equal_5100) {
 }
 
 START_TEST(s21_is_equal_5101) {
-  char *example = "( 1322279421980921166 == -20039.352749300661659944276 ) = False";
+  char *example =
+      "( 1322279421980921166 == -20039.352749300661659944276 ) = False";
   s21_decimal value_1 = {{0xE8FB4D4E, 0x1259AE20, 0x0, 0x0}};
   s21_decimal value_2 = {{0x14C554, 0x7D42BFB7, 0x10937F, 0x80150000}};
   int code = 0;
@@ -51164,7 +52561,8 @@ START_TEST(s21_is_equal_5114) {
 }
 
 START_TEST(s21_is_equal_5115) {
-  char *example = "( 1654963387675408535615667609 == 15225900691103328698846 ) = False";
+  char *example =
+      "( 1654963387675408535615667609 == 15225900691103328698846 ) = False";
   s21_decimal value_1 = {{0xC9AF7D99, 0x3DC70B4, 0x558F421, 0x0}};
   s21_decimal value_2 = {{0x7C8701DE, 0x65D1A847, 0x339, 0x0}};
   int code = 0;
@@ -51194,7 +52592,9 @@ START_TEST(s21_is_equal_5117) {
 }
 
 START_TEST(s21_is_equal_5118) {
-  char *example = "( 1047466426271790319434098558 == 1615043428512096225906298388 ) = False";
+  char *example =
+      "( 1047466426271790319434098558 == 1615043428512096225906298388 ) = "
+      "False";
   s21_decimal value_1 = {{0x45EA677E, 0xBF9C10DC, 0x36271A4, 0x0}};
   s21_decimal value_2 = {{0xD3068E14, 0xB14BC880, 0x537EEBF, 0x0}};
   int code = 0;
@@ -51204,7 +52604,8 @@ START_TEST(s21_is_equal_5118) {
 }
 
 START_TEST(s21_is_equal_5119) {
-  char *example = "( 1270430517460372134 == 1818467518377981235894603781 ) = False";
+  char *example =
+      "( 1270430517460372134 == 1818467518377981235894603781 ) = False";
   s21_decimal value_1 = {{0x190A8AA6, 0x11A179D3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9D7AD005, 0xB373DAF1, 0x5E03379, 0x0}};
   int code = 0;
@@ -51214,7 +52615,8 @@ START_TEST(s21_is_equal_5119) {
 }
 
 START_TEST(s21_is_equal_5120) {
-  char *example = "( 1479887870827509922 == 1579074373257339949917052167 ) = False";
+  char *example =
+      "( 1479887870827509922 == 1579074373257339949917052167 ) = False";
   s21_decimal value_1 = {{0x801538A2, 0x14899E2D, 0x0, 0x0}};
   s21_decimal value_2 = {{0x77469D07, 0x4CD2ADF7, 0x51A2E01, 0x0}};
   int code = 0;
@@ -51254,7 +52656,9 @@ START_TEST(s21_is_equal_5123) {
 }
 
 START_TEST(s21_is_equal_5124) {
-  char *example = "( 1923160657919401162621304335 == 1674689238333478128563526213 ) = False";
+  char *example =
+      "( 1923160657919401162621304335 == 1674689238333478128563526213 ) = "
+      "False";
   s21_decimal value_1 = {{0x96C3BE0F, 0x2AF13A38, 0x636CD1C, 0x0}};
   s21_decimal value_2 = {{0xE6FC1A45, 0x859F5707, 0x569453D, 0x0}};
   int code = 0;
@@ -51264,7 +52668,9 @@ START_TEST(s21_is_equal_5124) {
 }
 
 START_TEST(s21_is_equal_5125) {
-  char *example = "( 1664049267543588958060830129 == -6.7511929983438886808772420 ) = False";
+  char *example =
+      "( 1664049267543588958060830129 == -6.7511929983438886808772420 ) = "
+      "False";
   s21_decimal value_1 = {{0xAEF65DB1, 0x8CB8101C, 0x5607823, 0x0}};
   s21_decimal value_2 = {{0x98E17CBA, 0xE7E17041, 0x5959E, 0x80180000}};
   int code = 0;
@@ -51294,7 +52700,8 @@ START_TEST(s21_is_equal_5127) {
 }
 
 START_TEST(s21_is_equal_5128) {
-  char *example = "( 102947367687904561646131900 == 1489951415448682730968334 ) = False";
+  char *example =
+      "( 102947367687904561646131900 == 1489951415448682730968334 ) = False";
   s21_decimal value_1 = {{0x8485DABC, 0xFC2552BF, 0x5527F3, 0x0}};
   s21_decimal value_2 = {{0xE9B1550E, 0x6D9669A6, 0x13B82, 0x0}};
   int code = 0;
@@ -51374,7 +52781,8 @@ START_TEST(s21_is_equal_5135) {
 }
 
 START_TEST(s21_is_equal_5136) {
-  char *example = "( 0.42798685536933812744755236 == 1000151233176254390887551 ) = False";
+  char *example =
+      "( 0.42798685536933812744755236 == 1000151233176254390887551 ) = False";
   s21_decimal value_1 = {{0x7FE01824, 0x6455BEF4, 0x2366F9, 0x1A0000}};
   s21_decimal value_2 = {{0xC202647F, 0x4E96F976, 0xD3CA, 0x0}};
   int code = 0;
@@ -51464,7 +52872,8 @@ START_TEST(s21_is_equal_5144) {
 }
 
 START_TEST(s21_is_equal_5145) {
-  char *example = "( 136373592674928319 == 1521446100195673844944227516 ) = False";
+  char *example =
+      "( 136373592674928319 == 1521446100195673844944227516 ) = False";
   s21_decimal value_1 = {{0x5C2206BF, 0x1E47F0F, 0x0, 0x0}};
   s21_decimal value_2 = {{0x128C4CBC, 0x5B8AD914, 0x4EA82BE, 0x0}};
   int code = 0;
@@ -51504,7 +52913,9 @@ START_TEST(s21_is_equal_5148) {
 }
 
 START_TEST(s21_is_equal_5149) {
-  char *example = "( -9.2344031648761671633086196 == 1671248981758021175884525403 ) = False";
+  char *example =
+      "( -9.2344031648761671633086196 == 1671248981758021175884525403 ) = "
+      "False";
   s21_decimal value_1 = {{0xDDB026F4, 0xFC8A2457, 0x4C629B, 0x80190000}};
   s21_decimal value_2 = {{0x4D062F5B, 0xD6DD2174, 0x5666CBC, 0x0}};
   int code = 0;
@@ -51644,7 +53055,8 @@ START_TEST(s21_is_equal_5162) {
 }
 
 START_TEST(s21_is_equal_5163) {
-  char *example = "( 1045018217751196678703102046 == 1552027326841247328 ) = False";
+  char *example =
+      "( 1045018217751196678703102046 == 1552027326841247328 ) = False";
   s21_decimal value_1 = {{0xF691385E, 0x1940659A, 0x3606B37, 0x0}};
   s21_decimal value_2 = {{0x7A125660, 0x1589E8A1, 0x0, 0x0}};
   int code = 0;
@@ -51744,7 +53156,8 @@ START_TEST(s21_is_equal_5172) {
 }
 
 START_TEST(s21_is_equal_5173) {
-  char *example = "( 127952958635561561102667 == 1031736460592691972973678059 ) = False";
+  char *example =
+      "( 127952958635561561102667 == 1031736460592691972973678059 ) = False";
   s21_decimal value_1 = {{0xC128194B, 0x58026336, 0x1B18, 0x0}};
   s21_decimal value_2 = {{0xC9024DEB, 0x99B0DEE9, 0x3556EB1, 0x0}};
   int code = 0;
@@ -51754,7 +53167,8 @@ START_TEST(s21_is_equal_5173) {
 }
 
 START_TEST(s21_is_equal_5174) {
-  char *example = "( 1543852191743236297186456939 == 113067662525640105302 ) = False";
+  char *example =
+      "( 1543852191743236297186456939 == 113067662525640105302 ) = False";
   s21_decimal value_1 = {{0xAD15B56B, 0x3A45451, 0x4FD0B6B, 0x0}};
   s21_decimal value_2 = {{0x48865D56, 0x21210802, 0x6, 0x0}};
   int code = 0;
@@ -51964,7 +53378,8 @@ START_TEST(s21_is_equal_5194) {
 }
 
 START_TEST(s21_is_equal_5195) {
-  char *example = "( 1013663792084648814262775545 == -43.3285052373326451368668 ) = False";
+  char *example =
+      "( 1013663792084648814262775545 == -43.3285052373326451368668 ) = False";
   s21_decimal value_1 = {{0x6B8A6EF9, 0x4703EB35, 0x3467BA8, 0x0}};
   s21_decimal value_2 = {{0x35CAE2DC, 0x6E0462F2, 0x5BC0, 0x80160000}};
   int code = 0;
@@ -51974,7 +53389,8 @@ START_TEST(s21_is_equal_5195) {
 }
 
 START_TEST(s21_is_equal_5196) {
-  char *example = "( 183073469889077853 == 1813968256826989962612085689 ) = False";
+  char *example =
+      "( 183073469889077853 == 1813968256826989962612085689 ) = False";
   s21_decimal value_1 = {{0xD489625D, 0x28A6859, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB04E93B9, 0x3E5B25BB, 0x5DC7AB8, 0x0}};
   int code = 0;
@@ -52014,7 +53430,8 @@ START_TEST(s21_is_equal_5199) {
 }
 
 START_TEST(s21_is_equal_5200) {
-  char *example = "( -3.4468012406782515833461 == 1668684880978470185281243023 ) = False";
+  char *example =
+      "( -3.4468012406782515833461 == 1668684880978470185281243023 ) = False";
   s21_decimal value_1 = {{0xBCB96A75, 0x83C3289C, 0x74C, 0x80160000}};
   s21_decimal value_2 = {{0x483FC78F, 0xA853CBFE, 0x5644DC4, 0x0}};
   int code = 0;
@@ -52034,7 +53451,9 @@ START_TEST(s21_is_equal_5201) {
 }
 
 START_TEST(s21_is_equal_5202) {
-  char *example = "( 1257901011730402638819787233 == 1992574011265822190890074202 ) = False";
+  char *example =
+      "( 1257901011730402638819787233 == 1992574011265822190890074202 ) = "
+      "False";
   s21_decimal value_1 = {{0xC94881E1, 0x7C079740, 0x41082E6, 0x0}};
   s21_decimal value_2 = {{0xF177405A, 0x97B6784D, 0x67037F5, 0x0}};
   int code = 0;
@@ -52044,7 +53463,8 @@ START_TEST(s21_is_equal_5202) {
 }
 
 START_TEST(s21_is_equal_5203) {
-  char *example = "( 1448947593998428894658 == -924.4189704038861472126737 ) = False";
+  char *example =
+      "( 1448947593998428894658 == -924.4189704038861472126737 ) = False";
   s21_decimal value_1 = {{0x614575C2, 0x8C2FEFE3, 0x4E, 0x0}};
   s21_decimal value_2 = {{0xB471D711, 0x872AF732, 0x7A588, 0x80160000}};
   int code = 0;
@@ -52084,7 +53504,8 @@ START_TEST(s21_is_equal_5206) {
 }
 
 START_TEST(s21_is_equal_5207) {
-  char *example = "( -5083.3102985765795123289 == 1507894826032460960209871 ) = False";
+  char *example =
+      "( -5083.3102985765795123289 == 1507894826032460960209871 ) = False";
   s21_decimal value_1 = {{0x4AC7D059, 0xAB04503B, 0xAC3, 0x80130000}};
   s21_decimal value_2 = {{0xA7919BCF, 0x246EA355, 0x13F4F, 0x0}};
   int code = 0;
@@ -52094,7 +53515,9 @@ START_TEST(s21_is_equal_5207) {
 }
 
 START_TEST(s21_is_equal_5208) {
-  char *example = "( -6799.9351454511614537274176 == 1030273912464803497295676029 ) = False";
+  char *example =
+      "( -6799.9351454511614537274176 == 1030273912464803497295676029 ) = "
+      "False";
   s21_decimal value_1 = {{0x2A449340, 0x3A8E0193, 0x383F6C, 0x80160000}};
   s21_decimal value_2 = {{0xF58B027D, 0xB51D046D, 0x35438FC, 0x0}};
   int code = 0;
@@ -52134,7 +53557,9 @@ START_TEST(s21_is_equal_5211) {
 }
 
 START_TEST(s21_is_equal_5212) {
-  char *example = "( 1512948903874519476320900133 == 1118426528530524067839720172 ) = False";
+  char *example =
+      "( 1512948903874519476320900133 == 1118426528530524067839720172 ) = "
+      "False";
   s21_decimal value_1 = {{0x51809425, 0x6C093AC3, 0x4E37B64, 0x0}};
   s21_decimal value_2 = {{0x2E1BAEC, 0x9993C067, 0x39D2407, 0x0}};
   int code = 0;
@@ -52144,7 +53569,8 @@ START_TEST(s21_is_equal_5212) {
 }
 
 START_TEST(s21_is_equal_5213) {
-  char *example = "( -259044.84295024114287782228 == 1274619498538789547694 ) = False";
+  char *example =
+      "( -259044.84295024114287782228 == 1274619498538789547694 ) = False";
   s21_decimal value_1 = {{0xC35C2954, 0xE8513475, 0x156D7C, 0x80140000}};
   s21_decimal value_2 = {{0x8F14AEAE, 0x18E620B2, 0x45, 0x0}};
   int code = 0;
@@ -52184,7 +53610,8 @@ START_TEST(s21_is_equal_5216) {
 }
 
 START_TEST(s21_is_equal_5217) {
-  char *example = "( 140907302019536719674 == 1782184333210406542026539756 ) = False";
+  char *example =
+      "( 140907302019536719674 == 1782184333210406542026539756 ) = False";
   s21_decimal value_1 = {{0xBD2B0F3A, 0xA37B4CA0, 0x7, 0x0}};
   s21_decimal value_2 = {{0x11FD02EC, 0x4AB48FAA, 0x5C23036, 0x0}};
   int code = 0;
@@ -52404,7 +53831,8 @@ START_TEST(s21_is_equal_5238) {
 }
 
 START_TEST(s21_is_equal_5239) {
-  char *example = "( 1534850629441097366355538694 == -3.856557554207140 ) = False";
+  char *example =
+      "( 1534850629441097366355538694 == -3.856557554207140 ) = False";
   s21_decimal value_1 = {{0xEEEF7306, 0x5812F209, 0x4F59943, 0x0}};
   s21_decimal value_2 = {{0x7A4EB42A, 0x15EC0, 0x0, 0x800E0000}};
   int code = 0;
@@ -52514,7 +53942,8 @@ START_TEST(s21_is_equal_5249) {
 }
 
 START_TEST(s21_is_equal_5250) {
-  char *example = "( -5227791916810.2657219432 == 1688855716221946627342164592 ) = False";
+  char *example =
+      "( -5227791916810.2657219432 == 1688855716221946627342164592 ) = False";
   s21_decimal value_1 = {{0x4F74DB68, 0xFDDE871A, 0xB11, 0x800A0000}};
   s21_decimal value_2 = {{0x65E36270, 0xD3BE2078, 0x574FD1B, 0x0}};
   int code = 0;
@@ -52544,7 +53973,8 @@ START_TEST(s21_is_equal_5252) {
 }
 
 START_TEST(s21_is_equal_5253) {
-  char *example = "( 17234120832488174 == 1216662365858000099715877742 ) = False";
+  char *example =
+      "( 17234120832488174 == 1216662365858000099715877742 ) = False";
   s21_decimal value_1 = {{0x723C92EE, 0x3D3A57, 0x0, 0x0}};
   s21_decimal value_2 = {{0x94248B6E, 0x3217F1B, 0x3EE6647, 0x0}};
   int code = 0;
@@ -52644,7 +54074,8 @@ START_TEST(s21_is_equal_5262) {
 }
 
 START_TEST(s21_is_equal_5263) {
-  char *example = "( -59.3570498098946476 == 1085893495306888082319636863 ) = False";
+  char *example =
+      "( -59.3570498098946476 == 1085893495306888082319636863 ) = False";
   s21_decimal value_1 = {{0x2056E1AC, 0x83CC939, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x57F2797F, 0x55C144D3, 0x3823AE4, 0x0}};
   int code = 0;
@@ -52654,7 +54085,9 @@ START_TEST(s21_is_equal_5263) {
 }
 
 START_TEST(s21_is_equal_5264) {
-  char *example = "( -674925.48650318712034476236 == 1783390828573046495711310068 ) = False";
+  char *example =
+      "( -674925.48650318712034476236 == 1783390828573046495711310068 ) = "
+      "False";
   s21_decimal value_1 = {{0x9E2AC0CC, 0x64C71877, 0x37D41A, 0x80140000}};
   s21_decimal value_2 = {{0x56D7B0F4, 0x8956D24F, 0x5C32FB2, 0x0}};
   int code = 0;
@@ -52664,7 +54097,8 @@ START_TEST(s21_is_equal_5264) {
 }
 
 START_TEST(s21_is_equal_5265) {
-  char *example = "( 1177610196252795412582676356 == 139554246338746102755093184 ) = False";
+  char *example =
+      "( 1177610196252795412582676356 == 139554246338746102755093184 ) = False";
   s21_decimal value_1 = {{0x7AA6B784, 0xA7EA3FA8, 0x3CE18A8, 0x0}};
   s21_decimal value_2 = {{0x2F1BEAC0, 0xDA5E5BA6, 0x736FC2, 0x0}};
   int code = 0;
@@ -52724,7 +54158,8 @@ START_TEST(s21_is_equal_5270) {
 }
 
 START_TEST(s21_is_equal_5271) {
-  char *example = "( 1073815690562527116822864706 == 186298657784528458564529190 ) = False";
+  char *example =
+      "( 1073815690562527116822864706 == 186298657784528458564529190 ) = False";
   s21_decimal value_1 = {{0x6AA86342, 0x3A541897, 0x3783D51, 0x0}};
   s21_decimal value_2 = {{0xB0D06C26, 0x799D4486, 0x9A1A46, 0x0}};
   int code = 0;
@@ -52754,7 +54189,9 @@ START_TEST(s21_is_equal_5273) {
 }
 
 START_TEST(s21_is_equal_5274) {
-  char *example = "( -78.359064382692600827413663 == -455.76450400860221579450094 ) = False";
+  char *example =
+      "( -78.359064382692600827413663 == -455.76450400860221579450094 ) = "
+      "False";
   s21_decimal value_1 = {{0xABDD049F, 0x645266B0, 0x40D12D, 0x80180000}};
   s21_decimal value_2 = {{0xDA9BD6EE, 0x53B24F05, 0x25B330, 0x80170000}};
   int code = 0;
@@ -52774,7 +54211,9 @@ START_TEST(s21_is_equal_5275) {
 }
 
 START_TEST(s21_is_equal_5276) {
-  char *example = "( 1725135351766464814577853591 == -2564.3320850853850880482086 ) = False";
+  char *example =
+      "( 1725135351766464814577853591 == -2564.3320850853850880482086 ) = "
+      "False";
   s21_decimal value_1 = {{0xE33BA497, 0xCF930890, 0x592FF9E, 0x0}};
   s21_decimal value_2 = {{0xE3611B26, 0x3574B2D5, 0x15362F, 0x80160000}};
   int code = 0;
@@ -52894,7 +54333,8 @@ START_TEST(s21_is_equal_5287) {
 }
 
 START_TEST(s21_is_equal_5288) {
-  char *example = "( 5.3704132406604E-10 == -4.7495696252670486703336699 ) = False";
+  char *example =
+      "( 5.3704132406604E-10 == -4.7495696252670486703336699 ) = False";
   s21_decimal value_1 = {{0xF7BC2D4C, 0x30D7, 0x0, 0x170000}};
   s21_decimal value_2 = {{0x2B6D6CFB, 0xDA610421, 0x27499A, 0x80190000}};
   int code = 0;
@@ -52924,7 +54364,8 @@ START_TEST(s21_is_equal_5290) {
 }
 
 START_TEST(s21_is_equal_5291) {
-  char *example = "( 164719444019229507 == -125.88886366015791470023462 ) = False";
+  char *example =
+      "( 164719444019229507 == -125.88886366015791470023462 ) = False";
   s21_decimal value_1 = {{0x2C5DB343, 0x2493376, 0x0, 0x0}};
   s21_decimal value_2 = {{0x88591326, 0xE5B968D0, 0xA69CC, 0x80170000}};
   int code = 0;
@@ -52934,7 +54375,8 @@ START_TEST(s21_is_equal_5291) {
 }
 
 START_TEST(s21_is_equal_5292) {
-  char *example = "( 1692775032133414924869261 == 1934486901229317595663312 ) = False";
+  char *example =
+      "( 1692775032133414924869261 == 1934486901229317595663312 ) = False";
   s21_decimal value_1 = {{0xD7405E8D, 0x84B3CAD6, 0x16675, 0x0}};
   s21_decimal value_2 = {{0xBD0D0BD0, 0xBEBB7531, 0x199A4, 0x0}};
   int code = 0;
@@ -52964,7 +54406,9 @@ START_TEST(s21_is_equal_5294) {
 }
 
 START_TEST(s21_is_equal_5295) {
-  char *example = "( 1316429774210907818809853343 == -597.27975224809747898019131 ) = False";
+  char *example =
+      "( 1316429774210907818809853343 == -597.27975224809747898019131 ) = "
+      "False";
   s21_decimal value_1 = {{0x2FB859F, 0xE6358DD, 0x440ECD9, 0x0}};
   s21_decimal value_2 = {{0x26BDAD3B, 0x65C3D30, 0x3167E4, 0x80170000}};
   int code = 0;
@@ -52984,7 +54428,9 @@ START_TEST(s21_is_equal_5296) {
 }
 
 START_TEST(s21_is_equal_5297) {
-  char *example = "( -8.4764297686399317215944172 == 1359900041848693988867604846 ) = False";
+  char *example =
+      "( -8.4764297686399317215944172 == 1359900041848693988867604846 ) = "
+      "False";
   s21_decimal value_1 = {{0x413E1DEC, 0xC8F86375, 0x461D89, 0x80190000}};
   s21_decimal value_2 = {{0xD9FA816E, 0xFC9D3A91, 0x464E208, 0x0}};
   int code = 0;
@@ -53004,7 +54450,8 @@ START_TEST(s21_is_equal_5298) {
 }
 
 START_TEST(s21_is_equal_5299) {
-  char *example = "( -79228162514264337593543950335 == -79.892835111017384 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == -79.892835111017384 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x38E41BA8, 0x11BD61C, 0x0, 0x800F0000}};
   int code = 0;
@@ -53064,7 +54511,8 @@ START_TEST(s21_is_equal_5304) {
 }
 
 START_TEST(s21_is_equal_5305) {
-  char *example = "( -61789.75648873865201763912 == 151100295800325556847748730 ) = False";
+  char *example =
+      "( -61789.75648873865201763912 == 151100295800325556847748730 ) = False";
   s21_decimal value_1 = {{0xC67EC648, 0xF0ECBAB8, 0x51C72, 0x80140000}};
   s21_decimal value_2 = {{0x5A4FA67A, 0x72D09E55, 0x7CFCBB, 0x0}};
   int code = 0;
@@ -53164,7 +54612,8 @@ START_TEST(s21_is_equal_5314) {
 }
 
 START_TEST(s21_is_equal_5315) {
-  char *example = "( 1842314452008829521598827 == 1582291286660936349443282265 ) = False";
+  char *example =
+      "( 1842314452008829521598827 == 1582291286660936349443282265 ) = False";
   s21_decimal value_1 = {{0xE2E1996B, 0x110A4DB9, 0x18620, 0x0}};
   s21_decimal value_2 = {{0xA74DD559, 0x866F2735, 0x51CD736, 0x0}};
   int code = 0;
@@ -53204,7 +54653,9 @@ START_TEST(s21_is_equal_5318) {
 }
 
 START_TEST(s21_is_equal_5319) {
-  char *example = "( 177.929954807684557425324834 == 1610570507037362630036585672 ) = False";
+  char *example =
+      "( 177.929954807684557425324834 == 1610570507037362630036585672 ) = "
+      "False";
   s21_decimal value_1 = {{0x5E2FB322, 0x2D799DAA, 0x932E22, 0x180000}};
   s21_decimal value_2 = {{0xF0807CC8, 0x22304BF1, 0x5343B92, 0x0}};
   int code = 0;
@@ -53264,7 +54715,8 @@ START_TEST(s21_is_equal_5324) {
 }
 
 START_TEST(s21_is_equal_5325) {
-  char *example = "( 1199286747895987 == -1836931834.3031997009111419 ) = False";
+  char *example =
+      "( 1199286747895987 == -1836931834.3031997009111419 ) = False";
   s21_decimal value_1 = {{0xB49798B3, 0x442BE, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCD2A297B, 0xBE2387DD, 0xF31DA, 0x80100000}};
   int code = 0;
@@ -53294,7 +54746,8 @@ START_TEST(s21_is_equal_5327) {
 }
 
 START_TEST(s21_is_equal_5328) {
-  char *example = "( -675.70567784599299294956489 == -98296.531807527110 ) = False";
+  char *example =
+      "( -675.70567784599299294956489 == -98296.531807527110 ) = False";
   s21_decimal value_1 = {{0x6F3B0BC9, 0xD1C4A992, 0x37E49F, 0x80170000}};
   s21_decimal value_2 = {{0x7A1AA347, 0x22EC04, 0x0, 0x800B0000}};
   int code = 0;
@@ -53324,7 +54777,9 @@ START_TEST(s21_is_equal_5330) {
 }
 
 START_TEST(s21_is_equal_5331) {
-  char *example = "( 1899694720178071705293947021 == 1417804133067646828896357624 ) = False";
+  char *example =
+      "( 1899694720178071705293947021 == 1417804133067646828896357624 ) = "
+      "False";
   s21_decimal value_1 = {{0x5C98008D, 0x2241B9AF, 0x6236401, 0x0}};
   s21_decimal value_2 = {{0x5008CF8, 0xFC15084, 0x494C7B4, 0x0}};
   int code = 0;
@@ -53334,7 +54789,9 @@ START_TEST(s21_is_equal_5331) {
 }
 
 START_TEST(s21_is_equal_5332) {
-  char *example = "( 1677093221419161453598336505 == 1954471124312092906787384700 ) = False";
+  char *example =
+      "( 1677093221419161453598336505 == 1954471124312092906787384700 ) = "
+      "False";
   s21_decimal value_1 = {{0x17B7E5F9, 0xB4C773C0, 0x56B424D, 0x0}};
   s21_decimal value_2 = {{0xECCB2D7C, 0xF3B42AB0, 0x650B35B, 0x0}};
   int code = 0;
@@ -53364,7 +54821,8 @@ START_TEST(s21_is_equal_5334) {
 }
 
 START_TEST(s21_is_equal_5335) {
-  char *example = "( 1631572635364288296152242010 == -4.238795372370784546756 ) = False";
+  char *example =
+      "( 1631572635364288296152242010 == -4.238795372370784546756 ) = False";
   s21_decimal value_1 = {{0xD988975A, 0xCA9F49F8, 0x5459AF1, 0x0}};
   s21_decimal value_2 = {{0x223DEFC4, 0xC91A4D12, 0xE5, 0x80150000}};
   int code = 0;
@@ -53384,7 +54842,9 @@ START_TEST(s21_is_equal_5336) {
 }
 
 START_TEST(s21_is_equal_5337) {
-  char *example = "( 1812094960399926903116243123 == -923.77912450115044148055508 ) = False";
+  char *example =
+      "( 1812094960399926903116243123 == -923.77912450115044148055508 ) = "
+      "False";
   s21_decimal value_1 = {{0x4E1DA0B3, 0xA40A45B9, 0x5DAEE08, 0x0}};
   s21_decimal value_2 = {{0x7C610DD4, 0xAB1C8F0E, 0x4C69C8, 0x80170000}};
   int code = 0;
@@ -53394,7 +54854,9 @@ START_TEST(s21_is_equal_5337) {
 }
 
 START_TEST(s21_is_equal_5338) {
-  char *example = "( -4.3979047941271788286939950 == 1738346507873059762207128191 ) = False";
+  char *example =
+      "( -4.3979047941271788286939950 == 1738346507873059762207128191 ) = "
+      "False";
   s21_decimal value_1 = {{0xBD141EB, 0xE588286E, 0x3A34A, 0x80180000}};
   s21_decimal value_2 = {{0xD356FA7F, 0x4B7B3BC, 0x59DED31, 0x0}};
   int code = 0;
@@ -53404,7 +54866,8 @@ START_TEST(s21_is_equal_5338) {
 }
 
 START_TEST(s21_is_equal_5339) {
-  char *example = "( 19954602495940695640849 == 637.899090706042470913432446 ) = False";
+  char *example =
+      "( 19954602495940695640849 == 637.899090706042470913432446 ) = False";
   s21_decimal value_1 = {{0xFC4F4B11, 0xBDBD3E0A, 0x439, 0x0}};
   s21_decimal value_2 = {{0x352A5B7E, 0xFF9DC232, 0x20FA862, 0x180000}};
   int code = 0;
@@ -53484,7 +54947,8 @@ START_TEST(s21_is_equal_5346) {
 }
 
 START_TEST(s21_is_equal_5347) {
-  char *example = "( 9.9129350121181517E-10 == 1890663839969437297213092320 ) = False";
+  char *example =
+      "( 9.9129350121181517E-10 == 1890663839969437297213092320 ) = False";
   s21_decimal value_1 = {{0x64C9D14D, 0x1602D9E, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xAF82B1E0, 0x2300E6B1, 0x61BEBA4, 0x0}};
   int code = 0;
@@ -53524,7 +54988,8 @@ START_TEST(s21_is_equal_5350) {
 }
 
 START_TEST(s21_is_equal_5351) {
-  char *example = "( 0.257889761714167513686 == -85.795944771177364738309326 ) = False";
+  char *example =
+      "( 0.257889761714167513686 == -85.795944771177364738309326 ) = False";
   s21_decimal value_1 = {{0xA7168256, 0xFAF07BEB, 0xD, 0x150000}};
   s21_decimal value_2 = {{0x44AC7CCE, 0x7C4E2C94, 0x46F7FF, 0x80180000}};
   int code = 0;
@@ -53544,7 +55009,9 @@ START_TEST(s21_is_equal_5352) {
 }
 
 START_TEST(s21_is_equal_5353) {
-  char *example = "( 1249036435601124414212630714 == -67898.790872067396858860715 ) = False";
+  char *example =
+      "( 1249036435601124414212630714 == -67898.790872067396858860715 ) = "
+      "False";
   s21_decimal value_1 = {{0x856168BA, 0xD98055EF, 0x4092DC0, 0x0}};
   s21_decimal value_2 = {{0xF0D0D4AB, 0xD421355B, 0x382A20, 0x80150000}};
   int code = 0;
@@ -53574,7 +55041,8 @@ START_TEST(s21_is_equal_5355) {
 }
 
 START_TEST(s21_is_equal_5356) {
-  char *example = "( -581.78069418883171938077094 == 12047755579831006 ) = False";
+  char *example =
+      "( -581.78069418883171938077094 == 12047755579831006 ) = False";
   s21_decimal value_1 = {{0xECF609A6, 0x7676ABDD, 0x301FAF, 0x80170000}};
   s21_decimal value_2 = {{0xAFAD32DE, 0x2ACD5E, 0x0, 0x0}};
   int code = 0;
@@ -53604,7 +55072,8 @@ START_TEST(s21_is_equal_5358) {
 }
 
 START_TEST(s21_is_equal_5359) {
-  char *example = "( 1889963741941632726629295364 == 174578347757893686194 ) = False";
+  char *example =
+      "( 1889963741941632726629295364 == 174578347757893686194 ) = False";
   s21_decimal value_1 = {{0xCCF32504, 0xBF2104C2, 0x61B5763, 0x0}};
   s21_decimal value_2 = {{0x7FDD93B2, 0x76C2E254, 0x9, 0x0}};
   int code = 0;
@@ -53774,7 +55243,8 @@ START_TEST(s21_is_equal_5375) {
 }
 
 START_TEST(s21_is_equal_5376) {
-  char *example = "( -21.036883677408594747417740 == 1173041402290748 ) = False";
+  char *example =
+      "( -21.036883677408594747417740 == 1173041402290748 ) = False";
   s21_decimal value_1 = {{0xB3838A0E, 0x2CC801A6, 0x1BD79, 0x80170000}};
   s21_decimal value_2 = {{0xFC17223C, 0x42ADF, 0x0, 0x0}};
   int code = 0;
@@ -53784,7 +55254,9 @@ START_TEST(s21_is_equal_5376) {
 }
 
 START_TEST(s21_is_equal_5377) {
-  char *example = "( 1700649119608699929648589969 == 1700310888696536710012964986 ) = False";
+  char *example =
+      "( 1700649119608699929648589969 == 1700310888696536710012964986 ) = "
+      "False";
   s21_decimal value_1 = {{0xC09E6C91, 0x8179DB81, 0x57EBE75, 0x0}};
   s21_decimal value_2 = {{0xE1F7907A, 0xF8A59F3B, 0x57E76D5, 0x0}};
   int code = 0;
@@ -53864,7 +55336,8 @@ START_TEST(s21_is_equal_5384) {
 }
 
 START_TEST(s21_is_equal_5385) {
-  char *example = "( 14101618329195704142 == 1144349181877609016598960128 ) = False";
+  char *example =
+      "( 14101618329195704142 == 1144349181877609016598960128 ) = False";
   s21_decimal value_1 = {{0x25D8EF4E, 0xC3B30328, 0x0, 0x0}};
   s21_decimal value_2 = {{0x87E39800, 0x7424BE6D, 0x3B2955D, 0x0}};
   int code = 0;
@@ -53964,7 +55437,8 @@ START_TEST(s21_is_equal_5394) {
 }
 
 START_TEST(s21_is_equal_5395) {
-  char *example = "( 181342056288397697454833 == -719.43058192618997697971673 ) = False";
+  char *example =
+      "( 181342056288397697454833 == -719.43058192618997697971673 ) = False";
   s21_decimal value_1 = {{0xE47392F1, 0x9293EAE7, 0x2666, 0x0}};
   s21_decimal value_2 = {{0xD9CF85D9, 0xFFD7A86F, 0x3B8288, 0x80170000}};
   int code = 0;
@@ -53994,7 +55468,8 @@ START_TEST(s21_is_equal_5397) {
 }
 
 START_TEST(s21_is_equal_5398) {
-  char *example = "( -814.8365208718020609891737 == -774.94989495750834268633587 ) = False";
+  char *example =
+      "( -814.8365208718020609891737 == -774.94989495750834268633587 ) = False";
   s21_decimal value_1 = {{0x7AC0DD99, 0xC358DFE6, 0x6BD7B, 0x80160000}};
   s21_decimal value_2 = {{0x88C379F3, 0xCC640E1C, 0x401A33, 0x80170000}};
   int code = 0;
@@ -54014,7 +55489,8 @@ START_TEST(s21_is_equal_5399) {
 }
 
 START_TEST(s21_is_equal_5400) {
-  char *example = "( 1447478869231582650339046129 == 0.4136016173988600635 ) = False";
+  char *example =
+      "( 1447478869231582650339046129 == 0.4136016173988600635 ) = False";
   s21_decimal value_1 = {{0x75CE32F1, 0xBB7DB9A7, 0x4AD5392, 0x0}};
   s21_decimal value_2 = {{0xF3DC5B3B, 0x396614CB, 0x0, 0x130000}};
   int code = 0;
@@ -54044,7 +55520,9 @@ START_TEST(s21_is_equal_5402) {
 }
 
 START_TEST(s21_is_equal_5403) {
-  char *example = "( 1801039895626156096247847321 == 1133563551471355667015200179 ) = False";
+  char *example =
+      "( 1801039895626156096247847321 == 1133563551471355667015200179 ) = "
+      "False";
   s21_decimal value_1 = {{0xB4C85999, 0x60E878A3, 0x5D1C908, 0x0}};
   s21_decimal value_2 = {{0xC66AEDB3, 0x41FDF602, 0x3A9A96B, 0x0}};
   int code = 0;
@@ -54064,7 +55542,8 @@ START_TEST(s21_is_equal_5404) {
 }
 
 START_TEST(s21_is_equal_5405) {
-  char *example = "( 13573520644445131311688 == 1567036386367266898263244037 ) = False";
+  char *example =
+      "( 13573520644445131311688 == 1567036386367266898263244037 ) = False";
   s21_decimal value_1 = {{0x3F490A48, 0xD2707687, 0x2DF, 0x0}};
   s21_decimal value_2 = {{0x83057D05, 0xB921188E, 0x51038DC, 0x0}};
   int code = 0;
@@ -54144,7 +55623,9 @@ START_TEST(s21_is_equal_5412) {
 }
 
 START_TEST(s21_is_equal_5413) {
-  char *example = "( 1011562598822155729765305025 == 1142907544946637820007518160 ) = False";
+  char *example =
+      "( 1011562598822155729765305025 == 1142907544946637820007518160 ) = "
+      "False";
   s21_decimal value_1 = {{0x508E8AC1, 0x5CC674C6, 0x344BEB6, 0x0}};
   s21_decimal value_2 = {{0x9BDF8FD0, 0x28B837F0, 0x3B16416, 0x0}};
   int code = 0;
@@ -54154,7 +55635,8 @@ START_TEST(s21_is_equal_5413) {
 }
 
 START_TEST(s21_is_equal_5414) {
-  char *example = "( 199198629726495479079 == -4582.5915814588315953013273 ) = False";
+  char *example =
+      "( 199198629726495479079 == -4582.5915814588315953013273 ) = False";
   s21_decimal value_1 = {{0x30549527, 0xCC6FB256, 0xA, 0x0}};
   s21_decimal value_2 = {{0xF39C2219, 0xDFC60C50, 0x25E803, 0x80160000}};
   int code = 0;
@@ -54214,7 +55696,8 @@ START_TEST(s21_is_equal_5419) {
 }
 
 START_TEST(s21_is_equal_5420) {
-  char *example = "( -812.29633005420484590420946 == 146487204514969677 ) = False";
+  char *example =
+      "( -812.29633005420484590420946 == 146487204514969677 ) = False";
   s21_decimal value_1 = {{0xE6E9C3D2, 0x3A8E4D4F, 0x43310B, 0x80170000}};
   s21_decimal value_2 = {{0x1D41384D, 0x2086D56, 0x0, 0x0}};
   int code = 0;
@@ -54224,7 +55707,8 @@ START_TEST(s21_is_equal_5420) {
 }
 
 START_TEST(s21_is_equal_5421) {
-  char *example = "( 6.7287653569412952E-10 == 1721722466283585802249701945 ) = False";
+  char *example =
+      "( 6.7287653569412952E-10 == 1721722466283585802249701945 ) = False";
   s21_decimal value_1 = {{0xB0C63F58, 0xEF0DC3, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xCAB80A39, 0xEB07D45C, 0x5902CE9, 0x0}};
   int code = 0;
@@ -54254,7 +55738,8 @@ START_TEST(s21_is_equal_5423) {
 }
 
 START_TEST(s21_is_equal_5424) {
-  char *example = "( 1970176276689960429369618101 == 1613047331972856 ) = False";
+  char *example =
+      "( 1970176276689960429369618101 == 1613047331972856 ) = False";
   s21_decimal value_1 = {{0x5576EEB5, 0xF7E4A9B5, 0x65DB10D, 0x0}};
   s21_decimal value_2 = {{0xD93A66F8, 0x5BB0E, 0x0, 0x0}};
   int code = 0;
@@ -54284,7 +55769,9 @@ START_TEST(s21_is_equal_5426) {
 }
 
 START_TEST(s21_is_equal_5427) {
-  char *example = "( 1082654788203843786203147854 == 0.97684062372296260467029218 ) = False";
+  char *example =
+      "( 1082654788203843786203147854 == 0.97684062372296260467029218 ) = "
+      "False";
   s21_decimal value_1 = {{0x68DF2E4E, 0xABCEA7B0, 0x37F8D11, 0x0}};
   s21_decimal value_2 = {{0x530FF4E2, 0xA1CEDBB5, 0x50CD67, 0x1A0000}};
   int code = 0;
@@ -54334,7 +55821,8 @@ START_TEST(s21_is_equal_5431) {
 }
 
 START_TEST(s21_is_equal_5432) {
-  char *example = "( 2.1546754437716368E-10 == -59.726811731073161413608053 ) = False";
+  char *example =
+      "( 2.1546754437716368E-10 == -59.726811731073161413608053 ) = False";
   s21_decimal value_1 = {{0xB4529990, 0x4C8CA8, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x796D4275, 0xF3A42037, 0x3167A4, 0x80180000}};
   int code = 0;
@@ -54354,7 +55842,8 @@ START_TEST(s21_is_equal_5433) {
 }
 
 START_TEST(s21_is_equal_5434) {
-  char *example = "( -52033755.730366217998407278 == 137266825438258409407 ) = False";
+  char *example =
+      "( -52033755.730366217998407278 == 137266825438258409407 ) = False";
   s21_decimal value_1 = {{0xB649966E, 0x8CDEA2D1, 0x2B0A93, 0x80120000}};
   s21_decimal value_2 = {{0x1CF22FBF, 0x70F5BA77, 0x7, 0x0}};
   int code = 0;
@@ -54364,7 +55853,8 @@ START_TEST(s21_is_equal_5434) {
 }
 
 START_TEST(s21_is_equal_5435) {
-  char *example = "( 17503770211420844200 == 1773855179950215817767451601 ) = False";
+  char *example =
+      "( 17503770211420844200 == 1773855179950215817767451601 ) = False";
   s21_decimal value_1 = {{0xB1CDB0A8, 0xF2E9E244, 0x0, 0x0}};
   s21_decimal value_2 = {{0x16487BD1, 0xFD24417D, 0x5BB4C71, 0x0}};
   int code = 0;
@@ -54384,7 +55874,8 @@ START_TEST(s21_is_equal_5436) {
 }
 
 START_TEST(s21_is_equal_5437) {
-  char *example = "( 1687753586806462607559730 == 6.9228444385460368397804637 ) = False";
+  char *example =
+      "( 1687753586806462607559730 == 6.9228444385460368397804637 ) = False";
   s21_decimal value_1 = {{0xD1248C32, 0x4E264ABB, 0x16565, 0x0}};
   s21_decimal value_2 = {{0xAA47A45D, 0x7D724E06, 0x3943B1, 0x190000}};
   int code = 0;
@@ -54404,7 +55895,9 @@ START_TEST(s21_is_equal_5438) {
 }
 
 START_TEST(s21_is_equal_5439) {
-  char *example = "( 1347754892049763000903752531 == -3.2937874995081518068331687 ) = False";
+  char *example =
+      "( 1347754892049763000903752531 == -3.2937874995081518068331687 ) = "
+      "False";
   s21_decimal value_1 = {{0x9E835B53, 0x18CF7C4A, 0x45AD633, 0x0}};
   s21_decimal value_2 = {{0xCA0CF4A7, 0xC805A5A7, 0x1B3EDD, 0x80190000}};
   int code = 0;
@@ -54424,7 +55917,9 @@ START_TEST(s21_is_equal_5440) {
 }
 
 START_TEST(s21_is_equal_5441) {
-  char *example = "( 1764268497996093563744951093 == 1313048856273035468716618913 ) = False";
+  char *example =
+      "( 1764268497996093563744951093 == 1313048856273035468716618913 ) = "
+      "False";
   s21_decimal value_1 = {{0x2B61B35, 0xEB338928, 0x5B35E62, 0x0}};
   s21_decimal value_2 = {{0x214FB4A1, 0x20A690E8, 0x43E20E9, 0x0}};
   int code = 0;
@@ -54464,7 +55959,9 @@ START_TEST(s21_is_equal_5444) {
 }
 
 START_TEST(s21_is_equal_5445) {
-  char *example = "( 1917016709520073996655278949 == 1298502499290117705533822317 ) = False";
+  char *example =
+      "( 1917016709520073996655278949 == 1298502499290117705533822317 ) = "
+      "False";
   s21_decimal value_1 = {{0x82823B65, 0xEC117E6, 0x631B814, 0x0}};
   s21_decimal value_2 = {{0x4511156D, 0x8910A390, 0x4321899, 0x0}};
   int code = 0;
@@ -54474,7 +55971,9 @@ START_TEST(s21_is_equal_5445) {
 }
 
 START_TEST(s21_is_equal_5446) {
-  char *example = "( -125663.38168013998028002671 == 1341372504869529978861055329 ) = False";
+  char *example =
+      "( -125663.38168013998028002671 == 1341372504869529978861055329 ) = "
+      "False";
   s21_decimal value_1 = {{0x1188956F, 0x8E9DEFA8, 0xA6506, 0x80140000}};
   s21_decimal value_2 = {{0x11F0ED61, 0x31D0DEE6, 0x4558EAD, 0x0}};
   int code = 0;
@@ -54514,7 +56013,8 @@ START_TEST(s21_is_equal_5449) {
 }
 
 START_TEST(s21_is_equal_5450) {
-  char *example = "( 1855674386625625009795103620 == 12503366978029049532523562 ) = False";
+  char *example =
+      "( 1855674386625625009795103620 == 12503366978029049532523562 ) = False";
   s21_decimal value_1 = {{0xDC77FB84, 0x11FC9659, 0x5FEFA56, 0x0}};
   s21_decimal value_2 = {{0x66BE242A, 0xE1CDE802, 0xA57B0, 0x0}};
   int code = 0;
@@ -54554,7 +56054,8 @@ START_TEST(s21_is_equal_5453) {
 }
 
 START_TEST(s21_is_equal_5454) {
-  char *example = "( 9.971172636E-11 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 9.971172636E-11 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x5254051C, 0x2, 0x0, 0x140000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -54574,7 +56075,8 @@ START_TEST(s21_is_equal_5455) {
 }
 
 START_TEST(s21_is_equal_5456) {
-  char *example = "( 1428603848434127793488072539 == -4287431.6702273 ) = False";
+  char *example =
+      "( 1428603848434127793488072539 == -4287431.6702273 ) = False";
   s21_decimal value_1 = {{0x881B0F5B, 0xCDFEF6A1, 0x49DB6A1, 0x0}};
   s21_decimal value_2 = {{0x746AC241, 0x26FE, 0x0, 0x80070000}};
   int code = 0;
@@ -54704,7 +56206,8 @@ START_TEST(s21_is_equal_5468) {
 }
 
 START_TEST(s21_is_equal_5469) {
-  char *example = "( 1138905196092443818725175 == -9168547664424.6640622114872 ) = False";
+  char *example =
+      "( 1138905196092443818725175 == -9168547664424.6640622114872 ) = False";
   s21_decimal value_1 = {{0x4CB80F37, 0x2CA503BC, 0xF12C, 0x0}};
   s21_decimal value_2 = {{0x2D151838, 0xA5ED5BE0, 0x4BD727, 0x800D0000}};
   int code = 0;
@@ -54774,7 +56277,9 @@ START_TEST(s21_is_equal_5475) {
 }
 
 START_TEST(s21_is_equal_5476) {
-  char *example = "( 1901539020782557405395938927 == -5.4402181921407474496122990 ) = False";
+  char *example =
+      "( 1901539020782557405395938927 == -5.4402181921407474496122990 ) = "
+      "False";
   s21_decimal value_1 = {{0xC0A9EE6F, 0xDEB31A09, 0x624EA8C, 0x0}};
   s21_decimal value_2 = {{0x39C4B80B, 0xD1B2E0B5, 0x48002, 0x80180000}};
   int code = 0;
@@ -54784,7 +56289,8 @@ START_TEST(s21_is_equal_5476) {
 }
 
 START_TEST(s21_is_equal_5477) {
-  char *example = "( 4.4468337528926169E-10 == -3.8316795708644401672 ) = False";
+  char *example =
+      "( 4.4468337528926169E-10 == -3.8316795708644401672 ) = False";
   s21_decimal value_1 = {{0xA629EFD9, 0x9DFBB7, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x98F62208, 0x13C09AAF, 0x2, 0x80130000}};
   int code = 0;
@@ -54844,7 +56350,8 @@ START_TEST(s21_is_equal_5482) {
 }
 
 START_TEST(s21_is_equal_5483) {
-  char *example = "( -80.6347370076636383 == 1826034083833662714920541 ) = False";
+  char *example =
+      "( -80.6347370076636383 == 1826034083833662714920541 ) = False";
   s21_decimal value_1 = {{0x2EFD04DF, 0xB30B8A9, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xD2DFBE5D, 0x818B977F, 0x182AD, 0x0}};
   int code = 0;
@@ -54924,7 +56431,9 @@ START_TEST(s21_is_equal_5490) {
 }
 
 START_TEST(s21_is_equal_5491) {
-  char *example = "( -7177710.2429299924663614964 == 1916197459591482561254623738 ) = False";
+  char *example =
+      "( -7177710.2429299924663614964 == 1916197459591482561254623738 ) = "
+      "False";
   s21_decimal value_1 = {{0xD4253DF4, 0x84F93D0E, 0x3B5F64, 0x80130000}};
   s21_decimal value_2 = {{0xDFD789FA, 0x6E156E23, 0x6310A98, 0x0}};
   int code = 0;
@@ -55054,7 +56563,9 @@ START_TEST(s21_is_equal_5503) {
 }
 
 START_TEST(s21_is_equal_5504) {
-  char *example = "( 1049557573716530130184597789 == 1735204039056412498664922532 ) = False";
+  char *example =
+      "( 1049557573716530130184597789 == 1735204039056412498664922532 ) = "
+      "False";
   s21_decimal value_1 = {{0x2E78711D, 0x141F61B7, 0x3642C76, 0x0}};
   s21_decimal value_2 = {{0x6E8C9DA4, 0x71499868, 0x59B53BF, 0x0}};
   int code = 0;
@@ -55104,7 +56615,8 @@ START_TEST(s21_is_equal_5508) {
 }
 
 START_TEST(s21_is_equal_5509) {
-  char *example = "( -357.2801503964164305 == 1476827165003225747968850588 ) = False";
+  char *example =
+      "( -357.2801503964164305 == 1476827165003225747968850588 ) = False";
   s21_decimal value_1 = {{0xD0C3F0D1, 0x31952409, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x50257A9C, 0x8BB1FE2, 0x4C59A51, 0x0}};
   int code = 0;
@@ -55164,7 +56676,8 @@ START_TEST(s21_is_equal_5514) {
 }
 
 START_TEST(s21_is_equal_5515) {
-  char *example = "( 1783497462485632335007247946 == 0.64167891423777534769 ) = False";
+  char *example =
+      "( 1783497462485632335007247946 == 0.64167891423777534769 ) = False";
   s21_decimal value_1 = {{0xC5A4EE4A, 0x2C26B072, 0x5C34647, 0x0}};
   s21_decimal value_2 = {{0x1C183331, 0x7A822546, 0x3, 0x140000}};
   int code = 0;
@@ -55264,7 +56777,9 @@ START_TEST(s21_is_equal_5524) {
 }
 
 START_TEST(s21_is_equal_5525) {
-  char *example = "( -3.3424694099475771473690957 == 0.65714215705099449681899935 ) = False";
+  char *example =
+      "( -3.3424694099475771473690957 == 0.65714215705099449681899935 ) = "
+      "False";
   s21_decimal value_1 = {{0x298A814D, 0x4C40EE12, 0x1BA5F4, 0x80190000}};
   s21_decimal value_2 = {{0x15D8F19F, 0xC583274D, 0x365B86, 0x1A0000}};
   int code = 0;
@@ -55284,7 +56799,9 @@ START_TEST(s21_is_equal_5526) {
 }
 
 START_TEST(s21_is_equal_5527) {
-  char *example = "( 1209708945931997399934106403 == 1859103834175186044540487163 ) = False";
+  char *example =
+      "( 1209708945931997399934106403 == 1859103834175186044540487163 ) = "
+      "False";
   s21_decimal value_1 = {{0x764CFB23, 0x5CDBF158, 0x3E8A5D5, 0x0}};
   s21_decimal value_2 = {{0x8B9905FB, 0xCB60A443, 0x601D08C, 0x0}};
   int code = 0;
@@ -55294,7 +56811,8 @@ START_TEST(s21_is_equal_5527) {
 }
 
 START_TEST(s21_is_equal_5528) {
-  char *example = "( 16902368030612065737 == 1472175776016222134428157414 ) = False";
+  char *example =
+      "( 16902368030612065737 == 1472175776016222134428157414 ) = False";
   s21_decimal value_1 = {{0xD78D0DC9, 0xEA91462B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5696C5E6, 0xBB5B9326, 0x4C1C158, 0x0}};
   int code = 0;
@@ -55344,7 +56862,9 @@ START_TEST(s21_is_equal_5532) {
 }
 
 START_TEST(s21_is_equal_5533) {
-  char *example = "( 0.17618968438940907048220873 == 1828174550907868306091353163 ) = False";
+  char *example =
+      "( 0.17618968438940907048220873 == 1828174550907868306091353163 ) = "
+      "False";
   s21_decimal value_1 = {{0xFB5F38C9, 0x31636131, 0xE92F6, 0x1A0000}};
   s21_decimal value_2 = {{0xA501244B, 0xFD2558B2, 0x5E83B04, 0x0}};
   int code = 0;
@@ -55354,7 +56874,8 @@ START_TEST(s21_is_equal_5533) {
 }
 
 START_TEST(s21_is_equal_5534) {
-  char *example = "( 1871358400173388545880495 == 1036193739684101804015482068 ) = False";
+  char *example =
+      "( 1871358400173388545880495 == 1036193739684101804015482068 ) = False";
   s21_decimal value_1 = {{0xCA0F71AF, 0x8ACA3BF5, 0x18C46, 0x0}};
   s21_decimal value_2 = {{0xF2D7F4D4, 0x2F1F2767, 0x3591E8F, 0x0}};
   int code = 0;
@@ -55394,7 +56915,8 @@ START_TEST(s21_is_equal_5537) {
 }
 
 START_TEST(s21_is_equal_5538) {
-  char *example = "( 12820884130109999463213508 == 1926068557520874054387006046 ) = False";
+  char *example =
+      "( 12820884130109999463213508 == 1926068557520874054387006046 ) = False";
   s21_decimal value_1 = {{0x958B29C4, 0x85775BA9, 0xA9AED, 0x0}};
   s21_decimal value_2 = {{0xF5887A5E, 0xB893F56C, 0x63934E1, 0x0}};
   int code = 0;
@@ -55494,7 +57016,9 @@ START_TEST(s21_is_equal_5547) {
 }
 
 START_TEST(s21_is_equal_5548) {
-  char *example = "( -7.5425916422240082197582352 == 0.17117845821696823071536957 ) = False";
+  char *example =
+      "( -7.5425916422240082197582352 == 0.17117845821696823071536957 ) = "
+      "False";
   s21_decimal value_1 = {{0xD1C19210, 0x1F515B0D, 0x3E640F, 0x80190000}};
   s21_decimal value_2 = {{0x2972F73D, 0x480A571E, 0xE28D8, 0x1A0000}};
   int code = 0;
@@ -55554,7 +57078,8 @@ START_TEST(s21_is_equal_5553) {
 }
 
 START_TEST(s21_is_equal_5554) {
-  char *example = "( 1486780346312014418492056872 == -3.452309194676700561010860 ) = False";
+  char *example =
+      "( 1486780346312014418492056872 == -3.452309194676700561010860 ) = False";
   s21_decimal value_1 = {{0xFDACE528, 0x12F27084, 0x4CDD5FC, 0x0}};
   s21_decimal value_2 = {{0xD99E64DE, 0x171F00A, 0x491B, 0x80170000}};
   int code = 0;
@@ -55694,7 +57219,8 @@ START_TEST(s21_is_equal_5567) {
 }
 
 START_TEST(s21_is_equal_5568) {
-  char *example = "( 18597308551490415 == 1820079792782476325996454003 ) = False";
+  char *example =
+      "( 18597308551490415 == 1820079792782476325996454003 ) = False";
   s21_decimal value_1 = {{0x51FD6B6F, 0x421227, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCCEBE073, 0x4586AF54, 0x5E188E3, 0x0}};
   int code = 0;
@@ -55724,7 +57250,8 @@ START_TEST(s21_is_equal_5570) {
 }
 
 START_TEST(s21_is_equal_5571) {
-  char *example = "( 199181991302788644 == 1252525564554830360035871008 ) = False";
+  char *example =
+      "( 199181991302788644 == 1252525564554830360035871008 ) = False";
   s21_decimal value_1 = {{0x3D41F624, 0x2C3A2F7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x92FA4920, 0xE8C14403, 0x40C109A, 0x0}};
   int code = 0;
@@ -55794,7 +57321,8 @@ START_TEST(s21_is_equal_5577) {
 }
 
 START_TEST(s21_is_equal_5578) {
-  char *example = "( -42.5007131694782 == 1190869188837229819845723912 ) = False";
+  char *example =
+      "( -42.5007131694782 == 1190869188837229819845723912 ) = False";
   s21_decimal value_1 = {{0xAF1C96BE, 0x1828A, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xDFD4C708, 0x158C154B, 0x3D9105C, 0x0}};
   int code = 0;
@@ -55844,7 +57372,9 @@ START_TEST(s21_is_equal_5582) {
 }
 
 START_TEST(s21_is_equal_5583) {
-  char *example = "( -702.31002495645148096027627 == 1972661960451736801770921612 ) = False";
+  char *example =
+      "( -702.31002495645148096027627 == 1972661960451736801770921612 ) = "
+      "False";
   s21_decimal value_1 = {{0x1210DBEB, 0x462A2690, 0x3A17FE, 0x80170000}};
   s21_decimal value_2 = {{0xFA6DE8C, 0x27B24C52, 0x65FBF6B, 0x0}};
   int code = 0;
@@ -55854,7 +57384,9 @@ START_TEST(s21_is_equal_5583) {
 }
 
 START_TEST(s21_is_equal_5584) {
-  char *example = "( -9.8703966463312112614378028 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -9.8703966463312112614378028 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x33C0A2C, 0xBE5E1329, 0x51A560, 0x80190000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -55894,7 +57426,8 @@ START_TEST(s21_is_equal_5587) {
 }
 
 START_TEST(s21_is_equal_5588) {
-  char *example = "( -2.783762718609862186 == -541855.7900445019672934858 ) = False";
+  char *example =
+      "( -2.783762718609862186 == -541855.7900445019672934858 ) = False";
   s21_decimal value_1 = {{0x8DB76E2A, 0x26A1E971, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x5C33F9CA, 0x9CC44896, 0x47B6C, 0x80130000}};
   int code = 0;
@@ -55914,7 +57447,9 @@ START_TEST(s21_is_equal_5589) {
 }
 
 START_TEST(s21_is_equal_5590) {
-  char *example = "( -88.625007015160986867421582 == 1008844623296553970218382019 ) = False";
+  char *example =
+      "( -88.625007015160986867421582 == 1008844623296553970218382019 ) = "
+      "False";
   s21_decimal value_1 = {{0xC509518E, 0x41D28D83, 0x494F13, 0x80180000}};
   s21_decimal value_2 = {{0x77532C3, 0x9D2A017C, 0x3427F28, 0x0}};
   int code = 0;
@@ -55934,7 +57469,8 @@ START_TEST(s21_is_equal_5591) {
 }
 
 START_TEST(s21_is_equal_5592) {
-  char *example = "( -62.765439600937214884309522 == 191073624610472174806522 ) = False";
+  char *example =
+      "( -62.765439600937214884309522 == 191073624610472174806522 ) = False";
   s21_decimal value_1 = {{0xD819EA12, 0x4C722D21, 0x33EB19, 0x80180000}};
   s21_decimal value_2 = {{0x19DBE5FA, 0x1F37CFC6, 0x2876, 0x0}};
   int code = 0;
@@ -56064,7 +57600,8 @@ START_TEST(s21_is_equal_5604) {
 }
 
 START_TEST(s21_is_equal_5605) {
-  char *example = "( -8.2225048298215760881235 == 1742318902099100399236001080 ) = False";
+  char *example =
+      "( -8.2225048298215760881235 == 1742318902099100399236001080 ) = False";
   s21_decimal value_1 = {{0x17DA6653, 0x6DC5D440, 0x1169, 0x80160000}};
   s21_decimal value_2 = {{0xA0A7AD38, 0xF0E02511, 0x5A13660, 0x0}};
   int code = 0;
@@ -56074,7 +57611,8 @@ START_TEST(s21_is_equal_5605) {
 }
 
 START_TEST(s21_is_equal_5606) {
-  char *example = "( 1649847689211336100136565344 == 1360062145798543 ) = False";
+  char *example =
+      "( 1649847689211336100136565344 == 1360062145798543 ) = False";
   s21_decimal value_1 = {{0x615F3A60, 0x721682EB, 0x554B8D6, 0x0}};
   s21_decimal value_2 = {{0x2512A18F, 0x4D4F8, 0x0, 0x0}};
   int code = 0;
@@ -56104,7 +57642,8 @@ START_TEST(s21_is_equal_5608) {
 }
 
 START_TEST(s21_is_equal_5609) {
-  char *example = "( -6.0275772880543146497545133 == 5141.5739276722306801961779 ) = False";
+  char *example =
+      "( -6.0275772880543146497545133 == 5141.5739276722306801961779 ) = False";
   s21_decimal value_1 = {{0x3BD413AD, 0x31FCFA58, 0x31DBE4, 0x80190000}};
   s21_decimal value_2 = {{0xFC678B33, 0xCFAA0D2F, 0x2A87B4, 0x160000}};
   int code = 0;
@@ -56134,7 +57673,9 @@ START_TEST(s21_is_equal_5611) {
 }
 
 START_TEST(s21_is_equal_5612) {
-  char *example = "( 1168464921730492760743035759 == 1026674542239051780701422147 ) = False";
+  char *example =
+      "( 1168464921730492760743035759 == 1026674542239051780701422147 ) = "
+      "False";
   s21_decimal value_1 = {{0xF3D9436F, 0x54A67A72, 0x3C68812, 0x0}};
   s21_decimal value_2 = {{0xC09A0243, 0x74E0EC03, 0x3513ECA, 0x0}};
   int code = 0;
@@ -56144,7 +57685,9 @@ START_TEST(s21_is_equal_5612) {
 }
 
 START_TEST(s21_is_equal_5613) {
-  char *example = "( 0.59305639253864619237198649 == -8.3885818421221262525851197 ) = False";
+  char *example =
+      "( 0.59305639253864619237198649 == -8.3885818421221262525851197 ) = "
+      "False";
   s21_decimal value_1 = {{0xDCE84B39, 0x255F3677, 0x310E75, 0x1A0000}};
   s21_decimal value_2 = {{0x5C59E63D, 0x542272A4, 0x456383, 0x80190000}};
   int code = 0;
@@ -56204,7 +57747,8 @@ START_TEST(s21_is_equal_5618) {
 }
 
 START_TEST(s21_is_equal_5619) {
-  char *example = "( 156185299769916024 == -7.5102063647785235034432490 ) = False";
+  char *example =
+      "( 156185299769916024 == -7.5102063647785235034432490 ) = False";
   s21_decimal value_1 = {{0xDFEC7A78, 0x22AE1B3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7553D31, 0x1A52C364, 0x63659, 0x80180000}};
   int code = 0;
@@ -56244,7 +57788,8 @@ START_TEST(s21_is_equal_5622) {
 }
 
 START_TEST(s21_is_equal_5623) {
-  char *example = "( 1692935845898570334364932827 == 29744.207823720772 ) = False";
+  char *example =
+      "( 1692935845898570334364932827 == 29744.207823720772 ) = False";
   s21_decimal value_1 = {{0xCFA9ADB, 0x199F8C39, 0x5785D1C, 0x0}};
   s21_decimal value_2 = {{0xD755144, 0x69AC33, 0x0, 0xC0000}};
   int code = 0;
@@ -56264,7 +57809,8 @@ START_TEST(s21_is_equal_5624) {
 }
 
 START_TEST(s21_is_equal_5625) {
-  char *example = "( 1249872198847401017331173263 == 195976181871316871184715 ) = False";
+  char *example =
+      "( 1249872198847401017331173263 == 195976181871316871184715 ) = False";
   s21_decimal value_1 = {{0x95AC478F, 0xAA7D9F0C, 0x409DEBB, 0x0}};
   s21_decimal value_2 = {{0x8610814B, 0xE3DE0DA6, 0x297F, 0x0}};
   int code = 0;
@@ -56304,7 +57850,9 @@ START_TEST(s21_is_equal_5628) {
 }
 
 START_TEST(s21_is_equal_5629) {
-  char *example = "( 1872011941274247776751214020 == 1450199841499173322467075524 ) = False";
+  char *example =
+      "( 1872011941274247776751214020 == 1450199841499173322467075524 ) = "
+      "False";
   s21_decimal value_1 = {{0x8D265DC4, 0xAEB2E66E, 0x60C7DF2, 0x0}};
   s21_decimal value_2 = {{0xD6E465C4, 0xEF406E70, 0x4AF93C2, 0x0}};
   int code = 0;
@@ -56324,7 +57872,8 @@ START_TEST(s21_is_equal_5630) {
 }
 
 START_TEST(s21_is_equal_5631) {
-  char *example = "( 1138745351789519452953253186 == 134378160662388236164 ) = False";
+  char *example =
+      "( 1138745351789519452953253186 == 134378160662388236164 ) = False";
   s21_decimal value_1 = {{0x7C461542, 0x37451D3F, 0x3ADF2B5, 0x0}};
   s21_decimal value_2 = {{0xC055F84, 0x48DF2128, 0x7, 0x0}};
   int code = 0;
@@ -56354,7 +57903,8 @@ START_TEST(s21_is_equal_5633) {
 }
 
 START_TEST(s21_is_equal_5634) {
-  char *example = "( 10256017279709395 == 1611720725986200339974794604 ) = False";
+  char *example =
+      "( 10256017279709395 == 1611720725986200339974794604 ) = False";
   s21_decimal value_1 = {{0x1AC470D3, 0x246FCB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x48C52D6C, 0xA0B172AB, 0x5352F23, 0x0}};
   int code = 0;
@@ -56504,7 +58054,8 @@ START_TEST(s21_is_equal_5648) {
 }
 
 START_TEST(s21_is_equal_5649) {
-  char *example = "( 3.1723888464468290E-10 == 10714878819764815089791 ) = False";
+  char *example =
+      "( 3.1723888464468290E-10 == 10714878819764815089791 ) = False";
   s21_decimal value_1 = {{0x564828ED, 0xB4545, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xE8D507F, 0xDAD08CB7, 0x244, 0x0}};
   int code = 0;
@@ -56524,7 +58075,8 @@ START_TEST(s21_is_equal_5650) {
 }
 
 START_TEST(s21_is_equal_5651) {
-  char *example = "( 123659479664435555511977154 == 1927993810976422578111763150 ) = False";
+  char *example =
+      "( 123659479664435555511977154 == 1927993810976422578111763150 ) = False";
   s21_decimal value_1 = {{0xB36A44C2, 0xD335314C, 0x6649E9, 0x0}};
   s21_decimal value_2 = {{0x6B0DD2CE, 0xEB82A4D4, 0x63ACC91, 0x0}};
   int code = 0;
@@ -56554,7 +58106,9 @@ START_TEST(s21_is_equal_5653) {
 }
 
 START_TEST(s21_is_equal_5654) {
-  char *example = "( 1151366000429387367063519865 == 1608169778487106360935775950 ) = False";
+  char *example =
+      "( 1151366000429387367063519865 == 1608169778487106360935775950 ) = "
+      "False";
   s21_decimal value_1 = {{0x349C8279, 0xF3174ED4, 0x3B8633B, 0x0}};
   s21_decimal value_2 = {{0x80F0FECE, 0x60C8B6DD, 0x5323F32, 0x0}};
   int code = 0;
@@ -56614,7 +58168,8 @@ START_TEST(s21_is_equal_5659) {
 }
 
 START_TEST(s21_is_equal_5660) {
-  char *example = "( 10090907016292489196 == 181613574565031768432103437 ) = False";
+  char *example =
+      "( 10090907016292489196 == 181613574565031768432103437 ) = False";
   s21_decimal value_1 = {{0xA79C57EC, 0x8C0A1A77, 0x0, 0x0}};
   s21_decimal value_2 = {{0x908CD00D, 0x9AD50B08, 0x963A2B, 0x0}};
   int code = 0;
@@ -56644,7 +58199,9 @@ START_TEST(s21_is_equal_5662) {
 }
 
 START_TEST(s21_is_equal_5663) {
-  char *example = "( 1988091813133394612394020912 == 1544966309162999782694143057 ) = False";
+  char *example =
+      "( 1988091813133394612394020912 == 1544966309162999782694143057 ) = "
+      "False";
   s21_decimal value_1 = {{0x76265030, 0x251E4CE8, 0x66C82D1, 0x0}};
   s21_decimal value_2 = {{0x75674451, 0x70C95022, 0x4FDF757, 0x0}};
   int code = 0;
@@ -56724,7 +58281,8 @@ START_TEST(s21_is_equal_5670) {
 }
 
 START_TEST(s21_is_equal_5671) {
-  char *example = "( 123937853194765625951929 == 590.656337555987266609034184 ) = False";
+  char *example =
+      "( 123937853194765625951929 == 590.656337555987266609034184 ) = False";
   s21_decimal value_1 = {{0x153F86B9, 0xAF3A5DC0, 0x1A3E, 0x0}};
   s21_decimal value_2 = {{0x88333C8, 0x37F15CAC, 0x1E89458, 0x180000}};
   int code = 0;
@@ -56754,7 +58312,8 @@ START_TEST(s21_is_equal_5673) {
 }
 
 START_TEST(s21_is_equal_5674) {
-  char *example = "( -63.567851524119223795865694 == 8.2846523983328298E-10 ) = False";
+  char *example =
+      "( -63.567851524119223795865694 == 8.2846523983328298E-10 ) = False";
   s21_decimal value_1 = {{0x5F1A585E, 0x22D9B298, 0x349504, 0x80180000}};
   s21_decimal value_2 = {{0x80E6F42A, 0x1265479, 0x0, 0x1A0000}};
   int code = 0;
@@ -56774,7 +58333,8 @@ START_TEST(s21_is_equal_5675) {
 }
 
 START_TEST(s21_is_equal_5676) {
-  char *example = "( 183720387042469701468224040 == -79.1440219478430 ) = False";
+  char *example =
+      "( 183720387042469701468224040 == -79.1440219478430 ) = False";
   s21_decimal value_1 = {{0x32E6FA28, 0x23584DEE, 0x97F84E, 0x0}};
   s21_decimal value_2 = {{0x275075C3, 0x47FB, 0x0, 0x800C0000}};
   int code = 0;
@@ -56794,7 +58354,9 @@ START_TEST(s21_is_equal_5677) {
 }
 
 START_TEST(s21_is_equal_5678) {
-  char *example = "( -31.903404381608285918736459 == -26.383445902436195328455733 ) = False";
+  char *example =
+      "( -31.903404381608285918736459 == -26.383445902436195328455733 ) = "
+      "False";
   s21_decimal value_1 = {{0xC4B8304B, 0x45AD7F5, 0x1A63CF, 0x80180000}};
   s21_decimal value_2 = {{0x9B35F435, 0x77DF7A64, 0x15D2E9, 0x80180000}};
   int code = 0;
@@ -56814,7 +58376,8 @@ START_TEST(s21_is_equal_5679) {
 }
 
 START_TEST(s21_is_equal_5680) {
-  char *example = "( 1302373615295717006 == 1956052614370341850559891097 ) = False";
+  char *example =
+      "( 1302373615295717006 == 1956052614370341850559891097 ) = False";
   s21_decimal value_1 = {{0x208ADE8E, 0x1212F5E7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x466D4699, 0xB326FEAA, 0x6520240, 0x0}};
   int code = 0;
@@ -56844,7 +58407,9 @@ START_TEST(s21_is_equal_5682) {
 }
 
 START_TEST(s21_is_equal_5683) {
-  char *example = "( -5.3570171048388376085751456 == 1953252744997721325672359963 ) = False";
+  char *example =
+      "( -5.3570171048388376085751456 == 1953252744997721325672359963 ) = "
+      "False";
   s21_decimal value_1 = {{0x94E566A0, 0xCAA34ABD, 0x2C4FEC, 0x80190000}};
   s21_decimal value_2 = {{0x52A8681B, 0x7A1C0801, 0x64FB15B, 0x0}};
   int code = 0;
@@ -56924,7 +58489,9 @@ START_TEST(s21_is_equal_5690) {
 }
 
 START_TEST(s21_is_equal_5691) {
-  char *example = "( 1742691205071841467093279020 == 1902483951187488211088841723 ) = False";
+  char *example =
+      "( 1742691205071841467093279020 == 1902483951187488211088841723 ) = "
+      "False";
   s21_decimal value_1 = {{0x8930E12C, 0x86880F61, 0x5A18537, 0x0}};
   s21_decimal value_2 = {{0xE7E21BFB, 0xA65A36C0, 0x625B2A5, 0x0}};
   int code = 0;
@@ -56954,7 +58521,9 @@ START_TEST(s21_is_equal_5693) {
 }
 
 START_TEST(s21_is_equal_5694) {
-  char *example = "( 1579421304106377316694062303 == 1007781887726268841861591791 ) = False";
+  char *example =
+      "( 1579421304106377316694062303 == 1007781887726268841861591791 ) = "
+      "False";
   s21_decimal value_1 = {{0xC9574DF, 0x7587A709, 0x51A7778, 0x0}};
   s21_decimal value_2 = {{0x633432EF, 0x9A6C8187, 0x3419E1D, 0x0}};
   int code = 0;
@@ -56984,7 +58553,8 @@ START_TEST(s21_is_equal_5696) {
 }
 
 START_TEST(s21_is_equal_5697) {
-  char *example = "( -6.8538848038874289025454237 == -818.275158852777302 ) = False";
+  char *example =
+      "( -6.8538848038874289025454237 == -818.275158852777302 ) = False";
   s21_decimal value_1 = {{0xD7C2109D, 0x65ACF004, 0x38B1AA, 0x80190000}};
   s21_decimal value_2 = {{0xEBF23556, 0xB5B18EB, 0x0, 0x800F0000}};
   int code = 0;
@@ -57154,7 +58724,8 @@ START_TEST(s21_is_equal_5713) {
 }
 
 START_TEST(s21_is_equal_5714) {
-  char *example = "( 0.513226879444004150074671 == -2.1449232661281269227793025 ) = False";
+  char *example =
+      "( 0.513226879444004150074671 == -2.1449232661281269227793025 ) = False";
   s21_decimal value_1 = {{0x701E5D2F, 0x15BAEDC6, 0x6CAE, 0x180000}};
   s21_decimal value_2 = {{0xEB312A81, 0x3B838228, 0x11BE0D, 0x80190000}};
   int code = 0;
@@ -57184,7 +58755,9 @@ START_TEST(s21_is_equal_5716) {
 }
 
 START_TEST(s21_is_equal_5717) {
-  char *example = "( -9.1380676670141394973064661 == 1252847549112807133622162846 ) = False";
+  char *example =
+      "( -9.1380676670141394973064661 == 1252847549112807133622162846 ) = "
+      "False";
   s21_decimal value_1 = {{0x9377DD5, 0x68900EA1, 0x4B969C, 0x80190000}};
   s21_decimal value_2 = {{0x7881D59E, 0xBA20C096, 0x40C54C9, 0x0}};
   int code = 0;
@@ -57214,7 +58787,9 @@ START_TEST(s21_is_equal_5719) {
 }
 
 START_TEST(s21_is_equal_5720) {
-  char *example = "( 1589192433774914505556989726 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1589192433774914505556989726 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x8829971E, 0x75B665E0, 0x5228C96, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -57224,7 +58799,8 @@ START_TEST(s21_is_equal_5720) {
 }
 
 START_TEST(s21_is_equal_5721) {
-  char *example = "( 1636222015921131648733798451 == 5.40757481365E-11 ) = False";
+  char *example =
+      "( 1636222015921131648733798451 == 5.40757481365E-11 ) = False";
   s21_decimal value_1 = {{0x6BC1E033, 0x376D8911, 0x549737D, 0x0}};
   s21_decimal value_2 = {{0xE7A85795, 0x7D, 0x0, 0x160000}};
   int code = 0;
@@ -57244,7 +58820,8 @@ START_TEST(s21_is_equal_5722) {
 }
 
 START_TEST(s21_is_equal_5723) {
-  char *example = "( 151556153251343480 == 1419597127699154476923623989 ) = False";
+  char *example =
+      "( 151556153251343480 == 1419597127699154476923623989 ) = False";
   s21_decimal value_1 = {{0xB6122C78, 0x21A6F84, 0x0, 0x0}};
   s21_decimal value_2 = {{0x80E41A35, 0x7ECAB006, 0x4964362, 0x0}};
   int code = 0;
@@ -57254,7 +58831,8 @@ START_TEST(s21_is_equal_5723) {
 }
 
 START_TEST(s21_is_equal_5724) {
-  char *example = "( 1923676843186913476121894153 == 18442807966623744366 ) = False";
+  char *example =
+      "( 1923676843186913476121894153 == 18442807966623744366 ) = False";
   s21_decimal value_1 = {{0x6BC69D09, 0xA08DE9E9, 0x6373A6A, 0x0}};
   s21_decimal value_2 = {{0xA75A416E, 0xFFF20421, 0x0, 0x0}};
   int code = 0;
@@ -57314,7 +58892,8 @@ START_TEST(s21_is_equal_5729) {
 }
 
 START_TEST(s21_is_equal_5730) {
-  char *example = "( 10883157728098873646204 == 1592652615495956497625372445 ) = False";
+  char *example =
+      "( 10883157728098873646204 == 1592652615495956497625372445 ) = False";
   s21_decimal value_1 = {{0xD8A21C7C, 0xFA275443, 0x24D, 0x0}};
   s21_decimal value_2 = {{0xE9BDD71D, 0x4969E119, 0x525694F, 0x0}};
   int code = 0;
@@ -57484,7 +59063,9 @@ START_TEST(s21_is_equal_5746) {
 }
 
 START_TEST(s21_is_equal_5747) {
-  char *example = "( 1621150329376739960254860563 == 0.61214654634670008585259931 ) = False";
+  char *example =
+      "( 1621150329376739960254860563 == 0.61214654634670008585259931 ) = "
+      "False";
   s21_decimal value_1 = {{0x75F38D13, 0x73A8AE7E, 0x53CFBEF, 0x0}};
   s21_decimal value_2 = {{0xB3898B9B, 0x13BFA3FF, 0x32A2B5, 0x1A0000}};
   int code = 0;
@@ -57594,7 +59175,8 @@ START_TEST(s21_is_equal_5757) {
 }
 
 START_TEST(s21_is_equal_5758) {
-  char *example = "( -8.17951396931374958767619 == 1757089811636281760906248688 ) = False";
+  char *example =
+      "( -8.17951396931374958767619 == 1757089811636281760906248688 ) = False";
   s21_decimal value_1 = {{0xD5BBEE03, 0x3BEC78D9, 0xAD35, 0x80170000}};
   s21_decimal value_2 = {{0x9C4C81F0, 0x8D2936BB, 0x5AD6E3D, 0x0}};
   int code = 0;
@@ -57624,7 +59206,9 @@ START_TEST(s21_is_equal_5760) {
 }
 
 START_TEST(s21_is_equal_5761) {
-  char *example = "( 1786775244163715766349620679 == -30.499680165707222789204825 ) = False";
+  char *example =
+      "( 1786775244163715766349620679 == -30.499680165707222789204825 ) = "
+      "False";
   s21_decimal value_1 = {{0xFD1665C7, 0x12C289B4, 0x5C5FC60, 0x0}};
   s21_decimal value_2 = {{0xC8912B59, 0xF98BBF95, 0x193A8E, 0x80180000}};
   int code = 0;
@@ -57684,7 +59268,8 @@ START_TEST(s21_is_equal_5766) {
 }
 
 START_TEST(s21_is_equal_5767) {
-  char *example = "( -1.6044808741178060 == 1043489575385031013140685457 ) = False";
+  char *example =
+      "( -1.6044808741178060 == 1043489575385031013140685457 ) = False";
   s21_decimal value_1 = {{0x508CFAAE, 0x5B344, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xC9FE6291, 0x3ADC204C, 0x35F2783, 0x0}};
   int code = 0;
@@ -57694,7 +59279,8 @@ START_TEST(s21_is_equal_5767) {
 }
 
 START_TEST(s21_is_equal_5768) {
-  char *example = "( 1328397123662414602 == 1390073668069806888994820842 ) = False";
+  char *example =
+      "( 1328397123662414602 == 1390073668069806888994820842 ) = False";
   s21_decimal value_1 = {{0x548C830A, 0x126F6A25, 0x0, 0x0}};
   s21_decimal value_2 = {{0x57F952EA, 0x8AB3FD74, 0x47DD78C, 0x0}};
   int code = 0;
@@ -57764,7 +59350,8 @@ START_TEST(s21_is_equal_5774) {
 }
 
 START_TEST(s21_is_equal_5775) {
-  char *example = "( -6.7820360748685034429 == -5.3304954854886156874536 ) = False";
+  char *example =
+      "( -6.7820360748685034429 == -5.3304954854886156874536 ) = False";
   s21_decimal value_1 = {{0xF43783BD, 0xAD3252C5, 0x3, 0x80130000}};
   s21_decimal value_2 = {{0x9B4D3328, 0xAADA42C3, 0xB49, 0x80160000}};
   int code = 0;
@@ -57794,7 +59381,8 @@ START_TEST(s21_is_equal_5777) {
 }
 
 START_TEST(s21_is_equal_5778) {
-  char *example = "( 1200731959367024624337180961 == -12.829801339455833928 ) = False";
+  char *example =
+      "( 1200731959367024624337180961 == -12.829801339455833928 ) = False";
   s21_decimal value_1 = {{0xF7EC5921, 0xF22827D8, 0x3E138E1, 0x0}};
   s21_decimal value_2 = {{0xD1188748, 0xB20C9C57, 0x0, 0x80120000}};
   int code = 0;
@@ -57814,7 +59402,9 @@ START_TEST(s21_is_equal_5779) {
 }
 
 START_TEST(s21_is_equal_5780) {
-  char *example = "( -614.24768306486709702652107 == 1289401195016848773209023540 ) = False";
+  char *example =
+      "( -614.24768306486709702652107 == 1289401195016848773209023540 ) = "
+      "False";
   s21_decimal value_1 = {{0x263470CB, 0x5CB39B58, 0x32CF33, 0x80170000}};
   s21_decimal value_2 = {{0x98D26434, 0xD7961228, 0x42A9152, 0x0}};
   int code = 0;
@@ -57914,7 +59504,8 @@ START_TEST(s21_is_equal_5789) {
 }
 
 START_TEST(s21_is_equal_5790) {
-  char *example = "( 1234614684427211079 == -5.3429453467921880756798757 ) = False";
+  char *example =
+      "( 1234614684427211079 == -5.3429453467921880756798757 ) = False";
   s21_decimal value_1 = {{0xA3C3D147, 0x11223B83, 0x0, 0x0}};
   s21_decimal value_2 = {{0x48384525, 0x79EA5228, 0x2C3220, 0x80190000}};
   int code = 0;
@@ -57954,7 +59545,8 @@ START_TEST(s21_is_equal_5793) {
 }
 
 START_TEST(s21_is_equal_5794) {
-  char *example = "( 0.361132144776892173029224 == 167376059965771996 ) = False";
+  char *example =
+      "( 0.361132144776892173029224 == 167376059965771996 ) = False";
   s21_decimal value_1 = {{0x3CD88F68, 0x3469A7A, 0x4C79, 0x180000}};
   s21_decimal value_2 = {{0xC62A10DC, 0x252A3A3, 0x0, 0x0}};
   int code = 0;
@@ -58004,7 +59596,9 @@ START_TEST(s21_is_equal_5798) {
 }
 
 START_TEST(s21_is_equal_5799) {
-  char *example = "( 1932503711094748006216295381 == 1247445321227685724078254886 ) = False";
+  char *example =
+      "( 1932503711094748006216295381 == 1247445321227685724078254886 ) = "
+      "False";
   s21_decimal value_1 = {{0xA4CEE3D5, 0x18630AE8, 0x63E8794, 0x0}};
   s21_decimal value_2 = {{0xCFA0AB26, 0x5DD948B1, 0x407DCD2, 0x0}};
   int code = 0;
@@ -58014,7 +59608,8 @@ START_TEST(s21_is_equal_5799) {
 }
 
 START_TEST(s21_is_equal_5800) {
-  char *example = "( 179434740062331915 == -75.641291639109881342447748 ) = False";
+  char *example =
+      "( 179434740062331915 == -75.641291639109881342447748 ) = False";
   s21_decimal value_1 = {{0x5C7A40B, 0x27D7AF2, 0x0, 0x0}};
   s21_decimal value_2 = {{0xEA27D084, 0xA2E06754, 0x3E91AA, 0x80180000}};
   int code = 0;
@@ -58164,7 +59759,8 @@ START_TEST(s21_is_equal_5814) {
 }
 
 START_TEST(s21_is_equal_5815) {
-  char *example = "( 16356030800127154334351930 == 1608286711073143292448875426 ) = False";
+  char *example =
+      "( 16356030800127154334351930 == 1608286711073143292448875426 ) = False";
   s21_decimal value_1 = {{0x9D76423A, 0x34D27E79, 0xD8786, 0x0}};
   s21_decimal value_2 = {{0xC19A23A2, 0x4E66A00F, 0x53257F5, 0x0}};
   int code = 0;
@@ -58194,7 +59790,9 @@ START_TEST(s21_is_equal_5817) {
 }
 
 START_TEST(s21_is_equal_5818) {
-  char *example = "( 1810181843269671254697151661 == 1476850547386385250376815380 ) = False";
+  char *example =
+      "( 1810181843269671254697151661 == 1476850547386385250376815380 ) = "
+      "False";
   s21_decimal value_1 = {{0xBDC78CAD, 0x5A74772E, 0x5D958EA, 0x0}};
   s21_decimal value_2 = {{0xA9151314, 0x987B9E46, 0x4C59F44, 0x0}};
   int code = 0;
@@ -58214,7 +59812,9 @@ START_TEST(s21_is_equal_5819) {
 }
 
 START_TEST(s21_is_equal_5820) {
-  char *example = "( 1683477069164932089869163264 == -51779.575426902740724185379 ) = False";
+  char *example =
+      "( 1683477069164932089869163264 == -51779.575426902740724185379 ) = "
+      "False";
   s21_decimal value_1 = {{0x5CADB00, 0xC9313B32, 0x5708A22, 0x0}};
   s21_decimal value_2 = {{0x63FD7923, 0x688DA3C0, 0x2AD4C0, 0x80150000}};
   int code = 0;
@@ -58464,7 +60064,8 @@ START_TEST(s21_is_equal_5844) {
 }
 
 START_TEST(s21_is_equal_5845) {
-  char *example = "( 13734034317648366603844003 == 1284539061874134154494079053 ) = False";
+  char *example =
+      "( 13734034317648366603844003 == 1284539061874134154494079053 ) = False";
   s21_decimal value_1 = {{0x5DEFB9A3, 0x7E016CC3, 0xB5C4B, 0x0}};
   s21_decimal value_2 = {{0xF65BF04D, 0x1389CCA7, 0x4268BBA, 0x0}};
   int code = 0;
@@ -58474,7 +60075,8 @@ START_TEST(s21_is_equal_5845) {
 }
 
 START_TEST(s21_is_equal_5846) {
-  char *example = "( 10064449151181872 == 1440994352453180081032488259 ) = False";
+  char *example =
+      "( 10064449151181872 == 1440994352453180081032488259 ) = False";
   s21_decimal value_1 = {{0x2C842430, 0x23C190, 0x0, 0x0}};
   s21_decimal value_2 = {{0x27F96543, 0x5F9AAEDC, 0x4A7F66C, 0x0}};
   int code = 0;
@@ -58554,7 +60156,8 @@ START_TEST(s21_is_equal_5853) {
 }
 
 START_TEST(s21_is_equal_5854) {
-  char *example = "( 1446058755625823503222134298 == -88.88812252139130917 ) = False";
+  char *example =
+      "( 1446058755625823503222134298 == -88.88812252139130917 ) = False";
   s21_decimal value_1 = {{0x93D1561A, 0x3835180F, 0x4AC26DA, 0x0}};
   s21_decimal value_2 = {{0xFBE49025, 0x7B5B67A5, 0x0, 0x80110000}};
   int code = 0;
@@ -58674,7 +60277,8 @@ START_TEST(s21_is_equal_5865) {
 }
 
 START_TEST(s21_is_equal_5866) {
-  char *example = "( -9.3119683358460502702968665 == 1671927264139229 ) = False";
+  char *example =
+      "( -9.3119683358460502702968665 == 1671927264139229 ) = False";
   s21_decimal value_1 = {{0x22CA4F59, 0x26612C8B, 0x4D06DC, 0x80190000}};
   s21_decimal value_2 = {{0xE6AB57DD, 0x5F09B, 0x0, 0x0}};
   int code = 0;
@@ -58784,7 +60388,8 @@ START_TEST(s21_is_equal_5876) {
 }
 
 START_TEST(s21_is_equal_5877) {
-  char *example = "( 1375312470164278692854411042 == -9.0433914046977295 ) = False";
+  char *example =
+      "( 1375312470164278692854411042 == -9.0433914046977295 ) = False";
   s21_decimal value_1 = {{0x2F58AF22, 0x666189EA, 0x471A1BE, 0x0}};
   s21_decimal value_2 = {{0x6A6B150F, 0x141492A, 0x0, 0x80100000}};
   int code = 0;
@@ -58794,7 +60399,8 @@ START_TEST(s21_is_equal_5877) {
 }
 
 START_TEST(s21_is_equal_5878) {
-  char *example = "( 1531247917466711214 == 1337647560064180475091909674 ) = False";
+  char *example =
+      "( 1531247917466711214 == 1337647560064180475091909674 ) = False";
   s21_decimal value_1 = {{0x37A8F4AE, 0x154015DE, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFD7E7C2A, 0x883620EE, 0x45279E3, 0x0}};
   int code = 0;
@@ -58864,7 +60470,8 @@ START_TEST(s21_is_equal_5884) {
 }
 
 START_TEST(s21_is_equal_5885) {
-  char *example = "( 168537822473982394188 == -21.600985171288090625263389 ) = False";
+  char *example =
+      "( 168537822473982394188 == -21.600985171288090625263389 ) = False";
   s21_decimal value_1 = {{0xA3913F4C, 0x22EEA096, 0x9, 0x0}};
   s21_decimal value_2 = {{0x6FBD471D, 0xC0A59A1B, 0x11DE2F, 0x80180000}};
   int code = 0;
@@ -58874,7 +60481,8 @@ START_TEST(s21_is_equal_5885) {
 }
 
 START_TEST(s21_is_equal_5886) {
-  char *example = "( -1.3993997909927221984629481 == 135326635365943764190030572 ) = False";
+  char *example =
+      "( -1.3993997909927221984629481 == 135326635365943764190030572 ) = False";
   s21_decimal value_1 = {{0x65EE12E9, 0x2593B43D, 0xB9358, 0x80190000}};
   s21_decimal value_2 = {{0xC41CEAEC, 0x9A5AA2D3, 0x6FF087, 0x0}};
   int code = 0;
@@ -58904,7 +60512,8 @@ START_TEST(s21_is_equal_5888) {
 }
 
 START_TEST(s21_is_equal_5889) {
-  char *example = "( 12872914613904726 == 1146439775452031991221134069 ) = False";
+  char *example =
+      "( 12872914613904726 == 1146439775452031991221134069 ) = False";
   s21_decimal value_1 = {{0xFEC92556, 0x2DBBD8, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB5F522F5, 0xC22968A6, 0x3B45010, 0x0}};
   int code = 0;
@@ -58924,7 +60533,8 @@ START_TEST(s21_is_equal_5890) {
 }
 
 START_TEST(s21_is_equal_5891) {
-  char *example = "( 0.91008336394709396812818631 == -2.5937522862907 ) = False";
+  char *example =
+      "( 0.91008336394709396812818631 == -2.5937522862907 ) = False";
   s21_decimal value_1 = {{0xCDC968C7, 0xCD3A5C8D, 0x4B47C3, 0x1A0000}};
   s21_decimal value_2 = {{0xCD62B3B, 0x1797, 0x0, 0x800D0000}};
   int code = 0;
@@ -59024,7 +60634,9 @@ START_TEST(s21_is_equal_5900) {
 }
 
 START_TEST(s21_is_equal_5901) {
-  char *example = "( 1389346446369297088955504369 == 1283060517338011011090536963 ) = False";
+  char *example =
+      "( 1389346446369297088955504369 == 1283060517338011011090536963 ) = "
+      "False";
   s21_decimal value_1 = {{0xFD3F56F1, 0xC641117D, 0x47D3D8D, 0x0}};
   s21_decimal value_2 = {{0x63ACDA03, 0x4339958, 0x42552A2, 0x0}};
   int code = 0;
@@ -59044,7 +60656,8 @@ START_TEST(s21_is_equal_5902) {
 }
 
 START_TEST(s21_is_equal_5903) {
-  char *example = "( 15538792618538758646 == -489676.22750318278842857824 ) = False";
+  char *example =
+      "( 15538792618538758646 == -489676.22750318278842857824 ) = False";
   s21_decimal value_1 = {{0xFA76F1F6, 0xD7A4E18E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA2413960, 0x25FB65FA, 0x28814C, 0x80140000}};
   int code = 0;
@@ -59094,7 +60707,8 @@ START_TEST(s21_is_equal_5907) {
 }
 
 START_TEST(s21_is_equal_5908) {
-  char *example = "( 1091631914153334934454075421 == -9.379582238429285803 ) = False";
+  char *example =
+      "( 1091631914153334934454075421 == -9.379582238429285803 ) = False";
   s21_decimal value_1 = {{0xFE33001D, 0xA4DBBA27, 0x386FA0C, 0x0}};
   s21_decimal value_2 = {{0xC7240DAB, 0x822AF859, 0x0, 0x80120000}};
   int code = 0;
@@ -59184,7 +60798,8 @@ START_TEST(s21_is_equal_5916) {
 }
 
 START_TEST(s21_is_equal_5917) {
-  char *example = "( 1837844678256888529350815 == 1869528797603265292 ) = False";
+  char *example =
+      "( 1837844678256888529350815 == 1869528797603265292 ) = False";
   s21_decimal value_1 = {{0x4B10F09F, 0xC277F436, 0x1852D, 0x0}};
   s21_decimal value_2 = {{0x46817B0C, 0x19F1E689, 0x0, 0x0}};
   int code = 0;
@@ -59344,7 +60959,8 @@ START_TEST(s21_is_equal_5932) {
 }
 
 START_TEST(s21_is_equal_5933) {
-  char *example = "( 1272754061126174881650 == 1536871969847118940660643808 ) = False";
+  char *example =
+      "( 1272754061126174881650 == 1536871969847118940660643808 ) = False";
   s21_decimal value_1 = {{0x1575B772, 0xFF02C341, 0x44, 0x0}};
   s21_decimal value_2 = {{0x407937E0, 0x6D50EE33, 0x4F7454C, 0x0}};
   int code = 0;
@@ -59354,7 +60970,9 @@ START_TEST(s21_is_equal_5933) {
 }
 
 START_TEST(s21_is_equal_5934) {
-  char *example = "( 0.73045149308037241171670860 == 1848051517346332262297968101 ) = False";
+  char *example =
+      "( 0.73045149308037241171670860 == 1848051517346332262297968101 ) = "
+      "False";
   s21_decimal value_1 = {{0xF654BEE, 0x8C3FAB3C, 0x60ACA, 0x190000}};
   s21_decimal value_2 = {{0x2B5B1DE5, 0x7FA455FA, 0x5F8AC21, 0x0}};
   int code = 0;
@@ -59364,7 +60982,8 @@ START_TEST(s21_is_equal_5934) {
 }
 
 START_TEST(s21_is_equal_5935) {
-  char *example = "( -87.267892044067216080 == 185645068832434870238006 ) = False";
+  char *example =
+      "( -87.267892044067216080 == 185645068832434870238006 ) = False";
   s21_decimal value_1 = {{0x7E605C48, 0x791BC88B, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xBE0B3B36, 0xD6DF715E, 0x274F, 0x0}};
   int code = 0;
@@ -59384,7 +61003,9 @@ START_TEST(s21_is_equal_5936) {
 }
 
 START_TEST(s21_is_equal_5937) {
-  char *example = "( -1.6605586235935844789567052 == -8.5061555608027084987367052 ) = False";
+  char *example =
+      "( -1.6605586235935844789567052 == -8.5061555608027084987367052 ) = "
+      "False";
   s21_decimal value_1 = {{0xF57EBE4C, 0xA234E91C, 0xDBC5E, 0x80190000}};
   s21_decimal value_2 = {{0xF568FE8C, 0x2B54AFF1, 0x465C7C, 0x80190000}};
   int code = 0;
@@ -59394,7 +61015,8 @@ START_TEST(s21_is_equal_5937) {
 }
 
 START_TEST(s21_is_equal_5938) {
-  char *example = "( -9020.6227369344574650954719 == -64.886333868702 ) = False";
+  char *example =
+      "( -9020.6227369344574650954719 == -64.886333868702 ) = False";
   s21_decimal value_1 = {{0x3835B3DF, 0x62600F00, 0x4A9DE9, 0x80160000}};
   s21_decimal value_2 = {{0x86E18A9E, 0x3B03, 0x0, 0x800C0000}};
   int code = 0;
@@ -59414,7 +61036,9 @@ START_TEST(s21_is_equal_5939) {
 }
 
 START_TEST(s21_is_equal_5940) {
-  char *example = "( 1345419912977256804335563141 == -586.42354385256727948256200 ) = False";
+  char *example =
+      "( 1345419912977256804335563141 == -586.42354385256727948256200 ) = "
+      "False";
   s21_decimal value_1 = {{0x59E13185, 0xA0B4E13D, 0x458E7BF, 0x0}};
   s21_decimal value_2 = {{0x7B5CB6C2, 0x1581D0D0, 0x7C2E, 0x80150000}};
   int code = 0;
@@ -59454,7 +61078,9 @@ START_TEST(s21_is_equal_5943) {
 }
 
 START_TEST(s21_is_equal_5944) {
-  char *example = "( -2.1294151791376500808532464 == 0.22930121713334408930184906 ) = False";
+  char *example =
+      "( -2.1294151791376500808532464 == 0.22930121713334408930184906 ) = "
+      "False";
   s21_decimal value_1 = {{0xAB04C1F0, 0x481BAD6F, 0x119D36, 0x80190000}};
   s21_decimal value_2 = {{0x47DCCECA, 0x638B8606, 0x12F7A4, 0x1A0000}};
   int code = 0;
@@ -59504,7 +61130,9 @@ START_TEST(s21_is_equal_5948) {
 }
 
 START_TEST(s21_is_equal_5949) {
-  char *example = "( -979813.48872711222795265576 == -48353.694443271547061408337 ) = False";
+  char *example =
+      "( -979813.48872711222795265576 == -48353.694443271547061408337 ) = "
+      "False";
   s21_decimal value_1 = {{0x62456628, 0x90C767BB, 0x510C5B, 0x80140000}};
   s21_decimal value_2 = {{0x915A1251, 0x735268D, 0x27FF4B, 0x80150000}};
   int code = 0;
@@ -59514,7 +61142,8 @@ START_TEST(s21_is_equal_5949) {
 }
 
 START_TEST(s21_is_equal_5950) {
-  char *example = "( 123422866555427313145 == -1.427890696735274210783 ) = False";
+  char *example =
+      "( 123422866555427313145 == -1.427890696735274210783 ) = False";
   s21_decimal value_1 = {{0xB4AF55F9, 0xB0D61B35, 0x6, 0x0}};
   s21_decimal value_2 = {{0x3F0A95DF, 0x67F6CF64, 0x4D, 0x80150000}};
   int code = 0;
@@ -59534,7 +61163,9 @@ START_TEST(s21_is_equal_5951) {
 }
 
 START_TEST(s21_is_equal_5952) {
-  char *example = "( 1996233148560656768850780446 == 0.67210776720788264742367115 ) = False";
+  char *example =
+      "( 1996233148560656768850780446 == 0.67210776720788264742367115 ) = "
+      "False";
   s21_decimal value_1 = {{0xDB4E11E, 0xD2A67014, 0x6733ECF, 0x0}};
   s21_decimal value_2 = {{0xC79D2F8B, 0x81BAC030, 0x37986F, 0x1A0000}};
   int code = 0;
@@ -59554,7 +61185,8 @@ START_TEST(s21_is_equal_5953) {
 }
 
 START_TEST(s21_is_equal_5954) {
-  char *example = "( 1103098736787196180532942959 == 12018226610129728 ) = False";
+  char *example =
+      "( 1103098736787196180532942959 == 12018226610129728 ) = False";
   s21_decimal value_1 = {{0x8CF5D86F, 0x58336CDA, 0x390763E, 0x0}};
   s21_decimal value_2 = {{0x6FED4B40, 0x2AB283, 0x0, 0x0}};
   int code = 0;
@@ -59614,7 +61246,8 @@ START_TEST(s21_is_equal_5959) {
 }
 
 START_TEST(s21_is_equal_5960) {
-  char *example = "( 1429845827317473559263445204 == 0.667352910936041 ) = False";
+  char *example =
+      "( 1429845827317473559263445204 == 0.667352910936041 ) = False";
   s21_decimal value_1 = {{0x70A600D4, 0x9D669B76, 0x49EBDA1, 0x0}};
   s21_decimal value_2 = {{0x353237E9, 0x25EF4, 0x0, 0xF0000}};
   int code = 0;
@@ -59644,7 +61277,8 @@ START_TEST(s21_is_equal_5962) {
 }
 
 START_TEST(s21_is_equal_5963) {
-  char *example = "( 1129480603781480 == 1741041348120455625777634456 ) = False";
+  char *example =
+      "( 1129480603781480 == 1741041348120455625777634456 ) = False";
   s21_decimal value_1 = {{0xB22B4968, 0x40341, 0x0, 0x0}};
   s21_decimal value_2 = {{0x23C5C98, 0x99D8CEB9, 0x5A027D8, 0x0}};
   int code = 0;
@@ -59704,7 +61338,8 @@ START_TEST(s21_is_equal_5968) {
 }
 
 START_TEST(s21_is_equal_5969) {
-  char *example = "( 1969306767978426768957518117 == 187218923782473151 ) = False";
+  char *example =
+      "( 1969306767978426768957518117 == 187218923782473151 ) = False";
   s21_decimal value_1 = {{0x534E3125, 0xCE7F5C70, 0x65CF8ED, 0x0}};
   s21_decimal value_2 = {{0x874905BF, 0x299229E, 0x0, 0x0}};
   int code = 0;
@@ -59734,7 +61369,9 @@ START_TEST(s21_is_equal_5971) {
 }
 
 START_TEST(s21_is_equal_5972) {
-  char *example = "( 1985547241155315763054780849 == 1334112039647651922703795444 ) = False";
+  char *example =
+      "( 1985547241155315763054780849 == 1334112039647651922703795444 ) = "
+      "False";
   s21_decimal value_1 = {{0xBAEA21B1, 0x9F251655, 0x66A67FB, 0x0}};
   s21_decimal value_2 = {{0xE317C4F4, 0x9614A632, 0x44F8D36, 0x0}};
   int code = 0;
@@ -59834,7 +61471,9 @@ START_TEST(s21_is_equal_5981) {
 }
 
 START_TEST(s21_is_equal_5982) {
-  char *example = "( 1763638361254567647242220074 == -7.8150193673733809094466843 ) = False";
+  char *example =
+      "( 1763638361254567647242220074 == -7.8150193673733809094466843 ) = "
+      "False";
   s21_decimal value_1 = {{0xCAF1F22A, 0x233666E0, 0x5B2D8F3, 0x0}};
   s21_decimal value_2 = {{0x1E631D1B, 0x7CF1951D, 0x40A4F2, 0x80190000}};
   int code = 0;
@@ -59864,7 +61503,8 @@ START_TEST(s21_is_equal_5984) {
 }
 
 START_TEST(s21_is_equal_5985) {
-  char *example = "( 1314474911947866003419751940 == -22.152809200154401 ) = False";
+  char *example =
+      "( 1314474911947866003419751940 == -22.152809200154401 ) = False";
   s21_decimal value_1 = {{0xEF9CE604, 0xC2B5447E, 0x43F4EE3, 0x0}};
   s21_decimal value_2 = {{0xD326F721, 0x4EB3DC, 0x0, 0x800F0000}};
   int code = 0;
@@ -59884,7 +61524,8 @@ START_TEST(s21_is_equal_5986) {
 }
 
 START_TEST(s21_is_equal_5987) {
-  char *example = "( 1340559703366251110621925554 == 117058260861110573965158 ) = False";
+  char *example =
+      "( 1340559703366251110621925554 == 117058260861110573965158 ) = False";
   s21_decimal value_1 = {{0x5A3250B2, 0x230605B2, 0x454E28F, 0x0}};
   s21_decimal value_2 = {{0xF3419F66, 0xBDB493EE, 0x18C9, 0x0}};
   int code = 0;
@@ -59904,7 +61545,8 @@ START_TEST(s21_is_equal_5988) {
 }
 
 START_TEST(s21_is_equal_5989) {
-  char *example = "( 1569106779639721642133083423 == 154158667056992388 ) = False";
+  char *example =
+      "( 1569106779639721642133083423 == 154158667056992388 ) = False";
   s21_decimal value_1 = {{0xFF04D51F, 0xF7A4A475, 0x511EF48, 0x0}};
   s21_decimal value_2 = {{0xACFAD084, 0x223AE7D, 0x0, 0x0}};
   int code = 0;
@@ -59924,7 +61566,8 @@ START_TEST(s21_is_equal_5990) {
 }
 
 START_TEST(s21_is_equal_5991) {
-  char *example = "( 190999814916216654231132717 == 14666446068699707877963 ) = False";
+  char *example =
+      "( 190999814916216654231132717 == 14666446068699707877963 ) = False";
   s21_decimal value_1 = {{0xD5165A2D, 0xB6BD34F4, 0x9DFDC8, 0x0}};
   s21_decimal value_2 = {{0x1E6A2A4B, 0x11D39152, 0x31B, 0x0}};
   int code = 0;
@@ -59944,7 +61587,8 @@ START_TEST(s21_is_equal_5992) {
 }
 
 START_TEST(s21_is_equal_5993) {
-  char *example = "( -9916.3502930931668813543 == 1384795194070229280268433 ) = False";
+  char *example =
+      "( -9916.3502930931668813543 == 1384795194070229280268433 ) = False";
   s21_decimal value_1 = {{0x353906E7, 0xAA0D4CED, 0x14FF, 0x80130000}};
   s21_decimal value_2 = {{0xCA46A091, 0xE5DC4F7C, 0x1253D, 0x0}};
   int code = 0;
@@ -59984,7 +61628,8 @@ START_TEST(s21_is_equal_5996) {
 }
 
 START_TEST(s21_is_equal_5997) {
-  char *example = "( 1865541178991018141463675690 == 15723522999723152570955 ) = False";
+  char *example =
+      "( 1865541178991018141463675690 == 15723522999723152570955 ) = False";
   s21_decimal value_1 = {{0x8491032A, 0xF4C700FB, 0x60723B5, 0x0}};
   s21_decimal value_2 = {{0xF6EEFA4B, 0x5FB73D73, 0x354, 0x0}};
   int code = 0;
@@ -60054,7 +61699,8 @@ START_TEST(s21_is_equal_6003) {
 }
 
 START_TEST(s21_is_equal_6004) {
-  char *example = "( -28.991405245849154150727 == -7051.32378986972074104 ) = False";
+  char *example =
+      "( -28.991405245849154150727 == -7051.32378986972074104 ) = False";
   s21_decimal value_1 = {{0x3B24E147, 0xA091FC0D, 0x623, 0x80150000}};
   s21_decimal value_2 = {{0xB8965078, 0x39AD72BC, 0x26, 0x80110000}};
   int code = 0;
@@ -60074,7 +61720,8 @@ START_TEST(s21_is_equal_6005) {
 }
 
 START_TEST(s21_is_equal_6006) {
-  char *example = "( 1646405602291020140 == 1440931093272467852632790667 ) = False";
+  char *example =
+      "( 1646405602291020140 == 1440931093272467852632790667 ) = False";
   s21_decimal value_1 = {{0x18C4F16C, 0x16D9352C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9018168B, 0x161E0E97, 0x4A7E907, 0x0}};
   int code = 0;
@@ -60084,7 +61731,8 @@ START_TEST(s21_is_equal_6006) {
 }
 
 START_TEST(s21_is_equal_6007) {
-  char *example = "( -39.205983285189 == 1737529394601444240749646787 ) = False";
+  char *example =
+      "( -39.205983285189 == 1737529394601444240749646787 ) = False";
   s21_decimal value_1 = {{0x5AB4EFC5, 0x23A8, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0xC39E53C3, 0x381E8113, 0x59D4029, 0x0}};
   int code = 0;
@@ -60134,7 +61782,9 @@ START_TEST(s21_is_equal_6011) {
 }
 
 START_TEST(s21_is_equal_6012) {
-  char *example = "( 1432347629011587970235849071 == 1970722638857841137460965504 ) = False";
+  char *example =
+      "( 1432347629011587970235849071 == 1970722638857841137460965504 ) = "
+      "False";
   s21_decimal value_1 = {{0x3527596F, 0x8E72EF0E, 0x4A0CF68, 0x0}};
   s21_decimal value_2 = {{0x2C8BF080, 0x52201262, 0x65E24C0, 0x0}};
   int code = 0;
@@ -60174,7 +61824,9 @@ START_TEST(s21_is_equal_6015) {
 }
 
 START_TEST(s21_is_equal_6016) {
-  char *example = "( 1738719532904409778093415986 == 1461722186546330150022952576 ) = False";
+  char *example =
+      "( 1738719532904409778093415986 == 1461722186546330150022952576 ) = "
+      "False";
   s21_decimal value_1 = {{0xEBD5DE32, 0xBEF31D41, 0x59E3C2E, 0x0}};
   s21_decimal value_2 = {{0xCD1C3680, 0x82DD531D, 0x4B91BB6, 0x0}};
   int code = 0;
@@ -60224,7 +61876,8 @@ START_TEST(s21_is_equal_6020) {
 }
 
 START_TEST(s21_is_equal_6021) {
-  char *example = "( 1305980198052478488446 == 1486126848866994052766950589 ) = False";
+  char *example =
+      "( 1305980198052478488446 == 1486126848866994052766950589 ) = False";
   s21_decimal value_1 = {{0xC4468F7E, 0xCC1DB6BF, 0x46, 0x0}};
   s21_decimal value_2 = {{0xF58CE4BD, 0xE8127459, 0x4CD4B99, 0x0}};
   int code = 0;
@@ -60294,7 +61947,8 @@ START_TEST(s21_is_equal_6027) {
 }
 
 START_TEST(s21_is_equal_6028) {
-  char *example = "( 1070006242249979 == 1619335861756456612006598898 ) = False";
+  char *example =
+      "( 1070006242249979 == 1619335861756456612006598898 ) = False";
   s21_decimal value_1 = {{0x3DFA0CFB, 0x3CD2A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x605A18F2, 0xF70A5C41, 0x53B7BB4, 0x0}};
   int code = 0;
@@ -60314,7 +61968,9 @@ START_TEST(s21_is_equal_6029) {
 }
 
 START_TEST(s21_is_equal_6030) {
-  char *example = "( 1142274079485083637186552186 == 1169457313143009080375713440 ) = False";
+  char *example =
+      "( 1142274079485083637186552186 == 1169457313143009080375713440 ) = "
+      "False";
   s21_decimal value_1 = {{0x9DF7E17A, 0xED75E844, 0x3B0DDF1, 0x0}};
   s21_decimal value_2 = {{0x81571EA0, 0xFA1872FE, 0x3C75A37, 0x0}};
   int code = 0;
@@ -60334,7 +61990,9 @@ START_TEST(s21_is_equal_6031) {
 }
 
 START_TEST(s21_is_equal_6032) {
-  char *example = "( -5362.3814750414413189460935 == 1800095877759228891774668248 ) = False";
+  char *example =
+      "( -5362.3814750414413189460935 == 1800095877759228891774668248 ) = "
+      "False";
   s21_decimal value_1 = {{0x30D5B3C7, 0xD28D42E8, 0x2C5B48, 0x80160000}};
   s21_decimal value_2 = {{0xA4654DD8, 0x11439B5D, 0x5D10121, 0x0}};
   int code = 0;
@@ -60414,7 +62072,9 @@ START_TEST(s21_is_equal_6039) {
 }
 
 START_TEST(s21_is_equal_6040) {
-  char *example = "( 1373900641489551314507547869 == 1073130703452428717324320619 ) = False";
+  char *example =
+      "( 1373900641489551314507547869 == 1073130703452428717324320619 ) = "
+      "False";
   s21_decimal value_1 = {{0xF17044DD, 0x39CB644, 0x47076C7, 0x0}};
   s21_decimal value_2 = {{0x293F6B, 0x903F59, 0x377AC44, 0x0}};
   int code = 0;
@@ -60424,7 +62084,8 @@ START_TEST(s21_is_equal_6040) {
 }
 
 START_TEST(s21_is_equal_6041) {
-  char *example = "( 18181316108490955840486793 == 1212764638912845749420588392 ) = False";
+  char *example =
+      "( 18181316108490955840486793 == 1212764638912845749420588392 ) = False";
   s21_decimal value_1 = {{0x6CC6FD89, 0x1F053B51, 0xF0A0B, 0x0}};
   s21_decimal value_2 = {{0x31A87D68, 0xCFA737A5, 0x3EB2CE6, 0x0}};
   int code = 0;
@@ -60434,7 +62095,8 @@ START_TEST(s21_is_equal_6041) {
 }
 
 START_TEST(s21_is_equal_6042) {
-  char *example = "( -808.616679280554 == 1239166797777953125859252284 ) = False";
+  char *example =
+      "( -808.616679280554 == 1239166797777953125859252284 ) = False";
   s21_decimal value_1 = {{0xBDED8FAA, 0x2DF6E, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0xBBD2D83C, 0xB60D25F3, 0x40103C6, 0x0}};
   int code = 0;
@@ -60524,7 +62186,9 @@ START_TEST(s21_is_equal_6050) {
 }
 
 START_TEST(s21_is_equal_6051) {
-  char *example = "( 1365326977950060131358935706 == 1931074312874727284932558979 ) = False";
+  char *example =
+      "( 1365326977950060131358935706 == 1931074312874727284932558979 ) = "
+      "False";
   s21_decimal value_1 = {{0xAE4D0A9A, 0xC846874E, 0x4695F3B, 0x0}};
   s21_decimal value_2 = {{0x8CDF4083, 0x43325268, 0x63D58E4, 0x0}};
   int code = 0;
@@ -60554,7 +62218,8 @@ START_TEST(s21_is_equal_6053) {
 }
 
 START_TEST(s21_is_equal_6054) {
-  char *example = "( 125666776119340135 == 0.10890278057163429147204805 ) = False";
+  char *example =
+      "( 125666776119340135 == 0.10890278057163429147204805 ) = False";
   s21_decimal value_1 = {{0x5EA96C67, 0x1BE7544, 0x0, 0x0}};
   s21_decimal value_2 = {{0x94E5CC5, 0x280BA01E, 0x9021B, 0x1A0000}};
   int code = 0;
@@ -60574,7 +62239,9 @@ START_TEST(s21_is_equal_6055) {
 }
 
 START_TEST(s21_is_equal_6056) {
-  char *example = "( -50.240566243653440126075761 == 1713575885900632143433028444 ) = False";
+  char *example =
+      "( -50.240566243653440126075761 == 1713575885900632143433028444 ) = "
+      "False";
   s21_decimal value_1 = {{0x8A1C4371, 0x8DAC82A1, 0x298EDA, 0x80180000}};
   s21_decimal value_2 = {{0xADB3D35C, 0xE91DDCBC, 0x5896FCE, 0x0}};
   int code = 0;
@@ -60584,7 +62251,8 @@ START_TEST(s21_is_equal_6056) {
 }
 
 START_TEST(s21_is_equal_6057) {
-  char *example = "( -25.255241765548267 == 1875691246903807701441703 ) = False";
+  char *example =
+      "( -25.255241765548267 == 1875691246903807701441703 ) = False";
   s21_decimal value_1 = {{0x3226F0EB, 0x59B982, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xD8885CA7, 0x6D1E14DE, 0x18D31, 0x0}};
   int code = 0;
@@ -60624,7 +62292,9 @@ START_TEST(s21_is_equal_6060) {
 }
 
 START_TEST(s21_is_equal_6061) {
-  char *example = "( 79228162514264337593543950335 == -655.12585522554912220361462 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -655.12585522554912220361462 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x330BB2F6, 0x609F9189, 0x3630D4, 0x80170000}};
   int code = 0;
@@ -60674,7 +62344,8 @@ START_TEST(s21_is_equal_6065) {
 }
 
 START_TEST(s21_is_equal_6066) {
-  char *example = "( 1890919776758369177362266039 == -35.75574270829965 ) = False";
+  char *example =
+      "( 1890919776758369177362266039 == -35.75574270829965 ) = False";
   s21_decimal value_1 = {{0xEAC877B7, 0x7F73D903, 0x61C21D6, 0x0}};
   s21_decimal value_2 = {{0x4247E58D, 0xCB3F7, 0x0, 0x800E0000}};
   int code = 0;
@@ -60684,7 +62355,8 @@ START_TEST(s21_is_equal_6066) {
 }
 
 START_TEST(s21_is_equal_6067) {
-  char *example = "( -62.41681439875698382929 == -858.74744728499843476089129 ) = False";
+  char *example =
+      "( -62.41681439875698382929 == -858.74744728499843476089129 ) = False";
   s21_decimal value_1 = {{0xABADD851, 0x5CBB07B8, 0x152, 0x80140000}};
   s21_decimal value_2 = {{0x7331E929, 0x3D64714E, 0x4708AF, 0x80170000}};
   int code = 0;
@@ -60854,7 +62526,8 @@ START_TEST(s21_is_equal_6083) {
 }
 
 START_TEST(s21_is_equal_6084) {
-  char *example = "( 164084335592730213 == 0.36682541488367330266143300 ) = False";
+  char *example =
+      "( 164084335592730213 == 0.36682541488367330266143300 ) = False";
   s21_decimal value_1 = {{0x7835EE65, 0x246F1D5, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6C547939, 0xA545305B, 0x4DAD, 0x180000}};
   int code = 0;
@@ -60894,7 +62567,8 @@ START_TEST(s21_is_equal_6087) {
 }
 
 START_TEST(s21_is_equal_6088) {
-  char *example = "( -96.138109200105076852 == -211.41978245149540926830655 ) = False";
+  char *example =
+      "( -96.138109200105076852 == -211.41978245149540926830655 ) = False";
   s21_decimal value_1 = {{0xB9F9F874, 0x362F2CF4, 0x5, 0x80120000}};
   s21_decimal value_2 = {{0xB6F3383F, 0xEFEC7204, 0x117CFC, 0x80170000}};
   int code = 0;
@@ -60904,7 +62578,8 @@ START_TEST(s21_is_equal_6088) {
 }
 
 START_TEST(s21_is_equal_6089) {
-  char *example = "( 13782222451527200129874 == 1665842400212315350851095024 ) = False";
+  char *example =
+      "( 13782222451527200129874 == 1665842400212315350851095024 ) = False";
   s21_decimal value_1 = {{0xE419C352, 0x22C23A51, 0x2EB, 0x0}};
   s21_decimal value_2 = {{0xB35789F0, 0x776826B7, 0x561F3D9, 0x0}};
   int code = 0;
@@ -60934,7 +62609,9 @@ START_TEST(s21_is_equal_6091) {
 }
 
 START_TEST(s21_is_equal_6092) {
-  char *example = "( -27.138560755816557642548628 == 1499838759825155488684990174 ) = False";
+  char *example =
+      "( -27.138560755816557642548628 == 1499838759825155488684990174 ) = "
+      "False";
   s21_decimal value_1 = {{0xC1A48594, 0x539425DF, 0x1672D0, 0x80180000}};
   s21_decimal value_2 = {{0x4FC45EDE, 0x16CA0255, 0x4D8A336, 0x0}};
   int code = 0;
@@ -61114,7 +62791,8 @@ START_TEST(s21_is_equal_6109) {
 }
 
 START_TEST(s21_is_equal_6110) {
-  char *example = "( -4069.6126882593365332596551 == 15666315928632947 ) = False";
+  char *example =
+      "( -4069.6126882593365332596551 == 15666315928632947 ) = False";
   s21_decimal value_1 = {{0x23FC1747, 0x7579FD80, 0x21A9BD, 0x80160000}};
   s21_decimal value_2 = {{0x6BDD7E73, 0x37A86E, 0x0, 0x0}};
   int code = 0;
@@ -61214,7 +62892,8 @@ START_TEST(s21_is_equal_6119) {
 }
 
 START_TEST(s21_is_equal_6120) {
-  char *example = "( 1857774181497216 == 1225634878462779142604871239 ) = False";
+  char *example =
+      "( 1857774181497216 == 1225634878462779142604871239 ) = False";
   s21_decimal value_1 = {{0xC2293980, 0x699A2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7EA45647, 0xE529B476, 0x3F5D247, 0x0}};
   int code = 0;
@@ -61224,7 +62903,8 @@ START_TEST(s21_is_equal_6120) {
 }
 
 START_TEST(s21_is_equal_6121) {
-  char *example = "( 1973953429330749966621475019 == 0.693812493429266166 ) = False";
+  char *example =
+      "( 1973953429330749966621475019 == 0.693812493429266166 ) = False";
   s21_decimal value_1 = {{0xB72600CB, 0xD2C2836A, 0x660D0E5, 0x0}};
   s21_decimal value_2 = {{0x6B9456F6, 0x9A0EAC9, 0x0, 0x120000}};
   int code = 0;
@@ -61334,7 +63014,8 @@ START_TEST(s21_is_equal_6131) {
 }
 
 START_TEST(s21_is_equal_6132) {
-  char *example = "( -857.536886011688736594 == 0.61343760207736256884203289 ) = False";
+  char *example =
+      "( -857.536886011688736594 == 0.61343760207736256884203289 ) = False";
   s21_decimal value_1 = {{0x9595752, 0x7CB70667, 0x2E, 0x80120000}};
   s21_decimal value_2 = {{0xFCCD5F19, 0xE77F151B, 0x32BE0B, 0x1A0000}};
   int code = 0;
@@ -61344,7 +63025,8 @@ START_TEST(s21_is_equal_6132) {
 }
 
 START_TEST(s21_is_equal_6133) {
-  char *example = "( 1987579931244333774 == -9.3265487435300510165200359 ) = False";
+  char *example =
+      "( 1987579931244333774 == -9.3265487435300510165200359 ) = False";
   s21_decimal value_1 = {{0xB4838ACE, 0x1B954D6A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x56CD6DE7, 0x346B636C, 0x4D25BC, 0x80190000}};
   int code = 0;
@@ -61364,7 +63046,8 @@ START_TEST(s21_is_equal_6134) {
 }
 
 START_TEST(s21_is_equal_6135) {
-  char *example = "( 1413282794204825913646 == 1849839028626089594516587117 ) = False";
+  char *example =
+      "( 1413282794204825913646 == 1849839028626089594516587117 ) = False";
   s21_decimal value_1 = {{0xA624092E, 0x9D3D1D6F, 0x4C, 0x0}};
   s21_decimal value_2 = {{0xD0AC26D, 0xADE2F09E, 0x5FA26A6, 0x0}};
   int code = 0;
@@ -61424,7 +63107,8 @@ START_TEST(s21_is_equal_6140) {
 }
 
 START_TEST(s21_is_equal_6141) {
-  char *example = "( 1475021021412331639607730 == -778.3844038575297690369907 ) = False";
+  char *example =
+      "( 1475021021412331639607730 == -778.3844038575297690369907 ) = False";
   s21_decimal value_1 = {{0x644511B2, 0xCBF4A35, 0x13859, 0x0}};
   s21_decimal value_2 = {{0x94007F73, 0x7E57F06, 0x6704B, 0x80160000}};
   int code = 0;
@@ -61474,7 +63158,8 @@ START_TEST(s21_is_equal_6145) {
 }
 
 START_TEST(s21_is_equal_6146) {
-  char *example = "( 169821908917028079222683 == -9.4469661696649549398836776 ) = False";
+  char *example =
+      "( 169821908917028079222683 == -9.4469661696649549398836776 ) = False";
   s21_decimal value_1 = {{0x784B3F9B, 0x106AC500, 0x23F6, 0x0}};
   s21_decimal value_2 = {{0x2B2E8628, 0x9F4D57B4, 0x4E24BA, 0x80190000}};
   int code = 0;
@@ -61614,7 +63299,8 @@ START_TEST(s21_is_equal_6159) {
 }
 
 START_TEST(s21_is_equal_6160) {
-  char *example = "( -705.39854470523839640497499 == 0.15762051176591386120905 ) = False";
+  char *example =
+      "( -705.39854470523839640497499 == 0.15762051176591386120905 ) = False";
   s21_decimal value_1 = {{0x9897ED5B, 0x2C5606D6, 0x3A5965, 0x80170000}};
   s21_decimal value_2 = {{0x16A92C9, 0x7666D22F, 0x356, 0x170000}};
   int code = 0;
@@ -61674,7 +63360,8 @@ START_TEST(s21_is_equal_6165) {
 }
 
 START_TEST(s21_is_equal_6166) {
-  char *example = "( 0.9909118528266094667416238 == -1.4167912134644898830404 ) = False";
+  char *example =
+      "( 0.9909118528266094667416238 == -1.4167912134644898830404 ) = False";
   s21_decimal value_1 = {{0x26C0C2AE, 0x644C39F8, 0x83256, 0x190000}};
   s21_decimal value_2 = {{0xD7819844, 0xB473DA4, 0x300, 0x80160000}};
   int code = 0;
@@ -61704,7 +63391,9 @@ START_TEST(s21_is_equal_6168) {
 }
 
 START_TEST(s21_is_equal_6169) {
-  char *example = "( -93.499376590690811309535383 == -5.7720120891245259709615682 ) = False";
+  char *example =
+      "( -93.499376590690811309535383 == -5.7720120891245259709615682 ) = "
+      "False";
   s21_decimal value_1 = {{0x15F13097, 0x5C7D110C, 0x4D5743, 0x80180000}};
   s21_decimal value_2 = {{0xEA9E0E42, 0x5F85878, 0x2FBEB6, 0x80190000}};
   int code = 0;
@@ -61724,7 +63413,8 @@ START_TEST(s21_is_equal_6170) {
 }
 
 START_TEST(s21_is_equal_6171) {
-  char *example = "( 14935945811477493331949 == 194725312342550710659 ) = False";
+  char *example =
+      "( 14935945811477493331949 == 194725312342550710659 ) = False";
   s21_decimal value_1 = {{0x9F7637ED, 0xADE2FD81, 0x329, 0x0}};
   s21_decimal value_2 = {{0x6AB90983, 0x8E5B47E0, 0xA, 0x0}};
   int code = 0;
@@ -61764,7 +63454,9 @@ START_TEST(s21_is_equal_6174) {
 }
 
 START_TEST(s21_is_equal_6175) {
-  char *example = "( -525011.31585566124126237722 == 1128765505046216424986141057 ) = False";
+  char *example =
+      "( -525011.31585566124126237722 == 1128765505046216424986141057 ) = "
+      "False";
   s21_decimal value_1 = {{0xA057F41A, 0xBD08BB9, 0x2B6D8C, 0x80140000}};
   s21_decimal value_2 = {{0xDA7A6181, 0xA3CFD954, 0x3A5B164, 0x0}};
   int code = 0;
@@ -61774,7 +63466,9 @@ START_TEST(s21_is_equal_6175) {
 }
 
 START_TEST(s21_is_equal_6176) {
-  char *example = "( -6.2991514167548677027640744 == -4087.7223544555208643668126 ) = False";
+  char *example =
+      "( -6.2991514167548677027640744 == -4087.7223544555208643668126 ) = "
+      "False";
   s21_decimal value_1 = {{0x32F9B5A8, 0xD34F67DE, 0x341AF8, 0x80190000}};
   s21_decimal value_2 = {{0x5E07689E, 0xBA86208F, 0x21D016, 0x80160000}};
   int code = 0;
@@ -61834,7 +63528,8 @@ START_TEST(s21_is_equal_6181) {
 }
 
 START_TEST(s21_is_equal_6182) {
-  char *example = "( 105588324162682804 == 1340374524999996419132897972 ) = False";
+  char *example =
+      "( 105588324162682804 == 1340374524999996419132897972 ) = False";
   s21_decimal value_1 = {{0x7A253FB4, 0x1772005, 0x0, 0x0}};
   s21_decimal value_2 = {{0x85843AB4, 0x98F33616, 0x454BB58, 0x0}};
   int code = 0;
@@ -61864,7 +63559,8 @@ START_TEST(s21_is_equal_6184) {
 }
 
 START_TEST(s21_is_equal_6185) {
-  char *example = "( 1392244254066355002394 == 1613697073288543930514633995 ) = False";
+  char *example =
+      "( 1392244254066355002394 == 1613697073288543930514633995 ) = False";
   s21_decimal value_1 = {{0xABC8DC1A, 0x794534A5, 0x4B, 0x0}};
   s21_decimal value_2 = {{0x5A8F750B, 0xA1308B62, 0x536D1A5, 0x0}};
   int code = 0;
@@ -61904,7 +63600,8 @@ START_TEST(s21_is_equal_6188) {
 }
 
 START_TEST(s21_is_equal_6189) {
-  char *example = "( 148601843030814217422720 == 1851850766496568648554395614 ) = False";
+  char *example =
+      "( 148601843030814217422720 == 1851850766496568648554395614 ) = False";
   s21_decimal value_1 = {{0xC6674780, 0xB8D86E37, 0x1F77, 0x0}};
   s21_decimal value_2 = {{0x372637DE, 0x352D8D45, 0x5FBD0A7, 0x0}};
   int code = 0;
@@ -62014,7 +63711,8 @@ START_TEST(s21_is_equal_6199) {
 }
 
 START_TEST(s21_is_equal_6200) {
-  char *example = "( -897.50278838717183276033 == 1879363996661435605872827936 ) = False";
+  char *example =
+      "( -897.50278838717183276033 == 1879363996661435605872827936 ) = False";
   s21_decimal value_1 = {{0xCBEDB401, 0x5F534E74, 0x1301, 0x80140000}};
   s21_decimal value_2 = {{0x7EC85E20, 0x675042E0, 0x61292CE, 0x0}};
   int code = 0;
@@ -62184,7 +63882,8 @@ START_TEST(s21_is_equal_6216) {
 }
 
 START_TEST(s21_is_equal_6217) {
-  char *example = "( 1594899579235765034723926365 == 1966934206040699 ) = False";
+  char *example =
+      "( 1594899579235765034723926365 == 1966934206040699 ) = False";
   s21_decimal value_1 = {{0xA639615D, 0x6F6810D9, 0x527451F, 0x0}};
   s21_decimal value_2 = {{0x8EA5CA7B, 0x6FCEA, 0x0, 0x0}};
   int code = 0;
@@ -62214,7 +63913,9 @@ START_TEST(s21_is_equal_6219) {
 }
 
 START_TEST(s21_is_equal_6220) {
-  char *example = "( 1449662231245593367595616569 == -5.8441449133229806167937721 ) = False";
+  char *example =
+      "( 1449662231245593367595616569 == -5.8441449133229806167937721 ) = "
+      "False";
   s21_decimal value_1 = {{0xE0B68939, 0x63AACAB, 0x4AF21EB, 0x0}};
   s21_decimal value_2 = {{0x182652B9, 0x4E408C99, 0x305775, 0x80190000}};
   int code = 0;
@@ -62274,7 +63975,9 @@ START_TEST(s21_is_equal_6225) {
 }
 
 START_TEST(s21_is_equal_6226) {
-  char *example = "( 1903584198250831700599276558 == 1786793359076150458789146005 ) = False";
+  char *example =
+      "( 1903584198250831700599276558 == 1786793359076150458789146005 ) = "
+      "False";
   s21_decimal value_1 = {{0x6FF8840E, 0x29A236E1, 0x6269BA2, 0x0}};
   s21_decimal value_2 = {{0xEA782D95, 0x15ABBC23, 0x5C60036, 0x0}};
   int code = 0;
@@ -62284,7 +63987,9 @@ START_TEST(s21_is_equal_6226) {
 }
 
 START_TEST(s21_is_equal_6227) {
-  char *example = "( 1431378819754847118642794803 == 0.94316452397486898533356052 ) = False";
+  char *example =
+      "( 1431378819754847118642794803 == 0.94316452397486898533356052 ) = "
+      "False";
   s21_decimal value_1 = {{0xB29A5133, 0x4D285CAE, 0x4A00241, 0x0}};
   s21_decimal value_2 = {{0xE603D214, 0x21287CED, 0x4E0449, 0x1A0000}};
   int code = 0;
@@ -62394,7 +64099,9 @@ START_TEST(s21_is_equal_6237) {
 }
 
 START_TEST(s21_is_equal_6238) {
-  char *example = "( 1020587113959694432445862342 == -2969.0294997855573141347200 ) = False";
+  char *example =
+      "( 1020587113959694432445862342 == -2969.0294997855573141347200 ) = "
+      "False";
   s21_decimal value_1 = {{0x42DF11C6, 0x4EEC21D0, 0x34C35BA, 0x0}};
   s21_decimal value_2 = {{0xC9F409E0, 0x2423AA3F, 0x3EDF, 0x80140000}};
   int code = 0;
@@ -62504,7 +64211,8 @@ START_TEST(s21_is_equal_6248) {
 }
 
 START_TEST(s21_is_equal_6249) {
-  char *example = "( 6.4087900664717102E-10 == 95.5161983518848907496462825 ) = False";
+  char *example =
+      "( 6.4087900664717102E-10 == 95.5161983518848907496462825 ) = False";
   s21_decimal value_1 = {{0x29855F2E, 0xE3AF9B, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x760919E9, 0xE15DA215, 0x316176A, 0x190000}};
   int code = 0;
@@ -62554,7 +64262,8 @@ START_TEST(s21_is_equal_6253) {
 }
 
 START_TEST(s21_is_equal_6254) {
-  char *example = "( 1082884013455496992513827198 == 105271646571364938315 ) = False";
+  char *example =
+      "( 1082884013455496992513827198 == 105271646571364938315 ) = False";
   s21_decimal value_1 = {{0xAD9FA17E, 0xFF35BAD8, 0x37FBD9B, 0x0}};
   s21_decimal value_2 = {{0xB6ACF24B, 0xB4F004CD, 0x5, 0x0}};
   int code = 0;
@@ -62574,7 +64283,8 @@ START_TEST(s21_is_equal_6255) {
 }
 
 START_TEST(s21_is_equal_6256) {
-  char *example = "( -7.23338600538914 == 1606903711684235458849216336 ) = False";
+  char *example =
+      "( -7.23338600538914 == 1606903711684235458849216336 ) = False";
   s21_decimal value_1 = {{0x64566322, 0x291DF, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x7E8B1750, 0xC257E130, 0x5313318, 0x0}};
   int code = 0;
@@ -62594,7 +64304,8 @@ START_TEST(s21_is_equal_6257) {
 }
 
 START_TEST(s21_is_equal_6258) {
-  char *example = "( 0.44666223491895633215103719 == 19680699401946854588040317 ) = False";
+  char *example =
+      "( 0.44666223491895633215103719 == 19680699401946854588040317 ) = False";
   s21_decimal value_1 = {{0x8CB622E7, 0xD3CC0494, 0x24F270, 0x1A0000}};
   s21_decimal value_2 = {{0x385A447D, 0xDA35A84D, 0x10478C, 0x0}};
   int code = 0;
@@ -62634,7 +64345,9 @@ START_TEST(s21_is_equal_6261) {
 }
 
 START_TEST(s21_is_equal_6262) {
-  char *example = "( 1500165766686512682552328338 == 1332888823855217455914659635 ) = False";
+  char *example =
+      "( 1500165766686512682552328338 == 1332888823855217455914659635 ) = "
+      "False";
   s21_decimal value_1 = {{0x77AD0092, 0x2A9F6A18, 0x4D8E875, 0x0}};
   s21_decimal value_2 = {{0xCAFDAF33, 0xECDEBE13, 0x44E8A2F, 0x0}};
   int code = 0;
@@ -62674,7 +64387,8 @@ START_TEST(s21_is_equal_6265) {
 }
 
 START_TEST(s21_is_equal_6266) {
-  char *example = "( 111198834258486530439 == 1391167771565590678147576858 ) = False";
+  char *example =
+      "( 111198834258486530439 == 1391167771565590678147576858 ) = False";
   s21_decimal value_1 = {{0xF6A09187, 0x7319E99, 0x6, 0x0}};
   s21_decimal value_2 = {{0xCECE341A, 0x2DB7C0C, 0x47EBF3C, 0x0}};
   int code = 0;
@@ -62694,7 +64408,8 @@ START_TEST(s21_is_equal_6267) {
 }
 
 START_TEST(s21_is_equal_6268) {
-  char *example = "( 0.03357189403071257913950281 == 17201843612216610827669515 ) = False";
+  char *example =
+      "( 0.03357189403071257913950281 == 17201843612216610827669515 ) = False";
   s21_decimal value_1 = {{0x58158049, 0x9A2A9D87, 0x2C6E9, 0x1A0000}};
   s21_decimal value_2 = {{0x40E6100B, 0xCF8DB57F, 0xE3AA1, 0x0}};
   int code = 0;
@@ -62724,7 +64439,8 @@ START_TEST(s21_is_equal_6270) {
 }
 
 START_TEST(s21_is_equal_6271) {
-  char *example = "( -52945.8328443164139729068 == 195204849965839226492459 ) = False";
+  char *example =
+      "( -52945.8328443164139729068 == 195204849965839226492459 ) = False";
   s21_decimal value_1 = {{0xD0FC30AC, 0xFE55D09B, 0x701D, 0x80130000}};
   s21_decimal value_2 = {{0x65DFD62B, 0x137CA44F, 0x2956, 0x0}};
   int code = 0;
@@ -62744,7 +64460,9 @@ START_TEST(s21_is_equal_6272) {
 }
 
 START_TEST(s21_is_equal_6273) {
-  char *example = "( 1770628679330675736977899667 == 1618377134339108886263647926 ) = False";
+  char *example =
+      "( 1770628679330675736977899667 == 1618377134339108886263647926 ) = "
+      "False";
   s21_decimal value_1 = {{0xF3248093, 0xA2E8EB6, 0x5B8A135, 0x0}};
   s21_decimal value_2 = {{0x4BE44EB6, 0x3F60820E, 0x53AB0B0, 0x0}};
   int code = 0;
@@ -62784,7 +64502,9 @@ START_TEST(s21_is_equal_6276) {
 }
 
 START_TEST(s21_is_equal_6277) {
-  char *example = "( 1006775477249886538553780158 == 1156809363588011070485533550 ) = False";
+  char *example =
+      "( 1006775477249886538553780158 == 1156809363588011070485533550 ) = "
+      "False";
   s21_decimal value_1 = {{0x265A67BE, 0xFB62930E, 0x340C8FF, 0x0}};
   s21_decimal value_2 = {{0xEAB5936E, 0x41F7A109, 0x3BCE3E9, 0x0}};
   int code = 0;
@@ -62814,7 +64534,8 @@ START_TEST(s21_is_equal_6279) {
 }
 
 START_TEST(s21_is_equal_6280) {
-  char *example = "( 11010120481203686935741866 == 1042454942974977917720944089 ) = False";
+  char *example =
+      "( 11010120481203686935741866 == 1042454942974977917720944089 ) = False";
   s21_decimal value_1 = {{0x3C89C5AA, 0xD3C6D05B, 0x91B7B, 0x0}};
   s21_decimal value_2 = {{0x35535DD9, 0xB1D06674, 0x35E4C6B, 0x0}};
   int code = 0;
@@ -62854,7 +64575,8 @@ START_TEST(s21_is_equal_6283) {
 }
 
 START_TEST(s21_is_equal_6284) {
-  char *example = "( 17737779827753445567241694 == -948.39294492601771057342892 ) = False";
+  char *example =
+      "( 17737779827753445567241694 == -948.39294492601771057342892 ) = False";
   s21_decimal value_1 = {{0x7D901DDE, 0xF8A19C7B, 0xEAC1E, 0x0}};
   s21_decimal value_2 = {{0x64D1E9AC, 0x74CFA7C3, 0x4E7300, 0x80170000}};
   int code = 0;
@@ -62894,7 +64616,8 @@ START_TEST(s21_is_equal_6287) {
 }
 
 START_TEST(s21_is_equal_6288) {
-  char *example = "( 1228188545182354627358599780 == 176666419685527388321 ) = False";
+  char *example =
+      "( 1228188545182354627358599780 == 176666419685527388321 ) = False";
   s21_decimal value_1 = {{0x683FAA64, 0x72077038, 0x3F7EF0A, 0x0}};
   s21_decimal value_2 = {{0x67F000A1, 0x93BD34AF, 0x9, 0x0}};
   int code = 0;
@@ -62904,7 +64627,8 @@ START_TEST(s21_is_equal_6288) {
 }
 
 START_TEST(s21_is_equal_6289) {
-  char *example = "( 6.5504078077103897E-10 == 1650639940029796227343779839 ) = False";
+  char *example =
+      "( 6.5504078077103897E-10 == 1650639940029796227343779839 ) = False";
   s21_decimal value_1 = {{0xA9200F19, 0xE8B79C, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xD10907FF, 0x72D64BAB, 0x555609A, 0x0}};
   int code = 0;
@@ -63064,7 +64788,8 @@ START_TEST(s21_is_equal_6304) {
 }
 
 START_TEST(s21_is_equal_6305) {
-  char *example = "( 9.7957200731314774E-10 == 1818112385202193531605 ) = False";
+  char *example =
+      "( 9.7957200731314774E-10 == 1818112385202193531605 ) = False";
   s21_decimal value_1 = {{0x18C81A56, 0x15C038E, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xB2E982D5, 0x8F60BD91, 0x62, 0x0}};
   int code = 0;
@@ -63114,7 +64839,9 @@ START_TEST(s21_is_equal_6309) {
 }
 
 START_TEST(s21_is_equal_6310) {
-  char *example = "( 1421206909644681425486465200 == 1754164558345137411623707652 ) = False";
+  char *example =
+      "( 1421206909644681425486465200 == 1754164558345137411623707652 ) = "
+      "False";
   s21_decimal value_1 = {{0x6F3DC8B0, 0xF30C7280, 0x4979844, 0x0}};
   s21_decimal value_2 = {{0x46FF6404, 0x40B3CF20, 0x5AB02CB, 0x0}};
   int code = 0;
@@ -63134,7 +64861,8 @@ START_TEST(s21_is_equal_6311) {
 }
 
 START_TEST(s21_is_equal_6312) {
-  char *example = "( -187.4367984285484510998874 == 1452194432834582817736864003 ) = False";
+  char *example =
+      "( -187.4367984285484510998874 == 1452194432834582817736864003 ) = False";
   s21_decimal value_1 = {{0x8D75F15A, 0xB128E073, 0x18CE9, 0x80160000}};
   s21_decimal value_2 = {{0xFCD9B103, 0xF2915B90, 0x4B13A21, 0x0}};
   int code = 0;
@@ -63144,7 +64872,8 @@ START_TEST(s21_is_equal_6312) {
 }
 
 START_TEST(s21_is_equal_6313) {
-  char *example = "( 1778272391963130663078190035 == -9.5366533001849677543 ) = False";
+  char *example =
+      "( 1778272391963130663078190035 == -9.5366533001849677543 ) = False";
   s21_decimal value_1 = {{0x9ACBDBD3, 0x8828B345, 0x5BEF3D3, 0x0}};
   s21_decimal value_2 = {{0xDBD126E7, 0x2B79FC7D, 0x5, 0x80130000}};
   int code = 0;
@@ -63184,7 +64913,8 @@ START_TEST(s21_is_equal_6316) {
 }
 
 START_TEST(s21_is_equal_6317) {
-  char *example = "( 155495468163472323386621620 == 1505998944833521407025122 ) = False";
+  char *example =
+      "( 155495468163472323386621620 == 1505998944833521407025122 ) = False";
   s21_decimal value_1 = {{0x3B413EB4, 0x383FDB1E, 0x809F72, 0x0}};
   s21_decimal value_2 = {{0x49D0DFE2, 0x5DCB91B5, 0x13EE8, 0x0}};
   int code = 0;
@@ -63274,7 +65004,8 @@ START_TEST(s21_is_equal_6325) {
 }
 
 START_TEST(s21_is_equal_6326) {
-  char *example = "( 1321041041601626472111137460 == -390.900228407604073 ) = False";
+  char *example =
+      "( 1321041041601626472111137460 == -390.900228407604073 ) = False";
   s21_decimal value_1 = {{0xFD4BE2B4, 0x5CC2F5C0, 0x444BD52, 0x0}};
   s21_decimal value_2 = {{0xC8DAB369, 0x56CC1AF, 0x0, 0x800F0000}};
   int code = 0;
@@ -63304,7 +65035,9 @@ START_TEST(s21_is_equal_6328) {
 }
 
 START_TEST(s21_is_equal_6329) {
-  char *example = "( 0.95939646722733770501119844 == 1775892245258110583691997734 ) = False";
+  char *example =
+      "( 0.95939646722733770501119844 == 1775892245258110583691997734 ) = "
+      "False";
   s21_decimal value_1 = {{0xB41DDF64, 0xAB9324D7, 0x4F5C02, 0x1A0000}};
   s21_decimal value_2 = {{0x8CEEF226, 0x853C3937, 0x5BCFBCF, 0x0}};
   int code = 0;
@@ -63334,7 +65067,8 @@ START_TEST(s21_is_equal_6331) {
 }
 
 START_TEST(s21_is_equal_6332) {
-  char *example = "( 1503699023036009418043481262 == -7713.33918584180908 ) = False";
+  char *example =
+      "( 1503699023036009418043481262 == -7713.33918584180908 ) = False";
   s21_decimal value_1 = {{0x22E8DCAE, 0x6082FAEF, 0x4DBD4A7, 0x0}};
   s21_decimal value_2 = {{0xBC6B90AC, 0xAB4541C, 0x0, 0x800E0000}};
   int code = 0;
@@ -63364,7 +65098,8 @@ START_TEST(s21_is_equal_6334) {
 }
 
 START_TEST(s21_is_equal_6335) {
-  char *example = "( -86.9665051063341 == 0.89181856858845417861476403 ) = False";
+  char *example =
+      "( -86.9665051063341 == 0.89181856858845417861476403 ) = False";
   s21_decimal value_1 = {{0xAC71342D, 0x316F4, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x871AF033, 0x25CB3F96, 0x49C4FE, 0x1A0000}};
   int code = 0;
@@ -63374,7 +65109,8 @@ START_TEST(s21_is_equal_6335) {
 }
 
 START_TEST(s21_is_equal_6336) {
-  char *example = "( 1284400293535941526041290959 == -945.6816220550950020 ) = False";
+  char *example =
+      "( 1284400293535941526041290959 == -945.6816220550950020 ) = False";
   s21_decimal value_1 = {{0x6B8668CF, 0x6DFC84A0, 0x4266E57, 0x0}};
   s21_decimal value_2 = {{0xC1358ADA, 0xD1FBC6C, 0x0, 0x800F0000}};
   int code = 0;
@@ -63394,7 +65130,8 @@ START_TEST(s21_is_equal_6337) {
 }
 
 START_TEST(s21_is_equal_6338) {
-  char *example = "( 1055480571565576165806086430 == 187929405082016629 ) = False";
+  char *example =
+      "( 1055480571565576165806086430 == 187929405082016629 ) = False";
   s21_decimal value_1 = {{0xFF58991E, 0x6F753188, 0x36912B4, 0x0}};
   s21_decimal value_2 = {{0x58C39B75, 0x29BA8CC, 0x0, 0x0}};
   int code = 0;
@@ -63444,7 +65181,8 @@ START_TEST(s21_is_equal_6342) {
 }
 
 START_TEST(s21_is_equal_6343) {
-  char *example = "( 8.5507947052238536E-10 == 18935425131306728714140 ) = False";
+  char *example =
+      "( 8.5507947052238536E-10 == 18935425131306728714140 ) = False";
   s21_decimal value_1 = {{0x598586C8, 0x12FC906, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xCDF26F9C, 0x7DCFE0BD, 0x402, 0x0}};
   int code = 0;
@@ -63454,7 +65192,8 @@ START_TEST(s21_is_equal_6343) {
 }
 
 START_TEST(s21_is_equal_6344) {
-  char *example = "( 1578123351934607192439560088 == 1772281658065970 ) = False";
+  char *example =
+      "( 1578123351934607192439560088 == 1772281658065970 ) = False";
   s21_decimal value_1 = {{0x10DE9798, 0x54B49371, 0x519649E, 0x0}};
   s21_decimal value_2 = {{0x7AABC432, 0x64BE1, 0x0, 0x0}};
   int code = 0;
@@ -63494,7 +65233,8 @@ START_TEST(s21_is_equal_6347) {
 }
 
 START_TEST(s21_is_equal_6348) {
-  char *example = "( 13447685832451097513350658 == 1735648263062463271963271945 ) = False";
+  char *example =
+      "( 13447685832451097513350658 == 1735648263062463271963271945 ) = False";
   s21_decimal value_1 = {{0xA51ED602, 0x827D2924, 0xB1FA8, 0x0}};
   s21_decimal value_2 = {{0x749D2309, 0xDFC857EE, 0x59BB1D0, 0x0}};
   int code = 0;
@@ -63514,7 +65254,8 @@ START_TEST(s21_is_equal_6349) {
 }
 
 START_TEST(s21_is_equal_6350) {
-  char *example = "( -2.755099367910320262335 == -95.88595987770010004 ) = False";
+  char *example =
+      "( -2.755099367910320262335 == -95.88595987770010004 ) = False";
   s21_decimal value_1 = {{0xEDE24CBF, 0x5AAF35F8, 0x95, 0x80150000}};
   s21_decimal value_2 = {{0x91C46994, 0x8511893F, 0x0, 0x80110000}};
   int code = 0;
@@ -63524,7 +65265,9 @@ START_TEST(s21_is_equal_6350) {
 }
 
 START_TEST(s21_is_equal_6351) {
-  char *example = "( -19.492597520574955736971616 == 1047762487845534723922883898 ) = False";
+  char *example =
+      "( -19.492597520574955736971616 == 1047762487845534723922883898 ) = "
+      "False";
   s21_decimal value_1 = {{0x2E5EB960, 0xD436B30A, 0x101FB7, 0x80180000}};
   s21_decimal value_2 = {{0x8F2A753A, 0x474EDFF3, 0x362B056, 0x0}};
   int code = 0;
@@ -63554,7 +65297,8 @@ START_TEST(s21_is_equal_6353) {
 }
 
 START_TEST(s21_is_equal_6354) {
-  char *example = "( 1385305340579693629941420445 == 1221417338971269 ) = False";
+  char *example =
+      "( 1385305340579693629941420445 == 1221417338971269 ) = False";
   s21_decimal value_1 = {{0x91A7119D, 0xFD98DD3D, 0x479E5D0, 0x0}};
   s21_decimal value_2 = {{0x629CA485, 0x456DF, 0x0, 0x0}};
   int code = 0;
@@ -63604,7 +65348,8 @@ START_TEST(s21_is_equal_6358) {
 }
 
 START_TEST(s21_is_equal_6359) {
-  char *example = "( -79228162514264337593543950335 == 1672610723669051409646 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 1672610723669051409646 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x3ADB84EE, 0xAC22FF4E, 0x5A, 0x0}};
   int code = 0;
@@ -63704,7 +65449,8 @@ START_TEST(s21_is_equal_6368) {
 }
 
 START_TEST(s21_is_equal_6369) {
-  char *example = "( 13934959230966275337075747 == 1512373122267918096144281456 ) = False";
+  char *example =
+      "( 13934959230966275337075747 == 1512373122267918096144281456 ) = False";
   s21_decimal value_1 = {{0x4EBBC23, 0xA7516196, 0xB86D7, 0x0}};
   s21_decimal value_2 = {{0xD25C2F70, 0x3D137480, 0x4E30177, 0x0}};
   int code = 0;
@@ -63834,7 +65580,9 @@ START_TEST(s21_is_equal_6381) {
 }
 
 START_TEST(s21_is_equal_6382) {
-  char *example = "( -28.104916461060843906562889 == 0.46165832746887944535741949 ) = False";
+  char *example =
+      "( -28.104916461060843906562889 == 0.46165832746887944535741949 ) = "
+      "False";
   s21_decimal value_1 = {{0xBB47B49, 0x9300C198, 0x173F72, 0x80180000}};
   s21_decimal value_2 = {{0x4D3315FD, 0xCED515BC, 0x262FFE, 0x1A0000}};
   int code = 0;
@@ -63854,7 +65602,8 @@ START_TEST(s21_is_equal_6383) {
 }
 
 START_TEST(s21_is_equal_6384) {
-  char *example = "( 13620006300756100213 == -92.927779335331829662607068 ) = False";
+  char *example =
+      "( 13620006300756100213 == -92.927779335331829662607068 ) = False";
   s21_decimal value_1 = {{0x93264475, 0xBD03FB91, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1B97E6DC, 0x311301B, 0x4CDE39, 0x80180000}};
   int code = 0;
@@ -63914,7 +65663,9 @@ START_TEST(s21_is_equal_6389) {
 }
 
 START_TEST(s21_is_equal_6390) {
-  char *example = "( 0.31561067122064057859272413 == 1683106474752871713260736625 ) = False";
+  char *example =
+      "( 0.31561067122064057859272413 == 1683106474752871713260736625 ) = "
+      "False";
   s21_decimal value_1 = {{0x53576EDD, 0xE0821905, 0x1A1B50, 0x1A0000}};
   s21_decimal value_2 = {{0x26C09071, 0xD29437A1, 0x5703BA8, 0x0}};
   int code = 0;
@@ -63984,7 +65735,9 @@ START_TEST(s21_is_equal_6396) {
 }
 
 START_TEST(s21_is_equal_6397) {
-  char *example = "( 1840381154112881507908700907 == 1218829106626902412755136572 ) = False";
+  char *example =
+      "( 1840381154112881507908700907 == 1218829106626902412755136572 ) = "
+      "False";
   s21_decimal value_1 = {{0x5AE3CAEB, 0x46477CA6, 0x5F253DE, 0x0}};
   s21_decimal value_2 = {{0x82A2F03C, 0x43C19729, 0x3F0311A, 0x0}};
   int code = 0;
@@ -64204,7 +65957,8 @@ START_TEST(s21_is_equal_6418) {
 }
 
 START_TEST(s21_is_equal_6419) {
-  char *example = "( -6675.2590769625559979246 == -268258825.83508383511822767 ) = False";
+  char *example =
+      "( -6675.2590769625559979246 == -268258825.83508383511822767 ) = False";
   s21_decimal value_1 = {{0x4697D4EE, 0xAA4A5297, 0xE22, 0x80130000}};
   s21_decimal value_2 = {{0x4D741AF, 0x240538C, 0x16309A, 0x80110000}};
   int code = 0;
@@ -64214,7 +65968,8 @@ START_TEST(s21_is_equal_6419) {
 }
 
 START_TEST(s21_is_equal_6420) {
-  char *example = "( 9.0566429916685466E-10 == 1498069253858543096274383220 ) = False";
+  char *example =
+      "( 9.0566429916685466E-10 == 1498069253858543096274383220 ) = False";
   s21_decimal value_1 = {{0x2BC2649A, 0x141C1B0, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x3EC07174, 0xFA75B4C7, 0x4D72C80, 0x0}};
   int code = 0;
@@ -64254,7 +66009,8 @@ START_TEST(s21_is_equal_6423) {
 }
 
 START_TEST(s21_is_equal_6424) {
-  char *example = "( 1130802084804953999444201058 == 10491570464847426 ) = False";
+  char *example =
+      "( 1130802084804953999444201058 == 10491570464847426 ) = False";
   s21_decimal value_1 = {{0xD576CE62, 0xD98EAF24, 0x3A760A7, 0x0}};
   s21_decimal value_2 = {{0x1AB17642, 0x254607, 0x0, 0x0}};
   int code = 0;
@@ -64264,7 +66020,8 @@ START_TEST(s21_is_equal_6424) {
 }
 
 START_TEST(s21_is_equal_6425) {
-  char *example = "( 1845429091439446015351876310 == -5.7235536981307820 ) = False";
+  char *example =
+      "( 1845429091439446015351876310 == -5.7235536981307820 ) = False";
   s21_decimal value_1 = {{0x82AE6AD6, 0x815D4CDE, 0x5F680CF, 0x0}};
   s21_decimal value_2 = {{0xB107AB5E, 0x14558A, 0x0, 0x800F0000}};
   int code = 0;
@@ -64364,7 +66121,8 @@ START_TEST(s21_is_equal_6434) {
 }
 
 START_TEST(s21_is_equal_6435) {
-  char *example = "( -3.6795074092785355882450468 == 0.28938462842767 ) = False";
+  char *example =
+      "( -3.6795074092785355882450468 == 0.28938462842767 ) = False";
   s21_decimal value_1 = {{0x83834E24, 0xF6A1EA9D, 0x1E6FA8, 0x80190000}};
   s21_decimal value_2 = {{0xC2CC4F8F, 0x1A51, 0x0, 0xE0000}};
   int code = 0;
@@ -64384,7 +66142,8 @@ START_TEST(s21_is_equal_6436) {
 }
 
 START_TEST(s21_is_equal_6437) {
-  char *example = "( 143926554793883951750 == 15233864227782975123477738 ) = False";
+  char *example =
+      "( 143926554793883951750 == 15233864227782975123477738 ) = False";
   s21_decimal value_1 = {{0x8B3F6286, 0xCD61D707, 0x7, 0x0}};
   s21_decimal value_2 = {{0xB63DD4EA, 0x6F3F08C1, 0xC99E5, 0x0}};
   int code = 0;
@@ -64404,7 +66163,9 @@ START_TEST(s21_is_equal_6438) {
 }
 
 START_TEST(s21_is_equal_6439) {
-  char *example = "( 1136728760408141987940937674 == 1408948331662576515925717028 ) = False";
+  char *example =
+      "( 1136728760408141987940937674 == 1408948331662576515925717028 ) = "
+      "False";
   s21_decimal value_1 = {{0x39042FCA, 0x93FBF17E, 0x3AC47AD, 0x0}};
   s21_decimal value_2 = {{0x310B024, 0x1AFCC7D0, 0x48D746A, 0x0}};
   int code = 0;
@@ -64444,7 +66205,8 @@ START_TEST(s21_is_equal_6442) {
 }
 
 START_TEST(s21_is_equal_6443) {
-  char *example = "( 16469147168111860065834845 == 17807685903617804612747 ) = False";
+  char *example =
+      "( 16469147168111860065834845 == 17807685903617804612747 ) = False";
   s21_decimal value_1 = {{0x9F4D175D, 0x41C6545C, 0xD9F7A, 0x0}};
   s21_decimal value_2 = {{0x4642348B, 0x5B494C2D, 0x3C5, 0x0}};
   int code = 0;
@@ -64454,7 +66216,9 @@ START_TEST(s21_is_equal_6443) {
 }
 
 START_TEST(s21_is_equal_6444) {
-  char *example = "( -2736.1039558446567838367038 == 1134187250381283642469600160 ) = False";
+  char *example =
+      "( -2736.1039558446567838367038 == 1134187250381283642469600160 ) = "
+      "False";
   s21_decimal value_1 = {{0x40E6BD3E, 0xED317EA7, 0x16A1EC, 0x80160000}};
   s21_decimal value_2 = {{0x28994BA0, 0xB1EB70E, 0x3AA2D7E, 0x0}};
   int code = 0;
@@ -64504,7 +66268,8 @@ START_TEST(s21_is_equal_6448) {
 }
 
 START_TEST(s21_is_equal_6449) {
-  char *example = "( -61.367880605175876596827074 == 1468471673726277236664 ) = False";
+  char *example =
+      "( -61.367880605175876596827074 == 1468471673726277236664 ) = False";
   s21_decimal value_1 = {{0xCB5083C2, 0x79410119, 0x32C327, 0x80180000}};
   s21_decimal value_2 = {{0x2A13B7B8, 0x9B2366F5, 0x4F, 0x0}};
   int code = 0;
@@ -64514,7 +66279,8 @@ START_TEST(s21_is_equal_6449) {
 }
 
 START_TEST(s21_is_equal_6450) {
-  char *example = "( 120730626222261065 == 1304474677931008299196225620 ) = False";
+  char *example =
+      "( 120730626222261065 == 1304474677931008299196225620 ) = False";
   s21_decimal value_1 = {{0x697D0349, 0x1ACEBDD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x843C1854, 0xFCFE5F01, 0x4370941, 0x0}};
   int code = 0;
@@ -64564,7 +66330,9 @@ START_TEST(s21_is_equal_6454) {
 }
 
 START_TEST(s21_is_equal_6455) {
-  char *example = "( 1290653147241882206497621556 == 0.45599245121193269487803709 ) = False";
+  char *example =
+      "( 1290653147241882206497621556 == 0.45599245121193269487803709 ) = "
+      "False";
   s21_decimal value_1 = {{0x1A534634, 0x4EE926E5, 0x42B9A6F, 0x0}};
   s21_decimal value_2 = {{0x59111D3D, 0x7FD0A53, 0x25B804, 0x1A0000}};
   int code = 0;
@@ -64604,7 +66372,8 @@ START_TEST(s21_is_equal_6458) {
 }
 
 START_TEST(s21_is_equal_6459) {
-  char *example = "( 17927670621277843 == 1219051291028252813628567812 ) = False";
+  char *example =
+      "( 17927670621277843 == 1219051291028252813628567812 ) = False";
   s21_decimal value_1 = {{0x17080E93, 0x3FB11F, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBC87104, 0xE7BB7BF1, 0x3F06026, 0x0}};
   int code = 0;
@@ -64624,7 +66393,8 @@ START_TEST(s21_is_equal_6460) {
 }
 
 START_TEST(s21_is_equal_6461) {
-  char *example = "( 1697527575127447803637813356 == -8.93491670229535097674 ) = False";
+  char *example =
+      "( 1697527575127447803637813356 == -8.93491670229535097674 ) = False";
   s21_decimal value_1 = {{0xAD38506C, 0x3D88542C, 0x57C2972, 0x0}};
   s21_decimal value_2 = {{0xE9E7034A, 0x6FB01426, 0x30, 0x80140000}};
   int code = 0;
@@ -64694,7 +66464,8 @@ START_TEST(s21_is_equal_6467) {
 }
 
 START_TEST(s21_is_equal_6468) {
-  char *example = "( 0.24653697102573477308439144 == -323.63344573754253909665 ) = False";
+  char *example =
+      "( 0.24653697102573477308439144 == -323.63344573754253909665 ) = False";
   s21_decimal value_1 = {{0x73BC9A68, 0x9911512B, 0x14649F, 0x1A0000}};
   s21_decimal value_2 = {{0x2C061EA1, 0x6BA0F57B, 0x6DA, 0x80140000}};
   int code = 0;
@@ -64794,7 +66565,9 @@ START_TEST(s21_is_equal_6477) {
 }
 
 START_TEST(s21_is_equal_6478) {
-  char *example = "( 1991771957848875591844623442 == 1627253457720334700796939475 ) = False";
+  char *example =
+      "( 1991771957848875591844623442 == 1627253457720334700796939475 ) = "
+      "False";
   s21_decimal value_1 = {{0xD219F452, 0x3094F47F, 0x66F8E1E, 0x0}};
   s21_decimal value_2 = {{0x19078CD3, 0xB3C67219, 0x5420852, 0x0}};
   int code = 0;
@@ -64804,7 +66577,8 @@ START_TEST(s21_is_equal_6478) {
 }
 
 START_TEST(s21_is_equal_6479) {
-  char *example = "( -2.1536837860630364019905 == 1246187100091144745386 ) = False";
+  char *example =
+      "( -2.1536837860630364019905 == 1246187100091144745386 ) = False";
   s21_decimal value_1 = {{0x98A1DCC1, 0x83AA772F, 0x48F, 0x80160000}};
   s21_decimal value_2 = {{0x5ED831AA, 0x8E51F4F3, 0x43, 0x0}};
   int code = 0;
@@ -64894,7 +66668,9 @@ START_TEST(s21_is_equal_6487) {
 }
 
 START_TEST(s21_is_equal_6488) {
-  char *example = "( 1614305749986922834654088586 == -8.9894659794111026198843227 ) = False";
+  char *example =
+      "( 1614305749986922834654088586 == -8.9894659794111026198843227 ) = "
+      "False";
   s21_decimal value_1 = {{0xDE7B4D8A, 0xF40D7A2, 0x537528A, 0x0}};
   s21_decimal value_2 = {{0xAEF98F5B, 0x45ADA7D9, 0x4A5BEF, 0x80190000}};
   int code = 0;
@@ -64944,7 +66720,9 @@ START_TEST(s21_is_equal_6492) {
 }
 
 START_TEST(s21_is_equal_6493) {
-  char *example = "( 1472222822687788080303766514 == 1977606657660006865259567485 ) = False";
+  char *example =
+      "( 1472222822687788080303766514 == 1977606657660006865259567485 ) = "
+      "False";
   s21_decimal value_1 = {{0xB918FBF2, 0x2315306D, 0x4C1CB4F, 0x0}};
   s21_decimal value_2 = {{0x3081997D, 0xBA53A555, 0x663D67F, 0x0}};
   int code = 0;
@@ -64994,7 +66772,9 @@ START_TEST(s21_is_equal_6497) {
 }
 
 START_TEST(s21_is_equal_6498) {
-  char *example = "( 1693614514848569591792878045 == 1770059197270024252151726581 ) = False";
+  char *example =
+      "( 1693614514848569591792878045 == 1770059197270024252151726581 ) = "
+      "False";
   s21_decimal value_1 = {{0x58B41DD, 0xD14D9658, 0x578ECD2, 0x0}};
   s21_decimal value_2 = {{0xB71281F5, 0x5AFBD975, 0x5B8289D, 0x0}};
   int code = 0;
@@ -65004,7 +66784,8 @@ START_TEST(s21_is_equal_6498) {
 }
 
 START_TEST(s21_is_equal_6499) {
-  char *example = "( 1354641367648721935 == -45622.295391848667008805576 ) = False";
+  char *example =
+      "( 1354641367648721935 == -45622.295391848667008805576 ) = False";
   s21_decimal value_1 = {{0x8CC05C0F, 0x12CCA725, 0x0, 0x0}};
   s21_decimal value_2 = {{0x74C12AC8, 0x96C0E5D7, 0x25BCE5, 0x80150000}};
   int code = 0;
@@ -65044,7 +66825,9 @@ START_TEST(s21_is_equal_6502) {
 }
 
 START_TEST(s21_is_equal_6503) {
-  char *example = "( 1692003475830475630986997640 == 1373651017241599265796108404 ) = False";
+  char *example =
+      "( 1692003475830475630986997640 == 1373651017241599265796108404 ) = "
+      "False";
   s21_decimal value_1 = {{0x2052F88, 0x37A8EC6D, 0x57797AC, 0x0}};
   s21_decimal value_2 = {{0x4B49B074, 0xDB4473D4, 0x47041EA, 0x0}};
   int code = 0;
@@ -65114,7 +66897,9 @@ START_TEST(s21_is_equal_6509) {
 }
 
 START_TEST(s21_is_equal_6510) {
-  char *example = "( 1304812606900436829291044160 == 1706630676955000689223243990 ) = False";
+  char *example =
+      "( 1304812606900436829291044160 == 1706630676955000689223243990 ) = "
+      "False";
   s21_decimal value_1 = {{0x2CA5D40, 0x278685D7, 0x43750D1, 0x0}};
   s21_decimal value_2 = {{0xF53798D6, 0x611696FB, 0x583B11A, 0x0}};
   int code = 0;
@@ -65214,7 +66999,8 @@ START_TEST(s21_is_equal_6519) {
 }
 
 START_TEST(s21_is_equal_6520) {
-  char *example = "( 1082968900749896235363390933 == 18502357529261321 ) = False";
+  char *example =
+      "( 1082968900749896235363390933 == 18502357529261321 ) = False";
   s21_decimal value_1 = {{0xE9CCD5D5, 0xBF11B2CB, 0x37FCF95, 0x0}};
   s21_decimal value_2 = {{0xD009F509, 0x41BBCB, 0x0, 0x0}};
   int code = 0;
@@ -65244,7 +67030,8 @@ START_TEST(s21_is_equal_6522) {
 }
 
 START_TEST(s21_is_equal_6523) {
-  char *example = "( 1099875298068006611945895379 == 142392295384553799 ) = False";
+  char *example =
+      "( 1099875298068006611945895379 == 142392295384553799 ) = False";
   s21_decimal value_1 = {{0x2DB1B5D3, 0x61A4FC3A, 0x38DCBA7, 0x0}};
   s21_decimal value_2 = {{0xC9261947, 0x1F9E109, 0x0, 0x0}};
   int code = 0;
@@ -65274,7 +67061,8 @@ START_TEST(s21_is_equal_6525) {
 }
 
 START_TEST(s21_is_equal_6526) {
-  char *example = "( 3.93442205524211E-10 == 1794021024234485203714049715 ) = False";
+  char *example =
+      "( 3.93442205524211E-10 == 1794021024234485203714049715 ) = False";
   s21_decimal value_1 = {{0x66E660F3, 0x165D5, 0x0, 0x180000}};
   s21_decimal value_2 = {{0x1EF606B3, 0x99158A62, 0x5CBFABA, 0x0}};
   int code = 0;
@@ -65284,7 +67072,8 @@ START_TEST(s21_is_equal_6526) {
 }
 
 START_TEST(s21_is_equal_6527) {
-  char *example = "( -82.707536591397791399375506 == 0.78547383368766 ) = False";
+  char *example =
+      "( -82.707536591397791399375506 == 0.78547383368766 ) = False";
   s21_decimal value_1 = {{0x4C8F7292, 0x8AEC26E2, 0x446A00, 0x80180000}};
   s21_decimal value_2 = {{0x3CE23C3E, 0x4770, 0x0, 0xE0000}};
   int code = 0;
@@ -65374,7 +67163,8 @@ START_TEST(s21_is_equal_6535) {
 }
 
 START_TEST(s21_is_equal_6536) {
-  char *example = "( -8.321850168926018 == 1977889955616472792309192083 ) = False";
+  char *example =
+      "( -8.321850168926018 == 1977889955616472792309192083 ) = False";
   s21_decimal value_1 = {{0xBB315F42, 0x1D90AD, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xEBF45593, 0x5740C230, 0x664127D, 0x0}};
   int code = 0;
@@ -65484,7 +67274,8 @@ START_TEST(s21_is_equal_6546) {
 }
 
 START_TEST(s21_is_equal_6547) {
-  char *example = "( 1272429251646104941091464 == 0.45690407206537054619779666 ) = False";
+  char *example =
+      "( 1272429251646104941091464 == 0.45690407206537054619779666 ) = False";
   s21_decimal value_1 = {{0x43B3DA88, 0x8727A106, 0x10D72, 0x0}};
   s21_decimal value_2 = {{0xD5CD4252, 0xF010A111, 0x25CB51, 0x1A0000}};
   int code = 0;
@@ -65514,7 +67305,8 @@ START_TEST(s21_is_equal_6549) {
 }
 
 START_TEST(s21_is_equal_6550) {
-  char *example = "( -2621.3714823492866 == 1558280086801838498967214177 ) = False";
+  char *example =
+      "( -2621.3714823492866 == 1558280086801838498967214177 ) = False";
   s21_decimal value_1 = {{0x184C3502, 0x5D213C, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x62C45861, 0xC5C752D5, 0x508FAA4, 0x0}};
   int code = 0;
@@ -65564,7 +67356,8 @@ START_TEST(s21_is_equal_6554) {
 }
 
 START_TEST(s21_is_equal_6555) {
-  char *example = "( -5577.2364936064624202897430 == 1790470905214539643 ) = False";
+  char *example =
+      "( -5577.2364936064624202897430 == 1790470905214539643 ) = False";
   s21_decimal value_1 = {{0x973608CF, 0x989CBDB3, 0x49D06, 0x80150000}};
   s21_decimal value_2 = {{0x4DFC177B, 0x18D907CD, 0x0, 0x0}};
   int code = 0;
@@ -65594,7 +67387,9 @@ START_TEST(s21_is_equal_6557) {
 }
 
 START_TEST(s21_is_equal_6558) {
-  char *example = "( 1492998515603646692587082593 == 1375345697084115885522110374 ) = False";
+  char *example =
+      "( 1492998515603646692587082593 == 1375345697084115885522110374 ) = "
+      "False";
   s21_decimal value_1 = {{0xEF6A1361, 0xB4EDEB31, 0x4D2FABB, 0x0}};
   s21_decimal value_2 = {{0x486747A6, 0xA2862613, 0x471A8C7, 0x0}};
   int code = 0;
@@ -65624,7 +67419,8 @@ START_TEST(s21_is_equal_6560) {
 }
 
 START_TEST(s21_is_equal_6561) {
-  char *example = "( 115192683529151239256548 == 160706053747540740726 ) = False";
+  char *example =
+      "( 115192683529151239256548 == 160706053747540740726 ) = False";
   s21_decimal value_1 = {{0xCA1D79E4, 0x9B9E78C4, 0x1864, 0x0}};
   s21_decimal value_2 = {{0x1CFFCA76, 0xB63E986D, 0x8, 0x0}};
   int code = 0;
@@ -65674,7 +67470,8 @@ START_TEST(s21_is_equal_6565) {
 }
 
 START_TEST(s21_is_equal_6566) {
-  char *example = "( 1541203188658892 == -27.720676558562970218725263 ) = False";
+  char *example =
+      "( 1541203188658892 == -27.720676558562970218725263 ) = False";
   s21_decimal value_1 = {{0x549632CC, 0x579B7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1A2FF8F, 0xE32B3608, 0x16EE14, 0x80180000}};
   int code = 0;
@@ -65684,7 +67481,8 @@ START_TEST(s21_is_equal_6566) {
 }
 
 START_TEST(s21_is_equal_6567) {
-  char *example = "( 1668179986281356 == -1940670.4982590488625084503 ) = False";
+  char *example =
+      "( 1668179986281356 == -1940670.4982590488625084503 ) = False";
   s21_decimal value_1 = {{0x6B80F38C, 0x5ED33, 0x0, 0x0}};
   s21_decimal value_2 = {{0x41ECF857, 0x95CC1856, 0x100D87, 0x80130000}};
   int code = 0;
@@ -65754,7 +67552,8 @@ START_TEST(s21_is_equal_6573) {
 }
 
 START_TEST(s21_is_equal_6574) {
-  char *example = "( 1067173262454778136956915919 == -8.011652053732972087391 ) = False";
+  char *example =
+      "( 1067173262454778136956915919 == -8.011652053732972087391 ) = False";
   s21_decimal value_1 = {{0x266650CF, 0x7A853F51, 0x372BEBA, 0x0}};
   s21_decimal value_2 = {{0x7E90C85F, 0x5001D751, 0x1B2, 0x80150000}};
   int code = 0;
@@ -65764,7 +67563,8 @@ START_TEST(s21_is_equal_6574) {
 }
 
 START_TEST(s21_is_equal_6575) {
-  char *example = "( 1356306704008264313254826194 == 102119633864832259612139 ) = False";
+  char *example =
+      "( 1356306704008264313254826194 == 102119633864832259612139 ) = False";
   s21_decimal value_1 = {{0x9A1DD0D2, 0xC08AFB9A, 0x461E91D, 0x0}};
   s21_decimal value_2 = {{0x65AE5DEB, 0xEA9C1B0E, 0x159F, 0x0}};
   int code = 0;
@@ -65824,7 +67624,8 @@ START_TEST(s21_is_equal_6580) {
 }
 
 START_TEST(s21_is_equal_6581) {
-  char *example = "( -1920.019277770263763051047 == 104381407591565747 ) = False";
+  char *example =
+      "( -1920.019277770263763051047 == 104381407591565747 ) = False";
   s21_decimal value_1 = {{0x692F6227, 0x741FB1F0, 0x19694, 0x80150000}};
   s21_decimal value_2 = {{0x50A689B3, 0x172D656, 0x0, 0x0}};
   int code = 0;
@@ -65844,7 +67645,8 @@ START_TEST(s21_is_equal_6582) {
 }
 
 START_TEST(s21_is_equal_6583) {
-  char *example = "( 19262839291964961 == -276.21819310764953574284441 ) = False";
+  char *example =
+      "( 19262839291964961 == -276.21819310764953574284441 ) = False";
   s21_decimal value_1 = {{0x455CEE21, 0x446F73, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB47B9C99, 0xD342B5E1, 0x16D925, 0x80170000}};
   int code = 0;
@@ -65904,7 +67706,8 @@ START_TEST(s21_is_equal_6588) {
 }
 
 START_TEST(s21_is_equal_6589) {
-  char *example = "( -19.913180159628131329993776 == 1667426570818782654704 ) = False";
+  char *example =
+      "( -19.913180159628131329993776 == 1667426570818782654704 ) = False";
   s21_decimal value_1 = {{0x2E056C30, 0xA8D58794, 0x1078C7, 0x80180000}};
   s21_decimal value_2 = {{0x4D4270F0, 0x64312FC1, 0x5A, 0x0}};
   int code = 0;
@@ -65924,7 +67727,8 @@ START_TEST(s21_is_equal_6590) {
 }
 
 START_TEST(s21_is_equal_6591) {
-  char *example = "( 1976216459486590058003037 == 1145144665589743667863472344 ) = False";
+  char *example =
+      "( 1976216459486590058003037 == 1145144665589743667863472344 ) = False";
   s21_decimal value_1 = {{0x22D67A5D, 0xE8AFE382, 0x1A27A, 0x0}};
   s21_decimal value_2 = {{0xED4DC8D8, 0xB64E1B8D, 0x3B33DD0, 0x0}};
   int code = 0;
@@ -65964,7 +67768,8 @@ START_TEST(s21_is_equal_6594) {
 }
 
 START_TEST(s21_is_equal_6595) {
-  char *example = "( 1301991148576510538004134983 == 1720582080437551 ) = False";
+  char *example =
+      "( 1301991148576510538004134983 == 1720582080437551 ) = False";
   s21_decimal value_1 = {{0x6B317C47, 0x9798F1C0, 0x434FB59, 0x0}};
   s21_decimal value_2 = {{0x3BB61D2F, 0x61CDC, 0x0, 0x0}};
   int code = 0;
@@ -66034,7 +67839,8 @@ START_TEST(s21_is_equal_6601) {
 }
 
 START_TEST(s21_is_equal_6602) {
-  char *example = "( -2741.3496485413645898744159 == 0.1237902090381124724019 ) = False";
+  char *example =
+      "( -2741.3496485413645898744159 == 0.1237902090381124724019 ) = False";
   s21_decimal value_1 = {{0x11CC015F, 0x9F4B7A80, 0x16AD08, 0x80160000}};
   s21_decimal value_2 = {{0xE8706533, 0x1B57B083, 0x43, 0x160000}};
   int code = 0;
@@ -66084,7 +67890,8 @@ START_TEST(s21_is_equal_6606) {
 }
 
 START_TEST(s21_is_equal_6607) {
-  char *example = "( 1584557297558450379866036755 == 143602380866056866928146336 ) = False";
+  char *example =
+      "( 1584557297558450379866036755 == 143602380866056866928146336 ) = False";
   s21_decimal value_1 = {{0x29BCDA13, 0x38D70FF0, 0x51EB70F, 0x0}};
   s21_decimal value_2 = {{0xB03A37A0, 0xAA5B28D8, 0x76C8FC, 0x0}};
   int code = 0;
@@ -66094,7 +67901,8 @@ START_TEST(s21_is_equal_6607) {
 }
 
 START_TEST(s21_is_equal_6608) {
-  char *example = "( 141807684840905374072362305 == 1802828962049607999026152092 ) = False";
+  char *example =
+      "( 141807684840905374072362305 == 1802828962049607999026152092 ) = False";
   s21_decimal value_1 = {{0x35DCD541, 0xFFBD50A1, 0x754CF1, 0x0}};
   s21_decimal value_2 = {{0xB540C29C, 0xDD1B59FC, 0x5D343E1, 0x0}};
   int code = 0;
@@ -66184,7 +67992,8 @@ START_TEST(s21_is_equal_6616) {
 }
 
 START_TEST(s21_is_equal_6617) {
-  char *example = "( 133847110550237992334385 == 1023890329580947781952072089 ) = False";
+  char *example =
+      "( 133847110550237992334385 == 1023890329580947781952072089 ) = False";
   s21_decimal value_1 = {{0x8E5A3431, 0xDDCC850E, 0x1C57, 0x0}};
   s21_decimal value_2 = {{0x7711E999, 0xFC65C94E, 0x34EF135, 0x0}};
   int code = 0;
@@ -66214,7 +68023,9 @@ START_TEST(s21_is_equal_6619) {
 }
 
 START_TEST(s21_is_equal_6620) {
-  char *example = "( 1629280799453544277712632485 == 1402164817587573967625933921 ) = False";
+  char *example =
+      "( 1629280799453544277712632485 == 1402164817587573967625933921 ) = "
+      "False";
   s21_decimal value_1 = {{0x8814FAA5, 0x1E299F5A, 0x543B5A1, 0x0}};
   s21_decimal value_2 = {{0xA2405461, 0x12102EE8, 0x487D7F3, 0x0}};
   int code = 0;
@@ -66304,7 +68115,8 @@ START_TEST(s21_is_equal_6628) {
 }
 
 START_TEST(s21_is_equal_6629) {
-  char *example = "( 1540505803878854583549975304 == -5.15379163370007526683 ) = False";
+  char *example =
+      "( 1540505803878854583549975304 == -5.15379163370007526683 ) = False";
   s21_decimal value_1 = {{0x1A045B08, 0xF6EFF7ED, 0x4FA46CA, 0x0}};
   s21_decimal value_2 = {{0x3B4F7D1B, 0xF0529A7D, 0x1B, 0x80140000}};
   int code = 0;
@@ -66334,7 +68146,8 @@ START_TEST(s21_is_equal_6631) {
 }
 
 START_TEST(s21_is_equal_6632) {
-  char *example = "( 1236187912830627701905 == -24.915091284340352107911252 ) = False";
+  char *example =
+      "( 1236187912830627701905 == -24.915091284340352107911252 ) = False";
   s21_decimal value_1 = {{0x7D1D6491, 0x38DB51D, 0x43, 0x0}};
   s21_decimal value_2 = {{0x811F9854, 0xCE0E7069, 0x149BF9, 0x80180000}};
   int code = 0;
@@ -66354,7 +68167,9 @@ START_TEST(s21_is_equal_6633) {
 }
 
 START_TEST(s21_is_equal_6634) {
-  char *example = "( -8.9491597976102399781262521 == -933029.68803620856619702700 ) = False";
+  char *example =
+      "( -8.9491597976102399781262521 == -933029.68803620856619702700 ) = "
+      "False";
   s21_decimal value_1 = {{0x557254B9, 0x3F4B6A0A, 0x4A0695, 0x80190000}};
   s21_decimal value_2 = {{0x9FA5DB23, 0xA40769C7, 0xC593, 0x80120000}};
   int code = 0;
@@ -66364,7 +68179,8 @@ START_TEST(s21_is_equal_6634) {
 }
 
 START_TEST(s21_is_equal_6635) {
-  char *example = "( -1.0753102628434374168660823 == -6859376543.33964561190713 ) = False";
+  char *example =
+      "( -1.0753102628434374168660823 == -6859376543.33964561190713 ) = False";
   s21_decimal value_1 = {{0xA56FCB57, 0xDC8D959C, 0x8E50E, 0x80190000}};
   s21_decimal value_2 = {{0x81488F39, 0xC1375B4A, 0x9140, 0x800E0000}};
   int code = 0;
@@ -66504,7 +68320,8 @@ START_TEST(s21_is_equal_6648) {
 }
 
 START_TEST(s21_is_equal_6649) {
-  char *example = "( 1172549740873723387 == 1785281152290886063058896199 ) = False";
+  char *example =
+      "( 1172549740873723387 == 1785281152290886063058896199 ) = False";
   s21_decimal value_1 = {{0xE2412DFB, 0x1045BBC6, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA4BCC547, 0x30C88D19, 0x5C4BFFD, 0x0}};
   int code = 0;
@@ -66514,7 +68331,8 @@ START_TEST(s21_is_equal_6649) {
 }
 
 START_TEST(s21_is_equal_6650) {
-  char *example = "( 10709020365410171784184 == 1238463638684703969458536282 ) = False";
+  char *example =
+      "( 10709020365410171784184 == 1238463638684703969458536282 ) = False";
   s21_decimal value_1 = {{0xD9328BF8, 0x89832384, 0x244, 0x0}};
   s21_decimal value_2 = {{0x50783F5A, 0x615C3063, 0x4006EE0, 0x0}};
   int code = 0;
@@ -66574,7 +68392,8 @@ START_TEST(s21_is_equal_6655) {
 }
 
 START_TEST(s21_is_equal_6656) {
-  char *example = "( -453805959.5267812370 == 1889373252029770993261594665 ) = False";
+  char *example =
+      "( -453805959.5267812370 == 1889373252029770993261594665 ) = False";
   s21_decimal value_1 = {{0xA68C9135, 0x64C3E1D, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0xAC87C829, 0x396DF426, 0x61ADA59, 0x0}};
   int code = 0;
@@ -66624,7 +68443,8 @@ START_TEST(s21_is_equal_6660) {
 }
 
 START_TEST(s21_is_equal_6661) {
-  char *example = "( 2.4336390550E-10 == -46.631894107037230695309642 ) = False";
+  char *example =
+      "( 2.4336390550E-10 == -46.631894107037230695309642 ) = False";
   s21_decimal value_1 = {{0x910E628F, 0x0, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x8AEDE14A, 0xB7E7298, 0x2692B0, 0x80180000}};
   int code = 0;
@@ -66644,7 +68464,8 @@ START_TEST(s21_is_equal_6662) {
 }
 
 START_TEST(s21_is_equal_6663) {
-  char *example = "( 0.41701266712089132694 == 106030055672064766221571174 ) = False";
+  char *example =
+      "( 0.41701266712089132694 == 106030055672064766221571174 ) = False";
   s21_decimal value_1 = {{0xC1E4FE96, 0x42B8A921, 0x2, 0x140000}};
   s21_decimal value_2 = {{0xCFED5466, 0xD5DE1F85, 0x57B4BC, 0x0}};
   int code = 0;
@@ -66704,7 +68525,9 @@ START_TEST(s21_is_equal_6668) {
 }
 
 START_TEST(s21_is_equal_6669) {
-  char *example = "( 1774474977951765253802320785 == 1405432393388270683082494817 ) = False";
+  char *example =
+      "( 1774474977951765253802320785 == 1405432393388270683082494817 ) = "
+      "False";
   s21_decimal value_1 = {{0x5D566391, 0x4E4A7426, 0x5BBCFB1, 0x0}};
   s21_decimal value_2 = {{0x51589361, 0xB5ABD601, 0x48A8BE2, 0x0}};
   int code = 0;
@@ -66724,7 +68547,9 @@ START_TEST(s21_is_equal_6670) {
 }
 
 START_TEST(s21_is_equal_6671) {
-  char *example = "( 79228162514264337593543950335 == -3.094087882952874526785093 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -3.094087882952874526785093 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x9C503E45, 0xD7192D74, 0x28F32, 0x80180000}};
   int code = 0;
@@ -66754,7 +68579,8 @@ START_TEST(s21_is_equal_6673) {
 }
 
 START_TEST(s21_is_equal_6674) {
-  char *example = "( 1668692587051131 == 1231911612607664092834441531 ) = False";
+  char *example =
+      "( 1668692587051131 == 1231911612607664092834441531 ) = False";
   s21_decimal value_1 = {{0xC4E3F87B, 0x5EDAA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7198293B, 0x55C06E8E, 0x3FB036E, 0x0}};
   int code = 0;
@@ -66784,7 +68610,8 @@ START_TEST(s21_is_equal_6676) {
 }
 
 START_TEST(s21_is_equal_6677) {
-  char *example = "( 1400086667099426993788632181 == 0.381663304933710510 ) = False";
+  char *example =
+      "( 1400086667099426993788632181 == 0.381663304933710510 ) = False";
   s21_decimal value_1 = {{0x59273C75, 0x4E8E5669, 0x4861FE2, 0x0}};
   s21_decimal value_2 = {{0x4B7002AB, 0x879813, 0x0, 0x110000}};
   int code = 0;
@@ -66904,7 +68731,8 @@ START_TEST(s21_is_equal_6688) {
 }
 
 START_TEST(s21_is_equal_6689) {
-  char *example = "( 1409611214053926216088 == 1883481417570933027123633796 ) = False";
+  char *example =
+      "( 1409611214053926216088 == 1883481417570933027123633796 ) = False";
   s21_decimal value_1 = {{0xE363A198, 0x6A490ABD, 0x4C, 0x0}};
   s21_decimal value_2 = {{0x5FC21E84, 0x3D02CFDA, 0x615FAB4, 0x0}};
   int code = 0;
@@ -66914,7 +68742,8 @@ START_TEST(s21_is_equal_6689) {
 }
 
 START_TEST(s21_is_equal_6690) {
-  char *example = "( 0.682066707435171965015 == 1646240507697732266506180996 ) = False";
+  char *example =
+      "( 0.682066707435171965015 == 1646240507697732266506180996 ) = False";
   s21_decimal value_1 = {{0x1B56857, 0xF993B8AB, 0x24, 0x150000}};
   s21_decimal value_2 = {{0x1C79D984, 0xBE7536FB, 0x551BCFC, 0x0}};
   int code = 0;
@@ -66944,7 +68773,8 @@ START_TEST(s21_is_equal_6692) {
 }
 
 START_TEST(s21_is_equal_6693) {
-  char *example = "( 1334464715930500417866657276 == 0.8150627365849791251101 ) = False";
+  char *example =
+      "( 1334464715930500417866657276 == 0.8150627365849791251101 ) = False";
   s21_decimal value_1 = {{0x32976DFC, 0x34B2E9E0, 0x44FD7E5, 0x0}};
   s21_decimal value_2 = {{0xA69CC29D, 0xD8AD555D, 0x1B9, 0x160000}};
   int code = 0;
@@ -67004,7 +68834,8 @@ START_TEST(s21_is_equal_6698) {
 }
 
 START_TEST(s21_is_equal_6699) {
-  char *example = "( -157706227.24669612638691 == -17.1780751231400611 ) = False";
+  char *example =
+      "( -157706227.24669612638691 == -17.1780751231400611 ) = False";
   s21_decimal value_1 = {{0x2B4A41E3, 0xED5B13BF, 0x356, 0x800E0000}};
   s21_decimal value_2 = {{0xE065BAA3, 0x26249AE, 0x0, 0x80100000}};
   int code = 0;
@@ -67014,7 +68845,8 @@ START_TEST(s21_is_equal_6699) {
 }
 
 START_TEST(s21_is_equal_6700) {
-  char *example = "( 144301969728289559024380 == 0.714592180546238297 ) = False";
+  char *example =
+      "( 144301969728289559024380 == 0.714592180546238297 ) = False";
   s21_decimal value_1 = {{0xDE6412FC, 0xA01DBB46, 0x1E8E, 0x0}};
   s21_decimal value_2 = {{0x58BAF759, 0x9EABDCD, 0x0, 0x120000}};
   int code = 0;
@@ -67054,7 +68886,8 @@ START_TEST(s21_is_equal_6703) {
 }
 
 START_TEST(s21_is_equal_6704) {
-  char *example = "( 1014028022453392848162758712 == 0.77916113106283 ) = False";
+  char *example =
+      "( 1014028022453392848162758712 == 0.77916113106283 ) = False";
   s21_decimal value_1 = {{0x1C89A038, 0x3EC930B5, 0x346C8C9, 0x0}};
   s21_decimal value_2 = {{0x423E756B, 0x46DD, 0x0, 0xE0000}};
   int code = 0;
@@ -67084,7 +68917,8 @@ START_TEST(s21_is_equal_6706) {
 }
 
 START_TEST(s21_is_equal_6707) {
-  char *example = "( 1349371053993710568081641347 == -579144.1611358105897769 ) = False";
+  char *example =
+      "( 1349371053993710568081641347 == -579144.1611358105897769 ) = False";
   s21_decimal value_1 = {{0xDAA2CF83, 0x6954E7A3, 0x45C2C6F, 0x0}};
   s21_decimal value_2 = {{0x4FCA0B29, 0xF465D528, 0x139, 0x80100000}};
   int code = 0;
@@ -67144,7 +68978,8 @@ START_TEST(s21_is_equal_6712) {
 }
 
 START_TEST(s21_is_equal_6713) {
-  char *example = "( 1885151208588044724459327686 == 1904964957850706067429 ) = False";
+  char *example =
+      "( 1885151208588044724459327686 == 1904964957850706067429 ) = False";
   s21_decimal value_1 = {{0x8010D0C6, 0xCA6E0AF8, 0x6175C4B, 0x0}};
   s21_decimal value_2 = {{0x724F3FE5, 0x44B3103A, 0x67, 0x0}};
   int code = 0;
@@ -67154,7 +68989,8 @@ START_TEST(s21_is_equal_6713) {
 }
 
 START_TEST(s21_is_equal_6714) {
-  char *example = "( 1301737292896773127 == 1069037033385611145146054221 ) = False";
+  char *example =
+      "( 1301737292896773127 == 1069037033385611145146054221 ) = False";
   s21_decimal value_1 = {{0xC5FDA407, 0x1210B32B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2DE0B64D, 0xB4055E56, 0x3744965, 0x0}};
   int code = 0;
@@ -67174,7 +69010,8 @@ START_TEST(s21_is_equal_6715) {
 }
 
 START_TEST(s21_is_equal_6716) {
-  char *example = "( 141207681853519064136 == 1778619032790082392519955831 ) = False";
+  char *example =
+      "( 141207681853519064136 == 1778619032790082392519955831 ) = False";
   s21_decimal value_1 = {{0xD3606C48, 0xA7A6767E, 0x7, 0x0}};
   s21_decimal value_2 = {{0x68D15577, 0xF8003E0E, 0x5BF3D3A, 0x0}};
   int code = 0;
@@ -67254,7 +69091,8 @@ START_TEST(s21_is_equal_6723) {
 }
 
 START_TEST(s21_is_equal_6724) {
-  char *example = "( 1638127868695085149381978903 == 1794097254709259 ) = False";
+  char *example =
+      "( 1638127868695085149381978903 == 1794097254709259 ) = False";
   s21_decimal value_1 = {{0xDFFFEB17, 0xB3D15703, 0x54B0711, 0x0}};
   s21_decimal value_2 = {{0xD18F380B, 0x65FB8, 0x0, 0x0}};
   int code = 0;
@@ -67294,7 +69132,9 @@ START_TEST(s21_is_equal_6727) {
 }
 
 START_TEST(s21_is_equal_6728) {
-  char *example = "( 1808753696778720796821183606 == 1125249554736522942038759620 ) = False";
+  char *example =
+      "( 1808753696778720796821183606 == 1125249554736522942038759620 ) = "
+      "False";
   s21_decimal value_1 = {{0x563C5C76, 0x607EBC24, 0x5D82A7E, 0x0}};
   s21_decimal value_2 = {{0xF62D58C4, 0x97789E38, 0x3A2C8DC, 0x0}};
   int code = 0;
@@ -67324,7 +69164,8 @@ START_TEST(s21_is_equal_6730) {
 }
 
 START_TEST(s21_is_equal_6731) {
-  char *example = "( 145785872495736175525982 == 1398090590540793940724438645 ) = False";
+  char *example =
+      "( 145785872495736175525982 == 1398090590540793940724438645 ) = False";
   s21_decimal value_1 = {{0x390D005E, 0x11676437, 0x1EDF, 0x0}};
   s21_decimal value_2 = {{0x90485675, 0xC7A08C82, 0x4847932, 0x0}};
   int code = 0;
@@ -67414,7 +69255,8 @@ START_TEST(s21_is_equal_6739) {
 }
 
 START_TEST(s21_is_equal_6740) {
-  char *example = "( 1311725261905058460 == -6.2962272978481039953622591 ) = False";
+  char *example =
+      "( 1311725261905058460 == -6.2962272978481039953622591 ) = False";
   s21_decimal value_1 = {{0x6C1DA9C, 0x12342F2D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC363F63F, 0xA84B054F, 0x3414C7, 0x80190000}};
   int code = 0;
@@ -67424,7 +69266,9 @@ START_TEST(s21_is_equal_6740) {
 }
 
 START_TEST(s21_is_equal_6741) {
-  char *example = "( 0.94042441241118486443484915 == 1774764512987459545630615637 ) = False";
+  char *example =
+      "( 0.94042441241118486443484915 == 1774764512987459545630615637 ) = "
+      "False";
   s21_decimal value_1 = {{0x64C266F3, 0xF4791D2F, 0x4DCA42, 0x1A0000}};
   s21_decimal value_2 = {{0x72E1A855, 0x81441BE, 0x5BC0D01, 0x0}};
   int code = 0;
@@ -67464,7 +69308,8 @@ START_TEST(s21_is_equal_6744) {
 }
 
 START_TEST(s21_is_equal_6745) {
-  char *example = "( 114947478687302626833 == -9.543108778584817869670596 ) = False";
+  char *example =
+      "( 114947478687302626833 == -9.543108778584817869670596 ) = False";
   s21_decimal value_1 = {{0x27752E11, 0x3B377AD9, 0x6, 0x0}};
   s21_decimal value_2 = {{0xC53248C4, 0xF6A7F59C, 0x7E4D4, 0x80180000}};
   int code = 0;
@@ -67494,7 +69339,9 @@ START_TEST(s21_is_equal_6747) {
 }
 
 START_TEST(s21_is_equal_6748) {
-  char *example = "( 1949345617234019015907187814 == 0.77755197615886745242348861 ) = False";
+  char *example =
+      "( 1949345617234019015907187814 == 0.77755197615886745242348861 ) = "
+      "False";
   s21_decimal value_1 = {{0x4C799C66, 0xA8111AD8, 0x64C75FD, 0x0}};
   s21_decimal value_2 = {{0x1EDEAD3D, 0xB577CC04, 0x40514D, 0x1A0000}};
   int code = 0;
@@ -67524,7 +69371,8 @@ START_TEST(s21_is_equal_6750) {
 }
 
 START_TEST(s21_is_equal_6751) {
-  char *example = "( 1.466379073059801E-11 == -890.24726608648184149482185 ) = False";
+  char *example =
+      "( 1.466379073059801E-11 == -890.24726608648184149482185 ) = False";
   s21_decimal value_1 = {{0xFBC17BD9, 0x535A9, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x7029AC9, 0x198604F3, 0x49A3B8, 0x80170000}};
   int code = 0;
@@ -67534,7 +69382,8 @@ START_TEST(s21_is_equal_6751) {
 }
 
 START_TEST(s21_is_equal_6752) {
-  char *example = "( 16628483465826118 == 1031285066195037180210356329 ) = False";
+  char *example =
+      "( 16628483465826118 == 1031285066195037180210356329 ) = False";
   s21_decimal value_1 = {{0x82224F46, 0x3B1384, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9B56A069, 0x7605C9E5, 0x3550F1B, 0x0}};
   int code = 0;
@@ -67554,7 +69403,8 @@ START_TEST(s21_is_equal_6753) {
 }
 
 START_TEST(s21_is_equal_6754) {
-  char *example = "( 117921609815842421940377201 == 1528635898960598629625831242 ) = False";
+  char *example =
+      "( 117921609815842421940377201 == 1528635898960598629625831242 ) = False";
   s21_decimal value_1 = {{0xEFF75671, 0x46FAEB35, 0x618ADF, 0x0}};
   s21_decimal value_2 = {{0x963B1F4A, 0x212ED1B6, 0x4F0753E, 0x0}};
   int code = 0;
@@ -67564,7 +69414,8 @@ START_TEST(s21_is_equal_6754) {
 }
 
 START_TEST(s21_is_equal_6755) {
-  char *example = "( 0.021705578691452680625046 == -5.7566689037043175822170247 ) = False";
+  char *example =
+      "( 0.021705578691452680625046 == -5.7566689037043175822170247 ) = False";
   s21_decimal value_1 = {{0xA5195B96, 0xA96A52CA, 0x498, 0x180000}};
   s21_decimal value_2 = {{0xB1F9887, 0x7741287B, 0x2F9E38, 0x80190000}};
   int code = 0;
@@ -67574,7 +69425,8 @@ START_TEST(s21_is_equal_6755) {
 }
 
 START_TEST(s21_is_equal_6756) {
-  char *example = "( 16063503484037009706246 == -681.41295236748559773394378 ) = False";
+  char *example =
+      "( 16063503484037009706246 == -681.41295236748559773394378 ) = False";
   s21_decimal value_1 = {{0x83A70D06, 0xCDE48EA4, 0x366, 0x0}};
   s21_decimal value_2 = {{0xD4BCE5CA, 0x43EC7AF, 0x385D7B, 0x80170000}};
   int code = 0;
@@ -67614,7 +69466,8 @@ START_TEST(s21_is_equal_6759) {
 }
 
 START_TEST(s21_is_equal_6760) {
-  char *example = "( 2.0991433092E-10 == 1879041855840578312504702024 ) = False";
+  char *example =
+      "( 2.0991433092E-10 == 1879041855840578312504702024 ) = False";
   s21_decimal value_1 = {{0xE32FD984, 0x4, 0x0, 0x140000}};
   s21_decimal value_2 = {{0xF8597448, 0x1D5B8062, 0x6124E97, 0x0}};
   int code = 0;
@@ -67634,7 +69487,8 @@ START_TEST(s21_is_equal_6761) {
 }
 
 START_TEST(s21_is_equal_6762) {
-  char *example = "( 1415548601790286216269491375 == 16953024401369466 ) = False";
+  char *example =
+      "( 1415548601790286216269491375 == 16953024401369466 ) = False";
   s21_decimal value_1 = {{0xD6E56CAF, 0x774B45E9, 0x492EA13, 0x0}};
   s21_decimal value_2 = {{0x954FE97A, 0x3C3AAF, 0x0, 0x0}};
   int code = 0;
@@ -67734,7 +69588,9 @@ START_TEST(s21_is_equal_6771) {
 }
 
 START_TEST(s21_is_equal_6772) {
-  char *example = "( -509.03581379731340849163900 == 1175978248866652863563127036 ) = False";
+  char *example =
+      "( -509.03581379731340849163900 == 1175978248866652863563127036 ) = "
+      "False";
   s21_decimal value_1 = {{0xCFAD6077, 0xE302AD53, 0x6BCA, 0x80150000}};
   s21_decimal value_2 = {{0xAB6158FC, 0x9C606AD4, 0x3CCBF14, 0x0}};
   int code = 0;
@@ -67834,7 +69690,8 @@ START_TEST(s21_is_equal_6781) {
 }
 
 START_TEST(s21_is_equal_6782) {
-  char *example = "( 1362747480048114251859467950 == 19984640687606678 ) = False";
+  char *example =
+      "( 1362747480048114251859467950 == 19984640687606678 ) = False";
   s21_decimal value_1 = {{0x45179EAE, 0xEBBDD925, 0x4673D00, 0x0}};
   s21_decimal value_2 = {{0xC1260B96, 0x46FFEC, 0x0, 0x0}};
   int code = 0;
@@ -67904,7 +69761,9 @@ START_TEST(s21_is_equal_6788) {
 }
 
 START_TEST(s21_is_equal_6789) {
-  char *example = "( -1.6747706920747527081425191 == 1421077213252947550127546852 ) = False";
+  char *example =
+      "( -1.6747706920747527081425191 == 1421077213252947550127546852 ) = "
+      "False";
   s21_decimal value_1 = {{0xAE29F927, 0x2E9E1AD, 0xDDA77, 0x80190000}};
   s21_decimal value_2 = {{0xD17C61E4, 0x180B7179, 0x4977CCE, 0x0}};
   int code = 0;
@@ -67914,7 +69773,9 @@ START_TEST(s21_is_equal_6789) {
 }
 
 START_TEST(s21_is_equal_6790) {
-  char *example = "( -5766246685.5455048011684350 == -5.3002713658385324418206127 ) = False";
+  char *example =
+      "( -5766246685.5455048011684350 == -5.3002713658385324418206127 ) = "
+      "False";
   s21_decimal value_1 = {{0x44E21C33, 0xDBF31358, 0x4C50C, 0x800F0000}};
   s21_decimal value_2 = {{0x230B09AF, 0xDD63B112, 0x2BD7C2, 0x80190000}};
   int code = 0;
@@ -67954,7 +69815,8 @@ START_TEST(s21_is_equal_6793) {
 }
 
 START_TEST(s21_is_equal_6794) {
-  char *example = "( 1286126134835966930055328061 == 15697105628788875441 ) = False";
+  char *example =
+      "( 1286126134835966930055328061 == 15697105628788875441 ) = False";
   s21_decimal value_1 = {{0x5D03F13D, 0x79568EA2, 0x427DBCD, 0x0}};
   s21_decimal value_2 = {{0xDBEE0B1, 0xD9D75267, 0x0, 0x0}};
   int code = 0;
@@ -67984,7 +69846,8 @@ START_TEST(s21_is_equal_6796) {
 }
 
 START_TEST(s21_is_equal_6797) {
-  char *example = "( -36919.967410948085204045925 == -43.24415700905273692 ) = False";
+  char *example =
+      "( -36919.967410948085204045925 == -43.24415700905273692 ) = False";
   s21_decimal value_1 = {{0x4ED2D065, 0x7199BE75, 0x1E8A1B, 0x80150000}};
   s21_decimal value_2 = {{0x1194A95C, 0x3C03692B, 0x0, 0x80110000}};
   int code = 0;
@@ -67994,7 +69857,8 @@ START_TEST(s21_is_equal_6797) {
 }
 
 START_TEST(s21_is_equal_6798) {
-  char *example = "( 153928420591069522 == 1927674328746731117853788399 ) = False";
+  char *example =
+      "( 153928420591069522 == 1927674328746731117853788399 ) = False";
   s21_decimal value_1 = {{0x3E2AE952, 0x222DD15, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4EC7C8EF, 0xC0EB15D8, 0x63A88EA, 0x0}};
   int code = 0;
@@ -68004,7 +69868,8 @@ START_TEST(s21_is_equal_6798) {
 }
 
 START_TEST(s21_is_equal_6799) {
-  char *example = "( -363948.14685342 == 1153363552222312247125441592 ) = False";
+  char *example =
+      "( -363948.14685342 == 1153363552222312247125441592 ) = False";
   s21_decimal value_1 = {{0xD400409E, 0x2119, 0x0, 0x80080000}};
   s21_decimal value_2 = {{0x54A17C38, 0x73022505, 0x3BA0A3B, 0x0}};
   int code = 0;
@@ -68024,7 +69889,9 @@ START_TEST(s21_is_equal_6800) {
 }
 
 START_TEST(s21_is_equal_6801) {
-  char *example = "( 1509262612070156154806217757 == 1861038608423832164544056697 ) = False";
+  char *example =
+      "( 1509262612070156154806217757 == 1861038608423832164544056697 ) = "
+      "False";
   s21_decimal value_1 = {{0xB5D82C1D, 0x2493D15A, 0x4E06ECA, 0x0}};
   s21_decimal value_2 = {{0xAA488D79, 0x1DDB329B, 0x6036A41, 0x0}};
   int code = 0;
@@ -68054,7 +69921,8 @@ START_TEST(s21_is_equal_6803) {
 }
 
 START_TEST(s21_is_equal_6804) {
-  char *example = "( 113683265702903003468541793 == -11.858369375074462229632004 ) = False";
+  char *example =
+      "( 113683265702903003468541793 == -11.858369375074462229632004 ) = False";
   s21_decimal value_1 = {{0x5B02F61, 0x2EB96A54, 0x5E095E, 0x0}};
   s21_decimal value_2 = {{0xCBE89404, 0x7DEF1892, 0x9CF1B, 0x80180000}};
   int code = 0;
@@ -68074,7 +69942,8 @@ START_TEST(s21_is_equal_6805) {
 }
 
 START_TEST(s21_is_equal_6806) {
-  char *example = "( -9.9271056567688278 == 1906003595581642206886679 ) = False";
+  char *example =
+      "( -9.9271056567688278 == 1906003595581642206886679 ) = False";
   s21_decimal value_1 = {{0xFF31DC56, 0x160AE7F, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x93E83B17, 0xA975DDA7, 0x1939C, 0x0}};
   int code = 0;
@@ -68094,7 +69963,9 @@ START_TEST(s21_is_equal_6807) {
 }
 
 START_TEST(s21_is_equal_6808) {
-  char *example = "( -79228162514264337593543950335 == 1902175870517170721293971704 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 1902175870517170721293971704 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x262DB0F8, 0x902E9A58, 0x6257168, 0x0}};
   int code = 0;
@@ -68104,7 +69975,9 @@ START_TEST(s21_is_equal_6808) {
 }
 
 START_TEST(s21_is_equal_6809) {
-  char *example = "( -93.773362168670423516468047 == -7.0057585018165397106798378 ) = False";
+  char *example =
+      "( -93.773362168670423516468047 == -7.0057585018165397106798378 ) = "
+      "False";
   s21_decimal value_1 = {{0xAF58534F, 0x2633BFB2, 0x4D9148, 0x80180000}};
   s21_decimal value_2 = {{0x34E52F2A, 0x4B35C3E7, 0x39F345, 0x80190000}};
   int code = 0;
@@ -68114,7 +69987,9 @@ START_TEST(s21_is_equal_6809) {
 }
 
 START_TEST(s21_is_equal_6810) {
-  char *example = "( 1865495585347002772407169535 == 1317248539597049654824686142 ) = False";
+  char *example =
+      "( 1865495585347002772407169535 == 1317248539597049654824686142 ) = "
+      "False";
   s21_decimal value_1 = {{0xBD4BB1FF, 0x51DC3E7B, 0x6071A0E, 0x0}};
   s21_decimal value_2 = {{0xCCA4523E, 0x6AAE6BED, 0x4419A3A, 0x0}};
   int code = 0;
@@ -68124,7 +69999,8 @@ START_TEST(s21_is_equal_6810) {
 }
 
 START_TEST(s21_is_equal_6811) {
-  char *example = "( 145676766990944687 == 0.17484280399099676476901557 ) = False";
+  char *example =
+      "( 145676766990944687 == 0.17484280399099676476901557 ) = False";
   s21_decimal value_1 = {{0x6C85C9AF, 0x2058C3F, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3B4108B5, 0xBD59DD6A, 0xE7670, 0x1A0000}};
   int code = 0;
@@ -68174,7 +70050,9 @@ START_TEST(s21_is_equal_6815) {
 }
 
 START_TEST(s21_is_equal_6816) {
-  char *example = "( 1705156686745462277160976955 == 1007371640420575680358672062 ) = False";
+  char *example =
+      "( 1705156686745462277160976955 == 1007371640420575680358672062 ) = "
+      "False";
   s21_decimal value_1 = {{0x501A423B, 0x35BABEA1, 0x58278F9, 0x0}};
   s21_decimal value_2 = {{0xC7D266BE, 0xD5DE0FA, 0x341473E, 0x0}};
   int code = 0;
@@ -68184,7 +70062,8 @@ START_TEST(s21_is_equal_6816) {
 }
 
 START_TEST(s21_is_equal_6817) {
-  char *example = "( 1427245669132319424063722365 == 1061738619282165979003550 ) = False";
+  char *example =
+      "( 1427245669132319424063722365 == 1061738619282165979003550 ) = False";
   s21_decimal value_1 = {{0x9EA7D37D, 0xC1D72A43, 0x49C9706, 0x0}};
   s21_decimal value_2 = {{0x8A51BA9E, 0xF74408D5, 0xE0D4, 0x0}};
   int code = 0;
@@ -68244,7 +70123,9 @@ START_TEST(s21_is_equal_6822) {
 }
 
 START_TEST(s21_is_equal_6823) {
-  char *example = "( 1860484467934817328665893615 == 1135984947619666871824529083 ) = False";
+  char *example =
+      "( 1860484467934817328665893615 == 1135984947619666871824529083 ) = "
+      "False";
   s21_decimal value_1 = {{0x5AEE9AEF, 0x19BBE5C1, 0x602F4E9, 0x0}};
   s21_decimal value_2 = {{0x5B19B6BB, 0x67EFDC6D, 0x3ABAA2B, 0x0}};
   int code = 0;
@@ -68274,7 +70155,9 @@ START_TEST(s21_is_equal_6825) {
 }
 
 START_TEST(s21_is_equal_6826) {
-  char *example = "( 1064270629162375564779299848 == 1340800460916662616187554414 ) = False";
+  char *example =
+      "( 1064270629162375564779299848 == 1340800460916662616187554414 ) = "
+      "False";
   s21_decimal value_1 = {{0x8053A408, 0x699AC977, 0x3705812, 0x0}};
   s21_decimal value_2 = {{0x286D4A6E, 0xA138A4CA, 0x455158A, 0x0}};
   int code = 0;
@@ -68324,7 +70207,8 @@ START_TEST(s21_is_equal_6830) {
 }
 
 START_TEST(s21_is_equal_6831) {
-  char *example = "( 15352316604698593954291377 == 198665486848925358 ) = False";
+  char *example =
+      "( 15352316604698593954291377 == 198665486848925358 ) = False";
   s21_decimal value_1 = {{0x342DEB1, 0xC032C9EC, 0xCB2FA, 0x0}};
   s21_decimal value_2 = {{0x2CC29EAE, 0x2C1CD35, 0x0, 0x0}};
   int code = 0;
@@ -68404,7 +70288,8 @@ START_TEST(s21_is_equal_6838) {
 }
 
 START_TEST(s21_is_equal_6839) {
-  char *example = "( -1244.898823405013497 == 1568038945822521974748475210 ) = False";
+  char *example =
+      "( -1244.898823405013497 == 1568038945822521974748475210 ) = False";
   s21_decimal value_1 = {{0x565B89F9, 0x1146C4E2, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xE0B9EF4A, 0x94839766, 0x5110D29, 0x0}};
   int code = 0;
@@ -68414,7 +70299,8 @@ START_TEST(s21_is_equal_6839) {
 }
 
 START_TEST(s21_is_equal_6840) {
-  char *example = "( 18627981833922895 == 1002523262424263667132712100 ) = False";
+  char *example =
+      "( 18627981833922895 == 1002523262424263667132712100 ) = False";
   s21_decimal value_1 = {{0x17E94F, 0x422E0D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFDC4C4A4, 0xF45262C1, 0x33D448E, 0x0}};
   int code = 0;
@@ -68434,7 +70320,8 @@ START_TEST(s21_is_equal_6841) {
 }
 
 START_TEST(s21_is_equal_6842) {
-  char *example = "( 18247823418280577234474 == 1337659803935813543499629132 ) = False";
+  char *example =
+      "( 18247823418280577234474 == 1337659803935813543499629132 ) = False";
   s21_decimal value_1 = {{0x6C1A762A, 0x376BDDD0, 0x3DD, 0x0}};
   s21_decimal value_2 = {{0xA9D7824C, 0x46105C65, 0x4527C7B, 0x0}};
   int code = 0;
@@ -68444,7 +70331,8 @@ START_TEST(s21_is_equal_6842) {
 }
 
 START_TEST(s21_is_equal_6843) {
-  char *example = "( 115391062463009076038 == 1750711274900769784028475736 ) = False";
+  char *example =
+      "( 115391062463009076038 == 1750711274900769784028475736 ) = False";
   s21_decimal value_1 = {{0x2A913346, 0x415F67F1, 0x6, 0x0}};
   s21_decimal value_2 = {{0xA6D43158, 0x61D23A99, 0x5A82788, 0x0}};
   int code = 0;
@@ -68554,7 +70442,8 @@ START_TEST(s21_is_equal_6853) {
 }
 
 START_TEST(s21_is_equal_6854) {
-  char *example = "( -27.8921042473917 == -2.0306105111743225507223220 ) = False";
+  char *example =
+      "( -27.8921042473917 == -2.0306105111743225507223220 ) = False";
   s21_decimal value_1 = {{0x5DA833BD, 0xFDAD, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xBEF7CF12, 0x9DCB5D76, 0x1ADFF, 0x80180000}};
   int code = 0;
@@ -68584,7 +70473,8 @@ START_TEST(s21_is_equal_6856) {
 }
 
 START_TEST(s21_is_equal_6857) {
-  char *example = "( 1394462807075962243768582666 == -17.5889566428069710662 ) = False";
+  char *example =
+      "( 1394462807075962243768582666 == -17.5889566428069710662 ) = False";
   s21_decimal value_1 = {{0x3F27020A, 0x3E7D50A5, 0x48178FC, 0x0}};
   s21_decimal value_2 = {{0x72914B46, 0x88F544C3, 0x9, 0x80130000}};
   int code = 0;
@@ -68594,7 +70484,9 @@ START_TEST(s21_is_equal_6857) {
 }
 
 START_TEST(s21_is_equal_6858) {
-  char *example = "( 1737776784926192430601724595 == 1305498125753158201611348211 ) = False";
+  char *example =
+      "( 1737776784926192430601724595 == 1305498125753158201611348211 ) = "
+      "False";
   s21_decimal value_1 = {{0xA3EBE2B3, 0x468D3D70, 0x59D748C, 0x0}};
   s21_decimal value_2 = {{0x62CB68F3, 0x34B3A962, 0x437E1FB, 0x0}};
   int code = 0;
@@ -68694,7 +70586,9 @@ START_TEST(s21_is_equal_6867) {
 }
 
 START_TEST(s21_is_equal_6868) {
-  char *example = "( -9.2059631972196830995024332 == 1311387167031949184950535896 ) = False";
+  char *example =
+      "( -9.2059631972196830995024332 == 1311387167031949184950535896 ) = "
+      "False";
   s21_decimal value_1 = {{0xAD9409CC, 0xA62CF6AF, 0x4C2662, 0x80190000}};
   s21_decimal value_2 = {{0x88F306D8, 0xC5F5D7DA, 0x43CC108, 0x0}};
   int code = 0;
@@ -68704,7 +70598,8 @@ START_TEST(s21_is_equal_6868) {
 }
 
 START_TEST(s21_is_equal_6869) {
-  char *example = "( 1968424565729815 == 1187377529538734849889376037 ) = False";
+  char *example =
+      "( 1968424565729815 == 1187377529538734849889376037 ) = False";
   s21_decimal value_1 = {{0x8F01EA17, 0x6FE45, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1E0B9725, 0xDAB49BF1, 0x3D62CF8, 0x0}};
   int code = 0;
@@ -68714,7 +70609,8 @@ START_TEST(s21_is_equal_6869) {
 }
 
 START_TEST(s21_is_equal_6870) {
-  char *example = "( 14460440721039082 == 1170989410196548813050005793 ) = False";
+  char *example =
+      "( 14460440721039082 == 1170989410196548813050005793 ) = False";
   s21_decimal value_1 = {{0xB8791EEA, 0x335FB1, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9F26C921, 0x1FE7CF4B, 0x3C89EA7, 0x0}};
   int code = 0;
@@ -68724,7 +70620,9 @@ START_TEST(s21_is_equal_6870) {
 }
 
 START_TEST(s21_is_equal_6871) {
-  char *example = "( -893339004.65559900597232099 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -893339004.65559900597232099 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x5B73A1E3, 0x72B498DB, 0x49E530, 0x80110000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -68844,7 +70742,8 @@ START_TEST(s21_is_equal_6882) {
 }
 
 START_TEST(s21_is_equal_6883) {
-  char *example = "( -50.770670781330316473541944 == -8898.8669509767 ) = False";
+  char *example =
+      "( -50.770670781330316473541944 == -8898.8669509767 ) = False";
   s21_decimal value_1 = {{0xA49E2538, 0x93F6B589, 0x29FF1B, 0x80180000}};
   s21_decimal value_2 = {{0x4A090087, 0x50EF, 0x0, 0x800A0000}};
   int code = 0;
@@ -68864,7 +70763,8 @@ START_TEST(s21_is_equal_6884) {
 }
 
 START_TEST(s21_is_equal_6885) {
-  char *example = "( -70702.52663205838 == -5.9604882617033023476124772 ) = False";
+  char *example =
+      "( -70702.52663205838 == -5.9604882617033023476124772 ) = False";
   s21_decimal value_1 = {{0x7A766FCE, 0x191E5B, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x1602CC64, 0x2944D4D8, 0x314DD3, 0x80190000}};
   int code = 0;
@@ -68884,7 +70784,8 @@ START_TEST(s21_is_equal_6886) {
 }
 
 START_TEST(s21_is_equal_6887) {
-  char *example = "( -1.24125366450965171 == -242.4041772358880313553 ) = False";
+  char *example =
+      "( -1.24125366450965171 == -242.4041772358880313553 ) = False";
   s21_decimal value_1 = {{0xF6ECCAB3, 0x1B8FB5C, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x2F5DC0D1, 0x68565CD6, 0x83, 0x80130000}};
   int code = 0;
@@ -68894,7 +70795,8 @@ START_TEST(s21_is_equal_6887) {
 }
 
 START_TEST(s21_is_equal_6888) {
-  char *example = "( -4.346622753635919997 == 22.48584138584243275997885 ) = False";
+  char *example =
+      "( -4.346622753635919997 == 22.48584138584243275997885 ) = False";
   s21_decimal value_1 = {{0x7319687D, 0x3C524E5D, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x590EA2BD, 0xFD8B1503, 0x1DC27, 0x170000}};
   int code = 0;
@@ -68974,7 +70876,8 @@ START_TEST(s21_is_equal_6895) {
 }
 
 START_TEST(s21_is_equal_6896) {
-  char *example = "( 1028262383076738 == 1435125418550439265365980258 ) = False";
+  char *example =
+      "( 1028262383076738 == 1435125418550439265365980258 ) = False";
   s21_decimal value_1 = {{0xFE144582, 0x3A732, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF2F8F462, 0xD43E7092, 0x4A31BA0, 0x0}};
   int code = 0;
@@ -69064,7 +70967,9 @@ START_TEST(s21_is_equal_6904) {
 }
 
 START_TEST(s21_is_equal_6905) {
-  char *example = "( 1845071379333203198631024723 == -5800.6639429101374155321463 ) = False";
+  char *example =
+      "( 1845071379333203198631024723 == -5800.6639429101374155321463 ) = "
+      "False";
   s21_decimal value_1 = {{0x18D91853, 0xE4A860FE, 0x5F6350F, 0x0}};
   s21_decimal value_2 = {{0xA784F077, 0x39710455, 0x2FFB62, 0x80160000}};
   int code = 0;
@@ -69174,7 +71079,8 @@ START_TEST(s21_is_equal_6915) {
 }
 
 START_TEST(s21_is_equal_6916) {
-  char *example = "( 60.9169541328357988547426 == 18898853652207519094 ) = False";
+  char *example =
+      "( 60.9169541328357988547426 == 18898853652207519094 ) = False";
   s21_decimal value_1 = {{0x2064BB62, 0x25A22F96, 0x80FF, 0x160000}};
   s21_decimal value_2 = {{0x29EC4576, 0x6463744, 0x1, 0x0}};
   int code = 0;
@@ -69184,7 +71090,8 @@ START_TEST(s21_is_equal_6916) {
 }
 
 START_TEST(s21_is_equal_6917) {
-  char *example = "( -80.07113685647645108 == -33.856415840487532250775779 ) = False";
+  char *example =
+      "( -80.07113685647645108 == -33.856415840487532250775779 ) = False";
   s21_decimal value_1 = {{0x3D3259B4, 0x6F1EFB79, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xA10FC0E3, 0xFAF7A873, 0x1C015F, 0x80180000}};
   int code = 0;
@@ -69194,7 +71101,8 @@ START_TEST(s21_is_equal_6917) {
 }
 
 START_TEST(s21_is_equal_6918) {
-  char *example = "( 1825002839933352114330504402 == -15.0475402936227064274 ) = False";
+  char *example =
+      "( 1825002839933352114330504402 == -15.0475402936227064274 ) = False";
   s21_decimal value_1 = {{0xA0038CD2, 0x3140FB2B, 0x5E59B62, 0x0}};
   s21_decimal value_2 = {{0xB795E9D2, 0x284405B7, 0x8, 0x80130000}};
   int code = 0;
@@ -69264,7 +71172,9 @@ START_TEST(s21_is_equal_6924) {
 }
 
 START_TEST(s21_is_equal_6925) {
-  char *example = "( 1079654481375757059119755729 == 1274744515924395035871135902 ) = False";
+  char *example =
+      "( 1079654481375757059119755729 == 1274744515924395035871135902 ) = "
+      "False";
   s21_decimal value_1 = {{0xC551B1D1, 0xB649E9AB, 0x37D11BA, 0x0}};
   s21_decimal value_2 = {{0x2A67C89E, 0xAD2C856F, 0x41E71A6, 0x0}};
   int code = 0;
@@ -69344,7 +71254,9 @@ START_TEST(s21_is_equal_6932) {
 }
 
 START_TEST(s21_is_equal_6933) {
-  char *example = "( 0.49173786311226355708341346 == 1099360781556371293602503191 ) = False";
+  char *example =
+      "( 0.49173786311226355708341346 == 1099360781556371293602503191 ) = "
+      "False";
   s21_decimal value_1 = {{0xECE42C62, 0x4C224E83, 0x28ACF4, 0x1A0000}};
   s21_decimal value_2 = {{0x4E7ADA17, 0x62AC2137, 0x38D5EB3, 0x0}};
   int code = 0;
@@ -69374,7 +71286,8 @@ START_TEST(s21_is_equal_6935) {
 }
 
 START_TEST(s21_is_equal_6936) {
-  char *example = "( -3408464482.0628550489629345 == 154087888123503815214 ) = False";
+  char *example =
+      "( -3408464482.0628550489629345 == 154087888123503815214 ) = False";
   s21_decimal value_1 = {{0x228A62A1, 0x4C534DBF, 0x1C31B4, 0x80100000}};
   s21_decimal value_2 = {{0xF93AA2E, 0x5A6625DB, 0x8, 0x0}};
   int code = 0;
@@ -69384,7 +71297,9 @@ START_TEST(s21_is_equal_6936) {
 }
 
 START_TEST(s21_is_equal_6937) {
-  char *example = "( 1938012799872274861911113780 == 1999126581522797291733884165 ) = False";
+  char *example =
+      "( 1938012799872274861911113780 == 1999126581522797291733884165 ) = "
+      "False";
   s21_decimal value_1 = {{0x3D530034, 0x6574B048, 0x643162C, 0x0}};
   s21_decimal value_2 = {{0x97099D05, 0x2355BA08, 0x675A385, 0x0}};
   int code = 0;
@@ -69404,7 +71319,9 @@ START_TEST(s21_is_equal_6938) {
 }
 
 START_TEST(s21_is_equal_6939) {
-  char *example = "( -2.7437798595553525525894463 == -8979.1613337971696359897614 ) = False";
+  char *example =
+      "( -2.7437798595553525525894463 == -8979.1613337971696359897614 ) = "
+      "False";
   s21_decimal value_1 = {{0x798BD53F, 0xAD2989F, 0x16B22E, 0x80190000}};
   s21_decimal value_2 = {{0x457EFA0E, 0x1CD360A7, 0x4A461D, 0x80160000}};
   int code = 0;
@@ -69414,7 +71331,9 @@ START_TEST(s21_is_equal_6939) {
 }
 
 START_TEST(s21_is_equal_6940) {
-  char *example = "( 1793863995435932881100775923 == 1069232537663442834506070046 ) = False";
+  char *example =
+      "( 1793863995435932881100775923 == 1069232537663442834506070046 ) = "
+      "False";
   s21_decimal value_1 = {{0x3F8A1F3, 0xCBCF547, 0x5CBD97A, 0x0}};
   s21_decimal value_2 = {{0x5E47381E, 0x2E77C33, 0x37472CC, 0x0}};
   int code = 0;
@@ -69464,7 +71383,9 @@ START_TEST(s21_is_equal_6944) {
 }
 
 START_TEST(s21_is_equal_6945) {
-  char *example = "( -7.4990987655562041872823715 == -193.38455741050184300604367 ) = False";
+  char *example =
+      "( -7.4990987655562041872823715 == -193.38455741050184300604367 ) = "
+      "False";
   s21_decimal value_1 = {{0x15B35A3, 0x962EACBE, 0x3E07F5, 0x80190000}};
   s21_decimal value_2 = {{0xC8F5ABCF, 0xC94E1B68, 0xFFF13, 0x80170000}};
   int code = 0;
@@ -69474,7 +71395,8 @@ START_TEST(s21_is_equal_6945) {
 }
 
 START_TEST(s21_is_equal_6946) {
-  char *example = "( -48.495969827465431207180964 == 184842796965081975344 ) = False";
+  char *example =
+      "( -48.495969827465431207180964 == 184842796965081975344 ) = False";
   s21_decimal value_1 = {{0x33E8FAA4, 0xCACCBB99, 0x281D6B, 0x80180000}};
   s21_decimal value_2 = {{0x295D0A30, 0x5358880, 0xA, 0x0}};
   int code = 0;
@@ -69494,7 +71416,8 @@ START_TEST(s21_is_equal_6947) {
 }
 
 START_TEST(s21_is_equal_6948) {
-  char *example = "( 1367751752582463792045924404 == 13083881076663292546087447 ) = False";
+  char *example =
+      "( 1367751752582463792045924404 == 13083881076663292546087447 ) = False";
   s21_decimal value_1 = {{0x1F8CA034, 0x141B13D6, 0x46B60B3, 0x0}};
   s21_decimal value_2 = {{0x29897A17, 0x9D48DC57, 0xAD29E, 0x0}};
   int code = 0;
@@ -69504,7 +71427,9 @@ START_TEST(s21_is_equal_6948) {
 }
 
 START_TEST(s21_is_equal_6949) {
-  char *example = "( -7.3851117295844514000517131 == 1512918005880361203979525261 ) = False";
+  char *example =
+      "( -7.3851117295844514000517131 == 1512918005880361203979525261 ) = "
+      "False";
   s21_decimal value_1 = {{0x1553B80B, 0x1733A5A6, 0x3D1695, 0x80190000}};
   s21_decimal value_2 = {{0x43F01C8D, 0x703ABC67, 0x4E374D9, 0x0}};
   int code = 0;
@@ -69534,7 +71459,9 @@ START_TEST(s21_is_equal_6951) {
 }
 
 START_TEST(s21_is_equal_6952) {
-  char *example = "( -4.7612728779831509234330291 == 1186115603470196431432300812 ) = False";
+  char *example =
+      "( -4.7612728779831509234330291 == 1186115603470196431432300812 ) = "
+      "False";
   s21_decimal value_1 = {{0x671AAB3, 0x32F5202D, 0x276263, 0x80190000}};
   s21_decimal value_2 = {{0xF299B90C, 0xB47F471B, 0x3D521BF, 0x0}};
   int code = 0;
@@ -69564,7 +71491,8 @@ START_TEST(s21_is_equal_6954) {
 }
 
 START_TEST(s21_is_equal_6955) {
-  char *example = "( 1192186336033968024093967 == 1171793824749458481013119873 ) = False";
+  char *example =
+      "( 1192186336033968024093967 == 1171793824749458481013119873 ) = False";
   s21_decimal value_1 = {{0x4832850F, 0x8CFFB4F9, 0xFC74, 0x0}};
   s21_decimal value_2 = {{0x6130DB81, 0x86615BAD, 0x3C948FE, 0x0}};
   int code = 0;
@@ -69634,7 +71562,9 @@ START_TEST(s21_is_equal_6961) {
 }
 
 START_TEST(s21_is_equal_6962) {
-  char *example = "( 1897782724584053899889263850 == 1922672342865031352417970865 ) = False";
+  char *example =
+      "( 1897782724584053899889263850 == 1922672342865031352417970865 ) = "
+      "False";
   s21_decimal value_1 = {{0xED24C4EA, 0xA51D0D4E, 0x621CF1F, 0x0}};
   s21_decimal value_2 = {{0x560AEAB1, 0x8E3C00EB, 0x63665B4, 0x0}};
   int code = 0;
@@ -69754,7 +71684,9 @@ START_TEST(s21_is_equal_6973) {
 }
 
 START_TEST(s21_is_equal_6974) {
-  char *example = "( 0.69769524814907568413074495 == 1337197821237593127433359926 ) = False";
+  char *example =
+      "( 0.69769524814907568413074495 == 1337197821237593127433359926 ) = "
+      "False";
   s21_decimal value_1 = {{0x7059E43F, 0x84D55546, 0x39B645, 0x1A0000}};
   s21_decimal value_2 = {{0xC7915236, 0x2435062A, 0x4521AA7, 0x0}};
   int code = 0;
@@ -69774,7 +71706,8 @@ START_TEST(s21_is_equal_6975) {
 }
 
 START_TEST(s21_is_equal_6976) {
-  char *example = "( -8703.6157709526380860292765 == 1864547480964314 ) = False";
+  char *example =
+      "( -8703.6157709526380860292765 == 1864547480964314 ) = False";
   s21_decimal value_1 = {{0x9FC63E9D, 0x904CDF3E, 0x47FE9F, 0x80160000}};
   s21_decimal value_2 = {{0xCA450CDA, 0x69FCB, 0x0, 0x0}};
   int code = 0;
@@ -69814,7 +71747,8 @@ START_TEST(s21_is_equal_6979) {
 }
 
 START_TEST(s21_is_equal_6980) {
-  char *example = "( 1200596770054916571877700157 == 14860117574759730448691 ) = False";
+  char *example =
+      "( 1200596770054916571877700157 == 14860117574759730448691 ) = False";
   s21_decimal value_1 = {{0x3E55723D, 0x5191CD3F, 0x3E11C41, 0x0}};
   s21_decimal value_2 = {{0x7CF90933, 0x918EF9F7, 0x325, 0x0}};
   int code = 0;
@@ -69894,7 +71828,8 @@ START_TEST(s21_is_equal_6987) {
 }
 
 START_TEST(s21_is_equal_6988) {
-  char *example = "( 1005437415329943966612602026 == 4.6318900814E-10 ) = False";
+  char *example =
+      "( 1005437415329943966612602026 == 4.6318900814E-10 ) = False";
   s21_decimal value_1 = {{0x8CF63CAA, 0x7FFC832C, 0x33FADA7, 0x0}};
   s21_decimal value_2 = {{0xC8D2564E, 0xA, 0x0, 0x140000}};
   int code = 0;
@@ -69904,7 +71839,9 @@ START_TEST(s21_is_equal_6988) {
 }
 
 START_TEST(s21_is_equal_6989) {
-  char *example = "( 79228162514264337593543950335 == 1362796527667086966351692139 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 1362796527667086966351692139 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x220B816B, 0xCC30AF68, 0x4674763, 0x0}};
   int code = 0;
@@ -69914,7 +71851,8 @@ START_TEST(s21_is_equal_6989) {
 }
 
 START_TEST(s21_is_equal_6990) {
-  char *example = "( -52.5231031594501437 == 1261150009176942416840248203 ) = False";
+  char *example =
+      "( -52.5231031594501437 == 1261150009176942416840248203 ) = False";
   s21_decimal value_1 = {{0x2733C53D, 0x749FED7, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x2EBA4B8B, 0xFD2E4CF4, 0x41332E6, 0x0}};
   int code = 0;
@@ -69934,7 +71872,9 @@ START_TEST(s21_is_equal_6991) {
 }
 
 START_TEST(s21_is_equal_6992) {
-  char *example = "( -5.3986470212565048635099241 == 1282308626454658911059277894 ) = False";
+  char *example =
+      "( -5.3986470212565048635099241 == 1282308626454658911059277894 ) = "
+      "False";
   s21_decimal value_1 = {{0x32670869, 0x6A1A55EC, 0x2CA814, 0x80190000}};
   s21_decimal value_2 = {{0x54AF7846, 0xEE11593E, 0x424B369, 0x0}};
   int code = 0;
@@ -69954,7 +71894,8 @@ START_TEST(s21_is_equal_6993) {
 }
 
 START_TEST(s21_is_equal_6994) {
-  char *example = "( 0.27741039146744044446035918 == 1378771224714528 ) = False";
+  char *example =
+      "( 0.27741039146744044446035918 == 1378771224714528 ) = False";
   s21_decimal value_1 = {{0x32782FCE, 0xBED8C71A, 0x16F264, 0x1A0000}};
   s21_decimal value_2 = {{0x31135D20, 0x4E5FC, 0x0, 0x0}};
   int code = 0;
@@ -69974,7 +71915,8 @@ START_TEST(s21_is_equal_6995) {
 }
 
 START_TEST(s21_is_equal_6996) {
-  char *example = "( -2.4370213439440780682869 == 1731849393430804812045526253 ) = False";
+  char *example =
+      "( -2.4370213439440780682869 == 1731849393430804812045526253 ) = False";
   s21_decimal value_1 = {{0x2E526675, 0x1CA6A43F, 0x529, 0x80160000}};
   s21_decimal value_2 = {{0x99A4A4ED, 0xBD1FF87C, 0x5988D5F, 0x0}};
   int code = 0;
@@ -69994,7 +71936,8 @@ START_TEST(s21_is_equal_6997) {
 }
 
 START_TEST(s21_is_equal_6998) {
-  char *example = "( 1691343471121422523896392683 == -58595.37066465788047104 ) = False";
+  char *example =
+      "( 1691343471121422523896392683 == -58595.37066465788047104 ) = False";
   s21_decimal value_1 = {{0x20EF6BEB, 0x4A5AFF71, 0x5770BE9, 0x0}};
   s21_decimal value_2 = {{0xEFBE2F00, 0xA5697CCA, 0x13D, 0x80110000}};
   int code = 0;
@@ -70054,7 +71997,9 @@ START_TEST(s21_is_equal_7003) {
 }
 
 START_TEST(s21_is_equal_7004) {
-  char *example = "( 1088317913586991839086950779 == 1950119652883449805972217898 ) = False";
+  char *example =
+      "( 1088317913586991839086950779 == 1950119652883449805972217898 ) = "
+      "False";
   s21_decimal value_1 = {{0x9E98B97B, 0x503420A0, 0x3843C48, 0x0}};
   s21_decimal value_2 = {{0x22ECA02A, 0x3690B784, 0x64D19E6, 0x0}};
   int code = 0;
@@ -70094,7 +72039,8 @@ START_TEST(s21_is_equal_7007) {
 }
 
 START_TEST(s21_is_equal_7008) {
-  char *example = "( 1148341795126464646671446731 == -19.1678572287097849458 ) = False";
+  char *example =
+      "( 1148341795126464646671446731 == -19.1678572287097849458 ) = False";
   s21_decimal value_1 = {{0x702B32CB, 0x739C1D05, 0x3B5E2D5, 0x0}};
   s21_decimal value_2 = {{0x42804672, 0x641315F0, 0xA, 0x80130000}};
   int code = 0;
@@ -70144,7 +72090,9 @@ START_TEST(s21_is_equal_7012) {
 }
 
 START_TEST(s21_is_equal_7013) {
-  char *example = "( 0.96250627997536733009014547 == 1933022650797684597798709111 ) = False";
+  char *example =
+      "( 0.96250627997536733009014547 == 1933022650797684597798709111 ) = "
+      "False";
   s21_decimal value_1 = {{0x5F93EF13, 0xFFB7FCBA, 0x4F9DDC, 0x1A0000}};
   s21_decimal value_2 = {{0x293FA777, 0xDF78235B, 0x63EF577, 0x0}};
   int code = 0;
@@ -70194,7 +72142,8 @@ START_TEST(s21_is_equal_7017) {
 }
 
 START_TEST(s21_is_equal_7018) {
-  char *example = "( -9294.6509290146493365968438 == 0.8714212011466741510484991 ) = False";
+  char *example =
+      "( -9294.6509290146493365968438 == 0.8714212011466741510484991 ) = False";
   s21_decimal value_1 = {{0x26FB5E36, 0x5D67DC7D, 0x4CE230, 0x80160000}};
   s21_decimal value_2 = {{0x5F86B3FF, 0x61351B03, 0x7354E, 0x190000}};
   int code = 0;
@@ -70234,7 +72183,8 @@ START_TEST(s21_is_equal_7021) {
 }
 
 START_TEST(s21_is_equal_7022) {
-  char *example = "( 1121817367542856 == 1337602044080438408116284148 ) = False";
+  char *example =
+      "( 1121817367542856 == 1337602044080438408116284148 ) = False";
   s21_decimal value_1 = {{0x75B1FC48, 0x3FC49, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7881AAF4, 0x1B0C158A, 0x4527040, 0x0}};
   int code = 0;
@@ -70314,7 +72264,8 @@ START_TEST(s21_is_equal_7029) {
 }
 
 START_TEST(s21_is_equal_7030) {
-  char *example = "( 1257446299903951497747480143 == 1545546414793569 ) = False";
+  char *example =
+      "( 1257446299903951497747480143 == 1545546414793569 ) = False";
   s21_decimal value_1 = {{0xF2F7BE4F, 0x81C9D872, 0x410229C, 0x0}};
   s21_decimal value_2 = {{0x9109A361, 0x57DAA, 0x0, 0x0}};
   int code = 0;
@@ -70354,7 +72305,9 @@ START_TEST(s21_is_equal_7033) {
 }
 
 START_TEST(s21_is_equal_7034) {
-  char *example = "( -6.2515857675955145943426564 == 1441107395558210846466910869 ) = False";
+  char *example =
+      "( -6.2515857675955145943426564 == 1441107395558210846466910869 ) = "
+      "False";
   s21_decimal value_1 = {{0xEDB22604, 0x6F734FA6, 0x33B63F, 0x80190000}};
   s21_decimal value_2 = {{0x429A2A95, 0x73D4384D, 0x4A80E5C, 0x0}};
   int code = 0;
@@ -70404,7 +72357,9 @@ START_TEST(s21_is_equal_7038) {
 }
 
 START_TEST(s21_is_equal_7039) {
-  char *example = "( 1881821939636442026454952926 == 1025416727128981711892255592 ) = False";
+  char *example =
+      "( 1881821939636442026454952926 == 1025416727128981711892255592 ) = "
+      "False";
   s21_decimal value_1 = {{0x96E62BDE, 0xC25D4734, 0x6149B4B, 0x0}};
   s21_decimal value_2 = {{0xC1D81368, 0x29ADF95A, 0x3503470, 0x0}};
   int code = 0;
@@ -70424,7 +72379,8 @@ START_TEST(s21_is_equal_7040) {
 }
 
 START_TEST(s21_is_equal_7041) {
-  char *example = "( 1237521743390166936432525687 == -6.68277251401663 ) = False";
+  char *example =
+      "( 1237521743390166936432525687 == -6.68277251401663 ) = False";
   s21_decimal value_1 = {{0xCD05C177, 0x22534A1A, 0x3FFA76C, 0x0}};
   s21_decimal value_2 = {{0x6C2E67BF, 0x25FCB, 0x0, 0x800E0000}};
   int code = 0;
@@ -70524,7 +72480,9 @@ START_TEST(s21_is_equal_7050) {
 }
 
 START_TEST(s21_is_equal_7051) {
-  char *example = "( 1311540432313658209005040845 == 1475246984874378721192390161 ) = False";
+  char *example =
+      "( 1311540432313658209005040845 == 1475246984874378721192390161 ) = "
+      "False";
   s21_decimal value_1 = {{0x41E174CD, 0x4D04A7F2, 0x43CE17D, 0x0}};
   s21_decimal value_2 = {{0x6CF52E11, 0x4C3466A6, 0x4C44BB3, 0x0}};
   int code = 0;
@@ -70534,7 +72492,8 @@ START_TEST(s21_is_equal_7051) {
 }
 
 START_TEST(s21_is_equal_7052) {
-  char *example = "( 1152746373099304173248463248 == 703712.0535782408361052 ) = False";
+  char *example =
+      "( 1152746373099304173248463248 == 703712.0535782408361052 ) = False";
   s21_decimal value_1 = {{0xB6244190, 0x1A199050, 0x3B9878A, 0x0}};
   s21_decimal value_2 = {{0x1500945C, 0x7BAA6308, 0x17D, 0x100000}};
   int code = 0;
@@ -70574,7 +72533,8 @@ START_TEST(s21_is_equal_7055) {
 }
 
 START_TEST(s21_is_equal_7056) {
-  char *example = "( -96.78485982404103562814513 == 0.90137194286452728362886769 ) = False";
+  char *example =
+      "( -96.78485982404103562814513 == 0.90137194286452728362886769 ) = False";
   s21_decimal value_1 = {{0x27F36431, 0xC6C3C416, 0x8017F, 0x80170000}};
   s21_decimal value_2 = {{0xB66AE671, 0x17E62DD0, 0x4A8F4B, 0x1A0000}};
   int code = 0;
@@ -70604,7 +72564,8 @@ START_TEST(s21_is_equal_7058) {
 }
 
 START_TEST(s21_is_equal_7059) {
-  char *example = "( -233993.773190817038430239 == -915.66573670720466528890164 ) = False";
+  char *example =
+      "( -233993.773190817038430239 == -915.66573670720466528890164 ) = False";
   s21_decimal value_1 = {{0x83AF701F, 0xD3EEC4E7, 0x318C, 0x80120000}};
   s21_decimal value_2 = {{0xA9DED34, 0xE7B0DCC6, 0x4BBDF9, 0x80170000}};
   int code = 0;
@@ -70664,7 +72625,9 @@ START_TEST(s21_is_equal_7064) {
 }
 
 START_TEST(s21_is_equal_7065) {
-  char *example = "( -9.1245918087792876600343723 == -2816067.6521003932213589821 ) = False";
+  char *example =
+      "( -9.1245918087792876600343723 == -2816067.6521003932213589821 ) = "
+      "False";
   s21_decimal value_1 = {{0x824ABCAB, 0x218D3638, 0x4B7A13, 0x80190000}};
   s21_decimal value_2 = {{0xA63C373D, 0x5548725F, 0x174B41, 0x80130000}};
   int code = 0;
@@ -70674,7 +72637,8 @@ START_TEST(s21_is_equal_7065) {
 }
 
 START_TEST(s21_is_equal_7066) {
-  char *example = "( 1904907686337158575585935060 == -7.71918936630311694253 ) = False";
+  char *example =
+      "( 1904907686337158575585935060 == -7.71918936630311694253 ) = False";
   s21_decimal value_1 = {{0xE99EBED4, 0x98763CC3, 0x627B3E4, 0x0}};
   s21_decimal value_2 = {{0x3EFEAFAD, 0xD886F710, 0x29, 0x80140000}};
   int code = 0;
@@ -70804,7 +72768,8 @@ START_TEST(s21_is_equal_7078) {
 }
 
 START_TEST(s21_is_equal_7079) {
-  char *example = "( -619.57214359989771807229462 == 11994653538846628301521060 ) = False";
+  char *example =
+      "( -619.57214359989771807229462 == 11994653538846628301521060 ) = False";
   s21_decimal value_1 = {{0xCE100616, 0x520D1C48, 0x333FF3, 0x80170000}};
   s21_decimal value_2 = {{0x9AA840A4, 0x78A3EEE9, 0x9EBF7, 0x0}};
   int code = 0;
@@ -70824,7 +72789,8 @@ START_TEST(s21_is_equal_7080) {
 }
 
 START_TEST(s21_is_equal_7081) {
-  char *example = "( 1520734901015969589129556389 == 4.4369593230622298E-10 ) = False";
+  char *example =
+      "( 1520734901015969589129556389 == 4.4369593230622298E-10 ) = False";
   s21_decimal value_1 = {{0x18FAB1A5, 0x2C3CC2CE, 0x4E9EC24, 0x0}};
   s21_decimal value_2 = {{0xF356FE5A, 0x9DA1E8, 0x0, 0x1A0000}};
   int code = 0;
@@ -70864,7 +72830,8 @@ START_TEST(s21_is_equal_7084) {
 }
 
 START_TEST(s21_is_equal_7085) {
-  char *example = "( 1686158133891675144724337575 == 1357620157726885163 ) = False";
+  char *example =
+      "( 1686158133891675144724337575 == 1357620157726885163 ) = False";
   s21_decimal value_1 = {{0x940AD3A7, 0x9891AE49, 0x572C1DF, 0x0}};
   s21_decimal value_2 = {{0x2938852B, 0x12D73C57, 0x0, 0x0}};
   int code = 0;
@@ -70924,7 +72891,9 @@ START_TEST(s21_is_equal_7090) {
 }
 
 START_TEST(s21_is_equal_7091) {
-  char *example = "( 1001466067716636419900937497 == -58.914415273186644937927511 ) = False";
+  char *example =
+      "( 1001466067716636419900937497 == -58.914415273186644937927511 ) = "
+      "False";
   s21_decimal value_1 = {{0x80B99519, 0x507F7165, 0x33C64B0, 0x0}};
   s21_decimal value_2 = {{0xD43EB57, 0xD9FB9556, 0x30BB9C, 0x80180000}};
   int code = 0;
@@ -70934,7 +72903,8 @@ START_TEST(s21_is_equal_7091) {
 }
 
 START_TEST(s21_is_equal_7092) {
-  char *example = "( 16862843000130946 == -1259.7395910728304747193898 ) = False";
+  char *example =
+      "( 16862843000130946 == -1259.7395910728304747193898 ) = False";
   s21_decimal value_1 = {{0x96ED0D82, 0x3BE8AA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x61C5A62A, 0x33614F58, 0xA6B9A, 0x80160000}};
   int code = 0;
@@ -70984,7 +72954,8 @@ START_TEST(s21_is_equal_7096) {
 }
 
 START_TEST(s21_is_equal_7097) {
-  char *example = "( 17514773180156146933180408 == 132407324236106794 ) = False";
+  char *example =
+      "( 17514773180156146933180408 == 132407324236106794 ) = False";
   s21_decimal value_1 = {{0xC54227F8, 0xC1B23A98, 0xE7CE5, 0x0}};
   s21_decimal value_2 = {{0x86C0CC2A, 0x1D667C2, 0x0, 0x0}};
   int code = 0;
@@ -71024,7 +72995,8 @@ START_TEST(s21_is_equal_7100) {
 }
 
 START_TEST(s21_is_equal_7101) {
-  char *example = "( -79228162514264337593543950335 == 164337254550970 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 164337254550970 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xBFAE4DBA, 0x9576, 0x0, 0x0}};
   int code = 0;
@@ -71034,7 +73006,9 @@ START_TEST(s21_is_equal_7101) {
 }
 
 START_TEST(s21_is_equal_7102) {
-  char *example = "( 0.69835097223624158834069052 == 1418044297792611109872932997 ) = False";
+  char *example =
+      "( 0.69835097223624158834069052 == 1418044297792611109872932997 ) = "
+      "False";
   s21_decimal value_1 = {{0xCC440E3C, 0x34CEBB80, 0x39C428, 0x1A0000}};
   s21_decimal value_2 = {{0x21851885, 0x6AD8DC48, 0x494FA8F, 0x0}};
   int code = 0;
@@ -71074,7 +73048,9 @@ START_TEST(s21_is_equal_7105) {
 }
 
 START_TEST(s21_is_equal_7106) {
-  char *example = "( -53.960723155780531919910612 == 1634363181873205126472402763 ) = False";
+  char *example =
+      "( -53.960723155780531919910612 == 1634363181873205126472402763 ) = "
+      "False";
   s21_decimal value_1 = {{0x706DF6D4, 0xA9E98228, 0x2CA2A0, 0x80180000}};
   s21_decimal value_2 = {{0x4C04074B, 0x9EF0D8C5, 0x547E9DD, 0x0}};
   int code = 0;
@@ -71094,7 +73070,8 @@ START_TEST(s21_is_equal_7107) {
 }
 
 START_TEST(s21_is_equal_7108) {
-  char *example = "( -700197.19509126459449495802 == -48.70246970960622 ) = False";
+  char *example =
+      "( -700197.19509126459449495802 == -48.70246970960622 ) = False";
   s21_decimal value_1 = {{0xEEF950FA, 0x99B5D90D, 0x39EB40, 0x80140000}};
   s21_decimal value_2 = {{0xBCAC2AEE, 0x114D76, 0x0, 0x800E0000}};
   int code = 0;
@@ -71114,7 +73091,8 @@ START_TEST(s21_is_equal_7109) {
 }
 
 START_TEST(s21_is_equal_7110) {
-  char *example = "( 158844494577997810338375 == -349.48427282380123082054126 ) = False";
+  char *example =
+      "( 158844494577997810338375 == -349.48427282380123082054126 ) = False";
   s21_decimal value_1 = {{0xD5A58A47, 0xFA30B07C, 0x21A2, 0x0}};
   s21_decimal value_2 = {{0xCE3BD9EE, 0xA0AAD2D, 0x1CE89E, 0x80170000}};
   int code = 0;
@@ -71124,7 +73102,9 @@ START_TEST(s21_is_equal_7110) {
 }
 
 START_TEST(s21_is_equal_7111) {
-  char *example = "( 1337727557854208034328648719 == 1273346458804289958555568541 ) = False";
+  char *example =
+      "( 1337727557854208034328648719 == 1273346458804289958555568541 ) = "
+      "False";
   s21_decimal value_1 = {{0xB8659C0F, 0x3891088A, 0x4528AD4, 0x0}};
   s21_decimal value_2 = {{0xB246499D, 0xD91E2DF2, 0x41D4999, 0x0}};
   int code = 0;
@@ -71184,7 +73164,8 @@ START_TEST(s21_is_equal_7116) {
 }
 
 START_TEST(s21_is_equal_7117) {
-  char *example = "( 185981001646261134998320 == -34057.163247936055855203299 ) = False";
+  char *example =
+      "( 185981001646261134998320 == -34057.163247936055855203299 ) = False";
   s21_decimal value_1 = {{0x5DFCBB30, 0xCE08BB2, 0x2762, 0x0}};
   s21_decimal value_2 = {{0x8EC3E3, 0x84E41589, 0x1C2BE2, 0x80150000}};
   int code = 0;
@@ -71204,7 +73185,8 @@ START_TEST(s21_is_equal_7118) {
 }
 
 START_TEST(s21_is_equal_7119) {
-  char *example = "( 4.7616776660289260E-10 == 0.4173192941878160721932372 ) = False";
+  char *example =
+      "( 4.7616776660289260E-10 == 0.4173192941878160721932372 ) = False";
   s21_decimal value_1 = {{0x79D18D7E, 0x10EAB8, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xE8A77054, 0x3E20E25D, 0x373B5, 0x190000}};
   int code = 0;
@@ -71314,7 +73296,8 @@ START_TEST(s21_is_equal_7129) {
 }
 
 START_TEST(s21_is_equal_7130) {
-  char *example = "( -223707.19192249307296591247 == -51282.80508395835 ) = False";
+  char *example =
+      "( -223707.19192249307296591247 == -51282.80508395835 ) = False";
   s21_decimal value_1 = {{0xB0D66D8F, 0x1E0EE8B4, 0x12812F, 0x80140000}};
   s21_decimal value_2 = {{0xDA02F13B, 0x123824, 0x0, 0x800B0000}};
   int code = 0;
@@ -71434,7 +73417,8 @@ START_TEST(s21_is_equal_7141) {
 }
 
 START_TEST(s21_is_equal_7142) {
-  char *example = "( 15849589920525898 == 1613665704650715778080071041 ) = False";
+  char *example =
+      "( 15849589920525898 == 1613665704650715778080071041 ) = False";
   s21_decimal value_1 = {{0x390C6E4A, 0x384F1E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7FD45D81, 0x21E3D8D8, 0x536CB01, 0x0}};
   int code = 0;
@@ -71514,7 +73498,9 @@ START_TEST(s21_is_equal_7149) {
 }
 
 START_TEST(s21_is_equal_7150) {
-  char *example = "( -6938791090.6140943313878565 == 1953968601944907743469914742 ) = False";
+  char *example =
+      "( -6938791090.6140943313878565 == 1953968601944907743469914742 ) = "
+      "False";
   s21_decimal value_1 = {{0x9013E25, 0x2FFBA32C, 0x396576, 0x80100000}};
   s21_decimal value_2 = {{0x22CE4A76, 0x28EC5D65, 0x65048F2, 0x0}};
   int code = 0;
@@ -71584,7 +73570,9 @@ START_TEST(s21_is_equal_7156) {
 }
 
 START_TEST(s21_is_equal_7157) {
-  char *example = "( -2.2568768904488429942045112 == 1492071287372200693664315267 ) = False";
+  char *example =
+      "( -2.2568768904488429942045112 == 1492071287372200693664315267 ) = "
+      "False";
   s21_decimal value_1 = {{0x472579B8, 0x69F0A9D7, 0x12AB1F, 0x80190000}};
   s21_decimal value_2 = {{0xCE7FF783, 0x9048B0C6, 0x4D23662, 0x0}};
   int code = 0;
@@ -71594,7 +73582,8 @@ START_TEST(s21_is_equal_7157) {
 }
 
 START_TEST(s21_is_equal_7158) {
-  char *example = "( -8.9469187135961347089497908 == 1012151497206653 ) = False";
+  char *example =
+      "( -8.9469187135961347089497908 == 1012151497206653 ) = False";
   s21_decimal value_1 = {{0xE9FFF34, 0x5A691779, 0x4A01D6, 0x80190000}};
   s21_decimal value_2 = {{0xE2732B7D, 0x3988B, 0x0, 0x0}};
   int code = 0;
@@ -71604,7 +73593,8 @@ START_TEST(s21_is_equal_7158) {
 }
 
 START_TEST(s21_is_equal_7159) {
-  char *example = "( 1911224449428871484578804962 == 4.97524543193529E-10 ) = False";
+  char *example =
+      "( 1911224449428871484578804962 == 4.97524543193529E-10 ) = False";
   s21_decimal value_1 = {{0x60134E2, 0x247E870, 0x62CED85, 0x0}};
   s21_decimal value_2 = {{0xF5AA01B9, 0x1C47E, 0x0, 0x180000}};
   int code = 0;
@@ -71614,7 +73604,8 @@ START_TEST(s21_is_equal_7159) {
 }
 
 START_TEST(s21_is_equal_7160) {
-  char *example = "( 1630197932705951620747597868 == 0.91047024607940 ) = False";
+  char *example =
+      "( 1630197932705951620747597868 == 0.91047024607940 ) = False";
   s21_decimal value_1 = {{0x1675982C, 0x2D4BB9B, 0x54477D7, 0x0}};
   s21_decimal value_2 = {{0xDA8E537A, 0x847, 0x0, 0xD0000}};
   int code = 0;
@@ -71724,7 +73715,8 @@ START_TEST(s21_is_equal_7170) {
 }
 
 START_TEST(s21_is_equal_7171) {
-  char *example = "( -820.10281670473484899216414 == 15813137212741817007 ) = False";
+  char *example =
+      "( -820.10281670473484899216414 == 15813137212741817007 ) = False";
   s21_decimal value_1 = {{0xBC06C1E, 0x4714F920, 0x43D65A, 0x80170000}};
   s21_decimal value_2 = {{0x6DFC92AF, 0xDB738C83, 0x0, 0x0}};
   int code = 0;
@@ -71814,7 +73806,9 @@ START_TEST(s21_is_equal_7179) {
 }
 
 START_TEST(s21_is_equal_7180) {
-  char *example = "( 1752404646562759957747214873 == 1544558513140929798502654648 ) = False";
+  char *example =
+      "( 1752404646562759957747214873 == 1544558513140929798502654648 ) = "
+      "False";
   s21_decimal value_1 = {{0xC22E2A19, 0x3E6D1314, 0x5A98E1E, 0x0}};
   s21_decimal value_2 = {{0x6A28A2B8, 0xC61F8B68, 0x4FDA0FC, 0x0}};
   int code = 0;
@@ -71834,7 +73828,9 @@ START_TEST(s21_is_equal_7181) {
 }
 
 START_TEST(s21_is_equal_7182) {
-  char *example = "( 1071910520296076820360054870 == -1.0411532018984214132935069 ) = False";
+  char *example =
+      "( 1071910520296076820360054870 == -1.0411532018984214132935069 ) = "
+      "False";
   s21_decimal value_1 = {{0x96A9C856, 0xBDA208BA, 0x376A9E1, 0x0}};
   s21_decimal value_2 = {{0x5C6BC99D, 0x481D1D57, 0x89CBA, 0x80190000}};
   int code = 0;
@@ -71884,7 +73880,9 @@ START_TEST(s21_is_equal_7186) {
 }
 
 START_TEST(s21_is_equal_7187) {
-  char *example = "( 1133583261537901800951011126 == 1639360321855467951732602732 ) = False";
+  char *example =
+      "( 1133583261537901800951011126 == 1639360321855467951732602732 ) = "
+      "False";
   s21_decimal value_1 = {{0xBE0E5736, 0xBE1CFD4F, 0x3A9AD97, 0x0}};
   s21_decimal value_2 = {{0x9024B76C, 0x1F42B679, 0x54C0C0D, 0x0}};
   int code = 0;
@@ -71904,7 +73902,8 @@ START_TEST(s21_is_equal_7188) {
 }
 
 START_TEST(s21_is_equal_7189) {
-  char *example = "( 1958818462109725235461639710 == -3.950520452474934 ) = False";
+  char *example =
+      "( 1958818462109725235461639710 == -3.950520452474934 ) = False";
   s21_decimal value_1 = {{0xA4E4E1E, 0x9B302E7C, 0x6544BF1, 0x0}};
   s21_decimal value_2 = {{0x383F6836, 0xE08FA, 0x0, 0x800F0000}};
   int code = 0;
@@ -71974,7 +73973,8 @@ START_TEST(s21_is_equal_7195) {
 }
 
 START_TEST(s21_is_equal_7196) {
-  char *example = "( 0.69647057721779551227670097 == 1584752624530337107596247 ) = False";
+  char *example =
+      "( 0.69647057721779551227670097 == 1584752624530337107596247 ) = False";
   s21_decimal value_1 = {{0xCDB4EE51, 0x90805FCF, 0x399C56, 0x1A0000}};
   s21_decimal value_2 = {{0x9280D3D7, 0x9CA6AF15, 0x14F95, 0x0}};
   int code = 0;
@@ -72004,7 +74004,8 @@ START_TEST(s21_is_equal_7198) {
 }
 
 START_TEST(s21_is_equal_7199) {
-  char *example = "( 187442891949124390 == -3.6487224947417359459074637 ) = False";
+  char *example =
+      "( 187442891949124390 == -3.6487224947417359459074637 ) = False";
   s21_decimal value_1 = {{0x2E4CAB26, 0x299EE51, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3A78C24D, 0x6D842919, 0x1E2E78, 0x80190000}};
   int code = 0;
@@ -72104,7 +74105,8 @@ START_TEST(s21_is_equal_7208) {
 }
 
 START_TEST(s21_is_equal_7209) {
-  char *example = "( -6.674702015304804481 == -55.032504768567249786249756 ) = False";
+  char *example =
+      "( -6.674702015304804481 == -55.032504768567249786249756 ) = False";
   s21_decimal value_1 = {{0x6BD3A881, 0x5CA14E1E, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x6D62221C, 0xFB5F152, 0x2D8596, 0x80180000}};
   int code = 0;
@@ -72144,7 +74146,9 @@ START_TEST(s21_is_equal_7212) {
 }
 
 START_TEST(s21_is_equal_7213) {
-  char *example = "( 1284121189166279263244103916 == 0.11073160992439233688889254 ) = False";
+  char *example =
+      "( 1284121189166279263244103916 == 0.11073160992439233688889254 ) = "
+      "False";
   s21_decimal value_1 = {{0x35A1B0EC, 0x26C49B20, 0x426333D, 0x0}};
   s21_decimal value_2 = {{0x964FE7A6, 0x429D6624, 0x928D5, 0x1A0000}};
   int code = 0;
@@ -72154,7 +74158,8 @@ START_TEST(s21_is_equal_7213) {
 }
 
 START_TEST(s21_is_equal_7214) {
-  char *example = "( 1728765208208254537015870646 == -392.9822702559061 ) = False";
+  char *example =
+      "( 1728765208208254537015870646 == -392.9822702559061 ) = False";
   s21_decimal value_1 = {{0xEB11C4B6, 0xB90BDCA6, 0x5960045, 0x0}};
   s21_decimal value_2 = {{0x26375F55, 0xDF627, 0x0, 0x800D0000}};
   int code = 0;
@@ -72184,7 +74189,8 @@ START_TEST(s21_is_equal_7216) {
 }
 
 START_TEST(s21_is_equal_7217) {
-  char *example = "( -65230.2715905202 == 1536243600008550297699377647 ) = False";
+  char *example =
+      "( -65230.2715905202 == 1536243600008550297699377647 ) = False";
   s21_decimal value_1 = {{0xFAAE4B2, 0x25144, 0x0, 0x800A0000}};
   s21_decimal value_2 = {{0xF55861EF, 0x6E081A1B, 0x4F6C03C, 0x0}};
   int code = 0;
@@ -72264,7 +74270,8 @@ START_TEST(s21_is_equal_7224) {
 }
 
 START_TEST(s21_is_equal_7225) {
-  char *example = "( -37221109.006848618577089110 == 112635689431839506253205 ) = False";
+  char *example =
+      "( -37221109.006848618577089110 == 112635689431839506253205 ) = False";
   s21_decimal value_1 = {{0xCCD1BB6F, 0x946E024, 0x31430, 0x80110000}};
   s21_decimal value_2 = {{0x8DA94595, 0xFE3290CC, 0x17D9, 0x0}};
   int code = 0;
@@ -72344,7 +74351,9 @@ START_TEST(s21_is_equal_7232) {
 }
 
 START_TEST(s21_is_equal_7233) {
-  char *example = "( 1072651786514866204351377879 == 1129946557460670166574089527 ) = False";
+  char *example =
+      "( 1072651786514866204351377879 == 1129946557460670166574089527 ) = "
+      "False";
   s21_decimal value_1 = {{0x31FB1D7, 0xDCED28ED, 0x37746D9, 0x0}};
   s21_decimal value_2 = {{0x4E18C537, 0x9E9C0F22, 0x3A6AB7D, 0x0}};
   int code = 0;
@@ -72354,7 +74363,8 @@ START_TEST(s21_is_equal_7233) {
 }
 
 START_TEST(s21_is_equal_7234) {
-  char *example = "( 1349537986215668119790969031 == -44868.159684036769781 ) = False";
+  char *example =
+      "( 1349537986215668119790969031 == -44868.159684036769781 ) = False";
   s21_decimal value_1 = {{0x3F4C60C7, 0xD3494937, 0x45C4FC8, 0x0}};
   s21_decimal value_2 = {{0xCC83B7F5, 0x6EABB982, 0x2, 0x800F0000}};
   int code = 0;
@@ -72374,7 +74384,8 @@ START_TEST(s21_is_equal_7235) {
 }
 
 START_TEST(s21_is_equal_7236) {
-  char *example = "( -9.2600137553633363122995234 == -486.9702110415682895583118 ) = False";
+  char *example =
+      "( -9.2600137553633363122995234 == -486.9702110415682895583118 ) = False";
   s21_decimal value_1 = {{0x80444022, 0x83F199E8, 0x4C98D7, 0x80190000}};
   s21_decimal value_2 = {{0xC1F7978E, 0x14935B82, 0x40733, 0x80160000}};
   int code = 0;
@@ -72404,7 +74415,8 @@ START_TEST(s21_is_equal_7238) {
 }
 
 START_TEST(s21_is_equal_7239) {
-  char *example = "( 1504023919875432589310130 == 0.75375866014847681363068126 ) = False";
+  char *example =
+      "( 1504023919875432589310130 == 0.75375866014847681363068126 ) = False";
   s21_decimal value_1 = {{0x31438B2, 0x4CD16275, 0x13E7D, 0x0}};
   s21_decimal value_2 = {{0xBD0A44DE, 0xE2626216, 0x3E5975, 0x1A0000}};
   int code = 0;
@@ -72474,7 +74486,8 @@ START_TEST(s21_is_equal_7245) {
 }
 
 START_TEST(s21_is_equal_7246) {
-  char *example = "( -41951.792216317 == -3209958.2058772397210217623 ) = False";
+  char *example =
+      "( -41951.792216317 == -3209958.2058772397210217623 ) = False";
   s21_decimal value_1 = {{0xA9AC38FD, 0x2627, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0xD7882C97, 0xD487FAD6, 0x1A8D59, 0x80130000}};
   int code = 0;
@@ -72484,7 +74497,8 @@ START_TEST(s21_is_equal_7246) {
 }
 
 START_TEST(s21_is_equal_7247) {
-  char *example = "( 1536238348428784398795840965 == -23727777165709754448 ) = False";
+  char *example =
+      "( 1536238348428784398795840965 == -23727777165709754448 ) = False";
   s21_decimal value_1 = {{0x14249DC5, 0xBDB8D516, 0x4F6BF1F, 0x0}};
   s21_decimal value_2 = {{0xF7C14050, 0x4949FF9D, 0x1, 0x80000000}};
   int code = 0;
@@ -72504,7 +74518,8 @@ START_TEST(s21_is_equal_7248) {
 }
 
 START_TEST(s21_is_equal_7249) {
-  char *example = "( 1216974001417701182250128485 == 127402323696423797989214481 ) = False";
+  char *example =
+      "( 1216974001417701182250128485 == 127402323696423797989214481 ) = False";
   s21_decimal value_1 = {{0x8A6B9465, 0xCF4D3F48, 0x3EEA844, 0x0}};
   s21_decimal value_2 = {{0xCDB28911, 0xCE7B4107, 0x69627D, 0x0}};
   int code = 0;
@@ -72594,7 +74609,8 @@ START_TEST(s21_is_equal_7257) {
 }
 
 START_TEST(s21_is_equal_7258) {
-  char *example = "( -21261632672.15048620 == -899.74754712494931318324023 ) = False";
+  char *example =
+      "( -21261632672.15048620 == -899.74754712494931318324023 ) = False";
   s21_decimal value_1 = {{0x33AF065E, 0x2F35D6C, 0x0, 0x80070000}};
   s21_decimal value_2 = {{0x77C6BB37, 0x39F5CCF2, 0x4A6CE5, 0x80170000}};
   int code = 0;
@@ -72644,7 +74660,8 @@ START_TEST(s21_is_equal_7262) {
 }
 
 START_TEST(s21_is_equal_7263) {
-  char *example = "( 1422559548494557686859771145 == 5.2962308110691E-10 ) = False";
+  char *example =
+      "( 1422559548494557686859771145 == 5.2962308110691E-10 ) = False";
   s21_decimal value_1 = {{0x4DA72D09, 0xA5FCE130, 0x498B6B3, 0x0}};
   s21_decimal value_2 = {{0x3F8FB963, 0x302B, 0x0, 0x170000}};
   int code = 0;
@@ -72674,7 +74691,9 @@ START_TEST(s21_is_equal_7265) {
 }
 
 START_TEST(s21_is_equal_7266) {
-  char *example = "( 1559139561183884427823174076 == 0.11792770427864376447706749 ) = False";
+  char *example =
+      "( 1559139561183884427823174076 == 0.11792770427864376447706749 ) = "
+      "False";
   s21_decimal value_1 = {{0xDA2451BC, 0xF8E0FF2A, 0x509B0A4, 0x0}};
   s21_decimal value_2 = {{0x4EFDA67D, 0x5DAA071E, 0x9C137, 0x1A0000}};
   int code = 0;
@@ -72724,7 +74743,9 @@ START_TEST(s21_is_equal_7270) {
 }
 
 START_TEST(s21_is_equal_7271) {
-  char *example = "( 1752554403476069722877825752 == -13.885534278661746478074452 ) = False";
+  char *example =
+      "( 1752554403476069722877825752 == -13.885534278661746478074452 ) = "
+      "False";
   s21_decimal value_1 = {{0x211F92D8, 0x95177C2E, 0x5A9ADD4, 0x0}};
   s21_decimal value_2 = {{0xC208CA54, 0x5251413C, 0xB7C60, 0x80180000}};
   int code = 0;
@@ -72754,7 +74775,9 @@ START_TEST(s21_is_equal_7273) {
 }
 
 START_TEST(s21_is_equal_7274) {
-  char *example = "( -9.8742631163897573889020229 == 1874494523852744852878739311 ) = False";
+  char *example =
+      "( -9.8742631163897573889020229 == 1874494523852744852878739311 ) = "
+      "False";
   s21_decimal value_1 = {{0x1C701145, 0xC2E0BB46, 0x51AD90, 0x80190000}};
   s21_decimal value_2 = {{0x1BED476F, 0xC0F0474C, 0x60E8BA7, 0x0}};
   int code = 0;
@@ -72774,7 +74797,9 @@ START_TEST(s21_is_equal_7275) {
 }
 
 START_TEST(s21_is_equal_7276) {
-  char *example = "( 1360134762010690916499826071 == 1253074793512975071644536492 ) = False";
+  char *example =
+      "( 1360134762010690916499826071 == 1253074793512975071644536492 ) = "
+      "False";
   s21_decimal value_1 = {{0xFB3A597, 0x3137720F, 0x46513BD, 0x0}};
   s21_decimal value_2 = {{0x4CEAC, 0xABB1A8E5, 0x40C84E8, 0x0}};
   int code = 0;
@@ -72834,7 +74859,8 @@ START_TEST(s21_is_equal_7281) {
 }
 
 START_TEST(s21_is_equal_7282) {
-  char *example = "( -140237.55892454271334 == 1812764089329486003572524976 ) = False";
+  char *example =
+      "( -140237.55892454271334 == 1812764089329486003572524976 ) = False";
   s21_decimal value_1 = {{0xE2872966, 0xC29E63AE, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x74AB47B0, 0x315732B7, 0x5DB7BBA, 0x0}};
   int code = 0;
@@ -72874,7 +74900,9 @@ START_TEST(s21_is_equal_7285) {
 }
 
 START_TEST(s21_is_equal_7286) {
-  char *example = "( 1282590525748991174642703571 == 1966284908438414985088443895 ) = False";
+  char *example =
+      "( 1282590525748991174642703571 == 1966284908438414985088443895 ) = "
+      "False";
   s21_decimal value_1 = {{0xE74F1CD3, 0xB8A85DF6, 0x424EF1B, 0x0}};
   s21_decimal value_2 = {{0x4897A5F7, 0x790425BE, 0x65A7906, 0x0}};
   int code = 0;
@@ -72944,7 +74972,8 @@ START_TEST(s21_is_equal_7292) {
 }
 
 START_TEST(s21_is_equal_7293) {
-  char *example = "( -1.1926157080357328898848969 == -3.996787365734534 ) = False";
+  char *example =
+      "( -1.1926157080357328898848969 == -3.996787365734534 ) = False";
   s21_decimal value_1 = {{0x763178C9, 0x4552E8AF, 0x9DD76, 0x80190000}};
   s21_decimal value_2 = {{0x932D6886, 0xE330E, 0x0, 0x800F0000}};
   int code = 0;
@@ -72954,7 +74983,8 @@ START_TEST(s21_is_equal_7293) {
 }
 
 START_TEST(s21_is_equal_7294) {
-  char *example = "( -5475.7334918017057693962 == 1033316223585501379543656 ) = False";
+  char *example =
+      "( -5475.7334918017057693962 == 1033316223585501379543656 ) = False";
   s21_decimal value_1 = {{0x6C0E210A, 0x66ACC724, 0xB98, 0x80130000}};
   s21_decimal value_2 = {{0x25B7C268, 0x2F4A0F06, 0xDAD0, 0x0}};
   int code = 0;
@@ -73024,7 +75054,8 @@ START_TEST(s21_is_equal_7300) {
 }
 
 START_TEST(s21_is_equal_7301) {
-  char *example = "( 1202896081336521791739373741 == 18800254075223399400506401 ) = False";
+  char *example =
+      "( 1202896081336521791739373741 == 18800254075223399400506401 ) = False";
   s21_decimal value_1 = {{0x7871A8AD, 0x3BA3C7EA, 0x3E30327, 0x0}};
   s21_decimal value_2 = {{0x9B488421, 0xD0C9F895, 0xF8D1B, 0x0}};
   int code = 0;
@@ -73054,7 +75085,8 @@ START_TEST(s21_is_equal_7303) {
 }
 
 START_TEST(s21_is_equal_7304) {
-  char *example = "( -19.11087386347108530 == 1222172225777332410329837 ) = False";
+  char *example =
+      "( -19.11087386347108530 == 1222172225777332410329837 ) = False";
   s21_decimal value_1 = {{0x9FCB7F45, 0x2A6F462, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xC7972AED, 0x16D05E82, 0x102CE, 0x0}};
   int code = 0;
@@ -73104,7 +75136,8 @@ START_TEST(s21_is_equal_7308) {
 }
 
 START_TEST(s21_is_equal_7309) {
-  char *example = "( -7581896.73574762489800 == 17890723070465190817193816 ) = False";
+  char *example =
+      "( -7581896.73574762489800 == 17890723070465190817193816 ) = False";
   s21_decimal value_1 = {{0x19EE4FC2, 0x69384EE9, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x245C5F58, 0xA8012C9, 0xECC82, 0x0}};
   int code = 0;
@@ -73134,7 +75167,8 @@ START_TEST(s21_is_equal_7311) {
 }
 
 START_TEST(s21_is_equal_7312) {
-  char *example = "( 1150180011449351174812922191 == -201.35664650642589 ) = False";
+  char *example =
+      "( 1150180011449351174812922191 == -201.35664650642589 ) = False";
   s21_decimal value_1 = {{0x39ECF14F, 0x5BAF06D5, 0x3B76817, 0x0}};
   s21_decimal value_2 = {{0xC2D1649D, 0x478947, 0x0, 0x800E0000}};
   int code = 0;
@@ -73154,7 +75188,8 @@ START_TEST(s21_is_equal_7313) {
 }
 
 START_TEST(s21_is_equal_7314) {
-  char *example = "( 13579619417205432825496 == 1524333458160055748085341124 ) = False";
+  char *example =
+      "( 13579619417205432825496 == 1524333458160055748085341124 ) = False";
   s21_decimal value_1 = {{0x86E2B698, 0x2713A80A, 0x2E0, 0x0}};
   s21_decimal value_2 = {{0x5BEADBC4, 0x58B28049, 0x4ECE62A, 0x0}};
   int code = 0;
@@ -73164,7 +75199,8 @@ START_TEST(s21_is_equal_7314) {
 }
 
 START_TEST(s21_is_equal_7315) {
-  char *example = "( -628875.44593268562458743828 == 1097118044274737125857 ) = False";
+  char *example =
+      "( -628875.44593268562458743828 == 1097118044274737125857 ) = False";
   s21_decimal value_1 = {{0x50A29414, 0x9F9EAE84, 0x3404F4, 0x80140000}};
   s21_decimal value_2 = {{0xC2FD99E1, 0x7992487C, 0x3B, 0x0}};
   int code = 0;
@@ -73184,7 +75220,8 @@ START_TEST(s21_is_equal_7316) {
 }
 
 START_TEST(s21_is_equal_7317) {
-  char *example = "( 1984467541706776260020031504 == -2123.4019385403 ) = False";
+  char *example =
+      "( 1984467541706776260020031504 == -2123.4019385403 ) = False";
   s21_decimal value_1 = {{0x26605010, 0xFF4D4481, 0x6698358, 0x0}};
   s21_decimal value_2 = {{0xEE2EC03B, 0x134F, 0x0, 0x800A0000}};
   int code = 0;
@@ -73264,7 +75301,8 @@ START_TEST(s21_is_equal_7324) {
 }
 
 START_TEST(s21_is_equal_7325) {
-  char *example = "( 18586300868748668302 == 1444987253772508076028690046 ) = False";
+  char *example =
+      "( 18586300868748668302 == 1444987253772508076028690046 ) = False";
   s21_decimal value_1 = {{0x6A4C6D8E, 0x1EFCE2A, 0x1, 0x0}};
   s21_decimal value_2 = {{0x76837E7E, 0xFCD9F5CE, 0x4AB43F3, 0x0}};
   int code = 0;
@@ -73274,7 +75312,8 @@ START_TEST(s21_is_equal_7325) {
 }
 
 START_TEST(s21_is_equal_7326) {
-  char *example = "( 1651328613067423281751773924 == -93.9633792976464379 ) = False";
+  char *example =
+      "( 1651328613067423281751773924 == -93.9633792976464379 ) = False";
   s21_decimal value_1 = {{0x78DBD2E4, 0x7D1F4B58, 0x555F26F, 0x0}};
   s21_decimal value_2 = {{0xD150A9FB, 0xD0A3FF4, 0x0, 0x80100000}};
   int code = 0;
@@ -73314,7 +75353,9 @@ START_TEST(s21_is_equal_7329) {
 }
 
 START_TEST(s21_is_equal_7330) {
-  char *example = "( 1446887617560701834943652435 == 1431281262035640044619541542 ) = False";
+  char *example =
+      "( 1446887617560701834943652435 == 1431281262035640044619541542 ) = "
+      "False";
   s21_decimal value_1 = {{0x531DE253, 0xEA42F929, 0x4ACD65E, 0x0}};
   s21_decimal value_2 = {{0x2C4BAC26, 0xAFD4DCCC, 0x49FED98, 0x0}};
   int code = 0;
@@ -73334,7 +75375,9 @@ START_TEST(s21_is_equal_7331) {
 }
 
 START_TEST(s21_is_equal_7332) {
-  char *example = "( 1689557565277657258257870425 == -5.6485870237487500144498834 ) = False";
+  char *example =
+      "( 1689557565277657258257870425 == -5.6485870237487500144498834 ) = "
+      "False";
   s21_decimal value_1 = {{0x3298EE59, 0x2402CD9F, 0x57591BB, 0x0}};
   s21_decimal value_2 = {{0x5FAD5892, 0x294BAC04, 0x2EB959, 0x80190000}};
   int code = 0;
@@ -73344,7 +75387,8 @@ START_TEST(s21_is_equal_7332) {
 }
 
 START_TEST(s21_is_equal_7333) {
-  char *example = "( 114202605161003455507 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 114202605161003455507 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x95CD9413, 0x30E12852, 0x6, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -73394,7 +75438,8 @@ START_TEST(s21_is_equal_7337) {
 }
 
 START_TEST(s21_is_equal_7338) {
-  char *example = "( 14408020448161934879 == 1378577850927775824375994292 ) = False";
+  char *example =
+      "( 14408020448161934879 == 1378577850927775824375994292 ) = False";
   s21_decimal value_1 = {{0xB941AE1F, 0xC7F39242, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8DC857B4, 0xBBA81CB, 0x4745537, 0x0}};
   int code = 0;
@@ -73424,7 +75469,9 @@ START_TEST(s21_is_equal_7340) {
 }
 
 START_TEST(s21_is_equal_7341) {
-  char *example = "( 1068999375516582200295200080 == 1940962039424000742370957655 ) = False";
+  char *example =
+      "( 1068999375516582200295200080 == 1940962039424000742370957655 ) = "
+      "False";
   s21_decimal value_1 = {{0xD3BE9550, 0x441AF473, 0x374416C, 0x0}};
   s21_decimal value_2 = {{0xEB01D957, 0xFE262A22, 0x64586B2, 0x0}};
   int code = 0;
@@ -73454,7 +75501,9 @@ START_TEST(s21_is_equal_7343) {
 }
 
 START_TEST(s21_is_equal_7344) {
-  char *example = "( -38.317870142486305805244853 == 1647820363779137752396524912 ) = False";
+  char *example =
+      "( -38.317870142486305805244853 == 1647820363779137752396524912 ) = "
+      "False";
   s21_decimal value_1 = {{0xBAD919B5, 0xE715B65F, 0x1FB21F, 0x80180000}};
   s21_decimal value_2 = {{0xA4FCED70, 0xE9EC2902, 0x5530B88, 0x0}};
   int code = 0;
@@ -73474,7 +75523,8 @@ START_TEST(s21_is_equal_7345) {
 }
 
 START_TEST(s21_is_equal_7346) {
-  char *example = "( 1319194431061800420140623834 == -604.6060774477897 ) = False";
+  char *example =
+      "( 1319194431061800420140623834 == -604.6060774477897 ) = False";
   s21_decimal value_1 = {{0xA70FA7DA, 0x6786B3E9, 0x4433649, 0x0}};
   s21_decimal value_2 = {{0x38C0D049, 0x157ADC, 0x0, 0x800D0000}};
   int code = 0;
@@ -73484,7 +75534,8 @@ START_TEST(s21_is_equal_7346) {
 }
 
 START_TEST(s21_is_equal_7347) {
-  char *example = "( 1402901028124187951381850749 == -7312.435997857034 ) = False";
+  char *example =
+      "( 1402901028124187951381850749 == -7312.435997857034 ) = False";
   s21_decimal value_1 = {{0x398FAA7D, 0x1FAC16BB, 0x48873D9, 0x0}};
   s21_decimal value_2 = {{0x2E18550A, 0x19FA9F, 0x0, 0x800C0000}};
   int code = 0;
@@ -73524,7 +75575,9 @@ START_TEST(s21_is_equal_7350) {
 }
 
 START_TEST(s21_is_equal_7351) {
-  char *example = "( 1949775723800364574801464992 == 0.84571947069236460923784904 ) = False";
+  char *example =
+      "( 1949775723800364574801464992 == 0.84571947069236460923784904 ) = "
+      "False";
   s21_decimal value_1 = {{0x8EA50EA0, 0xC7BAB3E0, 0x64CD111, 0x0}};
   s21_decimal value_2 = {{0x5CAA0EC8, 0x6FEBAB16, 0x45F4CE, 0x1A0000}};
   int code = 0;
@@ -73564,7 +75617,8 @@ START_TEST(s21_is_equal_7354) {
 }
 
 START_TEST(s21_is_equal_7355) {
-  char *example = "( 1787578749675194108515900330 == 1377025947920683 ) = False";
+  char *example =
+      "( 1787578749675194108515900330 == 1377025947920683 ) = False";
   s21_decimal value_1 = {{0x205ADBAA, 0x31C0289B, 0x5C6A686, 0x0}};
   s21_decimal value_2 = {{0xD678E92B, 0x4E465, 0x0, 0x0}};
   int code = 0;
@@ -73634,7 +75688,9 @@ START_TEST(s21_is_equal_7361) {
 }
 
 START_TEST(s21_is_equal_7362) {
-  char *example = "( 1544417133834576359147392537 == 1061657392089005741474241972 ) = False";
+  char *example =
+      "( 1544417133834576359147392537 == 1061657392089005741474241972 ) = "
+      "False";
   s21_decimal value_1 = {{0x827F4E19, 0x961BF69F, 0x4FD830C, 0x0}};
   s21_decimal value_2 = {{0x24ADDB4, 0x8C024705, 0x36E2EB2, 0x0}};
   int code = 0;
@@ -73774,7 +75830,8 @@ START_TEST(s21_is_equal_7375) {
 }
 
 START_TEST(s21_is_equal_7376) {
-  char *example = "( 1915259300005933658638724 == 1131266502369654626636928148 ) = False";
+  char *example =
+      "( 1915259300005933658638724 == 1131266502369654626636928148 ) = False";
   s21_decimal value_1 = {{0x53478984, 0x6A2994B9, 0x19592, 0x0}};
   s21_decimal value_2 = {{0x819E1494, 0xF9F978A6, 0x3A7C2FF, 0x0}};
   int code = 0;
@@ -73814,7 +75871,8 @@ START_TEST(s21_is_equal_7379) {
 }
 
 START_TEST(s21_is_equal_7380) {
-  char *example = "( 14900404710388685007302722 == 1832981710001747152317821197 ) = False";
+  char *example =
+      "( 14900404710388685007302722 == 1832981710001747152317821197 ) = False";
   s21_decimal value_1 = {{0x68A13042, 0x8ED242E4, 0xC5348, 0x0}};
   s21_decimal value_2 = {{0x1BBDB10D, 0x9B02570F, 0x5EC34F9, 0x0}};
   int code = 0;
@@ -73834,7 +75892,8 @@ START_TEST(s21_is_equal_7381) {
 }
 
 START_TEST(s21_is_equal_7382) {
-  char *example = "( -8.287159109208055752932214 == -367.0370090020630903508054 ) = False";
+  char *example =
+      "( -8.287159109208055752932214 == -367.0370090020630903508054 ) = False";
   s21_decimal value_1 = {{0x7E3FBB76, 0xCBA5ADFC, 0x6DADF, 0x80180000}};
   s21_decimal value_2 = {{0xE7BDCC56, 0x29491396, 0x3093B, 0x80160000}};
   int code = 0;
@@ -73874,7 +75933,8 @@ START_TEST(s21_is_equal_7385) {
 }
 
 START_TEST(s21_is_equal_7386) {
-  char *example = "( 18472804821792858554208195 == 164621664693551892099 ) = False";
+  char *example =
+      "( 18472804821792858554208195 == 164621664693551892099 ) = False";
   s21_decimal value_1 = {{0xB4238FC3, 0xC1883201, 0xF47C4, 0x0}};
   s21_decimal value_2 = {{0xF8A00683, 0xEC95A3D5, 0x8, 0x0}};
   int code = 0;
@@ -73984,7 +76044,8 @@ START_TEST(s21_is_equal_7396) {
 }
 
 START_TEST(s21_is_equal_7397) {
-  char *example = "( 145166495431580910 == 1354941236696541233832805643 ) = False";
+  char *example =
+      "( 145166495431580910 == 1354941236696541233832805643 ) = False";
   s21_decimal value_1 = {{0x917CDCEE, 0x203BC28, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFA54450B, 0x9EEEAB56, 0x460C7F7, 0x0}};
   int code = 0;
@@ -74044,7 +76105,9 @@ START_TEST(s21_is_equal_7402) {
 }
 
 START_TEST(s21_is_equal_7403) {
-  char *example = "( -7.1615124595437303851917645 == 1699040559218743978220995049 ) = False";
+  char *example =
+      "( -7.1615124595437303851917645 == 1699040559218743978220995049 ) = "
+      "False";
   s21_decimal value_1 = {{0x43EC214D, 0xAEF73659, 0x3B3D17, 0x80190000}};
   s21_decimal value_2 = {{0xDFA41E9, 0x45B548C6, 0x57D69D5, 0x0}};
   int code = 0;
@@ -74074,7 +76137,8 @@ START_TEST(s21_is_equal_7405) {
 }
 
 START_TEST(s21_is_equal_7406) {
-  char *example = "( 1709287339770709758300577235 == -894.08499848551 ) = False";
+  char *example =
+      "( 1709287339770709758300577235 == -894.08499848551 ) = False";
   s21_decimal value_1 = {{0x243ADDD3, 0x5BEBEB88, 0x585E3AC, 0x0}};
   s21_decimal value_2 = {{0x9DF9567, 0x5151, 0x0, 0x800B0000}};
   int code = 0;
@@ -74084,7 +76148,8 @@ START_TEST(s21_is_equal_7406) {
 }
 
 START_TEST(s21_is_equal_7407) {
-  char *example = "( 1655866202631729964731370060 == 1119270844041904761914928 ) = False";
+  char *example =
+      "( 1655866202631729964731370060 == 1119270844041904761914928 ) = False";
   s21_decimal value_1 = {{0x52F08A4C, 0xB6413067, 0x559B34E, 0x0}};
   s21_decimal value_2 = {{0x9DB8C630, 0xCB45E906, 0xED03, 0x0}};
   int code = 0;
@@ -74094,7 +76159,8 @@ START_TEST(s21_is_equal_7407) {
 }
 
 START_TEST(s21_is_equal_7408) {
-  char *example = "( 17312398343360176 == 1261844327530805326279347407 ) = False";
+  char *example =
+      "( 17312398343360176 == 1261844327530805326279347407 ) = False";
   s21_decimal value_1 = {{0xD9774EB0, 0x3D8188, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9B000CCF, 0xFF782F8, 0x413C5EE, 0x0}};
   int code = 0;
@@ -74104,7 +76170,8 @@ START_TEST(s21_is_equal_7408) {
 }
 
 START_TEST(s21_is_equal_7409) {
-  char *example = "( 181136357539130767 == 1685790586472523272029160005 ) = False";
+  char *example =
+      "( 181136357539130767 == 1685790586472523272029160005 ) = False";
   s21_decimal value_1 = {{0xB7072D8F, 0x283868E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x730F4245, 0xCF7A0D58, 0x572740A, 0x0}};
   int code = 0;
@@ -74114,7 +76181,8 @@ START_TEST(s21_is_equal_7409) {
 }
 
 START_TEST(s21_is_equal_7410) {
-  char *example = "( 1115734843408391507649437261 == 1110776073915986496068 ) = False";
+  char *example =
+      "( 1115734843408391507649437261 == 1110776073915986496068 ) = False";
   s21_decimal value_1 = {{0x56C71E4D, 0xE9B53D2, 0x39AEA0B, 0x0}};
   s21_decimal value_2 = {{0x2D6A4A44, 0x371D5A15, 0x3C, 0x0}};
   int code = 0;
@@ -74164,7 +76232,9 @@ START_TEST(s21_is_equal_7414) {
 }
 
 START_TEST(s21_is_equal_7415) {
-  char *example = "( 1269902961427657368883318845 == 1689571779751550366480432556 ) = False";
+  char *example =
+      "( 1269902961427657368883318845 == 1689571779751550366480432556 ) = "
+      "False";
   s21_decimal value_1 = {{0x5102503D, 0x7B354DA1, 0x41A7069, 0x0}};
   s21_decimal value_2 = {{0xB60D7DAC, 0xB576A3E4, 0x57594BD, 0x0}};
   int code = 0;
@@ -74174,7 +76244,8 @@ START_TEST(s21_is_equal_7415) {
 }
 
 START_TEST(s21_is_equal_7416) {
-  char *example = "( -6.4730150986364408686877 == 1194374896737861426059469418 ) = False";
+  char *example =
+      "( -6.4730150986364408686877 == 1194374896737861426059469418 ) = False";
   s21_decimal value_1 = {{0x63A9E91D, 0x74CD70F, 0xDB5, 0x80160000}};
   s21_decimal value_2 = {{0xC77CE26A, 0xE3E8893C, 0x3DBF6B8, 0x0}};
   int code = 0;
@@ -74214,7 +76285,9 @@ START_TEST(s21_is_equal_7419) {
 }
 
 START_TEST(s21_is_equal_7420) {
-  char *example = "( 1595835083989598467132054269 == -73.519166793363517778103135 ) = False";
+  char *example =
+      "( 1595835083989598467132054269 == -73.519166793363517778103135 ) = "
+      "False";
   s21_decimal value_1 = {{0x93F95AFD, 0x3FDF97BE, 0x5280B39, 0x0}};
   s21_decimal value_2 = {{0x49230B5F, 0x490CC52, 0x3CD04A, 0x80180000}};
   int code = 0;
@@ -74264,7 +76337,8 @@ START_TEST(s21_is_equal_7424) {
 }
 
 START_TEST(s21_is_equal_7425) {
-  char *example = "( -39488.189442909255553892281 == 182983830453021107635 ) = False";
+  char *example =
+      "( -39488.189442909255553892281 == 182983830453021107635 ) = False";
   s21_decimal value_1 = {{0x89D9BFB9, 0xA00E3A5, 0x20A9F3, 0x80150000}};
   s21_decimal value_2 = {{0xA0A0E5B3, 0xEB69284E, 0x9, 0x0}};
   int code = 0;
@@ -74414,7 +76488,8 @@ START_TEST(s21_is_equal_7439) {
 }
 
 START_TEST(s21_is_equal_7440) {
-  char *example = "( -51.931990058812776673 == 1045866046472983927049275279 ) = False";
+  char *example =
+      "( -51.931990058812776673 == 1045866046472983927049275279 ) = False";
   s21_decimal value_1 = {{0x9EA720E1, 0xD0B37DCF, 0x2, 0x80120000}};
   s21_decimal value_2 = {{0x8E75C78F, 0xFC599205, 0x3611EBF, 0x0}};
   int code = 0;
@@ -74434,7 +76509,8 @@ START_TEST(s21_is_equal_7441) {
 }
 
 START_TEST(s21_is_equal_7442) {
-  char *example = "( 0.425447816987319005926 == 1404534320882014834964566338 ) = False";
+  char *example =
+      "( 0.425447816987319005926 == 1404534320882014834964566338 ) = False";
   s21_decimal value_1 = {{0x4A8CF2E6, 0x1046476E, 0x17, 0x150000}};
   s21_decimal value_2 = {{0x57701142, 0x19FE4E60, 0x489CDB6, 0x0}};
   int code = 0;
@@ -74464,7 +76540,8 @@ START_TEST(s21_is_equal_7444) {
 }
 
 START_TEST(s21_is_equal_7445) {
-  char *example = "( -2.8868157441437436605768 == 1061516791946006312844658430 ) = False";
+  char *example =
+      "( -2.8868157441437436605768 == 1061516791946006312844658430 ) = False";
   s21_decimal value_1 = {{0x1FE5F548, 0xF229D2EF, 0x61C, 0x80160000}};
   s21_decimal value_2 = {{0xEDDE06FE, 0x990F0085, 0x36E10EC, 0x0}};
   int code = 0;
@@ -74554,7 +76631,8 @@ START_TEST(s21_is_equal_7453) {
 }
 
 START_TEST(s21_is_equal_7454) {
-  char *example = "( 182383115771698547 == 1299622460420067126570726915 ) = False";
+  char *example =
+      "( 182383115771698547 == 1299622460420067126570726915 ) = False";
   s21_decimal value_1 = {{0x3C99DD73, 0x287F47A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x18813603, 0xBFFABC2F, 0x43305C2, 0x0}};
   int code = 0;
@@ -74604,7 +76682,8 @@ START_TEST(s21_is_equal_7458) {
 }
 
 START_TEST(s21_is_equal_7459) {
-  char *example = "( 1403756857000197524788865195 == 3.0543710125065989E-10 ) = False";
+  char *example =
+      "( 1403756857000197524788865195 == 3.0543710125065989E-10 ) = False";
   s21_decimal value_1 = {{0xFC23E8AB, 0xB33699B7, 0x4892913, 0x0}};
   s21_decimal value_2 = {{0xB0208705, 0x6C8357, 0x0, 0x1A0000}};
   int code = 0;
@@ -74634,7 +76713,8 @@ START_TEST(s21_is_equal_7461) {
 }
 
 START_TEST(s21_is_equal_7462) {
-  char *example = "( 1162061822139707 == 1973028375193862959714352186 ) = False";
+  char *example =
+      "( 1162061822139707 == 1973028375193862959714352186 ) = False";
   s21_decimal value_1 = {{0x9A1D9D3B, 0x420E3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x12DD3C3A, 0x89BCC38E, 0x6600D02, 0x0}};
   int code = 0;
@@ -74664,7 +76744,8 @@ START_TEST(s21_is_equal_7464) {
 }
 
 START_TEST(s21_is_equal_7465) {
-  char *example = "( 14442942219421633442 == -2833.7471092429264854631986 ) = False";
+  char *example =
+      "( 14442942219421633442 == -2833.7471092429264854631986 ) = False";
   s21_decimal value_1 = {{0x341E4BA2, 0xC86FA36D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE01EC632, 0x62D4AFED, 0x1770B1, 0x80160000}};
   int code = 0;
@@ -74704,7 +76785,9 @@ START_TEST(s21_is_equal_7468) {
 }
 
 START_TEST(s21_is_equal_7469) {
-  char *example = "( 1704924961594548954834406446 == -325.21390417968122999823717 ) = False";
+  char *example =
+      "( 1704924961594548954834406446 == -325.21390417968122999823717 ) = "
+      "False";
   s21_decimal value_1 = {{0x66600C2E, 0x5D415F6E, 0x58247E7, 0x0}};
   s21_decimal value_2 = {{0x50CF5D65, 0x1B6F86E2, 0x1AE6AC, 0x80170000}};
   int code = 0;
@@ -74734,7 +76817,8 @@ START_TEST(s21_is_equal_7471) {
 }
 
 START_TEST(s21_is_equal_7472) {
-  char *example = "( 15664195922887797344703 == -84.089239547610431643688028 ) = False";
+  char *example =
+      "( 15664195922887797344703 == -84.089239547610431643688028 ) = False";
   s21_decimal value_1 = {{0x494789BF, 0x28631F66, 0x351, 0x0}};
   s21_decimal value_2 = {{0xC5679C5C, 0xCF5CBA45, 0x458E96, 0x80180000}};
   int code = 0;
@@ -74754,7 +76838,8 @@ START_TEST(s21_is_equal_7473) {
 }
 
 START_TEST(s21_is_equal_7474) {
-  char *example = "( -63.923418557720961130652145 == 15662143438090986601 ) = False";
+  char *example =
+      "( -63.923418557720961130652145 == 15662143438090986601 ) = False";
   s21_decimal value_1 = {{0xF72361F1, 0x76B1B47D, 0x34E04F, 0x80180000}};
   s21_decimal value_2 = {{0xB0A0E469, 0xD95B1C79, 0x0, 0x0}};
   int code = 0;
@@ -74784,7 +76869,9 @@ START_TEST(s21_is_equal_7476) {
 }
 
 START_TEST(s21_is_equal_7477) {
-  char *example = "( 1941780946281292606725391892 == 1468052302890876475230376266 ) = False";
+  char *example =
+      "( 1941780946281292606725391892 == 1468052302890876475230376266 ) = "
+      "False";
   s21_decimal value_1 = {{0x41D78614, 0x5BFBA9B, 0x646341C, 0x0}};
   s21_decimal value_2 = {{0x1153D14A, 0xCE4AFE37, 0x4BE582A, 0x0}};
   int code = 0;
@@ -74824,7 +76911,9 @@ START_TEST(s21_is_equal_7480) {
 }
 
 START_TEST(s21_is_equal_7481) {
-  char *example = "( 1736936359449768985151075302 == 1870981994018234379824387555 ) = False";
+  char *example =
+      "( 1736936359449768985151075302 == 1870981994018234379824387555 ) = "
+      "False";
   s21_decimal value_1 = {{0xCD26F3E6, 0xB81F2353, 0x59CC294, 0x0}};
   s21_decimal value_2 = {{0x7F89D5E3, 0x213A04AE, 0x60BA3D9, 0x0}};
   int code = 0;
@@ -74834,7 +76923,8 @@ START_TEST(s21_is_equal_7481) {
 }
 
 START_TEST(s21_is_equal_7482) {
-  char *example = "( 1586307002372122695792308692 == -8.69034797542229 ) = False";
+  char *example =
+      "( 1586307002372122695792308692 == -8.69034797542229 ) = False";
   s21_decimal value_1 = {{0x8237B1D4, 0xE8F8757F, 0x5202992, 0x0}};
   s21_decimal value_2 = {{0xEE67AB55, 0x31661, 0x0, 0x800E0000}};
   int code = 0;
@@ -74944,7 +77034,8 @@ START_TEST(s21_is_equal_7492) {
 }
 
 START_TEST(s21_is_equal_7493) {
-  char *example = "( -27.34441378169124875635 == 1188025200893335245381312099 ) = False";
+  char *example =
+      "( -27.34441378169124875635 == 1188025200893335245381312099 ) = False";
   s21_decimal value_1 = {{0xE444ED73, 0x3BFF49C0, 0x94, 0x80140000}};
   s21_decimal value_2 = {{0xD60A1E63, 0x30557718, 0x3D6B61F, 0x0}};
   int code = 0;
@@ -75004,7 +77095,8 @@ START_TEST(s21_is_equal_7498) {
 }
 
 START_TEST(s21_is_equal_7499) {
-  char *example = "( 1265357313737605613 == -4477.5281273474685077347999 ) = False";
+  char *example =
+      "( 1265357313737605613 == -4477.5281273474685077347999 ) = False";
   s21_decimal value_1 = {{0xCF45C1ED, 0x118F73C5, 0x0, 0x0}};
   s21_decimal value_2 = {{0x523CDE9F, 0xDC8C69D6, 0x250988, 0x80160000}};
   int code = 0;
@@ -75034,7 +77126,8 @@ START_TEST(s21_is_equal_7501) {
 }
 
 START_TEST(s21_is_equal_7502) {
-  char *example = "( -78034.411613827493340926954 == 152728097823778625 ) = False";
+  char *example =
+      "( -78034.411613827493340926954 == 152728097823778625 ) = False";
   s21_decimal value_1 = {{0xBAC053EA, 0xEE1597F6, 0x408C6D, 0x80150000}};
   s21_decimal value_2 = {{0x5201E741, 0x21E9965, 0x0, 0x0}};
   int code = 0;
@@ -75044,7 +77137,8 @@ START_TEST(s21_is_equal_7502) {
 }
 
 START_TEST(s21_is_equal_7503) {
-  char *example = "( 1324935277302241551390 == 1221879633862996968328040580 ) = False";
+  char *example =
+      "( 1324935277302241551390 == 1221879633862996968328040580 ) = False";
   s21_decimal value_1 = {{0xFFC7E41E, 0xD32BAEE5, 0x47, 0x0}};
   s21_decimal value_2 = {{0xCE129084, 0xAD70D12C, 0x3F2B713, 0x0}};
   int code = 0;
@@ -75064,7 +77158,8 @@ START_TEST(s21_is_equal_7504) {
 }
 
 START_TEST(s21_is_equal_7505) {
-  char *example = "( 162028944397085747 == 81612.5687470208138204244284 ) = False";
+  char *example =
+      "( 162028944397085747 == 81612.5687470208138204244284 ) = False";
   s21_decimal value_1 = {{0x6A1EAC33, 0x23FA477, 0x0, 0x0}};
   s21_decimal value_2 = {{0x91A5693C, 0x2B37DEFC, 0x2A31556, 0x160000}};
   int code = 0;
@@ -75074,7 +77169,9 @@ START_TEST(s21_is_equal_7505) {
 }
 
 START_TEST(s21_is_equal_7506) {
-  char *example = "( 1982562310381120373680015874 == 1499685533568341057446906239 ) = False";
+  char *example =
+      "( 1982562310381120373680015874 == 1499685533568341057446906239 ) = "
+      "False";
   s21_decimal value_1 = {{0xD6348A02, 0x333D54A9, 0x667EFE6, 0x0}};
   s21_decimal value_2 = {{0x28B8897F, 0xAD4F791C, 0x4D882C3, 0x0}};
   int code = 0;
@@ -75094,7 +77191,9 @@ START_TEST(s21_is_equal_7507) {
 }
 
 START_TEST(s21_is_equal_7508) {
-  char *example = "( -422.39053220757336212795021 == 1700544345893788260077274561 ) = False";
+  char *example =
+      "( -422.39053220757336212795021 == 1700544345893788260077274561 ) = "
+      "False";
   s21_decimal value_1 = {{0x979A6E8D, 0xA9CCF789, 0x22F077, 0x80170000}};
   s21_decimal value_2 = {{0xB01605C1, 0xB617B646, 0x57EA845, 0x0}};
   int code = 0;
@@ -75184,7 +77283,8 @@ START_TEST(s21_is_equal_7516) {
 }
 
 START_TEST(s21_is_equal_7517) {
-  char *example = "( -697.1192788557940865848 == -435.7959197828619002124 ) = False";
+  char *example =
+      "( -697.1192788557940865848 == -435.7959197828619002124 ) = False";
   s21_decimal value_1 = {{0x28DF3B38, 0xE8BBFA3B, 0x179, 0x80130000}};
   s21_decimal value_2 = {{0xBD1D610C, 0x3ED540F7, 0xEC, 0x80130000}};
   int code = 0;
@@ -75204,7 +77304,8 @@ START_TEST(s21_is_equal_7518) {
 }
 
 START_TEST(s21_is_equal_7519) {
-  char *example = "( 5.280537160944957 == 1884174440609218645623223071 ) = False";
+  char *example =
+      "( 5.280537160944957 == 1884174440609218645623223071 ) = False";
   s21_decimal value_1 = {{0xDDB38D3D, 0x12C29E, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0x438AB31F, 0x17AEA733, 0x6168D75, 0x0}};
   int code = 0;
@@ -75224,7 +77325,8 @@ START_TEST(s21_is_equal_7520) {
 }
 
 START_TEST(s21_is_equal_7521) {
-  char *example = "( 15686303954180836058 == 1801124597983294332698601857 ) = False";
+  char *example =
+      "( 15686303954180836058 == 1801124597983294332698601857 ) = False";
   s21_decimal value_1 = {{0x33C10ADA, 0xD9B0F256, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3CDBA981, 0x1A3F4D8B, 0x5D1DAF8, 0x0}};
   int code = 0;
@@ -75294,7 +77396,8 @@ START_TEST(s21_is_equal_7527) {
 }
 
 START_TEST(s21_is_equal_7528) {
-  char *example = "( 1998017757629946784703231044 == 10554963445546803 ) = False";
+  char *example =
+      "( 1998017757629946784703231044 == 10554963445546803 ) = False";
   s21_decimal value_1 = {{0xAAF6B444, 0xACA23743, 0x674B8B7, 0x0}};
   s21_decimal value_2 = {{0xEEC9FF33, 0x257FAE, 0x0, 0x0}};
   int code = 0;
@@ -75304,7 +77407,8 @@ START_TEST(s21_is_equal_7528) {
 }
 
 START_TEST(s21_is_equal_7529) {
-  char *example = "( -1.4876829531679548460348013 == -80.61349288957029103 ) = False";
+  char *example =
+      "( -1.4876829531679548460348013 == -80.61349288957029103 ) = False";
   s21_decimal value_1 = {{0x24A5B26D, 0x8B7E6195, 0xC4E4A, 0x80190000}};
   s21_decimal value_2 = {{0xAAA1AAEF, 0x6FDFAA77, 0x0, 0x80110000}};
   int code = 0;
@@ -75344,7 +77448,9 @@ START_TEST(s21_is_equal_7532) {
 }
 
 START_TEST(s21_is_equal_7533) {
-  char *example = "( 1877601423819975054023564606 == 1752187494228586267576088045 ) = False";
+  char *example =
+      "( 1877601423819975054023564606 == 1752187494228586267576088045 ) = "
+      "False";
   s21_decimal value_1 = {{0x4C9D9D3E, 0x236C85A6, 0x6111D91, 0x0}};
   s21_decimal value_2 = {{0x493FB5ED, 0x6469127C, 0x5A96022, 0x0}};
   int code = 0;
@@ -75464,7 +77570,8 @@ START_TEST(s21_is_equal_7544) {
 }
 
 START_TEST(s21_is_equal_7545) {
-  char *example = "( 0.672593657973652 == 1775416402636785418232062974 ) = False";
+  char *example =
+      "( 0.672593657973652 == 1775416402636785418232062974 ) = False";
   s21_decimal value_1 = {{0x6A0FCB94, 0x263B8, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0xB9E6E3FE, 0xA4E7C3C, 0x5BC970C, 0x0}};
   int code = 0;
@@ -75474,7 +77581,8 @@ START_TEST(s21_is_equal_7545) {
 }
 
 START_TEST(s21_is_equal_7546) {
-  char *example = "( 1446648351063569996199726408 == 3.209967720264E-10 ) = False";
+  char *example =
+      "( 1446648351063569996199726408 == 3.209967720264E-10 ) = False";
   s21_decimal value_1 = {{0x8EF78D48, 0x4095BBFC, 0x4ACA3B4, 0x0}};
   s21_decimal value_2 = {{0x60FC5748, 0x2EB, 0x0, 0x160000}};
   int code = 0;
@@ -75494,7 +77602,8 @@ START_TEST(s21_is_equal_7547) {
 }
 
 START_TEST(s21_is_equal_7548) {
-  char *example = "( -51.096471715814582 == 9.32103383149250941657324259 ) = False";
+  char *example =
+      "( -51.096471715814582 == 9.32103383149250941657324259 ) = False";
   s21_decimal value_1 = {{0x65E59CB6, 0xB587F8, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xF4DC9AE3, 0xA64A9172, 0x3030491, 0x1A0000}};
   int code = 0;
@@ -75564,7 +77673,8 @@ START_TEST(s21_is_equal_7554) {
 }
 
 START_TEST(s21_is_equal_7555) {
-  char *example = "( 1283383755099753300994583278 == -3.486241119316405 ) = False";
+  char *example =
+      "( 1283383755099753300994583278 == -3.486241119316405 ) = False";
   s21_decimal value_1 = {{0xE7406AEE, 0xC5453EE5, 0x4259714, 0x0}};
   s21_decimal value_2 = {{0xC384A9B5, 0xC62B7, 0x0, 0x800F0000}};
   int code = 0;
@@ -75674,7 +77784,9 @@ START_TEST(s21_is_equal_7565) {
 }
 
 START_TEST(s21_is_equal_7566) {
-  char *example = "( -1.6463236464346480688158132 == -7.0782161104343357343510498 ) = False";
+  char *example =
+      "( -1.6463236464346480688158132 == -7.0782161104343357343510498 ) = "
+      "False";
   s21_decimal value_1 = {{0xFDAED5B4, 0xD64835FF, 0xD9E39, 0x80190000}};
   s21_decimal value_2 = {{0x65C5AFE2, 0xA462761F, 0x3A8CB4, 0x80190000}};
   int code = 0;
@@ -75844,7 +77956,8 @@ START_TEST(s21_is_equal_7582) {
 }
 
 START_TEST(s21_is_equal_7583) {
-  char *example = "( 1669123337811750670122590952 == -6740.8165070200261 ) = False";
+  char *example =
+      "( 1669123337811750670122590952 == -6740.8165070200261 ) = False";
   s21_decimal value_1 = {{0xF95BA2E8, 0x7338F4BA, 0x564AA9D, 0x0}};
   s21_decimal value_2 = {{0x75F85DC5, 0xEF7B5E, 0x0, 0x800D0000}};
   int code = 0;
@@ -75914,7 +78027,9 @@ START_TEST(s21_is_equal_7589) {
 }
 
 START_TEST(s21_is_equal_7590) {
-  char *example = "( -364804.72772345207175113532 == -5.6787223083165785917751082 ) = False";
+  char *example =
+      "( -364804.72772345207175113532 == -5.6787223083165785917751082 ) = "
+      "False";
   s21_decimal value_1 = {{0x6605EB3C, 0x64436B88, 0x1E2D0A, 0x80140000}};
   s21_decimal value_2 = {{0xE513FF2A, 0x8824A89C, 0x2EF929, 0x80190000}};
   int code = 0;
@@ -75944,7 +78059,8 @@ START_TEST(s21_is_equal_7592) {
 }
 
 START_TEST(s21_is_equal_7593) {
-  char *example = "( 0.69330362555639718184493696 == 15706709896817098440191042 ) = False";
+  char *example =
+      "( 0.69330362555639718184493696 == 15706709896817098440191042 ) = False";
   s21_decimal value_1 = {{0x4C242280, 0x7C2F9E89, 0x395946, 0x1A0000}};
   s21_decimal value_2 = {{0x413A2C42, 0x731B5F91, 0xCFE06, 0x0}};
   int code = 0;
@@ -75964,7 +78080,8 @@ START_TEST(s21_is_equal_7594) {
 }
 
 START_TEST(s21_is_equal_7595) {
-  char *example = "( 111398301270282857133 == 16586721980319643603764971 ) = False";
+  char *example =
+      "( 111398301270282857133 == 16586721980319643603764971 ) = False";
   s21_decimal value_1 = {{0xB527EAAD, 0x9F644CA, 0x6, 0x0}};
   s21_decimal value_2 = {{0xB63B06EB, 0x11F149, 0xDB860, 0x0}};
   int code = 0;
@@ -75984,7 +78101,9 @@ START_TEST(s21_is_equal_7596) {
 }
 
 START_TEST(s21_is_equal_7597) {
-  char *example = "( -83.553580366996936394969541 == -8905.0717560182905528043867 ) = False";
+  char *example =
+      "( -83.553580366996936394969541 == -8905.0717560182905528043867 ) = "
+      "False";
   s21_decimal value_1 = {{0x44AA91C5, 0xAAEA9645, 0x451D28, 0x80180000}};
   s21_decimal value_2 = {{0xBC92C95B, 0x126F0FD0, 0x49A939, 0x80160000}};
   int code = 0;
@@ -76084,7 +78203,8 @@ START_TEST(s21_is_equal_7606) {
 }
 
 START_TEST(s21_is_equal_7607) {
-  char *example = "( 17416686839858555244319917 == 1016782113556333045285249479 ) = False";
+  char *example =
+      "( 17416686839858555244319917 == 1016782113556333045285249479 ) = False";
   s21_decimal value_1 = {{0x1E114AD, 0x7C4759A4, 0xE6820, 0x0}};
   s21_decimal value_2 = {{0xECEDE1C7, 0xD2B744C6, 0x3490FFC, 0x0}};
   int code = 0;
@@ -76124,7 +78244,9 @@ START_TEST(s21_is_equal_7610) {
 }
 
 START_TEST(s21_is_equal_7611) {
-  char *example = "( 79228162514264337593543950335 == 1741197465866453357071933053 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 1741197465866453357071933053 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x1D7B9E7D, 0xC2CC8464, 0x5A048E7, 0x0}};
   int code = 0;
@@ -76164,7 +78286,9 @@ START_TEST(s21_is_equal_7614) {
 }
 
 START_TEST(s21_is_equal_7615) {
-  char *example = "( -1133043.2393301719325457474 == 1653635534370900486674815600 ) = False";
+  char *example =
+      "( -1133043.2393301719325457474 == 1653635534370900486674815600 ) = "
+      "False";
   s21_decimal value_1 = {{0xD3F1BC42, 0xF8866845, 0x95F4F, 0x80130000}};
   s21_decimal value_2 = {{0x1BD9A70, 0xF17612F6, 0x557DAF1, 0x0}};
   int code = 0;
@@ -76174,7 +78298,8 @@ START_TEST(s21_is_equal_7615) {
 }
 
 START_TEST(s21_is_equal_7616) {
-  char *example = "( 1306958920506134022032636118 == 125531685041825970093 ) = False";
+  char *example =
+      "( 1306958920506134022032636118 == 125531685041825970093 ) = False";
   s21_decimal value_1 = {{0x241EB8D6, 0xC507A96, 0x4391751, 0x0}};
   s21_decimal value_2 = {{0x3E40F7AD, 0xCE1A2273, 0x6, 0x0}};
   int code = 0;
@@ -76214,7 +78339,8 @@ START_TEST(s21_is_equal_7619) {
 }
 
 START_TEST(s21_is_equal_7620) {
-  char *example = "( 13678904873158079979 == 1975044324388550636479471869 ) = False";
+  char *example =
+      "( 13678904873158079979 == 1975044324388550636479471869 ) = False";
   s21_decimal value_1 = {{0x18F275EB, 0xBDD53B82, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFDAC60FD, 0x5CE47F65, 0x661B7E7, 0x0}};
   int code = 0;
@@ -76234,7 +78360,9 @@ START_TEST(s21_is_equal_7621) {
 }
 
 START_TEST(s21_is_equal_7622) {
-  char *example = "( 1448643825617076784264916235 == 1531329177883991518031724929 ) = False";
+  char *example =
+      "( 1448643825617076784264916235 == 1531329177883991518031724929 ) = "
+      "False";
   s21_decimal value_1 = {{0x22642D0B, 0x2503AD1C, 0x4AE4A43, 0x0}};
   s21_decimal value_2 = {{0xD3814181, 0x1296C83D, 0x4F2AF91, 0x0}};
   int code = 0;
@@ -76314,7 +78442,8 @@ START_TEST(s21_is_equal_7629) {
 }
 
 START_TEST(s21_is_equal_7630) {
-  char *example = "( 12605740650645228621 == -582651440.33216595344528853 ) = False";
+  char *example =
+      "( 12605740650645228621 == -582651440.33216595344528853 ) = False";
   s21_decimal value_1 = {{0x6C690C4D, 0xAEF09655, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5C0895D5, 0xC97C1709, 0x30321F, 0x80110000}};
   int code = 0;
@@ -76334,7 +78463,9 @@ START_TEST(s21_is_equal_7631) {
 }
 
 START_TEST(s21_is_equal_7632) {
-  char *example = "( 1062508118947357078523379668 == 6.09527357735606940342714337 ) = False";
+  char *example =
+      "( 1062508118947357078523379668 == 6.09527357735606940342714337 ) = "
+      "False";
   s21_decimal value_1 = {{0x306E7FD4, 0x8AD4DD7D, 0x36EE2D8, 0x0}};
   s21_decimal value_2 = {{0x20447FE1, 0x45B66AC7, 0x1F83070, 0x1A0000}};
   int code = 0;
@@ -76354,7 +78485,8 @@ START_TEST(s21_is_equal_7633) {
 }
 
 START_TEST(s21_is_equal_7634) {
-  char *example = "( -74420.4831119187744624 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -74420.4831119187744624 == -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xCCC19770, 0x57EAAEEF, 0x28, 0x80100000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -76404,7 +78536,8 @@ START_TEST(s21_is_equal_7638) {
 }
 
 START_TEST(s21_is_equal_7639) {
-  char *example = "( 128078143586896745392 == 1127311981813059009129471561 ) = False";
+  char *example =
+      "( 128078143586896745392 == 1127311981813059009129471561 ) = False";
   s21_decimal value_1 = {{0x547493B0, 0xF170F901, 0x6, 0x0}};
   s21_decimal value_2 = {{0x1A2BDE49, 0xFCCEF4CE, 0x3A47D98, 0x0}};
   int code = 0;
@@ -76434,7 +78567,8 @@ START_TEST(s21_is_equal_7641) {
 }
 
 START_TEST(s21_is_equal_7642) {
-  char *example = "( 1672006427058853167244978430 == -2.342861146096063 ) = False";
+  char *example =
+      "( 1672006427058853167244978430 == -2.342861146096063 ) = False";
   s21_decimal value_1 = {{0xC31728FE, 0x80656F3, 0x5670D22, 0x0}};
   s21_decimal value_2 = {{0xDE5F01BF, 0x852D1, 0x0, 0x800F0000}};
   int code = 0;
@@ -76484,7 +78618,8 @@ START_TEST(s21_is_equal_7646) {
 }
 
 START_TEST(s21_is_equal_7647) {
-  char *example = "( 8.6476433571435652E-10 == 19845245564524533409812 ) = False";
+  char *example =
+      "( 8.6476433571435652E-10 == 19845245564524533409812 ) = False";
   s21_decimal value_1 = {{0xB077D484, 0x13339DB, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x59346814, 0xD01B6051, 0x433, 0x0}};
   int code = 0;
@@ -76504,7 +78639,8 @@ START_TEST(s21_is_equal_7648) {
 }
 
 START_TEST(s21_is_equal_7649) {
-  char *example = "( 1829244912758590 == 1439770270378949728405844025 ) = False";
+  char *example =
+      "( 1829244912758590 == 1439770270378949728405844025 ) = False";
   s21_decimal value_1 = {{0x453B6F3E, 0x67FB0, 0x0, 0x0}};
   s21_decimal value_2 = {{0x55147039, 0xC0519723, 0x4A6F336, 0x0}};
   int code = 0;
@@ -76534,7 +78670,8 @@ START_TEST(s21_is_equal_7651) {
 }
 
 START_TEST(s21_is_equal_7652) {
-  char *example = "( 10.2159137456958362644567848 == 12380374281849867665338630 ) = False";
+  char *example =
+      "( 10.2159137456958362644567848 == 12380374281849867665338630 ) = False";
   s21_decimal value_1 = {{0xB276D728, 0xF041CBED, 0x548109, 0x190000}};
   s21_decimal value_2 = {{0xA7C6F106, 0x6F43CC46, 0xA3DA5, 0x0}};
   int code = 0;
@@ -76644,7 +78781,9 @@ START_TEST(s21_is_equal_7662) {
 }
 
 START_TEST(s21_is_equal_7663) {
-  char *example = "( -66506702196.148675392020779 == 1088025501483217563435428143 ) = False";
+  char *example =
+      "( -66506702196.148675392020779 == 1088025501483217563435428143 ) = "
+      "False";
   s21_decimal value_1 = {{0xE65FA12B, 0x8CE02B30, 0x370357, 0x800F0000}};
   s21_decimal value_2 = {{0xE620692F, 0x9F1333A5, 0x383FE5C, 0x0}};
   int code = 0;
@@ -76664,7 +78803,9 @@ START_TEST(s21_is_equal_7664) {
 }
 
 START_TEST(s21_is_equal_7665) {
-  char *example = "( 1718738465045504920108118911 == 1249088699555429236244620876 ) = False";
+  char *example =
+      "( 1718738465045504920108118911 == 1249088699555429236244620876 ) = "
+      "False";
   s21_decimal value_1 = {{0x2277B37F, 0xE307BDF1, 0x58DB506, 0x0}};
   s21_decimal value_2 = {{0xAA46264C, 0x1591B3DF, 0x40938D2, 0x0}};
   int code = 0;
@@ -76674,7 +78815,8 @@ START_TEST(s21_is_equal_7665) {
 }
 
 START_TEST(s21_is_equal_7666) {
-  char *example = "( -19263.80243921005202221 == 1541497826939580831956739434 ) = False";
+  char *example =
+      "( -19263.80243921005202221 == 1541497826939580831956739434 ) = False";
   s21_decimal value_1 = {{0x39DC4B2D, 0x6DE57172, 0x68, 0x80110000}};
   s21_decimal value_2 = {{0x50D4256A, 0xA4797F03, 0x4FB18DC, 0x0}};
   int code = 0;
@@ -76694,7 +78836,8 @@ START_TEST(s21_is_equal_7667) {
 }
 
 START_TEST(s21_is_equal_7668) {
-  char *example = "( 1360455246438173863089008879 == -47.6196236029127607701 ) = False";
+  char *example =
+      "( 1360455246438173863089008879 == -47.6196236029127607701 ) = False";
   s21_decimal value_1 = {{0x6BBFF0EF, 0xB018CE87, 0x465579A, 0x0}};
   s21_decimal value_2 = {{0x3638C595, 0xD08CE1AC, 0x19, 0x80130000}};
   int code = 0;
@@ -76744,7 +78887,9 @@ START_TEST(s21_is_equal_7672) {
 }
 
 START_TEST(s21_is_equal_7673) {
-  char *example = "( 1968027055955922594382350231 == -3.2768569015137423756626272 ) = False";
+  char *example =
+      "( 1968027055955922594382350231 == -3.2768569015137423756626272 ) = "
+      "False";
   s21_decimal value_1 = {{0x104A0797, 0x7A9815C6, 0x65BE9F0, 0x0}};
   s21_decimal value_2 = {{0x2B180960, 0xAF8ECC07, 0x1B1B03, 0x80190000}};
   int code = 0;
@@ -76834,7 +78979,8 @@ START_TEST(s21_is_equal_7681) {
 }
 
 START_TEST(s21_is_equal_7682) {
-  char *example = "( 107071684431364944 == 1485522806680922756996311351 ) = False";
+  char *example =
+      "( 107071684431364944 == 1485522806680922756996311351 ) = False";
   s21_decimal value_1 = {{0x3408C350, 0x17C6521, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAE56A937, 0xB6C96D2B, 0x4CCCBB0, 0x0}};
   int code = 0;
@@ -76914,7 +79060,8 @@ START_TEST(s21_is_equal_7689) {
 }
 
 START_TEST(s21_is_equal_7690) {
-  char *example = "( -31133.381572844391557 == 1992515008165204512865404687 ) = False";
+  char *example =
+      "( -31133.381572844391557 == 1992515008165204512865404687 ) = False";
   s21_decimal value_1 = {{0xBA150C85, 0xB00FFD96, 0x1, 0x800F0000}};
   s21_decimal value_2 = {{0xEFA2470F, 0x733D059, 0x6702B77, 0x0}};
   int code = 0;
@@ -76924,7 +79071,9 @@ START_TEST(s21_is_equal_7690) {
 }
 
 START_TEST(s21_is_equal_7691) {
-  char *example = "( 1002648413553623207798122288 == 1887618572758417142856212941 ) = False";
+  char *example =
+      "( 1002648413553623207798122288 == 1887618572758417142856212941 ) = "
+      "False";
   s21_decimal value_1 = {{0x8B8C2730, 0x69239428, 0x33D5F0F, 0x0}};
   s21_decimal value_2 = {{0xB832E1CD, 0xDED4B50A, 0x61966C7, 0x0}};
   int code = 0;
@@ -76934,7 +79083,8 @@ START_TEST(s21_is_equal_7691) {
 }
 
 START_TEST(s21_is_equal_7692) {
-  char *example = "( 1995458567865957463070 == 1205806787802688976773232403 ) = False";
+  char *example =
+      "( 1995458567865957463070 == 1205806787802688976773232403 ) = False";
   s21_decimal value_1 = {{0xDC19B41E, 0x2C8CF314, 0x6C, 0x0}};
   s21_decimal value_2 = {{0x76DCB713, 0xF2591B2C, 0x3E56B84, 0x0}};
   int code = 0;
@@ -77004,7 +79154,9 @@ START_TEST(s21_is_equal_7698) {
 }
 
 START_TEST(s21_is_equal_7699) {
-  char *example = "( 1874473490575099627111229010 == -3.0725708305249025062758252 ) = False";
+  char *example =
+      "( 1874473490575099627111229010 == -3.0725708305249025062758252 ) = "
+      "False";
   s21_decimal value_1 = {{0xA574A652, 0x8993140B, 0x60E8733, 0x0}};
   s21_decimal value_2 = {{0x4496676C, 0xFC1AE472, 0x196A6B, 0x80190000}};
   int code = 0;
@@ -77034,7 +79186,8 @@ START_TEST(s21_is_equal_7701) {
 }
 
 START_TEST(s21_is_equal_7702) {
-  char *example = "( -4.7278297097116048769 == -13333.183763441265140325273 ) = False";
+  char *example =
+      "( -4.7278297097116048769 == -13333.183763441265140325273 ) = False";
   s21_decimal value_1 = {{0xFAFBDD81, 0x901E40B7, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0x932C5B99, 0x571256A9, 0xB0769, 0x80150000}};
   int code = 0;
@@ -77064,7 +79217,8 @@ START_TEST(s21_is_equal_7704) {
 }
 
 START_TEST(s21_is_equal_7705) {
-  char *example = "( 8729.97870254855905866102483 == 1925664948339512 ) = False";
+  char *example =
+      "( 8729.97870254855905866102483 == 1925664948339512 ) = False";
   s21_decimal value_1 = {{0xE50736D3, 0x601221AB, 0x2D2207D, 0x170000}};
   s21_decimal value_2 = {{0xCF33C338, 0x6D761, 0x0, 0x0}};
   int code = 0;
@@ -77194,7 +79348,8 @@ START_TEST(s21_is_equal_7717) {
 }
 
 START_TEST(s21_is_equal_7718) {
-  char *example = "( 1251464164311470572693087 == -5456.755066915815740257741 ) = False";
+  char *example =
+      "( 1251464164311470572693087 == -5456.755066915815740257741 ) = False";
   s21_decimal value_1 = {{0xC121E65F, 0x21F13F7, 0x10902, 0x0}};
   s21_decimal value_2 = {{0xD0F9B5CD, 0x48F01883, 0x48383, 0x80150000}};
   int code = 0;
@@ -77204,7 +79359,9 @@ START_TEST(s21_is_equal_7718) {
 }
 
 START_TEST(s21_is_equal_7719) {
-  char *example = "( 1022084073795671477822757384 == -532.00888498003443716991191 ) = False";
+  char *example =
+      "( 1022084073795671477822757384 == -532.00888498003443716991191 ) = "
+      "False";
   s21_decimal value_1 = {{0xD78D1A08, 0xA9E205CE, 0x34D72B8, 0x0}};
   s21_decimal value_2 = {{0x3C8C28D7, 0xF1C33273, 0x2C01B9, 0x80170000}};
   int code = 0;
@@ -77274,7 +79431,8 @@ START_TEST(s21_is_equal_7725) {
 }
 
 START_TEST(s21_is_equal_7726) {
-  char *example = "( 1873045654957140334689242 == 1656813221601263032147078537 ) = False";
+  char *example =
+      "( 1873045654957140334689242 == 1656813221601263032147078537 ) = False";
   s21_decimal value_1 = {{0xC9F53BDA, 0x2276252, 0x18CA2, 0x0}};
   s21_decimal value_2 = {{0xC3276D89, 0xB690552F, 0x55A7BD8, 0x0}};
   int code = 0;
@@ -77364,7 +79522,8 @@ START_TEST(s21_is_equal_7734) {
 }
 
 START_TEST(s21_is_equal_7735) {
-  char *example = "( 106159132668773701109997 == -32.416108861625191549965654 ) = False";
+  char *example =
+      "( 106159132668773701109997 == -32.416108861625191549965654 ) = False";
   s21_decimal value_1 = {{0x1E99C8ED, 0xE5EAC30F, 0x167A, 0x0}};
   s21_decimal value_2 = {{0x720D1556, 0xC8562E94, 0x1AD060, 0x80180000}};
   int code = 0;
@@ -77534,7 +79693,8 @@ START_TEST(s21_is_equal_7751) {
 }
 
 START_TEST(s21_is_equal_7752) {
-  char *example = "( 1413783279639177592458134974 == 1365177909776147263 ) = False";
+  char *example =
+      "( 1413783279639177592458134974 == 1365177909776147263 ) = False";
   s21_decimal value_1 = {{0x413745BE, 0x29118A3B, 0x4917441, 0x0}};
   s21_decimal value_2 = {{0x6F6AE33F, 0x12F21613, 0x0, 0x0}};
   int code = 0;
@@ -77564,7 +79724,9 @@ START_TEST(s21_is_equal_7754) {
 }
 
 START_TEST(s21_is_equal_7755) {
-  char *example = "( 0.51823170079860422394128751 == 1821367892845076342811098732 ) = False";
+  char *example =
+      "( 0.51823170079860422394128751 == 1821367892845076342811098732 ) = "
+      "False";
   s21_decimal value_1 = {{0x7C32296F, 0xADE58664, 0x2ADDFB, 0x1A0000}};
   s21_decimal value_2 = {{0x7A277E6C, 0x50DEBF6C, 0x5E299A7, 0x0}};
   int code = 0;
@@ -77604,7 +79766,9 @@ START_TEST(s21_is_equal_7758) {
 }
 
 START_TEST(s21_is_equal_7759) {
-  char *example = "( -79228162514264337593543950335 == -877933.13346274396408047026 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == -877933.13346274396408047026 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x969AE5B2, 0xD908712, 0x489EF5, 0x80140000}};
   int code = 0;
@@ -77624,7 +79788,8 @@ START_TEST(s21_is_equal_7760) {
 }
 
 START_TEST(s21_is_equal_7761) {
-  char *example = "( 15856887362663969139031 == 1932874577652686008539836347 ) = False";
+  char *example =
+      "( 15856887362663969139031 == 1932874577652686008539836347 ) = False";
   s21_decimal value_1 = {{0xF6932957, 0x9A84A2F3, 0x35B, 0x0}};
   s21_decimal value_2 = {{0xDB866FBB, 0xCFC87048, 0x63ED61C, 0x0}};
   int code = 0;
@@ -77634,7 +79799,8 @@ START_TEST(s21_is_equal_7761) {
 }
 
 START_TEST(s21_is_equal_7762) {
-  char *example = "( 154909656978780394605 == 0.81211158028151510373682976 ) = False";
+  char *example =
+      "( 154909656978780394605 == 0.81211158028151510373682976 ) = False";
   s21_decimal value_1 = {{0x91D1146D, 0x65CDA846, 0x8, 0x0}};
   s21_decimal value_2 = {{0x64ECF20, 0xB2BDD7CE, 0x432D21, 0x1A0000}};
   int code = 0;
@@ -77674,7 +79840,8 @@ START_TEST(s21_is_equal_7765) {
 }
 
 START_TEST(s21_is_equal_7766) {
-  char *example = "( 696.764468981405360 == -664467.16314163631880749376 ) = False";
+  char *example =
+      "( 696.764468981405360 == -664467.16314163631880749376 ) = False";
   s21_decimal value_1 = {{0xFA933578, 0xF78A5B, 0x0, 0xE0000}};
   s21_decimal value_2 = {{0x28094140, 0xB588B49E, 0x36F6A3, 0x80140000}};
   int code = 0;
@@ -77764,7 +79931,9 @@ START_TEST(s21_is_equal_7774) {
 }
 
 START_TEST(s21_is_equal_7775) {
-  char *example = "( 1673564411930334459091163810 == -330.27853417665656704745470 ) = False";
+  char *example =
+      "( 1673564411930334459091163810 == -330.27853417665656704745470 ) = "
+      "False";
   s21_decimal value_1 = {{0x4B7B1AA2, 0x8F7A9D90, 0x568570C, 0x0}};
   s21_decimal value_2 = {{0x4448D333, 0x5A25D5FB, 0x2BB64, 0x80160000}};
   int code = 0;
@@ -77854,7 +80023,8 @@ START_TEST(s21_is_equal_7783) {
 }
 
 START_TEST(s21_is_equal_7784) {
-  char *example = "( 1778107656055144383643022101 == -18.913314477987590721437 ) = False";
+  char *example =
+      "( 1778107656055144383643022101 == -18.913314477987590721437 ) = False";
   s21_decimal value_1 = {{0x85867315, 0x2E2F01FF, 0x5BED0F1, 0x0}};
   s21_decimal value_2 = {{0xE6EA4F9D, 0x4AF70EB1, 0x401, 0x80150000}};
   int code = 0;
@@ -77914,7 +80084,8 @@ START_TEST(s21_is_equal_7789) {
 }
 
 START_TEST(s21_is_equal_7790) {
-  char *example = "( -1.5579857680489188889019295 == 12592414582680841708491259 ) = False";
+  char *example =
+      "( -1.5579857680489188889019295 == 12592414582680841708491259 ) = False";
   s21_decimal value_1 = {{0x29DD439F, 0xC6F73D2E, 0xCE329, 0x80190000}};
   s21_decimal value_2 = {{0x7D2DD1FB, 0x29910462, 0xA6A8C, 0x0}};
   int code = 0;
@@ -77964,7 +80135,9 @@ START_TEST(s21_is_equal_7794) {
 }
 
 START_TEST(s21_is_equal_7795) {
-  char *example = "( 0.51135530148751381739501568 == 1084676817920876398579592346 ) = False";
+  char *example =
+      "( 0.51135530148751381739501568 == 1084676817920876398579592346 ) = "
+      "False";
   s21_decimal value_1 = {{0xFAD67800, 0xA4D82F37, 0x2A4C5E, 0x1A0000}};
   s21_decimal value_2 = {{0x6C04AC9A, 0x1F294C43, 0x3813940, 0x0}};
   int code = 0;
@@ -78014,7 +80187,8 @@ START_TEST(s21_is_equal_7799) {
 }
 
 START_TEST(s21_is_equal_7800) {
-  char *example = "( 13351374605699762680 == 1741904744745083920443030519 ) = False";
+  char *example =
+      "( 13351374605699762680 == 1741904744745083920443030519 ) = False";
   s21_decimal value_1 = {{0x1BE7C9F8, 0xB9499C77, 0x0, 0x0}};
   s21_decimal value_2 = {{0x527CBBF7, 0x6CFF5AC9, 0x5A0DEAD, 0x0}};
   int code = 0;
@@ -78034,7 +80208,8 @@ START_TEST(s21_is_equal_7801) {
 }
 
 START_TEST(s21_is_equal_7802) {
-  char *example = "( 1603681070216672499116672799 == 1296742006860364 ) = False";
+  char *example =
+      "( 1603681070216672499116672799 == 1296742006860364 ) = False";
   s21_decimal value_1 = {{0x8E6A071F, 0x3E032F1, 0x52E88AD, 0x0}};
   s21_decimal value_2 = {{0x46AF2A4C, 0x49B61, 0x0, 0x0}};
   int code = 0;
@@ -78084,7 +80259,8 @@ START_TEST(s21_is_equal_7806) {
 }
 
 START_TEST(s21_is_equal_7807) {
-  char *example = "( 1656768622271725885887258093 == 108744247407534769 ) = False";
+  char *example =
+      "( 1656768622271725885887258093 == 108744247407534769 ) = False";
   s21_decimal value_1 = {{0xF58E9DED, 0xFA883886, 0x55A7266, 0x0}};
   s21_decimal value_2 = {{0x1E17E2B1, 0x1825651, 0x0, 0x0}};
   int code = 0;
@@ -78104,7 +80280,9 @@ START_TEST(s21_is_equal_7808) {
 }
 
 START_TEST(s21_is_equal_7809) {
-  char *example = "( 1.90873107500336105479254684 == -55.044669998311161092094202 ) = False";
+  char *example =
+      "( 1.90873107500336105479254684 == -55.044669998311161092094202 ) = "
+      "False";
   s21_decimal value_1 = {{0x1FD0B29C, 0xE41B9A42, 0x9DE2F3, 0x1A0000}};
   s21_decimal value_2 = {{0x7F07B8FA, 0x8A300F42, 0x2D8829, 0x80180000}};
   int code = 0;
@@ -78184,7 +80362,8 @@ START_TEST(s21_is_equal_7816) {
 }
 
 START_TEST(s21_is_equal_7817) {
-  char *example = "( 1541860002148814323627597610 == 1892934445915829 ) = False";
+  char *example =
+      "( 1541860002148814323627597610 == 1892934445915829 ) = False";
   s21_decimal value_1 = {{0x16981F2A, 0x332D7660, 0x4FB658E, 0x0}};
   s21_decimal value_2 = {{0x253B5EB5, 0x6B99D, 0x0, 0x0}};
   int code = 0;
@@ -78194,7 +80373,8 @@ START_TEST(s21_is_equal_7817) {
 }
 
 START_TEST(s21_is_equal_7818) {
-  char *example = "( 193057133190625324 == 1624566487022543319486832340 ) = False";
+  char *example =
+      "( 193057133190625324 == 1624566487022543319486832340 ) = False";
   s21_decimal value_1 = {{0x952EB82C, 0x2ADE070, 0x0, 0x0}};
   s21_decimal value_2 = {{0x930E1ED4, 0xBA95DDBA, 0x53FCF55, 0x0}};
   int code = 0;
@@ -78204,7 +80384,8 @@ START_TEST(s21_is_equal_7818) {
 }
 
 START_TEST(s21_is_equal_7819) {
-  char *example = "( 12293905859468877 == -74.890484864247183071446387 ) = False";
+  char *example =
+      "( 12293905859468877 == -74.890484864247183071446387 ) = False";
   s21_decimal value_1 = {{0x3A7DE4D, 0x2BAD3E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE46B0573, 0x51C5367C, 0x3DF2AD, 0x80180000}};
   int code = 0;
@@ -78244,7 +80425,8 @@ START_TEST(s21_is_equal_7822) {
 }
 
 START_TEST(s21_is_equal_7823) {
-  char *example = "( 1382566060165841460329330887 == 13817936060758608 ) = False";
+  char *example =
+      "( 1382566060165841460329330887 == 13817936060758608 ) = False";
   s21_decimal value_1 = {{0x8B2638C7, 0x4D448056, 0x477A1C0, 0x0}};
   s21_decimal value_2 = {{0xF26E3A50, 0x311756, 0x0, 0x0}};
   int code = 0;
@@ -78254,7 +80436,8 @@ START_TEST(s21_is_equal_7823) {
 }
 
 START_TEST(s21_is_equal_7824) {
-  char *example = "( -79228162514264337593543950335 == 186420297926322 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 186420297926322 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x5BA306B2, 0xA98C, 0x0, 0x0}};
   int code = 0;
@@ -78264,7 +80447,8 @@ START_TEST(s21_is_equal_7824) {
 }
 
 START_TEST(s21_is_equal_7825) {
-  char *example = "( -680.25096849668939718592050 == 1348730585741302680321551 ) = False";
+  char *example =
+      "( -680.25096849668939718592050 == 1348730585741302680321551 ) = False";
   s21_decimal value_1 = {{0xD72C6705, 0xC9F7F46B, 0x5A07C, 0x80160000}};
   s21_decimal value_2 = {{0x1A30FE0F, 0xD4E0FAD0, 0x11D9A, 0x0}};
   int code = 0;
@@ -78314,7 +80498,8 @@ START_TEST(s21_is_equal_7829) {
 }
 
 START_TEST(s21_is_equal_7830) {
-  char *example = "( 1085231552905221 == -64.588122704339820027467087 ) = False";
+  char *example =
+      "( 1085231552905221 == -64.588122704339820027467087 ) = False";
   s21_decimal value_1 = {{0x2935C005, 0x3DB03, 0x0, 0x0}};
   s21_decimal value_2 = {{0x30E554F, 0x25CBC0D7, 0x356D11, 0x80180000}};
   int code = 0;
@@ -78334,7 +80519,8 @@ START_TEST(s21_is_equal_7831) {
 }
 
 START_TEST(s21_is_equal_7832) {
-  char *example = "( 1892705188206772580665690639 == 1100881150262082480 ) = False";
+  char *example =
+      "( 1892705188206772580665690639 == 1100881150262082480 ) = False";
   s21_decimal value_1 = {{0xF3EE8A0F, 0xD8AEE0A3, 0x61D9BE9, 0x0}};
   s21_decimal value_2 = {{0xCD4B7BB0, 0xF471D92, 0x0, 0x0}};
   int code = 0;
@@ -78354,7 +80540,8 @@ START_TEST(s21_is_equal_7833) {
 }
 
 START_TEST(s21_is_equal_7834) {
-  char *example = "( 1825882871054908373226425916 == 18812895781868957 ) = False";
+  char *example =
+      "( 1825882871054908373226425916 == 18812895781868957 ) = False";
   s21_decimal value_1 = {{0x2AD70E3C, 0xC66C4DE0, 0x5E655BC, 0x0}};
   s21_decimal value_2 = {{0xA246559D, 0x42D63A, 0x0, 0x0}};
   int code = 0;
@@ -78384,7 +80571,8 @@ START_TEST(s21_is_equal_7836) {
 }
 
 START_TEST(s21_is_equal_7837) {
-  char *example = "( 1681926665832719499397936428 == -47.7055741174918423459 ) = False";
+  char *example =
+      "( 1681926665832719499397936428 == -47.7055741174918423459 ) = False";
   s21_decimal value_1 = {{0x51ABB52C, 0x40BB38C0, 0x56F41D3, 0x0}};
   s21_decimal value_2 = {{0x87B423A3, 0xDC7A750C, 0x19, 0x80130000}};
   int code = 0;
@@ -78404,7 +80592,8 @@ START_TEST(s21_is_equal_7838) {
 }
 
 START_TEST(s21_is_equal_7839) {
-  char *example = "( 1448596737208509394904 == 0.16128417063322920549113698 ) = False";
+  char *example =
+      "( 1448596737208509394904 == 0.16128417063322920549113698 ) = False";
   s21_decimal value_1 = {{0x2715EFD8, 0x8751717F, 0x4E, 0x0}};
   s21_decimal value_2 = {{0x635C5F62, 0x3DAE4449, 0xD5753, 0x1A0000}};
   int code = 0;
@@ -78454,7 +80643,9 @@ START_TEST(s21_is_equal_7843) {
 }
 
 START_TEST(s21_is_equal_7844) {
-  char *example = "( 1065763217506913363566382808 == 1281856037413371632206016045 ) = False";
+  char *example =
+      "( 1065763217506913363566382808 == 1281856037413371632206016045 ) = "
+      "False";
   s21_decimal value_1 = {{0xEAE9CED8, 0xC9EF3E9E, 0x3719423, 0x0}};
   s21_decimal value_2 = {{0x6B50EE2D, 0x7637DF9, 0x4245393, 0x0}};
   int code = 0;
@@ -78514,7 +80705,8 @@ START_TEST(s21_is_equal_7849) {
 }
 
 START_TEST(s21_is_equal_7850) {
-  char *example = "( -6.1320720744827179801942691 == 0.0425488977869810462 ) = False";
+  char *example =
+      "( -6.1320720744827179801942691 == 0.0425488977869810462 ) = False";
   s21_decimal value_1 = {{0x1D669AA3, 0xEEB80D9C, 0x32B92A, 0x80190000}};
   s21_decimal value_2 = {{0x95C62B1E, 0x5E7A3F8, 0x0, 0x130000}};
   int code = 0;
@@ -78614,7 +80806,8 @@ START_TEST(s21_is_equal_7859) {
 }
 
 START_TEST(s21_is_equal_7860) {
-  char *example = "( 177870907553569345 == 1026580064407723607405533031 ) = False";
+  char *example =
+      "( 177870907553569345 == 1026580064407723607405533031 ) = False";
   s21_decimal value_1 = {{0xE49B5A41, 0x277ECA5, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6F729767, 0xCD95380B, 0x3512AC8, 0x0}};
   int code = 0;
@@ -78654,7 +80847,8 @@ START_TEST(s21_is_equal_7863) {
 }
 
 START_TEST(s21_is_equal_7864) {
-  char *example = "( -742.985900576006376 == 1915646067680485775391475658 ) = False";
+  char *example =
+      "( -742.985900576006376 == 1915646067680485775391475658 ) = False";
   s21_decimal value_1 = {{0x74F4E0E8, 0xA4F9DBD, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x6D647CA, 0x6A24DA1D, 0x63095D5, 0x0}};
   int code = 0;
@@ -78764,7 +80958,9 @@ START_TEST(s21_is_equal_7874) {
 }
 
 START_TEST(s21_is_equal_7875) {
-  char *example = "( 1117276827723519609013496617 == -45.110918404370731209027581 ) = False";
+  char *example =
+      "( 1117276827723519609013496617 == -45.110918404370731209027581 ) = "
+      "False";
   s21_decimal value_1 = {{0x84D36B29, 0x31BC2DC9, 0x39C3092, 0x0}};
   s21_decimal value_2 = {{0xD59F6FFD, 0xC96E760E, 0x25509B, 0x80180000}};
   int code = 0;
@@ -78794,7 +80990,8 @@ START_TEST(s21_is_equal_7877) {
 }
 
 START_TEST(s21_is_equal_7878) {
-  char *example = "( 13890848110055760470917542 == 1640150500277622114471629705 ) = False";
+  char *example =
+      "( 13890848110055760470917542 == 1640150500277622114471629705 ) = False";
   s21_decimal value_1 = {{0x2CDAC1A6, 0x628ABC35, 0xB7D80, 0x0}};
   s21_decimal value_2 = {{0x63EFD389, 0xC7BBCAFA, 0x54CB360, 0x0}};
   int code = 0;
@@ -78834,7 +81031,8 @@ START_TEST(s21_is_equal_7881) {
 }
 
 START_TEST(s21_is_equal_7882) {
-  char *example = "( -37.274272543920186 == 1104926061956464453621205939 ) = False";
+  char *example =
+      "( -37.274272543920186 == 1104926061956464453621205939 ) = False";
   s21_decimal value_1 = {{0xDE3DD03A, 0x846CC0, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xD7F54BB3, 0xD727E6AA, 0x391F931, 0x0}};
   int code = 0;
@@ -78874,7 +81072,8 @@ START_TEST(s21_is_equal_7885) {
 }
 
 START_TEST(s21_is_equal_7886) {
-  char *example = "( -67.99979238389083413 == 1709277623179904327155261263 ) = False";
+  char *example =
+      "( -67.99979238389083413 == 1709277623179904327155261263 ) = False";
   s21_decimal value_1 = {{0xE8366D15, 0x5E5E6116, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x56211F4F, 0x9F22DAB2, 0x585E19D, 0x0}};
   int code = 0;
@@ -78924,7 +81123,8 @@ START_TEST(s21_is_equal_7890) {
 }
 
 START_TEST(s21_is_equal_7891) {
-  char *example = "( 1859239222997520 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1859239222997520 == -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xDD707210, 0x69AF7, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -79004,7 +81204,8 @@ START_TEST(s21_is_equal_7898) {
 }
 
 START_TEST(s21_is_equal_7899) {
-  char *example = "( 1845875637109763679289080742 == 17256647991540219604064997 ) = False";
+  char *example =
+      "( 1845875637109763679289080742 == 17256647991540219604064997 ) = False";
   s21_decimal value_1 = {{0xDEF7FBA6, 0xCB6C726C, 0x5F6DF5E, 0x0}};
   s21_decimal value_2 = {{0xE8BF5AE5, 0xC319CA45, 0xE463C, 0x0}};
   int code = 0;
@@ -79054,7 +81255,9 @@ START_TEST(s21_is_equal_7903) {
 }
 
 START_TEST(s21_is_equal_7904) {
-  char *example = "( -7.9066018362718748656518737 == 1143022694846225926235687815 ) = False";
+  char *example =
+      "( -7.9066018362718748656518737 == 1143022694846225926235687815 ) = "
+      "False";
   s21_decimal value_1 = {{0x9053C651, 0x71A585C1, 0x4166E1, 0x80190000}};
   s21_decimal value_2 = {{0xD6D90B87, 0x72979901, 0x3B17C78, 0x0}};
   int code = 0;
@@ -79114,7 +81317,8 @@ START_TEST(s21_is_equal_7909) {
 }
 
 START_TEST(s21_is_equal_7910) {
-  char *example = "( 1836545231294264312656631 == 12784069416201959250471 ) = False";
+  char *example =
+      "( 1836545231294264312656631 == 12784069416201959250471 ) = False";
   s21_decimal value_1 = {{0x6E54F2F7, 0x5104F478, 0x184E7, 0x0}};
   s21_decimal value_2 = {{0xD301A27, 0x69A4922, 0x2B5, 0x0}};
   int code = 0;
@@ -79144,7 +81348,8 @@ START_TEST(s21_is_equal_7912) {
 }
 
 START_TEST(s21_is_equal_7913) {
-  char *example = "( 1060319582315506279318791406 == 13.107284638309028589240407 ) = False";
+  char *example =
+      "( 1060319582315506279318791406 == 13.107284638309028589240407 ) = False";
   s21_decimal value_1 = {{0xB1EBA4EE, 0xBBD85537, 0x36D1367, 0x0}};
   s21_decimal value_2 = {{0xE6CC8057, 0x52F273C0, 0xAD793, 0x180000}};
   int code = 0;
@@ -79184,7 +81389,8 @@ START_TEST(s21_is_equal_7916) {
 }
 
 START_TEST(s21_is_equal_7917) {
-  char *example = "( -7.111356150729033309798109 == 1112125548274674790691534866 ) = False";
+  char *example =
+      "( -7.111356150729033309798109 == 1112125548274674790691534866 ) = False";
   s21_decimal value_1 = {{0x8D34BEDD, 0x63AF8461, 0x5E1E3, 0x80180000}};
   s21_decimal value_2 = {{0xAE1C7812, 0xC69AF1A7, 0x397EDBE, 0x0}};
   int code = 0;
@@ -79194,7 +81400,9 @@ START_TEST(s21_is_equal_7917) {
 }
 
 START_TEST(s21_is_equal_7918) {
-  char *example = "( 1680040517791305151787593573 == 1858351411531925627889163682 ) = False";
+  char *example =
+      "( 1680040517791305151787593573 == 1858351411531925627889163682 ) = "
+      "False";
   s21_decimal value_1 = {{0x37306F65, 0xF6703F04, 0x56DB26A, 0x0}};
   s21_decimal value_2 = {{0xCE2E9DA2, 0xE197B0EE, 0x6013137, 0x0}};
   int code = 0;
@@ -79204,7 +81412,8 @@ START_TEST(s21_is_equal_7918) {
 }
 
 START_TEST(s21_is_equal_7919) {
-  char *example = "( -8.668641429213885 == -4.5825954787910085869818921 ) = False";
+  char *example =
+      "( -8.668641429213885 == -4.5825954787910085869818921 ) = False";
   s21_decimal value_1 = {{0x5D12D2BD, 0x1ECC15, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xF87FD429, 0xFCA319F9, 0x25E805, 0x80190000}};
   int code = 0;
@@ -79214,7 +81423,8 @@ START_TEST(s21_is_equal_7919) {
 }
 
 START_TEST(s21_is_equal_7920) {
-  char *example = "( -51.72878632459 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( -51.72878632459 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x6797E60B, 0x4B4, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -79224,7 +81434,8 @@ START_TEST(s21_is_equal_7920) {
 }
 
 START_TEST(s21_is_equal_7921) {
-  char *example = "( 1675091762883721849668988885 == 10110112490109741872 ) = False";
+  char *example =
+      "( 1675091762883721849668988885 == 10110112490109741872 ) = False";
   s21_decimal value_1 = {{0xDF4D6FD5, 0x6BEB0B39, 0x5699A7A, 0x0}};
   s21_decimal value_2 = {{0x7C3B2B30, 0x8C4E55BE, 0x0, 0x0}};
   int code = 0;
@@ -79234,7 +81445,9 @@ START_TEST(s21_is_equal_7921) {
 }
 
 START_TEST(s21_is_equal_7922) {
-  char *example = "( 1929553609183505593455250327 == 1177595205162455234409755701 ) = False";
+  char *example =
+      "( 1929553609183505593455250327 == 1177595205162455234409755701 ) = "
+      "False";
   s21_decimal value_1 = {{0xB5B68B97, 0xC00D1DBE, 0x63C16DE, 0x0}};
   s21_decimal value_2 = {{0x7CD97435, 0xFCBE8977, 0x3CE157B, 0x0}};
   int code = 0;
@@ -79304,7 +81517,9 @@ START_TEST(s21_is_equal_7928) {
 }
 
 START_TEST(s21_is_equal_7929) {
-  char *example = "( 1011842064772676144070226885 == 1476386271742287124815908945 ) = False";
+  char *example =
+      "( 1011842064772676144070226885 == 1476386271742287124815908945 ) = "
+      "False";
   s21_decimal value_1 = {{0xDBF973C5, 0x3DEFA106, 0x344F9E4, 0x0}};
   s21_decimal value_2 = {{0x301B9051, 0x299C18D1, 0x4C53CF4, 0x0}};
   int code = 0;
@@ -79374,7 +81589,8 @@ START_TEST(s21_is_equal_7935) {
 }
 
 START_TEST(s21_is_equal_7936) {
-  char *example = "( 1533611076175691529212304449 == -931.81861722049602810170 ) = False";
+  char *example =
+      "( 1533611076175691529212304449 == -931.81861722049602810170 ) = False";
   s21_decimal value_1 = {{0xFB4E9C41, 0x6E15618, 0x4F492C7, 0x0}};
   s21_decimal value_2 = {{0x118D71B9, 0x23CF79C1, 0x1F9, 0x80130000}};
   int code = 0;
@@ -79404,7 +81620,9 @@ START_TEST(s21_is_equal_7938) {
 }
 
 START_TEST(s21_is_equal_7939) {
-  char *example = "( 1604296468396417330036044582 == -2.5877312228178212541208425 ) = False";
+  char *example =
+      "( 1604296468396417330036044582 == -2.5877312228178212541208425 ) = "
+      "False";
   s21_decimal value_1 = {{0x4B6B7326, 0xD13B4992, 0x52F0AFD, 0x0}};
   s21_decimal value_2 = {{0x7D009769, 0xE823A3E4, 0x1567BB, 0x80190000}};
   int code = 0;
@@ -79434,7 +81652,8 @@ START_TEST(s21_is_equal_7941) {
 }
 
 START_TEST(s21_is_equal_7942) {
-  char *example = "( -80.072245499797621 == 1162028489006923823135123061 ) = False";
+  char *example =
+      "( -80.072245499797621 == 1162028489006923823135123061 ) = False";
   s21_decimal value_1 = {{0x75622075, 0x11C7948, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x13F8E675, 0x9D12C69A, 0x3C1351A, 0x0}};
   int code = 0;
@@ -79444,7 +81663,9 @@ START_TEST(s21_is_equal_7942) {
 }
 
 START_TEST(s21_is_equal_7943) {
-  char *example = "( -8.0757432588632562162134520 == 1838231531615191626762421968 ) = False";
+  char *example =
+      "( -8.0757432588632562162134520 == 1838231531615191626762421968 ) = "
+      "False";
   s21_decimal value_1 = {{0xA44717CC, 0xEB563E92, 0x6AE1A, 0x80180000}};
   s21_decimal value_2 = {{0x72C406D0, 0x163AFD0, 0x5F08CAB, 0x0}};
   int code = 0;
@@ -79474,7 +81695,8 @@ START_TEST(s21_is_equal_7945) {
 }
 
 START_TEST(s21_is_equal_7946) {
-  char *example = "( 1406456272153846100155075 == -7189.8087018776221870388983 ) = False";
+  char *example =
+      "( 1406456272153846100155075 == -7189.8087018776221870388983 ) = False";
   s21_decimal value_1 = {{0x5EE5AC3, 0x25B4B73A, 0x129D4, 0x0}};
   s21_decimal value_2 = {{0x4A0AF6F7, 0x1B6F31EC, 0x3B7903, 0x80160000}};
   int code = 0;
@@ -79544,7 +81766,8 @@ START_TEST(s21_is_equal_7952) {
 }
 
 START_TEST(s21_is_equal_7953) {
-  char *example = "( 1706226977267266 == 1864350496969205448880183203 ) = False";
+  char *example =
+      "( 1706226977267266 == 1864350496969205448880183203 ) = False";
   s21_decimal value_1 = {{0xECE2DE42, 0x60FCD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x776057A3, 0xF455020F, 0x6062792, 0x0}};
   int code = 0;
@@ -79644,7 +81867,9 @@ START_TEST(s21_is_equal_7962) {
 }
 
 START_TEST(s21_is_equal_7963) {
-  char *example = "( -502581081812.18751283177356 == 1401381197078576948033982816 ) = False";
+  char *example =
+      "( -502581081812.18751283177356 == 1401381197078576948033982816 ) = "
+      "False";
   s21_decimal value_1 = {{0xEE4FA78C, 0x80F60D1C, 0x299291, 0x800E0000}};
   s21_decimal value_2 = {{0xA02D9160, 0xEAEAE183, 0x4873202, 0x0}};
   int code = 0;
@@ -79774,7 +81999,8 @@ START_TEST(s21_is_equal_7975) {
 }
 
 START_TEST(s21_is_equal_7976) {
-  char *example = "( -758961.16383463504006780227 == 1370362925114430 ) = False";
+  char *example =
+      "( -758961.16383463504006780227 == 1370362925114430 ) = False";
   s21_decimal value_1 = {{0xA8F69543, 0xB69B5D97, 0x3EC7A0, 0x80140000}};
   s21_decimal value_2 = {{0x7B5D643E, 0x4DE56, 0x0, 0x0}};
   int code = 0;
@@ -79824,7 +82050,8 @@ START_TEST(s21_is_equal_7980) {
 }
 
 START_TEST(s21_is_equal_7981) {
-  char *example = "( 128173880580450130 == 1661894502124622158351578362 ) = False";
+  char *example =
+      "( 128173880580450130 == 1661894502124622158351578362 ) = False";
   s21_decimal value_1 = {{0x1D7B2752, 0x1C75D77, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA58834FA, 0x7B757E48, 0x55EAFD9, 0x0}};
   int code = 0;
@@ -79914,7 +82141,8 @@ START_TEST(s21_is_equal_7989) {
 }
 
 START_TEST(s21_is_equal_7990) {
-  char *example = "( 1137210427484788702673949098 == 1245686250690186673 ) = False";
+  char *example =
+      "( 1137210427484788702673949098 == 1245686250690186673 ) = False";
   s21_decimal value_1 = {{0x920CD1AA, 0xCD77C622, 0x3ACADAC, 0x0}};
   s21_decimal value_2 = {{0x89FA0DB1, 0x1149910B, 0x0, 0x0}};
   int code = 0;
@@ -79984,7 +82212,8 @@ START_TEST(s21_is_equal_7996) {
 }
 
 START_TEST(s21_is_equal_7997) {
-  char *example = "( 1392117834510157808707478535 == 14817480150319853399 ) = False";
+  char *example =
+      "( 1392117834510157808707478535 == 14817480150319853399 ) = False";
   s21_decimal value_1 = {{0x7A4EA407, 0x6CE5EA4, 0x47F886B, 0x0}};
   s21_decimal value_2 = {{0xBA376F57, 0xCDA243B0, 0x0, 0x0}};
   int code = 0;
@@ -79994,7 +82223,8 @@ START_TEST(s21_is_equal_7997) {
 }
 
 START_TEST(s21_is_equal_7998) {
-  char *example = "( 1456965663445342731215805470 == 1304644101204593544 ) = False";
+  char *example =
+      "( 1456965663445342731215805470 == 1304644101204593544 ) = False";
   s21_decimal value_1 = {{0x26879C1E, 0xE090EA85, 0x4B52C7A, 0x0}};
   s21_decimal value_2 = {{0xD29BCB88, 0x121B06E5, 0x0, 0x0}};
   int code = 0;
@@ -80064,7 +82294,8 @@ START_TEST(s21_is_equal_8004) {
 }
 
 START_TEST(s21_is_equal_8005) {
-  char *example = "( 1729478518941181206112576678 == 18506276862627044333213 ) = False";
+  char *example =
+      "( 1729478518941181206112576678 == 18506276862627044333213 ) = False";
   s21_decimal value_1 = {{0xC7B524A6, 0x6009F738, 0x5969752, 0x0}};
   s21_decimal value_2 = {{0x2B77169D, 0x3A2EF41A, 0x3EB, 0x0}};
   int code = 0;
@@ -80114,7 +82345,8 @@ START_TEST(s21_is_equal_8009) {
 }
 
 START_TEST(s21_is_equal_8010) {
-  char *example = "( 1522030576641968739960614 == 1491794256171290830485053411 ) = False";
+  char *example =
+      "( 1522030576641968739960614 == 1491794256171290830485053411 ) = False";
   s21_decimal value_1 = {{0xEE4BC726, 0x71613043, 0x1424D, 0x0}};
   s21_decimal value_2 = {{0xE397DFE3, 0xAC0FC376, 0x4D1FBB8, 0x0}};
   int code = 0;
@@ -80134,7 +82366,8 @@ START_TEST(s21_is_equal_8011) {
 }
 
 START_TEST(s21_is_equal_8012) {
-  char *example = "( -3969970904.2649121244520215 == -7989.6987646776 ) = False";
+  char *example =
+      "( -3969970904.2649121244520215 == -7989.6987646776 ) = False";
   s21_decimal value_1 = {{0x57971F17, 0x8A20382F, 0x20D6BD, 0x80100000}};
   s21_decimal value_2 = {{0x77913B38, 0x48AA, 0x0, 0x800A0000}};
   int code = 0;
@@ -80214,7 +82447,8 @@ START_TEST(s21_is_equal_8019) {
 }
 
 START_TEST(s21_is_equal_8020) {
-  char *example = "( -5765.0115944575703014440625 == 1215090557731929364786 ) = False";
+  char *example =
+      "( -5765.0115944575703014440625 == 1215090557731929364786 ) = False";
   s21_decimal value_1 = {{0x36CFFEB1, 0xC2CBA9D, 0x2FAFE3, 0x80160000}};
   s21_decimal value_2 = {{0x76EC9932, 0xDEC4D86E, 0x41, 0x0}};
   int code = 0;
@@ -80344,7 +82578,8 @@ START_TEST(s21_is_equal_8032) {
 }
 
 START_TEST(s21_is_equal_8033) {
-  char *example = "( -5492250190.30913505 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -5492250190.30913505 == -79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xB11841E1, 0x79F3D3E, 0x0, 0x80080000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -80364,7 +82599,8 @@ START_TEST(s21_is_equal_8034) {
 }
 
 START_TEST(s21_is_equal_8035) {
-  char *example = "( -2.0715160528741094321358 == 1106685290598021067 ) = False";
+  char *example =
+      "( -2.0715160528741094321358 == 1106685290598021067 ) = False";
   s21_decimal value_1 = {{0x5F6ECCE, 0xF89A2B44, 0x462, 0x80160000}};
   s21_decimal value_2 = {{0x883EB7CB, 0xF5BBC68, 0x0, 0x0}};
   int code = 0;
@@ -80404,7 +82640,8 @@ START_TEST(s21_is_equal_8038) {
 }
 
 START_TEST(s21_is_equal_8039) {
-  char *example = "( -306666.21654831502 == 1569037460838216269926558808 ) = False";
+  char *example =
+      "( -306666.21654831502 == 1569037460838216269926558808 ) = False";
   s21_decimal value_1 = {{0x4232918E, 0x6CF321, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x5BBCEC58, 0x30065613, 0x511E09B, 0x0}};
   int code = 0;
@@ -80544,7 +82781,9 @@ START_TEST(s21_is_equal_8052) {
 }
 
 START_TEST(s21_is_equal_8053) {
-  char *example = "( 1457324455117608749679281151 == 1965619910782309145727250093 ) = False";
+  char *example =
+      "( 1457324455117608749679281151 == 1965619910782309145727250093 ) = "
+      "False";
   s21_decimal value_1 = {{0x795883FF, 0x342D0B6, 0x4B57875, 0x0}};
   s21_decimal value_2 = {{0xEF4AEAD, 0xE0A6EE11, 0x659EC34, 0x0}};
   int code = 0;
@@ -80574,7 +82813,8 @@ START_TEST(s21_is_equal_8055) {
 }
 
 START_TEST(s21_is_equal_8056) {
-  char *example = "( 12249892880177129546513 == 1981152426586574721873285073 ) = False";
+  char *example =
+      "( 12249892880177129546513 == 1981152426586574721873285073 ) = False";
   s21_decimal value_1 = {{0x988F6311, 0x1169FFCE, 0x298, 0x0}};
   s21_decimal value_2 = {{0xA3E30FD1, 0x3F1AEDE1, 0x666C558, 0x0}};
   int code = 0;
@@ -80594,7 +82834,9 @@ START_TEST(s21_is_equal_8057) {
 }
 
 START_TEST(s21_is_equal_8058) {
-  char *example = "( 1283707575976079390306348728 == -2.0560915857337477597938497 ) = False";
+  char *example =
+      "( 1283707575976079390306348728 == -2.0560915857337477597938497 ) = "
+      "False";
   s21_decimal value_1 = {{0x64462EB8, 0x22AE0CF1, 0x425DBA7, 0x0}};
   s21_decimal value_2 = {{0x9946C341, 0x7B67076B, 0x1101F1, 0x80190000}};
   int code = 0;
@@ -80614,7 +82856,8 @@ START_TEST(s21_is_equal_8059) {
 }
 
 START_TEST(s21_is_equal_8060) {
-  char *example = "( 9.0063127714355491E-10 == 1083061130890771557187324127 ) = False";
+  char *example =
+      "( 9.0063127714355491E-10 == 1083061130890771557187324127 ) = False";
   s21_decimal value_1 = {{0xFEC65923, 0x13FF7EF, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x2A1408DF, 0x8D64C8AC, 0x37FE31D, 0x0}};
   int code = 0;
@@ -80654,7 +82897,8 @@ START_TEST(s21_is_equal_8063) {
 }
 
 START_TEST(s21_is_equal_8064) {
-  char *example = "( 16985049154631145834 == -12.147832934197477299172073 ) = False";
+  char *example =
+      "( 16985049154631145834 == -12.147832934197477299172073 ) = False";
   s21_decimal value_1 = {{0x2A56996A, 0xEBB70437, 0x0, 0x0}};
   s21_decimal value_2 = {{0x575BB2E9, 0x57C91B4A, 0xA0C67, 0x80180000}};
   int code = 0;
@@ -80674,7 +82918,8 @@ START_TEST(s21_is_equal_8065) {
 }
 
 START_TEST(s21_is_equal_8066) {
-  char *example = "( 128256046659909380639 == 14217137199504305735166030 ) = False";
+  char *example =
+      "( 128256046659909380639 == 14217137199504305735166030 ) = False";
   s21_decimal value_1 = {{0x53D2EA1F, 0xF3E902E8, 0x6, 0x0}};
   s21_decimal value_2 = {{0x2A5684E, 0x8D4A0FF9, 0xBC298, 0x0}};
   int code = 0;
@@ -80704,7 +82949,9 @@ START_TEST(s21_is_equal_8068) {
 }
 
 START_TEST(s21_is_equal_8069) {
-  char *example = "( 1701859963894445876823626964 == 1280824894605986134904808078 ) = False";
+  char *example =
+      "( 1701859963894445876823626964 == 1280824894605986134904808078 ) = "
+      "False";
   s21_decimal value_1 = {{0xABEE94D4, 0x818AB978, 0x57FBEDD, 0x0}};
   s21_decimal value_2 = {{0xF808228E, 0xAA4EE599, 0x4237938, 0x0}};
   int code = 0;
@@ -80834,7 +83081,8 @@ START_TEST(s21_is_equal_8081) {
 }
 
 START_TEST(s21_is_equal_8082) {
-  char *example = "( -926.296599777993198 == 1701381235063689358312468570 ) = False";
+  char *example =
+      "( -926.296599777993198 == 1701381235063689358312468570 ) = False";
   s21_decimal value_1 = {{0x8A6B61EE, 0xCDADDD9, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xC1BF05A, 0x90694278, 0x57F597D, 0x0}};
   int code = 0;
@@ -80944,7 +83192,8 @@ START_TEST(s21_is_equal_8092) {
 }
 
 START_TEST(s21_is_equal_8093) {
-  char *example = "( 1210779401114920519572773782 == 2.1982266523559088E-10 ) = False";
+  char *example =
+      "( 1210779401114920519572773782 == 2.1982266523559088E-10 ) = False";
   s21_decimal value_1 = {{0x290DDB96, 0xDABEDB4B, 0x3E98882, 0x0}};
   s21_decimal value_2 = {{0x437EA4B0, 0x4E18C1, 0x0, 0x1A0000}};
   int code = 0;
@@ -80954,7 +83203,9 @@ START_TEST(s21_is_equal_8093) {
 }
 
 START_TEST(s21_is_equal_8094) {
-  char *example = "( 1683487327607462807248226816 == 1652103047520111546962683350 ) = False";
+  char *example =
+      "( 1683487327607462807248226816 == 1652103047520111546962683350 ) = "
+      "False";
   s21_decimal value_1 = {{0x2E66CA00, 0xE5AE5553, 0x5708C4E, 0x0}};
   s21_decimal value_2 = {{0x820625D6, 0xAA20B1BD, 0x556966D, 0x0}};
   int code = 0;
@@ -80974,7 +83225,8 @@ START_TEST(s21_is_equal_8095) {
 }
 
 START_TEST(s21_is_equal_8096) {
-  char *example = "( -58.845373550668653676904134 == 158963722090563296848 ) = False";
+  char *example =
+      "( -58.845373550668653676904134 == 158963722090563296848 ) = False";
   s21_decimal value_1 = {{0x482EBEC6, 0x179B95F2, 0x30ACFE, 0x80180000}};
   s21_decimal value_2 = {{0xF5F0DE50, 0x9E109703, 0x8, 0x0}};
   int code = 0;
@@ -80994,7 +83246,8 @@ START_TEST(s21_is_equal_8097) {
 }
 
 START_TEST(s21_is_equal_8098) {
-  char *example = "( 1398440989906395857 == 1357056126944644900300358290 ) = False";
+  char *example =
+      "( 1398440989906395857 == 1357056126944644900300358290 ) = False";
   s21_decimal value_1 = {{0xCAB762D1, 0x136842AB, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAC818292, 0xD0844DB, 0x46287D0, 0x0}};
   int code = 0;
@@ -81004,7 +83257,8 @@ START_TEST(s21_is_equal_8098) {
 }
 
 START_TEST(s21_is_equal_8099) {
-  char *example = "( -7.6036652936912318183882456 == 0.470272254586042263847814 ) = False";
+  char *example =
+      "( -7.6036652936912318183882456 == 0.470272254586042263847814 ) = False";
   s21_decimal value_1 = {{0x8439BED8, 0x37132CB7, 0x3EE563, 0x80190000}};
   s21_decimal value_2 = {{0xA9E8C386, 0x828FA0D0, 0x6395, 0x180000}};
   int code = 0;
@@ -81054,7 +83308,9 @@ START_TEST(s21_is_equal_8103) {
 }
 
 START_TEST(s21_is_equal_8104) {
-  char *example = "( -8.7686052067598526786529974 == 1933615219943108356927764916 ) = False";
+  char *example =
+      "( -8.7686052067598526786529974 == 1933615219943108356927764916 ) = "
+      "False";
   s21_decimal value_1 = {{0xC8836AB6, 0x684C91FA, 0x48883E, 0x80190000}};
   s21_decimal value_2 = {{0x794DB9B4, 0x1C54B860, 0x63F72F3, 0x0}};
   int code = 0;
@@ -81064,7 +83320,9 @@ START_TEST(s21_is_equal_8104) {
 }
 
 START_TEST(s21_is_equal_8105) {
-  char *example = "( 1080764699058374822339242201 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1080764699058374822339242201 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x20E768D9, 0xBBB56525, 0x37DFCD3, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -81164,7 +83422,9 @@ START_TEST(s21_is_equal_8114) {
 }
 
 START_TEST(s21_is_equal_8115) {
-  char *example = "( 1703105903704435873474530484 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( 1703105903704435873474530484 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x9DD9CCB4, 0x9D8A357, 0x580C6B4, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -81284,7 +83544,9 @@ START_TEST(s21_is_equal_8126) {
 }
 
 START_TEST(s21_is_equal_8127) {
-  char *example = "( 0.11428098756478523322925884 == 1235127199618897460803654785 ) = False";
+  char *example =
+      "( 0.11428098756478523322925884 == 1235127199618897460803654785 ) = "
+      "False";
   s21_decimal value_1 = {{0xB1A8033C, 0x7996D301, 0x973FE, 0x1A0000}};
   s21_decimal value_2 = {{0x6AB3D481, 0xA7F89D26, 0x3FDAC5B, 0x0}};
   int code = 0;
@@ -81324,7 +83586,9 @@ START_TEST(s21_is_equal_8130) {
 }
 
 START_TEST(s21_is_equal_8131) {
-  char *example = "( 1891026916800070672196335340 == 1992248967696719633157946148 ) = False";
+  char *example =
+      "( 1891026916800070672196335340 == 1992248967696719633157946148 ) = "
+      "False";
   s21_decimal value_1 = {{0x648876EC, 0x92378C41, 0x61C3886, 0x0}};
   s21_decimal value_2 = {{0x60277B24, 0xF208502A, 0x66FF320, 0x0}};
   int code = 0;
@@ -81354,7 +83618,9 @@ START_TEST(s21_is_equal_8133) {
 }
 
 START_TEST(s21_is_equal_8134) {
-  char *example = "( 1598456536420494293734600845 == 1338292453530231250952938812 ) = False";
+  char *example =
+      "( 1598456536420494293734600845 == 1338292453530231250952938812 ) = "
+      "False";
   s21_decimal value_1 = {{0x1481308D, 0x78752943, 0x52A3656, 0x0}};
   s21_decimal value_2 = {{0xE50653C, 0x46E45618, 0x4530273, 0x0}};
   int code = 0;
@@ -81454,7 +83720,8 @@ START_TEST(s21_is_equal_8143) {
 }
 
 START_TEST(s21_is_equal_8144) {
-  char *example = "( -740445.02651087856372760301 == 11589988502097058 ) = False";
+  char *example =
+      "( -740445.02651087856372760301 == 11589988502097058 ) = False";
   s21_decimal value_1 = {{0xB8433EED, 0x88207FF1, 0x3D3F88, 0x80140000}};
   s21_decimal value_2 = {{0x7B9E4CA2, 0x292D08, 0x0, 0x0}};
   int code = 0;
@@ -81524,7 +83791,8 @@ START_TEST(s21_is_equal_8150) {
 }
 
 START_TEST(s21_is_equal_8151) {
-  char *example = "( 0.83464005177227587251 == 0.09385600688140743661303531 ) = False";
+  char *example =
+      "( 0.83464005177227587251 == 0.09385600688140743661303531 ) = False";
   s21_decimal value_1 = {{0x5803AEB3, 0x864BB67F, 0x4, 0x140000}};
   s21_decimal value_2 = {{0xF67B6EB, 0x6ECC845B, 0x7C37A, 0x1A0000}};
   int code = 0;
@@ -81584,7 +83852,8 @@ START_TEST(s21_is_equal_8156) {
 }
 
 START_TEST(s21_is_equal_8157) {
-  char *example = "( -5353.6036089658032 == 0.64823337466640061930706584 ) = False";
+  char *example =
+      "( -5353.6036089658032 == 0.64823337466640061930706584 ) = False";
   s21_decimal value_1 = {{0xBDCE7AB0, 0xBE32BD, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x485C9698, 0x2A5B3BB0, 0x359EE0, 0x1A0000}};
   int code = 0;
@@ -81594,7 +83863,8 @@ START_TEST(s21_is_equal_8157) {
 }
 
 START_TEST(s21_is_equal_8158) {
-  char *example = "( 1640409895572454601309211212 == 0.853310391830703142260 ) = False";
+  char *example =
+      "( 1640409895572454601309211212 == 0.853310391830703142260 ) = False";
   s21_decimal value_1 = {{0x954ECA4C, 0xA097F5F3, 0x54CEA4E, 0x0}};
   s21_decimal value_2 = {{0xA5D83EF2, 0xA034C008, 0x4, 0x140000}};
   int code = 0;
@@ -81614,7 +83884,8 @@ START_TEST(s21_is_equal_8159) {
 }
 
 START_TEST(s21_is_equal_8160) {
-  char *example = "( -53.3616546761011008340 == -673.8159577493596887 ) = False";
+  char *example =
+      "( -53.3616546761011008340 == -673.8159577493596887 ) = False";
   s21_decimal value_1 = {{0xAC117522, 0xE48AAE34, 0x2, 0x80120000}};
   s21_decimal value_2 = {{0x7866EAD7, 0x5D82C06F, 0x0, 0x80100000}};
   int code = 0;
@@ -81674,7 +83945,9 @@ START_TEST(s21_is_equal_8165) {
 }
 
 START_TEST(s21_is_equal_8166) {
-  char *example = "( 0.16840591238899349814752163 == 1414610117688207404190795962 ) = False";
+  char *example =
+      "( 0.16840591238899349814752163 == 1414610117688207404190795962 ) = "
+      "False";
   s21_decimal value_1 = {{0x5FA3B3A3, 0x47C5868D, 0xDEE22, 0x1A0000}};
   s21_decimal value_2 = {{0x228A08BA, 0x24107B1C, 0x4922358, 0x0}};
   int code = 0;
@@ -81694,7 +83967,8 @@ START_TEST(s21_is_equal_8167) {
 }
 
 START_TEST(s21_is_equal_8168) {
-  char *example = "( 1421481129296034546254224444 == 8.51989334253E-10 ) = False";
+  char *example =
+      "( 1421481129296034546254224444 == 8.51989334253E-10 ) = False";
   s21_decimal value_1 = {{0x43BE1C3C, 0x6D2ECE2F, 0x497D256, 0x0}};
   s21_decimal value_2 = {{0x5E8588ED, 0xC6, 0x0, 0x150000}};
   int code = 0;
@@ -81754,7 +84028,9 @@ START_TEST(s21_is_equal_8173) {
 }
 
 START_TEST(s21_is_equal_8174) {
-  char *example = "( -6157.5518714148982319151898 == 1486518426049493278142644624 ) = False";
+  char *example =
+      "( -6157.5518714148982319151898 == 1486518426049493278142644624 ) = "
+      "False";
   s21_decimal value_1 = {{0x528EFB1A, 0x8EDEFE4A, 0x32EF1F, 0x80160000}};
   s21_decimal value_2 = {{0x609E4190, 0x591F0691, 0x4CD9E85, 0x0}};
   int code = 0;
@@ -81784,7 +84060,9 @@ START_TEST(s21_is_equal_8176) {
 }
 
 START_TEST(s21_is_equal_8177) {
-  char *example = "( 1993038843504980739776489608 == 1689694080763076410409491590 ) = False";
+  char *example =
+      "( 1993038843504980739776489608 == 1689694080763076410409491590 ) = "
+      "False";
   s21_decimal value_1 = {{0x57D6A888, 0x32E4E040, 0x6709A64, 0x0}};
   s21_decimal value_2 = {{0xD8F01C86, 0xA8F3384C, 0x575AEA3, 0x0}};
   int code = 0;
@@ -81844,7 +84122,9 @@ START_TEST(s21_is_equal_8182) {
 }
 
 START_TEST(s21_is_equal_8183) {
-  char *example = "( -89.996272170391592976292022 == 1025592034168000354335834521 ) = False";
+  char *example =
+      "( -89.996272170391592976292022 == 1025592034168000354335834521 ) = "
+      "False";
   s21_decimal value_1 = {{0x3DD098B6, 0xB0ACCD95, 0x4A7173, 0x80180000}};
   s21_decimal value_2 = {{0x509BC199, 0x93917C4F, 0x350598F, 0x0}};
   int code = 0;
@@ -81884,7 +84164,8 @@ START_TEST(s21_is_equal_8186) {
 }
 
 START_TEST(s21_is_equal_8187) {
-  char *example = "( 1333467434776098262478248595 == 1279366184124916406678 ) = False";
+  char *example =
+      "( 1333467434776098262478248595 == 1279366184124916406678 ) = False";
   s21_decimal value_1 = {{0x38385A93, 0x7C740F20, 0x44F04B6, 0x0}};
   s21_decimal value_2 = {{0xCCA39996, 0x5AC5BE16, 0x45, 0x0}};
   int code = 0;
@@ -81914,7 +84195,9 @@ START_TEST(s21_is_equal_8189) {
 }
 
 START_TEST(s21_is_equal_8190) {
-  char *example = "( 79228162514264337593543950335 == -923.45366231560980793907030 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -923.45366231560980793907030 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xA43FBEF, 0x3BC2788A, 0x7A37D, 0x80160000}};
   int code = 0;
@@ -81954,7 +84237,9 @@ START_TEST(s21_is_equal_8193) {
 }
 
 START_TEST(s21_is_equal_8194) {
-  char *example = "( 1481084566690799355237202937 == 1817869807095428591630432122 ) = False";
+  char *example =
+      "( 1481084566690799355237202937 == 1817869807095428591630432122 ) = "
+      "False";
   s21_decimal value_1 = {{0x10937BF9, 0x3DF6B734, 0x4C91FDB, 0x0}};
   s21_decimal value_2 = {{0x83E8377A, 0xB51A5B69, 0x5DFB4E7, 0x0}};
   int code = 0;
@@ -81964,7 +84249,9 @@ START_TEST(s21_is_equal_8194) {
 }
 
 START_TEST(s21_is_equal_8195) {
-  char *example = "( -6860.0875661815698703803869 == 1929750993353251596014060128 ) = False";
+  char *example =
+      "( -6860.0875661815698703803869 == 1929750993353251596014060128 ) = "
+      "False";
   s21_decimal value_1 = {{0xC9D065DD, 0xEBDD6CCC, 0x38BECC, 0x80160000}};
   s21_decimal value_2 = {{0x25660260, 0xF7ACF395, 0x63C40AA, 0x0}};
   int code = 0;
@@ -81974,7 +84261,8 @@ START_TEST(s21_is_equal_8195) {
 }
 
 START_TEST(s21_is_equal_8196) {
-  char *example = "( 0.94272417952348400576695042 == 1543443607541897802344 ) = False";
+  char *example =
+      "( 0.94272417952348400576695042 == 1543443607541897802344 ) = False";
   s21_decimal value_1 = {{0x68AD0B02, 0x478E7F4, 0x4DFAF6, 0x1A0000}};
   s21_decimal value_2 = {{0x6E3CB268, 0xAB95378B, 0x53, 0x0}};
   int code = 0;
@@ -81984,7 +84272,8 @@ START_TEST(s21_is_equal_8196) {
 }
 
 START_TEST(s21_is_equal_8197) {
-  char *example = "( 117388324237848056179531791 == -94.4692488804868985098 ) = False";
+  char *example =
+      "( 117388324237848056179531791 == -94.4692488804868985098 ) = False";
   s21_decimal value_1 = {{0xDD29200F, 0xCEE3456B, 0x6119F1, 0x0}};
   s21_decimal value_2 = {{0x69E6910A, 0x363DED5F, 0x33, 0x80130000}};
   int code = 0;
@@ -82014,7 +84303,9 @@ START_TEST(s21_is_equal_8199) {
 }
 
 START_TEST(s21_is_equal_8200) {
-  char *example = "( -9.1904955664664454128511881 == -16.384941084407109931451572 ) = False";
+  char *example =
+      "( -9.1904955664664454128511881 == -16.384941084407109931451572 ) = "
+      "False";
   s21_decimal value_1 = {{0x7D34AB89, 0xA1336830, 0x4C05A1, 0x80190000}};
   s21_decimal value_2 = {{0x68F44B4, 0x6F9CE9D8, 0xD8DA5, 0x80180000}};
   int code = 0;
@@ -82054,7 +84345,9 @@ START_TEST(s21_is_equal_8203) {
 }
 
 START_TEST(s21_is_equal_8204) {
-  char *example = "( 1144257257483182861352702953 == 0.77768554189484507049662811 ) = False";
+  char *example =
+      "( 1144257257483182861352702953 == 0.77768554189484507049662811 ) = "
+      "False";
   s21_decimal value_1 = {{0x9E8013E9, 0x38E74027, 0x3B281E6, 0x0}};
   s21_decimal value_2 = {{0x488A995B, 0xC5298505, 0x405421, 0x1A0000}};
   int code = 0;
@@ -82064,7 +84357,8 @@ START_TEST(s21_is_equal_8204) {
 }
 
 START_TEST(s21_is_equal_8205) {
-  char *example = "( -7913.11517739294 == 1967232417074280688707268726 ) = False";
+  char *example =
+      "( -7913.11517739294 == 1967232417074280688707268726 ) = False";
   s21_decimal value_1 = {{0x91EBE91E, 0x2CFB1, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x9F57076, 0x4CF91B2, 0x65B41AB, 0x0}};
   int code = 0;
@@ -82084,7 +84378,8 @@ START_TEST(s21_is_equal_8206) {
 }
 
 START_TEST(s21_is_equal_8207) {
-  char *example = "( -518.19363819267239520110467 == 1500420700605805 ) = False";
+  char *example =
+      "( -518.19363819267239520110467 == 1500420700605805 ) = False";
   s21_decimal value_1 = {{0x5B620783, 0x576B7353, 0x2ADD2D, 0x80170000}};
   s21_decimal value_2 = {{0xEADF8D6D, 0x5549F, 0x0, 0x0}};
   int code = 0;
@@ -82184,7 +84479,8 @@ START_TEST(s21_is_equal_8216) {
 }
 
 START_TEST(s21_is_equal_8217) {
-  char *example = "( 1450301221737758285375617515 == 156298160359987357197860393 ) = False";
+  char *example =
+      "( 1450301221737758285375617515 == 156298160359987357197860393 ) = False";
   s21_decimal value_1 = {{0x9F5E39EB, 0xC4B0CFF0, 0x4AFA93A, 0x0}};
   s21_decimal value_2 = {{0xF628FE29, 0x403A4803, 0x81496C, 0x0}};
   int code = 0;
@@ -82364,7 +84660,8 @@ START_TEST(s21_is_equal_8234) {
 }
 
 START_TEST(s21_is_equal_8235) {
-  char *example = "( -8.9924996346074201623 == 13833739392362440840034251 ) = False";
+  char *example =
+      "( -8.9924996346074201623 == 13833739392362440840034251 ) = False";
   s21_decimal value_1 = {{0xD40D7E17, 0xDFF5C3BB, 0x4, 0x80130000}};
   s21_decimal value_2 = {{0x6EC5B7CB, 0x83E03516, 0xB7168, 0x0}};
   int code = 0;
@@ -82384,7 +84681,9 @@ START_TEST(s21_is_equal_8236) {
 }
 
 START_TEST(s21_is_equal_8237) {
-  char *example = "( 1792300471740504712881238628 == 1144302448689416405838792418 ) = False";
+  char *example =
+      "( 1792300471740504712881238628 == 1144302448689416405838792418 ) = "
+      "False";
   s21_decimal value_1 = {{0xCA45F264, 0x42A914ED, 0x5CA8E63, 0x0}};
   s21_decimal value_2 = {{0x8C1906E2, 0xADFCC4A, 0x3B28B78, 0x0}};
   int code = 0;
@@ -82584,7 +84883,9 @@ START_TEST(s21_is_equal_8256) {
 }
 
 START_TEST(s21_is_equal_8257) {
-  char *example = "( 1221384854152250117468391898 == -118.77618807632793953344522 ) = False";
+  char *example =
+      "( 1221384854152250117468391898 == -118.77618807632793953344522 ) = "
+      "False";
   s21_decimal value_1 = {{0x154F09DA, 0x9D9A742C, 0x3F24E4D, 0x0}};
   s21_decimal value_2 = {{0xED139C0A, 0x1797482, 0x9D32F, 0x80170000}};
   int code = 0;
@@ -82674,7 +84975,9 @@ START_TEST(s21_is_equal_8265) {
 }
 
 START_TEST(s21_is_equal_8266) {
-  char *example = "( 1831010095533187886646453033 == 1113286034468514549574368234 ) = False";
+  char *example =
+      "( 1831010095533187886646453033 == 1113286034468514549574368234 ) = "
+      "False";
   s21_decimal value_1 = {{0x2D766329, 0x2BC6918F, 0x5EA9378, 0x0}};
   s21_decimal value_2 = {{0xE837BEA, 0xDBC1DB8C, 0x398E37C, 0x0}};
   int code = 0;
@@ -82734,7 +85037,8 @@ START_TEST(s21_is_equal_8271) {
 }
 
 START_TEST(s21_is_equal_8272) {
-  char *example = "( -9460.8918514581136 == 1069412276574614802567216834 ) = False";
+  char *example =
+      "( -9460.8918514581136 == 1069412276574614802567216834 ) = False";
   s21_decimal value_1 = {{0x64A53E90, 0x1501E4F, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x64033EC2, 0xAD5FD18A, 0x37498DB, 0x0}};
   int code = 0;
@@ -82864,7 +85168,8 @@ START_TEST(s21_is_equal_8284) {
 }
 
 START_TEST(s21_is_equal_8285) {
-  char *example = "( 1222304478827308949002839523 == 164854462995137950301 ) = False";
+  char *example =
+      "( 1222304478827308949002839523 == 164854462995137950301 ) = False";
   s21_decimal value_1 = {{0x8988E5E3, 0x91B4E5D4, 0x3F3110A, 0x0}};
   s21_decimal value_2 = {{0x5EF9F25D, 0xEFD0B4A8, 0x8, 0x0}};
   int code = 0;
@@ -82884,7 +85189,8 @@ START_TEST(s21_is_equal_8286) {
 }
 
 START_TEST(s21_is_equal_8287) {
-  char *example = "( 103105785303681665227491057 == 1936590813245003307101267057 ) = False";
+  char *example =
+      "( 103105785303681665227491057 == 1936590813245003307101267057 ) = False";
   s21_decimal value_1 = {{0xF4F306F1, 0xD233DB85, 0x55497F, 0x0}};
   s21_decimal value_2 = {{0xEDE52471, 0x58C6E8D8, 0x641E90E, 0x0}};
   int code = 0;
@@ -82894,7 +85200,9 @@ START_TEST(s21_is_equal_8287) {
 }
 
 START_TEST(s21_is_equal_8288) {
-  char *example = "( 1408579647540042880953385759 == 1526812490769789331722389178 ) = False";
+  char *example =
+      "( 1408579647540042880953385759 == 1526812490769789331722389178 ) = "
+      "False";
   s21_decimal value_1 = {{0xA450831F, 0xB2F77FAB, 0x48D2657, 0x0}};
   s21_decimal value_2 = {{0xD41AC6BA, 0xF9394B4B, 0x4EEF31E, 0x0}};
   int code = 0;
@@ -82974,7 +85282,8 @@ START_TEST(s21_is_equal_8295) {
 }
 
 START_TEST(s21_is_equal_8296) {
-  char *example = "( 1017516549506118848443993576 == -2374.035626245058 ) = False";
+  char *example =
+      "( 1017516549506118848443993576 == -2374.035626245058 ) = False";
   s21_decimal value_1 = {{0x8C964DE8, 0xACFC4688, 0x349AB82, 0x0}};
   s21_decimal value_2 = {{0x3E2FBBC2, 0x86F2C, 0x0, 0x800C0000}};
   int code = 0;
@@ -83024,7 +85333,8 @@ START_TEST(s21_is_equal_8300) {
 }
 
 START_TEST(s21_is_equal_8301) {
-  char *example = "( 15386999115616328606 == 9.93650212760300609642504008 ) = False";
+  char *example =
+      "( 15386999115616328606 == 9.93650212760300609642504008 ) = False";
   s21_decimal value_1 = {{0xFD8F9B9E, 0xD5899A2B, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB2511F48, 0xF7E08C4B, 0x335ED9D, 0x1A0000}};
   int code = 0;
@@ -83084,7 +85394,9 @@ START_TEST(s21_is_equal_8306) {
 }
 
 START_TEST(s21_is_equal_8307) {
-  char *example = "( 1515145039876503884474959717 == 1127689653367980210620424359 ) = False";
+  char *example =
+      "( 1515145039876503884474959717 == 1127689653367980210620424359 ) = "
+      "False";
   s21_decimal value_1 = {{0xFA3D4765, 0x3177FC5C, 0x4E54C71, 0x0}};
   s21_decimal value_2 = {{0x381B60A7, 0x9A8237FB, 0x3A4CD92, 0x0}};
   int code = 0;
@@ -83124,7 +85436,8 @@ START_TEST(s21_is_equal_8310) {
 }
 
 START_TEST(s21_is_equal_8311) {
-  char *example = "( -47.971285364881864447224399 == 9.3819294397482483E-10 ) = False";
+  char *example =
+      "( -47.971285364881864447224399 == 9.3819294397482483E-10 ) = False";
   s21_decimal value_1 = {{0xAD8FEA4F, 0x97297544, 0x27AE50, 0x80180000}};
   s21_decimal value_2 = {{0xB3A3C5F3, 0x14D5026, 0x0, 0x1A0000}};
   int code = 0;
@@ -83134,7 +85447,9 @@ START_TEST(s21_is_equal_8311) {
 }
 
 START_TEST(s21_is_equal_8312) {
-  char *example = "( 1054840828138916401823006734 == 1533280213864323094989761181 ) = False";
+  char *example =
+      "( 1054840828138916401823006734 == 1533280213864323094989761181 ) = "
+      "False";
   s21_decimal value_1 = {{0x292C00E, 0xDFEE606C, 0x3688B3B, 0x0}};
   s21_decimal value_2 = {{0x6A3BEA9D, 0xF1EDF029, 0x4F44CB6, 0x0}};
   int code = 0;
@@ -83164,7 +85479,9 @@ START_TEST(s21_is_equal_8314) {
 }
 
 START_TEST(s21_is_equal_8315) {
-  char *example = "( 1512269423587475862307111705 == 1451833038024217097761382136 ) = False";
+  char *example =
+      "( 1512269423587475862307111705 == 1451833038024217097761382136 ) = "
+      "False";
   s21_decimal value_1 = {{0x934A8319, 0xB8CAF972, 0x4E2EB81, 0x0}};
   s21_decimal value_2 = {{0x4006DEF8, 0xB2131FB6, 0x4B0ED9A, 0x0}};
   int code = 0;
@@ -83244,7 +85561,9 @@ START_TEST(s21_is_equal_8322) {
 }
 
 START_TEST(s21_is_equal_8323) {
-  char *example = "( 1201528582622566603242469675 == -67538.055757596268314863648 ) = False";
+  char *example =
+      "( 1201528582622566603242469675 == -67538.055757596268314863648 ) = "
+      "False";
   s21_decimal value_1 = {{0xFBA1F92B, 0xFAA8F860, 0x3E1E192, 0x0}};
   s21_decimal value_2 = {{0xBDCDA820, 0x56C19A6A, 0x37DDBD, 0x80150000}};
   int code = 0;
@@ -83314,7 +85633,8 @@ START_TEST(s21_is_equal_8329) {
 }
 
 START_TEST(s21_is_equal_8330) {
-  char *example = "( -1757.2361615910617484335943 == -90.9137148003241 ) = False";
+  char *example =
+      "( -1757.2361615910617484335943 == -90.9137148003241 ) = False";
   s21_decimal value_1 = {{0xAB0F9B47, 0xA1C9ACAD, 0xE8917, 0x80160000}};
   s21_decimal value_2 = {{0xFCC243A9, 0x33ADA, 0x0, 0x800D0000}};
   int code = 0;
@@ -83354,7 +85674,9 @@ START_TEST(s21_is_equal_8333) {
 }
 
 START_TEST(s21_is_equal_8334) {
-  char *example = "( 79228162514264337593543950335 == -7.5291804655265893539026045 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -7.5291804655265893539026045 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xB2C2947D, 0xE8AC569F, 0x3E47A8, 0x80190000}};
   int code = 0;
@@ -83384,7 +85706,9 @@ START_TEST(s21_is_equal_8336) {
 }
 
 START_TEST(s21_is_equal_8337) {
-  char *example = "( 1277996415039753078634697936 == -68.566581950358051575219226 ) = False";
+  char *example =
+      "( 1277996415039753078634697936 == -68.566581950358051575219226 ) = "
+      "False";
   s21_decimal value_1 = {{0x815BD4D0, 0x7B11BBA5, 0x4212244, 0x0}};
   s21_decimal value_2 = {{0xB946C41A, 0xDB03A1F0, 0x38B789, 0x80180000}};
   int code = 0;
@@ -83434,7 +85758,8 @@ START_TEST(s21_is_equal_8341) {
 }
 
 START_TEST(s21_is_equal_8342) {
-  char *example = "( 1684724218361618970706257131 == 107543933597840767445174 ) = False";
+  char *example =
+      "( 1684724218361618970706257131 == 107543933597840767445174 ) = False";
   s21_decimal value_1 = {{0xF0A524EB, 0xE11BCE46, 0x571923A, 0x0}};
   s21_decimal value_2 = {{0x47FFE8B6, 0xF7E3F70E, 0x16C5, 0x0}};
   int code = 0;
@@ -83444,7 +85769,9 @@ START_TEST(s21_is_equal_8342) {
 }
 
 START_TEST(s21_is_equal_8343) {
-  char *example = "( 1013240558412526312578868751 == -9.6701110658283042211219123 ) = False";
+  char *example =
+      "( 1013240558412526312578868751 == -9.6701110658283042211219123 ) = "
+      "False";
   s21_decimal value_1 = {{0x88BBE60F, 0xBBEBA3E4, 0x3462208, 0x0}};
   s21_decimal value_2 = {{0x55C1C6B3, 0xB67EE211, 0x4FFD41, 0x80190000}};
   int code = 0;
@@ -83464,7 +85791,8 @@ START_TEST(s21_is_equal_8344) {
 }
 
 START_TEST(s21_is_equal_8345) {
-  char *example = "( 179977841192044253925024607 == 1086967444177490267687074971 ) = False";
+  char *example =
+      "( 179977841192044253925024607 == 1086967444177490267687074971 ) = False";
   s21_decimal value_1 = {{0x5B7F235F, 0x522BF5BA, 0x94DFCA, 0x0}};
   s21_decimal value_2 = {{0x8263BC9B, 0x384C3088, 0x3831E4F, 0x0}};
   int code = 0;
@@ -83474,7 +85802,8 @@ START_TEST(s21_is_equal_8345) {
 }
 
 START_TEST(s21_is_equal_8346) {
-  char *example = "( -9912254.8783966145152144251 == 119817507021016411212 ) = False";
+  char *example =
+      "( -9912254.8783966145152144251 == 119817507021016411212 ) = False";
   s21_decimal value_1 = {{0xDB09D37B, 0x22FE5DD1, 0x51FE04, 0x80130000}};
   s21_decimal value_2 = {{0xB48E2C4C, 0x7ECD4BD0, 0x6, 0x0}};
   int code = 0;
@@ -83494,7 +85823,8 @@ START_TEST(s21_is_equal_8347) {
 }
 
 START_TEST(s21_is_equal_8348) {
-  char *example = "( 1095271157777451381259322161 == 1673051636313706418298587 ) = False";
+  char *example =
+      "( 1095271157777451381259322161 == 1673051636313706418298587 ) = False";
   s21_decimal value_1 = {{0x7CCD4331, 0x6FA79CF9, 0x389FCB0, 0x0}};
   s21_decimal value_2 = {{0x11525EDB, 0x4F99ABD8, 0x16248, 0x0}};
   int code = 0;
@@ -83514,7 +85844,9 @@ START_TEST(s21_is_equal_8349) {
 }
 
 START_TEST(s21_is_equal_8350) {
-  char *example = "( 1836239753224724023072102277 == -89.253790271845138981317927 ) = False";
+  char *example =
+      "( 1836239753224724023072102277 == -89.253790271845138981317927 ) = "
+      "False";
   s21_decimal value_1 = {{0xD0399785, 0x7B86BBB7, 0x5EEE6E4, 0x0}};
   s21_decimal value_2 = {{0x3A9DED27, 0xAA6F9347, 0x49D439, 0x80180000}};
   int code = 0;
@@ -83534,7 +85866,8 @@ START_TEST(s21_is_equal_8351) {
 }
 
 START_TEST(s21_is_equal_8352) {
-  char *example = "( 16792507135950137970515 == 1428938785154155709114263182 ) = False";
+  char *example =
+      "( 16792507135950137970515 == 1428938785154155709114263182 ) = False";
   s21_decimal value_1 = {{0x782DCF53, 0x52D9CDA1, 0x38E, 0x0}};
   s21_decimal value_2 = {{0xDBEA68E, 0xC2B9BD39, 0x49DFD8E, 0x0}};
   int code = 0;
@@ -83574,7 +85907,8 @@ START_TEST(s21_is_equal_8355) {
 }
 
 START_TEST(s21_is_equal_8356) {
-  char *example = "( 1618431828677675967668101 == -678.55925736332890937226365 ) = False";
+  char *example =
+      "( 1618431828677675967668101 == -678.55925736332890937226365 ) = False";
   s21_decimal value_1 = {{0x8DF55F85, 0x5D7FF304, 0x156B7, 0x0}};
   s21_decimal value_2 = {{0x7073F47D, 0x1ADF240C, 0x38210D, 0x80170000}};
   int code = 0;
@@ -83604,7 +85938,9 @@ START_TEST(s21_is_equal_8358) {
 }
 
 START_TEST(s21_is_equal_8359) {
-  char *example = "( 1843421700858918762781886802 == 1763734764682261040365955380 ) = False";
+  char *example =
+      "( 1843421700858918762781886802 == 1763734764682261040365955380 ) = "
+      "False";
   s21_decimal value_1 = {{0x48184952, 0xA4D72A73, 0x5F4D7BA, 0x0}};
   s21_decimal value_2 = {{0xCB49E934, 0x2D86A6C4, 0x5B2ED5D, 0x0}};
   int code = 0;
@@ -83614,7 +85950,8 @@ START_TEST(s21_is_equal_8359) {
 }
 
 START_TEST(s21_is_equal_8360) {
-  char *example = "( -211.75872196045064341709229 == 10531849738105993732 ) = False";
+  char *example =
+      "( -211.75872196045064341709229 == 10531849738105993732 ) = False";
   s21_decimal value_1 = {{0x150E61AD, 0x54FB6BA6, 0x11842A, 0x80170000}};
   s21_decimal value_2 = {{0x63993A04, 0x9228A589, 0x0, 0x0}};
   int code = 0;
@@ -83634,7 +85971,9 @@ START_TEST(s21_is_equal_8361) {
 }
 
 START_TEST(s21_is_equal_8362) {
-  char *example = "( -9.8142431218782874604679534 == -71.147569675158218223471475 ) = False";
+  char *example =
+      "( -9.8142431218782874604679534 == -71.147569675158218223471475 ) = "
+      "False";
   s21_decimal value_1 = {{0x73DC316E, 0xDB65B50D, 0x512E77, 0x80190000}};
   s21_decimal value_2 = {{0xE894B73, 0x7AFE58A8, 0x3ADA15, 0x80180000}};
   int code = 0;
@@ -83654,7 +85993,8 @@ START_TEST(s21_is_equal_8363) {
 }
 
 START_TEST(s21_is_equal_8364) {
-  char *example = "( 0.45426017077297482 == 1714150080212445896402375703 ) = False";
+  char *example =
+      "( 0.45426017077297482 == 1714150080212445896402375703 ) = False";
   s21_decimal value_1 = {{0xCB74014A, 0xA162B8, 0x0, 0x110000}};
   s21_decimal value_2 = {{0x800D9417, 0xBEFBB7F, 0x589E966, 0x0}};
   int code = 0;
@@ -83714,7 +86054,8 @@ START_TEST(s21_is_equal_8369) {
 }
 
 START_TEST(s21_is_equal_8370) {
-  char *example = "( 16714258135594964821917 == 1193514327573418297924923163 ) = False";
+  char *example =
+      "( 16714258135594964821917 == 1193514327573418297924923163 ) = False";
   s21_decimal value_1 = {{0x80AB279D, 0x14ED8263, 0x38A, 0x0}};
   s21_decimal value_2 = {{0x7A822F1B, 0x57A6770E, 0x3DB407D, 0x0}};
   int code = 0;
@@ -83734,7 +86075,9 @@ START_TEST(s21_is_equal_8371) {
 }
 
 START_TEST(s21_is_equal_8372) {
-  char *example = "( 1939695680565049046377305703 == 1458532236451629612785093470 ) = False";
+  char *example =
+      "( 1939695680565049046377305703 == 1458532236451629612785093470 ) = "
+      "False";
   s21_decimal value_1 = {{0xA2FE1667, 0x8A9DB25B, 0x6447A89, 0x0}};
   s21_decimal value_2 = {{0x56CA4B5E, 0xF85530ED, 0x4B67836, 0x0}};
   int code = 0;
@@ -83754,7 +86097,8 @@ START_TEST(s21_is_equal_8373) {
 }
 
 START_TEST(s21_is_equal_8374) {
-  char *example = "( 1989706673082422285883 == 4.1794282726069461E-10 ) = False";
+  char *example =
+      "( 1989706673082422285883 == 4.1794282726069461E-10 ) = False";
   s21_decimal value_1 = {{0x2E10563B, 0xDCBA1D40, 0x6B, 0x0}};
   s21_decimal value_2 = {{0xBF8794D5, 0x947BAD, 0x0, 0x1A0000}};
   int code = 0;
@@ -83784,7 +86128,8 @@ START_TEST(s21_is_equal_8376) {
 }
 
 START_TEST(s21_is_equal_8377) {
-  char *example = "( 168213448301083393164 == 1870569595609756786848407383 ) = False";
+  char *example =
+      "( 168213448301083393164 == 1870569595609756786848407383 ) = False";
   s21_decimal value_1 = {{0x2D9C7C8C, 0x1E6E37FF, 0x9, 0x0}};
   s21_decimal value_2 = {{0x14879F57, 0xF79F1AB9, 0x60B4C84, 0x0}};
   int code = 0;
@@ -83944,7 +86289,9 @@ START_TEST(s21_is_equal_8392) {
 }
 
 START_TEST(s21_is_equal_8393) {
-  char *example = "( -74959.249996255507831446790 == -4.6107938855777127718588629 ) = False";
+  char *example =
+      "( -74959.249996255507831446790 == -4.6107938855777127718588629 ) = "
+      "False";
   s21_decimal value_1 = {{0x722562E7, 0xE8916EAD, 0x63352, 0x80140000}};
   s21_decimal value_2 = {{0xC7DA10D5, 0x5FB2376D, 0x2623BC, 0x80190000}};
   int code = 0;
@@ -83954,7 +86301,8 @@ START_TEST(s21_is_equal_8393) {
 }
 
 START_TEST(s21_is_equal_8394) {
-  char *example = "( 163557412311687150 == -2.6330591499212642169310215 ) = False";
+  char *example =
+      "( 163557412311687150 == -2.6330591499212642169310215 ) = False";
   s21_decimal value_1 = {{0x95385FEE, 0x2451299, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8FFECC07, 0x39AE2933, 0x15C7B8, 0x80190000}};
   int code = 0;
@@ -83964,7 +86312,8 @@ START_TEST(s21_is_equal_8394) {
 }
 
 START_TEST(s21_is_equal_8395) {
-  char *example = "( -586.193720711319612 == 1330953484410934119809449369 ) = False";
+  char *example =
+      "( -586.193720711319612 == 1330953484410934119809449369 ) = False";
   s21_decimal value_1 = {{0x4C90103C, 0x8229415, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x4A047D99, 0xF6B9EA38, 0x44CF05C, 0x0}};
   int code = 0;
@@ -83974,7 +86323,8 @@ START_TEST(s21_is_equal_8395) {
 }
 
 START_TEST(s21_is_equal_8396) {
-  char *example = "( 79228162514264337593543950335 == -129.146960980556817862390 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == -129.146960980556817862390 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x6C48C17F, 0x1B697C30, 0x2BC, 0x80140000}};
   int code = 0;
@@ -84004,7 +86354,9 @@ START_TEST(s21_is_equal_8398) {
 }
 
 START_TEST(s21_is_equal_8399) {
-  char *example = "( 1730006291208134210852378968 == 1106977813678629021205418418 ) = False";
+  char *example =
+      "( 1730006291208134210852378968 == 1106977813678629021205418418 ) = "
+      "False";
   s21_decimal value_1 = {{0xC7E25958, 0xF7920FAA, 0x5970714, 0x0}};
   s21_decimal value_2 = {{0x9A6C51B2, 0x8630BCD2, 0x393ABAB, 0x0}};
   int code = 0;
@@ -84014,7 +86366,8 @@ START_TEST(s21_is_equal_8399) {
 }
 
 START_TEST(s21_is_equal_8400) {
-  char *example = "( 10483874049877072256 == -6.6414530590922202620909693 ) = False";
+  char *example =
+      "( 10483874049877072256 == -6.6414530590922202620909693 ) = False";
   s21_decimal value_1 = {{0x4DBD980, 0x917E33E7, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDEE4587D, 0xEAE57BCE, 0x36EFD2, 0x80190000}};
   int code = 0;
@@ -84024,7 +86377,8 @@ START_TEST(s21_is_equal_8400) {
 }
 
 START_TEST(s21_is_equal_8401) {
-  char *example = "( 1015435707329724685403765396 == 187191030502458826945545486 ) = False";
+  char *example =
+      "( 1015435707329724685403765396 == 187191030502458826945545486 ) = False";
   s21_decimal value_1 = {{0xA5373A94, 0xFECCC664, 0x347F2DF, 0x0}};
   s21_decimal value_2 = {{0x6871450E, 0x18D6D8E7, 0x9AD73E, 0x0}};
   int code = 0;
@@ -84164,7 +86518,8 @@ START_TEST(s21_is_equal_8414) {
 }
 
 START_TEST(s21_is_equal_8415) {
-  char *example = "( 13916372083884884 == 0.60649499535356286496441327 ) = False";
+  char *example =
+      "( 13916372083884884 == 0.60649499535356286496441327 ) = False";
   s21_decimal value_1 = {{0xDE9F4354, 0x3170DD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2C7083EF, 0xF533AA37, 0x322B07, 0x1A0000}};
   int code = 0;
@@ -84204,7 +86559,8 @@ START_TEST(s21_is_equal_8418) {
 }
 
 START_TEST(s21_is_equal_8419) {
-  char *example = "( 1510339384353749254764 == -5194813.7275288215418213321 ) = False";
+  char *example =
+      "( 1510339384353749254764 == -5194813.7275288215418213321 ) = False";
   s21_decimal value_1 = {{0xDF64C26C, 0xE02B63F2, 0x51, 0x0}};
   s21_decimal value_2 = {{0x72DE93C9, 0x2A1E1F64, 0x2AF872, 0x80130000}};
   int code = 0;
@@ -84214,7 +86570,8 @@ START_TEST(s21_is_equal_8419) {
 }
 
 START_TEST(s21_is_equal_8420) {
-  char *example = "( -6.72353786923151 == 1165684122758950887504963069 ) = False";
+  char *example =
+      "( -6.72353786923151 == 1165684122758950887504963069 ) = False";
   s21_decimal value_1 = {{0x90A2088F, 0x26380, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xE9DB65FD, 0xEA964981, 0x3C43B36, 0x0}};
   int code = 0;
@@ -84234,7 +86591,9 @@ START_TEST(s21_is_equal_8421) {
 }
 
 START_TEST(s21_is_equal_8422) {
-  char *example = "( -7.6383950201640076388205130 == -3.8824215378396840346097954 ) = False";
+  char *example =
+      "( -7.6383950201640076388205130 == -3.8824215378396840346097954 ) = "
+      "False";
   s21_decimal value_1 = {{0x619B66A1, 0x394837E2, 0x6517E, 0x80180000}};
   s21_decimal value_2 = {{0xF2F19922, 0xEED386F7, 0x201D58, 0x80190000}};
   int code = 0;
@@ -84284,7 +86643,8 @@ START_TEST(s21_is_equal_8426) {
 }
 
 START_TEST(s21_is_equal_8427) {
-  char *example = "( 136039974214936408917 == 1587502740667923349055413123 ) = False";
+  char *example =
+      "( 136039974214936408917 == 1587502740667923349055413123 ) = False";
   s21_decimal value_1 = {{0x1E95B355, 0x5FEF13C7, 0x7, 0x0}};
   s21_decimal value_2 = {{0xC3731B83, 0x350372E, 0x52126C8, 0x0}};
   int code = 0;
@@ -84294,7 +86654,8 @@ START_TEST(s21_is_equal_8427) {
 }
 
 START_TEST(s21_is_equal_8428) {
-  char *example = "( 1659601025419264111547 == 1930073335446657198983974440 ) = False";
+  char *example =
+      "( 1659601025419264111547 == 1930073335446657198983974440 ) = False";
   s21_decimal value_1 = {{0xFD43B3BB, 0xF79743AC, 0x59, 0x0}};
   s21_decimal value_2 = {{0x734B8E28, 0x2AD9725F, 0x63C84ED, 0x0}};
   int code = 0;
@@ -84314,7 +86675,9 @@ START_TEST(s21_is_equal_8429) {
 }
 
 START_TEST(s21_is_equal_8430) {
-  char *example = "( -595.55460854405315745179908 == 1693550920236268621351554237 ) = False";
+  char *example =
+      "( -595.55460854405315745179908 == 1693550920236268621351554237 ) = "
+      "False";
   s21_decimal value_1 = {{0x22C26904, 0x88B6AA, 0x31435C, 0x80170000}};
   s21_decimal value_2 = {{0xC75B0CBD, 0x58C4914E, 0x578DF5B, 0x0}};
   int code = 0;
@@ -84464,7 +86827,8 @@ START_TEST(s21_is_equal_8444) {
 }
 
 START_TEST(s21_is_equal_8445) {
-  char *example = "( 1911720687719545295816723177 == 159931172793395920122 ) = False";
+  char *example =
+      "( 1911720687719545295816723177 == 159931172793395920122 ) = False";
   s21_decimal value_1 = {{0x8B518AE9, 0x23FB211F, 0x62D569A, 0x0}};
   s21_decimal value_2 = {{0xCDFB3CFA, 0xAB7DAA4D, 0x8, 0x0}};
   int code = 0;
@@ -84484,7 +86848,9 @@ START_TEST(s21_is_equal_8446) {
 }
 
 START_TEST(s21_is_equal_8447) {
-  char *example = "( 1545597278101477544531591118 == -7372.2470330309549035574247 ) = False";
+  char *example =
+      "( 1545597278101477544531591118 == -7372.2470330309549035574247 ) = "
+      "False";
   s21_decimal value_1 = {{0x9D33FFCE, 0x55D3F0F2, 0x4FE7CF4, 0x0}};
   s21_decimal value_2 = {{0x20753E7, 0x1FE9746F, 0x3CFB57, 0x80160000}};
   int code = 0;
@@ -84554,7 +86920,9 @@ START_TEST(s21_is_equal_8453) {
 }
 
 START_TEST(s21_is_equal_8454) {
-  char *example = "( 1451053048981409081908468847 == 1599270969262821784873475176 ) = False";
+  char *example =
+      "( 1451053048981409081908468847 == 1599270969262821784873475176 ) = "
+      "False";
   s21_decimal value_1 = {{0x3F5F1C6F, 0x67A56CE2, 0x4B0486F, 0x0}};
   s21_decimal value_2 = {{0x5BE21C68, 0xF6A08FFB, 0x52AE2CC, 0x0}};
   int code = 0;
@@ -84604,7 +86972,8 @@ START_TEST(s21_is_equal_8458) {
 }
 
 START_TEST(s21_is_equal_8459) {
-  char *example = "( -7.424532310992910559529 == -14735.618557720690374182054 ) = False";
+  char *example =
+      "( -7.424532310992910559529 == -14735.618557720690374182054 ) = False";
   s21_decimal value_1 = {{0x6E782929, 0x7C157FFD, 0x192, 0x80150000}};
   s21_decimal value_2 = {{0x646B84A6, 0x7B8F99CE, 0xC3063, 0x80150000}};
   int code = 0;
@@ -84614,7 +86983,8 @@ START_TEST(s21_is_equal_8459) {
 }
 
 START_TEST(s21_is_equal_8460) {
-  char *example = "( -196582880.557239901372748 == 1554812548975398254135262069 ) = False";
+  char *example =
+      "( -196582880.557239901372748 == 1554812548975398254135262069 ) = False";
   s21_decimal value_1 = {{0xF090414C, 0xC780C611, 0x29A0, 0x800F0000}};
   s21_decimal value_2 = {{0x1BD4BB75, 0x2B9B9237, 0x5061C5D, 0x0}};
   int code = 0;
@@ -84624,7 +86994,8 @@ START_TEST(s21_is_equal_8460) {
 }
 
 START_TEST(s21_is_equal_8461) {
-  char *example = "( 188515438921405749570 == 1859523675760105209515863696 ) = False";
+  char *example =
+      "( 188515438921405749570 == 1859523675760105209515863696 ) = False";
   s21_decimal value_1 = {{0xC33CD942, 0x382D60E6, 0xA, 0x0}};
   s21_decimal value_2 = {{0x7DA9EE90, 0x73CE5031, 0x6022974, 0x0}};
   int code = 0;
@@ -84744,7 +87115,8 @@ START_TEST(s21_is_equal_8472) {
 }
 
 START_TEST(s21_is_equal_8473) {
-  char *example = "( 1710568649885059882886724874 == -337.22735870939 ) = False";
+  char *example =
+      "( 1710568649885059882886724874 == -337.22735870939 ) = False";
   s21_decimal value_1 = {{0xF1ED7D0A, 0x51CDF508, 0x586F300, 0x0}};
   s21_decimal value_2 = {{0xAFB143DB, 0x1EAB, 0x0, 0x800B0000}};
   int code = 0;
@@ -84764,7 +87136,9 @@ START_TEST(s21_is_equal_8474) {
 }
 
 START_TEST(s21_is_equal_8475) {
-  char *example = "( 1584474206315980953711632663 == 1474961301834789280882806400 ) = False";
+  char *example =
+      "( 1584474206315980953711632663 == 1474961301834789280882806400 ) = "
+      "False";
   s21_decimal value_1 = {{0xEC7D6117, 0xD6355A43, 0x51EA576, 0x0}};
   s21_decimal value_2 = {{0x1E86CE80, 0x6399D9AB, 0x4C40F34, 0x0}};
   int code = 0;
@@ -84784,7 +87158,9 @@ START_TEST(s21_is_equal_8476) {
 }
 
 START_TEST(s21_is_equal_8477) {
-  char *example = "( 1281236163573945300657389526 == 1197166398851960575641745477 ) = False";
+  char *example =
+      "( 1281236163573945300657389526 == 1197166398851960575641745477 ) = "
+      "False";
   s21_decimal value_1 = {{0x375C3FD6, 0x99C70815, 0x423D04F, 0x0}};
   s21_decimal value_2 = {{0x97FB7845, 0x85E9B257, 0x3DE45D8, 0x0}};
   int code = 0;
@@ -84844,7 +87220,9 @@ START_TEST(s21_is_equal_8482) {
 }
 
 START_TEST(s21_is_equal_8483) {
-  char *example = "( 1120870145032956069509004769 == -8.6276260050433143903455035 ) = False";
+  char *example =
+      "( 1120870145032956069509004769 == -8.6276260050433143903455035 ) = "
+      "False";
   s21_decimal value_1 = {{0xA3AAFDE1, 0x50E1AF33, 0x39F297C, 0x0}};
   s21_decimal value_2 = {{0x7755873B, 0x6DD4EC4B, 0x475DB5, 0x80190000}};
   int code = 0;
@@ -84854,7 +87232,9 @@ START_TEST(s21_is_equal_8483) {
 }
 
 START_TEST(s21_is_equal_8484) {
-  char *example = "( 1478203296789618737195166544 == 1505897113139095865220883411 ) = False";
+  char *example =
+      "( 1478203296789618737195166544 == 1505897113139095865220883411 ) = "
+      "False";
   s21_decimal value_1 = {{0x6D02AB50, 0x49A8799F, 0x4C6BDB9, 0x0}};
   s21_decimal value_2 = {{0x46FB63D3, 0x148B7391, 0x4DDA61E, 0x0}};
   int code = 0;
@@ -84944,7 +87324,9 @@ START_TEST(s21_is_equal_8492) {
 }
 
 START_TEST(s21_is_equal_8493) {
-  char *example = "( 1721082368682996751791301503 == 1388152759398964975613329520 ) = False";
+  char *example =
+      "( 1721082368682996751791301503 == 1388152759398964975613329520 ) = "
+      "False";
   s21_decimal value_1 = {{0x9D44237F, 0x285A730E, 0x58FA55E, 0x0}};
   s21_decimal value_2 = {{0x75BD4070, 0xDFC55D0E, 0x47C40C7, 0x0}};
   int code = 0;
@@ -84974,7 +87356,8 @@ START_TEST(s21_is_equal_8495) {
 }
 
 START_TEST(s21_is_equal_8496) {
-  char *example = "( 1211694860657552469288651415 == 157569687048230545 ) = False";
+  char *example =
+      "( 1211694860657552469288651415 == 157569687048230545 ) = False";
   s21_decimal value_1 = {{0x1DD18A97, 0x4065A85, 0x3EA4A5E, 0x0}};
   s21_decimal value_2 = {{0xA7E11691, 0x22FCCCB, 0x0, 0x0}};
   int code = 0;
@@ -84984,7 +87367,8 @@ START_TEST(s21_is_equal_8496) {
 }
 
 START_TEST(s21_is_equal_8497) {
-  char *example = "( 1253474029550511145042 == -1122760530.7063175873399093 ) = False";
+  char *example =
+      "( 1253474029550511145042 == -1122760530.7063175873399093 ) = False";
   s21_decimal value_1 = {{0xA7B54052, 0xF37254AF, 0x43, 0x0}};
   s21_decimal value_2 = {{0xCBBD8935, 0xB40A9391, 0x94989, 0x80100000}};
   int code = 0;
@@ -85004,7 +87388,8 @@ START_TEST(s21_is_equal_8498) {
 }
 
 START_TEST(s21_is_equal_8499) {
-  char *example = "( 1232348826873837326618854738 == -61.87470587979397 ) = False";
+  char *example =
+      "( 1232348826873837326618854738 == -61.87470587979397 ) = False";
   s21_decimal value_1 = {{0xBEC00552, 0xC4906EA6, 0x3FB6003, 0x0}};
   s21_decimal value_2 = {{0xC2746685, 0x15FB78, 0x0, 0x800E0000}};
   int code = 0;
@@ -85024,7 +87409,8 @@ START_TEST(s21_is_equal_8500) {
 }
 
 START_TEST(s21_is_equal_8501) {
-  char *example = "( 10714530938657841042 == 1994008475040234723504153881 ) = False";
+  char *example =
+      "( 10714530938657841042 == 1994008475040234723504153881 ) = False";
   s21_decimal value_1 = {{0xE5A21F92, 0x94B1A91E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x27A5E519, 0x79791B3, 0x67167B8, 0x0}};
   int code = 0;
@@ -85084,7 +87470,8 @@ START_TEST(s21_is_equal_8506) {
 }
 
 START_TEST(s21_is_equal_8507) {
-  char *example = "( -24.12551291312063284 == 1348358240066165040962293493 ) = False";
+  char *example =
+      "( -24.12551291312063284 == 1348358240066165040962293493 ) = False";
   s21_decimal value_1 = {{0x110C334, 0x217B1A9E, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x189B4EF5, 0xA88E6F27, 0x45B55F6, 0x0}};
   int code = 0;
@@ -85114,7 +87501,8 @@ START_TEST(s21_is_equal_8509) {
 }
 
 START_TEST(s21_is_equal_8510) {
-  char *example = "( 168846223940114621006529996 == 1705965328223070518283611169 ) = False";
+  char *example =
+      "( 168846223940114621006529996 == 1705965328223070518283611169 ) = False";
   s21_decimal value_1 = {{0x7E1AC5CC, 0x23FDDB9A, 0x8BAA94, 0x0}};
   s21_decimal value_2 = {{0x4C682C21, 0xC0917D28, 0x5832435, 0x0}};
   int code = 0;
@@ -85124,7 +87512,9 @@ START_TEST(s21_is_equal_8510) {
 }
 
 START_TEST(s21_is_equal_8511) {
-  char *example = "( -60.062283100617287427819057 == 1966018328349741130849015101 ) = False";
+  char *example =
+      "( -60.062283100617287427819057 == 1966018328349741130849015101 ) = "
+      "False";
   s21_decimal value_1 = {{0x7DB20631, 0xE41F8D1B, 0x31AEAE, 0x80180000}};
   s21_decimal value_2 = {{0x28F9553D, 0x231C9EB7, 0x65A4093, 0x0}};
   int code = 0;
@@ -85134,7 +87524,8 @@ START_TEST(s21_is_equal_8511) {
 }
 
 START_TEST(s21_is_equal_8512) {
-  char *example = "( 1000759603515581381 == 1171590760901913185220395212 ) = False";
+  char *example =
+      "( 1000759603515581381 == 1171590760901913185220395212 ) = False";
   s21_decimal value_1 = {{0xA11B63C5, 0xDE3698E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE7ED80CC, 0x6964839A, 0x3C91DFE, 0x0}};
   int code = 0;
@@ -85184,7 +87575,8 @@ START_TEST(s21_is_equal_8516) {
 }
 
 START_TEST(s21_is_equal_8517) {
-  char *example = "( 1815355834019056443659713206 == 7.3654867120959524E-10 ) = False";
+  char *example =
+      "( 1815355834019056443659713206 == 7.3654867120959524E-10 ) = False";
   s21_decimal value_1 = {{0x8DACFAB6, 0xF431CB27, 0x5DDA08C, 0x0}};
   s21_decimal value_2 = {{0x1EB93024, 0x105ACB6, 0x0, 0x1A0000}};
   int code = 0;
@@ -85214,7 +87606,8 @@ START_TEST(s21_is_equal_8519) {
 }
 
 START_TEST(s21_is_equal_8520) {
-  char *example = "( 0.263039718521484371339063 == -3.4608150777639183997845247 ) = False";
+  char *example =
+      "( 0.263039718521484371339063 == -3.4608150777639183997845247 ) = False";
   s21_decimal value_1 = {{0xE60CA737, 0x69660F21, 0x37B3, 0x180000}};
   s21_decimal value_2 = {{0xF035BEFF, 0x9CE9B57B, 0x1CA08F, 0x80190000}};
   int code = 0;
@@ -85284,7 +87677,8 @@ START_TEST(s21_is_equal_8526) {
 }
 
 START_TEST(s21_is_equal_8527) {
-  char *example = "( 1735128450849069667820370 == 1019278394289437313374857083 ) = False";
+  char *example =
+      "( 1735128450849069667820370 == 1019278394289437313374857083 ) = False";
   s21_decimal value_1 = {{0x953DA352, 0x8075CEB2, 0x16F6D, 0x0}};
   s21_decimal value_2 = {{0x351BA77B, 0x7909E4F3, 0x34B2098, 0x0}};
   int code = 0;
@@ -85354,7 +87748,9 @@ START_TEST(s21_is_equal_8533) {
 }
 
 START_TEST(s21_is_equal_8534) {
-  char *example = "( 1286643850458313650438504615 == 0.46248747929768797944042532 ) = False";
+  char *example =
+      "( 1286643850458313650438504615 == 0.46248747929768797944042532 ) = "
+      "False";
   s21_decimal value_1 = {{0xF60180A7, 0xE4E3CC0C, 0x428496E, 0x0}};
   s21_decimal value_2 = {{0xB67E5424, 0xA6257C67, 0x26418D, 0x1A0000}};
   int code = 0;
@@ -85444,7 +87840,8 @@ START_TEST(s21_is_equal_8542) {
 }
 
 START_TEST(s21_is_equal_8543) {
-  char *example = "( -174.51487239847291 == 0.13616681137468654754111829 ) = False";
+  char *example =
+      "( -174.51487239847291 == 0.13616681137468654754111829 ) = False";
   s21_decimal value_1 = {{0x1BBBD7B, 0x3E0009, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x8562A155, 0xC378F31C, 0xB4371, 0x1A0000}};
   int code = 0;
@@ -85574,7 +87971,8 @@ START_TEST(s21_is_equal_8555) {
 }
 
 START_TEST(s21_is_equal_8556) {
-  char *example = "( 1633046865473810034461802153 == 17199377151465370027221 ) = False";
+  char *example =
+      "( 1633046865473810034461802153 == 17199377151465370027221 ) = False";
   s21_decimal value_1 = {{0xE5C07EA9, 0xF743161D, 0x546D31F, 0x0}};
   s21_decimal value_2 = {{0x574204D5, 0x614E790D, 0x3A4, 0x0}};
   int code = 0;
@@ -85584,7 +87982,8 @@ START_TEST(s21_is_equal_8556) {
 }
 
 START_TEST(s21_is_equal_8557) {
-  char *example = "( 10476463300668538447 == 1690460255931594164485956565 ) = False";
+  char *example =
+      "( 10476463300668538447 == 1690460255931594164485956565 ) = False";
   s21_decimal value_1 = {{0x82C3BE4F, 0x9163DFDD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8F1F23D5, 0x195CC52D, 0x57650E2, 0x0}};
   int code = 0;
@@ -85644,7 +88043,9 @@ START_TEST(s21_is_equal_8562) {
 }
 
 START_TEST(s21_is_equal_8563) {
-  char *example = "( -54763.181996193470684908573 == 1885276055069485492542034816 ) = False";
+  char *example =
+      "( -54763.181996193470684908573 == 1885276055069485492542034816 ) = "
+      "False";
   s21_decimal value_1 = {{0xD250CC1D, 0xB6C8492, 0x2D4C8E, 0x80150000}};
   s21_decimal value_2 = {{0x6BFED380, 0xBB686857, 0x61776BB, 0x0}};
   int code = 0;
@@ -85684,7 +88085,9 @@ START_TEST(s21_is_equal_8566) {
 }
 
 START_TEST(s21_is_equal_8567) {
-  char *example = "( 1622259393854385773314566072 == 1377330369716722393732566910 ) = False";
+  char *example =
+      "( 1622259393854385773314566072 == 1377330369716722393732566910 ) = "
+      "False";
   s21_decimal value_1 = {{0xD1F3E7B8, 0xF52515EB, 0x53DE6C9, 0x0}};
   s21_decimal value_2 = {{0x83634F7E, 0xF42FF36C, 0x4734D0C, 0x0}};
   int code = 0;
@@ -85784,7 +88187,9 @@ START_TEST(s21_is_equal_8576) {
 }
 
 START_TEST(s21_is_equal_8577) {
-  char *example = "( 1803588888706945950210015861 == -3242.9137737030483217570972 ) = False";
+  char *example =
+      "( 1803588888706945950210015861 == -3242.9137737030483217570972 ) = "
+      "False";
   s21_decimal value_1 = {{0x830B4275, 0x9201C2DD, 0x5D3E4CD, 0x0}};
   s21_decimal value_2 = {{0x93755C9C, 0x144E0DC0, 0x1AD323, 0x80160000}};
   int code = 0;
@@ -85804,7 +88209,9 @@ START_TEST(s21_is_equal_8578) {
 }
 
 START_TEST(s21_is_equal_8579) {
-  char *example = "( -63.582998522770280384882267 == -28.162362035562062512861348 ) = False";
+  char *example =
+      "( -63.582998522770280384882267 == -28.162362035562062512861348 ) = "
+      "False";
   s21_decimal value_1 = {{0x2C10E65B, 0x41AEFF7E, 0x349839, 0x80180000}};
   s21_decimal value_2 = {{0x183730A4, 0xB47F12C1, 0x174B9C, 0x80180000}};
   int code = 0;
@@ -85814,7 +88221,8 @@ START_TEST(s21_is_equal_8579) {
 }
 
 START_TEST(s21_is_equal_8580) {
-  char *example = "( -7.2213392762901307104229027 == -3590086.8719726353062 ) = False";
+  char *example =
+      "( -7.2213392762901307104229027 == -3590086.8719726353062 ) = False";
   s21_decimal value_1 = {{0x34E0F6A3, 0xDDA55A42, 0x3BBBC7, 0x80190000}};
   s21_decimal value_2 = {{0xBF38DAA6, 0xF23981E3, 0x1, 0x800D0000}};
   int code = 0;
@@ -85834,7 +88242,8 @@ START_TEST(s21_is_equal_8581) {
 }
 
 START_TEST(s21_is_equal_8582) {
-  char *example = "( 11973302052129497376 == 1008712940153686070577246 ) = False";
+  char *example =
+      "( 11973302052129497376 == 1008712940153686070577246 ) = False";
   s21_decimal value_1 = {{0x75A26120, 0xA629B6C7, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA2C85E, 0x70247792, 0xD59A, 0x0}};
   int code = 0;
@@ -85854,7 +88263,9 @@ START_TEST(s21_is_equal_8583) {
 }
 
 START_TEST(s21_is_equal_8584) {
-  char *example = "( 1880869410388256821936093103 == 1986729222034906589899232079 ) = False";
+  char *example =
+      "( 1880869410388256821936093103 == 1986729222034906589899232079 ) = "
+      "False";
   s21_decimal value_1 = {{0xE46777AF, 0xB93CB02, 0x613D197, 0x0}};
   s21_decimal value_2 = {{0xEB9B934F, 0xEEFC1718, 0x66B6246, 0x0}};
   int code = 0;
@@ -85864,7 +88275,8 @@ START_TEST(s21_is_equal_8584) {
 }
 
 START_TEST(s21_is_equal_8585) {
-  char *example = "( -325.28369055098132365195798 == 177733537190152007 ) = False";
+  char *example =
+      "( -325.28369055098132365195798 == 177733537190152007 ) = False";
   s21_decimal value_1 = {{0x308E3A16, 0x6B7B1E39, 0x1AE826, 0x80170000}};
   s21_decimal value_2 = {{0xDCE48747, 0x2776FB5, 0x0, 0x0}};
   int code = 0;
@@ -85924,7 +88336,8 @@ START_TEST(s21_is_equal_8590) {
 }
 
 START_TEST(s21_is_equal_8591) {
-  char *example = "( 127156181195090500805 == -5.0114032962357722644402344 ) = False";
+  char *example =
+      "( 127156181195090500805 == -5.0114032962357722644402344 ) = False";
   s21_decimal value_1 = {{0x38931CC5, 0xE4A58118, 0x6, 0x0}};
   s21_decimal value_2 = {{0x7ED2D0A8, 0x2BA53A3B, 0x29740F, 0x80190000}};
   int code = 0;
@@ -86014,7 +88427,8 @@ START_TEST(s21_is_equal_8599) {
 }
 
 START_TEST(s21_is_equal_8600) {
-  char *example = "( -2.740466806587944603 == 17215043700445380310377 ) = False";
+  char *example =
+      "( -2.740466806587944603 == 17215043700445380310377 ) = False";
   s21_decimal value_1 = {{0x7D6C6E9B, 0x2608180A, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x31077569, 0x3AB93C58, 0x3A5, 0x0}};
   int code = 0;
@@ -86254,7 +88668,8 @@ START_TEST(s21_is_equal_8623) {
 }
 
 START_TEST(s21_is_equal_8624) {
-  char *example = "( -484432.5412944482568 == 1285995808311787220515398551 ) = False";
+  char *example =
+      "( -484432.5412944482568 == 1285995808311787220515398551 ) = False";
   s21_decimal value_1 = {{0xF6F41108, 0x433A804B, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xFCD3A397, 0x757D64B4, 0x427C034, 0x0}};
   int code = 0;
@@ -86264,7 +88679,8 @@ START_TEST(s21_is_equal_8624) {
 }
 
 START_TEST(s21_is_equal_8625) {
-  char *example = "( 154721439678839486835727 == 1963715737158181222697442619 ) = False";
+  char *example =
+      "( 154721439678839486835727 == 1963715737158181222697442619 ) = False";
   s21_decimal value_1 = {{0x8FC26C0F, 0x774F2695, 0x20C3, 0x0}};
   s21_decimal value_2 = {{0x1FC89D3B, 0x6B25ADF7, 0x65858FB, 0x0}};
   int code = 0;
@@ -86294,7 +88710,8 @@ START_TEST(s21_is_equal_8627) {
 }
 
 START_TEST(s21_is_equal_8628) {
-  char *example = "( -9396.4240405602678314 == -2051.2281227787890182512186 ) = False";
+  char *example =
+      "( -9396.4240405602678314 == -2051.2281227787890182512186 ) = False";
   s21_decimal value_1 = {{0x155AB62A, 0x18040ACE, 0x5, 0x80100000}};
   s21_decimal value_2 = {{0xA73ADE3A, 0xFE555D61, 0x10F7A4, 0x80160000}};
   int code = 0;
@@ -86374,7 +88791,9 @@ START_TEST(s21_is_equal_8635) {
 }
 
 START_TEST(s21_is_equal_8636) {
-  char *example = "( 1057158470056451400324256866 == 1406166149551169376216957382 ) = False";
+  char *example =
+      "( 1057158470056451400324256866 == 1406166149551169376216957382 ) = "
+      "False";
   s21_decimal value_1 = {{0x58BE9462, 0x7EAD5D5A, 0x36A7603, 0x0}};
   s21_decimal value_2 = {{0xA77041C6, 0xB600AB99, 0x48B2743, 0x0}};
   int code = 0;
@@ -86394,7 +88813,8 @@ START_TEST(s21_is_equal_8637) {
 }
 
 START_TEST(s21_is_equal_8638) {
-  char *example = "( 1930159977730408790782216 == 1031818680722267589187478966 ) = False";
+  char *example =
+      "( 1930159977730408790782216 == 1031818680722267589187478966 ) = False";
   s21_decimal value_1 = {{0xBF6E7108, 0x2E9B27F5, 0x198BA, 0x0}};
   s21_decimal value_2 = {{0x122C25B6, 0xC333E305, 0x355801A, 0x0}};
   int code = 0;
@@ -86534,7 +88954,8 @@ START_TEST(s21_is_equal_8651) {
 }
 
 START_TEST(s21_is_equal_8652) {
-  char *example = "( 0.82353279363704299661651995 == -1240819.6371659373 ) = False";
+  char *example =
+      "( 0.82353279363704299661651995 == -1240819.6371659373 ) = False";
   s21_decimal value_1 = {{0x2B39701B, 0x384982E3, 0x441EFC, 0x1A0000}};
   s21_decimal value_2 = {{0x59093A6D, 0x2C1530, 0x0, 0x800A0000}};
   int code = 0;
@@ -86574,7 +88995,8 @@ START_TEST(s21_is_equal_8655) {
 }
 
 START_TEST(s21_is_equal_8656) {
-  char *example = "( -556.83980144515562560862416 == 1424317235286578 ) = False";
+  char *example =
+      "( -556.83980144515562560862416 == 1424317235286578 ) = False";
   s21_decimal value_1 = {{0xC9A4B8D0, 0x9CBD79D6, 0x2E0F8A, 0x80170000}};
   s21_decimal value_2 = {{0xB2DB5232, 0x50F68, 0x0, 0x0}};
   int code = 0;
@@ -86624,7 +89046,8 @@ START_TEST(s21_is_equal_8660) {
 }
 
 START_TEST(s21_is_equal_8661) {
-  char *example = "( 1942770509864251960049550869 == 11348156364151384 ) = False";
+  char *example =
+      "( 1942770509864251960049550869 == 11348156364151384 ) = False";
   s21_decimal value_1 = {{0xE8444615, 0x5F2CF392, 0x64705A8, 0x0}};
   s21_decimal value_2 = {{0x8CF0DA58, 0x285116, 0x0, 0x0}};
   int code = 0;
@@ -86664,7 +89087,9 @@ START_TEST(s21_is_equal_8664) {
 }
 
 START_TEST(s21_is_equal_8665) {
-  char *example = "( 1031603179984287312257968607 == 1607904361712516753231381352 ) = False";
+  char *example =
+      "( 1031603179984287312257968607 == 1607904361712516753231381352 ) = "
+      "False";
   s21_decimal value_1 = {{0x48DB69DF, 0x71B045CD, 0x3555278, 0x0}};
   s21_decimal value_2 = {{0x1CE30368, 0x1B1B0BF5, 0x53206FE, 0x0}};
   int code = 0;
@@ -86734,7 +89159,8 @@ START_TEST(s21_is_equal_8671) {
 }
 
 START_TEST(s21_is_equal_8672) {
-  char *example = "( -1.75387100446177604 == 62.7595608544123758384323031 ) = False";
+  char *example =
+      "( -1.75387100446177604 == 62.7595608544123758384323031 ) = False";
   s21_decimal value_1 = {{0x7C47B944, 0x26F19A3, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x32B919D7, 0x1C7DD540, 0x207228A, 0x190000}};
   int code = 0;
@@ -86754,7 +89180,9 @@ START_TEST(s21_is_equal_8673) {
 }
 
 START_TEST(s21_is_equal_8674) {
-  char *example = "( 1188213486432728799433271720 == 1815046656280628004266134413 ) = False";
+  char *example =
+      "( 1188213486432728799433271720 == 1815046656280628004266134413 ) = "
+      "False";
   s21_decimal value_1 = {{0xD4529A8, 0x2B18C9FE, 0x3D6DDFE, 0x0}};
   s21_decimal value_2 = {{0x444F4B8D, 0x65254C5A, 0x5DD5F14, 0x0}};
   int code = 0;
@@ -86834,7 +89262,9 @@ START_TEST(s21_is_equal_8681) {
 }
 
 START_TEST(s21_is_equal_8682) {
-  char *example = "( -1945.0489639985473456144975 == -42218.063722281281175237670 ) = False";
+  char *example =
+      "( -1945.0489639985473456144975 == -42218.063722281281175237670 ) = "
+      "False";
   s21_decimal value_1 = {{0xBD07824F, 0x27FB5804, 0x1016CD, 0x80160000}};
   s21_decimal value_2 = {{0x60D28537, 0x94FFDCAB, 0x37E00, 0x80140000}};
   int code = 0;
@@ -86884,7 +89314,8 @@ START_TEST(s21_is_equal_8686) {
 }
 
 START_TEST(s21_is_equal_8687) {
-  char *example = "( -65630.00999104112364 == -9614.596389082864083273 ) = False";
+  char *example =
+      "( -65630.00999104112364 == -9614.596389082864083273 ) = False";
   s21_decimal value_1 = {{0xEC2266EC, 0x5B1476A2, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x5580E149, 0x35541B8E, 0x209, 0x80120000}};
   int code = 0;
@@ -86894,7 +89325,8 @@ START_TEST(s21_is_equal_8687) {
 }
 
 START_TEST(s21_is_equal_8688) {
-  char *example = "( 17868750528106098696109 == 1589.75525664765373329756710 ) = False";
+  char *example =
+      "( 17868750528106098696109 == 1589.75525664765373329756710 ) = False";
   s21_decimal value_1 = {{0x5DA59FAD, 0xAABA6C9D, 0x3C8, 0x0}};
   s21_decimal value_2 = {{0x3A934837, 0xD2E5F07, 0xD2670, 0x160000}};
   int code = 0;
@@ -87034,7 +89466,8 @@ START_TEST(s21_is_equal_8701) {
 }
 
 START_TEST(s21_is_equal_8702) {
-  char *example = "( 143679969776921783420379 == 1733695578437983066476566263 ) = False";
+  char *example =
+      "( 143679969776921783420379 == 1733695578437983066476566263 ) = False";
   s21_decimal value_1 = {{0x3BE1C5DB, 0xE821FF01, 0x1E6C, 0x0}};
   s21_decimal value_2 = {{0x8020D6F7, 0xA0E891B9, 0x59A1451, 0x0}};
   int code = 0;
@@ -87044,7 +89477,8 @@ START_TEST(s21_is_equal_8702) {
 }
 
 START_TEST(s21_is_equal_8703) {
-  char *example = "( 17760265503205510687 == 15578922974118970195084822 ) = False";
+  char *example =
+      "( 17760265503205510687 == 15578922974118970195084822 ) = False";
   s21_decimal value_1 = {{0x93304E1F, 0xF6792360, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC5DA8616, 0x1B4F21C0, 0xCE2F7, 0x0}};
   int code = 0;
@@ -87054,7 +89488,8 @@ START_TEST(s21_is_equal_8703) {
 }
 
 START_TEST(s21_is_equal_8704) {
-  char *example = "( 1861288334176668430929901521 == 1671563409938003386 ) = False";
+  char *example =
+      "( 1861288334176668430929901521 == 1671563409938003386 ) = False";
   s21_decimal value_1 = {{0xBA1237D1, 0xC6DD3F72, 0x6039F22, 0x0}};
   s21_decimal value_2 = {{0xA4E535BA, 0x17329610, 0x0, 0x0}};
   int code = 0;
@@ -87084,7 +89519,8 @@ START_TEST(s21_is_equal_8706) {
 }
 
 START_TEST(s21_is_equal_8707) {
-  char *example = "( -633.38136463022328487 == 0.106793725469213987308 ) = False";
+  char *example =
+      "( -633.38136463022328487 == 0.106793725469213987308 ) = False";
   s21_decimal value_1 = {{0x85A98AA7, 0x6EFE4388, 0x3, 0x80110000}};
   s21_decimal value_2 = {{0x311611EC, 0xCA0F877F, 0x5, 0x150000}};
   int code = 0;
@@ -87134,7 +89570,8 @@ START_TEST(s21_is_equal_8711) {
 }
 
 START_TEST(s21_is_equal_8712) {
-  char *example = "( -12.458542919123226966413192 == 8.3722955682E-10 ) = False";
+  char *example =
+      "( -12.458542919123226966413192 == 8.3722955682E-10 ) = False";
   s21_decimal value_1 = {{0xC41CCF88, 0xF706B134, 0xA4E32, 0x80180000}};
   s21_decimal value_2 = {{0x7E46EBA2, 0x13, 0x0, 0x140000}};
   int code = 0;
@@ -87184,7 +89621,8 @@ START_TEST(s21_is_equal_8716) {
 }
 
 START_TEST(s21_is_equal_8717) {
-  char *example = "( 11263706333850319020053 == 1878707972889814779644623538 ) = False";
+  char *example =
+      "( 11263706333850319020053 == 1878707972889814779644623538 ) = False";
   s21_decimal value_1 = {{0x89B56015, 0x9B5390F6, 0x262, 0x0}};
   s21_decimal value_2 = {{0x5A2C3AB2, 0x489D34A4, 0x61207E3, 0x0}};
   int code = 0;
@@ -87224,7 +89662,9 @@ START_TEST(s21_is_equal_8720) {
 }
 
 START_TEST(s21_is_equal_8721) {
-  char *example = "( 1469375681185986170992581007 == -7.0300058128217890653123578 ) = False";
+  char *example =
+      "( 1469375681185986170992581007 == -7.0300058128217890653123578 ) = "
+      "False";
   s21_decimal value_1 = {{0x2989D98F, 0x497641C6, 0x4BF7067, 0x0}};
   s21_decimal value_2 = {{0xD862B3FA, 0xC994970C, 0x3A269D, 0x80190000}};
   int code = 0;
@@ -87254,7 +89694,8 @@ START_TEST(s21_is_equal_8723) {
 }
 
 START_TEST(s21_is_equal_8724) {
-  char *example = "( 133718478522069669295777 == 191109602711343789365 ) = False";
+  char *example =
+      "( 133718478522069669295777 == 191109602711343789365 ) = False";
   s21_decimal value_1 = {{0x9F6AB6A1, 0xE4ABC0F5, 0x1C50, 0x0}};
   s21_decimal value_2 = {{0xB7ACF535, 0x5C2DB31F, 0xA, 0x0}};
   int code = 0;
@@ -87274,7 +89715,9 @@ START_TEST(s21_is_equal_8725) {
 }
 
 START_TEST(s21_is_equal_8726) {
-  char *example = "( 1424452609669913780681890545 == 1780736247932249130173897121 ) = False";
+  char *example =
+      "( 1424452609669913780681890545 == 1780736247932249130173897121 ) = "
+      "False";
   s21_decimal value_1 = {{0x9712DAF1, 0xB3495F96, 0x49A4792, 0x0}};
   s21_decimal value_2 = {{0x7AA99A1, 0x6E7CC81F, 0x5C0FD91, 0x0}};
   int code = 0;
@@ -87384,7 +89827,9 @@ START_TEST(s21_is_equal_8736) {
 }
 
 START_TEST(s21_is_equal_8737) {
-  char *example = "( -2.5318903404219945670444179 == 1213496344269796443311381119 ) = False";
+  char *example =
+      "( -2.5318903404219945670444179 == 1213496344269796443311381119 ) = "
+      "False";
   s21_decimal value_1 = {{0xD64C8493, 0x80F86698, 0x14F17C, 0x80190000}};
   s21_decimal value_2 = {{0xAE9D1A7F, 0xA355B52B, 0x3EBC7D8, 0x0}};
   int code = 0;
@@ -87394,7 +89839,8 @@ START_TEST(s21_is_equal_8737) {
 }
 
 START_TEST(s21_is_equal_8738) {
-  char *example = "( -79228162514264337593543950335 == 101667182313086339805819 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == 101667182313086339805819 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x33DC727B, 0x639549EF, 0x1587, 0x0}};
   int code = 0;
@@ -87404,7 +89850,9 @@ START_TEST(s21_is_equal_8738) {
 }
 
 START_TEST(s21_is_equal_8739) {
-  char *example = "( -6.4563364461559114097440911 == 1757656133597963874906781353 ) = False";
+  char *example =
+      "( -6.4563364461559114097440911 == 1757656133597963874906781353 ) = "
+      "False";
   s21_decimal value_1 = {{0x7AAF388F, 0x27F694, 0x3567D3, 0x80190000}};
   s21_decimal value_2 = {{0x4E49B6A9, 0xED2D1644, 0x5ADE629, 0x0}};
   int code = 0;
@@ -87424,7 +89872,8 @@ START_TEST(s21_is_equal_8740) {
 }
 
 START_TEST(s21_is_equal_8741) {
-  char *example = "( 122621806692882979505721 == 1111448471782181912429243581 ) = False";
+  char *example =
+      "( 122621806692882979505721 == 1111448471782181912429243581 ) = False";
   s21_decimal value_1 = {{0x52A84639, 0x5769F500, 0x19F7, 0x0}};
   s21_decimal value_2 = {{0x6810ACBD, 0x62B67862, 0x3975E5E, 0x0}};
   int code = 0;
@@ -87474,7 +89923,9 @@ START_TEST(s21_is_equal_8745) {
 }
 
 START_TEST(s21_is_equal_8746) {
-  char *example = "( -5193.5074877609932752235084 == -848411.68813029787948301590 ) = False";
+  char *example =
+      "( -5193.5074877609932752235084 == -848411.68813029787948301590 ) = "
+      "False";
   s21_decimal value_1 = {{0x15552A4C, 0xCEF368B, 0x2AF5AE, 0x80160000}};
   s21_decimal value_2 = {{0x965F394F, 0xE5D0BF51, 0x70494, 0x80130000}};
   int code = 0;
@@ -87634,7 +90085,8 @@ START_TEST(s21_is_equal_8761) {
 }
 
 START_TEST(s21_is_equal_8762) {
-  char *example = "( 9.6176127377601961E-10 == -52.910030756295068112 ) = False";
+  char *example =
+      "( 9.6176127377601961E-10 == -52.910030756295068112 ) = False";
   s21_decimal value_1 = {{0xA436F5A9, 0x155AFAD, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xBBF5C9D0, 0xDE4630A4, 0x2, 0x80120000}};
   int code = 0;
@@ -87644,7 +90096,8 @@ START_TEST(s21_is_equal_8762) {
 }
 
 START_TEST(s21_is_equal_8763) {
-  char *example = "( -36.435284600465433390336236 == 1731136649277052900535 ) = False";
+  char *example =
+      "( -36.435284600465433390336236 == 1731136649277052900535 ) = False";
   s21_decimal value_1 = {{0xF9F1C8EC, 0xBC671012, 0x1E2378, 0x80180000}};
   s21_decimal value_2 = {{0xFAB954B7, 0xD858DA8F, 0x5D, 0x0}};
   int code = 0;
@@ -87664,7 +90117,8 @@ START_TEST(s21_is_equal_8764) {
 }
 
 START_TEST(s21_is_equal_8765) {
-  char *example = "( 1198253529936395557818060951 == 158569237749340934589 ) = False";
+  char *example =
+      "( 1198253529936395557818060951 == 158569237749340934589 ) = False";
   s21_decimal value_1 = {{0xC8C3D097, 0x46C049D, 0x3DF2C0E, 0x0}};
   s21_decimal value_2 = {{0xE1ED91BD, 0x98971998, 0x8, 0x0}};
   int code = 0;
@@ -87674,7 +90128,9 @@ START_TEST(s21_is_equal_8765) {
 }
 
 START_TEST(s21_is_equal_8766) {
-  char *example = "( 1762077348255955382090094090 == 0.55470917706608064916363437 ) = False";
+  char *example =
+      "( 1762077348255955382090094090 == 0.55470917706608064916363437 ) = "
+      "False";
   s21_decimal value_1 = {{0xFFE4560A, 0x740D7259, 0x5B18E64, 0x0}};
   s21_decimal value_2 = {{0x7AB818AD, 0x796FE225, 0x2DE26C, 0x1A0000}};
   int code = 0;
@@ -87684,7 +90140,8 @@ START_TEST(s21_is_equal_8766) {
 }
 
 START_TEST(s21_is_equal_8767) {
-  char *example = "( 0.737310302211293198 == 1196128820641675736883210389 ) = False";
+  char *example =
+      "( 0.737310302211293198 == 1196128820641675736883210389 ) = False";
   s21_decimal value_1 = {{0x3C8A400E, 0xA3B73D0, 0x0, 0x120000}};
   s21_decimal value_2 = {{0x7E392895, 0x4BAD313E, 0x3DD6A21, 0x0}};
   int code = 0;
@@ -87714,7 +90171,8 @@ START_TEST(s21_is_equal_8769) {
 }
 
 START_TEST(s21_is_equal_8770) {
-  char *example = "( 119553417478808329234948641 == 110658474833833656 ) = False";
+  char *example =
+      "( 119553417478808329234948641 == 110658474833833656 ) = False";
   s21_decimal value_1 = {{0xE4102221, 0xBF784F2A, 0x62E46B, 0x0}};
   s21_decimal value_2 = {{0xEBDB6EB8, 0x189234B, 0x0, 0x0}};
   int code = 0;
@@ -87734,7 +90192,8 @@ START_TEST(s21_is_equal_8771) {
 }
 
 START_TEST(s21_is_equal_8772) {
-  char *example = "( -3.3661977982784535088187221 == 1668889763347200 ) = False";
+  char *example =
+      "( -3.3661977982784535088187221 == 1668889763347200 ) = False";
   s21_decimal value_1 = {{0x4971C755, 0x7BA2EB7F, 0x1BD833, 0x80190000}};
   s21_decimal value_2 = {{0xAD837B00, 0x5EDD8, 0x0, 0x0}};
   int code = 0;
@@ -87744,7 +90203,8 @@ START_TEST(s21_is_equal_8772) {
 }
 
 START_TEST(s21_is_equal_8773) {
-  char *example = "( 9.1184130994225313E-10 == 1924642287867959602046818989 ) = False";
+  char *example =
+      "( 9.1184130994225313E-10 == 1924642287867959602046818989 ) = False";
   s21_decimal value_1 = {{0xE91040A1, 0x143F37B, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xC9BFDAAD, 0x7CFA6437, 0x63806DB, 0x0}};
   int code = 0;
@@ -87804,7 +90264,8 @@ START_TEST(s21_is_equal_8778) {
 }
 
 START_TEST(s21_is_equal_8779) {
-  char *example = "( -97.85132391789361 == 1196992127762770210234548664 ) = False";
+  char *example =
+      "( -97.85132391789361 == 1196992127762770210234548664 ) = False";
   s21_decimal value_1 = {{0xAC4AF331, 0x22C386, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xE4E3C1B8, 0x44B74F81, 0x3DE20F1, 0x0}};
   int code = 0;
@@ -87844,7 +90305,9 @@ START_TEST(s21_is_equal_8782) {
 }
 
 START_TEST(s21_is_equal_8783) {
-  char *example = "( 1768004236970249006764619638 == 1241382947118486012569016889 ) = False";
+  char *example =
+      "( 1768004236970249006764619638 == 1241382947118486012569016889 ) = "
+      "False";
   s21_decimal value_1 = {{0x72917776, 0xBBFD722A, 0x5B67575, 0x0}};
   s21_decimal value_2 = {{0x74B35A39, 0x6859862E, 0x402D910, 0x0}};
   int code = 0;
@@ -87924,7 +90387,9 @@ START_TEST(s21_is_equal_8790) {
 }
 
 START_TEST(s21_is_equal_8791) {
-  char *example = "( 1771788566130446776653436625 == 1878037350179292042569519500 ) = False";
+  char *example =
+      "( 1771788566130446776653436625 == 1878037350179292042569519500 ) = "
+      "False";
   s21_decimal value_1 = {{0x1F1DD6D1, 0xA111F6D5, 0x5B996D2, 0x0}};
   s21_decimal value_2 = {{0xCA41118C, 0xC0F0379C, 0x61179E0, 0x0}};
   int code = 0;
@@ -88014,7 +90479,8 @@ START_TEST(s21_is_equal_8799) {
 }
 
 START_TEST(s21_is_equal_8800) {
-  char *example = "( 2.2616599254786883E-10 == 1990195350120496868583970546 ) = False";
+  char *example =
+      "( 2.2616599254786883E-10 == 1990195350120496868583970546 ) = False";
   s21_decimal value_1 = {{0x5C9BE343, 0x5059AD, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x6D1696F2, 0x1D123DCC, 0x66E4042, 0x0}};
   int code = 0;
@@ -88034,7 +90500,8 @@ START_TEST(s21_is_equal_8801) {
 }
 
 START_TEST(s21_is_equal_8802) {
-  char *example = "( -8019.7304396490935029769514 == 7.6572045222232009E-10 ) = False";
+  char *example =
+      "( -8019.7304396490935029769514 == 7.6572045222232009E-10 ) = False";
   s21_decimal value_1 = {{0x2FCA52A, 0x952C5745, 0x425670, 0x80160000}};
   s21_decimal value_2 = {{0x93323FC9, 0x11009DE, 0x0, 0x1A0000}};
   int code = 0;
@@ -88054,7 +90521,8 @@ START_TEST(s21_is_equal_8803) {
 }
 
 START_TEST(s21_is_equal_8804) {
-  char *example = "( 1368104226763979489371839949 == 0.59217281787246662608 ) = False";
+  char *example =
+      "( 1368104226763979489371839949 == 0.59217281787246662608 ) = False";
   s21_decimal value_1 = {{0xCEF95DCD, 0xBE012C1C, 0x46BAB56, 0x0}};
   s21_decimal value_2 = {{0xF50BD3D0, 0x35CE0C09, 0x3, 0x140000}};
   int code = 0;
@@ -88064,7 +90532,8 @@ START_TEST(s21_is_equal_8804) {
 }
 
 START_TEST(s21_is_equal_8805) {
-  char *example = "( 2.752498236374E-10 == 1663906235503528047384932600 ) = False";
+  char *example =
+      "( 2.752498236374E-10 == 1663906235503528047384932600 ) = False";
   s21_decimal value_1 = {{0xDDADFBD6, 0x280, 0x0, 0x160000}};
   s21_decimal value_2 = {{0xC8DF30F8, 0xC46AD4F0, 0x56059D9, 0x0}};
   int code = 0;
@@ -88084,7 +90553,9 @@ START_TEST(s21_is_equal_8806) {
 }
 
 START_TEST(s21_is_equal_8807) {
-  char *example = "( -8.6296828923193693406207520 == 75.1978037892788483671986363 ) = False";
+  char *example =
+      "( -8.6296828923193693406207520 == 75.1978037892788483671986363 ) = "
+      "False";
   s21_decimal value_1 = {{0x13478FD0, 0xC0740F2, 0x72368, 0x80180000}};
   s21_decimal value_2 = {{0x4C8810BB, 0x1E034564, 0x26E058B, 0x190000}};
   int code = 0;
@@ -88124,7 +90595,8 @@ START_TEST(s21_is_equal_8810) {
 }
 
 START_TEST(s21_is_equal_8811) {
-  char *example = "( 110772176172011528847563 == -7.7285648856073707593729136 ) = False";
+  char *example =
+      "( 110772176172011528847563 == -7.7285648856073707593729136 ) = False";
   s21_decimal value_1 = {{0x48DB00CB, 0xF8C1844D, 0x1774, 0x0}};
   s21_decimal value_2 = {{0x54ED0470, 0x6B69F202, 0x3FEDDF, 0x80190000}};
   int code = 0;
@@ -88164,7 +90636,8 @@ START_TEST(s21_is_equal_8814) {
 }
 
 START_TEST(s21_is_equal_8815) {
-  char *example = "( 15839052325351852219 == 1565331028602752529230848131 ) = False";
+  char *example =
+      "( 15839052325351852219 == 1565331028602752529230848131 ) = False";
   s21_decimal value_1 = {{0xC76C08BB, 0xDBCF9E2B, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBD15E083, 0x17EFDB69, 0x50ECFBD, 0x0}};
   int code = 0;
@@ -88174,7 +90647,8 @@ START_TEST(s21_is_equal_8815) {
 }
 
 START_TEST(s21_is_equal_8816) {
-  char *example = "( 1415580258238033568 == -161.24339384642423107602320 ) = False";
+  char *example =
+      "( 1415580258238033568 == -161.24339384642423107602320 ) = False";
   s21_decimal value_1 = {{0xAB556EA0, 0x13A526BE, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8CFAC728, 0x380D5815, 0x15572, 0x80160000}};
   int code = 0;
@@ -88234,7 +90708,8 @@ START_TEST(s21_is_equal_8821) {
 }
 
 START_TEST(s21_is_equal_8822) {
-  char *example = "( 1421240665318613709976883695 == 15432901189940131669584 ) = False";
+  char *example =
+      "( 1421240665318613709976883695 == 15432901189940131669584 ) = False";
   s21_decimal value_1 = {{0x6181D1EF, 0xD920F6B0, 0x4979F6A, 0x0}};
   s21_decimal value_2 = {{0x54D42650, 0x9E87293C, 0x344, 0x0}};
   int code = 0;
@@ -88254,7 +90729,9 @@ START_TEST(s21_is_equal_8823) {
 }
 
 START_TEST(s21_is_equal_8824) {
-  char *example = "( 1658024169686980831005446625 == 1663188395255044858962037208 ) = False";
+  char *example =
+      "( 1658024169686980831005446625 == 1663188395255044858962037208 ) = "
+      "False";
   s21_decimal value_1 = {{0x299911E1, 0x5724C798, 0x55B7C46, 0x0}};
   s21_decimal value_2 = {{0x5004C9D8, 0x91C4DA1E, 0x55FC1D7, 0x0}};
   int code = 0;
@@ -88324,7 +90801,8 @@ START_TEST(s21_is_equal_8830) {
 }
 
 START_TEST(s21_is_equal_8831) {
-  char *example = "( 4.18649980373008423316554184 == -6.1653176277564403362 ) = False";
+  char *example =
+      "( 4.18649980373008423316554184 == -6.1653176277564403362 ) = False";
   s21_decimal value_1 = {{0x5A7301C8, 0xE95CBF8E, 0x15A4C94, 0x1A0000}};
   s21_decimal value_2 = {{0x2C42EA2, 0x579C152C, 0x3, 0x80130000}};
   int code = 0;
@@ -88334,7 +90812,8 @@ START_TEST(s21_is_equal_8831) {
 }
 
 START_TEST(s21_is_equal_8832) {
-  char *example = "( 0.34019339123414349957 == 1036215590905562568765609292 ) = False";
+  char *example =
+      "( 0.34019339123414349957 == 1036215590905562568765609292 ) = False";
   s21_decimal value_1 = {{0xC8A93885, 0xD81CF8B0, 0x1, 0x140000}};
   s21_decimal value_2 = {{0xE02154C, 0xBDBC893D, 0x359232F, 0x0}};
   int code = 0;
@@ -88364,7 +90843,8 @@ START_TEST(s21_is_equal_8834) {
 }
 
 START_TEST(s21_is_equal_8835) {
-  char *example = "( 1533475043650591130167398945 == -9.42355355825579041847 ) = False";
+  char *example =
+      "( 1533475043650591130167398945 == -9.42355355825579041847 ) = False";
   s21_decimal value_1 = {{0xE551D221, 0xB05CA67D, 0x4F475F8, 0x0}};
   s21_decimal value_2 = {{0x8A792437, 0x15CEC34F, 0x33, 0x80140000}};
   int code = 0;
@@ -88444,7 +90924,8 @@ START_TEST(s21_is_equal_8842) {
 }
 
 START_TEST(s21_is_equal_8843) {
-  char *example = "( 191401511918359503234 == -5929.6556118462422552962398 ) = False";
+  char *example =
+      "( 191401511918359503234 == -5929.6556118462422552962398 ) = False";
   s21_decimal value_1 = {{0x46836182, 0x603AC500, 0xA, 0x0}};
   s21_decimal value_2 = {{0x28B0655E, 0xBF8BD2AF, 0x310C88, 0x80160000}};
   int code = 0;
@@ -88494,7 +90975,8 @@ START_TEST(s21_is_equal_8847) {
 }
 
 START_TEST(s21_is_equal_8848) {
-  char *example = "( 1399411720959038348722174623 == -6.8096698528062475982913 ) = False";
+  char *example =
+      "( 1399411720959038348722174623 == -6.8096698528062475982913 ) = False";
   s21_decimal value_1 = {{0x10AFFA9F, 0x673CECDA, 0x48590F5, 0x0}};
   s21_decimal value_2 = {{0x4D85D841, 0x87885780, 0xE6B, 0x80160000}};
   int code = 0;
@@ -88524,7 +91006,9 @@ START_TEST(s21_is_equal_8850) {
 }
 
 START_TEST(s21_is_equal_8851) {
-  char *example = "( 0.69314413309730574487569436 == 0.60979190027549551858351703 ) = False";
+  char *example =
+      "( 0.69314413309730574487569436 == 0.60979190027549551858351703 ) = "
+      "False";
   s21_decimal value_1 = {{0x85FCC41C, 0xDFEF82E5, 0x3955E5, 0x1A0000}};
   s21_decimal value_2 = {{0x3A54FE57, 0x83E50CE6, 0x3270D8, 0x1A0000}};
   int code = 0;
@@ -88584,7 +91068,8 @@ START_TEST(s21_is_equal_8856) {
 }
 
 START_TEST(s21_is_equal_8857) {
-  char *example = "( 145069817127167948310574 == -77.6156755412155904 ) = False";
+  char *example =
+      "( 145069817127167948310574 == -77.6156755412155904 ) = False";
   s21_decimal value_1 = {{0xAC75482E, 0x4023B053, 0x1EB8, 0x0}};
   s21_decimal value_2 = {{0xF05C7E00, 0xAC57674, 0x0, 0x80100000}};
   int code = 0;
@@ -88814,7 +91299,8 @@ START_TEST(s21_is_equal_8879) {
 }
 
 START_TEST(s21_is_equal_8880) {
-  char *example = "( 18668372899189802502499 == 1920878916892301175743559916 ) = False";
+  char *example =
+      "( 18668372899189802502499 == 1920878916892301175743559916 ) = False";
   s21_decimal value_1 = {{0xD1658963, 0x3B7C288, 0x3F4, 0x0}};
   s21_decimal value_2 = {{0xF6BB8EC, 0xBD22C4DD, 0x634E9EE, 0x0}};
   int code = 0;
@@ -88884,7 +91370,8 @@ START_TEST(s21_is_equal_8886) {
 }
 
 START_TEST(s21_is_equal_8887) {
-  char *example = "( 17509777829813390181 == 190400156682250629487863296 ) = False";
+  char *example =
+      "( 17509777829813390181 == 190400156682250629487863296 ) = False";
   s21_decimal value_1 = {{0x5A098B65, 0xF2FF3A2A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8B592600, 0x2D02CA58, 0x9D7ECD, 0x0}};
   int code = 0;
@@ -88924,7 +91411,8 @@ START_TEST(s21_is_equal_8890) {
 }
 
 START_TEST(s21_is_equal_8891) {
-  char *example = "( 122467219792711622833180 == 1705708138064095398943635 ) = False";
+  char *example =
+      "( 122467219792711622833180 == 1705708138064095398943635 ) = False";
   s21_decimal value_1 = {{0xF82BB41C, 0xF616F654, 0x19EE, 0x0}};
   s21_decimal value_2 = {{0xDAAD5B93, 0x9F9A2442, 0x16932, 0x0}};
   int code = 0;
@@ -88964,7 +91452,8 @@ START_TEST(s21_is_equal_8894) {
 }
 
 START_TEST(s21_is_equal_8895) {
-  char *example = "( -637777.49269553637256247424 == 106056702823770503070076 ) = False";
+  char *example =
+      "( -637777.49269553637256247424 == 106056702823770503070076 ) = False";
   s21_decimal value_1 = {{0xEEC6B880, 0xB7390D46, 0x34C176, 0x80140000}};
   s21_decimal value_2 = {{0xA8A9417C, 0x586AD9B9, 0x1675, 0x0}};
   int code = 0;
@@ -88974,7 +91463,8 @@ START_TEST(s21_is_equal_8895) {
 }
 
 START_TEST(s21_is_equal_8896) {
-  char *example = "( 15669386148503296 == -5.6723048938422645411621474 ) = False";
+  char *example =
+      "( 15669386148503296 == -5.6723048938422645411621474 ) = False";
   s21_decimal value_1 = {{0x433ADF00, 0x37AB39, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE5912A62, 0xA4FACDEA, 0x2EEB92, 0x80190000}};
   int code = 0;
@@ -88994,7 +91484,8 @@ START_TEST(s21_is_equal_8897) {
 }
 
 START_TEST(s21_is_equal_8898) {
-  char *example = "( -3.05819696645378 == 1476183127836447472604103523 ) = False";
+  char *example =
+      "( -3.05819696645378 == 1476183127836447472604103523 ) = False";
   s21_decimal value_1 = {{0x32624502, 0x11624, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xE0D34363, 0xB5970E31, 0x4C511EF, 0x0}};
   int code = 0;
@@ -89014,7 +91505,8 @@ START_TEST(s21_is_equal_8899) {
 }
 
 START_TEST(s21_is_equal_8900) {
-  char *example = "( -2869315.069274551 == -13062.948187153970522510376 ) = False";
+  char *example =
+      "( -2869315.069274551 == -13062.948187153970522510376 ) = False";
   s21_decimal value_1 = {{0x7973E9B7, 0xA31A0, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0x615C5428, 0xD715F6D0, 0xACE2F, 0x80150000}};
   int code = 0;
@@ -89064,7 +91556,8 @@ START_TEST(s21_is_equal_8904) {
 }
 
 START_TEST(s21_is_equal_8905) {
-  char *example = "( 1047812752150212494 == 1418812579478209374336888420 ) = False";
+  char *example =
+      "( 1047812752150212494 == 1418812579478209374336888420 ) = False";
   s21_decimal value_1 = {{0x8309AF8E, 0xE8A9425, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF248AE64, 0xD0E7513, 0x4959D40, 0x0}};
   int code = 0;
@@ -89084,7 +91577,9 @@ START_TEST(s21_is_equal_8906) {
 }
 
 START_TEST(s21_is_equal_8907) {
-  char *example = "( -571.88414066764073830073705 == -49825.908497499328713776369 ) = False";
+  char *example =
+      "( -571.88414066764073830073705 == -49825.908497499328713776369 ) = "
+      "False";
   s21_decimal value_1 = {{0x529E4569, 0x237BE653, 0x2F4E1E, 0x80170000}};
   s21_decimal value_2 = {{0xE54ADCF1, 0xE975BA5C, 0x29370B, 0x80150000}};
   int code = 0;
@@ -89114,7 +91609,9 @@ START_TEST(s21_is_equal_8909) {
 }
 
 START_TEST(s21_is_equal_8910) {
-  char *example = "( -8.5199646373498450367169852 == 1728286270865855326496655423 ) = False";
+  char *example =
+      "( -8.5199646373498450367169852 == 1728286270865855326496655423 ) = "
+      "False";
   s21_decimal value_1 = {{0x8403453C, 0x15AC17EB, 0x4679BA, 0x80190000}};
   s21_decimal value_2 = {{0xFCEE883F, 0x7A3C3B5C, 0x5959ADA, 0x0}};
   int code = 0;
@@ -89124,7 +91621,9 @@ START_TEST(s21_is_equal_8910) {
 }
 
 START_TEST(s21_is_equal_8911) {
-  char *example = "( 1501202073308275611732997394 == 1878060199004532973513916410 ) = False";
+  char *example =
+      "( 1501202073308275611732997394 == 1878060199004532973513916410 ) = "
+      "False";
   s21_decimal value_1 = {{0x7D06F512, 0x7605FBAE, 0x4D9C3E7, 0x0}};
   s21_decimal value_2 = {{0x864EBFFA, 0x641631F9, 0x6117EB7, 0x0}};
   int code = 0;
@@ -89184,7 +91683,8 @@ START_TEST(s21_is_equal_8916) {
 }
 
 START_TEST(s21_is_equal_8917) {
-  char *example = "( 14539498748302176270 == 1247425769843159513745818492 ) = False";
+  char *example =
+      "( 14539498748302176270 == 1247425769843159513745818492 ) = False";
   s21_decimal value_1 = {{0xF8C9B00E, 0xC9C6AD13, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF3D3837C, 0x7BE209C7, 0x407D8AE, 0x0}};
   int code = 0;
@@ -89244,7 +91744,8 @@ START_TEST(s21_is_equal_8922) {
 }
 
 START_TEST(s21_is_equal_8923) {
-  char *example = "( 1529198426047224025614544885 == 196779147329843793988168177 ) = False";
+  char *example =
+      "( 1529198426047224025614544885 == 196779147329843793988168177 ) = False";
   s21_decimal value_1 = {{0x9CC66FF5, 0xC8BA2B45, 0x4F0EC5C, 0x0}};
   s21_decimal value_2 = {{0xAF5429F1, 0xF3A56F63, 0xA2C59A, 0x0}};
   int code = 0;
@@ -89284,7 +91785,8 @@ START_TEST(s21_is_equal_8926) {
 }
 
 START_TEST(s21_is_equal_8927) {
-  char *example = "( 119904092274084933648167 == 0.77401522081893611477 ) = False";
+  char *example =
+      "( 119904092274084933648167 == 0.77401522081893611477 ) = False";
   s21_decimal value_1 = {{0x2BF1BF27, 0x38CC42C, 0x1964, 0x0}};
   s21_decimal value_2 = {{0x1DD277D5, 0x3229723E, 0x4, 0x140000}};
   int code = 0;
@@ -89334,7 +91836,9 @@ START_TEST(s21_is_equal_8931) {
 }
 
 START_TEST(s21_is_equal_8932) {
-  char *example = "( 1745440224882463839031307569 == 1936749815251404570923014583 ) = False";
+  char *example =
+      "( 1745440224882463839031307569 == 1936749815251404570923014583 ) = "
+      "False";
   s21_decimal value_1 = {{0x3016AD31, 0x30248D3F, 0x5A3CB58, 0x0}};
   s21_decimal value_2 = {{0xE24299B7, 0xDCE2020F, 0x6420AB9, 0x0}};
   int code = 0;
@@ -89404,7 +91908,8 @@ START_TEST(s21_is_equal_8938) {
 }
 
 START_TEST(s21_is_equal_8939) {
-  char *example = "( 0.37036273219478748295005 == 1958728140393840765107505278 ) = False";
+  char *example =
+      "( 0.37036273219478748295005 == 1958728140393840765107505278 ) = False";
   s21_decimal value_1 = {{0xCFB26F5D, 0xBD8A7A87, 0x7D7, 0x170000}};
   s21_decimal value_2 = {{0xDDFD087E, 0x4194AA84, 0x65438D1, 0x0}};
   int code = 0;
@@ -89474,7 +91979,8 @@ START_TEST(s21_is_equal_8945) {
 }
 
 START_TEST(s21_is_equal_8946) {
-  char *example = "( 1282498984301660499797391 == 1846413046332392914891481804 ) = False";
+  char *example =
+      "( 1282498984301660499797391 == 1846413046332392914891481804 ) = False";
   s21_decimal value_1 = {{0xA7B2E58F, 0x68C49385, 0x10F94, 0x0}};
   s21_decimal value_2 = {{0x840EA2CC, 0xCE94CB9F, 0x5F7512B, 0x0}};
   int code = 0;
@@ -89594,7 +92100,8 @@ START_TEST(s21_is_equal_8957) {
 }
 
 START_TEST(s21_is_equal_8958) {
-  char *example = "( 1605909132714387633638917743 == 1375703213702566298938637 ) = False";
+  char *example =
+      "( 1605909132714387633638917743 == 1375703213702566298938637 ) = False";
   s21_decimal value_1 = {{0xC1AAC66F, 0x86710DD0, 0x530607C, 0x0}};
   s21_decimal value_2 = {{0x78D26D0D, 0x5494A79, 0x12351, 0x0}};
   int code = 0;
@@ -89624,7 +92131,8 @@ START_TEST(s21_is_equal_8960) {
 }
 
 START_TEST(s21_is_equal_8961) {
-  char *example = "( 152019571759602112620606 == 1055892857166232078055817082 ) = False";
+  char *example =
+      "( 152019571759602112620606 == 1055892857166232078055817082 ) = False";
   s21_decimal value_1 = {{0xC843683E, 0xFF5C0925, 0x2030, 0x0}};
   s21_decimal value_2 = {{0x4D0EBF7A, 0x7B8A375B, 0x3696A02, 0x0}};
   int code = 0;
@@ -89654,7 +92162,8 @@ START_TEST(s21_is_equal_8963) {
 }
 
 START_TEST(s21_is_equal_8964) {
-  char *example = "( -165134.40923544178847481299 == 16515647932497920 ) = False";
+  char *example =
+      "( -165134.40923544178847481299 == 16515647932497920 ) = False";
   s21_decimal value_1 = {{0x7D157DD3, 0x6D1D23AE, 0xDA8DB, 0x80140000}};
   s21_decimal value_2 = {{0xF0408000, 0x3AACE4, 0x0, 0x0}};
   int code = 0;
@@ -89664,7 +92173,8 @@ START_TEST(s21_is_equal_8964) {
 }
 
 START_TEST(s21_is_equal_8965) {
-  char *example = "( -45038.7045665921253170923 == 1299557974462241072234250920 ) = False";
+  char *example =
+      "( -45038.7045665921253170923 == 1299557974462241072234250920 ) = False";
   s21_decimal value_1 = {{0x380EDEEB, 0x87D9E451, 0x5F5F, 0x80130000}};
   s21_decimal value_2 = {{0x92B642A8, 0xF58A46A2, 0x432F81A, 0x0}};
   int code = 0;
@@ -89694,7 +92204,8 @@ START_TEST(s21_is_equal_8967) {
 }
 
 START_TEST(s21_is_equal_8968) {
-  char *example = "( -911.921498289783 == 1555028488522035767697248999 ) = False";
+  char *example =
+      "( -911.921498289783 == 1555028488522035767697248999 ) = False";
   s21_decimal value_1 = {{0x44F7F677, 0x33D63, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x30C492E7, 0x46D0B448, 0x5064A17, 0x0}};
   int code = 0;
@@ -89714,7 +92225,8 @@ START_TEST(s21_is_equal_8969) {
 }
 
 START_TEST(s21_is_equal_8970) {
-  char *example = "( -315.10665864546348760158453 == 16141092769227765671 ) = False";
+  char *example =
+      "( -315.10665864546348760158453 == 16141092769227765671 ) = False";
   s21_decimal value_1 = {{0xAE39D0F5, 0x9E8D15F8, 0x1A10A4, 0x80170000}};
   s21_decimal value_2 = {{0xBC7277A7, 0xE000AE5A, 0x0, 0x0}};
   int code = 0;
@@ -89724,7 +92236,8 @@ START_TEST(s21_is_equal_8970) {
 }
 
 START_TEST(s21_is_equal_8971) {
-  char *example = "( -33382.383818532 == 1921844214149800291910345058 ) = False";
+  char *example =
+      "( -33382.383818532 == 1921844214149800291910345058 ) = False";
   s21_decimal value_1 = {{0x71211724, 0x1E5C, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0x68A8E162, 0x9BA5983F, 0x635B657, 0x0}};
   int code = 0;
@@ -89794,7 +92307,8 @@ START_TEST(s21_is_equal_8977) {
 }
 
 START_TEST(s21_is_equal_8978) {
-  char *example = "( -7815.3520245074505444221976 == 1720257402715288243707 ) = False";
+  char *example =
+      "( -7815.3520245074505444221976 == 1720257402715288243707 ) = False";
   s21_decimal value_1 = {{0xF741E418, 0xD265168B, 0x40A5A6, 0x80160000}};
   s21_decimal value_2 = {{0x88DA0DFB, 0x415E0174, 0x5D, 0x0}};
   int code = 0;
@@ -89944,7 +92458,9 @@ START_TEST(s21_is_equal_8992) {
 }
 
 START_TEST(s21_is_equal_8993) {
-  char *example = "( 1931117497999277190734153895 == -93.590813245003307101267057 ) = False";
+  char *example =
+      "( 1931117497999277190734153895 == -93.590813245003307101267057 ) = "
+      "False";
   s21_decimal value_1 = {{0xA52008A7, 0x553107F3, 0x63D6209, 0x0}};
   s21_decimal value_2 = {{0xDAE52471, 0x26F9961A, 0x4D6AA0, 0x80180000}};
   int code = 0;
@@ -90084,7 +92600,8 @@ START_TEST(s21_is_equal_9006) {
 }
 
 START_TEST(s21_is_equal_9007) {
-  char *example = "( 1282504230662204470 == 1625196215081443164349601200 ) = False";
+  char *example =
+      "( 1282504230662204470 == 1625196215081443164349601200 ) = False";
   s21_decimal value_1 = {{0x838E6C36, 0x11CC5ECD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x60ED15B0, 0x5AF6A4E3, 0x54054AF, 0x0}};
   int code = 0;
@@ -90104,7 +92621,8 @@ START_TEST(s21_is_equal_9008) {
 }
 
 START_TEST(s21_is_equal_9009) {
-  char *example = "( 1734535609775088844828779695 == 192134521083573220252 ) = False";
+  char *example =
+      "( 1734535609775088844828779695 == 192134521083573220252 ) = False";
   s21_decimal value_1 = {{0x9CA724AF, 0xD18E86A8, 0x59AC633, 0x0}};
   s21_decimal value_2 = {{0x42EB39C, 0x6A66F0F4, 0xA, 0x0}};
   int code = 0;
@@ -90134,7 +92652,8 @@ START_TEST(s21_is_equal_9011) {
 }
 
 START_TEST(s21_is_equal_9012) {
-  char *example = "( 1405432393388270683082494817 == 198210804975051857 ) = False";
+  char *example =
+      "( 1405432393388270683082494817 == 198210804975051857 ) = False";
   s21_decimal value_1 = {{0x51589361, 0xB5ABD601, 0x48A8BE2, 0x0}};
   s21_decimal value_2 = {{0x4D2EA451, 0x2C02FAD, 0x0, 0x0}};
   int code = 0;
@@ -90144,7 +92663,8 @@ START_TEST(s21_is_equal_9012) {
 }
 
 START_TEST(s21_is_equal_9013) {
-  char *example = "( 1204876717954160605988 == -9897968788.289454217789364 ) = False";
+  char *example =
+      "( 1204876717954160605988 == -9897968788.289454217789364 ) = False";
   s21_decimal value_1 = {{0xD4433B24, 0x5105FF44, 0x41, 0x0}};
   s21_decimal value_2 = {{0xAC967FB4, 0xF6927F11, 0x82FF9, 0x800F0000}};
   int code = 0;
@@ -90184,7 +92704,9 @@ START_TEST(s21_is_equal_9016) {
 }
 
 START_TEST(s21_is_equal_9017) {
-  char *example = "( 0.18877394414245473038338779 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 0.18877394414245473038338779 == 79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0xBA4B8ADB, 0x9A0B9A20, 0xF9D71, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -90214,7 +92736,8 @@ START_TEST(s21_is_equal_9019) {
 }
 
 START_TEST(s21_is_equal_9020) {
-  char *example = "( 1192379544935272682181552366 == 1507446457729652394073025 ) = False";
+  char *example =
+      "( 1192379544935272682181552366 == 1507446457729652394073025 ) = False";
   s21_decimal value_1 = {{0x88EEE8EE, 0xA6FD75B6, 0x3DA5030, 0x0}};
   s21_decimal value_2 = {{0xBE349BC1, 0xD6126F7C, 0x13F36, 0x0}};
   int code = 0;
@@ -90294,7 +92817,8 @@ START_TEST(s21_is_equal_9027) {
 }
 
 START_TEST(s21_is_equal_9028) {
-  char *example = "( 13422141859378766292343 == 1879078824003117251961627599 ) = False";
+  char *example =
+      "( 13422141859378766292343 == 1879078824003117251961627599 ) = False";
   s21_decimal value_1 = {{0xB4642577, 0x9DA2FB8C, 0x2D7, 0x0}};
   s21_decimal value_2 = {{0x1D7923CF, 0x29AC3BD5, 0x612566B, 0x0}};
   int code = 0;
@@ -90344,7 +92868,8 @@ START_TEST(s21_is_equal_9032) {
 }
 
 START_TEST(s21_is_equal_9033) {
-  char *example = "( 14206198137348744256614316 == 159142772346917418 ) = False";
+  char *example =
+      "( 14206198137348744256614316 == 159142772346917418 ) = False";
   s21_decimal value_1 = {{0xF1DAEFAC, 0x8B4E4F1F, 0xBC047, 0x0}};
   s21_decimal value_2 = {{0x1E4F122A, 0x2356382, 0x0, 0x0}};
   int code = 0;
@@ -90354,7 +92879,8 @@ START_TEST(s21_is_equal_9033) {
 }
 
 START_TEST(s21_is_equal_9034) {
-  char *example = "( -95455.034285049147393766280 == 191447269175407454 ) = False";
+  char *example =
+      "( -95455.034285049147393766280 == 191447269175407454 ) = False";
   s21_decimal value_1 = {{0x9CA8B1F4, 0xC7197C8A, 0x7E556, 0x80140000}};
   s21_decimal value_2 = {{0xE86B335E, 0x2A82846, 0x0, 0x0}};
   int code = 0;
@@ -90474,7 +93000,9 @@ START_TEST(s21_is_equal_9045) {
 }
 
 START_TEST(s21_is_equal_9046) {
-  char *example = "( 1690773637280745369136376023 == 1454813957165463379252640504 ) = False";
+  char *example =
+      "( 1690773637280745369136376023 == 1454813957165463379252640504 ) = "
+      "False";
   s21_decimal value_1 = {{0x96A9A8D7, 0x893A94A6, 0x576933E, 0x0}};
   s21_decimal value_2 = {{0x48A47AF8, 0xA563A0B6, 0x4B364D6, 0x0}};
   int code = 0;
@@ -90514,7 +93042,8 @@ START_TEST(s21_is_equal_9049) {
 }
 
 START_TEST(s21_is_equal_9050) {
-  char *example = "( 132244069308305491591195026 == 145068853006004553056719473 ) = False";
+  char *example =
+      "( 132244069308305491591195026 == 145068853006004553056719473 ) = False";
   s21_decimal value_1 = {{0x5F0C6992, 0x5CB3DBC1, 0x6D63C5, 0x0}};
   s21_decimal value_2 = {{0x7AF1271, 0x478A54E0, 0x77FF86, 0x0}};
   int code = 0;
@@ -90524,7 +93053,8 @@ START_TEST(s21_is_equal_9050) {
 }
 
 START_TEST(s21_is_equal_9051) {
-  char *example = "( 160305707900418443909 == 1705509395847977560817472 ) = False";
+  char *example =
+      "( 160305707900418443909 == 1705509395847977560817472 ) = False";
   s21_decimal value_1 = {{0xD7F8CA85, 0xB0B047FF, 0x8, 0x0}};
   s21_decimal value_2 = {{0xF105BF40, 0xD97FF3AE, 0x16927, 0x0}};
   int code = 0;
@@ -90574,7 +93104,8 @@ START_TEST(s21_is_equal_9055) {
 }
 
 START_TEST(s21_is_equal_9056) {
-  char *example = "( 128135449113610680165433 == 0.00962190331119476449540719 ) = False";
+  char *example =
+      "( 128135449113610680165433 == 0.00962190331119476449540719 ) = False";
   s21_decimal value_1 = {{0xA21E6439, 0x3C92CE1F, 0x1B22, 0x0}};
   s21_decimal value_2 = {{0xA574FA6F, 0x713EFA4D, 0xCBC0, 0x1A0000}};
   int code = 0;
@@ -90584,7 +93115,9 @@ START_TEST(s21_is_equal_9056) {
 }
 
 START_TEST(s21_is_equal_9057) {
-  char *example = "( 1849743574857802664355621509 == 1551336371136716846548393576 ) = False";
+  char *example =
+      "( 1849743574857802664355621509 == 1551336371136716846548393576 ) = "
+      "False";
   s21_decimal value_1 = {{0xC5E4EA85, 0x1EBEA764, 0x5FA1270, 0x0}};
   s21_decimal value_2 = {{0x98401E68, 0x312E2501, 0x5033C41, 0x0}};
   int code = 0;
@@ -90604,7 +93137,8 @@ START_TEST(s21_is_equal_9058) {
 }
 
 START_TEST(s21_is_equal_9059) {
-  char *example = "( -3.15512666449873478993189 == 1322834342418937359696449939 ) = False";
+  char *example =
+      "( -3.15512666449873478993189 == 1322834342418937359696449939 ) = False";
   s21_decimal value_1 = {{0xB831C525, 0xF9D5EE68, 0x42CF, 0x80170000}};
   s21_decimal value_2 = {{0x6AB0D193, 0x64FAD311, 0x4463911, 0x0}};
   int code = 0;
@@ -90644,7 +93178,9 @@ START_TEST(s21_is_equal_9062) {
 }
 
 START_TEST(s21_is_equal_9063) {
-  char *example = "( -31.376138355948889211170651 == -33.527911508539877147871847 ) = False";
+  char *example =
+      "( -31.376138355948889211170651 == -33.527911508539877147871847 ) = "
+      "False";
   s21_decimal value_1 = {{0xB1886F5B, 0xDE551DDE, 0x19F427, 0x80180000}};
   s21_decimal value_2 = {{0xA4C10A67, 0xB98E009A, 0x1BBBCF, 0x80180000}};
   int code = 0;
@@ -90724,7 +93260,9 @@ START_TEST(s21_is_equal_9070) {
 }
 
 START_TEST(s21_is_equal_9071) {
-  char *example = "( 1584439462950924874889819224 == 0.27739856646188692918161025 ) = False";
+  char *example =
+      "( 1584439462950924874889819224 == 0.27739856646188692918161025 ) = "
+      "False";
   s21_decimal value_1 = {{0xBABBF458, 0x652911FF, 0x51E9E1B, 0x0}};
   s21_decimal value_2 = {{0xA482CE81, 0xA45AE12A, 0x16F224, 0x1A0000}};
   int code = 0;
@@ -90784,7 +93322,8 @@ START_TEST(s21_is_equal_9076) {
 }
 
 START_TEST(s21_is_equal_9077) {
-  char *example = "( 17604096772420119819 == 158497523549974243059121439 ) = False";
+  char *example =
+      "( 17604096772420119819 == 158497523549974243059121439 ) = False";
   s21_decimal value_1 = {{0x77B3AD0B, 0xF44E50BE, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8D133D1F, 0xF7E3FF7E, 0x831B27, 0x0}};
   int code = 0;
@@ -90864,7 +93403,8 @@ START_TEST(s21_is_equal_9084) {
 }
 
 START_TEST(s21_is_equal_9085) {
-  char *example = "( 0.8784837795240021470379 == -971247.54482216598870 ) = False";
+  char *example =
+      "( 0.8784837795240021470379 == -971247.54482216598870 ) = False";
   s21_decimal value_1 = {{0x933E2CAB, 0x3A1D66B4, 0x1DC, 0x160000}};
   s21_decimal value_2 = {{0x14F472EF, 0x86C9A4F6, 0x0, 0x800D0000}};
   int code = 0;
@@ -91024,7 +93564,9 @@ START_TEST(s21_is_equal_9100) {
 }
 
 START_TEST(s21_is_equal_9101) {
-  char *example = "( 1590262047174915052022427390 == 1215630998093398255045875130 ) = False";
+  char *example =
+      "( 1590262047174915052022427390 == 1215630998093398255045875130 ) = "
+      "False";
   s21_decimal value_1 = {{0xAEC66EFE, 0x51839BB3, 0x5236F16, 0x0}};
   s21_decimal value_2 = {{0x633E95BA, 0x74245257, 0x3ED8BE0, 0x0}};
   int code = 0;
@@ -91064,7 +93606,8 @@ START_TEST(s21_is_equal_9104) {
 }
 
 START_TEST(s21_is_equal_9105) {
-  char *example = "( 150274826742115614405405551 == 1695367852342714503854772368 ) = False";
+  char *example =
+      "( 150274826742115614405405551 == 1695367852342714503854772368 ) = False";
   s21_decimal value_1 = {{0xE0CFAB6F, 0xAE6216E6, 0x7C4DEE, 0x0}};
   s21_decimal value_2 = {{0xC4D35090, 0x6F0096F6, 0x57A601B, 0x0}};
   int code = 0;
@@ -91084,7 +93627,8 @@ START_TEST(s21_is_equal_9106) {
 }
 
 START_TEST(s21_is_equal_9107) {
-  char *example = "( 1416757429648392848961376920 == 1300210059876397794029434 ) = False";
+  char *example =
+      "( 1416757429648392848961376920 == 1300210059876397794029434 ) = False";
   s21_decimal value_1 = {{0xB6F31298, 0x27CE1569, 0x493EA0E, 0x0}};
   s21_decimal value_2 = {{0x11796F7A, 0x87510972, 0x11354, 0x0}};
   int code = 0;
@@ -91094,7 +93638,8 @@ START_TEST(s21_is_equal_9107) {
 }
 
 START_TEST(s21_is_equal_9108) {
-  char *example = "( 187162119647700299428044530 == 1427146484480690353585779915 ) = False";
+  char *example =
+      "( 187162119647700299428044530 == 1427146484480690353585779915 ) = False";
   s21_decimal value_1 = {{0xE80E9EF2, 0xD621AE4B, 0x9AD11E, 0x0}};
   s21_decimal value_2 = {{0x4FBFF4CB, 0xF24A986E, 0x49C8205, 0x0}};
   int code = 0;
@@ -91134,7 +93679,9 @@ START_TEST(s21_is_equal_9111) {
 }
 
 START_TEST(s21_is_equal_9112) {
-  char *example = "( -9.1448386664479296673676399 == 1173233241847046139832391012 ) = False";
+  char *example =
+      "( -9.1448386664479296673676399 == 1173233241847046139832391012 ) = "
+      "False";
   s21_decimal value_1 = {{0x8E9DFC6F, 0xF97F2206, 0x4BA4F2, 0x80190000}};
   s21_decimal value_2 = {{0xDAD75564, 0x7B6D7504, 0x3CA79CD, 0x0}};
   int code = 0;
@@ -91144,7 +93691,8 @@ START_TEST(s21_is_equal_9112) {
 }
 
 START_TEST(s21_is_equal_9113) {
-  char *example = "( 1735923714815982087338432679 == -5.378635275855892228 ) = False";
+  char *example =
+      "( 1735923714815982087338432679 == -5.378635275855892228 ) = False";
   s21_decimal value_1 = {{0x49AB98A7, 0x24C4EB5B, 0x59BEC25, 0x0}};
   s21_decimal value_2 = {{0x41C68F04, 0x4AA4C049, 0x0, 0x80120000}};
   int code = 0;
@@ -91164,7 +93712,8 @@ START_TEST(s21_is_equal_9114) {
 }
 
 START_TEST(s21_is_equal_9115) {
-  char *example = "( 1706067451319856555255195316 == 1132952885777926074 ) = False";
+  char *example =
+      "( 1706067451319856555255195316 == 1132952885777926074 ) = False";
   s21_decimal value_1 = {{0xB61CE6B4, 0xDB3C5CB3, 0x58339D5, 0x0}};
   s21_decimal value_2 = {{0xA00C07BA, 0xFB90EA5, 0x0, 0x0}};
   int code = 0;
@@ -91194,7 +93743,8 @@ START_TEST(s21_is_equal_9117) {
 }
 
 START_TEST(s21_is_equal_9118) {
-  char *example = "( 1959604191761002630938 == 1967754629112403610011 ) = False";
+  char *example =
+      "( 1959604191761002630938 == 1967754629112403610011 ) = False";
   s21_decimal value_1 = {{0x89038F1A, 0x3AF89DFA, 0x6A, 0x0}};
   s21_decimal value_2 = {{0x1F58499B, 0xAC14C991, 0x6A, 0x0}};
   int code = 0;
@@ -91204,7 +93754,8 @@ START_TEST(s21_is_equal_9118) {
 }
 
 START_TEST(s21_is_equal_9119) {
-  char *example = "( 1519112471243211950802619 == -2.73080198155117219 ) = False";
+  char *example =
+      "( 1519112471243211950802619 == -2.73080198155117219 ) = False";
   s21_decimal value_1 = {{0x8E4446BB, 0x408838E1, 0x141AF, 0x0}};
   s21_decimal value_2 = {{0x4E3AA2A3, 0x3CA2CFE, 0x0, 0x80110000}};
   int code = 0;
@@ -91314,7 +93865,9 @@ START_TEST(s21_is_equal_9129) {
 }
 
 START_TEST(s21_is_equal_9130) {
-  char *example = "( 1655364142432769308279696797 == -1.6590354410685450321498567 ) = False";
+  char *example =
+      "( 1655364142432769308279696797 == -1.6590354410685450321498567 ) = "
+      "False";
   s21_decimal value_1 = {{0xD5ABED9D, 0xF958C29F, 0x55948FD, 0x0}};
   s21_decimal value_2 = {{0x59DD91C7, 0xEA2AFD8C, 0xDB924, 0x80190000}};
   int code = 0;
@@ -91324,7 +93877,9 @@ START_TEST(s21_is_equal_9130) {
 }
 
 START_TEST(s21_is_equal_9131) {
-  char *example = "( 1320639489141518264480845897 == 1105851050705581909150082870 ) = False";
+  char *example =
+      "( 1320639489141518264480845897 == 1105851050705581909150082870 ) = "
+      "False";
   s21_decimal value_1 = {{0x33005049, 0x28ED2D74, 0x444684A, 0x0}};
   s21_decimal value_2 = {{0xBF3D2736, 0x94BDA08F, 0x392BD11, 0x0}};
   int code = 0;
@@ -91384,7 +93939,9 @@ START_TEST(s21_is_equal_9136) {
 }
 
 START_TEST(s21_is_equal_9137) {
-  char *example = "( -7.6933866941273857608184323 == 1017250391432460885730524654 ) = False";
+  char *example =
+      "( -7.6933866941273857608184323 == 1017250391432460885730524654 ) = "
+      "False";
   s21_decimal value_1 = {{0x8880F203, 0x48A54802, 0x3FA361, 0x80190000}};
   s21_decimal value_2 = {{0xC33FDEE, 0x37B74487, 0x3497326, 0x0}};
   int code = 0;
@@ -91494,7 +94051,8 @@ START_TEST(s21_is_equal_9147) {
 }
 
 START_TEST(s21_is_equal_9148) {
-  char *example = "( -209994.96199293334178929722 == -24.27552010377550090 ) = False";
+  char *example =
+      "( -209994.96199293334178929722 == -24.27552010377550090 ) = False";
   s21_decimal value_1 = {{0xEDF69C3A, 0xF8532607, 0x115ED0, 0x80140000}};
   s21_decimal value_2 = {{0xB53BE281, 0x35E7091, 0x0, 0x80100000}};
   int code = 0;
@@ -91504,7 +94062,8 @@ START_TEST(s21_is_equal_9148) {
 }
 
 START_TEST(s21_is_equal_9149) {
-  char *example = "( 1701552505602322003 == 82.5192045467834567654783121 ) = False";
+  char *example =
+      "( 1701552505602322003 == 82.5192045467834567654783121 ) = False";
   s21_decimal value_1 = {{0x171A2E53, 0x179D20FD, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC04A3891, 0x6BB2F0D6, 0x2AA9536, 0x190000}};
   int code = 0;
@@ -91584,7 +94143,8 @@ START_TEST(s21_is_equal_9156) {
 }
 
 START_TEST(s21_is_equal_9157) {
-  char *example = "( 1826392875702572412747643033 == 16088385828830119756 ) = False";
+  char *example =
+      "( 1826392875702572412747643033 == 16088385828830119756 ) = False";
   s21_decimal value_1 = {{0x7C9BF899, 0x2EB44FE3, 0x5E6C1BC, 0x0}};
   s21_decimal value_2 = {{0xE0D9074C, 0xDF456DAB, 0x0, 0x0}};
   int code = 0;
@@ -91784,7 +94344,9 @@ START_TEST(s21_is_equal_9176) {
 }
 
 START_TEST(s21_is_equal_9177) {
-  char *example = "( 1850866282361800045016709822 == 1755937960596362869221748546 ) = False";
+  char *example =
+      "( 1850866282361800045016709822 == 1755937960596362869221748546 ) = "
+      "False";
   s21_decimal value_1 = {{0x5258FABE, 0x374165B8, 0x5FB002E, 0x0}};
   s21_decimal value_2 = {{0xFAD1EF42, 0x94D7C0DC, 0x5AC7A53, 0x0}};
   int code = 0;
@@ -91834,7 +94396,8 @@ START_TEST(s21_is_equal_9181) {
 }
 
 START_TEST(s21_is_equal_9182) {
-  char *example = "( -419.4956374771768033305 == 1507372601273647632793810077 ) = False";
+  char *example =
+      "( -419.4956374771768033305 == 1507372601273647632793810077 ) = False";
   s21_decimal value_1 = {{0x3A90019, 0x68B6E506, 0xE3, 0x80130000}};
   s21_decimal value_2 = {{0xB791349D, 0x73C9FB38, 0x4DEDE90, 0x0}};
   int code = 0;
@@ -91884,7 +94447,8 @@ START_TEST(s21_is_equal_9186) {
 }
 
 START_TEST(s21_is_equal_9187) {
-  char *example = "( 125374727016987186 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 125374727016987186 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0x63A8BA32, 0x1BD6BA6, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -91894,7 +94458,9 @@ START_TEST(s21_is_equal_9187) {
 }
 
 START_TEST(s21_is_equal_9188) {
-  char *example = "( 1544063335421285146932910096 == 1003430989296652530082868727 ) = False";
+  char *example =
+      "( 1544063335421285146932910096 == 1003430989296652530082868727 ) = "
+      "False";
   s21_decimal value_1 = {{0xC9519810, 0x22CD8698, 0x4FD3821, 0x0}};
   s21_decimal value_2 = {{0xEE636DF7, 0xED3E8956, 0x33E04C6, 0x0}};
   int code = 0;
@@ -92004,7 +94570,8 @@ START_TEST(s21_is_equal_9198) {
 }
 
 START_TEST(s21_is_equal_9199) {
-  char *example = "( -792.40414638690870453282870 == 1714697325435755619482 ) = False";
+  char *example =
+      "( -792.40414638690870453282870 == 1714697325435755619482 ) = False";
   s21_decimal value_1 = {{0xDB231D9F, 0x260411EE, 0x68DFB, 0x80160000}};
   s21_decimal value_2 = {{0xC696E49A, 0xF434A4A0, 0x5C, 0x0}};
   int code = 0;
@@ -92124,7 +94691,9 @@ START_TEST(s21_is_equal_9210) {
 }
 
 START_TEST(s21_is_equal_9211) {
-  char *example = "( -7735.3357646808857717775249 == 1392037778840546550574559987 ) = False";
+  char *example =
+      "( -7735.3357646808857717775249 == 1392037778840546550574559987 ) = "
+      "False";
   s21_decimal value_1 = {{0x7FEC1B91, 0xEBA4F714, 0x3FFC35, 0x80160000}};
   s21_decimal value_2 = {{0xB73532F3, 0x3335E051, 0x47F7777, 0x0}};
   int code = 0;
@@ -92134,7 +94703,8 @@ START_TEST(s21_is_equal_9211) {
 }
 
 START_TEST(s21_is_equal_9212) {
-  char *example = "( 84.0471853149147020954405183 == 121136549223550357 ) = False";
+  char *example =
+      "( 84.0471853149147020954405183 == 121136549223550357 ) = False";
   s21_decimal value_1 = {{0x83DF893F, 0x7471C7CE, 0x2B738D6, 0x190000}};
   s21_decimal value_2 = {{0xB9C94D95, 0x1AE5D0C, 0x0, 0x0}};
   int code = 0;
@@ -92194,7 +94764,8 @@ START_TEST(s21_is_equal_9217) {
 }
 
 START_TEST(s21_is_equal_9218) {
-  char *example = "( -1.0779774773740620546110 == 1997620393707529570434065222 ) = False";
+  char *example =
+      "( -1.0779774773740620546110 == 1997620393707529570434065222 ) = False";
   s21_decimal value_1 = {{0x60A74CD3, 0x6FF1544D, 0x3A, 0x80150000}};
   s21_decimal value_2 = {{0x5AD2A346, 0x886F9519, 0x6746492, 0x0}};
   int code = 0;
@@ -92234,7 +94805,9 @@ START_TEST(s21_is_equal_9221) {
 }
 
 START_TEST(s21_is_equal_9222) {
-  char *example = "( 1962526472196562847754142690 == 1896452212076758924625725449 ) = False";
+  char *example =
+      "( 1962526472196562847754142690 == 1896452212076758924625725449 ) = "
+      "False";
   s21_decimal value_1 = {{0x538CC3E2, 0x3C5CD1DE, 0x6575D25, 0x0}};
   s21_decimal value_2 = {{0xECF84809, 0x6ADC91E9, 0x620B560, 0x0}};
   int code = 0;
@@ -92394,7 +94967,9 @@ START_TEST(s21_is_equal_9237) {
 }
 
 START_TEST(s21_is_equal_9238) {
-  char *example = "( 1321071461395591981475234446 == 1106159493541646486976754902 ) = False";
+  char *example =
+      "( 1321071461395591981475234446 == 1106159493541646486976754902 ) = "
+      "False";
   s21_decimal value_1 = {{0xA247028E, 0x6C351668, 0x444C3C3, 0x0}};
   s21_decimal value_2 = {{0x650A74D6, 0x4CF8711C, 0x392FE62, 0x0}};
   int code = 0;
@@ -92414,7 +94989,8 @@ START_TEST(s21_is_equal_9239) {
 }
 
 START_TEST(s21_is_equal_9240) {
-  char *example = "( 2.1864235982947223E-10 == 1959230126140239046859547066 ) = False";
+  char *example =
+      "( 2.1864235982947223E-10 == 1959230126140239046859547066 ) = False";
   s21_decimal value_1 = {{0x230C8397, 0x4DAD68, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xF9ABE1BA, 0xF5407548, 0x654A31D, 0x0}};
   int code = 0;
@@ -92424,7 +95000,8 @@ START_TEST(s21_is_equal_9240) {
 }
 
 START_TEST(s21_is_equal_9241) {
-  char *example = "( -5.8111830680743802433577216 == -13654555845278839.4159 ) = False";
+  char *example =
+      "( -5.8111830680743802433577216 == -13654555845278839.4159 ) = False";
   s21_decimal value_1 = {{0x66B22100, 0xA74F9DFC, 0x3011A8, 0x80190000}};
   s21_decimal value_2 = {{0xA3C9F8AF, 0x66F345F6, 0x7, 0x80040000}};
   int code = 0;
@@ -92454,7 +95031,8 @@ START_TEST(s21_is_equal_9243) {
 }
 
 START_TEST(s21_is_equal_9244) {
-  char *example = "( 114845446597579660685 == 1820828004216181832336357459 ) = False";
+  char *example =
+      "( 114845446597579660685 == 1820828004216181832336357459 ) = False";
   s21_decimal value_1 = {{0x7D45D8D, 0x39CCFD34, 0x6, 0x0}};
   s21_decimal value_2 = {{0x725D3853, 0xE509D86A, 0x5E22753, 0x0}};
   int code = 0;
@@ -92474,7 +95052,8 @@ START_TEST(s21_is_equal_9245) {
 }
 
 START_TEST(s21_is_equal_9246) {
-  char *example = "( -23.52819940396378462 == -938.49029469356329454876060 ) = False";
+  char *example =
+      "( -23.52819940396378462 == -938.49029469356329454876060 ) = False";
   s21_decimal value_1 = {{0x1FC8295E, 0x20A6E545, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x4E381EF6, 0x9BB1CB19, 0x7C354, 0x80160000}};
   int code = 0;
@@ -92564,7 +95143,9 @@ START_TEST(s21_is_equal_9254) {
 }
 
 START_TEST(s21_is_equal_9255) {
-  char *example = "( -327.05798515266017890767759 == 1040642317504198891260229871 ) = False";
+  char *example =
+      "( -327.05798515266017890767759 == 1040642317504198891260229871 ) = "
+      "False";
   s21_decimal value_1 = {{0x998D938F, 0xE3E14758, 0x1B0DB8, 0x80170000}};
   s21_decimal value_2 = {{0x5CA38EF, 0x1227D245, 0x35CCC95, 0x0}};
   int code = 0;
@@ -92584,7 +95165,8 @@ START_TEST(s21_is_equal_9256) {
 }
 
 START_TEST(s21_is_equal_9257) {
-  char *example = "( 1910325186110030462221137546 == -7892.6338894318661784863 ) = False";
+  char *example =
+      "( 1910325186110030462221137546 == -7892.6338894318661784863 ) = False";
   s21_decimal value_1 = {{0xCCF1B68A, 0xD8C237C9, 0x62C2F17, 0x0}};
   s21_decimal value_2 = {{0xA8B3D51F, 0x9AFBCEB7, 0x10B6, 0x80130000}};
   int code = 0;
@@ -92594,7 +95176,8 @@ START_TEST(s21_is_equal_9257) {
 }
 
 START_TEST(s21_is_equal_9258) {
-  char *example = "( -81.65300744067342679993 == -4593873.73722987078814571 ) = False";
+  char *example =
+      "( -81.65300744067342679993 == -4593873.73722987078814571 ) = False";
   s21_decimal value_1 = {{0x9EB83FB9, 0xA44FA51C, 0x1BA, 0x80140000}};
   s21_decimal value_2 = {{0xD6470B6B, 0x707E7E6F, 0x6147, 0x80110000}};
   int code = 0;
@@ -92624,7 +95207,8 @@ START_TEST(s21_is_equal_9260) {
 }
 
 START_TEST(s21_is_equal_9261) {
-  char *example = "( 1788875482762614472978919182 == 13628147194392975 ) = False";
+  char *example =
+      "( 1788875482762614472978919182 == 13628147194392975 ) = False";
   s21_decimal value_1 = {{0x2DA2EF0E, 0x3C619714, 0x5C7B91E, 0x0}};
   s21_decimal value_2 = {{0x4877F18F, 0x306ABA, 0x0, 0x0}};
   int code = 0;
@@ -92714,7 +95298,8 @@ START_TEST(s21_is_equal_9269) {
 }
 
 START_TEST(s21_is_equal_9270) {
-  char *example = "( 178853993839558769895211 == 1889218708215898852047720689 ) = False";
+  char *example =
+      "( 178853993839558769895211 == 1889218708215898852047720689 ) = False";
   s21_decimal value_1 = {{0xB3A9E72B, 0xB1C66C01, 0x25DF, 0x0}};
   s21_decimal value_2 = {{0x358810F1, 0x632C6FA8, 0x61AB99F, 0x0}};
   int code = 0;
@@ -92754,7 +95339,9 @@ START_TEST(s21_is_equal_9273) {
 }
 
 START_TEST(s21_is_equal_9274) {
-  char *example = "( -9.6250444804392661610755915 == 1253481732252418230990145722 ) = False";
+  char *example =
+      "( -9.6250444804392661610755915 == 1253481732252418230990145722 ) = "
+      "False";
   s21_decimal value_1 = {{0x40ED774B, 0x116732CB, 0x4F9DD3, 0x80190000}};
   s21_decimal value_2 = {{0x229008BA, 0xDD2BB69A, 0x40CDB14, 0x0}};
   int code = 0;
@@ -92784,7 +95371,8 @@ START_TEST(s21_is_equal_9276) {
 }
 
 START_TEST(s21_is_equal_9277) {
-  char *example = "( 1137233432868136471950937465 == -8496.67965312094 ) = False";
+  char *example =
+      "( 1137233432868136471950937465 == -8496.67965312094 ) = False";
   s21_decimal value_1 = {{0xB4924D79, 0xED4BE12F, 0x3ACB28B, 0x0}};
   s21_decimal value_2 = {{0xBD3FDC5E, 0x304C4, 0x0, 0x800B0000}};
   int code = 0;
@@ -92794,7 +95382,9 @@ START_TEST(s21_is_equal_9277) {
 }
 
 START_TEST(s21_is_equal_9278) {
-  char *example = "( 1414242624429000959061564311 == 1768244519348925677674097582 ) = False";
+  char *example =
+      "( 1414242624429000959061564311 == 1768244519348925677674097582 ) = "
+      "False";
   s21_decimal value_1 = {{0x2A2A9B97, 0x4A97A195, 0x491D586, 0x0}};
   s21_decimal value_2 = {{0x9302EBAE, 0x77DAF1FE, 0x5B6A857, 0x0}};
   int code = 0;
@@ -92824,7 +95414,8 @@ START_TEST(s21_is_equal_9280) {
 }
 
 START_TEST(s21_is_equal_9281) {
-  char *example = "( 18107685541242561272 == 112645320378672396324382147 ) = False";
+  char *example =
+      "( 18107685541242561272 == 112645320378672396324382147 ) = False";
   s21_decimal value_1 = {{0xA63D62F8, 0xFB4B6C0F, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5B4925C3, 0xDC22C9B, 0x5D2D93, 0x0}};
   int code = 0;
@@ -92834,7 +95425,8 @@ START_TEST(s21_is_equal_9281) {
 }
 
 START_TEST(s21_is_equal_9282) {
-  char *example = "( -556124.9002800269388421 == 1383016348917719505352087755 ) = False";
+  char *example =
+      "( -556124.9002800269388421 == 1383016348917719505352087755 ) = False";
   s21_decimal value_1 = {{0x6D666A85, 0x79D56749, 0x12D, 0x80100000}};
   s21_decimal value_2 = {{0x5CE558CB, 0x8104B55D, 0x478011A, 0x0}};
   int code = 0;
@@ -92854,7 +95446,8 @@ START_TEST(s21_is_equal_9283) {
 }
 
 START_TEST(s21_is_equal_9284) {
-  char *example = "( 114603897251556768773627219 == 1495756285895142456912778982 ) = False";
+  char *example =
+      "( 114603897251556768773627219 == 1495756285895142456912778982 ) = False";
   s21_decimal value_1 = {{0xFDDCDD53, 0xB80173EE, 0x5ECC51, 0x0}};
   s21_decimal value_2 = {{0x697C16E6, 0xBBDB8160, 0x4D542B6, 0x0}};
   int code = 0;
@@ -92864,7 +95457,9 @@ START_TEST(s21_is_equal_9284) {
 }
 
 START_TEST(s21_is_equal_9285) {
-  char *example = "( -39973.824885323129198604271 == 1655908737843351523782584340 ) = False";
+  char *example =
+      "( -39973.824885323129198604271 == 1655908737843351523782584340 ) = "
+      "False";
   s21_decimal value_1 = {{0x7A51EFEF, 0x63A01037, 0x2110C9, 0x80150000}};
   s21_decimal value_2 = {{0x793C6814, 0x8CE55900, 0x559BC50, 0x0}};
   int code = 0;
@@ -92904,7 +95499,9 @@ START_TEST(s21_is_equal_9288) {
 }
 
 START_TEST(s21_is_equal_9289) {
-  char *example = "( 1948457945448259612587724123 == 1210011039458671887950135910 ) = False";
+  char *example =
+      "( 1948457945448259612587724123 == 1210011039458671887950135910 ) = "
+      "False";
   s21_decimal value_1 = {{0x8F360D5B, 0xDF618D5A, 0x64BBA04, 0x0}};
   s21_decimal value_2 = {{0xF0D5C266, 0xE2B86FB0, 0x3E8E5CD, 0x0}};
   int code = 0;
@@ -92924,7 +95521,8 @@ START_TEST(s21_is_equal_9290) {
 }
 
 START_TEST(s21_is_equal_9291) {
-  char *example = "( 169872801260309938329502135 == -1780264.21855804368 ) = False";
+  char *example =
+      "( 169872801260309938329502135 == -1780264.21855804368 ) = False";
   s21_decimal value_1 = {{0xD78641B7, 0x235A97E, 0x8C83F7, 0x0}};
   s21_decimal value_2 = {{0x63595BD0, 0x2787A16, 0x0, 0x800B0000}};
   int code = 0;
@@ -93094,7 +95692,8 @@ START_TEST(s21_is_equal_9307) {
 }
 
 START_TEST(s21_is_equal_9308) {
-  char *example = "( 5707.0821569028129491648163 == -6.513441064225560 ) = False";
+  char *example =
+      "( 5707.0821569028129491648163 == -6.513441064225560 ) = False";
   s21_decimal value_1 = {{0x3201FEA3, 0x6FC0AB3D, 0x2F3537, 0x160000}};
   s21_decimal value_2 = {{0xDE17011C, 0x25064, 0x0, 0x800E0000}};
   int code = 0;
@@ -93184,7 +95783,8 @@ START_TEST(s21_is_equal_9316) {
 }
 
 START_TEST(s21_is_equal_9317) {
-  char *example = "( 1985316886801303740028632586 == 19367316851405878829526 ) = False";
+  char *example =
+      "( 1985316886801303740028632586 == 19367316851405878829526 ) = False";
   s21_decimal value_1 = {{0x10313E0A, 0x164C9E13, 0x66A3734, 0x0}};
   s21_decimal value_2 = {{0x4439A1D6, 0xE7837FE9, 0x419, 0x0}};
   int code = 0;
@@ -93204,7 +95804,8 @@ START_TEST(s21_is_equal_9318) {
 }
 
 START_TEST(s21_is_equal_9319) {
-  char *example = "( 1116840811791705067110859508 == -9.363528672997093 ) = False";
+  char *example =
+      "( 1116840811791705067110859508 == -9.363528672997093 ) = False";
   s21_decimal value_1 = {{0xFED102F4, 0xB9270BDF, 0x39BD43D, 0x0}};
   s21_decimal value_2 = {{0x6865EEE5, 0x214414, 0x0, 0x800F0000}};
   int code = 0;
@@ -93244,7 +95845,9 @@ START_TEST(s21_is_equal_9322) {
 }
 
 START_TEST(s21_is_equal_9323) {
-  char *example = "( 1437565465554740857208886363 == 1638736369388045213646946778 ) = False";
+  char *example =
+      "( 1437565465554740857208886363 == 1638736369388045213646946778 ) = "
+      "False";
   s21_decimal value_1 = {{0xF918D45B, 0xACF89C6, 0x4A52054, 0x0}};
   s21_decimal value_2 = {{0x555B81DA, 0x9750C759, 0x54B87EC, 0x0}};
   int code = 0;
@@ -93294,7 +95897,8 @@ START_TEST(s21_is_equal_9327) {
 }
 
 START_TEST(s21_is_equal_9328) {
-  char *example = "( -5.362231984496372 == -462437371.32945749364293519 ) = False";
+  char *example =
+      "( -5.362231984496372 == -462437371.32945749364293519 ) = False";
   s21_decimal value_1 = {{0xECA39EF4, 0x130CEB, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x8C05BF8F, 0x35F122E, 0x26407E, 0x80110000}};
   int code = 0;
@@ -93314,7 +95918,8 @@ START_TEST(s21_is_equal_9329) {
 }
 
 START_TEST(s21_is_equal_9330) {
-  char *example = "( 0.89731202211043429211578 == 79228162514264337593543950335 ) = False";
+  char *example =
+      "( 0.89731202211043429211578 == 79228162514264337593543950335 ) = False";
   s21_decimal value_1 = {{0xC56E5DBA, 0x569582A8, 0x1300, 0x170000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 0;
@@ -93324,7 +95929,8 @@ START_TEST(s21_is_equal_9330) {
 }
 
 START_TEST(s21_is_equal_9331) {
-  char *example = "( 1691302150753162925161865950 == 164151986294016042638912 ) = False";
+  char *example =
+      "( 1691302150753162925161865950 == 164151986294016042638912 ) = False";
   s21_decimal value_1 = {{0xD49C62DE, 0x4F0D7807, 0x5770329, 0x0}};
   s21_decimal value_2 = {{0xF0CC9E40, 0xB26F1BE8, 0x22C2, 0x0}};
   int code = 0;
@@ -93334,7 +95940,8 @@ START_TEST(s21_is_equal_9331) {
 }
 
 START_TEST(s21_is_equal_9332) {
-  char *example = "( -7.3863162950707576370960261 == -764.58955112718 ) = False";
+  char *example =
+      "( -7.3863162950707576370960261 == -764.58955112718 ) = False";
   s21_decimal value_1 = {{0x42851785, 0x163E72FD, 0x3D1922, 0x80190000}};
   s21_decimal value_2 = {{0xFCDC010E, 0x4589, 0x0, 0x800B0000}};
   int code = 0;
@@ -93364,7 +95971,8 @@ START_TEST(s21_is_equal_9334) {
 }
 
 START_TEST(s21_is_equal_9335) {
-  char *example = "( -4.8824462193022311377065889 == 1582530455967314938 ) = False";
+  char *example =
+      "( -4.8824462193022311377065889 == 1582530455967314938 ) = False";
   s21_decimal value_1 = {{0xD8D2D7A1, 0x66253A6F, 0x2862FB, 0x80190000}};
   s21_decimal value_2 = {{0xAA2B33FA, 0x15F64710, 0x0, 0x0}};
   int code = 0;
@@ -93384,7 +95992,8 @@ START_TEST(s21_is_equal_9336) {
 }
 
 START_TEST(s21_is_equal_9337) {
-  char *example = "( -3.831670872998723302145 == 1783046176611958314392391121 ) = False";
+  char *example =
+      "( -3.831670872998723302145 == 1783046176611958314392391121 ) = False";
   s21_decimal value_1 = {{0x13C9B301, 0xB71D85EE, 0xCF, 0x80150000}};
   s21_decimal value_2 = {{0xA7348DD1, 0xEA8E3CF5, 0x5C2E6B6, 0x0}};
   int code = 0;
@@ -93434,7 +96043,8 @@ START_TEST(s21_is_equal_9341) {
 }
 
 START_TEST(s21_is_equal_9342) {
-  char *example = "( 167298463839512971137 == 1936096281968331456627463740 ) = False";
+  char *example =
+      "( 167298463839512971137 == 1936096281968331456627463740 ) = False";
   s21_decimal value_1 = {{0xEB44781, 0x11BB8A7A, 0x9, 0x0}};
   s21_decimal value_2 = {{0x19E1D63C, 0xC0A7AECC, 0x6418055, 0x0}};
   int code = 0;
@@ -93464,7 +96074,8 @@ START_TEST(s21_is_equal_9344) {
 }
 
 START_TEST(s21_is_equal_9345) {
-  char *example = "( 134629703901003790929569 == -252.57350012532760398732573 ) = False";
+  char *example =
+      "( 134629703901003790929569 == -252.57350012532760398732573 ) = False";
   s21_decimal value_1 = {{0x9873CEA1, 0x4A769F38, 0x1C82, 0x0}};
   s21_decimal value_2 = {{0xBDF71D1D, 0xB00FC6F2, 0x14E473, 0x80170000}};
   int code = 0;
@@ -93474,7 +96085,8 @@ START_TEST(s21_is_equal_9345) {
 }
 
 START_TEST(s21_is_equal_9346) {
-  char *example = "( -1.0766845982855747734622125 == 1439658836474920471701 ) = False";
+  char *example =
+      "( -1.0766845982855747734622125 == 1439658836474920471701 ) = False";
   s21_decimal value_1 = {{0x4F004FAD, 0xE3E8D470, 0x8E7F7, 0x80190000}};
   s21_decimal value_2 = {{0x6FD08C95, 0xB47A422, 0x4E, 0x0}};
   int code = 0;
@@ -93494,7 +96106,9 @@ START_TEST(s21_is_equal_9347) {
 }
 
 START_TEST(s21_is_equal_9348) {
-  char *example = "( 3.59648180569509170899094152 == 1346716907503236103670757936 ) = False";
+  char *example =
+      "( 3.59648180569509170899094152 == 1346716907503236103670757936 ) = "
+      "False";
   s21_decimal value_1 = {{0xD2148A88, 0xEF6901FC, 0x1297E76, 0x1A0000}};
   s21_decimal value_2 = {{0x263E7A30, 0xD786A7E7, 0x459FA65, 0x0}};
   int code = 0;
@@ -93554,7 +96168,8 @@ START_TEST(s21_is_equal_9353) {
 }
 
 START_TEST(s21_is_equal_9354) {
-  char *example = "( 118361845223263409581927 == 1715706221422682533292800756 ) = False";
+  char *example =
+      "( 118361845223263409581927 == 1715706221422682533292800756 ) = False";
   s21_decimal value_1 = {{0x1D30AF67, 0x689292A0, 0x1910, 0x0}};
   s21_decimal value_2 = {{0x5341FAF4, 0xA1737C3B, 0x58B32EC, 0x0}};
   int code = 0;
@@ -93564,7 +96179,8 @@ START_TEST(s21_is_equal_9354) {
 }
 
 START_TEST(s21_is_equal_9355) {
-  char *example = "( 1233975779137264687978910697 == -9728.163787580591039302852 ) = False";
+  char *example =
+      "( 1233975779137264687978910697 == -9728.163787580591039302852 ) = False";
   s21_decimal value_1 = {{0x58DC13E9, 0x6D9774F, 0x3FCB889, 0x0}};
   s21_decimal value_2 = {{0x458FCCC4, 0xD0CDBFCF, 0x80C04, 0x80150000}};
   int code = 0;
@@ -93594,7 +96210,8 @@ START_TEST(s21_is_equal_9357) {
 }
 
 START_TEST(s21_is_equal_9358) {
-  char *example = "( 10793805025098847537879333 == 196671257988672385748 ) = False";
+  char *example =
+      "( 10793805025098847537879333 == 196671257988672385748 ) = False";
   s21_decimal value_1 = {{0x18D85925, 0x57C6F969, 0x8EDAD, 0x0}};
   s21_decimal value_2 = {{0xB805F2D4, 0xA95CAB21, 0xA, 0x0}};
   int code = 0;
@@ -93684,7 +96301,8 @@ START_TEST(s21_is_equal_9366) {
 }
 
 START_TEST(s21_is_equal_9367) {
-  char *example = "( 1852682623482776522497244242 == 1644202851896308899815597 ) = False";
+  char *example =
+      "( 1852682623482776522497244242 == 1644202851896308899815597 ) = False";
   s21_decimal value_1 = {{0xA7F4BC52, 0x43EB4220, 0x5FC80CE, 0x0}};
   s21_decimal value_2 = {{0xADD8A0AD, 0x6A4AA7A1, 0x15C2C, 0x0}};
   int code = 0;
@@ -93794,7 +96412,8 @@ START_TEST(s21_is_equal_9377) {
 }
 
 START_TEST(s21_is_equal_9378) {
-  char *example = "( 1991965948995819 == 1762900954918950974322280251 ) = False";
+  char *example =
+      "( 1991965948995819 == 1762900954918950974322280251 ) = False";
   s21_decimal value_1 = {{0xB6CB68EB, 0x713AE, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6DA2873B, 0x428F05B9, 0x5B23CCC, 0x0}};
   int code = 0;
@@ -93834,7 +96453,8 @@ START_TEST(s21_is_equal_9381) {
 }
 
 START_TEST(s21_is_equal_9382) {
-  char *example = "( 1729612760221388539856603391 == 0.33395700634558935582963 ) = False";
+  char *example =
+      "( 1729612760221388539856603391 == 0.33395700634558935582963 ) = False";
   s21_decimal value_1 = {{0xC3DEC8FF, 0x9C0A6B01, 0x596B3BF, 0x0}};
   s21_decimal value_2 = {{0x4CA3C8F3, 0x62727520, 0x712, 0x170000}};
   int code = 0;
@@ -93924,7 +96544,9 @@ START_TEST(s21_is_equal_9390) {
 }
 
 START_TEST(s21_is_equal_9391) {
-  char *example = "( 1290260637706155193756516560 == 0.49539676616875661995294789 ) = False";
+  char *example =
+      "( 1290260637706155193756516560 == 0.49539676616875661995294789 ) = "
+      "False";
   s21_decimal value_1 = {{0x307B80D0, 0x52DC83D3, 0x42B4751, 0x0}};
   s21_decimal value_2 = {{0xFFC04045, 0x402820A2, 0x28FA6F, 0x1A0000}};
   int code = 0;
@@ -93934,7 +96556,9 @@ START_TEST(s21_is_equal_9391) {
 }
 
 START_TEST(s21_is_equal_9392) {
-  char *example = "( 1166166946829573433736939074 == 1828171170995948029242421247 ) = False";
+  char *example =
+      "( 1166166946829573433736939074 == 1828171170995948029242421247 ) = "
+      "False";
   s21_decimal value_1 = {{0xC245C642, 0xDC967126, 0x3C4A174, 0x0}};
   s21_decimal value_2 = {{0x3306AFFF, 0xC37208BF, 0x5E83A4D, 0x0}};
   int code = 0;
@@ -93954,7 +96578,9 @@ START_TEST(s21_is_equal_9393) {
 }
 
 START_TEST(s21_is_equal_9394) {
-  char *example = "( 1890977002515841942043501413 == 1660688879424714534554957094 ) = False";
+  char *example =
+      "( 1890977002515841942043501413 == 1660688879424714534554957094 ) = "
+      "False";
   s21_decimal value_1 = {{0xF5282365, 0xB65F336F, 0x61C2DF4, 0x0}};
   s21_decimal value_2 = {{0x7D73F526, 0x8B740F20, 0x55DB08C, 0x0}};
   int code = 0;
@@ -94034,7 +96660,9 @@ START_TEST(s21_is_equal_9401) {
 }
 
 START_TEST(s21_is_equal_9402) {
-  char *example = "( 1327114171660339745999845309 == 1729239328409109521874052769 ) = False";
+  char *example =
+      "( 1327114171660339745999845309 == 1729239328409109521874052769 ) = "
+      "False";
   s21_decimal value_1 = {{0x997077BD, 0x670BAF63, 0x449C35B, 0x0}};
   s21_decimal value_2 = {{0xFE0866A1, 0xD496D5C6, 0x59664AB, 0x0}};
   int code = 0;
@@ -94054,7 +96682,8 @@ START_TEST(s21_is_equal_9403) {
 }
 
 START_TEST(s21_is_equal_9404) {
-  char *example = "( -487364509.70172541 == -3.6077860551916852244665435 ) = False";
+  char *example =
+      "( -487364509.70172541 == -3.6077860551916852244665435 ) = False";
   s21_decimal value_1 = {{0x3FB0BC7D, 0xAD258B, 0x0, 0x80080000}};
   s21_decimal value_2 = {{0xE1A8545B, 0xBD4CA6E8, 0x1DD7C8, 0x80190000}};
   int code = 0;
@@ -94094,7 +96723,9 @@ START_TEST(s21_is_equal_9407) {
 }
 
 START_TEST(s21_is_equal_9408) {
-  char *example = "( 1392976631096868030226087050 == 1791849758648208091263089039 ) = False";
+  char *example =
+      "( 1392976631096868030226087050 == 1791849758648208091263089039 ) = "
+      "False";
   s21_decimal value_1 = {{0x9D33BC8A, 0x7B9B4843, 0x4803E46, 0x0}};
   s21_decimal value_2 = {{0x6DFD398F, 0xE00DD75, 0x5CA2EF2, 0x0}};
   int code = 0;
@@ -94294,7 +96925,9 @@ START_TEST(s21_is_equal_9427) {
 }
 
 START_TEST(s21_is_equal_9428) {
-  char *example = "( 1684133912368935913853895341 == 1469718938999840987471523054 ) = False";
+  char *example =
+      "( 1684133912368935913853895341 == 1469718938999840987471523054 ) = "
+      "False";
   s21_decimal value_1 = {{0x5B8542AD, 0x53CCEC3A, 0x571153A, 0x0}};
   s21_decimal value_2 = {{0x4045ACEE, 0x5490E4E3, 0x4BFB917, 0x0}};
   int code = 0;
@@ -94304,7 +96937,8 @@ START_TEST(s21_is_equal_9428) {
 }
 
 START_TEST(s21_is_equal_9429) {
-  char *example = "( -60.754441844582934203110999 == -7.74277350781531188773 ) = False";
+  char *example =
+      "( -60.754441844582934203110999 == -7.74277350781531188773 ) = False";
   s21_decimal value_1 = {{0xFB0C9657, 0xE44D23AA, 0x324140, 0x80180000}};
   s21_decimal value_2 = {{0x13AFEE25, 0xF941BC3D, 0x29, 0x80140000}};
   int code = 0;
@@ -94394,7 +97028,8 @@ START_TEST(s21_is_equal_9437) {
 }
 
 START_TEST(s21_is_equal_9438) {
-  char *example = "( 1.1522228358625312E-10 == -2.554257125686832898307 ) = False";
+  char *example =
+      "( 1.1522228358625312E-10 == -2.554257125686832898307 ) = False";
   s21_decimal value_1 = {{0xD8563820, 0x28EF67, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x25F5A103, 0x77703AC7, 0x8A, 0x80150000}};
   int code = 0;
@@ -94424,7 +97059,8 @@ START_TEST(s21_is_equal_9440) {
 }
 
 START_TEST(s21_is_equal_9441) {
-  char *example = "( -5.3284221695581 == 1754867918172495827132598872 ) = False";
+  char *example =
+      "( -5.3284221695581 == 1754867918172495827132598872 ) = False";
   s21_decimal value_1 = {{0x331B365D, 0x3076, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xC7F1CA58, 0x77239586, 0x5AB97BC, 0x0}};
   int code = 0;
@@ -94444,7 +97080,9 @@ START_TEST(s21_is_equal_9442) {
 }
 
 START_TEST(s21_is_equal_9443) {
-  char *example = "( -26645.957472695694635289585 == -651053.92673916683655585956 ) = False";
+  char *example =
+      "( -26645.957472695694635289585 == -651053.92673916683655585956 ) = "
+      "False";
   s21_decimal value_1 = {{0xD98BCBF1, 0x3FBDFB7F, 0x160A80, 0x80150000}};
   s21_decimal value_2 = {{0xBB4020A4, 0x68AC4D3D, 0x35DA9A, 0x80140000}};
   int code = 0;
@@ -94454,7 +97092,9 @@ START_TEST(s21_is_equal_9443) {
 }
 
 START_TEST(s21_is_equal_9444) {
-  char *example = "( 1944550667535180170582173724 == 1325777790512425561950950497 ) = False";
+  char *example =
+      "( 1944550667535180170582173724 == 1325777790512425561950950497 ) = "
+      "False";
   s21_decimal value_1 = {{0x9BAE281C, 0xE998E137, 0x6487E9E, 0x0}};
   s21_decimal value_2 = {{0xF9229461, 0x90B6636, 0x448A85E, 0x0}};
   int code = 0;
@@ -94464,7 +97104,8 @@ START_TEST(s21_is_equal_9444) {
 }
 
 START_TEST(s21_is_equal_9445) {
-  char *example = "( -77285.309948787946807597039 == 11730645690358729190042135 ) = False";
+  char *example =
+      "( -77285.309948787946807597039 == 11730645690358729190042135 ) = False";
   s21_decimal value_1 = {{0xA97797EF, 0xC216537, 0x3FEDCD, 0x80150000}};
   s21_decimal value_2 = {{0xC32A6A17, 0x93BD4CB2, 0x9B40F, 0x0}};
   int code = 0;
@@ -94544,7 +97185,8 @@ START_TEST(s21_is_equal_9452) {
 }
 
 START_TEST(s21_is_equal_9453) {
-  char *example = "( -5320.3933161827421816799147 == -949130082.2564651217 ) = False";
+  char *example =
+      "( -5320.3933161827421816799147 == -949130082.2564651217 ) = False";
   s21_decimal value_1 = {{0xB5A2BFAB, 0xFEF60309, 0x2C025E, 0x80160000}};
   s21_decimal value_2 = {{0xA156C0D1, 0x83B7DFCF, 0x0, 0x800A0000}};
   int code = 0;
@@ -94594,7 +97236,8 @@ START_TEST(s21_is_equal_9457) {
 }
 
 START_TEST(s21_is_equal_9458) {
-  char *example = "( 128326861909779331814803551 == 14398147303580112538 ) = False";
+  char *example =
+      "( 128326861909779331814803551 == 14398147303580112538 ) = False";
   s21_decimal value_1 = {{0x63E4485F, 0x1FA06A7F, 0x6A2645, 0x0}};
   s21_decimal value_2 = {{0x1DA4169A, 0xC7D07EB0, 0x0, 0x0}};
   int code = 0;
@@ -94604,7 +97247,8 @@ START_TEST(s21_is_equal_9458) {
 }
 
 START_TEST(s21_is_equal_9459) {
-  char *example = "( 1461400494505020517761811772 == -39.92734055230339948745053 ) = False";
+  char *example =
+      "( 1461400494505020517761811772 == -39.92734055230339948745053 ) = False";
   s21_decimal value_1 = {{0xE772053C, 0x8CF9CD7C, 0x4B8D797, 0x0}};
   s21_decimal value_2 = {{0x1930115D, 0x8BFDD455, 0x34D7E, 0x80170000}};
   int code = 0;
@@ -94624,7 +97268,8 @@ START_TEST(s21_is_equal_9460) {
 }
 
 START_TEST(s21_is_equal_9461) {
-  char *example = "( 162728826661357623 == 1374340660045049257634929853 ) = False";
+  char *example =
+      "( 162728826661357623 == 1374340660045049257634929853 ) = False";
   s21_decimal value_1 = {{0x73DDC837, 0x2422101, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFF099CBD, 0x77C1C16C, 0x470D3F4, 0x0}};
   int code = 0;
@@ -94664,7 +97309,8 @@ START_TEST(s21_is_equal_9464) {
 }
 
 START_TEST(s21_is_equal_9465) {
-  char *example = "( -750.3428049955182 == -8.0458231614721373609226402 ) = False";
+  char *example =
+      "( -750.3428049955182 == -8.0458231614721373609226402 ) = False";
   s21_decimal value_1 = {{0xFB83E96E, 0x1AA853, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xBB4D70A2, 0x79BDB833, 0x428DB1, 0x80190000}};
   int code = 0;
@@ -94674,7 +97320,9 @@ START_TEST(s21_is_equal_9465) {
 }
 
 START_TEST(s21_is_equal_9466) {
-  char *example = "( -3404.0712757575362355701042 == 1730009297511995443874887488 ) = False";
+  char *example =
+      "( -3404.0712757575362355701042 == 1730009297511995443874887488 ) = "
+      "False";
   s21_decimal value_1 = {{0xF4ECA532, 0xBC79F4EA, 0x1C2866, 0x80160000}};
   s21_decimal value_2 = {{0xC76BF740, 0xF06AE960, 0x59707B7, 0x0}};
   int code = 0;
@@ -94784,7 +97432,8 @@ START_TEST(s21_is_equal_9476) {
 }
 
 START_TEST(s21_is_equal_9477) {
-  char *example = "( 15865782466873636442 == -7413.6795236032096819703686 ) = False";
+  char *example =
+      "( 15865782466873636442 == -7413.6795236032096819703686 ) = False";
   s21_decimal value_1 = {{0xD59FB65A, 0xDC2E9517, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA9136F86, 0xB9097BA8, 0x3D5313, 0x80160000}};
   int code = 0;
@@ -94794,7 +97443,8 @@ START_TEST(s21_is_equal_9477) {
 }
 
 START_TEST(s21_is_equal_9478) {
-  char *example = "( -8975.207769327537930969491 == 107114234852654950 ) = False";
+  char *example =
+      "( -8975.207769327537930969491 == 107114234852654950 ) = False";
   s21_decimal value_1 = {{0x1B892193, 0xFCF42A9E, 0x76C92, 0x80150000}};
   s21_decimal value_2 = {{0x3EC7BF66, 0x17C8BD4, 0x0, 0x0}};
   int code = 0;
@@ -94804,7 +97454,8 @@ START_TEST(s21_is_equal_9478) {
 }
 
 START_TEST(s21_is_equal_9479) {
-  char *example = "( 0.96998736105056514842249289 == 1175630645559026865705 ) = False";
+  char *example =
+      "( 0.96998736105056514842249289 == 1175630645559026865705 ) = False";
   s21_decimal value_1 = {{0x7BC34849, 0x54ACB57, 0x503C48, 0x1A0000}};
   s21_decimal value_2 = {{0xB8F55629, 0xBB271360, 0x3F, 0x0}};
   int code = 0;
@@ -94854,7 +97505,8 @@ START_TEST(s21_is_equal_9483) {
 }
 
 START_TEST(s21_is_equal_9484) {
-  char *example = "( 1139442838154092128270652 == -4.9816489300370575167196138 ) = False";
+  char *example =
+      "( 1139442838154092128270652 == -4.9816489300370575167196138 ) = False";
   s21_decimal value_1 = {{0x44E0793C, 0x51ED5241, 0xF149, 0x0}};
   s21_decimal value_2 = {{0x86D60BEA, 0x4BD73ECE, 0x29350D, 0x80190000}};
   int code = 0;
@@ -94884,7 +97536,9 @@ START_TEST(s21_is_equal_9486) {
 }
 
 START_TEST(s21_is_equal_9487) {
-  char *example = "( 1715773205888686984820226205 == -610698.58597045930322275795 ) = False";
+  char *example =
+      "( 1715773205888686984820226205 == -610698.58597045930322275795 ) = "
+      "False";
   s21_decimal value_1 = {{0x85ECF89D, 0xDDA8205E, 0x58B411B, 0x0}};
   s21_decimal value_2 = {{0xA2BBADD3, 0xAB10232F, 0x32840B, 0x80140000}};
   int code = 0;
@@ -95054,7 +97708,8 @@ START_TEST(s21_is_equal_9503) {
 }
 
 START_TEST(s21_is_equal_9504) {
-  char *example = "( 1581257628339262932383351361 == 1286375384523455785900 ) = False";
+  char *example =
+      "( 1581257628339262932383351361 == 1286375384523455785900 ) = False";
   s21_decimal value_1 = {{0x571AC241, 0xCB9489BD, 0x51BFC53, 0x0}};
   s21_decimal value_2 = {{0x171AEBAC, 0xBC0B6CB7, 0x45, 0x0}};
   int code = 0;
@@ -95064,7 +97719,8 @@ START_TEST(s21_is_equal_9504) {
 }
 
 START_TEST(s21_is_equal_9505) {
-  char *example = "( 1438896576207227715354029542 == 0.3699236005605549 ) = False";
+  char *example =
+      "( 1438896576207227715354029542 == 0.3699236005605549 ) = False";
   s21_decimal value_1 = {{0x884AEDE6, 0xB1FEA014, 0x4A63A33, 0x0}};
   s21_decimal value_2 = {{0x800DF0AD, 0xD246F, 0x0, 0x100000}};
   int code = 0;
@@ -95094,7 +97750,9 @@ START_TEST(s21_is_equal_9507) {
 }
 
 START_TEST(s21_is_equal_9508) {
-  char *example = "( 1045162857671995082090103878 == -60.470350106296330122742636 ) = False";
+  char *example =
+      "( 1045162857671995082090103878 == -60.470350106296330122742636 ) = "
+      "False";
   s21_decimal value_1 = {{0xF2CE4446, 0xB61849B, 0x36089D8, 0x0}};
   s21_decimal value_2 = {{0x465CCB6C, 0x3F707E8A, 0x320518, 0x80180000}};
   int code = 0;
@@ -95114,7 +97772,9 @@ START_TEST(s21_is_equal_9509) {
 }
 
 START_TEST(s21_is_equal_9510) {
-  char *example = "( -6.7694763003299835092537901 == 1755655423504388599851700408 ) = False";
+  char *example =
+      "( -6.7694763003299835092537901 == 1755655423504388599851700408 ) = "
+      "False";
   s21_decimal value_1 = {{0x4A4E122D, 0x74A8FB3D, 0x37FEEC, 0x80190000}};
   s21_decimal value_2 = {{0x4786D0B8, 0x370853EF, 0x5AC3E7F, 0x0}};
   int code = 0;
@@ -95124,7 +97784,8 @@ START_TEST(s21_is_equal_9510) {
 }
 
 START_TEST(s21_is_equal_9511) {
-  char *example = "( 1181501504525169503596345821 == 11804498509203428 ) = False";
+  char *example =
+      "( 1181501504525169503596345821 == 11804498509203428 ) = False";
   s21_decimal value_1 = {{0x85BA79DD, 0xE669F10F, 0x3D150AC, 0x0}};
   s21_decimal value_2 = {{0xFC6487E4, 0x29F020, 0x0, 0x0}};
   int code = 0;
@@ -95184,7 +97845,9 @@ START_TEST(s21_is_equal_9516) {
 }
 
 START_TEST(s21_is_equal_9517) {
-  char *example = "( 1590184806905262574357606463 == 1032125477963741534642343220 ) = False";
+  char *example =
+      "( 1590184806905262574357606463 == 1032125477963741534642343220 ) = "
+      "False";
   s21_decimal value_1 = {{0xDAE2703F, 0x1D710F42, 0x5235EBB, 0x0}};
   s21_decimal value_2 = {{0x75198D34, 0x46384A1F, 0x355C112, 0x0}};
   int code = 0;
@@ -95314,7 +97977,9 @@ START_TEST(s21_is_equal_9529) {
 }
 
 START_TEST(s21_is_equal_9530) {
-  char *example = "( 1965773394585992344974132054 == 3409316925.00154861774343956 ) = False";
+  char *example =
+      "( 1965773394585992344974132054 == 3409316925.00154861774343956 ) = "
+      "False";
   s21_decimal value_1 = {{0x81500356, 0x404FBFE4, 0x65A0CB5, 0x0}};
   s21_decimal value_2 = {{0x52EE8F14, 0x1579E805, 0x11A0318, 0x110000}};
   int code = 0;
@@ -95324,7 +97989,8 @@ START_TEST(s21_is_equal_9530) {
 }
 
 START_TEST(s21_is_equal_9531) {
-  char *example = "( 138032175479489357752057095 == 168730311210664023378398 ) = False";
+  char *example =
+      "( 138032175479489357752057095 == 168730311210664023378398 ) = False";
   s21_decimal value_1 = {{0xD5C03D07, 0x39F492AB, 0x722D73, 0x0}};
   s21_decimal value_2 = {{0xA39549DE, 0xE374AA98, 0x23BA, 0x0}};
   int code = 0;
@@ -95344,7 +98010,8 @@ START_TEST(s21_is_equal_9532) {
 }
 
 START_TEST(s21_is_equal_9533) {
-  char *example = "( -9456488.6181285197784 == -4.5628126962301479553415134 ) = False";
+  char *example =
+      "( -9456488.6181285197784 == -4.5628126962301479553415134 ) = False";
   s21_decimal value_1 = {{0xA4BFF7D8, 0x2059F6F4, 0x5, 0x800D0000}};
   s21_decimal value_2 = {{0xB05537DE, 0xB80D03B0, 0x25BE21, 0x80190000}};
   int code = 0;
@@ -95374,7 +98041,8 @@ START_TEST(s21_is_equal_9535) {
 }
 
 START_TEST(s21_is_equal_9536) {
-  char *example = "( 11408921759845812242960 == 141221361449674561180569 ) = False";
+  char *example =
+      "( 11408921759845812242960 == 141221361449674561180569 ) = False";
   s21_decimal value_1 = {{0x8A1B8A10, 0x7A986585, 0x26A, 0x0}};
   s21_decimal value_2 = {{0x7FDA5399, 0xA0168FA3, 0x1DE7, 0x0}};
   int code = 0;
@@ -95394,7 +98062,9 @@ START_TEST(s21_is_equal_9537) {
 }
 
 START_TEST(s21_is_equal_9538) {
-  char *example = "( -50.471413581607275127748703 == -8108530.3719333842192901930 ) = False";
+  char *example =
+      "( -50.471413581607275127748703 == -8108530.3719333842192901930 ) = "
+      "False";
   s21_decimal value_1 = {{0x4F79B85F, 0xD00BC607, 0x29BFBC, 0x80180000}};
   s21_decimal value_2 = {{0xBF07EA51, 0x4FEF5648, 0x6B50C, 0x80120000}};
   int code = 0;
@@ -95404,7 +98074,8 @@ START_TEST(s21_is_equal_9538) {
 }
 
 START_TEST(s21_is_equal_9539) {
-  char *example = "( 8.41252183660657E-10 == -850598.59891806573966572 ) = False";
+  char *example =
+      "( 8.41252183660657E-10 == -850598.59891806573966572 ) = False";
   s21_decimal value_1 = {{0x4992D871, 0x2FD1D, 0x0, 0x180000}};
   s21_decimal value_2 = {{0x4B4834EC, 0x1AAFC125, 0x1203, 0x80110000}};
   int code = 0;
@@ -95484,7 +98155,8 @@ START_TEST(s21_is_equal_9546) {
 }
 
 START_TEST(s21_is_equal_9547) {
-  char *example = "( 1862311979131619091127822867 == 15753854144456171911750370 ) = False";
+  char *example =
+      "( 1862311979131619091127822867 == 15753854144456171911750370 ) = False";
   s21_decimal value_1 = {{0x52216A13, 0xAE56EFA9, 0x60477E6, 0x0}};
   s21_decimal value_2 = {{0x27A1A2E2, 0x24F8D660, 0xD0802, 0x0}};
   int code = 0;
@@ -95584,7 +98256,8 @@ START_TEST(s21_is_equal_9556) {
 }
 
 START_TEST(s21_is_equal_9557) {
-  char *example = "( 169982474642791592619 == 1013358069179720265380248243 ) = False";
+  char *example =
+      "( 169982474642791592619 == 1013358069179720265380248243 ) = False";
   s21_decimal value_1 = {{0xF56FF2AB, 0x36FB1014, 0x9, 0x0}};
   s21_decimal value_2 = {{0x97A1BAB3, 0x169A810, 0x3463AEB, 0x0}};
   int code = 0;
@@ -95634,7 +98307,9 @@ START_TEST(s21_is_equal_9561) {
 }
 
 START_TEST(s21_is_equal_9562) {
-  char *example = "( 0.89759689673118444805553557 == -98892.192098678204943715593 ) = False";
+  char *example =
+      "( 0.89759689673118444805553557 == -98892.192098678204943715593 ) = "
+      "False";
   s21_decimal value_1 = {{0x4BE9FD95, 0x86FA9372, 0x4A3F5A, 0x1A0000}};
   s21_decimal value_2 = {{0xDB3E4D09, 0x79CB8A76, 0x51CD3C, 0x80150000}};
   int code = 0;
@@ -95694,7 +98369,8 @@ START_TEST(s21_is_equal_9567) {
 }
 
 START_TEST(s21_is_equal_9568) {
-  char *example = "( 1279739973308104678753813183 == 10494948905767440018 ) = False";
+  char *example =
+      "( 1279739973308104678753813183 == 10494948905767440018 ) = False";
   s21_decimal value_1 = {{0xE8B5C2BF, 0xF6BF7DCE, 0x422937A, 0x0}};
   s21_decimal value_2 = {{0xD8248E92, 0x91A58C6C, 0x0, 0x0}};
   int code = 0;
@@ -95704,7 +98380,8 @@ START_TEST(s21_is_equal_9568) {
 }
 
 START_TEST(s21_is_equal_9569) {
-  char *example = "( -5275.408287915395208993580 == 160397507669875157 ) = False";
+  char *example =
+      "( -5275.408287915395208993580 == 160397507669875157 ) = False";
   s21_decimal value_1 = {{0xFC4E091E, 0xBAE92CD, 0x6FB6, 0x80140000}};
   s21_decimal value_2 = {{0xF38559D5, 0x239D8AE, 0x0, 0x0}};
   int code = 0;
@@ -95714,7 +98391,9 @@ START_TEST(s21_is_equal_9569) {
 }
 
 START_TEST(s21_is_equal_9570) {
-  char *example = "( 1501613804430283419464072509 == -3.4513111452788678197328154 ) = False";
+  char *example =
+      "( 1501613804430283419464072509 == -3.4513111452788678197328154 ) = "
+      "False";
   s21_decimal value_1 = {{0x4A157D3D, 0x732B20CE, 0x4DA1B17, 0x0}};
   s21_decimal value_2 = {{0x7741391A, 0x855449DF, 0x1C8C6F, 0x80190000}};
   int code = 0;
@@ -95754,7 +98433,8 @@ START_TEST(s21_is_equal_9573) {
 }
 
 START_TEST(s21_is_equal_9574) {
-  char *example = "( 1273049559462747678285558630 == -85.928748778627 ) = False";
+  char *example =
+      "( 1273049559462747678285558630 == -85.928748778627 ) = False";
   s21_decimal value_1 = {{0x81D4F366, 0xE70E415F, 0x41D0ABA, 0x0}};
   s21_decimal value_2 = {{0xD88C0483, 0x4E26, 0x0, 0x800C0000}};
   int code = 0;
@@ -95774,7 +98454,8 @@ START_TEST(s21_is_equal_9575) {
 }
 
 START_TEST(s21_is_equal_9576) {
-  char *example = "( 1657996743721698830761164 == 17478.1175342988809 ) = False";
+  char *example =
+      "( 1657996743721698830761164 == 17478.1175342988809 ) = False";
   s21_decimal value_1 = {{0x113EBCCC, 0x2EFED3A7, 0x15F18, 0x0}};
   s21_decimal value_2 = {{0x8DBE7E09, 0x26CF28D, 0x0, 0xD0000}};
   int code = 0;
@@ -95794,7 +98475,8 @@ START_TEST(s21_is_equal_9577) {
 }
 
 START_TEST(s21_is_equal_9578) {
-  char *example = "( -1.073533517747032082305923 == 136211702910783068806981954 ) = False";
+  char *example =
+      "( -1.073533517747032082305923 == 136211702910783068806981954 ) = False";
   s21_decimal value_1 = {{0x5A9B5383, 0x5E5D2694, 0xE354, 0x80180000}};
   s21_decimal value_2 = {{0x2DC62942, 0x35EFD959, 0x70ABF3, 0x0}};
   int code = 0;
@@ -95804,7 +98486,8 @@ START_TEST(s21_is_equal_9578) {
 }
 
 START_TEST(s21_is_equal_9579) {
-  char *example = "( 1583643719595420 == 1520396721058886797161215259 ) = False";
+  char *example =
+      "( 1583643719595420 == 1520396721058886797161215259 ) = False";
   s21_decimal value_1 = {{0xC95B759C, 0x5A050, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA2E5351B, 0x668D5635, 0x4E9A487, 0x0}};
   int code = 0;
@@ -95814,7 +98497,8 @@ START_TEST(s21_is_equal_9579) {
 }
 
 START_TEST(s21_is_equal_9580) {
-  char *example = "( 1266728361365662099400021542 == -676.683366831916 ) = False";
+  char *example =
+      "( 1266728361365662099400021542 == -676.683366831916 ) = False";
   s21_decimal value_1 = {{0x4B93D626, 0x112C54EC, 0x417D02A, 0x0}};
   s21_decimal value_2 = {{0x9FB4972C, 0x26770, 0x0, 0x800C0000}};
   int code = 0;
@@ -95824,7 +98508,8 @@ START_TEST(s21_is_equal_9580) {
 }
 
 START_TEST(s21_is_equal_9581) {
-  char *example = "( 1819073577473696244250566466 == 1066610383276510 ) = False";
+  char *example =
+      "( 1819073577473696244250566466 == 1066610383276510 ) = False";
   s21_decimal value_1 = {{0x3101DF42, 0x3AFB5D09, 0x5E0B3D0, 0x0}};
   s21_decimal value_2 = {{0x950249DE, 0x3CA13, 0x0, 0x0}};
   int code = 0;
@@ -95854,7 +98539,9 @@ START_TEST(s21_is_equal_9583) {
 }
 
 START_TEST(s21_is_equal_9584) {
-  char *example = "( 1687884162320310078154760833 == 1298748595835190674672946807 ) = False";
+  char *example =
+      "( 1687884162320310078154760833 == 1298748595835190674672946807 ) = "
+      "False";
   s21_decimal value_1 = {{0x4F2C6281, 0xC8DA1736, 0x5742F5F, 0x0}};
   s21_decimal value_2 = {{0x36858E77, 0x74B2A00D, 0x4324CB6, 0x0}};
   int code = 0;
@@ -95874,7 +98561,8 @@ START_TEST(s21_is_equal_9585) {
 }
 
 START_TEST(s21_is_equal_9586) {
-  char *example = "( 182023321694613437462886 == 13224040669293422422500 ) = False";
+  char *example =
+      "( 182023321694613437462886 == 13224040669293422422500 ) = False";
   s21_decimal value_1 = {{0x37D4B966, 0x8108D85C, 0x268B, 0x0}};
   s21_decimal value_2 = {{0x8955A9E4, 0xE06E2CC0, 0x2CC, 0x0}};
   int code = 0;
@@ -95894,7 +98582,8 @@ START_TEST(s21_is_equal_9587) {
 }
 
 START_TEST(s21_is_equal_9588) {
-  char *example = "( -80.955562464666622729 == 0.79354429232898805443266224 ) = False";
+  char *example =
+      "( -80.955562464666622729 == 0.79354429232898805443266224 ) = False";
   s21_decimal value_1 = {{0x2669B09, 0x637BEF24, 0x4, 0x80120000}};
   s21_decimal value_2 = {{0xD1E306B0, 0x3A81203C, 0x41A3F4, 0x1A0000}};
   int code = 0;
@@ -95954,7 +98643,9 @@ START_TEST(s21_is_equal_9593) {
 }
 
 START_TEST(s21_is_equal_9594) {
-  char *example = "( 1532139874867596406823528457 == 1932355270608464704209750427 ) = False";
+  char *example =
+      "( 1532139874867596406823528457 == 1932355270608464704209750427 ) = "
+      "False";
   s21_decimal value_1 = {{0xAD672809, 0xB4DCC2E, 0x4F35B3D, 0x0}};
   s21_decimal value_2 = {{0x821099B, 0x1ED0EFA6, 0x63E6825, 0x0}};
   int code = 0;
@@ -96004,7 +98695,9 @@ START_TEST(s21_is_equal_9598) {
 }
 
 START_TEST(s21_is_equal_9599) {
-  char *example = "( 1910724459727352052988762299 == 1490822651689521380842090652 ) = False";
+  char *example =
+      "( 1910724459727352052988762299 == 1490822651689521380842090652 ) = "
+      "False";
   s21_decimal value_1 = {{0x9BD7D8BB, 0x834C0F7C, 0x62C83A4, 0x0}};
   s21_decimal value_2 = {{0x7D2D309C, 0xE33AFF51, 0x4D12DF9, 0x0}};
   int code = 0;
@@ -96024,7 +98717,8 @@ START_TEST(s21_is_equal_9600) {
 }
 
 START_TEST(s21_is_equal_9601) {
-  char *example = "( 1993358512185688247142 == 1712227695236057144935273766 ) = False";
+  char *example =
+      "( 1993358512185688247142 == 1712227695236057144935273766 ) = False";
   s21_decimal value_1 = {{0x1D1CCB66, 0xF680D91, 0x6C, 0x0}};
   s21_decimal value_2 = {{0x86EB5526, 0x5926320D, 0x5885251, 0x0}};
   int code = 0;
@@ -96034,7 +98728,8 @@ START_TEST(s21_is_equal_9601) {
 }
 
 START_TEST(s21_is_equal_9602) {
-  char *example = "( 1888367755319177211127340334 == -5.863947324842281 ) = False";
+  char *example =
+      "( 1888367755319177211127340334 == -5.863947324842281 ) = False";
   s21_decimal value_1 = {{0xB4F11D2E, 0x23703CFF, 0x61A056D, 0x0}};
   s21_decimal value_2 = {{0xA1476129, 0x14D53A, 0x0, 0x800F0000}};
   int code = 0;
@@ -96154,7 +98849,8 @@ START_TEST(s21_is_equal_9613) {
 }
 
 START_TEST(s21_is_equal_9614) {
-  char *example = "( -466201884.8174107038471 == 1944564234539125249675717293 ) = False";
+  char *example =
+      "( -466201884.8174107038471 == 1944564234539125249675717293 ) = False";
   s21_decimal value_1 = {{0xD9689307, 0xBA8221FA, 0xFC, 0x800D0000}};
   s21_decimal value_2 = {{0xF6456AAD, 0x61996032, 0x648817E, 0x0}};
   int code = 0;
@@ -96254,7 +98950,8 @@ START_TEST(s21_is_equal_9623) {
 }
 
 START_TEST(s21_is_equal_9624) {
-  char *example = "( 1110089164259164342344231570 == -875678.62575488 ) = False";
+  char *example =
+      "( 1110089164259164342344231570 == -875678.62575488 ) = False";
   s21_decimal value_1 = {{0x5B902A92, 0x2D57BFD2, 0x3963E86, 0x0}};
   s21_decimal value_2 = {{0x7B57B180, 0x4FA4, 0x0, 0x80080000}};
   int code = 0;
@@ -96334,7 +99031,8 @@ START_TEST(s21_is_equal_9631) {
 }
 
 START_TEST(s21_is_equal_9632) {
-  char *example = "( 148759728547679322549665884 == -8.402787550905645656 ) = False";
+  char *example =
+      "( 148759728547679322549665884 == -8.402787550905645656 ) = False";
   s21_decimal value_1 = {{0x5426405C, 0xB21FD5D, 0x7B0D19, 0x0}};
   s21_decimal value_2 = {{0xF6CE3A58, 0x749CB2C1, 0x0, 0x80120000}};
   int code = 0;
@@ -96354,7 +99052,9 @@ START_TEST(s21_is_equal_9633) {
 }
 
 START_TEST(s21_is_equal_9634) {
-  char *example = "( 1274849894122304099652912557 == 0.71991455187821861064274567 ) = False";
+  char *example =
+      "( 1274849894122304099652912557 == 0.71991455187821861064274567 ) = "
+      "False";
   s21_decimal value_1 = {{0x583AC5AD, 0x3D71AE1B, 0x41E87F7, 0x0}};
   s21_decimal value_2 = {{0xC4E5F287, 0x9B12872B, 0x3B8CC8, 0x1A0000}};
   int code = 0;
@@ -96364,7 +99064,9 @@ START_TEST(s21_is_equal_9634) {
 }
 
 START_TEST(s21_is_equal_9635) {
-  char *example = "( -5.1027552440631874056030455 == 1310931428228287825792051770 ) = False";
+  char *example =
+      "( -5.1027552440631874056030455 == 1310931428228287825792051770 ) = "
+      "False";
   s21_decimal value_1 = {{0x575308F7, 0x291F8AF1, 0x2A3581, 0x80190000}};
   s21_decimal value_2 = {{0xC3F1AA3A, 0x1F8C1D83, 0x43C6087, 0x0}};
   int code = 0;
@@ -96414,7 +99116,8 @@ START_TEST(s21_is_equal_9639) {
 }
 
 START_TEST(s21_is_equal_9640) {
-  char *example = "( -1.5699465048067321443097575 == 1003433238746257727 ) = False";
+  char *example =
+      "( -1.5699465048067321443097575 == 1003433238746257727 ) = False";
   s21_decimal value_1 = {{0xBE6F9BE7, 0xB4A21E7F, 0xCFC7D, 0x80190000}};
   s21_decimal value_2 = {{0xD74A593F, 0xDECE936, 0x0, 0x0}};
   int code = 0;
@@ -96444,7 +99147,9 @@ START_TEST(s21_is_equal_9642) {
 }
 
 START_TEST(s21_is_equal_9643) {
-  char *example = "( 439854.523391850585464817604 == -13.969399483706006671230164 ) = False";
+  char *example =
+      "( 439854.523391850585464817604 == -13.969399483706006671230164 ) = "
+      "False";
   s21_decimal value_1 = {{0xC1B4C7C4, 0x7DF080A2, 0x16BD6D1, 0x150000}};
   s21_decimal value_2 = {{0x9CD884D4, 0xA9D66417, 0xB8E22, 0x80180000}};
   int code = 0;
@@ -96454,7 +99159,9 @@ START_TEST(s21_is_equal_9643) {
 }
 
 START_TEST(s21_is_equal_9644) {
-  char *example = "( 1129472210761493612909917801 == -18.639831579024928603456857 ) = False";
+  char *example =
+      "( 1129472210761493612909917801 == -18.639831579024928603456857 ) = "
+      "False";
   s21_decimal value_1 = {{0xD8417669, 0x3BC56694, 0x3A6470B, 0x0}};
   s21_decimal value_2 = {{0x327D4559, 0x4B6D56E3, 0xF6B23, 0x80180000}};
   int code = 0;
@@ -96554,7 +99261,8 @@ START_TEST(s21_is_equal_9653) {
 }
 
 START_TEST(s21_is_equal_9654) {
-  char *example = "( 1898959613106967398 == 1728304634151427558364450242 ) = False";
+  char *example =
+      "( 1898959613106967398 == 1728304634151427558364450242 ) = False";
   s21_decimal value_1 = {{0xFE0DD366, 0x1A5A75B4, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8D2C8DC2, 0xF4041273, 0x5959EBD, 0x0}};
   int code = 0;
@@ -96634,7 +99342,9 @@ START_TEST(s21_is_equal_9661) {
 }
 
 START_TEST(s21_is_equal_9662) {
-  char *example = "( -2.3020335559565304622375105 == -7558.4260982912571605363610 ) = False";
+  char *example =
+      "( -2.3020335559565304622375105 == -7558.4260982912571605363610 ) = "
+      "False";
   s21_decimal value_1 = {{0xF20260C1, 0xE4290B94, 0x130ABE, 0x80190000}};
   s21_decimal value_2 = {{0xDFBC9129, 0x198D9A1F, 0x6408F, 0x80150000}};
   int code = 0;
@@ -96704,7 +99414,9 @@ START_TEST(s21_is_equal_9668) {
 }
 
 START_TEST(s21_is_equal_9669) {
-  char *example = "( -17.612984496696446697620864 == 0.71254569137615853980753383 ) = False";
+  char *example =
+      "( -17.612984496696446697620864 == 0.71254569137615853980753383 ) = "
+      "False";
   s21_decimal value_1 = {{0xB27C4580, 0xCD81EA24, 0xE91B1, 0x80180000}};
   s21_decimal value_2 = {{0x73001DE7, 0xEED43E6D, 0x3AF0BD, 0x1A0000}};
   int code = 0;
@@ -96754,7 +99466,8 @@ START_TEST(s21_is_equal_9673) {
 }
 
 START_TEST(s21_is_equal_9674) {
-  char *example = "( -44.9928627184135 == -69.822901181288421257882965 ) = False";
+  char *example =
+      "( -44.9928627184135 == -69.822901181288421257882965 ) = False";
   s21_decimal value_1 = {{0x2BFF6207, 0x19935, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x2CABAD55, 0xEB84C8D, 0x39C193, 0x80180000}};
   int code = 0;
@@ -96794,7 +99507,9 @@ START_TEST(s21_is_equal_9677) {
 }
 
 START_TEST(s21_is_equal_9678) {
-  char *example = "( 1979439544668797132152423795 == 1979895083826525122143645003 ) = False";
+  char *example =
+      "( 1979439544668797132152423795 == 1979895083826525122143645003 ) = "
+      "False";
   s21_decimal value_1 = {{0xD49EC573, 0xBB4F7882, 0x6655AA0, 0x0}};
   s21_decimal value_2 = {{0x611AED4B, 0x8F145C38, 0x665BB17, 0x0}};
   int code = 0;
@@ -96854,7 +99569,8 @@ START_TEST(s21_is_equal_9683) {
 }
 
 START_TEST(s21_is_equal_9684) {
-  char *example = "( 1725217458548429863899864646 == -69.62599188297592318767102 ) = False";
+  char *example =
+      "( 1725217458548429863899864646 == -69.62599188297592318767102 ) = False";
   s21_decimal value_1 = {{0x417F9E46, 0xD4127167, 0x5931101, 0x0}};
   s21_decimal value_2 = {{0xA474AFFE, 0x42204526, 0x5C263, 0x80170000}};
   int code = 0;
@@ -96864,7 +99580,8 @@ START_TEST(s21_is_equal_9684) {
 }
 
 START_TEST(s21_is_equal_9685) {
-  char *example = "( 184328096447969636 == 1975508629346309583199277128 ) = False";
+  char *example =
+      "( 184328096447969636 == 1975508629346309583199277128 ) = False";
   s21_decimal value_1 = {{0x56E7B964, 0x28EDD6D, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4E1C1048, 0x62931010, 0x6621A39, 0x0}};
   int code = 0;
@@ -96974,7 +99691,9 @@ START_TEST(s21_is_equal_9695) {
 }
 
 START_TEST(s21_is_equal_9696) {
-  char *example = "( 1974971536430308524849801202 == 1653859129877800883094156129 ) = False";
+  char *example =
+      "( 1974971536430308524849801202 == 1653859129877800883094156129 ) = "
+      "False";
   s21_decimal value_1 = {{0x27BEA7F2, 0x850D9954, 0x661A87D, 0x0}};
   s21_decimal value_2 = {{0x8D9DF361, 0x1475F51A, 0x5580A4B, 0x0}};
   int code = 0;
@@ -97014,7 +99733,9 @@ START_TEST(s21_is_equal_9699) {
 }
 
 START_TEST(s21_is_equal_9700) {
-  char *example = "( 1368960064181006794091795130 == -2015.2788962815291315991141 ) = False";
+  char *example =
+      "( 1368960064181006794091795130 == -2015.2788962815291315991141 ) = "
+      "False";
   s21_decimal value_1 = {{0x68C612BA, 0xC8137979, 0x46C6091, 0x0}};
   s21_decimal value_2 = {{0x2043265, 0xE0F62C74, 0x10AB84, 0x80160000}};
   int code = 0;
@@ -97064,7 +99785,8 @@ START_TEST(s21_is_equal_9704) {
 }
 
 START_TEST(s21_is_equal_9705) {
-  char *example = "( 79228162514264337593543950335 == 1510974367184685 ) = False";
+  char *example =
+      "( 79228162514264337593543950335 == 1510974367184685 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x226BB72D, 0x55E39, 0x0, 0x0}};
   int code = 0;
@@ -97074,7 +99796,8 @@ START_TEST(s21_is_equal_9705) {
 }
 
 START_TEST(s21_is_equal_9706) {
-  char *example = "( 1035951873426904371109729405 == -2865.169827167571024688 ) = False";
+  char *example =
+      "( 1035951873426904371109729405 == -2865.169827167571024688 ) = False";
   s21_decimal value_1 = {{0x4472947D, 0x9686C4B1, 0x358EB57, 0x0}};
   s21_decimal value_2 = {{0x126C1B30, 0x5238097D, 0x9B, 0x80120000}};
   int code = 0;
@@ -97204,7 +99927,8 @@ START_TEST(s21_is_equal_9718) {
 }
 
 START_TEST(s21_is_equal_9719) {
-  char *example = "( -6078958.0672752879619473 == -9.75806237269032987571732 ) = False";
+  char *example =
+      "( -6078958.0672752879619473 == -9.75806237269032987571732 ) = False";
   s21_decimal value_1 = {{0xE2D74D91, 0x68E6C8DD, 0xCDF, 0x80100000}};
   s21_decimal value_2 = {{0x93A4B614, 0x8FE70129, 0xCEA2, 0x80170000}};
   int code = 0;
@@ -97224,7 +99948,9 @@ START_TEST(s21_is_equal_9720) {
 }
 
 START_TEST(s21_is_equal_9721) {
-  char *example = "( -5.4039633199823425898484488 == 1579097168854354307416826676 ) = False";
+  char *example =
+      "( -5.4039633199823425898484488 == 1579097168854354307416826676 ) = "
+      "False";
   s21_decimal value_1 = {{0xA51F1308, 0x62C25FD6, 0x2CB356, 0x80190000}};
   s21_decimal value_2 = {{0x8D27A334, 0xD480246, 0x51A32D5, 0x0}};
   int code = 0;
@@ -97274,7 +100000,8 @@ START_TEST(s21_is_equal_9725) {
 }
 
 START_TEST(s21_is_equal_9726) {
-  char *example = "( 122302278038948400802766246 == 1893081151277457155891552966 ) = False";
+  char *example =
+      "( 122302278038948400802766246 == 1893081151277457155891552966 ) = False";
   s21_decimal value_1 = {{0x5BC31DA6, 0xC7096F20, 0x652A83, 0x0}};
   s21_decimal value_2 = {{0xE2EA62C6, 0xD866D28A, 0x61DEB86, 0x0}};
   int code = 0;
@@ -97294,7 +100021,8 @@ START_TEST(s21_is_equal_9727) {
 }
 
 START_TEST(s21_is_equal_9728) {
-  char *example = "( 0.2106503580364224105711 == 1886588855568405188164830490 ) = False";
+  char *example =
+      "( 0.2106503580364224105711 == 1886588855568405188164830490 ) = False";
   s21_decimal value_1 = {{0x62188CEF, 0x319C159B, 0x72, 0x160000}};
   s21_decimal value_2 = {{0x5589C51A, 0xCA2A74A9, 0x6188CBA, 0x0}};
   int code = 0;
@@ -97324,7 +100052,9 @@ START_TEST(s21_is_equal_9730) {
 }
 
 START_TEST(s21_is_equal_9731) {
-  char *example = "( -78.926755720579301546093646 == -79228162514264337593543950335 ) = False";
+  char *example =
+      "( -78.926755720579301546093646 == -79228162514264337593543950335 ) = "
+      "False";
   s21_decimal value_1 = {{0x95D36C4E, 0x3FD907, 0x414964, 0x80180000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 0;
@@ -97374,7 +100104,8 @@ START_TEST(s21_is_equal_9735) {
 }
 
 START_TEST(s21_is_equal_9736) {
-  char *example = "( 1437123555618631672239 == -773567.98651451779524655125 ) = False";
+  char *example =
+      "( 1437123555618631672239 == -773567.98651451779524655125 ) = False";
   s21_decimal value_1 = {{0xD2DF61AF, 0xE81883A0, 0x4D, 0x0}};
   s21_decimal value_2 = {{0xF014F815, 0x752D3A97, 0x3FFCF0, 0x80140000}};
   int code = 0;
@@ -97384,7 +100115,8 @@ START_TEST(s21_is_equal_9736) {
 }
 
 START_TEST(s21_is_equal_9737) {
-  char *example = "( 1071236264453984712567741327 == 1404900602808487534657665 ) = False";
+  char *example =
+      "( 1071236264453984712567741327 == 1404900602808487534657665 ) = False";
   s21_decimal value_1 = {{0x3FAEDB8F, 0x4220D283, 0x3761B1A, 0x0}};
   s21_decimal value_2 = {{0x98280081, 0xD074F3E9, 0x1297F, 0x0}};
   int code = 0;
@@ -97394,7 +100126,9 @@ START_TEST(s21_is_equal_9737) {
 }
 
 START_TEST(s21_is_equal_9738) {
-  char *example = "( 1552071594238325400521840009 == 1991987092214070653962399049 ) = False";
+  char *example =
+      "( 1552071594238325400521840009 == 1991987092214070653962399049 ) = "
+      "False";
   s21_decimal value_1 = {{0x9B769589, 0xB760330B, 0x503D7F1, 0x0}};
   s21_decimal value_2 = {{0xC813AD49, 0xA5A6F6B0, 0x66FBBAC, 0x0}};
   int code = 0;
@@ -97444,7 +100178,8 @@ START_TEST(s21_is_equal_9742) {
 }
 
 START_TEST(s21_is_equal_9743) {
-  char *example = "( -15262.303086092194869378951 == 167999374863671743084093 ) = False";
+  char *example =
+      "( -15262.303086092194869378951 == 167999374863671743084093 ) = False";
   s21_decimal value_1 = {{0x8B3B7F87, 0x1BAFF576, 0xC9FEB, 0x80150000}};
   s21_decimal value_2 = {{0x6B0DF63D, 0x43AD1BAC, 0x2393, 0x0}};
   int code = 0;
@@ -97494,7 +100229,8 @@ START_TEST(s21_is_equal_9747) {
 }
 
 START_TEST(s21_is_equal_9748) {
-  char *example = "( 191190061156965167507853606 == -33.251402018854902217711760 ) = False";
+  char *example =
+      "( 191190061156965167507853606 == -33.251402018854902217711760 ) = False";
   s21_decimal value_1 = {{0x37FE5126, 0xFBB30DF2, 0x9E2611, 0x0}};
   s21_decimal value_2 = {{0xB0C969A8, 0x36272B04, 0x2C020, 0x80170000}};
   int code = 0;
@@ -97544,7 +100280,8 @@ START_TEST(s21_is_equal_9752) {
 }
 
 START_TEST(s21_is_equal_9753) {
-  char *example = "( -586.90567311383490949542759 == 1719289190513304729 ) = False";
+  char *example =
+      "( -586.90567311383490949542759 == 1719289190513304729 ) = False";
   s21_decimal value_1 = {{0xE2B3F367, 0x777B6B2, 0x308C36, 0x80170000}};
   s21_decimal value_2 = {{0xDAB6E499, 0x17DC2468, 0x0, 0x0}};
   int code = 0;
@@ -97564,7 +100301,8 @@ START_TEST(s21_is_equal_9754) {
 }
 
 START_TEST(s21_is_equal_9755) {
-  char *example = "( 1660678539089172741097447512 == 1218880511546104514846 ) = False";
+  char *example =
+      "( 1660678539089172741097447512 == 1218880511546104514846 ) = False";
   s21_decimal value_1 = {{0xBC0EE058, 0xFE78894F, 0x55DAE5B, 0x0}};
   s21_decimal value_2 = {{0x6FF8891E, 0x135D7758, 0x42, 0x0}};
   int code = 0;
@@ -97614,7 +100352,8 @@ START_TEST(s21_is_equal_9759) {
 }
 
 START_TEST(s21_is_equal_9760) {
-  char *example = "( -79228162514264337593543950335 == -98.900060593481849 ) = False";
+  char *example =
+      "( -79228162514264337593543950335 == -98.900060593481849 ) = False";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xC3F06879, 0x15F5D14, 0x0, 0x800F0000}};
   int code = 0;
@@ -97694,7 +100433,8 @@ START_TEST(s21_is_equal_9767) {
 }
 
 START_TEST(s21_is_equal_9768) {
-  char *example = "( 0.794365947980562193539607 == -9207.5272273468191982694631 ) = False";
+  char *example =
+      "( 0.794365947980562193539607 == -9207.5272273468191982694631 ) = False";
   s21_decimal value_1 = {{0x9D596217, 0xAA115D26, 0xA836, 0x180000}};
   s21_decimal value_2 = {{0x179F30E7, 0x82F53B1F, 0x4C29B2, 0x80160000}};
   int code = 0;
@@ -97824,7 +100564,9 @@ START_TEST(s21_is_equal_9780) {
 }
 
 START_TEST(s21_is_equal_9781) {
-  char *example = "( 0.99353146517818176403073378 == 1790022652245553774084815436 ) = False";
+  char *example =
+      "( 0.99353146517818176403073378 == 1790022652245553774084815436 ) = "
+      "False";
   s21_decimal value_1 = {{0x366E962, 0xDD69B916, 0x522ED8, 0x1A0000}};
   s21_decimal value_2 = {{0x7804FA4C, 0x6B0B87F6, 0x5C8AC0A, 0x0}};
   int code = 0;
@@ -97894,7 +100636,8 @@ START_TEST(s21_is_equal_9787) {
 }
 
 START_TEST(s21_is_equal_9788) {
-  char *example = "( -1.91282018322776522634 == -49.92134223309743227304 ) = False";
+  char *example =
+      "( -1.91282018322776522634 == -49.92134223309743227304 ) = False";
   s21_decimal value_1 = {{0x80DAFF8A, 0x5E923E35, 0xA, 0x80140000}};
   s21_decimal value_2 = {{0xB7D281A8, 0x9FC78AA3, 0x10E, 0x80140000}};
   int code = 0;
@@ -97944,7 +100687,8 @@ START_TEST(s21_is_equal_9792) {
 }
 
 START_TEST(s21_is_equal_9793) {
-  char *example = "( 1250448213809495205874328951 == 12611046595998026648738 ) = False";
+  char *example =
+      "( 1250448213809495205874328951 == 12611046595998026648738 ) = False";
   s21_decimal value_1 = {{0xD1B96577, 0x7FE8A5A5, 0x40A58B5, 0x0}};
   s21_decimal value_2 = {{0x29814CA2, 0xA56DBEDF, 0x2AB, 0x0}};
   int code = 0;
@@ -98004,7 +100748,8 @@ START_TEST(s21_is_equal_9798) {
 }
 
 START_TEST(s21_is_equal_9799) {
-  char *example = "( 1572141535070605743693900538 == 15511166575350565237904 ) = False";
+  char *example =
+      "( 1572141535070605743693900538 == 15511166575350565237904 ) = False";
   s21_decimal value_1 = {{0xD4162AFA, 0x638FC22B, 0x51471EB, 0x0}};
   s21_decimal value_2 = {{0x42C2F490, 0xDCADAA99, 0x348, 0x0}};
   int code = 0;
@@ -98034,7 +100779,8 @@ START_TEST(s21_is_equal_9801) {
 }
 
 START_TEST(s21_is_equal_9802) {
-  char *example = "( -36.79332014215386246 == -64200079.479414645530400095 ) = False";
+  char *example =
+      "( -36.79332014215386246 == -64200079.479414645530400095 ) = False";
   s21_decimal value_1 = {{0x1607D486, 0x330F9CF9, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x53D1955F, 0x48429883, 0x351AE5, 0x80120000}};
   int code = 0;
@@ -98054,7 +100800,8 @@ START_TEST(s21_is_equal_9803) {
 }
 
 START_TEST(s21_is_equal_9804) {
-  char *example = "( 1377970812291919537897388079 == 1007909880224174897337 ) = False";
+  char *example =
+      "( 1377970812291919537897388079 == 1007909880224174897337 ) = False";
   s21_decimal value_1 = {{0x63CEB82F, 0x6A595709, 0x473D4AB, 0x0}};
   s21_decimal value_2 = {{0xB074F8B9, 0xA38F37ED, 0x36, 0x0}};
   int code = 0;
@@ -98104,7 +100851,8 @@ START_TEST(s21_is_equal_9808) {
 }
 
 START_TEST(s21_is_equal_9809) {
-  char *example = "( -7880953.40783165338288 == 130551707838071366456096725 ) = False";
+  char *example =
+      "( -7880953.40783165338288 == 130551707838071366456096725 ) = False";
   s21_decimal value_1 = {{0x28FD72B0, 0xB90518EF, 0x2A, 0x800E0000}};
   s21_decimal value_2 = {{0xE396B7D5, 0x4353152C, 0x6BFD66, 0x0}};
   int code = 0;
@@ -98194,7 +100942,8 @@ START_TEST(s21_is_equal_9817) {
 }
 
 START_TEST(s21_is_equal_9818) {
-  char *example = "( 13954838829817699103 == 1054451294767891643377997 ) = False";
+  char *example =
+      "( 13954838829817699103 == 1054451294767891643377997 ) = False";
   s21_decimal value_1 = {{0xD51C9B1F, 0xC1A98BFA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6C84294D, 0xEB528D00, 0xDF49, 0x0}};
   int code = 0;
@@ -98224,7 +100973,8 @@ START_TEST(s21_is_equal_9820) {
 }
 
 START_TEST(s21_is_equal_9821) {
-  char *example = "( -80205.620991089985330912186 == 176051893317087965537942799 ) = False";
+  char *example =
+      "( -80205.620991089985330912186 == 176051893317087965537942799 ) = False";
   s21_decimal value_1 = {{0x30689BBA, 0x6D1BBBE6, 0x425833, 0x80150000}};
   s21_decimal value_2 = {{0xE24BD0F, 0x429E584C, 0x91A070, 0x0}};
   int code = 0;
@@ -98364,7 +101114,9 @@ START_TEST(s21_is_equal_9834) {
 }
 
 START_TEST(s21_is_equal_9835) {
-  char *example = "( 1184248509592859516069429885 == 1656412298074602232744385141 ) = False";
+  char *example =
+      "( 1184248509592859516069429885 == 1656412298074602232744385141 ) = "
+      "False";
   s21_decimal value_1 = {{0xD5DB427D, 0x57D9A882, 0x3D39660, 0x0}};
   s21_decimal value_2 = {{0x7A161A75, 0x9AEF0312, 0x55A26F2, 0x0}};
   int code = 0;
@@ -98384,7 +101136,9 @@ START_TEST(s21_is_equal_9836) {
 }
 
 START_TEST(s21_is_equal_9837) {
-  char *example = "( -6.4234660373180147551499377 == -4.4405605399915646121572757 ) = False";
+  char *example =
+      "( -6.4234660373180147551499377 == -4.4405605399915646121572757 ) = "
+      "False";
   s21_decimal value_1 = {{0x4018F471, 0xEA90E6CF, 0x352237, 0x80190000}};
   s21_decimal value_2 = {{0xC1A67995, 0xB137B29C, 0x24BB40, 0x80190000}};
   int code = 0;
@@ -98414,7 +101168,8 @@ START_TEST(s21_is_equal_9839) {
 }
 
 START_TEST(s21_is_equal_9840) {
-  char *example = "( 120818333335640434419740419 == -6805.3295741458488740006375 ) = False";
+  char *example =
+      "( 120818333335640434419740419 == -6805.3295741458488740006375 ) = False";
   s21_decimal value_1 = {{0xF22CAF03, 0xF9536887, 0x63F046, 0x0}};
   s21_decimal value_2 = {{0xEC67C9E7, 0x8DEC22AC, 0x384AD8, 0x80160000}};
   int code = 0;
@@ -98504,7 +101259,9 @@ START_TEST(s21_is_equal_9848) {
 }
 
 START_TEST(s21_is_equal_9849) {
-  char *example = "( -48.257015917824090990500836 == 1179253502107797902294101218 ) = False";
+  char *example =
+      "( -48.257015917824090990500836 == 1179253502107797902294101218 ) = "
+      "False";
   s21_decimal value_1 = {{0x5B44DBE4, 0x132558DF, 0x27EAD2, 0x80180000}};
   s21_decimal value_2 = {{0xB6FDACE2, 0x71DFC4DA, 0x3CF74A4, 0x0}};
   int code = 0;
@@ -98554,7 +101311,9 @@ START_TEST(s21_is_equal_9853) {
 }
 
 START_TEST(s21_is_equal_9854) {
-  char *example = "( 1902530519969640573282687889 == 1742428983916476900970413026 ) = False";
+  char *example =
+      "( 1902530519969640573282687889 == 1742428983916476900970413026 ) = "
+      "False";
   s21_decimal value_1 = {{0x3B4E1B91, 0x26079258, 0x625BC82, 0x0}};
   s21_decimal value_2 = {{0x41AD3BE2, 0x7CFA8688, 0x5A14DB0, 0x0}};
   int code = 0;
@@ -98664,7 +101423,8 @@ START_TEST(s21_is_equal_9864) {
 }
 
 START_TEST(s21_is_equal_9865) {
-  char *example = "( 1699238700704956221027658328 == 0.3558203694847884210193961 ) = False";
+  char *example =
+      "( 1699238700704956221027658328 == 0.3558203694847884210193961 ) = False";
   s21_decimal value_1 = {{0xE1BE2A58, 0x8B35B038, 0x57D93CA, 0x0}};
   s21_decimal value_2 = {{0xFF53C629, 0x9BDAA501, 0x2F17A, 0x190000}};
   int code = 0;
@@ -98724,7 +101484,9 @@ START_TEST(s21_is_equal_9870) {
 }
 
 START_TEST(s21_is_equal_9871) {
-  char *example = "( 1207447859065552563764680062 == -50.604621310767736523134129 ) = False";
+  char *example =
+      "( 1207447859065552563764680062 == -50.604621310767736523134129 ) = "
+      "False";
   s21_decimal value_1 = {{0x1A3B557E, 0x991C916A, 0x3E6C707, 0x0}};
   s21_decimal value_2 = {{0xE03114B1, 0x4A548AB, 0x29DBF2, 0x80180000}};
   int code = 0;
@@ -98874,7 +101636,9 @@ START_TEST(s21_is_equal_9885) {
 }
 
 START_TEST(s21_is_equal_9886) {
-  char *example = "( 46.7677586113170665629338153 == -3.0816659283844539646343896 ) = False";
+  char *example =
+      "( 46.7677586113170665629338153 == -3.0816659283844539646343896 ) = "
+      "False";
   s21_decimal value_1 = {{0x86DCCA29, 0xBE8CA91E, 0x182DA94, 0x190000}};
   s21_decimal value_2 = {{0x3F79FAD8, 0x727CA621, 0x197DAE, 0x80190000}};
   int code = 0;
@@ -98884,7 +101648,9 @@ START_TEST(s21_is_equal_9886) {
 }
 
 START_TEST(s21_is_equal_9887) {
-  char *example = "( 1361398069171535183582116028 == -75002347.690307355696297686 ) = False";
+  char *example =
+      "( 1361398069171535183582116028 == -75002347.690307355696297686 ) = "
+      "False";
   s21_decimal value_1 = {{0x5F98B8BC, 0x35EE4DB8, 0x4661F41, 0x0}};
   s21_decimal value_2 = {{0xBEE9F6D6, 0x6A55818F, 0x3E0A5D, 0x80120000}};
   int code = 0;
@@ -98904,7 +101670,9 @@ START_TEST(s21_is_equal_9888) {
 }
 
 START_TEST(s21_is_equal_9889) {
-  char *example = "( 1450910054387638000575688096 == 1548486472532432401618271362 ) = False";
+  char *example =
+      "( 1450910054387638000575688096 == 1548486472532432401618271362 ) = "
+      "False";
   s21_decimal value_1 = {{0xC399ADA0, 0xA70423E9, 0x4B02A27, 0x0}};
   s21_decimal value_2 = {{0x957D7C82, 0xE113823D, 0x500E0C3, 0x0}};
   int code = 0;
@@ -99004,7 +101772,8 @@ START_TEST(s21_is_equal_9898) {
 }
 
 START_TEST(s21_is_equal_9899) {
-  char *example = "( 117561974189497238521420755 == 1271937364973595910676432491 ) = False";
+  char *example =
+      "( 117561974189497238521420755 == 1271937364973595910676432491 ) = False";
   s21_decimal value_1 = {{0x54149BD3, 0x6411D17A, 0x613EB7, 0x0}};
   s21_decimal value_2 = {{0xBB74466B, 0xB7EF28CA, 0x41C1F36, 0x0}};
   int code = 0;
@@ -99054,7 +101823,9 @@ START_TEST(s21_is_equal_9903) {
 }
 
 START_TEST(s21_is_equal_9904) {
-  char *example = "( -55.804632037504957307755942 == 1810301161175068966143822898 ) = False";
+  char *example =
+      "( -55.804632037504957307755942 == 1810301161175068966143822898 ) = "
+      "False";
   s21_decimal value_1 = {{0x5E051DA6, 0x2A1C1291, 0x2E2917, 0x80180000}};
   s21_decimal value_2 = {{0x6C368C32, 0x9707190B, 0x5D9722E, 0x0}};
   int code = 0;
@@ -99084,7 +101855,8 @@ START_TEST(s21_is_equal_9906) {
 }
 
 START_TEST(s21_is_equal_9907) {
-  char *example = "( 0.22545724468413170997100539 == 13995133427611151907803 ) = False";
+  char *example =
+      "( 0.22545724468413170997100539 == 13995133427611151907803 ) = False";
   s21_decimal value_1 = {{0x48D57FFB, 0x2C25660C, 0x12A63E, 0x1A0000}};
   s21_decimal value_2 = {{0x7DBC3BDB, 0xAD7DF704, 0x2F6, 0x0}};
   int code = 0;
@@ -99104,7 +101876,9 @@ START_TEST(s21_is_equal_9908) {
 }
 
 START_TEST(s21_is_equal_9909) {
-  char *example = "( -96.777387262435052016773109 == 1641724648064634308078029313 ) = False";
+  char *example =
+      "( -96.777387262435052016773109 == 1641724648064634308078029313 ) = "
+      "False";
   s21_decimal value_1 = {{0x33DE27F5, 0xAD05D38D, 0x500D68, 0x80180000}};
   s21_decimal value_2 = {{0xE7EB4A01, 0x80B32A25, 0x54E00B7, 0x0}};
   int code = 0;
@@ -99144,7 +101918,9 @@ START_TEST(s21_is_equal_9912) {
 }
 
 START_TEST(s21_is_equal_9913) {
-  char *example = "( 1192338032499917495614682762 == 1951822234919302835594452692 ) = False";
+  char *example =
+      "( 1192338032499917495614682762 == 1951822234919302835594452692 ) = "
+      "False";
   s21_decimal value_1 = {{0xCADDB68A, 0x4238887A, 0x3DA4766, 0x0}};
   s21_decimal value_2 = {{0xC2C5DED4, 0x5EC8C59C, 0x64E826F, 0x0}};
   int code = 0;
@@ -99164,7 +101940,8 @@ START_TEST(s21_is_equal_9914) {
 }
 
 START_TEST(s21_is_equal_9915) {
-  char *example = "( 1936251694027402405221943862 == 1044384494481013 ) = False";
+  char *example =
+      "( 1936251694027402405221943862 == 1044384494481013 ) = False";
   s21_decimal value_1 = {{0x4536CA36, 0xA83BCB72, 0x641A13E, 0x0}};
   s21_decimal value_2 = {{0xB6CD6E75, 0x3B5DC, 0x0, 0x0}};
   int code = 0;
@@ -99184,7 +101961,9 @@ START_TEST(s21_is_equal_9916) {
 }
 
 START_TEST(s21_is_equal_9917) {
-  char *example = "( 1576336861314072584926785945 == 1950480993538056718639670082 ) = False";
+  char *example =
+      "( 1576336861314072584926785945 == 1950480993538056718639670082 ) = "
+      "False";
   s21_decimal value_1 = {{0x6F93F199, 0x7AF3F42F, 0x517EA50, 0x0}};
   s21_decimal value_2 = {{0x346BA342, 0x877F0BAA, 0x64D666A, 0x0}};
   int code = 0;
@@ -99274,7 +102053,9 @@ START_TEST(s21_is_equal_9925) {
 }
 
 START_TEST(s21_is_equal_9926) {
-  char *example = "( 1851942366932032813874973676 == 1704771421167259891356988869 ) = False";
+  char *example =
+      "( 1851942366932032813874973676 == 1704771421167259891356988869 ) = "
+      "False";
   s21_decimal value_1 = {{0x92BE8BEC, 0xE0959C05, 0x5FBE40C, 0x0}};
   s21_decimal value_2 = {{0x94D4F5C5, 0xEBC91813, 0x5822763, 0x0}};
   int code = 0;
@@ -99304,7 +102085,8 @@ START_TEST(s21_is_equal_9928) {
 }
 
 START_TEST(s21_is_equal_9929) {
-  char *example = "( 1822770178970708352797270515 == 15024314013699884 ) = False";
+  char *example =
+      "( 1822770178970708352797270515 == 15024314013699884 ) = False";
   s21_decimal value_1 = {{0x73C461F3, 0x662ADF6C, 0x5E3C299, 0x0}};
   s21_decimal value_2 = {{0xB3C7CF2C, 0x356088, 0x0, 0x0}};
   int code = 0;
@@ -99394,7 +102176,8 @@ START_TEST(s21_is_equal_9937) {
 }
 
 START_TEST(s21_is_equal_9938) {
-  char *example = "( 1801558123831480105941215267 == -42829.90467703978201860107 ) = False";
+  char *example =
+      "( 1801558123831480105941215267 == -42829.90467703978201860107 ) = False";
   s21_decimal value_1 = {{0x973A2823, 0x95FA441E, 0x5D236C5, 0x0}};
   s21_decimal value_2 = {{0x5DBA480B, 0x60E4C8B9, 0x38AF5, 0x80140000}};
   int code = 0;
@@ -99434,7 +102217,8 @@ START_TEST(s21_is_equal_9941) {
 }
 
 START_TEST(s21_is_equal_9942) {
-  char *example = "( 1216677263847074324 == 1643914401645723263947092113 ) = False";
+  char *example =
+      "( 1216677263847074324 == 1643914401645723263947092113 ) = False";
   s21_decimal value_1 = {{0x75E62A14, 0x10E28186, 0x0, 0x0}};
   s21_decimal value_2 = {{0x80A9B091, 0x483FE6D9, 0x54FD06A, 0x0}};
   int code = 0;
@@ -99444,7 +102228,9 @@ START_TEST(s21_is_equal_9942) {
 }
 
 START_TEST(s21_is_equal_9943) {
-  char *example = "( -5.4379301945057124340712572 == 1630352672944948737817105740 ) = False";
+  char *example =
+      "( -5.4379301945057124340712572 == 1630352672944948737817105740 ) = "
+      "False";
   s21_decimal value_1 = {{0xEA3BC47C, 0xDD87D3BE, 0x2CFB43, 0x80190000}};
   s21_decimal value_2 = {{0x790AD54C, 0x7F087A8F, 0x544989B, 0x0}};
   int code = 0;
@@ -99494,7 +102280,9 @@ START_TEST(s21_is_equal_9947) {
 }
 
 START_TEST(s21_is_equal_9948) {
-  char *example = "( -712.22439994334662581852336 == 1050910944477952253915506851 ) = False";
+  char *example =
+      "( -712.22439994334662581852336 == 1050910944477952253915506851 ) = "
+      "False";
   s21_decimal value_1 = {{0x414898B0, 0x35656BAE, 0x3AE9F0, 0x80170000}};
   s21_decimal value_2 = {{0xE1BB28A3, 0x745FF987, 0x3654B0C, 0x0}};
   int code = 0;
@@ -99514,7 +102302,9 @@ START_TEST(s21_is_equal_9949) {
 }
 
 START_TEST(s21_is_equal_9950) {
-  char *example = "( 1794296377672684643048603446 == -48722.380137851446154801460 ) = False";
+  char *example =
+      "( 1794296377672684643048603446 == -48722.380137851446154801460 ) = "
+      "False";
   s21_decimal value_1 = {{0x9809BF36, 0x89ABEFBB, 0x5CC3509, 0x0}};
   s21_decimal value_2 = {{0x8BF3AB52, 0x8D4DF23E, 0x407BC, 0x80140000}};
   int code = 0;
@@ -99634,7 +102424,9 @@ START_TEST(s21_is_equal_9961) {
 }
 
 START_TEST(s21_is_equal_9962) {
-  char *example = "( 1471669590146708189489308374 == -3.2362155329840066052874400 ) = False";
+  char *example =
+      "( 1471669590146708189489308374 == -3.2362155329840066052874400 ) = "
+      "False";
   s21_decimal value_1 = {{0xDFBEA2D6, 0x5744EFE4, 0x4C15628, 0x0}};
   s21_decimal value_2 = {{0xB39D9E68, 0x8F3F286B, 0x4487, 0x80170000}};
   int code = 0;
@@ -99674,7 +102466,8 @@ START_TEST(s21_is_equal_9965) {
 }
 
 START_TEST(s21_is_equal_9966) {
-  char *example = "( 1351306316774010500221383 == 1601481176150639300886980994 ) = False";
+  char *example =
+      "( 1351306316774010500221383 == 1601481176150639300886980994 ) = False";
   s21_decimal value_1 = {{0xB5D909C7, 0x7653DA40, 0x11E26, 0x0}};
   s21_decimal value_2 = {{0xA2F4E982, 0x84D3E40B, 0x52CB6D4, 0x0}};
   int code = 0;
@@ -99694,7 +102487,8 @@ START_TEST(s21_is_equal_9967) {
 }
 
 START_TEST(s21_is_equal_9968) {
-  char *example = "( 1533043617833913979007487468 == -669.17922591177919650359 ) = False";
+  char *example =
+      "( 1533043617833913979007487468 == -669.17922591177919650359 ) = False";
   s21_decimal value_1 = {{0x6DDD4DEC, 0xC6C5A90, 0x4F41A9D, 0x0}};
   s21_decimal value_2 = {{0xC7435A37, 0xA0BAF253, 0xE2B, 0x80140000}};
   int code = 0;
@@ -99714,7 +102508,9 @@ START_TEST(s21_is_equal_9969) {
 }
 
 START_TEST(s21_is_equal_9970) {
-  char *example = "( 1720546247622731773973878449 == 1021200209929550840687359737 ) = False";
+  char *example =
+      "( 1720546247622731773973878449 == 1021200209929550840687359737 ) = "
+      "False";
   s21_decimal value_1 = {{0xCCCBD6B1, 0xFA0A272C, 0x58F33D6, 0x0}};
   s21_decimal value_2 = {{0x3E79F6F9, 0x4EB2A88D, 0x34CB78E, 0x0}};
   int code = 0;
@@ -99734,7 +102530,8 @@ START_TEST(s21_is_equal_9971) {
 }
 
 START_TEST(s21_is_equal_9972) {
-  char *example = "( -3591.2053361476928258655908 == -8.48829468724308358 ) = False";
+  char *example =
+      "( -3591.2053361476928258655908 == -8.48829468724308358 ) = False";
   s21_decimal value_1 = {{0xA40F46A4, 0x504B21F1, 0x1DB4AC, 0x80160000}};
   s21_decimal value_2 = {{0x8E322986, 0xBC7A5E7, 0x0, 0x80110000}};
   int code = 0;
@@ -99784,7 +102581,9 @@ START_TEST(s21_is_equal_9976) {
 }
 
 START_TEST(s21_is_equal_9977) {
-  char *example = "( 1059793554996189227278094745 == 1576334509639632288310643553 ) = False";
+  char *example =
+      "( 1059793554996189227278094745 == 1576334509639632288310643553 ) = "
+      "False";
   s21_decimal value_1 = {{0xDC035199, 0xBC53928A, 0x36CA403, 0x0}};
   s21_decimal value_2 = {{0xD2344B61, 0xFEEA0070, 0x517E9D0, 0x0}};
   int code = 0;
@@ -99894,7 +102693,9 @@ START_TEST(s21_is_equal_9987) {
 }
 
 START_TEST(s21_is_equal_9988) {
-  char *example = "( 1372909628906131469858167238 == 1531327597983681926858560981 ) = False";
+  char *example =
+      "( 1372909628906131469858167238 == 1531327597983681926858560981 ) = "
+      "False";
   s21_decimal value_1 = {{0x5822D9C6, 0x1D43BB9E, 0x46FA4EC, 0x0}};
   s21_decimal value_2 = {{0xC3F455D5, 0x6D115756, 0x4F2AF3B, 0x0}};
   int code = 0;
@@ -99914,7 +102715,8 @@ START_TEST(s21_is_equal_9989) {
 }
 
 START_TEST(s21_is_equal_9990) {
-  char *example = "( 182980793065679201338 == -5262.7163774049601619119235 ) = False";
+  char *example =
+      "( 182980793065679201338 == -5262.7163774049601619119235 ) = False";
   s21_decimal value_1 = {{0xC711A43A, 0xEB5E5DD1, 0x9, 0x0}};
   s21_decimal value_2 = {{0x81964C83, 0x43C88A4B, 0x2B883C, 0x80160000}};
   int code = 0;
@@ -99944,7 +102746,9 @@ START_TEST(s21_is_equal_9992) {
 }
 
 START_TEST(s21_is_equal_9993) {
-  char *example = "( -74.434257148121273278344617 == 1570815052724197148343266450 ) = False";
+  char *example =
+      "( -74.434257148121273278344617 == 1570815052724197148343266450 ) = "
+      "False";
   s21_decimal value_1 = {{0x66132DA9, 0x2A557C02, 0x3D9211, 0x80180000}};
   s21_decimal value_2 = {{0x5009EC92, 0xA306FC3B, 0x5135906, 0x0}};
   int code = 0;
@@ -99954,7 +102758,8 @@ START_TEST(s21_is_equal_9993) {
 }
 
 START_TEST(s21_is_equal_9994) {
-  char *example = "( 17023396685758062809 == 1746863959817352220850218214 ) = False";
+  char *example =
+      "( 17023396685758062809 == 1746863959817352220850218214 ) = False";
   s21_decimal value_1 = {{0x852BE0D9, 0xEC3F4117, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4B2364E6, 0x376B741, 0x5A4F8D5, 0x0}};
   int code = 0;
@@ -99974,7 +102779,8 @@ START_TEST(s21_is_equal_9995) {
 }
 
 START_TEST(s21_is_equal_9996) {
-  char *example = "( 16463665509615236579195 == 9.60159391090225281940252189 ) = False";
+  char *example =
+      "( 16463665509615236579195 == 9.60159391090225281940252189 ) = False";
   s21_decimal value_1 = {{0xBAA47F7B, 0x7F41A8C1, 0x37C, 0x0}};
   s21_decimal value_2 = {{0x26EAE61D, 0xE33B00D0, 0x31A39A8, 0x1A0000}};
   int code = 0;
@@ -99984,7 +102790,9 @@ START_TEST(s21_is_equal_9996) {
 }
 
 START_TEST(s21_is_equal_9997) {
-  char *example = "( 1916122845036320936067862866 == 1121367716249665659838201309 ) = False";
+  char *example =
+      "( 1916122845036320936067862866 == 1121367716249665659838201309 ) = "
+      "False";
   s21_decimal value_1 = {{0x85901152, 0x911EAB7F, 0x630FACB, 0x0}};
   s21_decimal value_2 = {{0x9B54FDDD, 0xB4A57748, 0x39F92D9, 0x0}};
   int code = 0;
@@ -100004,7 +102812,8 @@ START_TEST(s21_is_equal_9998) {
 }
 
 START_TEST(s21_is_equal_9999) {
-  char *example = "( -250332.75453962110798622578 == 13973215157409550 ) = False";
+  char *example =
+      "( -250332.75453962110798622578 == 13973215157409550 ) = False";
   s21_decimal value_1 = {{0xAFAF6F72, 0x94E278D5, 0x14B500, 0x80140000}};
   s21_decimal value_2 = {{0xADD3D70E, 0x31A490, 0x0, 0x0}};
   int code = 0;
@@ -100032,8 +102841,7 @@ START_TEST(s21_is_equal_10000) {
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_1(void)
-{
+Suite *s21_is_equal_case_1(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №1)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100147,8 +102955,7 @@ Suite *s21_is_equal_case_1(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_2(void)
-{
+Suite *s21_is_equal_case_2(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №2)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100262,8 +103069,7 @@ Suite *s21_is_equal_case_2(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_3(void)
-{
+Suite *s21_is_equal_case_3(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №3)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100377,8 +103183,7 @@ Suite *s21_is_equal_case_3(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_4(void)
-{
+Suite *s21_is_equal_case_4(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №4)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100492,8 +103297,7 @@ Suite *s21_is_equal_case_4(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_5(void)
-{
+Suite *s21_is_equal_case_5(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №5)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100607,8 +103411,7 @@ Suite *s21_is_equal_case_5(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_6(void)
-{
+Suite *s21_is_equal_case_6(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №6)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100722,8 +103525,7 @@ Suite *s21_is_equal_case_6(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_7(void)
-{
+Suite *s21_is_equal_case_7(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №7)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100837,8 +103639,7 @@ Suite *s21_is_equal_case_7(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_8(void)
-{
+Suite *s21_is_equal_case_8(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №8)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -100952,8 +103753,7 @@ Suite *s21_is_equal_case_8(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_9(void)
-{
+Suite *s21_is_equal_case_9(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №9)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101067,8 +103867,7 @@ Suite *s21_is_equal_case_9(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_10(void)
-{
+Suite *s21_is_equal_case_10(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №10)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101182,8 +103981,7 @@ Suite *s21_is_equal_case_10(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_11(void)
-{
+Suite *s21_is_equal_case_11(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №11)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101297,8 +104095,7 @@ Suite *s21_is_equal_case_11(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_12(void)
-{
+Suite *s21_is_equal_case_12(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №12)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101412,8 +104209,7 @@ Suite *s21_is_equal_case_12(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_13(void)
-{
+Suite *s21_is_equal_case_13(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №13)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101527,8 +104323,7 @@ Suite *s21_is_equal_case_13(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_14(void)
-{
+Suite *s21_is_equal_case_14(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №14)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101642,8 +104437,7 @@ Suite *s21_is_equal_case_14(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_15(void)
-{
+Suite *s21_is_equal_case_15(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №15)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101757,8 +104551,7 @@ Suite *s21_is_equal_case_15(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_16(void)
-{
+Suite *s21_is_equal_case_16(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №16)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101872,8 +104665,7 @@ Suite *s21_is_equal_case_16(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_17(void)
-{
+Suite *s21_is_equal_case_17(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №17)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -101987,8 +104779,7 @@ Suite *s21_is_equal_case_17(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_18(void)
-{
+Suite *s21_is_equal_case_18(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №18)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102102,8 +104893,7 @@ Suite *s21_is_equal_case_18(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_19(void)
-{
+Suite *s21_is_equal_case_19(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №19)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102217,8 +105007,7 @@ Suite *s21_is_equal_case_19(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_20(void)
-{
+Suite *s21_is_equal_case_20(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №20)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102332,8 +105121,7 @@ Suite *s21_is_equal_case_20(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_21(void)
-{
+Suite *s21_is_equal_case_21(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №21)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102447,8 +105235,7 @@ Suite *s21_is_equal_case_21(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_22(void)
-{
+Suite *s21_is_equal_case_22(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №22)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102562,8 +105349,7 @@ Suite *s21_is_equal_case_22(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_23(void)
-{
+Suite *s21_is_equal_case_23(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №23)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102677,8 +105463,7 @@ Suite *s21_is_equal_case_23(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_24(void)
-{
+Suite *s21_is_equal_case_24(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №24)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102792,8 +105577,7 @@ Suite *s21_is_equal_case_24(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_25(void)
-{
+Suite *s21_is_equal_case_25(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №25)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -102907,8 +105691,7 @@ Suite *s21_is_equal_case_25(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_26(void)
-{
+Suite *s21_is_equal_case_26(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №26)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103022,8 +105805,7 @@ Suite *s21_is_equal_case_26(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_27(void)
-{
+Suite *s21_is_equal_case_27(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №27)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103137,8 +105919,7 @@ Suite *s21_is_equal_case_27(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_28(void)
-{
+Suite *s21_is_equal_case_28(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №28)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103252,8 +106033,7 @@ Suite *s21_is_equal_case_28(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_29(void)
-{
+Suite *s21_is_equal_case_29(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №29)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103367,8 +106147,7 @@ Suite *s21_is_equal_case_29(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_30(void)
-{
+Suite *s21_is_equal_case_30(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №30)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103482,8 +106261,7 @@ Suite *s21_is_equal_case_30(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_31(void)
-{
+Suite *s21_is_equal_case_31(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №31)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103597,8 +106375,7 @@ Suite *s21_is_equal_case_31(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_32(void)
-{
+Suite *s21_is_equal_case_32(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №32)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103712,8 +106489,7 @@ Suite *s21_is_equal_case_32(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_33(void)
-{
+Suite *s21_is_equal_case_33(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №33)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103827,8 +106603,7 @@ Suite *s21_is_equal_case_33(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_34(void)
-{
+Suite *s21_is_equal_case_34(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №34)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -103942,8 +106717,7 @@ Suite *s21_is_equal_case_34(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_35(void)
-{
+Suite *s21_is_equal_case_35(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №35)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104057,8 +106831,7 @@ Suite *s21_is_equal_case_35(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_36(void)
-{
+Suite *s21_is_equal_case_36(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №36)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104172,8 +106945,7 @@ Suite *s21_is_equal_case_36(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_37(void)
-{
+Suite *s21_is_equal_case_37(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №37)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104287,8 +107059,7 @@ Suite *s21_is_equal_case_37(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_38(void)
-{
+Suite *s21_is_equal_case_38(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №38)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104402,8 +107173,7 @@ Suite *s21_is_equal_case_38(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_39(void)
-{
+Suite *s21_is_equal_case_39(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №39)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104517,8 +107287,7 @@ Suite *s21_is_equal_case_39(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_40(void)
-{
+Suite *s21_is_equal_case_40(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №40)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104632,8 +107401,7 @@ Suite *s21_is_equal_case_40(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_41(void)
-{
+Suite *s21_is_equal_case_41(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №41)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104747,8 +107515,7 @@ Suite *s21_is_equal_case_41(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_42(void)
-{
+Suite *s21_is_equal_case_42(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №42)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104862,8 +107629,7 @@ Suite *s21_is_equal_case_42(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_43(void)
-{
+Suite *s21_is_equal_case_43(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №43)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -104977,8 +107743,7 @@ Suite *s21_is_equal_case_43(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_44(void)
-{
+Suite *s21_is_equal_case_44(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №44)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105092,8 +107857,7 @@ Suite *s21_is_equal_case_44(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_45(void)
-{
+Suite *s21_is_equal_case_45(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №45)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105207,8 +107971,7 @@ Suite *s21_is_equal_case_45(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_46(void)
-{
+Suite *s21_is_equal_case_46(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №46)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105322,8 +108085,7 @@ Suite *s21_is_equal_case_46(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_47(void)
-{
+Suite *s21_is_equal_case_47(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №47)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105437,8 +108199,7 @@ Suite *s21_is_equal_case_47(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_48(void)
-{
+Suite *s21_is_equal_case_48(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №48)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105552,8 +108313,7 @@ Suite *s21_is_equal_case_48(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_49(void)
-{
+Suite *s21_is_equal_case_49(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №49)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105667,8 +108427,7 @@ Suite *s21_is_equal_case_49(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_50(void)
-{
+Suite *s21_is_equal_case_50(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №50)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105782,8 +108541,7 @@ Suite *s21_is_equal_case_50(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_51(void)
-{
+Suite *s21_is_equal_case_51(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №51)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -105897,8 +108655,7 @@ Suite *s21_is_equal_case_51(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_52(void)
-{
+Suite *s21_is_equal_case_52(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №52)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106012,8 +108769,7 @@ Suite *s21_is_equal_case_52(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_53(void)
-{
+Suite *s21_is_equal_case_53(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №53)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106127,8 +108883,7 @@ Suite *s21_is_equal_case_53(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_54(void)
-{
+Suite *s21_is_equal_case_54(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №54)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106242,8 +108997,7 @@ Suite *s21_is_equal_case_54(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_55(void)
-{
+Suite *s21_is_equal_case_55(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №55)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106357,8 +109111,7 @@ Suite *s21_is_equal_case_55(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_56(void)
-{
+Suite *s21_is_equal_case_56(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №56)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106472,8 +109225,7 @@ Suite *s21_is_equal_case_56(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_57(void)
-{
+Suite *s21_is_equal_case_57(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №57)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106587,8 +109339,7 @@ Suite *s21_is_equal_case_57(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_58(void)
-{
+Suite *s21_is_equal_case_58(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №58)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106702,8 +109453,7 @@ Suite *s21_is_equal_case_58(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_59(void)
-{
+Suite *s21_is_equal_case_59(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №59)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106817,8 +109567,7 @@ Suite *s21_is_equal_case_59(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_60(void)
-{
+Suite *s21_is_equal_case_60(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №60)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -106932,8 +109681,7 @@ Suite *s21_is_equal_case_60(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_61(void)
-{
+Suite *s21_is_equal_case_61(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №61)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107047,8 +109795,7 @@ Suite *s21_is_equal_case_61(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_62(void)
-{
+Suite *s21_is_equal_case_62(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №62)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107162,8 +109909,7 @@ Suite *s21_is_equal_case_62(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_63(void)
-{
+Suite *s21_is_equal_case_63(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №63)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107277,8 +110023,7 @@ Suite *s21_is_equal_case_63(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_64(void)
-{
+Suite *s21_is_equal_case_64(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №64)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107392,8 +110137,7 @@ Suite *s21_is_equal_case_64(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_65(void)
-{
+Suite *s21_is_equal_case_65(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №65)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107507,8 +110251,7 @@ Suite *s21_is_equal_case_65(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_66(void)
-{
+Suite *s21_is_equal_case_66(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №66)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107622,8 +110365,7 @@ Suite *s21_is_equal_case_66(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_67(void)
-{
+Suite *s21_is_equal_case_67(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №67)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107737,8 +110479,7 @@ Suite *s21_is_equal_case_67(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_68(void)
-{
+Suite *s21_is_equal_case_68(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №68)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107852,8 +110593,7 @@ Suite *s21_is_equal_case_68(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_69(void)
-{
+Suite *s21_is_equal_case_69(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №69)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -107967,8 +110707,7 @@ Suite *s21_is_equal_case_69(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_70(void)
-{
+Suite *s21_is_equal_case_70(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №70)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108082,8 +110821,7 @@ Suite *s21_is_equal_case_70(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_71(void)
-{
+Suite *s21_is_equal_case_71(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №71)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108197,8 +110935,7 @@ Suite *s21_is_equal_case_71(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_72(void)
-{
+Suite *s21_is_equal_case_72(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №72)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108312,8 +111049,7 @@ Suite *s21_is_equal_case_72(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_73(void)
-{
+Suite *s21_is_equal_case_73(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №73)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108427,8 +111163,7 @@ Suite *s21_is_equal_case_73(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_74(void)
-{
+Suite *s21_is_equal_case_74(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №74)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108542,8 +111277,7 @@ Suite *s21_is_equal_case_74(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_75(void)
-{
+Suite *s21_is_equal_case_75(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №75)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108657,8 +111391,7 @@ Suite *s21_is_equal_case_75(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_76(void)
-{
+Suite *s21_is_equal_case_76(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №76)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108772,8 +111505,7 @@ Suite *s21_is_equal_case_76(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_77(void)
-{
+Suite *s21_is_equal_case_77(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №77)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -108887,8 +111619,7 @@ Suite *s21_is_equal_case_77(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_78(void)
-{
+Suite *s21_is_equal_case_78(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №78)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109002,8 +111733,7 @@ Suite *s21_is_equal_case_78(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_79(void)
-{
+Suite *s21_is_equal_case_79(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №79)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109117,8 +111847,7 @@ Suite *s21_is_equal_case_79(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_80(void)
-{
+Suite *s21_is_equal_case_80(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №80)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109232,8 +111961,7 @@ Suite *s21_is_equal_case_80(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_81(void)
-{
+Suite *s21_is_equal_case_81(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №81)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109347,8 +112075,7 @@ Suite *s21_is_equal_case_81(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_82(void)
-{
+Suite *s21_is_equal_case_82(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №82)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109462,8 +112189,7 @@ Suite *s21_is_equal_case_82(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_83(void)
-{
+Suite *s21_is_equal_case_83(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №83)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109577,8 +112303,7 @@ Suite *s21_is_equal_case_83(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_84(void)
-{
+Suite *s21_is_equal_case_84(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №84)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109692,8 +112417,7 @@ Suite *s21_is_equal_case_84(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_85(void)
-{
+Suite *s21_is_equal_case_85(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №85)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109807,8 +112531,7 @@ Suite *s21_is_equal_case_85(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_86(void)
-{
+Suite *s21_is_equal_case_86(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №86)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -109922,8 +112645,7 @@ Suite *s21_is_equal_case_86(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_87(void)
-{
+Suite *s21_is_equal_case_87(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №87)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110037,8 +112759,7 @@ Suite *s21_is_equal_case_87(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_88(void)
-{
+Suite *s21_is_equal_case_88(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №88)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110152,8 +112873,7 @@ Suite *s21_is_equal_case_88(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_89(void)
-{
+Suite *s21_is_equal_case_89(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №89)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110267,8 +112987,7 @@ Suite *s21_is_equal_case_89(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_90(void)
-{
+Suite *s21_is_equal_case_90(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №90)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110382,8 +113101,7 @@ Suite *s21_is_equal_case_90(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_91(void)
-{
+Suite *s21_is_equal_case_91(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №91)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110497,8 +113215,7 @@ Suite *s21_is_equal_case_91(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_92(void)
-{
+Suite *s21_is_equal_case_92(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №92)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110612,8 +113329,7 @@ Suite *s21_is_equal_case_92(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_93(void)
-{
+Suite *s21_is_equal_case_93(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №93)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110727,8 +113443,7 @@ Suite *s21_is_equal_case_93(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_94(void)
-{
+Suite *s21_is_equal_case_94(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №94)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110842,8 +113557,7 @@ Suite *s21_is_equal_case_94(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_95(void)
-{
+Suite *s21_is_equal_case_95(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №95)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -110957,8 +113671,7 @@ Suite *s21_is_equal_case_95(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_96(void)
-{
+Suite *s21_is_equal_case_96(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №96)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -111072,8 +113785,7 @@ Suite *s21_is_equal_case_96(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_97(void)
-{
+Suite *s21_is_equal_case_97(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №97)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -111187,8 +113899,7 @@ Suite *s21_is_equal_case_97(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_98(void)
-{
+Suite *s21_is_equal_case_98(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №98)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -111302,8 +114013,7 @@ Suite *s21_is_equal_case_98(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_99(void)
-{
+Suite *s21_is_equal_case_99(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №99)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -111417,8 +114127,7 @@ Suite *s21_is_equal_case_99(void)
  *
  * @return Suite*
  */
-Suite *s21_is_equal_case_100(void)
-{
+Suite *s21_is_equal_case_100(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_equal case №100)\n");
 
   TCase *tc_s21_is_equal = tcase_create("s21_is_equal_test");
@@ -111538,7 +114247,8 @@ Suite *s21_is_equal_edge_case(void) {
   return decimal;
 }
 
-static void s21_test_is_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count) {
+static void s21_test_is_equal(s21_decimal value_1, s21_decimal value_2,
+                              int code, char *text, int count) {
   int implement_code = s21_is_equal(value_1, value_2);
   int res = (implement_code == code);
 
@@ -111555,7 +114265,8 @@ static void s21_test_is_equal(s21_decimal value_1, s21_decimal value_2, int code
   if (res == 0) {
     printf("Test №%d: %s\n%s%s\n", count, RED "TEST_FAILED",
            RESET "Subformul:   ", text);
-    printf("Compare result = %s%d%s\nOrigin compare = %s%d%s\n\n", RED, implement_code, RESET, GREEN, code, RESET);
+    printf("Compare result = %s%d%s\nOrigin compare = %s%d%s\n\n", RED,
+           implement_code, RESET, GREEN, code, RESET);
     both_decimal_bits(value_1, value_2);
     print_line();
   }

@@ -37,10 +37,10 @@ DVI_DIR = ./../docs
 
 #==================================== FLAGS ===================================#
 # MAIN FLAGS FOR COMPILER
-CFLAGS = -Wall -Werror -Wextra -pedantic -std=c11 -g
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=c11
 
 # OPTIMIZATION
-# OPTIMIZE = -O2
+OPTIMIZE = -O2
 
 # CHECK LIBRARIES FOR LINKING
 LDFLAGS = -lcheck -lsubunit -lm
@@ -178,10 +178,6 @@ clang_check:
 
 clang_fix:
 	clang-format -style=Google -i $(ALL_FILES)
-
-m: $(LIBRARY)
-	$(CC) $(CFLAGS) main.c $(LIBRARY) $(LDFLAGS)
-	valgrind $(VAL) ./a.out
 
 cppcheck:
 	$@ $(CPPCHECK) $(MODULES_C) $(MODULES_H)

@@ -1,17 +1,18 @@
 /**
  * @file is_equal_test.c
  * @author kossadda (https://github.com/kossadda)
- * @brief 
+ * @brief
  * @version 1.0
  * @date 2024-03-05
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "./../../main_test.h"
 
-static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count);
+static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2,
+                                  int code, char *text, int count);
 
 //############################# EDGE CASE #####################################
 START_TEST(s21_is_not_equal_edge_1) {
@@ -24,7 +25,8 @@ START_TEST(s21_is_not_equal_edge_1) {
 //#############################################################################
 
 START_TEST(s21_is_not_equal_1) {
-  char *example = "( -3.99876565460614972 != 1411275808592106290159497609 ) = True";
+  char *example =
+      "( -3.99876565460614972 != 1411275808592106290159497609 ) = True";
   s21_decimal value_1 = {{0x1E487F3C, 0x58CA59E, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x82BB3189, 0xE1F169DD, 0x48F6146, 0x0}};
   int code = 1;
@@ -44,7 +46,8 @@ START_TEST(s21_is_not_equal_2) {
 }
 
 START_TEST(s21_is_not_equal_3) {
-  char *example = "( 1794922140203338476238466075 != 173662361813420663 ) = True";
+  char *example =
+      "( 1794922140203338476238466075 != 173662361813420663 ) = True";
   s21_decimal value_1 = {{0xE64CEC1B, 0x314A4569, 0x5CCB98C, 0x0}};
   s21_decimal value_2 = {{0x7ABE8A77, 0x268F8FF, 0x0, 0x0}};
   int code = 1;
@@ -114,7 +117,8 @@ START_TEST(s21_is_not_equal_9) {
 }
 
 START_TEST(s21_is_not_equal_10) {
-  char *example = "( 1703748359272694828241355887 != 1150211003816240129801909064 ) = True";
+  char *example =
+      "( 1703748359272694828241355887 != 1150211003816240129801909064 ) = True";
   s21_decimal value_1 = {{0xA125846F, 0x9FE60360, 0x5814EBF, 0x0}};
   s21_decimal value_2 = {{0x7E4EF348, 0x752CCFBD, 0x3B76EA7, 0x0}};
   int code = 1;
@@ -144,7 +148,8 @@ START_TEST(s21_is_not_equal_12) {
 }
 
 START_TEST(s21_is_not_equal_13) {
-  char *example = "( 1379370196626768511510544596 != 1264958226479980081841986286 ) = True";
+  char *example =
+      "( 1379370196626768511510544596 != 1264958226479980081841986286 ) = True";
   s21_decimal value_1 = {{0x23CC80D4, 0x3135A836, 0x474FD00, 0x0}};
   s21_decimal value_2 = {{0x367C5AEE, 0xDCD6A5B3, 0x4165952, 0x0}};
   int code = 1;
@@ -204,7 +209,8 @@ START_TEST(s21_is_not_equal_18) {
 }
 
 START_TEST(s21_is_not_equal_19) {
-  char *example = "( -1.954215320194971920483894 != -878.76070636296614763461363 ) = True";
+  char *example =
+      "( -1.954215320194971920483894 != -878.76070636296614763461363 ) = True";
   s21_decimal value_1 = {{0x3E6BC636, 0x398B60D0, 0x19DD2, 0x80180000}};
   s21_decimal value_2 = {{0xA69A7AF3, 0x55ACCF5D, 0x48B07B, 0x80170000}};
   int code = 1;
@@ -264,7 +270,8 @@ START_TEST(s21_is_not_equal_24) {
 }
 
 START_TEST(s21_is_not_equal_25) {
-  char *example = "( -76355.224478529092316926554 != 1792951053380682051197695407 ) = True";
+  char *example =
+      "( -76355.224478529092316926554 != 1792951053380682051197695407 ) = True";
   s21_decimal value_1 = {{0x8D9D925A, 0x354C0CE, 0x3F28D9, 0x80150000}};
   s21_decimal value_2 = {{0xAE1575AF, 0x5C9D50F5, 0x5CB1827, 0x0}};
   int code = 1;
@@ -274,7 +281,8 @@ START_TEST(s21_is_not_equal_25) {
 }
 
 START_TEST(s21_is_not_equal_26) {
-  char *example = "( 0.230752557201540366 != 1007520929189470743238499153 ) = True";
+  char *example =
+      "( 0.230752557201540366 != 1007520929189470743238499153 ) = True";
   s21_decimal value_1 = {{0x6B02C50E, 0x333CC3A, 0x0, 0x120000}};
   s21_decimal value_2 = {{0xFF35B51, 0x339393E, 0x34166DB, 0x0}};
   int code = 1;
@@ -284,7 +292,8 @@ START_TEST(s21_is_not_equal_26) {
 }
 
 START_TEST(s21_is_not_equal_27) {
-  char *example = "( -713.81587711203755546773058 != 1269705335434220317284287118 ) = True";
+  char *example =
+      "( -713.81587711203755546773058 != 1269705335434220317284287118 ) = True";
   s21_decimal value_1 = {{0xF9B60642, 0x9FA41760, 0x3B0BA3, 0x80170000}};
   s21_decimal value_2 = {{0x2D78C28E, 0x279B2205, 0x41A4690, 0x0}};
   int code = 1;
@@ -304,7 +313,8 @@ START_TEST(s21_is_not_equal_28) {
 }
 
 START_TEST(s21_is_not_equal_29) {
-  char *example = "( 1155048892523237839946463665 != 1.2585317788934477964957354 ) = True";
+  char *example =
+      "( 1155048892523237839946463665 != 1.2585317788934477964957354 ) = True";
   s21_decimal value_1 = {{0x707D39B1, 0xEE16AD3D, 0x3BB6F1D, 0x0}};
   s21_decimal value_2 = {{0xDC9CD6AA, 0x71C4CC7D, 0xA690B, 0x190000}};
   int code = 1;
@@ -354,7 +364,8 @@ START_TEST(s21_is_not_equal_33) {
 }
 
 START_TEST(s21_is_not_equal_34) {
-  char *example = "( 151090248076517289014503 != 1847414815941859960848703927 ) = True";
+  char *example =
+      "( 151090248076517289014503 != 1847414815941859960848703927 ) = True";
   s21_decimal value_1 = {{0x5BA8B4E7, 0x9E671326, 0x1FFE, 0x0}};
   s21_decimal value_2 = {{0x6FA8E1B7, 0xD8A75B09, 0x5F8254D, 0x0}};
   int code = 1;
@@ -384,7 +395,8 @@ START_TEST(s21_is_not_equal_36) {
 }
 
 START_TEST(s21_is_not_equal_37) {
-  char *example = "( 162148066041737217569 != 149336150938226916092594 ) = True";
+  char *example =
+      "( 162148066041737217569 != 149336150938226916092594 ) = True";
   s21_decimal value_1 = {{0xBA538621, 0xCA41A6F7, 0x8, 0x0}};
   s21_decimal value_2 = {{0xCCBC6AB2, 0x876A2D7A, 0x1F9F, 0x0}};
   int code = 1;
@@ -394,7 +406,8 @@ START_TEST(s21_is_not_equal_37) {
 }
 
 START_TEST(s21_is_not_equal_38) {
-  char *example = "( -43.84231249632381310982 != 161566443130925471969 ) = True";
+  char *example =
+      "( -43.84231249632381310982 != 161566443130925471969 ) = True";
   s21_decimal value_1 = {{0x51071806, 0xAB6E54E3, 0xED, 0x80140000}};
   s21_decimal value_2 = {{0xA29D8E1, 0xC22F5003, 0x8, 0x0}};
   int code = 1;
@@ -414,7 +427,8 @@ START_TEST(s21_is_not_equal_39) {
 }
 
 START_TEST(s21_is_not_equal_40) {
-  char *example = "( 1854548844663748402349155531 != -763556127370.99504430289003 ) = True";
+  char *example =
+      "( 1854548844663748402349155531 != -763556127370.99504430289003 ) = True";
   s21_decimal value_1 = {{0x287124CB, 0x51789078, 0x5FE0BFE, 0x0}};
   s21_decimal value_2 = {{0xBC9F106B, 0xF804983, 0x3F28EE, 0x800E0000}};
   int code = 1;
@@ -504,7 +518,8 @@ START_TEST(s21_is_not_equal_48) {
 }
 
 START_TEST(s21_is_not_equal_49) {
-  char *example = "( -4085873.0671636456882723670 != 1756832790206441984975 ) = True";
+  char *example =
+      "( -4085873.0671636456882723670 != 1756832790206441984975 ) = True";
   s21_decimal value_1 = {{0x1E35D5EF, 0x9F6F8E0A, 0x36137, 0x80120000}};
   s21_decimal value_2 = {{0xFD5613CF, 0x3CF3E297, 0x5F, 0x0}};
   int code = 1;
@@ -544,7 +559,8 @@ START_TEST(s21_is_not_equal_52) {
 }
 
 START_TEST(s21_is_not_equal_53) {
-  char *example = "( -41.930252180338281492318138 != 0.68408173870904360174963015 ) = True";
+  char *example =
+      "( -41.930252180338281492318138 != 0.68408173870904360174963015 ) = True";
   s21_decimal value_1 = {{0x787107BA, 0x867CA470, 0x22AF13, 0x80180000}};
   s21_decimal value_2 = {{0x6F254947, 0x894CECC8, 0x3895FE, 0x1A0000}};
   int code = 1;
@@ -554,7 +570,8 @@ START_TEST(s21_is_not_equal_53) {
 }
 
 START_TEST(s21_is_not_equal_54) {
-  char *example = "( -997.06185694728097564745866 != 12842963962830768370121128 ) = True";
+  char *example =
+      "( -997.06185694728097564745866 != 12842963962830768370121128 ) = True";
   s21_decimal value_1 = {{0x4E58608A, 0x2832AEEF, 0x52799B, 0x80170000}};
   s21_decimal value_2 = {{0xFAF079A8, 0x78B3173B, 0xA9F9A, 0x0}};
   int code = 1;
@@ -564,7 +581,8 @@ START_TEST(s21_is_not_equal_54) {
 }
 
 START_TEST(s21_is_not_equal_55) {
-  char *example = "( -50.0782002075038094 != 1105633159392441754017774 ) = True";
+  char *example =
+      "( -50.0782002075038094 != 1105633159392441754017774 ) = True";
   s21_decimal value_1 = {{0xDF97718E, 0x6F32293, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xA5855FEE, 0x7E611BE3, 0xEA20, 0x0}};
   int code = 1;
@@ -634,7 +652,8 @@ START_TEST(s21_is_not_equal_61) {
 }
 
 START_TEST(s21_is_not_equal_62) {
-  char *example = "( 122693392350833664584622003 != 18094542458172877191 ) = True";
+  char *example =
+      "( 122693392350833664584622003 != 18094542458172877191 ) = True";
   s21_decimal value_1 = {{0xA3109FB3, 0x20773E56, 0x657D56, 0x0}};
   s21_decimal value_2 = {{0x289E2987, 0xFB1CBA7F, 0x0, 0x0}};
   int code = 1;
@@ -694,7 +713,8 @@ START_TEST(s21_is_not_equal_67) {
 }
 
 START_TEST(s21_is_not_equal_68) {
-  char *example = "( 1478226801205701870808342643 != 1484992916260256568477907955 ) = True";
+  char *example =
+      "( 1478226801205701870808342643 != 1484992916260256568477907955 ) = True";
   s21_decimal value_1 = {{0xCA4E2073, 0x76F5017F, 0x4C6C2B3, 0x0}};
   s21_decimal value_2 = {{0x44667BF3, 0x4BF7A90B, 0x4CC5B7B, 0x0}};
   int code = 1;
@@ -714,7 +734,8 @@ START_TEST(s21_is_not_equal_69) {
 }
 
 START_TEST(s21_is_not_equal_70) {
-  char *example = "( 1855592407790965041821772625 != -401333.96189488368057466557 ) = True";
+  char *example =
+      "( 1855592407790965041821772625 != -401333.96189488368057466557 ) = True";
   s21_decimal value_1 = {{0x5C85EB51, 0xFD1D5197, 0x5FEE8F9, 0x0}};
   s21_decimal value_2 = {{0x72F23EBD, 0xC4531D7F, 0x213293, 0x80140000}};
   int code = 1;
@@ -904,7 +925,8 @@ START_TEST(s21_is_not_equal_88) {
 }
 
 START_TEST(s21_is_not_equal_89) {
-  char *example = "( -30.004147378978578686198854 != 1498979892966283767887798698 ) = True";
+  char *example =
+      "( -30.004147378978578686198854 != 1498979892966283767887798698 ) = True";
   s21_decimal value_1 = {{0xDEFEC446, 0x16AE0B1B, 0x18D1A0, 0x80180000}};
   s21_decimal value_2 = {{0x597DA1AA, 0xD2C43A25, 0x4D7ED56, 0x0}};
   int code = 1;
@@ -994,7 +1016,8 @@ START_TEST(s21_is_not_equal_97) {
 }
 
 START_TEST(s21_is_not_equal_98) {
-  char *example = "( -2.469168907053459047198991 != 1718151710375243273950248960 ) = True";
+  char *example =
+      "( -2.469168907053459047198991 != 1718151710375243273950248960 ) = True";
   s21_decimal value_1 = {{0xA98C310F, 0xEA275B92, 0x20ADD, 0x80180000}};
   s21_decimal value_2 = {{0x5E0C000, 0xDA389A74, 0x58D38C6, 0x0}};
   int code = 1;
@@ -1014,7 +1037,8 @@ START_TEST(s21_is_not_equal_99) {
 }
 
 START_TEST(s21_is_not_equal_100) {
-  char *example = "( 0.1125479861735690592 != 1741840061024003096484999 ) = True";
+  char *example =
+      "( 0.1125479861735690592 != 1741840061024003096484999 ) = True";
   s21_decimal value_1 = {{0xA09C9160, 0xF9E81F8, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x31969C87, 0x56C3152A, 0x170D9, 0x0}};
   int code = 1;
@@ -1024,7 +1048,8 @@ START_TEST(s21_is_not_equal_100) {
 }
 
 START_TEST(s21_is_not_equal_101) {
-  char *example = "( -7614190.5173360467033614697 != 1153430186951448579184 ) = True";
+  char *example =
+      "( -7614190.5173360467033614697 != 1153430186951448579184 ) = True";
   s21_decimal value_1 = {{0x4A466969, 0xF347540F, 0x3EFBAC, 0x80130000}};
   s21_decimal value_2 = {{0xB57DCC70, 0x870F33E5, 0x3E, 0x0}};
   int code = 1;
@@ -1054,7 +1079,8 @@ START_TEST(s21_is_not_equal_103) {
 }
 
 START_TEST(s21_is_not_equal_104) {
-  char *example = "( 1749223138994420051786604751 != -50643443974.592466137058485 ) = True";
+  char *example =
+      "( 1749223138994420051786604751 != -50643443974.592466137058485 ) = True";
   s21_decimal value_1 = {{0xD68C20CF, 0x5F7BD376, 0x5A6EC68, 0x0}};
   s21_decimal value_2 = {{0x78CB0CB5, 0x995619F9, 0x29E42A, 0x800F0000}};
   int code = 1;
@@ -1094,7 +1120,8 @@ START_TEST(s21_is_not_equal_107) {
 }
 
 START_TEST(s21_is_not_equal_108) {
-  char *example = "( 1512425509184630134163265 != 12130654570042872505614 ) = True";
+  char *example =
+      "( 1512425509184630134163265 != 12130654570042872505614 ) = True";
   s21_decimal value_1 = {{0xF2404741, 0xC04AA5A4, 0x14044, 0x0}};
   s21_decimal value_2 = {{0xD64F250E, 0x9AA66C7D, 0x291, 0x0}};
   int code = 1;
@@ -1104,7 +1131,8 @@ START_TEST(s21_is_not_equal_108) {
 }
 
 START_TEST(s21_is_not_equal_109) {
-  char *example = "( -416.66581765275506711522554 != 1987075169880125980 ) = True";
+  char *example =
+      "( -416.66581765275506711522554 != 1987075169880125980 ) = True";
   s21_decimal value_1 = {{0xA80CECFA, 0xEC6A5A93, 0x22773D, 0x80170000}};
   s21_decimal value_2 = {{0xCAB4321C, 0x1B938256, 0x0, 0x0}};
   int code = 1;
@@ -1124,7 +1152,8 @@ START_TEST(s21_is_not_equal_110) {
 }
 
 START_TEST(s21_is_not_equal_111) {
-  char *example = "( 1687987961414127400956105116 != 1385911276359735902864037187 ) = True";
+  char *example =
+      "( 1687987961414127400956105116 != 1385911276359735902864037187 ) = True";
   s21_decimal value_1 = {{0xFA02919C, 0xBEA68AE5, 0x574455A, 0x0}};
   s21_decimal value_2 = {{0x8B5A5543, 0xD5C71855, 0x47A6620, 0x0}};
   int code = 1;
@@ -1204,7 +1233,8 @@ START_TEST(s21_is_not_equal_118) {
 }
 
 START_TEST(s21_is_not_equal_119) {
-  char *example = "( 1598541970525794607886681118 != 1655310577692014072731561842 ) = True";
+  char *example =
+      "( 1598541970525794607886681118 != 1655310577692014072731561842 ) = True";
   s21_decimal value_1 = {{0xB2EEC41E, 0xDCD7B29B, 0x52A486D, 0x0}};
   s21_decimal value_2 = {{0xADE06F72, 0x393D93E5, 0x5593DA6, 0x0}};
   int code = 1;
@@ -1264,7 +1294,8 @@ START_TEST(s21_is_not_equal_124) {
 }
 
 START_TEST(s21_is_not_equal_125) {
-  char *example = "( 1058447840155084439039224286 != 1331989257039942925462067965 ) = True";
+  char *example =
+      "( 1058447840155084439039224286 != 1331989257039942925462067965 ) = True";
   s21_decimal value_1 = {{0x1E9FA9DE, 0x634FD08A, 0x36B870C, 0x0}};
   s21_decimal value_2 = {{0x39F8DAFD, 0x4F7D1F25, 0x44DCBB2, 0x0}};
   int code = 1;
@@ -1314,7 +1345,8 @@ START_TEST(s21_is_not_equal_129) {
 }
 
 START_TEST(s21_is_not_equal_130) {
-  char *example = "( 1859657824785261982161236 != -4743183.7612579905945089775 ) = True";
+  char *example =
+      "( 1859657824785261982161236 != -4743183.7612579905945089775 ) = True";
   s21_decimal value_1 = {{0xA7F09954, 0x40B000C3, 0x189CC, 0x0}};
   s21_decimal value_2 = {{0x72BA36EF, 0x11B8DB52, 0x273C15, 0x80130000}};
   int code = 1;
@@ -1384,7 +1416,8 @@ START_TEST(s21_is_not_equal_136) {
 }
 
 START_TEST(s21_is_not_equal_137) {
-  char *example = "( -1.3327035971227049957141213 != 141343826144761584798159 ) = True";
+  char *example =
+      "( -1.3327035971227049957141213 != 141343826144761584798159 ) = True";
   s21_decimal value_1 = {{0x9AFE2ADD, 0x1150D83B, 0xB061C, 0x80190000}};
   s21_decimal value_2 = {{0x7C6BC9CF, 0x43A08EF9, 0x1DEE, 0x0}};
   int code = 1;
@@ -1494,7 +1527,8 @@ START_TEST(s21_is_not_equal_147) {
 }
 
 START_TEST(s21_is_not_equal_148) {
-  char *example = "( -656890.95212365075580267141 != 10795211942358606 ) = True";
+  char *example =
+      "( -656890.95212365075580267141 != 10795211942358606 ) = True";
   s21_decimal value_1 = {{0x68652A85, 0xFCA4FF76, 0x365634, 0x80140000}};
   s21_decimal value_2 = {{0x25196E4E, 0x265A30, 0x0, 0x0}};
   int code = 1;
@@ -1544,7 +1578,8 @@ START_TEST(s21_is_not_equal_152) {
 }
 
 START_TEST(s21_is_not_equal_153) {
-  char *example = "( 1219262211942080063427821306 != 1559205283967516809647496015 ) = True";
+  char *example =
+      "( 1219262211942080063427821306 != 1559205283967516809647496015 ) = True";
   s21_decimal value_1 = {{0xFCC3BEFA, 0xF36B2EED, 0x3F08CD0, 0x0}};
   s21_decimal value_2 = {{0x51EE1B4F, 0xCFB96A96, 0x509BE8F, 0x0}};
   int code = 1;
@@ -1674,7 +1709,8 @@ START_TEST(s21_is_not_equal_165) {
 }
 
 START_TEST(s21_is_not_equal_166) {
-  char *example = "( 1899638916177282097183611083 != 19736544286011512 ) = True";
+  char *example =
+      "( 1899638916177282097183611083 != 19736544286011512 ) = True";
   s21_decimal value_1 = {{0xDB3A58CB, 0xFE2CC9CD, 0x623582F, 0x0}};
   s21_decimal value_2 = {{0x4F42F078, 0x461E48, 0x0, 0x0}};
   int code = 1;
@@ -1684,7 +1720,8 @@ START_TEST(s21_is_not_equal_166) {
 }
 
 START_TEST(s21_is_not_equal_167) {
-  char *example = "( -1952.7838991949859895274847 != 13109701029207526 ) = True";
+  char *example =
+      "( -1952.7838991949859895274847 != 13109701029207526 ) = True";
   s21_decimal value_1 = {{0x89C66D5F, 0x45E01D32, 0x10272E, 0x80160000}};
   s21_decimal value_2 = {{0x20F51DE6, 0x2E9334, 0x0, 0x0}};
   int code = 1;
@@ -1774,7 +1811,8 @@ START_TEST(s21_is_not_equal_175) {
 }
 
 START_TEST(s21_is_not_equal_176) {
-  char *example = "( 1704413991827899148621607689 != -48.437751450829239731485 ) = True";
+  char *example =
+      "( 1704413991827899148621607689 != -48.437751450829239731485 ) = True";
   s21_decimal value_1 = {{0x73AC7309, 0xA341F148, 0x581DBB3, 0x0}};
   s21_decimal value_2 = {{0xBAB5C51D, 0xD0D62652, 0xA41, 0x80150000}};
   int code = 1;
@@ -1814,7 +1852,8 @@ START_TEST(s21_is_not_equal_179) {
 }
 
 START_TEST(s21_is_not_equal_180) {
-  char *example = "( -79228162514264337593543950335 != 15591084831846378900 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 15591084831846378900 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xA92F2D94, 0xD85EA90C, 0x0, 0x0}};
   int code = 1;
@@ -1954,7 +1993,8 @@ START_TEST(s21_is_not_equal_193) {
 }
 
 START_TEST(s21_is_not_equal_194) {
-  char *example = "( -4.3789352499694145740609791 != 8.2460721811528076E-10 ) = True";
+  char *example =
+      "( -4.3789352499694145740609791 != 8.2460721811528076E-10 ) = True";
   s21_decimal value_1 = {{0xECD618FF, 0x8E3B7AF4, 0x2438C1, 0x80190000}};
   s21_decimal value_2 = {{0xEF7F998C, 0x124F596, 0x0, 0x1A0000}};
   int code = 1;
@@ -1974,7 +2014,8 @@ START_TEST(s21_is_not_equal_195) {
 }
 
 START_TEST(s21_is_not_equal_196) {
-  char *example = "( 1942987542476489658856991439 != 1792785202203132887050934705 ) = True";
+  char *example =
+      "( 1942987542476489658856991439 != 1792785202203132887050934705 ) = True";
   s21_decimal value_1 = {{0x5E96ACF, 0xBBB731B3, 0x647339D, 0x0}};
   s21_decimal value_2 = {{0x9466D9B1, 0x8D2A3131, 0x5CAF508, 0x0}};
   int code = 1;
@@ -1984,7 +2025,8 @@ START_TEST(s21_is_not_equal_196) {
 }
 
 START_TEST(s21_is_not_equal_197) {
-  char *example = "( 1729491295621494010968882614 != -8.6153006280142663946662339 ) = True";
+  char *example =
+      "( 1729491295621494010968882614 != -8.6153006280142663946662339 ) = True";
   s21_decimal value_1 = {{0xDBF13DB6, 0x18E1F6, 0x5969A07, 0x0}};
   s21_decimal value_2 = {{0xD2F0F1C3, 0xD4293F90, 0x47439B, 0x80190000}};
   int code = 1;
@@ -2034,7 +2076,8 @@ START_TEST(s21_is_not_equal_201) {
 }
 
 START_TEST(s21_is_not_equal_202) {
-  char *example = "( 167453524578894259359 != 1664856764407670894755824873 ) = True";
+  char *example =
+      "( 167453524578894259359 != 1664856764407670894755824873 ) = True";
   s21_decimal value_1 = {{0xD022A49F, 0x13E26D65, 0x9, 0x0}};
   s21_decimal value_2 = {{0x489FC4E9, 0xADAACE3, 0x5612322, 0x0}};
   int code = 1;
@@ -2104,7 +2147,8 @@ START_TEST(s21_is_not_equal_208) {
 }
 
 START_TEST(s21_is_not_equal_209) {
-  char *example = "( 1363930542879931150808476053 != 1387696895055800287438262401 ) = True";
+  char *example =
+      "( 1363930542879931150808476053 != 1387696895055800287438262401 ) = True";
   s21_decimal value_1 = {{0x90B56995, 0xE2AF5317, 0x4683786, 0x0}};
   s21_decimal value_2 = {{0x9BBB5081, 0x6B25B993, 0x47BE03F, 0x0}};
   int code = 1;
@@ -2174,7 +2218,8 @@ START_TEST(s21_is_not_equal_215) {
 }
 
 START_TEST(s21_is_not_equal_216) {
-  char *example = "( 1911625078130789556719022301 != 1149699710193771680081 ) = True";
+  char *example =
+      "( 1911625078130789556719022301 != 1149699710193771680081 ) = True";
   s21_decimal value_1 = {{0x8A970DD, 0x22655517, 0x62D425B, 0x0}};
   s21_decimal value_2 = {{0x154F1151, 0x5349E30D, 0x3E, 0x0}};
   int code = 1;
@@ -2204,7 +2249,8 @@ START_TEST(s21_is_not_equal_218) {
 }
 
 START_TEST(s21_is_not_equal_219) {
-  char *example = "( 1975007583258729540697084826 != -104.279416213625 ) = True";
+  char *example =
+      "( 1975007583258729540697084826 != -104.279416213625 ) = True";
   s21_decimal value_1 = {{0xE042539A, 0x9F4A01F5, 0x661B01F, 0x0}};
   s21_decimal value_2 = {{0x718F9079, 0x5ED7, 0x0, 0x800C0000}};
   int code = 1;
@@ -2254,7 +2300,8 @@ START_TEST(s21_is_not_equal_223) {
 }
 
 START_TEST(s21_is_not_equal_224) {
-  char *example = "( 98422.7759385514645107534198 != 1958287822368151326289 ) = True";
+  char *example =
+      "( 98422.7759385514645107534198 != 1958287822368151326289 ) = True";
   s21_decimal value_1 = {{0x7EB46976, 0xBF501603, 0x32E2255, 0x160000}};
   s21_decimal value_2 = {{0x82EA4E51, 0x28B3EEFD, 0x6A, 0x0}};
   int code = 1;
@@ -2324,7 +2371,8 @@ START_TEST(s21_is_not_equal_230) {
 }
 
 START_TEST(s21_is_not_equal_231) {
-  char *example = "( 1272406341670525608756435688 != 1507775487821066205909273751 ) = True";
+  char *example =
+      "( 1272406341670525608756435688 != 1507775487821066205909273751 ) = True";
   s21_decimal value_1 = {{0x14AEDAE8, 0xFF056152, 0x41C8285, 0x0}};
   s21_decimal value_2 = {{0x5CE8CC97, 0xF9CE0000, 0x4DF33E0, 0x0}};
   int code = 1;
@@ -2414,7 +2462,8 @@ START_TEST(s21_is_not_equal_239) {
 }
 
 START_TEST(s21_is_not_equal_240) {
-  char *example = "( 118808166535115509148 != -248.37854321854925731930618 ) = True";
+  char *example =
+      "( 118808166535115509148 != -248.37854321854925731930618 ) = True";
   s21_decimal value_1 = {{0xB5030D9C, 0x70CB65FD, 0x6, 0x0}};
   s21_decimal value_2 = {{0xE62E21FA, 0xC7E14EE1, 0x148B9E, 0x80170000}};
   int code = 1;
@@ -2474,7 +2523,8 @@ START_TEST(s21_is_not_equal_245) {
 }
 
 START_TEST(s21_is_not_equal_246) {
-  char *example = "( 0.589378769676887 != 1751055666032657929444088055 ) = True";
+  char *example =
+      "( 0.589378769676887 != 1751055666032657929444088055 ) = True";
   s21_decimal value_1 = {{0x70346A57, 0x21809, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0x412558F7, 0xDCDF5873, 0x5A87075, 0x0}};
   int code = 1;
@@ -2524,7 +2574,8 @@ START_TEST(s21_is_not_equal_250) {
 }
 
 START_TEST(s21_is_not_equal_251) {
-  char *example = "( -626.35361824838140882355124 != -3.207651673288010 ) = True";
+  char *example =
+      "( -626.35361824838140882355124 != -3.207651673288010 ) = True";
   s21_decimal value_1 = {{0x816083B4, 0xC4ABB89E, 0x33CF8D, 0x80170000}};
   s21_decimal value_2 = {{0xF5DADE21, 0x123BB, 0x0, 0x800E0000}};
   int code = 1;
@@ -2544,7 +2595,8 @@ START_TEST(s21_is_not_equal_252) {
 }
 
 START_TEST(s21_is_not_equal_253) {
-  char *example = "( 1762629642758070731 != -8.1155503430504087042358340 ) = True";
+  char *example =
+      "( 1762629642758070731 != -8.1155503430504087042358340 ) = True";
   s21_decimal value_1 = {{0x3F2B21CB, 0x18761E52, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2196593A, 0xDD9ABFD1, 0x6B688, 0x80180000}};
   int code = 1;
@@ -2614,7 +2666,8 @@ START_TEST(s21_is_not_equal_259) {
 }
 
 START_TEST(s21_is_not_equal_260) {
-  char *example = "( -2.6863741559356347350579170 != 1056294015878656152929315862 ) = True";
+  char *example =
+      "( -2.6863741559356347350579170 != 1056294015878656152929315862 ) = True";
   s21_decimal value_1 = {{0x930D4BFD, 0xA2822B2E, 0x238DC, 0x80180000}};
   s21_decimal value_2 = {{0x3DAC2C16, 0x5707371A, 0x369BEF5, 0x0}};
   int code = 1;
@@ -2634,7 +2687,8 @@ START_TEST(s21_is_not_equal_261) {
 }
 
 START_TEST(s21_is_not_equal_262) {
-  char *example = "( 0.49121530279187538837572344 != 1407626191139116042331174143 ) = True";
+  char *example =
+      "( 0.49121530279187538837572344 != 1407626191139116042331174143 ) = True";
   s21_decimal value_1 = {{0xF5C90AF8, 0x7E027B88, 0x28A1E3, 0x1A0000}};
   s21_decimal value_2 = {{0xD39134FF, 0xB959C939, 0x48C5C70, 0x0}};
   int code = 1;
@@ -2644,7 +2698,8 @@ START_TEST(s21_is_not_equal_262) {
 }
 
 START_TEST(s21_is_not_equal_263) {
-  char *example = "( -510.03412670841890031431649 != -28.53910883172714 ) = True";
+  char *example =
+      "( -510.03412670841890031431649 != -28.53910883172714 ) = True";
   s21_decimal value_1 = {{0x1F966FE1, 0x8A8534EF, 0x2A3064, 0x80170000}};
   s21_decimal value_2 = {{0xE869816A, 0xA239D, 0x0, 0x800E0000}};
   int code = 1;
@@ -2724,7 +2779,8 @@ START_TEST(s21_is_not_equal_270) {
 }
 
 START_TEST(s21_is_not_equal_271) {
-  char *example = "( 13140894490157037702 != -126.49640411789415652151366 ) = True";
+  char *example =
+      "( 13140894490157037702 != -126.49640411789415652151366 ) = True";
   s21_decimal value_1 = {{0x54B2B886, 0xB65DD5EA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1BD65046, 0x617ADF32, 0xA76AA, 0x80170000}};
   int code = 1;
@@ -2794,7 +2850,8 @@ START_TEST(s21_is_not_equal_277) {
 }
 
 START_TEST(s21_is_not_equal_278) {
-  char *example = "( -431.75728589407822891026079 != 1396490656768294162829522 ) = True";
+  char *example =
+      "( -431.75728589407822891026079 != 1396490656768294162829522 ) = True";
   s21_decimal value_1 = {{0x601869F, 0xEFCFC45C, 0x23B6D0, 0x80170000}};
   s21_decimal value_2 = {{0xF3890D2, 0xE9029E29, 0x127B7, 0x0}};
   int code = 1;
@@ -2844,7 +2901,8 @@ START_TEST(s21_is_not_equal_282) {
 }
 
 START_TEST(s21_is_not_equal_283) {
-  char *example = "( -8.8486611558606535790665677 != -5.5110717076464076157139790 ) = True";
+  char *example =
+      "( -8.8486611558606535790665677 != -5.5110717076464076157139790 ) = True";
   s21_decimal value_1 = {{0xC66F9FCD, 0xD30AF7CB, 0x4931C4, 0x80190000}};
   s21_decimal value_2 = {{0x83A012BB, 0xCBC09B17, 0x48F03, 0x80180000}};
   int code = 1;
@@ -2854,7 +2912,8 @@ START_TEST(s21_is_not_equal_283) {
 }
 
 START_TEST(s21_is_not_equal_284) {
-  char *example = "( 1965770216371736604770797655 != 1192705408165078091496082307 ) = True";
+  char *example =
+      "( 1965770216371736604770797655 != 1192705408165078091496082307 ) = True";
   s21_decimal value_1 = {{0x9BFF8857, 0xF5BA7D32, 0x65A0C08, 0x0}};
   s21_decimal value_2 = {{0xD1D2CB83, 0xBBBF6858, 0x3DA9531, 0x0}};
   int code = 1;
@@ -2914,7 +2973,8 @@ START_TEST(s21_is_not_equal_289) {
 }
 
 START_TEST(s21_is_not_equal_290) {
-  char *example = "( 1889564007257880414869446344 != 1885135171872013456181329963 ) = True";
+  char *example =
+      "( 1889564007257880414869446344 != 1885135171872013456181329963 ) = True";
   s21_decimal value_1 = {{0x80EDEC8, 0x16022928, 0x61B02BE, 0x0}};
   s21_decimal value_2 = {{0xFA38802B, 0x7049A2B1, 0x61758E6, 0x0}};
   int code = 1;
@@ -2934,7 +2994,8 @@ START_TEST(s21_is_not_equal_291) {
 }
 
 START_TEST(s21_is_not_equal_292) {
-  char *example = "( 1581533931944316025405 != 1425900857507874687275712710 ) = True";
+  char *example =
+      "( 1581533931944316025405 != 1425900857507874687275712710 ) = True";
   s21_decimal value_1 = {{0x7C4BA3D, 0xBC313BC7, 0x55, 0x0}};
   s21_decimal value_2 = {{0x8EBF40C6, 0x5F799721, 0x49B7A40, 0x0}};
   int code = 1;
@@ -2964,7 +3025,8 @@ START_TEST(s21_is_not_equal_294) {
 }
 
 START_TEST(s21_is_not_equal_295) {
-  char *example = "( 192417117991273172007 != -96.443509270029977145601184 ) = True";
+  char *example =
+      "( 192417117991273172007 != -96.443509270029977145601184 ) = True";
   s21_decimal value_1 = {{0xEE430C27, 0x6E52ED57, 0xA, 0x0}};
   s21_decimal value_2 = {{0xD32C6CA0, 0x1D17288D, 0x4FC6B5, 0x80180000}};
   int code = 1;
@@ -3004,7 +3066,8 @@ START_TEST(s21_is_not_equal_298) {
 }
 
 START_TEST(s21_is_not_equal_299) {
-  char *example = "( 1427686066752899623191489894 != 1203285887533284924528346000 ) = True";
+  char *example =
+      "( 1427686066752899623191489894 != 1203285887533284924528346000 ) = True";
   s21_decimal value_1 = {{0xB62AD66, 0xC291E95C, 0x49CF448, 0x0}};
   s21_decimal value_2 = {{0xA1314390, 0xAB531A3D, 0x3E355B2, 0x0}};
   int code = 1;
@@ -3054,7 +3117,9 @@ START_TEST(s21_is_not_equal_303) {
 }
 
 START_TEST(s21_is_not_equal_304) {
-  char *example = "( -79228162514264337593543950335 != 1714045401245830758799175058 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1714045401245830758799175058 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x14DAED92, 0x637327F7, 0x589D33B, 0x0}};
   int code = 1;
@@ -3104,7 +3169,8 @@ START_TEST(s21_is_not_equal_308) {
 }
 
 START_TEST(s21_is_not_equal_309) {
-  char *example = "( 1586315952218282435992280462 != 33982.0129000779768774343650 ) = True";
+  char *example =
+      "( 1586315952218282435992280462 != 33982.0129000779768774343650 ) = True";
   s21_decimal value_1 = {{0xEEC6DD8E, 0x15095576, 0x5202B78, 0x0}};
   s21_decimal value_2 = {{0x455E85FD, 0x9C4F4838, 0x1C1BF8, 0x150000}};
   int code = 1;
@@ -3164,7 +3230,8 @@ START_TEST(s21_is_not_equal_314) {
 }
 
 START_TEST(s21_is_not_equal_315) {
-  char *example = "( -22.085033538681355152394780 != 1235919306311323251267822089 ) = True";
+  char *example =
+      "( -22.085033538681355152394780 != 1235919306311323251267822089 ) = True";
   s21_decimal value_1 = {{0xCC333436, 0x34EAF6CF, 0x1D3AB, 0x80170000}};
   s21_decimal value_2 = {{0xF30B6209, 0xD891DD48, 0x3FE5417, 0x0}};
   int code = 1;
@@ -3244,7 +3311,8 @@ START_TEST(s21_is_not_equal_322) {
 }
 
 START_TEST(s21_is_not_equal_323) {
-  char *example = "( -9.9764426243313651848584217 != 11482259749171036 ) = True";
+  char *example =
+      "( -9.9764426243313651848584217 != 11482259749171036 ) = True";
   s21_decimal value_1 = {{0x60581C19, 0x622C4DD8, 0x5285F0, 0x80190000}};
   s21_decimal value_2 = {{0xED916F5C, 0x28CB0D, 0x0, 0x0}};
   int code = 1;
@@ -3254,7 +3322,8 @@ START_TEST(s21_is_not_equal_323) {
 }
 
 START_TEST(s21_is_not_equal_324) {
-  char *example = "( 0.50890792501518986044243655 != -392.97209564304068 ) = True";
+  char *example =
+      "( 0.50890792501518986044243655 != -392.97209564304068 ) = True";
   s21_decimal value_1 = {{0x9AE7FEC7, 0x63B524FB, 0x2A188B, 0x1A0000}};
   s21_decimal value_2 = {{0x98BE92C4, 0x8B9C9A, 0x0, 0x800E0000}};
   int code = 1;
@@ -3264,7 +3333,8 @@ START_TEST(s21_is_not_equal_324) {
 }
 
 START_TEST(s21_is_not_equal_325) {
-  char *example = "( -948.92576034286869990041557 != 9.1790119202760237E-10 ) = True";
+  char *example =
+      "( -948.92576034286869990041557 != 9.1790119202760237E-10 ) = True";
   s21_decimal value_1 = {{0x76B767D5, 0xDABDA0A7, 0x4E7E48, 0x80170000}};
   s21_decimal value_2 = {{0x88F8A62D, 0x1461AA0, 0x0, 0x1A0000}};
   int code = 1;
@@ -3294,7 +3364,8 @@ START_TEST(s21_is_not_equal_327) {
 }
 
 START_TEST(s21_is_not_equal_328) {
-  char *example = "( 13807585436157569964 != 1088179559315457540370013891 ) = True";
+  char *example =
+      "( 13807585436157569964 != 1088179559315457540370013891 ) = True";
   s21_decimal value_1 = {{0x68076BAC, 0xBF9E65CC, 0x0, 0x0}};
   s21_decimal value_2 = {{0x98B51EC3, 0x1CFB2087, 0x3841EFC, 0x0}};
   int code = 1;
@@ -3304,7 +3375,8 @@ START_TEST(s21_is_not_equal_328) {
 }
 
 START_TEST(s21_is_not_equal_329) {
-  char *example = "( 1680508555590610033068601554 != -9.394058452750346 ) = True";
+  char *example =
+      "( 1680508555590610033068601554 != -9.394058452750346 ) = True";
   s21_decimal value_1 = {{0x6121F0D2, 0x57B40844, 0x56E1587, 0x0}};
   s21_decimal value_2 = {{0xAD13500A, 0x215FD8, 0x0, 0x800F0000}};
   int code = 1;
@@ -3344,7 +3416,8 @@ START_TEST(s21_is_not_equal_332) {
 }
 
 START_TEST(s21_is_not_equal_333) {
-  char *example = "( 193531716260226396827706 != 1750587561125866277835098 ) = True";
+  char *example =
+      "( 193531716260226396827706 != 1750587561125866277835098 ) = True";
   s21_decimal value_1 = {{0x942BB03A, 0x6017A3B2, 0x28FB, 0x0}};
   s21_decimal value_2 = {{0x49D2115A, 0x8AB65991, 0x172B3, 0x0}};
   int code = 1;
@@ -3394,7 +3467,8 @@ START_TEST(s21_is_not_equal_337) {
 }
 
 START_TEST(s21_is_not_equal_338) {
-  char *example = "( 1350334293521094796302954637 != 15942787874324322 ) = True";
+  char *example =
+      "( 1350334293521094796302954637 != 15942787874324322 ) = True";
   s21_decimal value_1 = {{0xE425308D, 0xBB19CDDA, 0x45CF868, 0x0}};
   s21_decimal value_2 = {{0x8FFA7F62, 0x38A3E1, 0x0, 0x0}};
   int code = 1;
@@ -3434,7 +3508,8 @@ START_TEST(s21_is_not_equal_341) {
 }
 
 START_TEST(s21_is_not_equal_342) {
-  char *example = "( 1354191795986006405470275667 != 192918669972158191359248 ) = True";
+  char *example =
+      "( 1354191795986006405470275667 != 192918669972158191359248 ) = True";
   s21_decimal value_1 = {{0x7F3CC853, 0x5BC6E6F9, 0x4602944, 0x0}};
   s21_decimal value_2 = {{0xAFDD510, 0x245DB4C2, 0x28DA, 0x0}};
   int code = 1;
@@ -3484,7 +3559,8 @@ START_TEST(s21_is_not_equal_346) {
 }
 
 START_TEST(s21_is_not_equal_347) {
-  char *example = "( -373.254662104726482844 != 0.8204913930766532022692272 ) = True";
+  char *example =
+      "( -373.254662104726482844 != 0.8204913930766532022692272 ) = True";
   s21_decimal value_1 = {{0xA6ADAF9C, 0x3BF2F198, 0x14, 0x80120000}};
   s21_decimal value_2 = {{0x292CE9B0, 0x4683370D, 0x6C975, 0x190000}};
   int code = 1;
@@ -3494,7 +3570,8 @@ START_TEST(s21_is_not_equal_347) {
 }
 
 START_TEST(s21_is_not_equal_348) {
-  char *example = "( -63.455710738393161016604100 != 1048845032457819711760740758 ) = True";
+  char *example =
+      "( -63.455710738393161016604100 != 1048845032457819711760740758 ) = True";
   s21_decimal value_1 = {{0x77097319, 0x68E3620A, 0x865F, 0x80160000}};
   s21_decimal value_2 = {{0x54BB196, 0x23BAD9FA, 0x3639593, 0x0}};
   int code = 1;
@@ -3514,7 +3591,8 @@ START_TEST(s21_is_not_equal_349) {
 }
 
 START_TEST(s21_is_not_equal_350) {
-  char *example = "( 1866480166012790256507960123 != 18296440831985226355 ) = True";
+  char *example =
+      "( 1866480166012790256507960123 != 18296440831985226355 ) = True";
   s21_decimal value_1 = {{0x28963B3B, 0x8B6B7843, 0x607EA8C, 0x0}};
   s21_decimal value_2 = {{0x7C6E9273, 0xFDEA03FF, 0x0, 0x0}};
   int code = 1;
@@ -3544,7 +3622,8 @@ START_TEST(s21_is_not_equal_352) {
 }
 
 START_TEST(s21_is_not_equal_353) {
-  char *example = "( 1846187266279952375684219836 != 1469475880121739823639070036 ) = True";
+  char *example =
+      "( 1846187266279952375684219836 != 1469475880121739823639070036 ) = True";
   s21_decimal value_1 = {{0x557743BC, 0x3EEC16F0, 0x5F7215C, 0x0}};
   s21_decimal value_2 = {{0xD6A68554, 0x1507E901, 0x4BF859F, 0x0}};
   int code = 1;
@@ -3584,7 +3663,8 @@ START_TEST(s21_is_not_equal_356) {
 }
 
 START_TEST(s21_is_not_equal_357) {
-  char *example = "( 1761669170285562734172631227 != 1137696143128235852606802672 ) = True";
+  char *example =
+      "( 1761669170285562734172631227 != 1137696143128235852606802672 ) = True";
   s21_decimal value_1 = {{0xA4FAF0BB, 0x14CAA5CF, 0x5B137F5, 0x0}};
   s21_decimal value_2 = {{0xEEF50AF0, 0x801A418B, 0x3AD1487, 0x0}};
   int code = 1;
@@ -3594,7 +3674,8 @@ START_TEST(s21_is_not_equal_357) {
 }
 
 START_TEST(s21_is_not_equal_358) {
-  char *example = "( 1310196802703881897994252 != -36329.71129985575429 ) = True";
+  char *example =
+      "( 1310196802703881897994252 != -36329.71129985575429 ) = True";
   s21_decimal value_1 = {{0xDBAB680C, 0xE936E302, 0x11571, 0x0}};
   s21_decimal value_2 = {{0x920A2A05, 0x326AE7FE, 0x0, 0x800E0000}};
   int code = 1;
@@ -3614,7 +3695,8 @@ START_TEST(s21_is_not_equal_359) {
 }
 
 START_TEST(s21_is_not_equal_360) {
-  char *example = "( 1336599432103135942971892148 != 10938398598454684482340 ) = True";
+  char *example =
+      "( 1336599432103135942971892148 != 10938398598454684482340 ) = True";
   s21_decimal value_1 = {{0x958A21B4, 0x66C5CADE, 0x4519BF0, 0x0}};
   s21_decimal value_2 = {{0xCA24FB24, 0xF8C6532C, 0x250, 0x0}};
   int code = 1;
@@ -3714,7 +3796,8 @@ START_TEST(s21_is_not_equal_369) {
 }
 
 START_TEST(s21_is_not_equal_370) {
-  char *example = "( -1.3011368190223551832789185 != 1315662446810671961564304962 ) = True";
+  char *example =
+      "( -1.3011368190223551832789185 != 1315662446810671961564304962 ) = True";
   s21_decimal value_1 = {{0x608810C1, 0xAED55122, 0xAC343, 0x80190000}};
   s21_decimal value_2 = {{0xEF60D642, 0x278C6927, 0x4404A5C, 0x0}};
   int code = 1;
@@ -3834,7 +3917,8 @@ START_TEST(s21_is_not_equal_381) {
 }
 
 START_TEST(s21_is_not_equal_382) {
-  char *example = "( -99.49754031232915574 != 1718035158209372400083043002 ) = True";
+  char *example =
+      "( -99.49754031232915574 != 1718035158209372400083043002 ) = True";
   s21_decimal value_1 = {{0x4A261876, 0x8A14A093, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xE25082BA, 0x8BFE9EBB, 0x58D2018, 0x0}};
   int code = 1;
@@ -3884,7 +3968,8 @@ START_TEST(s21_is_not_equal_386) {
 }
 
 START_TEST(s21_is_not_equal_387) {
-  char *example = "( -41.013323308157505672485215 != 3.4631217263002496E-10 ) = True";
+  char *example =
+      "( -41.013323308157505672485215 != 3.4631217263002496E-10 ) = True";
   s21_decimal value_1 = {{0xAEC6995F, 0xB629F565, 0x21ECE8, 0x80180000}};
   s21_decimal value_2 = {{0x9B19C380, 0x7B08E8, 0x0, 0x1A0000}};
   int code = 1;
@@ -4044,7 +4129,8 @@ START_TEST(s21_is_not_equal_402) {
 }
 
 START_TEST(s21_is_not_equal_403) {
-  char *example = "( 1911681975366662349782378030 != 1968910805289527130214925313 ) = True";
+  char *example =
+      "( 1911681975366662349782378030 != 1968910805289527130214925313 ) = True";
   s21_decimal value_1 = {{0x7BC5E62E, 0x8A2980EB, 0x62D4E67, 0x0}};
   s21_decimal value_2 = {{0x7F808401, 0xA0523674, 0x65CA514, 0x0}};
   int code = 1;
@@ -4114,7 +4200,8 @@ START_TEST(s21_is_not_equal_409) {
 }
 
 START_TEST(s21_is_not_equal_410) {
-  char *example = "( 1494955213909973608469818914 != -252.47041388734177611774512 ) = True";
+  char *example =
+      "( 1494955213909973608469818914 != -252.47041388734177611774512 ) = True";
   s21_decimal value_1 = {{0x52E6EE22, 0x88D41796, 0x4D49914, 0x0}};
   s21_decimal value_2 = {{0x1CFE7A30, 0xDB2AFF91, 0x14E244, 0x80170000}};
   int code = 1;
@@ -4144,7 +4231,8 @@ START_TEST(s21_is_not_equal_412) {
 }
 
 START_TEST(s21_is_not_equal_413) {
-  char *example = "( 0.48895626314216903549872592 != 14985751705235151736595699 ) = True";
+  char *example =
+      "( 0.48895626314216903549872592 != 14985751705235151736595699 ) = True";
   s21_decimal value_1 = {{0xBA6B69D0, 0x36B8093E, 0x28720D, 0x1A0000}};
   s21_decimal value_2 = {{0xC05CE4F3, 0x3A4E4BFE, 0xC655B, 0x0}};
   int code = 1;
@@ -4174,7 +4262,8 @@ START_TEST(s21_is_not_equal_415) {
 }
 
 START_TEST(s21_is_not_equal_416) {
-  char *example = "( 1626340879952328542502982630 != 1035546693733358887250906399 ) = True";
+  char *example =
+      "( 1626340879952328542502982630 != 1035546693733358887250906399 ) = True";
   s21_decimal value_1 = {{0x8C3713E6, 0xC32714BB, 0x5414713, 0x0}};
   s21_decimal value_2 = {{0x9D6B4D1F, 0xC0B72318, 0x358958A, 0x0}};
   int code = 1;
@@ -4284,7 +4373,8 @@ START_TEST(s21_is_not_equal_426) {
 }
 
 START_TEST(s21_is_not_equal_427) {
-  char *example = "( -4.710939769443750430 != 1552699858674418585316048160 ) = True";
+  char *example =
+      "( -4.710939769443750430 != 1552699858674418585316048160 ) = True";
   s21_decimal value_1 = {{0xDF987503, 0x689A979, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x43B73D20, 0xFFE83627, 0x5045CFB, 0x0}};
   int code = 1;
@@ -4394,7 +4484,8 @@ START_TEST(s21_is_not_equal_437) {
 }
 
 START_TEST(s21_is_not_equal_438) {
-  char *example = "( 13267464048770232 != 1082929531557275800270216224 ) = True";
+  char *example =
+      "( 13267464048770232 != 1082929531557275800270216224 ) = True";
   s21_decimal value_1 = {{0x31B27CB8, 0x2F22B0, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD6131C20, 0x89C48D6E, 0x37FC73F, 0x0}};
   int code = 1;
@@ -4404,7 +4495,8 @@ START_TEST(s21_is_not_equal_438) {
 }
 
 START_TEST(s21_is_not_equal_439) {
-  char *example = "( -9.2393848527197329243864655 != 1332273960105268687333143781 ) = True";
+  char *example =
+      "( -9.2393848527197329243864655 != 1332273960105268687333143781 ) = True";
   s21_decimal value_1 = {{0x9AFD7E4F, 0x909B9870, 0x4C6D28, 0x80190000}};
   s21_decimal value_2 = {{0xE16B4E5, 0x1837B370, 0x44E07FC, 0x0}};
   int code = 1;
@@ -4414,7 +4506,8 @@ START_TEST(s21_is_not_equal_439) {
 }
 
 START_TEST(s21_is_not_equal_440) {
-  char *example = "( -47.042581249839798123630842 != 1223291235734913829256463284 ) = True";
+  char *example =
+      "( -47.042581249839798123630842 != 1223291235734913829256463284 ) = True";
   s21_decimal value_1 = {{0xFD1E10FA, 0x708463CA, 0x26E9A7, 0x80180000}};
   s21_decimal value_2 = {{0xC50683B4, 0xC4B0324E, 0x3F3E1FE, 0x0}};
   int code = 1;
@@ -4504,7 +4597,8 @@ START_TEST(s21_is_not_equal_448) {
 }
 
 START_TEST(s21_is_not_equal_449) {
-  char *example = "( -5.8194597173726695240496135 != -91.282782912076610661829863 ) = True";
+  char *example =
+      "( -5.8194597173726695240496135 != -91.282782912076610661829863 ) = True";
   s21_decimal value_1 = {{0xD143F407, 0x6F236240, 0x30232F, 0x80190000}};
   s21_decimal value_2 = {{0x1D28CCE7, 0x93C2B611, 0x4B81E1, 0x80180000}};
   int code = 1;
@@ -4544,7 +4638,8 @@ START_TEST(s21_is_not_equal_452) {
 }
 
 START_TEST(s21_is_not_equal_453) {
-  char *example = "( -15.050297466011412796523638 != 1526014948340372009701345388 ) = True";
+  char *example =
+      "( -15.050297466011412796523638 != 1526014948340372009701345388 ) = True";
   s21_decimal value_1 = {{0x4E47C476, 0x42AD83E8, 0xC7306, 0x80180000}};
   s21_decimal value_2 = {{0xDACC086C, 0x1C9EE121, 0x4EE4A3C, 0x0}};
   int code = 1;
@@ -4554,7 +4649,8 @@ START_TEST(s21_is_not_equal_453) {
 }
 
 START_TEST(s21_is_not_equal_454) {
-  char *example = "( 184367461995674648 != -29.097262911354659345635444 ) = True";
+  char *example =
+      "( 184367461995674648 != -29.097262911354659345635444 ) = True";
   s21_decimal value_1 = {{0xD8647C18, 0x28F013A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD6A99874, 0xC878D2FD, 0x181195, 0x80180000}};
   int code = 1;
@@ -4564,7 +4660,8 @@ START_TEST(s21_is_not_equal_454) {
 }
 
 START_TEST(s21_is_not_equal_455) {
-  char *example = "( 1046340347333416757617082710 != 1154614055410233266002272248 ) = True";
+  char *example =
+      "( 1046340347333416757617082710 != 1154614055410233266002272248 ) = True";
   s21_decimal value_1 = {{0xAEF9C156, 0xE30C4C05, 0x361832F, 0x0}};
   s21_decimal value_2 = {{0xB591FF8, 0x5CE74158, 0x3BB1309, 0x0}};
   int code = 1;
@@ -4644,7 +4741,8 @@ START_TEST(s21_is_not_equal_462) {
 }
 
 START_TEST(s21_is_not_equal_463) {
-  char *example = "( -1070.1655534672680200438744 != 1824294157845906015095338739 ) = True";
+  char *example =
+      "( -1070.1655534672680200438744 != 1824294157845906015095338739 ) = True";
   s21_decimal value_1 = {{0x757003D8, 0xE8B3D7BC, 0x8DA29, 0x80160000}};
   s21_decimal value_2 = {{0x6B33B6F3, 0x759EFD90, 0x5E50550, 0x0}};
   int code = 1;
@@ -4694,7 +4792,8 @@ START_TEST(s21_is_not_equal_467) {
 }
 
 START_TEST(s21_is_not_equal_468) {
-  char *example = "( -9226.57048670793305398892 != 1602371899924929084300296487 ) = True";
+  char *example =
+      "( -9226.57048670793305398892 != 1602371899924929084300296487 ) = True";
   s21_decimal value_1 = {{0x85CB9E6C, 0x56BDA788, 0xC361, 0x80140000}};
   s21_decimal value_2 = {{0x318127, 0xC05CD7CA, 0x52D7372, 0x0}};
   int code = 1;
@@ -4844,7 +4943,8 @@ START_TEST(s21_is_not_equal_482) {
 }
 
 START_TEST(s21_is_not_equal_483) {
-  char *example = "( 16217657914486138146 != 1211697834087051759031963452 ) = True";
+  char *example =
+      "( 16217657914486138146 != 1211697834087051759031963452 ) = True";
   s21_decimal value_1 = {{0xC9BFA522, 0xE110B1F2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x26944F3C, 0x34A60238, 0x3EA4AFF, 0x0}};
   int code = 1;
@@ -4884,7 +4984,8 @@ START_TEST(s21_is_not_equal_486) {
 }
 
 START_TEST(s21_is_not_equal_487) {
-  char *example = "( 1702528790598429117568381115 != 1833059355828447358859694362 ) = True";
+  char *example =
+      "( 1702528790598429117568381115 != 1833059355828447358859694362 ) = True";
   s21_decimal value_1 = {{0xBE81F0BB, 0xAC9EB67A, 0x5804C7E, 0x0}};
   s21_decimal value_2 = {{0x37D511A, 0xCB50F5AD, 0x5EC456A, 0x0}};
   int code = 1;
@@ -4934,7 +5035,8 @@ START_TEST(s21_is_not_equal_491) {
 }
 
 START_TEST(s21_is_not_equal_492) {
-  char *example = "( 140934999708836890293 != -2.4409439730822552773199903 ) = True";
+  char *example =
+      "( 140934999708836890293 != -2.4409439730822552773199903 ) = True";
   s21_decimal value_1 = {{0x910106B5, 0xA3DDB387, 0x7, 0x0}};
   s21_decimal value_2 = {{0x2E00081F, 0x61178CB9, 0x1430E6, 0x80190000}};
   int code = 1;
@@ -5034,7 +5136,8 @@ START_TEST(s21_is_not_equal_501) {
 }
 
 START_TEST(s21_is_not_equal_502) {
-  char *example = "( 1928867043497734365016604913 != 0.4728999071191992754 ) = True";
+  char *example =
+      "( 1928867043497734365016604913 != 0.4728999071191992754 ) = True";
   s21_decimal value_1 = {{0x30FDC0F1, 0xF325E1B7, 0x63B857B, 0x0}};
   s21_decimal value_2 = {{0x958D09B2, 0x41A0C799, 0x0, 0x130000}};
   int code = 1;
@@ -5164,7 +5267,8 @@ START_TEST(s21_is_not_equal_514) {
 }
 
 START_TEST(s21_is_not_equal_515) {
-  char *example = "( 7.4376500428340381E-10 != 1618898030243709818914098043 ) = True";
+  char *example =
+      "( 7.4376500428340381E-10 != 1618898030243709818914098043 ) = True";
   s21_decimal value_1 = {{0x77AAFC9D, 0x1083D08, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x1D9E4B7B, 0x123603D2, 0x53B1EFE, 0x0}};
   int code = 1;
@@ -5234,7 +5338,8 @@ START_TEST(s21_is_not_equal_521) {
 }
 
 START_TEST(s21_is_not_equal_522) {
-  char *example = "( 0.76705178758678433958 != 16572861611803539942072079 ) = True";
+  char *example =
+      "( 0.76705178758678433958 != 16572861611803539942072079 ) = True";
   s21_decimal value_1 = {{0xF7DDD0A6, 0x287F89AD, 0x4, 0x140000}};
   s21_decimal value_2 = {{0x7766DF0F, 0xA0D11F45, 0xDB570, 0x0}};
   int code = 1;
@@ -5254,7 +5359,9 @@ START_TEST(s21_is_not_equal_523) {
 }
 
 START_TEST(s21_is_not_equal_524) {
-  char *example = "( 79228162514264337593543950335 != -910.56935321503636143162333 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -910.56935321503636143162333 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xD68B43DD, 0x5AD25BC3, 0x4B520E, 0x80170000}};
   int code = 1;
@@ -5294,7 +5401,8 @@ START_TEST(s21_is_not_equal_527) {
 }
 
 START_TEST(s21_is_not_equal_528) {
-  char *example = "( 1119009971377431032936497545 != 103645102912164547251895 ) = True";
+  char *example =
+      "( 1119009971377431032936497545 != 103645102912164547251895 ) = True";
   s21_decimal value_1 = {{0xD04F8189, 0x199AC199, 0x39D9F94, 0x0}};
   s21_decimal value_2 = {{0xD43BCEB7, 0x9CBEDB52, 0x15F2, 0x0}};
   int code = 1;
@@ -5504,7 +5612,8 @@ START_TEST(s21_is_not_equal_548) {
 }
 
 START_TEST(s21_is_not_equal_549) {
-  char *example = "( 613.299272161714968634675029 != 1265278807222961064361712998 ) = True";
+  char *example =
+      "( 613.299272161714968634675029 != 1265278807222961064361712998 ) = True";
   s21_decimal value_1 = {{0xA0754F55, 0x29BF50E7, 0x1FB4F2C, 0x180000}};
   s21_decimal value_2 = {{0x1F01DD66, 0x945D6555, 0x4169D35, 0x0}};
   int code = 1;
@@ -5534,7 +5643,8 @@ START_TEST(s21_is_not_equal_551) {
 }
 
 START_TEST(s21_is_not_equal_552) {
-  char *example = "( 1660695603504898209899057614 != 0.93583209650570354784333274 ) = True";
+  char *example =
+      "( 1660695603504898209899057614 != 0.93583209650570354784333274 ) = True";
   s21_decimal value_1 = {{0xD9AF91CE, 0xECFB479, 0x55DB1F9, 0x0}};
   s21_decimal value_2 = {{0x9655EDDA, 0xF5E7A2E7, 0x4D6903, 0x1A0000}};
   int code = 1;
@@ -5594,7 +5704,8 @@ START_TEST(s21_is_not_equal_557) {
 }
 
 START_TEST(s21_is_not_equal_558) {
-  char *example = "( 0.3946852992765788263 != 1539000539444825454262354989 ) = True";
+  char *example =
+      "( 0.3946852992765788263 != 1539000539444825454262354989 ) = True";
   s21_decimal value_1 = {{0xB67E0067, 0x36C609E2, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x26E8042D, 0x6A86FB35, 0x4F9080A, 0x0}};
   int code = 1;
@@ -5604,7 +5715,8 @@ START_TEST(s21_is_not_equal_558) {
 }
 
 START_TEST(s21_is_not_equal_559) {
-  char *example = "( -24.782012405573523244312013 != 0.1721300741821676 ) = True";
+  char *example =
+      "( -24.782012405573523244312013 != 0.1721300741821676 ) = True";
   s21_decimal value_1 = {{0x74B7E5CD, 0x959D7C19, 0x147FCB, 0x80180000}};
   s21_decimal value_2 = {{0x8F4494EC, 0x61D83, 0x0, 0x100000}};
   int code = 1;
@@ -5644,7 +5756,8 @@ START_TEST(s21_is_not_equal_562) {
 }
 
 START_TEST(s21_is_not_equal_563) {
-  char *example = "( 1909456997901277776323147930 != -53.901584323908412877827109 ) = True";
+  char *example =
+      "( 1909456997901277776323147930 != -53.901584323908412877827109 ) = True";
   s21_decimal value_1 = {{0xD025F89A, 0x4505357D, 0x62B773F, 0x0}};
   s21_decimal value_2 = {{0xFB97EC25, 0xBDC0916C, 0x2C961A, 0x80180000}};
   int code = 1;
@@ -5764,7 +5877,8 @@ START_TEST(s21_is_not_equal_574) {
 }
 
 START_TEST(s21_is_not_equal_575) {
-  char *example = "( -48.548352077442298330435112 != 1149714418919696694766054 ) = True";
+  char *example =
+      "( -48.548352077442298330435112 != 1149714418919696694766054 ) = True";
   s21_decimal value_1 = {{0x12934E28, 0x708CC081, 0x282883, 0x80180000}};
   s21_decimal value_2 = {{0xAFEFE9E6, 0x24BECF67, 0xF376, 0x0}};
   int code = 1;
@@ -5904,7 +6018,8 @@ START_TEST(s21_is_not_equal_588) {
 }
 
 START_TEST(s21_is_not_equal_589) {
-  char *example = "( -149.37639729647799699534099 != 1386519004574534551988369154 ) = True";
+  char *example =
+      "( -149.37639729647799699534099 != 1386519004574534551988369154 ) = True";
   s21_decimal value_1 = {{0x50787113, 0x12848378, 0xC5B2B, 0x80170000}};
   s21_decimal value_2 = {{0x28647702, 0xD8FCCDA0, 0x47AE6D1, 0x0}};
   int code = 1;
@@ -5924,7 +6039,8 @@ START_TEST(s21_is_not_equal_590) {
 }
 
 START_TEST(s21_is_not_equal_591) {
-  char *example = "( 86.3512895169028626020679548 != 1727427974125686532 ) = True";
+  char *example =
+      "( 86.3512895169028626020679548 != 1727427974125686532 ) = True";
   s21_decimal value_1 = {{0x71BF7C, 0xD877A189, 0x2CA47F7, 0x190000}};
   s21_decimal value_2 = {{0x14D58F04, 0x17F90E97, 0x0, 0x0}};
   int code = 1;
@@ -5954,7 +6070,8 @@ START_TEST(s21_is_not_equal_593) {
 }
 
 START_TEST(s21_is_not_equal_594) {
-  char *example = "( -79228162514264337593543950335 != 113404458877191989656 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 113404458877191989656 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x986C2998, 0x25CD9281, 0x6, 0x0}};
   int code = 1;
@@ -5984,7 +6101,8 @@ START_TEST(s21_is_not_equal_596) {
 }
 
 START_TEST(s21_is_not_equal_597) {
-  char *example = "( 12246794144337849826350 != -642.94342128864983208219057 ) = True";
+  char *example =
+      "( 12246794144337849826350 != -642.94342128864983208219057 ) = True";
   s21_decimal value_1 = {{0x9F853C2E, 0xE66913FA, 0x297, 0x0}};
   s21_decimal value_2 = {{0x8774D1B1, 0x454EB2AC, 0x352EDB, 0x80170000}};
   int code = 1;
@@ -6004,7 +6122,8 @@ START_TEST(s21_is_not_equal_598) {
 }
 
 START_TEST(s21_is_not_equal_599) {
-  char *example = "( -4.7288614727804402870559267 != 1564951636646450228711302956 ) = True";
+  char *example =
+      "( -4.7288614727804402870559267 != 1564951636646450228711302956 ) = True";
   s21_decimal value_1 = {{0xFE8A223, 0xF0EAFF5E, 0x271DC0, 0x80190000}};
   s21_decimal value_2 = {{0x541EA72C, 0x36DF1334, 0x50E7F66, 0x0}};
   int code = 1;
@@ -6064,7 +6183,8 @@ START_TEST(s21_is_not_equal_604) {
 }
 
 START_TEST(s21_is_not_equal_605) {
-  char *example = "( 1590996276321761909629857553 != -6124.1923880979548668992350 ) = True";
+  char *example =
+      "( 1590996276321761909629857553 != -6124.1923880979548668992350 ) = True";
   s21_decimal value_1 = {{0x1A0D2F11, 0xF5D0FC2D, 0x5240A90, 0x0}};
   s21_decimal value_2 = {{0xC865A923, 0x2274CD2F, 0x510D9, 0x80150000}};
   int code = 1;
@@ -6074,7 +6194,8 @@ START_TEST(s21_is_not_equal_605) {
 }
 
 START_TEST(s21_is_not_equal_606) {
-  char *example = "( 1311585061273622820141247523 != 1527144326401689054248626466 ) = True";
+  char *example =
+      "( 1311585061273622820141247523 != 1527144326401689054248626466 ) = True";
   s21_decimal value_1 = {{0x7269AC23, 0xA4413165, 0x43CEAF0, 0x0}};
   s21_decimal value_2 = {{0xC6FEE922, 0xD1B5DB90, 0x4EF3963, 0x0}};
   int code = 1;
@@ -6084,7 +6205,8 @@ START_TEST(s21_is_not_equal_606) {
 }
 
 START_TEST(s21_is_not_equal_607) {
-  char *example = "( 110371911942506774022 != 1939857545805289591887968 ) = True";
+  char *example =
+      "( 110371911942506774022 != 1939857545805289591887968 ) = True";
   s21_decimal value_1 = {{0xE1CF7E06, 0xFBB7CD22, 0x5, 0x0}};
   s21_decimal value_2 = {{0x764B5860, 0xE365E825, 0x19AC7, 0x0}};
   int code = 1;
@@ -6174,7 +6296,8 @@ START_TEST(s21_is_not_equal_615) {
 }
 
 START_TEST(s21_is_not_equal_616) {
-  char *example = "( -12.17459486695575207 != -89.801930510358039639494593 ) = True";
+  char *example =
+      "( -12.17459486695575207 != -89.801930510358039639494593 ) = True";
   s21_decimal value_1 = {{0xE8EB4EA7, 0x10E548F3, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x81E20FC1, 0x685AD74F, 0x4A484C, 0x80180000}};
   int code = 1;
@@ -6264,7 +6387,8 @@ START_TEST(s21_is_not_equal_624) {
 }
 
 START_TEST(s21_is_not_equal_625) {
-  char *example = "( -6.3402901275881571238255853 != 1431734629564655951504669730 ) = True";
+  char *example =
+      "( -6.3402901275881571238255853 != 1431734629564655951504669730 ) = True";
   s21_decimal value_1 = {{0x26EF9CED, 0x2A4E7652, 0x347216, 0x80190000}};
   s21_decimal value_2 = {{0x3032FC22, 0xCA32B8A6, 0x4A04D99, 0x0}};
   int code = 1;
@@ -6314,7 +6438,8 @@ START_TEST(s21_is_not_equal_629) {
 }
 
 START_TEST(s21_is_not_equal_630) {
-  char *example = "( 1834328472678496523998241631 != 171.59431292024280 ) = True";
+  char *example =
+      "( 1834328472678496523998241631 != 171.59431292024280 ) = True";
   s21_decimal value_1 = {{0xADA0A35F, 0xC1AA2023, 0x5ED5229, 0x0}};
   s21_decimal value_2 = {{0x24ABBEFC, 0x618A4, 0x0, 0xD0000}};
   int code = 1;
@@ -6364,7 +6489,8 @@ START_TEST(s21_is_not_equal_634) {
 }
 
 START_TEST(s21_is_not_equal_635) {
-  char *example = "( 1457698448293220041316064693 != 1592332191286214297089323410 ) = True";
+  char *example =
+      "( 1457698448293220041316064693 != 1592332191286214297089323410 ) = True";
   s21_decimal value_1 = {{0x33EB5DB5, 0x3931966A, 0x4B5C7A7, 0x0}};
   s21_decimal value_2 = {{0xD6C1B192, 0xE38E8CA, 0x5252575, 0x0}};
   int code = 1;
@@ -6434,7 +6560,8 @@ START_TEST(s21_is_not_equal_641) {
 }
 
 START_TEST(s21_is_not_equal_642) {
-  char *example = "( 10642322822680707461286511 != 1734369569002432634748585979 ) = True";
+  char *example =
+      "( 10642322822680707461286511 != 1734369569002432634748585979 ) = True";
   s21_decimal value_1 = {{0xC6D40A6F, 0x79EA5937, 0x8CD99, 0x0}};
   s21_decimal value_2 = {{0x61F2C7FB, 0xBAF2458D, 0x59AA30A, 0x0}};
   int code = 1;
@@ -6534,7 +6661,8 @@ START_TEST(s21_is_not_equal_651) {
 }
 
 START_TEST(s21_is_not_equal_652) {
-  char *example = "( 1997596297288877719823311380 != 1595871052336323576488352 ) = True";
+  char *example =
+      "( 1997596297288877719823311380 != 1595871052336323576488352 ) = True";
   s21_decimal value_1 = {{0xDE1BE214, 0x43736D89, 0x6745F78, 0x0}};
   s21_decimal value_2 = {{0x7BBC61A0, 0x57D53CAC, 0x151F0, 0x0}};
   int code = 1;
@@ -6574,7 +6702,8 @@ START_TEST(s21_is_not_equal_655) {
 }
 
 START_TEST(s21_is_not_equal_656) {
-  char *example = "( 1075677972674142215509 != -64.685477590714379762917 ) = True";
+  char *example =
+      "( 1075677972674142215509 != -64.685477590714379762917 ) = True";
   s21_decimal value_1 = {{0x2971D55, 0x5007D8F6, 0x3A, 0x0}};
   s21_decimal value_2 = {{0xFD357CE5, 0x9B550E67, 0xDB2, 0x80150000}};
   int code = 1;
@@ -6594,7 +6723,8 @@ START_TEST(s21_is_not_equal_657) {
 }
 
 START_TEST(s21_is_not_equal_658) {
-  char *example = "( 0.82873222796518948080114807 != 14870514433833188 ) = True";
+  char *example =
+      "( 0.82873222796518948080114807 != 14870514433833188 ) = True";
   s21_decimal value_1 = {{0x4786DC77, 0x68EB7970, 0x448D16, 0x1A0000}};
   s21_decimal value_2 = {{0x7274B8E4, 0x34D4A7, 0x0, 0x0}};
   int code = 1;
@@ -6684,7 +6814,8 @@ START_TEST(s21_is_not_equal_666) {
 }
 
 START_TEST(s21_is_not_equal_667) {
-  char *example = "( 1456213074301399764143306791 != -7095.776007604187931699197 ) = True";
+  char *example =
+      "( 1456213074301399764143306791 != -7095.776007604187931699197 ) = True";
   s21_decimal value_1 = {{0x632DF827, 0xF01EB691, 0x4B48D1C, 0x0}};
   s21_decimal value_2 = {{0x63F967FD, 0xC9C3EB78, 0x5DE96, 0x80150000}};
   int code = 1;
@@ -6834,7 +6965,8 @@ START_TEST(s21_is_not_equal_681) {
 }
 
 START_TEST(s21_is_not_equal_682) {
-  char *example = "( 1264985477717568695858195507 != 1877429332867980713242170643 ) = True";
+  char *example =
+      "( 1264985477717568695858195507 != 1877429332867980713242170643 ) = True";
   s21_decimal value_1 = {{0xBD856C33, 0x27BB314C, 0x4165F18, 0x0}};
   s21_decimal value_2 = {{0xC1809513, 0x11B55FBC, 0x610F920, 0x0}};
   int code = 1;
@@ -6934,7 +7066,8 @@ START_TEST(s21_is_not_equal_691) {
 }
 
 START_TEST(s21_is_not_equal_692) {
-  char *example = "( 0.68339157791655321382463494 != -3144.8092063055670583263718 ) = True";
+  char *example =
+      "( 0.68339157791655321382463494 != -3144.8092063055670583263718 ) = True";
   s21_decimal value_1 = {{0x41C0A806, 0x2ACC1EA4, 0x388761, 0x1A0000}};
   s21_decimal value_2 = {{0x9D2081E6, 0x7C9C9868, 0x1A0364, 0x80160000}};
   int code = 1;
@@ -6994,7 +7127,8 @@ START_TEST(s21_is_not_equal_697) {
 }
 
 START_TEST(s21_is_not_equal_698) {
-  char *example = "( 1530346806408096534864525842 != 1296037788507024643 ) = True";
+  char *example =
+      "( 1530346806408096534864525842 != 1296037788507024643 ) = True";
   s21_decimal value_1 = {{0x5C2FA12, 0x9BB2B4E7, 0x4F1DF8A, 0x0}};
   s21_decimal value_2 = {{0x7F71AD03, 0x11FC7380, 0x0, 0x0}};
   int code = 1;
@@ -7004,7 +7138,8 @@ START_TEST(s21_is_not_equal_698) {
 }
 
 START_TEST(s21_is_not_equal_699) {
-  char *example = "( 1653844269521657561778876285 != -26175.9155137869275903315 ) = True";
+  char *example =
+      "( 1653844269521657561778876285 != -26175.9155137869275903315 ) = True";
   s21_decimal value_1 = {{0x50CDEF7D, 0x7F976A4B, 0x5580725, 0x0}};
   s21_decimal value_2 = {{0x3802B553, 0xFE030273, 0x376D, 0x80130000}};
   int code = 1;
@@ -7024,7 +7159,8 @@ START_TEST(s21_is_not_equal_700) {
 }
 
 START_TEST(s21_is_not_equal_701) {
-  char *example = "( 0.25222963789809489229054254 != -241.89316970236048504616326 ) = True";
+  char *example =
+      "( 0.25222963789809489229054254 != -241.89316970236048504616326 ) = True";
   s21_decimal value_1 = {{0x32A7012E, 0x9B5BF226, 0x14DD2B, 0x1A0000}};
   s21_decimal value_2 = {{0xBEF57586, 0x8020FFAA, 0x140249, 0x80170000}};
   int code = 1;
@@ -7124,7 +7260,8 @@ START_TEST(s21_is_not_equal_710) {
 }
 
 START_TEST(s21_is_not_equal_711) {
-  char *example = "( 1068372397315742481023290755 != -15.333760681437428778453234 ) = True";
+  char *example =
+      "( 1068372397315742481023290755 != -15.333760681437428778453234 ) = True";
   s21_decimal value_1 = {{0xD878CD83, 0xB5AC859A, 0x373BCA7, 0x0}};
   s21_decimal value_2 = {{0x1CFEC8F2, 0xD5086563, 0xCAF0C, 0x80180000}};
   int code = 1;
@@ -7184,7 +7321,8 @@ START_TEST(s21_is_not_equal_716) {
 }
 
 START_TEST(s21_is_not_equal_717) {
-  char *example = "( 14452895978603150 != 1083276123533544043912887081 ) = True";
+  char *example =
+      "( 14452895978603150 != 1083276123533544043912887081 ) = True";
   s21_decimal value_1 = {{0x12C7C28E, 0x3358D5, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB5FFFB29, 0x53AB9A68, 0x38010A4, 0x0}};
   int code = 1;
@@ -7224,7 +7362,8 @@ START_TEST(s21_is_not_equal_720) {
 }
 
 START_TEST(s21_is_not_equal_721) {
-  char *example = "( 1085131306533697375157941880 != 130025390786422581676754 ) = True";
+  char *example =
+      "( 1085131306533697375157941880 != 130025390786422581676754 ) = True";
   s21_decimal value_1 = {{0xBE40F678, 0xFFB0ED11, 0x381997D, 0x0}};
   s21_decimal value_2 = {{0xB30ACAD2, 0xB0C87034, 0x1B88, 0x0}};
   int code = 1;
@@ -7354,7 +7493,8 @@ START_TEST(s21_is_not_equal_733) {
 }
 
 START_TEST(s21_is_not_equal_734) {
-  char *example = "( 1050094186923615139192842050 != 1711698347614986917791240495 ) = True";
+  char *example =
+      "( 1050094186923615139192842050 != 1711698347614986917791240495 ) = True";
   s21_decimal value_1 = {{0x102B2742, 0xF0586AE9, 0x3649E17, 0x0}};
   s21_decimal value_2 = {{0xDC41912F, 0x5B2FFA93, 0x587E239, 0x0}};
   int code = 1;
@@ -7384,7 +7524,8 @@ START_TEST(s21_is_not_equal_736) {
 }
 
 START_TEST(s21_is_not_equal_737) {
-  char *example = "( 1181656219816014442494270825 != -460843.73976828847476408 ) = True";
+  char *example =
+      "( 1181656219816014442494270825 != -460843.73976828847476408 ) = True";
   s21_decimal value_1 = {{0x4A019D69, 0x8640BCA, 0x3D17170, 0x0}};
   s21_decimal value_2 = {{0xB33E4EB8, 0x3D29CE72, 0x9C2, 0x80110000}};
   int code = 1;
@@ -7404,7 +7545,8 @@ START_TEST(s21_is_not_equal_738) {
 }
 
 START_TEST(s21_is_not_equal_739) {
-  char *example = "( -87.795285037350696374030179 != 1069177011915510207736647782 ) = True";
+  char *example =
+      "( -87.795285037350696374030179 != 1069177011915510207736647782 ) = True";
   s21_decimal value_1 = {{0x19B0CF63, 0xF0466280, 0x489F5F, 0x80180000}};
   s21_decimal value_2 = {{0x5B4F1066, 0xF45B477F, 0x3746709, 0x0}};
   int code = 1;
@@ -7444,7 +7586,8 @@ START_TEST(s21_is_not_equal_742) {
 }
 
 START_TEST(s21_is_not_equal_743) {
-  char *example = "( 0.73808283752378032215242811 != 1436383663313700269679343663 ) = True";
+  char *example =
+      "( 0.73808283752378032215242811 != 1436383663313700269679343663 ) = True";
   s21_decimal value_1 = {{0x208B383B, 0x145FDCB9, 0x3D0D83, 0x1A0000}};
   s21_decimal value_2 = {{0x658A782F, 0x6A1427FD, 0x4A42612, 0x0}};
   int code = 1;
@@ -7544,7 +7687,8 @@ START_TEST(s21_is_not_equal_752) {
 }
 
 START_TEST(s21_is_not_equal_753) {
-  char *example = "( 12775678086708679397 != 1901529134964168176108459887 ) = True";
+  char *example =
+      "( 12775678086708679397 != 1901529134964168176108459887 ) = True";
   s21_decimal value_1 = {{0xB0352E5, 0xB14C5388, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3CA6576F, 0xF568E258, 0x624E874, 0x0}};
   int code = 1;
@@ -7614,7 +7758,8 @@ START_TEST(s21_is_not_equal_759) {
 }
 
 START_TEST(s21_is_not_equal_760) {
-  char *example = "( 192708270408054059006139147 != 1258740945160863045789706051 ) = True";
+  char *example =
+      "( 192708270408054059006139147 != 1258740945160863045789706051 ) = True";
   s21_decimal value_1 = {{0x322F9B0B, 0x4588ADF0, 0x9F6790, 0x0}};
   s21_decimal value_2 = {{0x166C6743, 0x5DF344F4, 0x41134C3, 0x0}};
   int code = 1;
@@ -7774,7 +7919,8 @@ START_TEST(s21_is_not_equal_775) {
 }
 
 START_TEST(s21_is_not_equal_776) {
-  char *example = "( -40850.194546703215337748985 != 0.30370581656772348185021638 ) = True";
+  char *example =
+      "( -40850.194546703215337748985 != 0.30370581656772348185021638 ) = True";
   s21_decimal value_1 = {{0xB4CD39F9, 0x7BD3BBF0, 0x21CA5D, 0x80150000}};
   s21_decimal value_2 = {{0x17120CC6, 0x87D52488, 0x191F38, 0x1A0000}};
   int code = 1;
@@ -7894,7 +8040,8 @@ START_TEST(s21_is_not_equal_787) {
 }
 
 START_TEST(s21_is_not_equal_788) {
-  char *example = "( -5.3448673551234822670760924 != -253.9059642013523021743 ) = True";
+  char *example =
+      "( -5.3448673551234822670760924 != -253.9059642013523021743 ) = True";
   s21_decimal value_1 = {{0x8C01BBDC, 0x662736E9, 0x2C3632, 0x80190000}};
   s21_decimal value_2 = {{0x92868FAF, 0xA487EBE5, 0x89, 0x80130000}};
   int code = 1;
@@ -7914,7 +8061,8 @@ START_TEST(s21_is_not_equal_789) {
 }
 
 START_TEST(s21_is_not_equal_790) {
-  char *example = "( 1946524069650398004342281259 != 15887407194398707964 ) = True";
+  char *example =
+      "( 1946524069650398004342281259 != 15887407194398707964 ) = True";
   s21_decimal value_1 = {{0xA2E5D42B, 0x41696353, 0x64A2081, 0x0}};
   s21_decimal value_2 = {{0x101ED0FC, 0xDC7B68AB, 0x0, 0x0}};
   int code = 1;
@@ -7924,7 +8072,8 @@ START_TEST(s21_is_not_equal_790) {
 }
 
 START_TEST(s21_is_not_equal_791) {
-  char *example = "( 1671283238413303736017499512 != 7.78791187806604417530900342 ) = True";
+  char *example =
+      "( 1671283238413303736017499512 != 7.78791187806604417530900342 ) = True";
   s21_decimal value_1 = {{0x82823578, 0xE574F167, 0x56673FD, 0x0}};
   s21_decimal value_2 = {{0x259CAF76, 0xE2F9D03B, 0x2843372, 0x1A0000}};
   int code = 1;
@@ -7944,7 +8093,8 @@ START_TEST(s21_is_not_equal_792) {
 }
 
 START_TEST(s21_is_not_equal_793) {
-  char *example = "( -934566.84293900 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( -934566.84293900 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x9886523B, 0xD9, 0x0, 0x80060000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -7984,7 +8134,9 @@ START_TEST(s21_is_not_equal_796) {
 }
 
 START_TEST(s21_is_not_equal_797) {
-  char *example = "( 79228162514264337593543950335 != 1129104599367109092564445775 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != 1129104599367109092564445775 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x751AAA4F, 0xFAD81680, 0x3A5F932, 0x0}};
   int code = 1;
@@ -8014,7 +8166,8 @@ START_TEST(s21_is_not_equal_799) {
 }
 
 START_TEST(s21_is_not_equal_800) {
-  char *example = "( 1926526670978132840535782071 != 1595393081564036382791387089 ) = True";
+  char *example =
+      "( 1926526670978132840535782071 != 1595393081564036382791387089 ) = True";
   s21_decimal value_1 = {{0xA1BF72B7, 0x19EE012B, 0x63995E4, 0x0}};
   s21_decimal value_2 = {{0xE1F147D1, 0x40003C3E, 0x527ADA0, 0x0}};
   int code = 1;
@@ -8094,7 +8247,8 @@ START_TEST(s21_is_not_equal_807) {
 }
 
 START_TEST(s21_is_not_equal_808) {
-  char *example = "( 0.06281924861823631325125709 != -5.4302988532690049671313003 ) = True";
+  char *example =
+      "( 0.06281924861823631325125709 != -5.4302988532690049671313003 ) = True";
   s21_decimal value_1 = {{0x1CBBDC4D, 0xD441CC3A, 0x5323F, 0x1A0000}};
   s21_decimal value_2 = {{0xBEBB366B, 0xE82FD5AD, 0x2CEB1A, 0x80190000}};
   int code = 1;
@@ -8224,7 +8378,8 @@ START_TEST(s21_is_not_equal_820) {
 }
 
 START_TEST(s21_is_not_equal_821) {
-  char *example = "( 13908791769451136919 != 1908296138501246575904064313 ) = True";
+  char *example =
+      "( 13908791769451136919 != 1908296138501246575904064313 ) = True";
   s21_decimal value_1 = {{0x21030797, 0xC105F46C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7E8C8339, 0xF4978DD0, 0x62A816C, 0x0}};
   int code = 1;
@@ -8344,7 +8499,8 @@ START_TEST(s21_is_not_equal_832) {
 }
 
 START_TEST(s21_is_not_equal_833) {
-  char *example = "( 162928745940137924 != 1157407006523620645774737784 ) = True";
+  char *example =
+      "( 162928745940137924 != 1157407006523620645774737784 ) = True";
   s21_decimal value_1 = {{0xC97637C4, 0x242D6D4, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7E2EC178, 0x8BD001F7, 0x3BD6277, 0x0}};
   int code = 1;
@@ -8434,7 +8590,8 @@ START_TEST(s21_is_not_equal_841) {
 }
 
 START_TEST(s21_is_not_equal_842) {
-  char *example = "( 1982257283666831027716912447 != 137142351151725751 ) = True";
+  char *example =
+      "( 1982257283666831027716912447 != 137142351151725751 ) = True";
   s21_decimal value_1 = {{0x6C72753F, 0xAB39134C, 0x667AF4E, 0x0}};
   s21_decimal value_2 = {{0xE40F7CB7, 0x1E73A3D, 0x0, 0x0}};
   int code = 1;
@@ -8474,7 +8631,8 @@ START_TEST(s21_is_not_equal_845) {
 }
 
 START_TEST(s21_is_not_equal_846) {
-  char *example = "( 1088773240832065011220735200 != 8.6831028184156279 ) = True";
+  char *example =
+      "( 1088773240832065011220735200 != 8.6831028184156279 ) = True";
   s21_decimal value_1 = {{0x86B7E4E0, 0xA718078A, 0x3849CB3, 0x0}};
   s21_decimal value_2 = {{0x2E660877, 0x1347C5C, 0x0, 0x100000}};
   int code = 1;
@@ -8504,7 +8662,8 @@ START_TEST(s21_is_not_equal_848) {
 }
 
 START_TEST(s21_is_not_equal_849) {
-  char *example = "( 1540259985285177729173472655 != 17000749962097634704 ) = True";
+  char *example =
+      "( 1540259985285177729173472655 != 17000749962097634704 ) = True";
   s21_decimal value_1 = {{0xCE0C58F, 0x1CA7B58E, 0x4FA12BD, 0x0}};
   s21_decimal value_2 = {{0x4610AD90, 0xEBEECC04, 0x0, 0x0}};
   int code = 1;
@@ -8514,7 +8673,8 @@ START_TEST(s21_is_not_equal_849) {
 }
 
 START_TEST(s21_is_not_equal_850) {
-  char *example = "( 18872275409793322552006 != -713106.85540498009615990072 ) = True";
+  char *example =
+      "( 18872275409793322552006 != -713106.85540498009615990072 ) = True";
   s21_decimal value_1 = {{0x46878AC6, 0x116EFF9B, 0x3FF, 0x0}};
   s21_decimal value_2 = {{0x9C4B7D38, 0x25C5E4D, 0x3AFCA0, 0x80140000}};
   int code = 1;
@@ -8524,7 +8684,8 @@ START_TEST(s21_is_not_equal_850) {
 }
 
 START_TEST(s21_is_not_equal_851) {
-  char *example = "( -67.18627730021329528697865 != 179366024611016749 ) = True";
+  char *example =
+      "( -67.18627730021329528697865 != 179366024611016749 ) = True";
   s21_decimal value_1 = {{0x2DB03409, 0x89FF3713, 0x58EB9, 0x80170000}};
   s21_decimal value_2 = {{0xF5B6B02D, 0x27D3C72, 0x0, 0x0}};
   int code = 1;
@@ -8554,7 +8715,8 @@ START_TEST(s21_is_not_equal_853) {
 }
 
 START_TEST(s21_is_not_equal_854) {
-  char *example = "( 1290745208944308330401873393 != -4.9228881207348434179203936 ) = True";
+  char *example =
+      "( 1290745208944308330401873393 != -4.9228881207348434179203936 ) = True";
   s21_decimal value_1 = {{0x8AEBBDF1, 0xFBAEA7A6, 0x42BADED, 0x0}};
   s21_decimal value_2 = {{0x8AA02360, 0xFF696446, 0x28B89E, 0x80190000}};
   int code = 1;
@@ -8564,7 +8726,8 @@ START_TEST(s21_is_not_equal_854) {
 }
 
 START_TEST(s21_is_not_equal_855) {
-  char *example = "( 0.54630636644376815586937668 != 1301407342180075317842641690 ) = True";
+  char *example =
+      "( 0.54630636644376815586937668 != 1301407342180075317842641690 ) = True";
   s21_decimal value_1 = {{0x6ABE8B44, 0xBF280EB2, 0x2D307C, 0x1A0000}};
   s21_decimal value_2 = {{0xEDCB831A, 0x624E8EC5, 0x4347FB9, 0x0}};
   int code = 1;
@@ -8574,7 +8737,8 @@ START_TEST(s21_is_not_equal_855) {
 }
 
 START_TEST(s21_is_not_equal_856) {
-  char *example = "( 1813656852099506348091969660 != -77.5168469599299269 ) = True";
+  char *example =
+      "( 1813656852099506348091969660 != -77.5168469599299269 ) = True";
   s21_decimal value_1 = {{0xDABB107C, 0xF5A02C57, 0x5DC38C6, 0x0}};
   s21_decimal value_2 = {{0xB78CA6C5, 0xAC1F39D, 0x0, 0x80100000}};
   int code = 1;
@@ -8604,7 +8768,8 @@ START_TEST(s21_is_not_equal_858) {
 }
 
 START_TEST(s21_is_not_equal_859) {
-  char *example = "( 1067251502782918675438556783 != -910.72995952934013208580618 ) = True";
+  char *example =
+      "( 1067251502782918675438556783 != -910.72995952934013208580618 ) = True";
   s21_decimal value_1 = {{0xB180D66F, 0xE531441C, 0x372CF4B, 0x0}};
   s21_decimal value_2 = {{0x195B520A, 0xDB54D2, 0x4B5575, 0x80170000}};
   int code = 1;
@@ -8654,7 +8819,8 @@ START_TEST(s21_is_not_equal_863) {
 }
 
 START_TEST(s21_is_not_equal_864) {
-  char *example = "( 1895465636736215063645408254 != -4.8095884312275923973422672 ) = True";
+  char *example =
+      "( 1895465636736215063645408254 != -4.8095884312275923973422672 ) = True";
   s21_decimal value_1 = {{0x26F04BFE, 0xFA10D73, 0x61FE476, 0x0}};
   s21_decimal value_2 = {{0x3307BE50, 0x1CEA3AA6, 0x27C8B3, 0x80190000}};
   int code = 1;
@@ -8714,7 +8880,8 @@ START_TEST(s21_is_not_equal_869) {
 }
 
 START_TEST(s21_is_not_equal_870) {
-  char *example = "( 11329017382659481130667 != 1667862072831213661213576910 ) = True";
+  char *example =
+      "( 11329017382659481130667 != 1667862072831213661213576910 ) = True";
   s21_decimal value_1 = {{0x7C03D6AB, 0x25B305D2, 0x266, 0x0}};
   s21_decimal value_2 = {{0xD6F64ECE, 0x23740295, 0x5639F88, 0x0}};
   int code = 1;
@@ -8784,7 +8951,8 @@ START_TEST(s21_is_not_equal_876) {
 }
 
 START_TEST(s21_is_not_equal_877) {
-  char *example = "( 1119902114640392660520300251 != 1329461939159492118909941 ) = True";
+  char *example =
+      "( 1119902114640392660520300251 != 1329461939159492118909941 ) = True";
   s21_decimal value_1 = {{0x85C6EDB, 0x4880879D, 0x39E5C7F, 0x0}};
   s21_decimal value_2 = {{0x36E313F5, 0x46B0B252, 0x11986, 0x0}};
   int code = 1;
@@ -8804,7 +8972,8 @@ START_TEST(s21_is_not_equal_878) {
 }
 
 START_TEST(s21_is_not_equal_879) {
-  char *example = "( 1241667103160083227668817349 != -5081.9140809301944539556801 ) = True";
+  char *example =
+      "( 1241667103160083227668817349 != -5081.9140809301944539556801 ) = True";
   s21_decimal value_1 = {{0xCCCEA5C5, 0x89996B9D, 0x403153C, 0x0}};
   s21_decimal value_2 = {{0xDEE02BC1, 0x24BA1884, 0x2A095F, 0x80160000}};
   int code = 1;
@@ -8824,7 +8993,8 @@ START_TEST(s21_is_not_equal_880) {
 }
 
 START_TEST(s21_is_not_equal_881) {
-  char *example = "( -62.900895067774046218932728 != 115319983434478188942 ) = True";
+  char *example =
+      "( -62.900895067774046218932728 != 115319983434478188942 ) = True";
   s21_decimal value_1 = {{0xACFAD1F8, 0x5AAC1368, 0x3407C8, 0x80180000}};
   s21_decimal value_2 = {{0x3400F98E, 0x4062E1F1, 0x6, 0x0}};
   int code = 1;
@@ -8894,7 +9064,8 @@ START_TEST(s21_is_not_equal_887) {
 }
 
 START_TEST(s21_is_not_equal_888) {
-  char *example = "( 1670777425951691005794663 != 1833904631804090693477532459 ) = True";
+  char *example =
+      "( 1670777425951691005794663 != 1833904631804090693477532459 ) = True";
   s21_decimal value_1 = {{0xB8249967, 0x69768DF, 0x161CD, 0x0}};
   s21_decimal value_2 = {{0x3D69032B, 0x4BF1FD3B, 0x5ECF869, 0x0}};
   int code = 1;
@@ -8944,7 +9115,8 @@ START_TEST(s21_is_not_equal_892) {
 }
 
 START_TEST(s21_is_not_equal_893) {
-  char *example = "( -76328731.348065106248404200 != -24.573825124395554390150291 ) = True";
+  char *example =
+      "( -76328731.348065106248404200 != -24.573825124395554390150291 ) = True";
   s21_decimal value_1 = {{0xF2859C4A, 0xE35F7524, 0xA1A1, 0x80100000}};
   s21_decimal value_2 = {{0xD4740C93, 0xBAB3E439, 0x1453B5, 0x80180000}};
   int code = 1;
@@ -8994,7 +9166,8 @@ START_TEST(s21_is_not_equal_897) {
 }
 
 START_TEST(s21_is_not_equal_898) {
-  char *example = "( -88.890768129051346258684937 != 1247260440568902235972657065 ) = True";
+  char *example =
+      "( -88.890768129051346258684937 != 1247260440568902235972657065 ) = True";
   s21_decimal value_1 = {{0x7FC8EC09, 0x322B2A11, 0x49875A, 0x80180000}};
   s21_decimal value_2 = {{0xD4735FA9, 0xF74BE0D2, 0x407B5AB, 0x0}};
   int code = 1;
@@ -9054,7 +9227,8 @@ START_TEST(s21_is_not_equal_903) {
 }
 
 START_TEST(s21_is_not_equal_904) {
-  char *example = "( 1683336598019658094477299701 != 1889765657182765028524661665 ) = True";
+  char *example =
+      "( 1683336598019658094477299701 != 1889765657182765028524661665 ) = True";
   s21_decimal value_1 = {{0x72DFCFF5, 0xD471F085, 0x5706C63, 0x0}};
   s21_decimal value_2 = {{0x17579BA1, 0x8CE0A09F, 0x61B2D71, 0x0}};
   int code = 1;
@@ -9094,7 +9268,8 @@ START_TEST(s21_is_not_equal_907) {
 }
 
 START_TEST(s21_is_not_equal_908) {
-  char *example = "( 15666567685331706416 != 1963643855239812437195364142 ) = True";
+  char *example =
+      "( 15666567685331706416 != 1963643855239812437195364142 ) = True";
   s21_decimal value_1 = {{0x5CF6230, 0xD96AD44E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE19C172E, 0xB1230847, 0x65849C2, 0x0}};
   int code = 1;
@@ -9154,7 +9329,8 @@ START_TEST(s21_is_not_equal_913) {
 }
 
 START_TEST(s21_is_not_equal_914) {
-  char *example = "( -345.91140356699362409652349 != 1794008895179748339065024994 ) = True";
+  char *example =
+      "( -345.91140356699362409652349 != 1794008895179748339065024994 ) = True";
   s21_decimal value_1 = {{0x419207D, 0x79E68DCA, 0x1C9CF5, 0x80170000}};
   s21_decimal value_2 = {{0xE88BF1E2, 0x14A2DDB0, 0x5CBF829, 0x0}};
   int code = 1;
@@ -9214,7 +9390,8 @@ START_TEST(s21_is_not_equal_919) {
 }
 
 START_TEST(s21_is_not_equal_920) {
-  char *example = "( 1418908728881117463592906675 != 0.04363904240426751243438050 ) = True";
+  char *example =
+      "( 1418908728881117463592906675 != 0.04363904240426751243438050 ) = True";
   s21_decimal value_1 = {{0x9CB92FB3, 0x5211609D, 0x495B19C, 0x0}};
   s21_decimal value_2 = {{0x273C93FD, 0xC5B4CB41, 0x5C68, 0x190000}};
   int code = 1;
@@ -9264,7 +9441,8 @@ START_TEST(s21_is_not_equal_924) {
 }
 
 START_TEST(s21_is_not_equal_925) {
-  char *example = "( -81.4034169048518859 != 1134261344702770263804140851 ) = True";
+  char *example =
+      "( -81.4034169048518859 != 1134261344702770263804140851 ) = True";
   s21_decimal value_1 = {{0x892AD0CB, 0xB4C07C3, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xF240DD33, 0xB4642E98, 0x3AA3D2E, 0x0}};
   int code = 1;
@@ -9274,7 +9452,8 @@ START_TEST(s21_is_not_equal_925) {
 }
 
 START_TEST(s21_is_not_equal_926) {
-  char *example = "( 10508990944669730865754 != -5.6842366044637613080148862 ) = True";
+  char *example =
+      "( 10508990944669730865754 != -5.6842366044637613080148862 ) = True";
   s21_decimal value_1 = {{0x2410025A, 0xB18BE128, 0x239, 0x0}};
   s21_decimal value_2 = {{0xF27B7B7E, 0xD6762B4E, 0x2F04D6, 0x80190000}};
   int code = 1;
@@ -9324,7 +9503,8 @@ START_TEST(s21_is_not_equal_930) {
 }
 
 START_TEST(s21_is_not_equal_931) {
-  char *example = "( 0.54470099428838180931157813 != 13219487065394838582 ) = True";
+  char *example =
+      "( 0.54470099428838180931157813 != 13219487065394838582 ) = True";
   s21_decimal value_1 = {{0x1BF2BF35, 0x1BE74EE, 0x2D0E7E, 0x1A0000}};
   s21_decimal value_2 = {{0x35BAFC36, 0xB7750D72, 0x0, 0x0}};
   int code = 1;
@@ -9424,7 +9604,8 @@ START_TEST(s21_is_not_equal_940) {
 }
 
 START_TEST(s21_is_not_equal_941) {
-  char *example = "( 16806797399764354074948664 != -5.8319254974658972097639877 ) = True";
+  char *example =
+      "( 16806797399764354074948664 != -5.8319254974658972097639877 ) = True";
   s21_decimal value_1 = {{0xFC943438, 0x500AF8B4, 0xDE6FA, 0x0}};
   s21_decimal value_2 = {{0xC99EF5C5, 0x25A5ECD2, 0x303D95, 0x80190000}};
   int code = 1;
@@ -9564,7 +9745,8 @@ START_TEST(s21_is_not_equal_954) {
 }
 
 START_TEST(s21_is_not_equal_955) {
-  char *example = "( -912.74431531429732535857745 != 1815845408583368270508018977 ) = True";
+  char *example =
+      "( -912.74431531429732535857745 != 1815845408583368270508018977 ) = True";
   s21_decimal value_1 = {{0x27D7251, 0xD912733E, 0x4B801C, 0x80170000}};
   s21_decimal value_2 = {{0xFD5D4D21, 0xD81D378C, 0x5DE0838, 0x0}};
   int code = 1;
@@ -9594,7 +9776,8 @@ START_TEST(s21_is_not_equal_957) {
 }
 
 START_TEST(s21_is_not_equal_958) {
-  char *example = "( -967942700.96495480056840532 != -87.578564639012064491594819 ) = True";
+  char *example =
+      "( -967942700.96495480056840532 != -87.578564639012064491594819 ) = True";
   s21_decimal value_1 = {{0x22F00154, 0xE569546C, 0x5010FB, 0x80110000}};
   s21_decimal value_2 = {{0x6BC5E443, 0x8092BB65, 0x48717B, 0x80180000}};
   int code = 1;
@@ -9694,7 +9877,8 @@ START_TEST(s21_is_not_equal_967) {
 }
 
 START_TEST(s21_is_not_equal_968) {
-  char *example = "( 1017627012569978871858558735 != 160753502542162986762 ) = True";
+  char *example =
+      "( 1017627012569978871858558735 != 160753502542162986762 ) = True";
   s21_decimal value_1 = {{0x4E2B770F, 0xE3F240D4, 0x349C2E6, 0x0}};
   s21_decimal value_2 = {{0x817A870A, 0xB6E72ADA, 0x8, 0x0}};
   int code = 1;
@@ -9724,7 +9908,8 @@ START_TEST(s21_is_not_equal_970) {
 }
 
 START_TEST(s21_is_not_equal_971) {
-  char *example = "( 1583634208571568878724430624 != 17621338572239255304738 ) = True";
+  char *example =
+      "( 1583634208571568878724430624 != 17621338572239255304738 ) = True";
   s21_decimal value_1 = {{0xD589BB20, 0x77C09E45, 0x51DF396, 0x0}};
   s21_decimal value_2 = {{0x39D2FA22, 0x41329599, 0x3BB, 0x0}};
   int code = 1;
@@ -9764,7 +9949,8 @@ START_TEST(s21_is_not_equal_974) {
 }
 
 START_TEST(s21_is_not_equal_975) {
-  char *example = "( 1747249084299037460910921628 != -3.24928529015298305841177 ) = True";
+  char *example =
+      "( 1747249084299037460910921628 != -3.24928529015298305841177 ) = True";
   s21_decimal value_1 = {{0xA991579C, 0xA74CD706, 0x5A54A62, 0x0}};
   s21_decimal value_2 = {{0xF5445819, 0x692DAA48, 0x44CE, 0x80170000}};
   int code = 1;
@@ -9784,7 +9970,8 @@ START_TEST(s21_is_not_equal_976) {
 }
 
 START_TEST(s21_is_not_equal_977) {
-  char *example = "( 1290411729246707655483878402 != 1572972222823319759836454048 ) = True";
+  char *example =
+      "( 1290411729246707655483878402 != 1572972222823319759836454048 ) = True";
   s21_decimal value_1 = {{0x99206C02, 0x33362FF, 0x42B6750, 0x0}};
   s21_decimal value_2 = {{0xB1D49CA0, 0xFEDA33A, 0x51521D3, 0x0}};
   int code = 1;
@@ -9804,7 +9991,8 @@ START_TEST(s21_is_not_equal_978) {
 }
 
 START_TEST(s21_is_not_equal_979) {
-  char *example = "( 2.8214211825975294481039 != 1081754874405917696736610391 ) = True";
+  char *example =
+      "( 2.8214211825975294481039 != 1081754874405917696736610391 ) = True";
   s21_decimal value_1 = {{0x72B8D28F, 0x7ED84A6C, 0x5F9, 0x160000}};
   s21_decimal value_2 = {{0xA1AFC857, 0x3F13058E, 0x37ECE81, 0x0}};
   int code = 1;
@@ -9814,7 +10002,8 @@ START_TEST(s21_is_not_equal_979) {
 }
 
 START_TEST(s21_is_not_equal_980) {
-  char *example = "( -561.21879377280091648040382 != 19270729928072340 ) = True";
+  char *example =
+      "( -561.21879377280091648040382 != 19270729928072340 ) = True";
   s21_decimal value_1 = {{0xC57E1DBE, 0x2D5FA79B, 0x2E6C45, 0x80170000}};
   s21_decimal value_2 = {{0x73ECDC94, 0x4476A0, 0x0, 0x0}};
   int code = 1;
@@ -9874,7 +10063,8 @@ START_TEST(s21_is_not_equal_985) {
 }
 
 START_TEST(s21_is_not_equal_986) {
-  char *example = "( 1472395043726273959218373176 != -2401737.7294286399047721 ) = True";
+  char *example =
+      "( 1472395043726273959218373176 != -2401737.7294286399047721 ) = True";
   s21_decimal value_1 = {{0xC37FE238, 0x421C652A, 0x4C1EFC7, 0x0}};
   s21_decimal value_2 = {{0x893D8829, 0xFC10D7A2, 0x515, 0x80100000}};
   int code = 1;
@@ -10014,7 +10204,8 @@ START_TEST(s21_is_not_equal_999) {
 }
 
 START_TEST(s21_is_not_equal_1000) {
-  char *example = "( 16501069512712649840 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 16501069512712649840 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x9F43FC70, 0xE4FF934B, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -10094,7 +10285,8 @@ START_TEST(s21_is_not_equal_1007) {
 }
 
 START_TEST(s21_is_not_equal_1008) {
-  char *example = "( 1187298644641015669660264536 != 1004764400811554366408883553 ) = True";
+  char *example =
+      "( 1187298644641015669660264536 != 1004764400811554366408883553 ) = True";
   s21_decimal value_1 = {{0xB65F2858, 0x7ED56E72, 0x3D61C44, 0x0}};
   s21_decimal value_2 = {{0xDB77FD61, 0x4F4EFF92, 0x33F1F23, 0x0}};
   int code = 1;
@@ -10104,7 +10296,8 @@ START_TEST(s21_is_not_equal_1008) {
 }
 
 START_TEST(s21_is_not_equal_1009) {
-  char *example = "( -828.09574824654627568102891 != 1.207499192024E-10 ) = True";
+  char *example =
+      "( -828.09574824654627568102891 != 1.207499192024E-10 ) = True";
   s21_decimal value_1 = {{0x266C2DEB, 0xBDF343F, 0x447F9C, 0x80170000}};
   s21_decimal value_2 = {{0x248F76D8, 0x119, 0x0, 0x160000}};
   int code = 1;
@@ -10124,7 +10317,8 @@ START_TEST(s21_is_not_equal_1010) {
 }
 
 START_TEST(s21_is_not_equal_1011) {
-  char *example = "( 1900600006145708471994587438 != 1683019236153126463 ) = True";
+  char *example =
+      "( 1900600006145708471994587438 != 1683019236153126463 ) = True";
   s21_decimal value_1 = {{0xF158992E, 0xC8D22CB3, 0x62423B4, 0x0}};
   s21_decimal value_2 = {{0x90E6E3F, 0x175B4914, 0x0, 0x0}};
   int code = 1;
@@ -10134,7 +10328,8 @@ START_TEST(s21_is_not_equal_1011) {
 }
 
 START_TEST(s21_is_not_equal_1012) {
-  char *example = "( 1225058450269461280802 != 1120200149770628538016469674 ) = True";
+  char *example =
+      "( 1225058450269461280802 != 1120200149770628538016469674 ) = True";
   s21_decimal value_1 = {{0xD9C7F822, 0x6919E9E1, 0x42, 0x0}};
   s21_decimal value_2 = {{0x407412AA, 0xCCCC7B59, 0x39E9B9B, 0x0}};
   int code = 1;
@@ -10144,7 +10339,9 @@ START_TEST(s21_is_not_equal_1012) {
 }
 
 START_TEST(s21_is_not_equal_1013) {
-  char *example = "( 1654627347596401153043447340 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1654627347596401153043447340 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0xB335BE2C, 0x3EF32022, 0x558ACF8, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -10164,7 +10361,8 @@ START_TEST(s21_is_not_equal_1014) {
 }
 
 START_TEST(s21_is_not_equal_1015) {
-  char *example = "( -9.0413514684234379685045443 != 1679887838085783466078450271 ) = True";
+  char *example =
+      "( -9.0413514684234379685045443 != 1679887838085783466078450271 ) = True";
   s21_decimal value_1 = {{0xE124A4C3, 0x73BF1C03, 0x4AC9CE, 0x80190000}};
   s21_decimal value_2 = {{0xDBED325F, 0x2DE1F6CA, 0x56D9216, 0x0}};
   int code = 1;
@@ -10184,7 +10382,8 @@ START_TEST(s21_is_not_equal_1016) {
 }
 
 START_TEST(s21_is_not_equal_1017) {
-  char *example = "( -92577.297397485932185155017 != 1038161625926120906574541716 ) = True";
+  char *example =
+      "( -92577.297397485932185155017 != 1038161625926120906574541716 ) = True";
   s21_decimal value_1 = {{0x44C075C9, 0x591A6E27, 0x4C9401, 0x80150000}};
   s21_decimal value_2 = {{0x43343394, 0x82D17F9E, 0x35ABF46, 0x0}};
   int code = 1;
@@ -10204,7 +10403,8 @@ START_TEST(s21_is_not_equal_1018) {
 }
 
 START_TEST(s21_is_not_equal_1019) {
-  char *example = "( 0.0972102737850974115 != -86.260640905451726773998574 ) = True";
+  char *example =
+      "( 0.0972102737850974115 != -86.260640905451726773998574 ) = True";
   s21_decimal value_1 = {{0x26CABFA3, 0xD7D9A4A, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x220D3EE, 0xB6A6E579, 0x475A66, 0x80180000}};
   int code = 1;
@@ -10254,7 +10454,8 @@ START_TEST(s21_is_not_equal_1023) {
 }
 
 START_TEST(s21_is_not_equal_1024) {
-  char *example = "( -4.4115740465437451292340713 != 1242463187984389551 ) = True";
+  char *example =
+      "( -4.4115740465437451292340713 != 1242463187984389551 ) = True";
   s21_decimal value_1 = {{0xE86171E9, 0x1529F8EF, 0x247DDF, 0x80190000}};
   s21_decimal value_2 = {{0xC64F15AF, 0x113E1DAF, 0x0, 0x0}};
   int code = 1;
@@ -10324,7 +10525,8 @@ START_TEST(s21_is_not_equal_1030) {
 }
 
 START_TEST(s21_is_not_equal_1031) {
-  char *example = "( -67.348489422632434586667252 != 1338005730524866201638683234 ) = True";
+  char *example =
+      "( -67.348489422632434586667252 != 1338005730524866201638683234 ) = True";
   s21_decimal value_1 = {{0x489CC8F4, 0xED62564C, 0x37B598, 0x80180000}};
   s21_decimal value_2 = {{0xB5904262, 0xFDDD262B, 0x452C5BB, 0x0}};
   int code = 1;
@@ -10344,7 +10546,8 @@ START_TEST(s21_is_not_equal_1032) {
 }
 
 START_TEST(s21_is_not_equal_1033) {
-  char *example = "( 1018750960130134377608852130 != 19717993866091791371934779 ) = True";
+  char *example =
+      "( 1018750960130134377608852130 != 19717993866091791371934779 ) = True";
   s21_decimal value_1 = {{0x103132A2, 0x35B178DF, 0x34AB0E8, 0x0}};
   s21_decimal value_2 = {{0x39F1C3B, 0x96DE9195, 0x104F72, 0x0}};
   int code = 1;
@@ -10384,7 +10587,8 @@ START_TEST(s21_is_not_equal_1036) {
 }
 
 START_TEST(s21_is_not_equal_1037) {
-  char *example = "( -402.130894832770088351 != -747170161967.00573493148604 ) = True";
+  char *example =
+      "( -402.130894832770088351 != -747170161967.00573493148604 ) = True";
   s21_decimal value_1 = {{0x539FD9F, 0xCCAFEE45, 0x15, 0x80120000}};
   s21_decimal value_2 = {{0xA88CBBBC, 0x90692D3C, 0x3DCDF1, 0x800E0000}};
   int code = 1;
@@ -10394,7 +10598,8 @@ START_TEST(s21_is_not_equal_1037) {
 }
 
 START_TEST(s21_is_not_equal_1038) {
-  char *example = "( -1.01012275085307468558367 != 1146402276038867817770988742 ) = True";
+  char *example =
+      "( -1.01012275085307468558367 != 1146402276038867817770988742 ) = True";
   s21_decimal value_1 = {{0xE067B01F, 0xE2EB6C1D, 0x1563, 0x80170000}};
   s21_decimal value_2 = {{0xD07F34C6, 0xE943503D, 0x3B4481F, 0x0}};
   int code = 1;
@@ -10534,7 +10739,8 @@ START_TEST(s21_is_not_equal_1051) {
 }
 
 START_TEST(s21_is_not_equal_1052) {
-  char *example = "( 8.8059211817E-10 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 8.8059211817E-10 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x80BCF029, 0x14, 0x0, 0x140000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -10554,7 +10760,8 @@ START_TEST(s21_is_not_equal_1053) {
 }
 
 START_TEST(s21_is_not_equal_1054) {
-  char *example = "( -6.4905387972852137492242909 != 19219139095262485606422 ) = True";
+  char *example =
+      "( -6.4905387972852137492242909 != 19219139095262485606422 ) = True";
   s21_decimal value_1 = {{0xAA0061DD, 0x21DF015B, 0x35B040, 0x80190000}};
   s21_decimal value_2 = {{0x36D0F016, 0xDF225BC7, 0x411, 0x0}};
   int code = 1;
@@ -10564,7 +10771,8 @@ START_TEST(s21_is_not_equal_1054) {
 }
 
 START_TEST(s21_is_not_equal_1055) {
-  char *example = "( 1874063501475435749305351356 != 1227552431052781536028140651 ) = True";
+  char *example =
+      "( 1874063501475435749305351356 != 1227552431052781536028140651 ) = True";
   s21_decimal value_1 = {{0x78F1FCBC, 0xFBD88B18, 0x60E3061, 0x0}};
   s21_decimal value_2 = {{0x8704246B, 0xA11E0698, 0x3F76856, 0x0}};
   int code = 1;
@@ -10704,7 +10912,8 @@ START_TEST(s21_is_not_equal_1068) {
 }
 
 START_TEST(s21_is_not_equal_1069) {
-  char *example = "( -55.18714285111016422 != 1975417515411022096421711120 ) = True";
+  char *example =
+      "( -55.18714285111016422 != 1975417515411022096421711120 ) = True";
   s21_decimal value_1 = {{0x24EA7BE6, 0x4C966967, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xBBD96D10, 0x16B6D669, 0x66206EE, 0x0}};
   int code = 1;
@@ -10734,7 +10943,8 @@ START_TEST(s21_is_not_equal_1071) {
 }
 
 START_TEST(s21_is_not_equal_1072) {
-  char *example = "( 1855546343601413204504007915 != 14092207912361695618026583 ) = True";
+  char *example =
+      "( 1855546343601413204504007915 != 14092207912361695618026583 ) = True";
   s21_decimal value_1 = {{0x38ECD4EB, 0xD810FEBB, 0x5FEDF38, 0x0}};
   s21_decimal value_2 = {{0xFF584C57, 0x1F26BF7F, 0xBA824, 0x0}};
   int code = 1;
@@ -10754,7 +10964,8 @@ START_TEST(s21_is_not_equal_1073) {
 }
 
 START_TEST(s21_is_not_equal_1074) {
-  char *example = "( -4.9161241459912959363113 != 1496883258431913997863369696 ) = True";
+  char *example =
+      "( -4.9161241459912959363113 != 1496883258431913997863369696 ) = True";
   s21_decimal value_1 = {{0xD5F48829, 0x947005E, 0xA69, 0x80160000}};
   s21_decimal value_2 = {{0x8CD23BE0, 0x99686B0, 0x4D6315C, 0x0}};
   int code = 1;
@@ -10764,7 +10975,8 @@ START_TEST(s21_is_not_equal_1074) {
 }
 
 START_TEST(s21_is_not_equal_1075) {
-  char *example = "( 140444217478299290689477 != -9.4657189884242949947424367 ) = True";
+  char *example =
+      "( 140444217478299290689477 != -9.4657189884242949947424367 ) = True";
   s21_decimal value_1 = {{0x7883DFC5, 0x7F0C8B28, 0x1DBD, 0x0}};
   s21_decimal value_2 = {{0x3A367E6F, 0x8BB290FB, 0x4E4C70, 0x80190000}};
   int code = 1;
@@ -10944,7 +11156,8 @@ START_TEST(s21_is_not_equal_1092) {
 }
 
 START_TEST(s21_is_not_equal_1093) {
-  char *example = "( 108582652652084821304772 != 18660816112183200841454862 ) = True";
+  char *example =
+      "( 108582652652084821304772 != 18660816112183200841454862 ) = True";
   s21_decimal value_1 = {{0x768925C4, 0x47035B85, 0x16FE, 0x0}};
   s21_decimal value_2 = {{0xB12BD50E, 0xDE535583, 0xF6F94, 0x0}};
   int code = 1;
@@ -10994,7 +11207,8 @@ START_TEST(s21_is_not_equal_1097) {
 }
 
 START_TEST(s21_is_not_equal_1098) {
-  char *example = "( 3.54446639029132141015433525 != -8.4245964898736262785826083 ) = True";
+  char *example =
+      "( 3.54446639029132141015433525 != -8.4245964898736262785826083 ) = True";
   s21_decimal value_1 = {{0x74218135, 0xCDA3A948, 0x12530FE, 0x1A0000}};
   s21_decimal value_2 = {{0xC1CC7D23, 0xE8877CB7, 0x45AFC6, 0x80190000}};
   int code = 1;
@@ -11044,7 +11258,8 @@ START_TEST(s21_is_not_equal_1102) {
 }
 
 START_TEST(s21_is_not_equal_1103) {
-  char *example = "( -828.8924673139371618580863 != 1753396084939624362109126957 ) = True";
+  char *example =
+      "( -828.8924673139371618580863 != 1753396084939624362109126957 ) = True";
   s21_decimal value_1 = {{0xD297B97F, 0x81C4CF28, 0x6DB3F, 0x80160000}};
   s21_decimal value_2 = {{0xCB21492D, 0x39D83F9B, 0x5AA6010, 0x0}};
   int code = 1;
@@ -11124,7 +11339,8 @@ START_TEST(s21_is_not_equal_1110) {
 }
 
 START_TEST(s21_is_not_equal_1111) {
-  char *example = "( 1290730954663124026761043801 != 1159522825010576568506262 ) = True";
+  char *example =
+      "( 1290730954663124026761043801 != 1159522825010576568506262 ) = True";
   s21_decimal value_1 = {{0xE2065F59, 0x41CAE8F1, 0x42BAAE9, 0x0}};
   s21_decimal value_2 = {{0xC8965796, 0xDBB94BE5, 0xF589, 0x0}};
   int code = 1;
@@ -11134,7 +11350,8 @@ START_TEST(s21_is_not_equal_1111) {
 }
 
 START_TEST(s21_is_not_equal_1112) {
-  char *example = "( -71.564967637611588110240041 != 1967876761946963496719737923 ) = True";
+  char *example =
+      "( -71.564967637611588110240041 != 1967876761946963496719737923 ) = True";
   s21_decimal value_1 = {{0xE037C929, 0xAB590ECF, 0x3B3278, 0x80180000}};
   s21_decimal value_2 = {{0xE801E443, 0x63A9D42, 0x65BCA1D, 0x0}};
   int code = 1;
@@ -11144,7 +11361,8 @@ START_TEST(s21_is_not_equal_1112) {
 }
 
 START_TEST(s21_is_not_equal_1113) {
-  char *example = "( -14.842262456295077913740488 != 1305749226239055476 ) = True";
+  char *example =
+      "( -14.842262456295077913740488 != 1305749226239055476 ) = True";
   s21_decimal value_1 = {{0x866C4C8, 0xA8F4D39F, 0xC46F8, 0x80180000}};
   s21_decimal value_2 = {{0xCBB85674, 0x121EF400, 0x0, 0x0}};
   int code = 1;
@@ -11174,7 +11392,8 @@ START_TEST(s21_is_not_equal_1115) {
 }
 
 START_TEST(s21_is_not_equal_1116) {
-  char *example = "( 184777171522655269543969435 != -8.7539753370006073306 ) = True";
+  char *example =
+      "( 184777171522655269543969435 != -8.7539753370006073306 ) = True";
   s21_decimal value_1 = {{0xC93829B, 0x8A1E9A90, 0x98D816, 0x0}};
   s21_decimal value_2 = {{0x70842FDA, 0xBEDBADE2, 0x4, 0x80130000}};
   int code = 1;
@@ -11184,7 +11403,8 @@ START_TEST(s21_is_not_equal_1116) {
 }
 
 START_TEST(s21_is_not_equal_1117) {
-  char *example = "( 15525624860218137396770436 != -47.8696471600211969378 ) = True";
+  char *example =
+      "( 15525624860218137396770436 != -47.8696471600211969378 ) = True";
   s21_decimal value_1 = {{0x9DC1F684, 0xCF64D274, 0xCD7AD, 0x0}};
   s21_decimal value_2 = {{0x83804562, 0xF33F80AD, 0x19, 0x80130000}};
   int code = 1;
@@ -11294,7 +11514,8 @@ START_TEST(s21_is_not_equal_1127) {
 }
 
 START_TEST(s21_is_not_equal_1128) {
-  char *example = "( -4965385.163468249038281118 != -1475.9478794729706175680068 ) = True";
+  char *example =
+      "( -4965385.163468249038281118 != -1475.9478794729706175680068 ) = True";
   s21_decimal value_1 = {{0x167F599E, 0x11AEC447, 0x41B76, 0x80120000}};
   s21_decimal value_2 = {{0x6C254E44, 0xF2DE008D, 0xC3570, 0x80160000}};
   int code = 1;
@@ -11324,7 +11545,8 @@ START_TEST(s21_is_not_equal_1130) {
 }
 
 START_TEST(s21_is_not_equal_1131) {
-  char *example = "( 1536300740217303498057554808 != -2.1457692872504232270 ) = True";
+  char *example =
+      "( 1536300740217303498057554808 != -2.1457692872504232270 ) = True";
   s21_decimal value_1 = {{0x12BB9B78, 0x1B95958, 0x4F6CC56, 0x0}};
   s21_decimal value_2 = {{0x48812DBB, 0x1DC74DCC, 0x0, 0x80120000}};
   int code = 1;
@@ -11414,7 +11636,8 @@ START_TEST(s21_is_not_equal_1139) {
 }
 
 START_TEST(s21_is_not_equal_1140) {
-  char *example = "( 1745055632103953714424600263 != 1222451981002254880961042536 ) = True";
+  char *example =
+      "( 1745055632103953714424600263 != 1222451981002254880961042536 ) = True";
   s21_decimal value_1 = {{0xC19C56C7, 0x5F2B9228, 0x5A379E7, 0x0}};
   s21_decimal value_2 = {{0x8EC59868, 0xAD977B23, 0x3F33046, 0x0}};
   int code = 1;
@@ -11454,7 +11677,8 @@ START_TEST(s21_is_not_equal_1143) {
 }
 
 START_TEST(s21_is_not_equal_1144) {
-  char *example = "( 1940794052607966893896662944 != -82842.92091030052669061 ) = True";
+  char *example =
+      "( 1940794052607966893896662944 != -82842.92091030052669061 ) = True";
   s21_decimal value_1 = {{0xCA787FA0, 0x68C2FBA5, 0x6456320, 0x0}};
   s21_decimal value_2 = {{0x304E0685, 0x17A5D4BB, 0x1C1, 0x80110000}};
   int code = 1;
@@ -11504,7 +11728,8 @@ START_TEST(s21_is_not_equal_1148) {
 }
 
 START_TEST(s21_is_not_equal_1149) {
-  char *example = "( 1914589668205143812031150108 != 746.453453719298362533690351 ) = True";
+  char *example =
+      "( 1914589668205143812031150108 != 746.453453719298362533690351 ) = True";
   s21_decimal value_1 = {{0x850C781C, 0xE26286E5, 0x62FB621, 0x0}};
   s21_decimal value_2 = {{0x96B3BEF, 0xCF206D8E, 0x26973AA, 0x180000}};
   int code = 1;
@@ -11594,7 +11819,8 @@ START_TEST(s21_is_not_equal_1157) {
 }
 
 START_TEST(s21_is_not_equal_1158) {
-  char *example = "( 1215882922393806750535001 != 1206427404801251462237046349 ) = True";
+  char *example =
+      "( 1215882922393806750535001 != 1206427404801251462237046349 ) = True";
   s21_decimal value_1 = {{0xA4ACD59, 0x2532355A, 0x10179, 0x0}};
   s21_decimal value_2 = {{0xA316C64D, 0xA95D31F8, 0x3E5EEF0, 0x0}};
   int code = 1;
@@ -11614,7 +11840,8 @@ START_TEST(s21_is_not_equal_1159) {
 }
 
 START_TEST(s21_is_not_equal_1160) {
-  char *example = "( 1138382625259682587882104142 != 9.2307264484784556330 ) = True";
+  char *example =
+      "( 1138382625259682587882104142 != 9.2307264484784556330 ) = True";
   s21_decimal value_1 = {{0xA4F5254E, 0xC574E623, 0x3ADA5E5, 0x0}};
   s21_decimal value_2 = {{0x645C8751, 0x801A20CC, 0x0, 0x120000}};
   int code = 1;
@@ -11634,7 +11861,8 @@ START_TEST(s21_is_not_equal_1161) {
 }
 
 START_TEST(s21_is_not_equal_1162) {
-  char *example = "( 13867447540209990641672806 != -836.23692977298704 ) = True";
+  char *example =
+      "( 13867447540209990641672806 != -836.23692977298704 ) = True";
   s21_decimal value_1 = {{0x40CC6266, 0xD6662703, 0xB788B, 0x0}};
   s21_decimal value_2 = {{0x42B7DD10, 0x129174E, 0x0, 0x800E0000}};
   int code = 1;
@@ -11684,7 +11912,8 @@ START_TEST(s21_is_not_equal_1166) {
 }
 
 START_TEST(s21_is_not_equal_1167) {
-  char *example = "( -3.0650905956431303760730732 != 1818288142751055852835570393 ) = True";
+  char *example =
+      "( -3.0650905956431303760730732 != 1818288142751055852835570393 ) = True";
   s21_decimal value_1 = {{0xF17CDA6C, 0xF0FB0A8E, 0x195A94, 0x80190000}};
   s21_decimal value_2 = {{0x4A3602D9, 0xBA906F1C, 0x5E00D7D, 0x0}};
   int code = 1;
@@ -11734,7 +11963,8 @@ START_TEST(s21_is_not_equal_1171) {
 }
 
 START_TEST(s21_is_not_equal_1172) {
-  char *example = "( 1924901465980978752635716026 != 1022201075008492192367315649 ) = True";
+  char *example =
+      "( 1924901465980978752635716026 != 1022201075008492192367315649 ) = True";
   s21_decimal value_1 = {{0xFCD2C1BA, 0x8FD5C2A3, 0x6383DBD, 0x0}};
   s21_decimal value_2 = {{0x31570AC1, 0x4FE33F41, 0x34D8B7F, 0x0}};
   int code = 1;
@@ -11794,7 +12024,8 @@ START_TEST(s21_is_not_equal_1177) {
 }
 
 START_TEST(s21_is_not_equal_1178) {
-  char *example = "( 1028836659769344106427651301 != -1.9415987523159043876773665 ) = True";
+  char *example =
+      "( 1028836659769344106427651301 != -1.9415987523159043876773665 ) = True";
   s21_decimal value_1 = {{0xEA9514E5, 0x152DF740, 0x35308A3, 0x0}};
   s21_decimal value_2 = {{0x223ADF21, 0xCAECF26E, 0x100F7E, 0x80190000}};
   int code = 1;
@@ -11804,7 +12035,8 @@ START_TEST(s21_is_not_equal_1178) {
 }
 
 START_TEST(s21_is_not_equal_1179) {
-  char *example = "( 1878916535436520744181284713 != 142679002169934125751470 ) = True";
+  char *example =
+      "( 1878916535436520744181284713 != 142679002169934125751470 ) = True";
   s21_decimal value_1 = {{0x527FBF69, 0x7B61C5FC, 0x612340D, 0x0}};
   s21_decimal value_2 = {{0x9FBC5CAE, 0xA4EAAFCD, 0x1E36, 0x0}};
   int code = 1;
@@ -11824,7 +12056,8 @@ START_TEST(s21_is_not_equal_1180) {
 }
 
 START_TEST(s21_is_not_equal_1181) {
-  char *example = "( 1770233097294091317788793480 != 1301338927183331235625204863 ) = True";
+  char *example =
+      "( 1770233097294091317788793480 != 1301338927183331235625204863 ) = True";
   s21_decimal value_1 = {{0x6D7DA88, 0x7E9E18A4, 0x5B84D70, 0x0}};
   s21_decimal value_2 = {{0xDF087C7F, 0x997FCA37, 0x434713C, 0x0}};
   int code = 1;
@@ -11834,7 +12067,8 @@ START_TEST(s21_is_not_equal_1181) {
 }
 
 START_TEST(s21_is_not_equal_1182) {
-  char *example = "( -59.139174494833711272663870 != 1025175296549378404767442989 ) = True";
+  char *example =
+      "( -59.139174494833711272663870 != 1025175296549378404767442989 ) = True";
   s21_decimal value_1 = {{0x53505C53, 0x1B7A1398, 0x4E452, 0x80170000}};
   s21_decimal value_2 = {{0xF36F282D, 0x2F53562D, 0x3500150, 0x0}};
   int code = 1;
@@ -11874,7 +12108,8 @@ START_TEST(s21_is_not_equal_1185) {
 }
 
 START_TEST(s21_is_not_equal_1186) {
-  char *example = "( 0.15985432830093887746841739 != -51.886778253642960116067923 ) = True";
+  char *example =
+      "( 0.15985432830093887746841739 != -51.886778253642960116067923 ) = True";
   s21_decimal value_1 = {{0xAABF9C8B, 0xCD5056A, 0xD390C, 0x1A0000}};
   s21_decimal value_2 = {{0xF0272E53, 0xE2A29B0F, 0x2AEB73, 0x80180000}};
   int code = 1;
@@ -12014,7 +12249,8 @@ START_TEST(s21_is_not_equal_1199) {
 }
 
 START_TEST(s21_is_not_equal_1200) {
-  char *example = "( 17774749464353424073524 != 0.881997388534993323612 ) = True";
+  char *example =
+      "( 17774749464353424073524 != 0.881997388534993323612 ) = True";
   s21_decimal value_1 = {{0xAEA0E334, 0x92338F2B, 0x3C3, 0x0}};
   s21_decimal value_2 = {{0xA277065C, 0xD02C2FD9, 0x2F, 0x150000}};
   int code = 1;
@@ -12044,7 +12280,8 @@ START_TEST(s21_is_not_equal_1202) {
 }
 
 START_TEST(s21_is_not_equal_1203) {
-  char *example = "( 1457882746945544042393910691 != 1735797783399191847643367666 ) = True";
+  char *example =
+      "( 1457882746945544042393910691 != 1735797783399191847643367666 ) = True";
   s21_decimal value_1 = {{0x1C083DA3, 0x12C8AEFC, 0x4B5EEAE, 0x0}};
   s21_decimal value_2 = {{0xDFFC8F2, 0x6349E5E0, 0x59BD17A, 0x0}};
   int code = 1;
@@ -12064,7 +12301,8 @@ START_TEST(s21_is_not_equal_1204) {
 }
 
 START_TEST(s21_is_not_equal_1205) {
-  char *example = "( 13628720687425319969 != 1638711418223598431380089963 ) = True";
+  char *example =
+      "( 13628720687425319969 != 1638711418223598431380089963 ) = True";
   s21_decimal value_1 = {{0xD500F421, 0xBD22F141, 0x0, 0x0}};
   s21_decimal value_2 = {{0x7866AC6B, 0xFC598BEF, 0x54B82A3, 0x0}};
   int code = 1;
@@ -12074,7 +12312,8 @@ START_TEST(s21_is_not_equal_1205) {
 }
 
 START_TEST(s21_is_not_equal_1206) {
-  char *example = "( -9461.7346874462235488620702 != 163924133658816204384 ) = True";
+  char *example =
+      "( -9461.7346874462235488620702 != 163924133658816204384 ) = True";
   s21_decimal value_1 = {{0xE93109E, 0xA6DCB6BC, 0x4E4400, 0x80160000}};
   s21_decimal value_2 = {{0x2F64CE60, 0xE2E7830E, 0x8, 0x0}};
   int code = 1;
@@ -12094,7 +12333,8 @@ START_TEST(s21_is_not_equal_1207) {
 }
 
 START_TEST(s21_is_not_equal_1208) {
-  char *example = "( 1966089775623665203773585271 != 145259185828457357343 ) = True";
+  char *example =
+      "( 1966089775623665203773585271 != 145259185828457357343 ) = True";
   s21_decimal value_1 = {{0x650E3777, 0x4D3800C7, 0x65A4FB4, 0x0}};
   s21_decimal value_2 = {{0x13A8201F, 0xDFE04BE5, 0x7, 0x0}};
   int code = 1;
@@ -12194,7 +12434,8 @@ START_TEST(s21_is_not_equal_1217) {
 }
 
 START_TEST(s21_is_not_equal_1218) {
-  char *example = "( -843.85142336795684179318732 != 1149439192951698279182727550 ) = True";
+  char *example =
+      "( -843.85142336795684179318732 != 1149439192951698279182727550 ) = True";
   s21_decimal value_1 = {{0x697C97CC, 0xBB7B7617, 0x45CD3F, 0x80170000}};
   s21_decimal value_2 = {{0xD469797E, 0x81C4E824, 0x3B6CB37, 0x0}};
   int code = 1;
@@ -12204,7 +12445,8 @@ START_TEST(s21_is_not_equal_1218) {
 }
 
 START_TEST(s21_is_not_equal_1219) {
-  char *example = "( -385.36758697034683513908598 != 1199750155792724631525020806 ) = True";
+  char *example =
+      "( -385.36758697034683513908598 != 1199750155792724631525020806 ) = True";
   s21_decimal value_1 = {{0xAA112D76, 0xDFFF96DB, 0x1FE079, 0x80170000}};
   s21_decimal value_2 = {{0xD40C5486, 0x447BD847, 0x3E068FA, 0x0}};
   int code = 1;
@@ -12214,7 +12456,8 @@ START_TEST(s21_is_not_equal_1219) {
 }
 
 START_TEST(s21_is_not_equal_1220) {
-  char *example = "( 1013475942911249955 != 0.63163405772457405817277282 ) = True";
+  char *example =
+      "( 1013475942911249955 != 0.63163405772457405817277282 ) = True";
   s21_decimal value_1 = {{0x1DA10E23, 0xE109700, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2DEFCB62, 0x16876F9A, 0x343F5F, 0x1A0000}};
   int code = 1;
@@ -12224,7 +12467,8 @@ START_TEST(s21_is_not_equal_1220) {
 }
 
 START_TEST(s21_is_not_equal_1221) {
-  char *example = "( -3477.3978991857678467957 != -273.75433295217836525588401 ) = True";
+  char *example =
+      "( -3477.3978991857678467957 != -273.75433295217836525588401 ) = True";
   s21_decimal value_1 = {{0x5D20C375, 0x19E6D4A8, 0x75D, 0x80130000}};
   s21_decimal value_2 = {{0x1CFB8FB1, 0x366B02D6, 0x16A4F9, 0x80170000}};
   int code = 1;
@@ -12234,7 +12478,8 @@ START_TEST(s21_is_not_equal_1221) {
 }
 
 START_TEST(s21_is_not_equal_1222) {
-  char *example = "( -93.087105063812699511310 != 5.1385473618878224E-10 ) = True";
+  char *example =
+      "( -93.087105063812699511310 != 5.1385473618878224E-10 ) = True";
   s21_decimal value_1 = {{0x4A2E629B, 0xA04F25E4, 0x1F8, 0x80140000}};
   s21_decimal value_2 = {{0xE5AB1F10, 0xB68ED0, 0x0, 0x1A0000}};
   int code = 1;
@@ -12244,7 +12489,8 @@ START_TEST(s21_is_not_equal_1222) {
 }
 
 START_TEST(s21_is_not_equal_1223) {
-  char *example = "( 17477727484100374 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 17477727484100374 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x8A2BBF16, 0x3E17E6, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -12254,7 +12500,8 @@ START_TEST(s21_is_not_equal_1223) {
 }
 
 START_TEST(s21_is_not_equal_1224) {
-  char *example = "( 1876078184550401306797839663 != 3.5748004089816138E-10 ) = True";
+  char *example =
+      "( 1876078184550401306797839663 != 3.5748004089816138E-10 ) = True";
   s21_decimal value_1 = {{0x8038952F, 0x2C0F6BDC, 0x60FDB02, 0x0}};
   s21_decimal value_2 = {{0xCD33E44A, 0x7F009E, 0x0, 0x1A0000}};
   int code = 1;
@@ -12324,7 +12571,8 @@ START_TEST(s21_is_not_equal_1230) {
 }
 
 START_TEST(s21_is_not_equal_1231) {
-  char *example = "( -897.18668612388124922949974 != -370.34636963944345204615 ) = True";
+  char *example =
+      "( -897.18668612388124922949974 != -370.34636963944345204615 ) = True";
   s21_decimal value_1 = {{0x71633156, 0xC567001D, 0x4A36AA, 0x80170000}};
   s21_decimal value_2 = {{0x8DD57787, 0xA6D554CA, 0x7D7, 0x80140000}};
   int code = 1;
@@ -12334,7 +12582,8 @@ START_TEST(s21_is_not_equal_1231) {
 }
 
 START_TEST(s21_is_not_equal_1232) {
-  char *example = "( -2542.8559091247111290127216 != 1891794772621341848293760427 ) = True";
+  char *example =
+      "( -2542.8559091247111290127216 != 1891794772621341848293760427 ) = True";
   s21_decimal value_1 = {{0x17168370, 0xF353A913, 0x1508B4, 0x80160000}};
   s21_decimal value_2 = {{0x725DAB, 0x1E5F1FE4, 0x61CDB20, 0x0}};
   int code = 1;
@@ -12344,7 +12593,8 @@ START_TEST(s21_is_not_equal_1232) {
 }
 
 START_TEST(s21_is_not_equal_1233) {
-  char *example = "( 120966455728563365347 != 1826657699116704153015169953 ) = True";
+  char *example =
+      "( 120966455728563365347 != 1826657699116704153015169953 ) = True";
   s21_decimal value_1 = {{0xCF0925E3, 0x8EBF2E93, 0x6, 0x0}};
   s21_decimal value_2 = {{0xD8F433A1, 0x49DA2A1F, 0x5E6F9D0, 0x0}};
   int code = 1;
@@ -12354,7 +12604,8 @@ START_TEST(s21_is_not_equal_1233) {
 }
 
 START_TEST(s21_is_not_equal_1234) {
-  char *example = "( 1786791187978158179188135619 != 1283399805811912041180510230 ) = True";
+  char *example =
+      "( 1786791187978158179188135619 != 1283399805811912041180510230 ) = True";
   s21_decimal value_1 = {{0xD512D6C3, 0x63A23321, 0x5C5FFC0, 0x0}};
   s21_decimal value_2 = {{0x5F413816, 0xE1A5E2F4, 0x4259A7A, 0x0}};
   int code = 1;
@@ -12364,7 +12615,8 @@ START_TEST(s21_is_not_equal_1234) {
 }
 
 START_TEST(s21_is_not_equal_1235) {
-  char *example = "( 1451367966488815649420173732 != -7.1987953552956476916803062 ) = True";
+  char *example =
+      "( 1451367966488815649420173732 != -7.1987953552956476916803062 ) = True";
   s21_decimal value_1 = {{0x9E0F61A4, 0x1DFDAEB1, 0x4B08B1F, 0x0}};
   s21_decimal value_2 = {{0x8C04A5F6, 0xC820718F, 0x3B8C0A, 0x80190000}};
   int code = 1;
@@ -12384,7 +12636,8 @@ START_TEST(s21_is_not_equal_1236) {
 }
 
 START_TEST(s21_is_not_equal_1237) {
-  char *example = "( 6.7561823239552956E-10 != 1978780383756962583661206288 ) = True";
+  char *example =
+      "( 6.7561823239552956E-10 != 1978780383756962583661206288 ) = True";
   s21_decimal value_1 = {{0xCA923FBC, 0xF0071E, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x4B7F5B10, 0x8C0B772D, 0x664CF0B, 0x0}};
   int code = 1;
@@ -12694,7 +12947,8 @@ START_TEST(s21_is_not_equal_1267) {
 }
 
 START_TEST(s21_is_not_equal_1268) {
-  char *example = "( 1133106555036318775790270422 != 1885027867214055470799992507 ) = True";
+  char *example =
+      "( 1133106555036318775790270422 != 1885027867214055470799992507 ) = True";
   s21_decimal value_1 = {{0x92B3F7D6, 0x6E700AD7, 0x3A948A5, 0x0}};
   s21_decimal value_2 = {{0xEACF36BB, 0x71038259, 0x617422D, 0x0}};
   int code = 1;
@@ -12784,7 +13038,8 @@ START_TEST(s21_is_not_equal_1276) {
 }
 
 START_TEST(s21_is_not_equal_1277) {
-  char *example = "( 1922715876276430366183777585 != -7880798966774.8715268362198 ) = True";
+  char *example =
+      "( 1922715876276430366183777585 != -7880798966774.8715268362198 ) = True";
   s21_decimal value_1 = {{0x6A93E531, 0x81AE2A6C, 0x6366EEC, 0x0}};
   s21_decimal value_2 = {{0xB27F4FD6, 0xAE2B6120, 0x41303D, 0x800D0000}};
   int code = 1;
@@ -12844,7 +13099,8 @@ START_TEST(s21_is_not_equal_1282) {
 }
 
 START_TEST(s21_is_not_equal_1283) {
-  char *example = "( -20.395792021524817487990058 != 1749204633299330617658483732 ) = True";
+  char *example =
+      "( -20.395792021524817487990058 != 1749204633299330617658483732 ) = True";
   s21_decimal value_1 = {{0xE7A0D2A, 0x19D8D762, 0x10DEFA, 0x80180000}};
   s21_decimal value_2 = {{0xA2B2A414, 0x2D5FBEFF, 0x5A6E87D, 0x0}};
   int code = 1;
@@ -12864,7 +13120,8 @@ START_TEST(s21_is_not_equal_1284) {
 }
 
 START_TEST(s21_is_not_equal_1285) {
-  char *example = "( 1522592233746708951898448160 != -1814519.2724101260882225511 ) = True";
+  char *example =
+      "( 1522592233746708951898448160 != -1814519.2724101260882225511 ) = True";
   s21_decimal value_1 = {{0x4286E120, 0x61C357B3, 0x4EB7572, 0x0}};
   s21_decimal value_2 = {{0x99EC2967, 0xDE5B62C8, 0xF0264, 0x80130000}};
   int code = 1;
@@ -12894,7 +13151,8 @@ START_TEST(s21_is_not_equal_1287) {
 }
 
 START_TEST(s21_is_not_equal_1288) {
-  char *example = "( 1923358857005670295549191940 != -71.7400071162162087 ) = True";
+  char *example =
+      "( 1923358857005670295549191940 != -71.7400071162162087 ) = True";
   s21_decimal value_1 = {{0xA47F2704, 0x8FCE243B, 0x636F714, 0x0}};
   s21_decimal value_2 = {{0x5375EBA7, 0x9F4B790, 0x0, 0x80100000}};
   int code = 1;
@@ -12984,7 +13242,8 @@ START_TEST(s21_is_not_equal_1296) {
 }
 
 START_TEST(s21_is_not_equal_1297) {
-  char *example = "( 1497225091781007375487881487 != 10.6942782654994168697776920 ) = True";
+  char *example =
+      "( 1497225091781007375487881487 != 10.6942782654994168697776920 ) = True";
   s21_decimal value_1 = {{0x9316510F, 0xDC45B869, 0x4D679BE, 0x0}};
   s21_decimal value_2 = {{0xB4F0B11C, 0xFC86BD19, 0x8D899, 0x180000}};
   int code = 1;
@@ -13044,7 +13303,8 @@ START_TEST(s21_is_not_equal_1302) {
 }
 
 START_TEST(s21_is_not_equal_1303) {
-  char *example = "( -8.2875067853508017281391225 != 141497672782402324 ) = True";
+  char *example =
+      "( -8.2875067853508017281391225 != 141497672782402324 ) = True";
   s21_decimal value_1 = {{0x550D5A79, 0x6E3AAD77, 0x448D7A, 0x80190000}};
   s21_decimal value_2 = {{0x3ABD5314, 0x1F6B362, 0x0, 0x0}};
   int code = 1;
@@ -13114,7 +13374,8 @@ START_TEST(s21_is_not_equal_1309) {
 }
 
 START_TEST(s21_is_not_equal_1310) {
-  char *example = "( 1229715143194240256603186839 != 1763859613177816697647382205 ) = True";
+  char *example =
+      "( 1229715143194240256603186839 != 1763859613177816697647382205 ) = True";
   s21_decimal value_1 = {{0x2EA5E697, 0x7D4E4B49, 0x3F9324F, 0x0}};
   s21_decimal value_2 = {{0xC2BBBEBD, 0x3A7496F5, 0x5B307CD, 0x0}};
   int code = 1;
@@ -13144,7 +13405,8 @@ START_TEST(s21_is_not_equal_1312) {
 }
 
 START_TEST(s21_is_not_equal_1313) {
-  char *example = "( 1611849616330378700999271265 != 2.5385688417552373E-10 ) = True";
+  char *example =
+      "( 1611849616330378700999271265 != 2.5385688417552373E-10 ) = True";
   s21_decimal value_1 = {{0xDEAAA361, 0xC98A4693, 0x5354A6E, 0x0}};
   s21_decimal value_2 = {{0x2C81C7F5, 0x5A3026, 0x0, 0x1A0000}};
   int code = 1;
@@ -13154,7 +13416,8 @@ START_TEST(s21_is_not_equal_1313) {
 }
 
 START_TEST(s21_is_not_equal_1314) {
-  char *example = "( -8.7685324391809560064642602 != -92029931.474605337842237009 ) = True";
+  char *example =
+      "( -8.7685324391809560064642602 != -92029931.474605337842237009 ) = True";
   s21_decimal value_1 = {{0x52F14E2A, 0xF5C4D74E, 0x488816, 0x80190000}};
   s21_decimal value_2 = {{0x1F633E51, 0x94F8E734, 0x4C2018, 0x80120000}};
   int code = 1;
@@ -13184,7 +13447,8 @@ START_TEST(s21_is_not_equal_1316) {
 }
 
 START_TEST(s21_is_not_equal_1317) {
-  char *example = "( 1344549720290739365818412326 != -734.26241162363021449533340 ) = True";
+  char *example =
+      "( 1344549720290739365818412326 != -734.26241162363021449533340 ) = True";
   s21_decimal value_1 = {{0x24342D26, 0x63404C14, 0x4582F7A, 0x0}};
   s21_decimal value_2 = {{0xDFDADBF6, 0x73700B0B, 0x612DC, 0x80160000}};
   int code = 1;
@@ -13244,7 +13508,8 @@ START_TEST(s21_is_not_equal_1322) {
 }
 
 START_TEST(s21_is_not_equal_1323) {
-  char *example = "( 1473278170857742073835806892 != 1730559094367508766243625507 ) = True";
+  char *example =
+      "( 1473278170857742073835806892 != 1730559094367508766243625507 ) = True";
   s21_decimal value_1 = {{0x6F0BE0AC, 0xAD0C7B57, 0x4C2AAC9, 0x0}};
   s21_decimal value_2 = {{0x2FE31A23, 0x7C840E29, 0x5977C24, 0x0}};
   int code = 1;
@@ -13304,7 +13569,8 @@ START_TEST(s21_is_not_equal_1328) {
 }
 
 START_TEST(s21_is_not_equal_1329) {
-  char *example = "( 1303907443502052594906306852 != 1046282691699601732150639143 ) = True";
+  char *example =
+      "( 1303907443502052594906306852 != 1046282691699601732150639143 ) = True";
   s21_decimal value_1 = {{0xB3E01924, 0x25F38899, 0x4369124, 0x0}};
   s21_decimal value_2 = {{0x7E423A27, 0x5E6561E5, 0x36176FA, 0x0}};
   int code = 1;
@@ -13334,7 +13600,8 @@ START_TEST(s21_is_not_equal_1331) {
 }
 
 START_TEST(s21_is_not_equal_1332) {
-  char *example = "( 1828566523921184718427881941 != -7.3833823953317845080127951 ) = True";
+  char *example =
+      "( 1828566523921184718427881941 != -7.3833823953317845080127951 ) = True";
   s21_decimal value_1 = {{0xBD7581D5, 0xE37379F1, 0x5E88E05, 0x0}};
   s21_decimal value_2 = {{0xEC26B9CF, 0x9DDD19B2, 0x3D12EB, 0x80190000}};
   int code = 1;
@@ -13484,7 +13751,8 @@ START_TEST(s21_is_not_equal_1346) {
 }
 
 START_TEST(s21_is_not_equal_1347) {
-  char *example = "( 17210431037987964249779 != 1116096702624055005584818687 ) = True";
+  char *example =
+      "( 17210431037987964249779 != 1116096702624055005584818687 ) = True";
   s21_decimal value_1 = {{0x45F6E6B3, 0xFAB5C447, 0x3A4, 0x0}};
   s21_decimal value_2 = {{0xFC6801FF, 0x7C049D7A, 0x39B36AB, 0x0}};
   int code = 1;
@@ -13524,7 +13792,8 @@ START_TEST(s21_is_not_equal_1350) {
 }
 
 START_TEST(s21_is_not_equal_1351) {
-  char *example = "( -8.0900310729287205345094830 != 4.375624742178E-10 ) = True";
+  char *example =
+      "( -8.0900310729287205345094830 != 4.375624742178E-10 ) = True";
   s21_decimal value_1 = {{0x82BE17AB, 0x7696B707, 0x6B121, 0x80180000}};
   s21_decimal value_2 = {{0xC78EF522, 0x3FA, 0x0, 0x160000}};
   int code = 1;
@@ -13594,7 +13863,8 @@ START_TEST(s21_is_not_equal_1357) {
 }
 
 START_TEST(s21_is_not_equal_1358) {
-  char *example = "( -6672.6189912152721575241559 != 125112107814642416816 ) = True";
+  char *example =
+      "( -6672.6189912152721575241559 != 125112107814642416816 ) = True";
   s21_decimal value_1 = {{0xB6F9E757, 0xD3251C, 0x3731D2, 0x80160000}};
   s21_decimal value_2 = {{0x60227CB0, 0xC8477F2F, 0x6, 0x0}};
   int code = 1;
@@ -13604,7 +13874,8 @@ START_TEST(s21_is_not_equal_1358) {
 }
 
 START_TEST(s21_is_not_equal_1359) {
-  char *example = "( 1968264813006294217128546406 != 1693011789966575866613620780 ) = True";
+  char *example =
+      "( 1968264813006294217128546406 != 1693011789966575866613620780 ) = True";
   s21_decimal value_1 = {{0x7DAA1066, 0x507D2BEC, 0x65C1C49, 0x0}};
   s21_decimal value_2 = {{0x5F0C602C, 0x948C656, 0x5786D31, 0x0}};
   int code = 1;
@@ -13654,7 +13925,8 @@ START_TEST(s21_is_not_equal_1363) {
 }
 
 START_TEST(s21_is_not_equal_1364) {
-  char *example = "( 14143049570550297710053 != 1889087061532410666895622578 ) = True";
+  char *example =
+      "( 14143049570550297710053 != 1889087061532410666895622578 ) = True";
   s21_decimal value_1 = {{0xCF6CCDE5, 0xB23DAB53, 0x2FE, 0x0}};
   s21_decimal value_2 = {{0xCF2541B2, 0xCE6F3D2C, 0x61A9DBE, 0x0}};
   int code = 1;
@@ -13694,7 +13966,8 @@ START_TEST(s21_is_not_equal_1367) {
 }
 
 START_TEST(s21_is_not_equal_1368) {
-  char *example = "( 1393680955171738790957620508 != 0.63220398179228440380433614 ) = True";
+  char *example =
+      "( 1393680955171738790957620508 != 0.63220398179228440380433614 ) = True";
   s21_decimal value_1 = {{0x193B1D1C, 0xF7AA6257, 0x480D36B, 0x0}};
   s21_decimal value_2 = {{0x507DE4CE, 0xA70E8F25, 0x344B70, 0x1A0000}};
   int code = 1;
@@ -13734,7 +14007,8 @@ START_TEST(s21_is_not_equal_1371) {
 }
 
 START_TEST(s21_is_not_equal_1372) {
-  char *example = "( -7.7533742797261429575079138 != 4.586765308100034E-11 ) = True";
+  char *example =
+      "( -7.7533742797261429575079138 != 4.586765308100034E-11 ) = True";
   s21_decimal value_1 = {{0xEAE954E2, 0x9E7C6E34, 0x402268, 0x80190000}};
   s21_decimal value_2 = {{0x84DB7DC2, 0x104BA3, 0x0, 0x1A0000}};
   int code = 1;
@@ -13754,7 +14028,8 @@ START_TEST(s21_is_not_equal_1373) {
 }
 
 START_TEST(s21_is_not_equal_1374) {
-  char *example = "( 13237227869431887665 != 1118071651677993616638137417 ) = True";
+  char *example =
+      "( 13237227869431887665 != 1118071651677993616638137417 ) = True";
   s21_decimal value_1 = {{0x8637731, 0xB7B4149D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAF5ED449, 0xAFEB7A1A, 0x39CD8E1, 0x0}};
   int code = 1;
@@ -13784,7 +14059,8 @@ START_TEST(s21_is_not_equal_1376) {
 }
 
 START_TEST(s21_is_not_equal_1377) {
-  char *example = "( 19410941787578397614616 != 1898715546780228136173409602 ) = True";
+  char *example =
+      "( 19410941787578397614616 != 1898715546780228136173409602 ) = True";
   s21_decimal value_1 = {{0xAC4BE218, 0x44EE6839, 0x41C, 0x0}};
   s21_decimal value_2 = {{0x9A899542, 0x99D49F6, 0x62294A8, 0x0}};
   int code = 1;
@@ -13894,7 +14170,8 @@ START_TEST(s21_is_not_equal_1387) {
 }
 
 START_TEST(s21_is_not_equal_1388) {
-  char *example = "( 1225938020857745211378513098 != 1392148178557212776253039004 ) = True";
+  char *example =
+      "( 1225938020857745211378513098 != 1392148178557212776253039004 ) = True";
   s21_decimal value_1 = {{0xDB1234CA, 0x46FEECDB, 0x3F61279, 0x0}};
   s21_decimal value_2 = {{0xE0E7219C, 0xFB0D697B, 0x47F8ED7, 0x0}};
   int code = 1;
@@ -13914,7 +14191,8 @@ START_TEST(s21_is_not_equal_1389) {
 }
 
 START_TEST(s21_is_not_equal_1390) {
-  char *example = "( 1612297622006029227517064684 != 1079142571797032147487559030 ) = True";
+  char *example =
+      "( 1612297622006029227517064684 != 1079142571797032147487559030 ) = True";
   s21_decimal value_1 = {{0xB504B5EC, 0x393E56EE, 0x535A94D, 0x0}};
   s21_decimal value_2 = {{0x595C0D76, 0x9C7448D, 0x37CA554, 0x0}};
   int code = 1;
@@ -13924,7 +14202,8 @@ START_TEST(s21_is_not_equal_1390) {
 }
 
 START_TEST(s21_is_not_equal_1391) {
-  char *example = "( 1006543698977509660340597402 != 1399308870734114495109892188 ) = True";
+  char *example =
+      "( 1006543698977509660340597402 != 1399308870734114495109892188 ) = True";
   s21_decimal value_1 = {{0xAF25329A, 0x41B3DA33, 0x34097EB, 0x0}};
   s21_decimal value_2 = {{0xF6D5885C, 0xE1A3F873, 0x4857B2D, 0x0}};
   int code = 1;
@@ -13944,7 +14223,8 @@ START_TEST(s21_is_not_equal_1392) {
 }
 
 START_TEST(s21_is_not_equal_1393) {
-  char *example = "( 1716067496731986533565168820 != 1612032459595697682797072252 ) = True";
+  char *example =
+      "( 1716067496731986533565168820 != 1612032459595697682797072252 ) = True";
   s21_decimal value_1 = {{0x8B257CB4, 0x6788A998, 0x58B7F6D, 0x0}};
   s21_decimal value_2 = {{0xA8F08F7C, 0xBD940D0D, 0x5357126, 0x0}};
   int code = 1;
@@ -13984,7 +14264,8 @@ START_TEST(s21_is_not_equal_1396) {
 }
 
 START_TEST(s21_is_not_equal_1397) {
-  char *example = "( 1505151103543750222864570813 != 118219232991264181 ) = True";
+  char *example =
+      "( 1505151103543750222864570813 != 118219232991264181 ) = True";
   s21_decimal value_1 = {{0x8AFDD9BD, 0xD1AD8CF0, 0x4DD0824, 0x0}};
   s21_decimal value_2 = {{0x1C103DB5, 0x1A3FFC4, 0x0, 0x0}};
   int code = 1;
@@ -14024,7 +14305,8 @@ START_TEST(s21_is_not_equal_1400) {
 }
 
 START_TEST(s21_is_not_equal_1401) {
-  char *example = "( 11530347605355689691717148 != -55.750797595335028 ) = True";
+  char *example =
+      "( 11530347605355689691717148 != -55.750797595335028 ) = True";
   s21_decimal value_1 = {{0x95A21E1C, 0x656ADF2B, 0x989A5, 0x0}};
   s21_decimal value_2 = {{0x169D5974, 0xC6110E, 0x0, 0x800F0000}};
   int code = 1;
@@ -14044,7 +14326,8 @@ START_TEST(s21_is_not_equal_1402) {
 }
 
 START_TEST(s21_is_not_equal_1403) {
-  char *example = "( 1238812690115509776033441280 != 1648120949682455502660577515 ) = True";
+  char *example =
+      "( 1238812690115509776033441280 != 1648120949682455502660577515 ) = True";
   s21_decimal value_1 = {{0x6596E600, 0x7F0D0487, 0x400B8CA, 0x0}};
   s21_decimal value_2 = {{0x43CC28EB, 0xB54E8822, 0x5534B2F, 0x0}};
   int code = 1;
@@ -14084,7 +14367,8 @@ START_TEST(s21_is_not_equal_1406) {
 }
 
 START_TEST(s21_is_not_equal_1407) {
-  char *example = "( -97.760759493799473 != 1076898715565835831904702226 ) = True";
+  char *example =
+      "( -97.760759493799473 != 1076898715565835831904702226 ) = True";
   s21_decimal value_1 = {{0x8E99AE31, 0x15B50E4, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x176A0F12, 0x59216F55, 0x37ACA2C, 0x0}};
   int code = 1;
@@ -14134,7 +14418,8 @@ START_TEST(s21_is_not_equal_1411) {
 }
 
 START_TEST(s21_is_not_equal_1412) {
-  char *example = "( 1451501029578409202752443398 != 1938482406512315095814027402 ) = True";
+  char *example =
+      "( 1451501029578409202752443398 != 1938482406512315095814027402 ) = True";
   s21_decimal value_1 = {{0x29545406, 0x7B503991, 0x4B0A74C, 0x0}};
   s21_decimal value_2 = {{0xF6E8B88A, 0xD2C26A42, 0x643799D, 0x0}};
   int code = 1;
@@ -14164,7 +14449,8 @@ START_TEST(s21_is_not_equal_1414) {
 }
 
 START_TEST(s21_is_not_equal_1415) {
-  char *example = "( -3.3035133399411818450455442 != 1605978012244670268542907149 ) = True";
+  char *example =
+      "( -3.3035133399411818450455442 != 1605978012244670268542907149 ) = True";
   s21_decimal value_1 = {{0xEDA90B92, 0x2B8516F3, 0x1B5376, 0x80190000}};
   s21_decimal value_2 = {{0xD889730D, 0x7DF27A7A, 0x5306F12, 0x0}};
   int code = 1;
@@ -14244,7 +14530,8 @@ START_TEST(s21_is_not_equal_1422) {
 }
 
 START_TEST(s21_is_not_equal_1423) {
-  char *example = "( 1563584925739187795644 != 18217346953341013108592972 ) = True";
+  char *example =
+      "( 1563584925739187795644 != 18217346953341013108592972 ) = True";
   s21_decimal value_1 = {{0x57D176BC, 0xC3198DBB, 0x54, 0x0}};
   s21_decimal value_2 = {{0xF8EE114C, 0x5B7096D8, 0xF11AC, 0x0}};
   int code = 1;
@@ -14284,7 +14571,8 @@ START_TEST(s21_is_not_equal_1426) {
 }
 
 START_TEST(s21_is_not_equal_1427) {
-  char *example = "( -17259.984506635105151435977 != 1257250077151007973962650519 ) = True";
+  char *example =
+      "( -17259.984506635105151435977 != 1257250077151007973962650519 ) = True";
   s21_decimal value_1 = {{0xF68B44C9, 0xA28C9B74, 0xE46F1, 0x80150000}};
   s21_decimal value_2 = {{0x109F9397, 0x400F5F04, 0x40FF90F, 0x0}};
   int code = 1;
@@ -14294,7 +14582,8 @@ START_TEST(s21_is_not_equal_1427) {
 }
 
 START_TEST(s21_is_not_equal_1428) {
-  char *example = "( -531.53489593851534813113548 != 1459641371279228371120014403 ) = True";
+  char *example =
+      "( -531.53489593851534813113548 != 1459641371279228371120014403 ) = True";
   s21_decimal value_1 = {{0x367F2CCC, 0x71D40E72, 0x2BF7B0, 0x80170000}};
   s21_decimal value_2 = {{0xF75DC443, 0x4A1ED5D3, 0x4B76315, 0x0}};
   int code = 1;
@@ -14424,7 +14713,8 @@ START_TEST(s21_is_not_equal_1440) {
 }
 
 START_TEST(s21_is_not_equal_1441) {
-  char *example = "( 1456031096116239560782733966 != -49380.789901387011352597 ) = True";
+  char *example =
+      "( 1456031096116239560782733966 != -49380.789901387011352597 ) = True";
   s21_decimal value_1 = {{0x2C2D628E, 0xE17B0D1C, 0x4B46693, 0x0}};
   s21_decimal value_2 = {{0x71766815, 0xF01FC0AC, 0xA74, 0x80120000}};
   int code = 1;
@@ -14464,7 +14754,8 @@ START_TEST(s21_is_not_equal_1444) {
 }
 
 START_TEST(s21_is_not_equal_1445) {
-  char *example = "( -4.9399171716113823063066694 != 104170819071956013 ) = True";
+  char *example =
+      "( -4.9399171716113823063066694 != 104170819071956013 ) = True";
   s21_decimal value_1 = {{0xF697C846, 0x76F5409C, 0x28DCAE, 0x80190000}};
   s21_decimal value_2 = {{0xDABED42D, 0x17216CE, 0x0, 0x0}};
   int code = 1;
@@ -14534,7 +14825,8 @@ START_TEST(s21_is_not_equal_1451) {
 }
 
 START_TEST(s21_is_not_equal_1452) {
-  char *example = "( 3.2297515575939563E-10 != -9547551234.1677418081680027 ) = True";
+  char *example =
+      "( 3.2297515575939563E-10 != -9547551234.1677418081680027 ) = True";
   s21_decimal value_1 = {{0x570811EB, 0x72BE6B, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xC667FA9B, 0xE51EC36E, 0x4EF9B9, 0x80100000}};
   int code = 1;
@@ -14654,7 +14946,8 @@ START_TEST(s21_is_not_equal_1463) {
 }
 
 START_TEST(s21_is_not_equal_1464) {
-  char *example = "( 0.24250804777520119999743222 != -27.433703210884225534798315 ) = True";
+  char *example =
+      "( 0.24250804777520119999743222 != -27.433703210884225534798315 ) = True";
   s21_decimal value_1 = {{0x349DC4F6, 0xC2DF042A, 0x140F4E, 0x1A0000}};
   s21_decimal value_2 = {{0x2AF829EB, 0x7F1762C, 0x16B150, 0x80180000}};
   int code = 1;
@@ -14684,7 +14977,8 @@ START_TEST(s21_is_not_equal_1466) {
 }
 
 START_TEST(s21_is_not_equal_1467) {
-  char *example = "( 1819419538778724858412277901 != -6.6422453967801445597463144 ) = True";
+  char *example =
+      "( 1819419538778724858412277901 != -6.6422453967801445597463144 ) = True";
   s21_decimal value_1 = {{0x2676208D, 0xD4901302, 0x5E0FD12, 0x0}};
   s21_decimal value_2 = {{0x33A64268, 0x71D6E7A1, 0x36F180, 0x80190000}};
   int code = 1;
@@ -14924,7 +15218,8 @@ START_TEST(s21_is_not_equal_1490) {
 }
 
 START_TEST(s21_is_not_equal_1491) {
-  char *example = "( -44.564639096062066929911754 != 1429051964688306295963 ) = True";
+  char *example =
+      "( -44.564639096062066929911754 != 1429051964688306295963 ) = True";
   s21_decimal value_1 = {{0xD6DB47CA, 0xED1B6325, 0x24DCED, 0x80180000}};
   s21_decimal value_2 = {{0x3490549B, 0x78147671, 0x4D, 0x0}};
   int code = 1;
@@ -14954,7 +15249,8 @@ START_TEST(s21_is_not_equal_1493) {
 }
 
 START_TEST(s21_is_not_equal_1494) {
-  char *example = "( -35551167.547783589993050527 != -4439.50786705747514149 ) = True";
+  char *example =
+      "( -35551167.547783589993050527 != -4439.50786705747514149 ) = True";
   s21_decimal value_1 = {{0x36EEF19F, 0xA78C56D7, 0x1D6840, 0x80120000}};
   s21_decimal value_2 = {{0x574A9325, 0x110E085B, 0x18, 0x80110000}};
   int code = 1;
@@ -15114,7 +15410,8 @@ START_TEST(s21_is_not_equal_1509) {
 }
 
 START_TEST(s21_is_not_equal_1510) {
-  char *example = "( 154058692727309604 != 1946590069646804569875832228 ) = True";
+  char *example =
+      "( 154058692727309604 != 1946590069646804569875832228 ) = True";
   s21_decimal value_1 = {{0x96928524, 0x2235390, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5F405DA4, 0x1F5B6C21, 0x64A2E7B, 0x0}};
   int code = 1;
@@ -15134,7 +15431,8 @@ START_TEST(s21_is_not_equal_1511) {
 }
 
 START_TEST(s21_is_not_equal_1512) {
-  char *example = "( 16237790141248202220 != 1228888708247194687178609789 ) = True";
+  char *example =
+      "( 16237790141248202220 != 1228888708247194687178609789 ) = True";
   s21_decimal value_1 = {{0x1A7065EC, 0xE158381A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9735147D, 0x5C794959, 0x3F8834E, 0x0}};
   int code = 1;
@@ -15154,7 +15452,8 @@ START_TEST(s21_is_not_equal_1513) {
 }
 
 START_TEST(s21_is_not_equal_1514) {
-  char *example = "( 1573004269915281523974819103 != 1372898475940324839274883 ) = True";
+  char *example =
+      "( 1573004269915281523974819103 != 1372898475940324839274883 ) = True";
   s21_decimal value_1 = {{0xFD934D1F, 0x56AB9DAE, 0x515289C, 0x0}};
   s21_decimal value_2 = {{0x7A9C3983, 0xF9BB13DA, 0x122B8, 0x0}};
   int code = 1;
@@ -15214,7 +15513,8 @@ START_TEST(s21_is_not_equal_1519) {
 }
 
 START_TEST(s21_is_not_equal_1520) {
-  char *example = "( -2392.2545472551554666605276 != 1970033091326073688978414241 ) = True";
+  char *example =
+      "( -2392.2545472551554666605276 != 1970033091326073688978414241 ) = True";
   s21_decimal value_1 = {{0x411A2ADC, 0xC9E40F97, 0x13C9CB, 0x80160000}};
   s21_decimal value_2 = {{0x754DAA1, 0xDFCBC74A, 0x65D92BB, 0x0}};
   int code = 1;
@@ -15274,7 +15574,8 @@ START_TEST(s21_is_not_equal_1525) {
 }
 
 START_TEST(s21_is_not_equal_1526) {
-  char *example = "( -820450339.1606993805237 != 13626879181440548404788 ) = True";
+  char *example =
+      "( -820450339.1606993805237 != 13626879181440548404788 ) = True";
   s21_decimal value_1 = {{0x36775FB5, 0xC45B6D58, 0x1BC, 0x800D0000}};
   s21_decimal value_2 = {{0x51A8FE34, 0xB6F01138, 0x2E2, 0x0}};
   int code = 1;
@@ -15304,7 +15605,8 @@ START_TEST(s21_is_not_equal_1528) {
 }
 
 START_TEST(s21_is_not_equal_1529) {
-  char *example = "( 1454571271880690764633400636 != 1586825472816634526806568775 ) = True";
+  char *example =
+      "( 1454571271880690764633400636 != 1586825472816634526806568775 ) = True";
   s21_decimal value_1 = {{0xC6ACE53C, 0xA680C5C3, 0x4B33172, 0x0}};
   s21_decimal value_2 = {{0x59FEF47, 0x3FC8BADD, 0x520975D, 0x0}};
   int code = 1;
@@ -15334,7 +15636,8 @@ START_TEST(s21_is_not_equal_1531) {
 }
 
 START_TEST(s21_is_not_equal_1532) {
-  char *example = "( 1436623156319378759457972792 != 1999882368786105427632300517 ) = True";
+  char *example =
+      "( 1436623156319378759457972792 != 1999882368786105427632300517 ) = True";
   s21_decimal value_1 = {{0x69C2238, 0x5B316840, 0x4A458C9, 0x0}};
   s21_decimal value_2 = {{0x8407A1E5, 0x729A583E, 0x6764390, 0x0}};
   int code = 1;
@@ -15494,7 +15797,8 @@ START_TEST(s21_is_not_equal_1547) {
 }
 
 START_TEST(s21_is_not_equal_1548) {
-  char *example = "( 195447469939499880 != 127219753032199094605792060 ) = True";
+  char *example =
+      "( 195447469939499880 != 127219753032199094605792060 ) = True";
   s21_decimal value_1 = {{0x39FE2368, 0x2B65E70, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9B15433C, 0xA18B1D7F, 0x693BD4, 0x0}};
   int code = 1;
@@ -15514,7 +15818,8 @@ START_TEST(s21_is_not_equal_1549) {
 }
 
 START_TEST(s21_is_not_equal_1550) {
-  char *example = "( 1164088441518569881098565272 != 1141384201694575421295185441 ) = True";
+  char *example =
+      "( 1164088441518569881098565272 != 1141384201694575421295185441 ) = True";
   s21_decimal value_1 = {{0x205CB698, 0xDCEC9487, 0x3C2E950, 0x0}};
   s21_decimal value_2 = {{0x5A884E21, 0x8E4F1BA5, 0x3B02181, 0x0}};
   int code = 1;
@@ -15534,7 +15839,8 @@ START_TEST(s21_is_not_equal_1551) {
 }
 
 START_TEST(s21_is_not_equal_1552) {
-  char *example = "( 1759133807141407445736633974 != 1361404414080610120 ) = True";
+  char *example =
+      "( 1759133807141407445736633974 != 1361404414080610120 ) = True";
   s21_decimal value_1 = {{0x30163676, 0xC50FAE39, 0x5AF1F12, 0x0}};
   s21_decimal value_2 = {{0xEC6F48, 0x12E4AE1A, 0x0, 0x0}};
   int code = 1;
@@ -15554,7 +15860,8 @@ START_TEST(s21_is_not_equal_1553) {
 }
 
 START_TEST(s21_is_not_equal_1554) {
-  char *example = "( 3.2727885224296222E-10 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 3.2727885224296222E-10 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x950B3F1E, 0x7445D6, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -15584,7 +15891,8 @@ START_TEST(s21_is_not_equal_1556) {
 }
 
 START_TEST(s21_is_not_equal_1557) {
-  char *example = "( -22174399.79602223 != 1434791353221007608058786196 ) = True";
+  char *example =
+      "( -22174399.79602223 != 1434791353221007608058786196 ) = True";
   s21_decimal value_1 = {{0xFA4B812F, 0x7E0BF, 0x0, 0x80080000}};
   s21_decimal value_2 = {{0x2E44B194, 0x1C7CF474, 0x4A2D4E3, 0x0}};
   int code = 1;
@@ -15614,7 +15922,8 @@ START_TEST(s21_is_not_equal_1559) {
 }
 
 START_TEST(s21_is_not_equal_1560) {
-  char *example = "( 1839223634048496387666727757 != 1467090817665193751825705182 ) = True";
+  char *example =
+      "( 1839223634048496387666727757 != 1467090817665193751825705182 ) = True";
   s21_decimal value_1 = {{0x31CBD34D, 0xFC714286, 0x5F15EC0, 0x0}};
   s21_decimal value_2 = {{0x79C568DE, 0x9659BED4, 0x4BD8C90, 0x0}};
   int code = 1;
@@ -15624,7 +15933,8 @@ START_TEST(s21_is_not_equal_1560) {
 }
 
 START_TEST(s21_is_not_equal_1561) {
-  char *example = "( 12722761156140826 != 1305789324496805024342118829 ) = True";
+  char *example =
+      "( 12722761156140826 != 1305789324496805024342118829 ) = True";
   s21_decimal value_1 = {{0xAB461F1A, 0x2D3348, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4D3A91AD, 0x1F13771A, 0x4381FA5, 0x0}};
   int code = 1;
@@ -15644,7 +15954,8 @@ START_TEST(s21_is_not_equal_1562) {
 }
 
 START_TEST(s21_is_not_equal_1563) {
-  char *example = "( 1643884876230279134 != -9560.2976292317452255219765 ) = True";
+  char *example =
+      "( 1643884876230279134 != -9560.2976292317452255219765 ) = True";
   s21_decimal value_1 = {{0xD357BFDE, 0x16D04095, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFD1D035, 0xBAC7C196, 0x4F14B7, 0x80160000}};
   int code = 1;
@@ -15884,7 +16195,8 @@ START_TEST(s21_is_not_equal_1586) {
 }
 
 START_TEST(s21_is_not_equal_1587) {
-  char *example = "( 1331252477510965037648353 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1331252477510965037648353 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x97BC49E1, 0x5766CA4E, 0x119E7, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -15934,7 +16246,8 @@ START_TEST(s21_is_not_equal_1591) {
 }
 
 START_TEST(s21_is_not_equal_1592) {
-  char *example = "( 5.8461042586104E-10 != 1110218067941492435021706955 ) = True";
+  char *example =
+      "( 5.8461042586104E-10 != 1110218067941492435021706955 ) = True";
   s21_decimal value_1 = {{0x85AD31F8, 0x352B, 0x0, 0x170000}};
   s21_decimal value_2 = {{0x1D9BB6CB, 0xF4B343E, 0x39659D2, 0x0}};
   int code = 1;
@@ -15954,7 +16267,8 @@ START_TEST(s21_is_not_equal_1593) {
 }
 
 START_TEST(s21_is_not_equal_1594) {
-  char *example = "( -3.6742275295175796400109827 != -7813.3708848514939 ) = True";
+  char *example =
+      "( -3.6742275295175796400109827 != -7813.3708848514939 ) = True";
   s21_decimal value_1 = {{0x62E4B903, 0xBC1F6CBD, 0x1E647A, 0x80190000}};
   s21_decimal value_2 = {{0xB8E6477B, 0x1159631, 0x0, 0x800D0000}};
   int code = 1;
@@ -15984,7 +16298,8 @@ START_TEST(s21_is_not_equal_1596) {
 }
 
 START_TEST(s21_is_not_equal_1597) {
-  char *example = "( -8.6760192403526448743732652 != -30.733234140371094070515753 ) = True";
+  char *example =
+      "( -8.6760192403526448743732652 != -30.733234140371094070515753 ) = True";
   s21_decimal value_1 = {{0x56D855AC, 0x74575F29, 0x47C42F, 0x80190000}};
   s21_decimal value_2 = {{0x7E565829, 0xF60C4662, 0x196C03, 0x80180000}};
   int code = 1;
@@ -16064,7 +16379,8 @@ START_TEST(s21_is_not_equal_1604) {
 }
 
 START_TEST(s21_is_not_equal_1605) {
-  char *example = "( 1205367038141826631864 != 1808823732732150812246957854 ) = True";
+  char *example =
+      "( 1205367038141826631864 != 1808823732732150812246957854 ) = True";
   s21_decimal value_1 = {{0xB84C88B8, 0x57D3F6E1, 0x41, 0x0}};
   s21_decimal value_2 = {{0x444E5F1E, 0x8987E5B, 0x5D83953, 0x0}};
   int code = 1;
@@ -16074,7 +16390,8 @@ START_TEST(s21_is_not_equal_1605) {
 }
 
 START_TEST(s21_is_not_equal_1606) {
-  char *example = "( 1394846546567300192651413745 != 11094599877497523094508571 ) = True";
+  char *example =
+      "( 1394846546567300192651413745 != 11094599877497523094508571 ) = True";
   s21_decimal value_1 = {{0x6A0788F1, 0xCDB9498C, 0x481CA3E, 0x0}};
   s21_decimal value_2 = {{0x7011541B, 0x76E99A93, 0x92D5F, 0x0}};
   int code = 1;
@@ -16094,7 +16411,8 @@ START_TEST(s21_is_not_equal_1607) {
 }
 
 START_TEST(s21_is_not_equal_1608) {
-  char *example = "( 165804283929768561247 != 149598022111562739502459 ) = True";
+  char *example =
+      "( 165804283929768561247 != 149598022111562739502459 ) = True";
   s21_decimal value_1 = {{0xEFDD0A5F, 0xFCFF25C3, 0x8, 0x0}};
   s21_decimal value_2 = {{0xF93C4D7B, 0xB99B7A2C, 0x1FAD, 0x0}};
   int code = 1;
@@ -16164,7 +16482,8 @@ START_TEST(s21_is_not_equal_1614) {
 }
 
 START_TEST(s21_is_not_equal_1615) {
-  char *example = "( 1407749295840398505301456061 != 142850342706061505913587 ) = True";
+  char *example =
+      "( 1407749295840398505301456061 != 142850342706061505913587 ) = True";
   s21_decimal value_1 = {{0x79F34BD, 0x3E45F4F7, 0x48C7682, 0x0}};
   s21_decimal value_2 = {{0x2936E2F3, 0xEEBE8D9C, 0x1E3F, 0x0}};
   int code = 1;
@@ -16184,7 +16503,8 @@ START_TEST(s21_is_not_equal_1616) {
 }
 
 START_TEST(s21_is_not_equal_1617) {
-  char *example = "( -7.90947630631365434253 != 1342488397509405221164767717 ) = True";
+  char *example =
+      "( -7.90947630631365434253 != 1342488397509405221164767717 ) = True";
   s21_decimal value_1 = {{0x6768DB8D, 0xE09A7770, 0x2A, 0x80140000}};
   s21_decimal value_2 = {{0x7B5559E5, 0xDB16A0D6, 0x4567AF9, 0x0}};
   int code = 1;
@@ -16254,7 +16574,9 @@ START_TEST(s21_is_not_equal_1623) {
 }
 
 START_TEST(s21_is_not_equal_1624) {
-  char *example = "( -79228162514264337593543950335 != 1967742493285669367239211970 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1967742493285669367239211970 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x53D4FBC2, 0x4E3D001B, 0x65BADAE, 0x0}};
   int code = 1;
@@ -16284,7 +16606,8 @@ START_TEST(s21_is_not_equal_1626) {
 }
 
 START_TEST(s21_is_not_equal_1627) {
-  char *example = "( 1857846469441399235520532162 != 167510338810285684970375 ) = True";
+  char *example =
+      "( 1857846469441399235520532162 != 167510338810285684970375 ) = True";
   s21_decimal value_1 = {{0x5D488EC2, 0xEA67AD08, 0x600C64A, 0x0}};
   s21_decimal value_2 = {{0x98185387, 0xC0F00824, 0x2378, 0x0}};
   int code = 1;
@@ -16424,7 +16747,8 @@ START_TEST(s21_is_not_equal_1640) {
 }
 
 START_TEST(s21_is_not_equal_1641) {
-  char *example = "( -2.4416152960496778303841227 != 0.6440969603232969310 ) = True";
+  char *example =
+      "( -2.4416152960496778303841227 != 0.6440969603232969310 ) = True";
   s21_decimal value_1 = {{0x5E1523CB, 0x4DDE7137, 0x143252, 0x80190000}};
   s21_decimal value_2 = {{0xD8FA9EA3, 0x8F04AC5, 0x0, 0x120000}};
   int code = 1;
@@ -16624,7 +16948,8 @@ START_TEST(s21_is_not_equal_1660) {
 }
 
 START_TEST(s21_is_not_equal_1661) {
-  char *example = "( 1982552020382641795813751362 != 3773.21149575063402585912442 ) = True";
+  char *example =
+      "( 1982552020382641795813751362 != 3773.21149575063402585912442 ) = True";
   s21_decimal value_1 = {{0x36823A42, 0x60D2FB25, 0x667EDB8, 0x0}};
   s21_decimal value_2 = {{0xD749F47A, 0x81340EBC, 0x1381CDC, 0x170000}};
   int code = 1;
@@ -16664,7 +16989,8 @@ START_TEST(s21_is_not_equal_1664) {
 }
 
 START_TEST(s21_is_not_equal_1665) {
-  char *example = "( -371.17251881416765 != 1468570068630695248060084360 ) = True";
+  char *example =
+      "( -371.17251881416765 != 1468570068630695248060084360 ) = True";
   s21_decimal value_1 = {{0xA56E383D, 0x83DDF1, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xF0F5F088, 0xF15D42ED, 0x4BEC5CE, 0x0}};
   int code = 1;
@@ -16674,7 +17000,8 @@ START_TEST(s21_is_not_equal_1665) {
 }
 
 START_TEST(s21_is_not_equal_1666) {
-  char *example = "( 16207628543327321 != -7.8209236109916188264817924 ) = True";
+  char *example =
+      "( 16207628543327321 != -7.8209236109916188264817924 ) = True";
   s21_decimal value_1 = {{0x95F9FC59, 0x3994C0, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFB66E504, 0x2F583CC0, 0x40B173, 0x80190000}};
   int code = 1;
@@ -16734,7 +17061,8 @@ START_TEST(s21_is_not_equal_1671) {
 }
 
 START_TEST(s21_is_not_equal_1672) {
-  char *example = "( 798.395904575513400274479475 != 1606692577346038299508650101 ) = True";
+  char *example =
+      "( 798.395904575513400274479475 != 1606692577346038299508650101 ) = True";
   s21_decimal value_1 = {{0xE2D66973, 0xB653B9D4, 0x2946AE8, 0x180000}};
   s21_decimal value_2 = {{0x17C8B075, 0x24CC808A, 0x5310663, 0x0}};
   int code = 1;
@@ -16744,7 +17072,8 @@ START_TEST(s21_is_not_equal_1672) {
 }
 
 START_TEST(s21_is_not_equal_1673) {
-  char *example = "( 145872650176235124289 != 1598872805979433372397586539 ) = True";
+  char *example =
+      "( 145872650176235124289 != 1598872805979433372397586539 ) = True";
   s21_decimal value_1 = {{0x7513641, 0xE863C278, 0x7, 0x0}};
   s21_decimal value_2 = {{0x2F5FC86B, 0x7D1145B5, 0x52A8E7C, 0x0}};
   int code = 1;
@@ -16884,7 +17213,8 @@ START_TEST(s21_is_not_equal_1686) {
 }
 
 START_TEST(s21_is_not_equal_1687) {
-  char *example = "( -1.8849158500486504530960719 != 1283270639133735449085688148 ) = True";
+  char *example =
+      "( -1.8849158500486504530960719 != 1283270639133735449085688148 ) = True";
   s21_decimal value_1 = {{0xEFC9E14F, 0xEE068EA0, 0xF9776, 0x80190000}};
   s21_decimal value_2 = {{0x32FD3954, 0xBDE57BBC, 0x4257F20, 0x0}};
   int code = 1;
@@ -16904,7 +17234,8 @@ START_TEST(s21_is_not_equal_1688) {
 }
 
 START_TEST(s21_is_not_equal_1689) {
-  char *example = "( 1107674940441587818446098026 != 125863774941119614555307 ) = True";
+  char *example =
+      "( 1107674940441587818446098026 != 125863774941119614555307 ) = True";
   s21_decimal value_1 = {{0xF70E8E6A, 0xD77B5BF5, 0x3943F4A, 0x0}};
   s21_decimal value_2 = {{0xAAB414AB, 0x16C2E616, 0x1AA7, 0x0}};
   int code = 1;
@@ -16974,7 +17305,8 @@ START_TEST(s21_is_not_equal_1695) {
 }
 
 START_TEST(s21_is_not_equal_1696) {
-  char *example = "( 1256160813070407986841693093 != 11627360006468609465291 ) = True";
+  char *example =
+      "( 1256160813070407986841693093 != 11627360006468609465291 ) = True";
   s21_decimal value_1 = {{0x89A0ABA5, 0x204865C4, 0x40F1266, 0x0}};
   s21_decimal value_2 = {{0x591B5BCB, 0x5208F17D, 0x276, 0x0}};
   int code = 1;
@@ -17114,7 +17446,8 @@ START_TEST(s21_is_not_equal_1709) {
 }
 
 START_TEST(s21_is_not_equal_1710) {
-  char *example = "( 1723531169577208018403902227 != -63.54818921984856 ) = True";
+  char *example =
+      "( 1723531169577208018403902227 != -63.54818921984856 ) = True";
   s21_decimal value_1 = {{0x545CC313, 0xEB8BF903, 0x591ABEB, 0x0}};
   s21_decimal value_2 = {{0x9474F358, 0x1693AC, 0x0, 0x800E0000}};
   int code = 1;
@@ -17234,7 +17567,8 @@ START_TEST(s21_is_not_equal_1721) {
 }
 
 START_TEST(s21_is_not_equal_1722) {
-  char *example = "( 120474211687286444023454734 != 1169552655379486100903278245 ) = True";
+  char *example =
+      "( 120474211687286444023454734 != 1169552655379486100903278245 ) = True";
   s21_decimal value_1 = {{0xC6A19C0E, 0x1A1C2135, 0x63A768, 0x0}};
   s21_decimal value_2 = {{0xA465B6A5, 0x7D6C2606, 0x3C76E68, 0x0}};
   int code = 1;
@@ -17264,7 +17598,8 @@ START_TEST(s21_is_not_equal_1724) {
 }
 
 START_TEST(s21_is_not_equal_1725) {
-  char *example = "( 1534821206523109002294023112 != -971460.48388806766907 ) = True";
+  char *example =
+      "( 1534821206523109002294023112 != -971460.48388806766907 ) = True";
   s21_decimal value_1 = {{0x1C2353C8, 0x530FBCEC, 0x4F59308, 0x0}};
   s21_decimal value_2 = {{0xCBBC713B, 0x442C184E, 0x5, 0x800E0000}};
   int code = 1;
@@ -17334,7 +17669,8 @@ START_TEST(s21_is_not_equal_1731) {
 }
 
 START_TEST(s21_is_not_equal_1732) {
-  char *example = "( 107767230094268181362460889 != 1920902364353124243414 ) = True";
+  char *example =
+      "( 107767230094268181362460889 != 1920902364353124243414 ) = True";
   s21_decimal value_1 = {{0x7F348D9, 0x3FE258FA, 0x592499, 0x0}};
   s21_decimal value_2 = {{0x93F217D6, 0x21E01B00, 0x68, 0x0}};
   int code = 1;
@@ -17364,7 +17700,8 @@ START_TEST(s21_is_not_equal_1734) {
 }
 
 START_TEST(s21_is_not_equal_1735) {
-  char *example = "( -141321.37579040636 != 1441118936166577645939177029 ) = True";
+  char *example =
+      "( -141321.37579040636 != 1441118936166577645939177029 ) = True";
   s21_decimal value_1 = {{0xB050CF7C, 0x32351A, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x6A19B645, 0x11F16D24, 0x4A810CE, 0x0}};
   int code = 1;
@@ -17394,7 +17731,8 @@ START_TEST(s21_is_not_equal_1737) {
 }
 
 START_TEST(s21_is_not_equal_1738) {
-  char *example = "( 11485292767349758137424 != 11305143615524366173094856 ) = True";
+  char *example =
+      "( 11485292767349758137424 != 11305143615524366173094856 ) = True";
   s21_decimal value_1 = {{0x2D7E9450, 0x9E74B837, 0x26E, 0x0}};
   s21_decimal value_2 = {{0x4D443C8, 0x103BAD75, 0x959F5, 0x0}};
   int code = 1;
@@ -17434,7 +17772,8 @@ START_TEST(s21_is_not_equal_1741) {
 }
 
 START_TEST(s21_is_not_equal_1742) {
-  char *example = "( 55864952537.7143222505108769 != 1897225257001995093893972419 ) = True";
+  char *example =
+      "( 55864952537.7143222505108769 != 1897225257001995093893972419 ) = True";
   s21_decimal value_1 = {{0xD890F521, 0x741EC8C7, 0x1CE1AA3, 0x100000}};
   s21_decimal value_2 = {{0xBDDC01C3, 0x444CC8A8, 0x6215913, 0x0}};
   int code = 1;
@@ -17454,7 +17793,8 @@ START_TEST(s21_is_not_equal_1743) {
 }
 
 START_TEST(s21_is_not_equal_1744) {
-  char *example = "( 1000645087652903170174129048 != -7.3356685993808127263735099 ) = True";
+  char *example =
+      "( 1000645087652903170174129048 != -7.3356685993808127263735099 ) = True";
   s21_decimal value_1 = {{0xF109398, 0xE560FECE, 0x33BB6D6, 0x0}};
   s21_decimal value_2 = {{0x56877D3B, 0xEA81ACDD, 0x3CADE1, 0x80190000}};
   int code = 1;
@@ -17464,7 +17804,8 @@ START_TEST(s21_is_not_equal_1744) {
 }
 
 START_TEST(s21_is_not_equal_1745) {
-  char *example = "( 1948375912469559973781109250 != 1583524786795048825058736540 ) = True";
+  char *example =
+      "( 1948375912469559973781109250 != 1583524786795048825058736540 ) = True";
   s21_decimal value_1 = {{0x7A96FA02, 0xDB1C0361, 0x64BA8A5, 0x0}};
   s21_decimal value_2 = {{0xDC3FB99C, 0xB38E6AB3, 0x51DDC6A, 0x0}};
   int code = 1;
@@ -17514,7 +17855,8 @@ START_TEST(s21_is_not_equal_1749) {
 }
 
 START_TEST(s21_is_not_equal_1750) {
-  char *example = "( 1429438952651813636244955566 != 1210960529003054733355099728 ) = True";
+  char *example =
+      "( 1429438952651813636244955566 != 1210960529003054733355099728 ) = True";
   s21_decimal value_1 = {{0x8EC2E1AE, 0xE5205C21, 0x49E6778, 0x0}};
   s21_decimal value_2 = {{0x4027A650, 0xD124A4AE, 0x3E9AEDD, 0x0}};
   int code = 1;
@@ -17574,7 +17916,8 @@ START_TEST(s21_is_not_equal_1755) {
 }
 
 START_TEST(s21_is_not_equal_1756) {
-  char *example = "( 1187221998356521779014328842 != 10794684515171240 ) = True";
+  char *example =
+      "( 1187221998356521779014328842 != 10794684515171240 ) = True";
   s21_decimal value_1 = {{0x8BCEE20A, 0x7DF614AC, 0x3D60C09, 0x0}};
   s21_decimal value_2 = {{0x57FD3BA8, 0x2659B5, 0x0, 0x0}};
   int code = 1;
@@ -17594,7 +17937,8 @@ START_TEST(s21_is_not_equal_1757) {
 }
 
 START_TEST(s21_is_not_equal_1758) {
-  char *example = "( -33.87366785950840049849507 != 9.2278669070838260E-10 ) = True";
+  char *example =
+      "( -33.87366785950840049849507 != 9.2278669070838260E-10 ) = True";
   s21_decimal value_1 = {{0xB7EF54A3, 0x857B8FE1, 0x2CD4D, 0x80170000}};
   s21_decimal value_2 = {{0x31080432, 0x20C8B2, 0x0, 0x190000}};
   int code = 1;
@@ -17604,7 +17948,8 @@ START_TEST(s21_is_not_equal_1758) {
 }
 
 START_TEST(s21_is_not_equal_1759) {
-  char *example = "( 1474091173824637369413523713 != 19167086774721668 ) = True";
+  char *example =
+      "( 1474091173824637369413523713 != 19167086774721668 ) = True";
   s21_decimal value_1 = {{0xC3DBD901, 0xA7B5E048, 0x4C356F2, 0x0}};
   s21_decimal value_2 = {{0x26961C84, 0x44185D, 0x0, 0x0}};
   int code = 1;
@@ -17684,7 +18029,8 @@ START_TEST(s21_is_not_equal_1766) {
 }
 
 START_TEST(s21_is_not_equal_1767) {
-  char *example = "( 0.36227492608676732663314 != -5729.8665433240360071163957 ) = True";
+  char *example =
+      "( 0.36227492608676732663314 != -5729.8665433240360071163957 ) = True";
   s21_decimal value_1 = {{0x218F612, 0xE5748A1C, 0x7AB, 0x170000}};
   s21_decimal value_2 = {{0xB66B7035, 0xE08DAFBB, 0x2F6576, 0x80160000}};
   int code = 1;
@@ -17704,7 +18050,8 @@ START_TEST(s21_is_not_equal_1768) {
 }
 
 START_TEST(s21_is_not_equal_1769) {
-  char *example = "( -5.2849980035357706275244687 != 156219586138707900412381110 ) = True";
+  char *example =
+      "( -5.2849980035357706275244687 != 156219586138707900412381110 ) = True";
   s21_decimal value_1 = {{0x520BCA8F, 0x2893F2DE, 0x2BB76B, 0x80190000}};
   s21_decimal value_2 = {{0x7566C7B6, 0xBBDB8A6A, 0x8138C8, 0x0}};
   int code = 1;
@@ -17714,7 +18061,8 @@ START_TEST(s21_is_not_equal_1769) {
 }
 
 START_TEST(s21_is_not_equal_1770) {
-  char *example = "( 1218585523109263025794538433 != -26901904.578080597086299684 ) = True";
+  char *example =
+      "( 1218585523109263025794538433 != -26901904.578080597086299684 ) = True";
   s21_decimal value_1 = {{0x567D5BC1, 0x93628AED, 0x3EFFD85, 0x0}};
   s21_decimal value_2 = {{0x7D1FE624, 0x2B5C552F, 0x1640B3, 0x80120000}};
   int code = 1;
@@ -17734,7 +18082,8 @@ START_TEST(s21_is_not_equal_1771) {
 }
 
 START_TEST(s21_is_not_equal_1772) {
-  char *example = "( 10280814730783248452202208 != 1902912547151455227062449836 ) = True";
+  char *example =
+      "( 10280814730783248452202208 != 1902912547151455227062449836 ) = True";
   s21_decimal value_1 = {{0x24C4AEE0, 0x15534470, 0x8810C, 0x0}};
   s21_decimal value_2 = {{0xF31AF6AC, 0xE2321403, 0x6260D67, 0x0}};
   int code = 1;
@@ -17824,7 +18173,8 @@ START_TEST(s21_is_not_equal_1780) {
 }
 
 START_TEST(s21_is_not_equal_1781) {
-  char *example = "( 1503563622978493451483911405 != 0.9169230820058149018648 ) = True";
+  char *example =
+      "( 1503563622978493451483911405 != 0.9169230820058149018648 ) = True";
   s21_decimal value_1 = {{0xAC9694ED, 0x533E8869, 0x4DBB7FB, 0x0}};
   s21_decimal value_2 = {{0x9A5DC18, 0x10A3C22D, 0x1F1, 0x160000}};
   int code = 1;
@@ -17914,7 +18264,8 @@ START_TEST(s21_is_not_equal_1789) {
 }
 
 START_TEST(s21_is_not_equal_1790) {
-  char *example = "( -27068.773551972503332414884 != 1222672868584855137 ) = True";
+  char *example =
+      "( -27068.773551972503332414884 != 1222672868584855137 ) = True";
   s21_decimal value_1 = {{0xC95D65A4, 0x27927228, 0x166409, 0x80150000}};
   s21_decimal value_2 = {{0xF8821661, 0x10F7CE7E, 0x0, 0x0}};
   int code = 1;
@@ -17934,7 +18285,8 @@ START_TEST(s21_is_not_equal_1791) {
 }
 
 START_TEST(s21_is_not_equal_1792) {
-  char *example = "( 1011633650262956057575342186 != 19400561376907842 ) = True";
+  char *example =
+      "( 1011633650262956057575342186 != 19400561376907842 ) = True";
   s21_decimal value_1 = {{0x73D8C06A, 0x11981601, 0x344CDC2, 0x0}};
   s21_decimal value_2 = {{0x31505242, 0x44ECB5, 0x0, 0x0}};
   int code = 1;
@@ -17944,7 +18296,8 @@ START_TEST(s21_is_not_equal_1792) {
 }
 
 START_TEST(s21_is_not_equal_1793) {
-  char *example = "( 2.810913552136814E-11 != 1310583205672064160098792251 ) = True";
+  char *example =
+      "( 2.810913552136814E-11 != 1310583205672064160098792251 ) = True";
   s21_decimal value_1 = {{0xCFC4FA6E, 0x9FC82, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xE069B33B, 0xF0CD5A43, 0x43C16C9, 0x0}};
   int code = 1;
@@ -17994,7 +18347,8 @@ START_TEST(s21_is_not_equal_1797) {
 }
 
 START_TEST(s21_is_not_equal_1798) {
-  char *example = "( 1030339080080087207635197356 != 1418959252334414103 ) = True";
+  char *example =
+      "( 1030339080080087207635197356 != 1418959252334414103 ) = True";
   s21_decimal value_1 = {{0xFD461DAC, 0x73734023, 0x35446C9, 0x0}};
   s21_decimal value_2 = {{0xA258917, 0x13B127EC, 0x0, 0x0}};
   int code = 1;
@@ -18104,7 +18458,8 @@ START_TEST(s21_is_not_equal_1808) {
 }
 
 START_TEST(s21_is_not_equal_1809) {
-  char *example = "( 1937576337097526941448223669 != -8.347867168006252852 ) = True";
+  char *example =
+      "( 1937576337097526941448223669 != -8.347867168006252852 ) = True";
   s21_decimal value_1 = {{0xB13BB5, 0xB3AE8DF0, 0x642B9BF, 0x0}};
   s21_decimal value_2 = {{0xDD28A934, 0x73D994F5, 0x0, 0x80120000}};
   int code = 1;
@@ -18134,7 +18489,8 @@ START_TEST(s21_is_not_equal_1811) {
 }
 
 START_TEST(s21_is_not_equal_1812) {
-  char *example = "( -98.463389419066927245512250 != 1654284238708901480506696599 ) = True";
+  char *example =
+      "( -98.463389419066927245512250 != 1654284238708901480506696599 ) = True";
   s21_decimal value_1 = {{0xE730EE39, 0x1A850498, 0x8250B, 0x80170000}};
   s21_decimal value_2 = {{0xCCD1A397, 0x469D2FFA, 0x5586450, 0x0}};
   int code = 1;
@@ -18144,7 +18500,8 @@ START_TEST(s21_is_not_equal_1812) {
 }
 
 START_TEST(s21_is_not_equal_1813) {
-  char *example = "( 1313274369982342652551783745 != -73151.884846617003 ) = True";
+  char *example =
+      "( 1313274369982342652551783745 != -73151.884846617003 ) = True";
   s21_decimal value_1 = {{0x64746541, 0x400E60F3, 0x43E50AA, 0x0}};
   s21_decimal value_2 = {{0x6EEED1AB, 0x103E340, 0x0, 0x800C0000}};
   int code = 1;
@@ -18284,7 +18641,8 @@ START_TEST(s21_is_not_equal_1826) {
 }
 
 START_TEST(s21_is_not_equal_1827) {
-  char *example = "( 1109308076596259228171514546 != 1911906123887221256 ) = True";
+  char *example =
+      "( 1109308076596259228171514546 != 1911906123887221256 ) = True";
   s21_decimal value_1 = {{0xE06632B2, 0x547F676B, 0x395991F, 0x0}};
   s21_decimal value_2 = {{0x6E311A08, 0x1A88747D, 0x0, 0x0}};
   int code = 1;
@@ -18304,7 +18662,8 @@ START_TEST(s21_is_not_equal_1828) {
 }
 
 START_TEST(s21_is_not_equal_1829) {
-  char *example = "( -8.4252472482746646263489022 != 1504668350622134931507149013 ) = True";
+  char *example =
+      "( -8.4252472482746646263489022 != 1504668350622134931507149013 ) = True";
   s21_decimal value_1 = {{0xF8EBE1FE, 0xAF663780, 0x45B127, 0x80190000}};
   s21_decimal value_2 = {{0x2F1078D5, 0xBB11726E, 0x4DCA1EA, 0x0}};
   int code = 1;
@@ -18334,7 +18693,8 @@ START_TEST(s21_is_not_equal_1831) {
 }
 
 START_TEST(s21_is_not_equal_1832) {
-  char *example = "( 0.74845648380583857079082683 != -5309.4272043957721794592137 ) = True";
+  char *example =
+      "( 0.74845648380583857079082683 != -5309.4272043957721794592137 ) = True";
   s21_decimal value_1 = {{0x7DB25EBB, 0xBA906490, 0x3DE92E, 0x1A0000}};
   s21_decimal value_2 = {{0x96B3BD89, 0x413C860C, 0x2BEB26, 0x80160000}};
   int code = 1;
@@ -18344,7 +18704,8 @@ START_TEST(s21_is_not_equal_1832) {
 }
 
 START_TEST(s21_is_not_equal_1833) {
-  char *example = "( 19171298034668879746257 != -375.548937931349118043283 ) = True";
+  char *example =
+      "( 19171298034668879746257 != -375.548937931349118043283 ) = True";
   s21_decimal value_1 = {{0x1F0014D1, 0x4734C4A4, 0x40F, 0x0}};
   s21_decimal value_2 = {{0x26524493, 0x8C78D903, 0x4F86, 0x80150000}};
   int code = 1;
@@ -18374,7 +18735,8 @@ START_TEST(s21_is_not_equal_1835) {
 }
 
 START_TEST(s21_is_not_equal_1836) {
-  char *example = "( 1964025041596335580998824687 != 1936208547910120328 ) = True";
+  char *example =
+      "( 1964025041596335580998824687 != 1936208547910120328 ) = True";
   s21_decimal value_1 = {{0xE10072EF, 0xD8820634, 0x6589A7A, 0x0}};
   s21_decimal value_2 = {{0x7541F388, 0x1ADECB6A, 0x0, 0x0}};
   int code = 1;
@@ -18504,7 +18866,8 @@ START_TEST(s21_is_not_equal_1848) {
 }
 
 START_TEST(s21_is_not_equal_1849) {
-  char *example = "( 1702398539245032919436250173 != 1936034676202578303973075427 ) = True";
+  char *example =
+      "( 1702398539245032919436250173 != 1936034676202578303973075427 ) = True";
   s21_decimal value_1 = {{0x4B924C3D, 0xBBF9D1E2, 0x58030E9, 0x0}};
   s21_decimal value_2 = {{0xCD429E3, 0x18E8FFA4, 0x641734A, 0x0}};
   int code = 1;
@@ -18654,7 +19017,8 @@ START_TEST(s21_is_not_equal_1863) {
 }
 
 START_TEST(s21_is_not_equal_1864) {
-  char *example = "( -7.653182511524422 != -5.6201813359215192747421490 ) = True";
+  char *example =
+      "( -7.653182511524422 != -5.6201813359215192747421490 ) = True";
   s21_decimal value_1 = {{0x69002A46, 0x1B3087, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x36FBD185, 0xA40577B8, 0x4A61E, 0x80180000}};
   int code = 1;
@@ -18664,7 +19028,8 @@ START_TEST(s21_is_not_equal_1864) {
 }
 
 START_TEST(s21_is_not_equal_1865) {
-  char *example = "( 0.941143437916121960466127 != 18891238017006565379343403 ) = True";
+  char *example =
+      "( 0.941143437916121960466127 != 18891238017006565379343403 ) = True";
   s21_decimal value_1 = {{0x5DDAC6CF, 0x7CED9912, 0xC74B, 0x180000}};
   s21_decimal value_2 = {{0x5821042B, 0x10A07ECA, 0xFA060, 0x0}};
   int code = 1;
@@ -18784,7 +19149,8 @@ START_TEST(s21_is_not_equal_1876) {
 }
 
 START_TEST(s21_is_not_equal_1877) {
-  char *example = "( 1735009691792166797013790740 != 1630723111886853982 ) = True";
+  char *example =
+      "( 1735009691792166797013790740 != 1630723111886853982 ) = True";
   s21_decimal value_1 = {{0x869B014, 0xDB3178E1, 0x59B2A97, 0x0}};
   s21_decimal value_2 = {{0xC309175E, 0x16A17E07, 0x0, 0x0}};
   int code = 1;
@@ -18794,7 +19160,8 @@ START_TEST(s21_is_not_equal_1877) {
 }
 
 START_TEST(s21_is_not_equal_1878) {
-  char *example = "( -32.417954119934020789122009 != -94276.78620761310719665 ) = True";
+  char *example =
+      "( -32.417954119934020789122009 != -94276.78620761310719665 ) = True";
   s21_decimal value_1 = {{0xCEE6B3D9, 0xD0709DDC, 0x1AD0C4, 0x80180000}};
   s21_decimal value_2 = {{0xAE8D6EB1, 0x1352CB99, 0x1FF, 0x80110000}};
   int code = 1;
@@ -18814,7 +19181,8 @@ START_TEST(s21_is_not_equal_1879) {
 }
 
 START_TEST(s21_is_not_equal_1880) {
-  char *example = "( 186020046039577047611 != 0.86981883426471593971889502 ) = True";
+  char *example =
+      "( 186020046039577047611 != 0.86981883426471593971889502 ) = True";
   s21_decimal value_1 = {{0xEACCB23B, 0x158BF64B, 0xA, 0x0}};
   s21_decimal value_2 = {{0x4889355E, 0x59510E64, 0x47F321, 0x1A0000}};
   int code = 1;
@@ -18844,7 +19212,8 @@ START_TEST(s21_is_not_equal_1882) {
 }
 
 START_TEST(s21_is_not_equal_1883) {
-  char *example = "( -79228162514264337593543950335 != -34.8586933590197814 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != -34.8586933590197814 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x1DFC8636, 0x4D66DF8, 0x0, 0x80100000}};
   int code = 1;
@@ -18904,7 +19273,8 @@ START_TEST(s21_is_not_equal_1888) {
 }
 
 START_TEST(s21_is_not_equal_1889) {
-  char *example = "( 1142041586120435652987059661 != 0.78218911984626844452725030 ) = True";
+  char *example =
+      "( 1142041586120435652987059661 != 0.78218911984626844452725030 ) = True";
   s21_decimal value_1 = {{0xA31DFDCD, 0x6FE11790, 0x3B0ACB6, 0x0}};
   s21_decimal value_2 = {{0x86B3E9B7, 0x924EDE1C, 0x67859, 0x190000}};
   int code = 1;
@@ -18924,7 +19294,8 @@ START_TEST(s21_is_not_equal_1890) {
 }
 
 START_TEST(s21_is_not_equal_1891) {
-  char *example = "( -5.5846269425962810585843751 != 10760261913096544 ) = True";
+  char *example =
+      "( -5.5846269425962810585843751 != 10760261913096544 ) = True";
   s21_decimal value_1 = {{0x8C530827, 0x54F398A5, 0x2E31E8, 0x80190000}};
   s21_decimal value_2 = {{0xB5053160, 0x263A66, 0x0, 0x0}};
   int code = 1;
@@ -18964,7 +19335,8 @@ START_TEST(s21_is_not_equal_1894) {
 }
 
 START_TEST(s21_is_not_equal_1895) {
-  char *example = "( 0.85341276783000631934377698 != 1810745409895263548941415790 ) = True";
+  char *example =
+      "( 0.85341276783000631934377698 != 1810745409895263548941415790 ) = True";
   s21_decimal value_1 = {{0x954ADEE2, 0xE2714415, 0x4697B7, 0x1A0000}};
   s21_decimal value_2 = {{0xF766356E, 0x5C801F6B, 0x5D9D041, 0x0}};
   int code = 1;
@@ -18994,7 +19366,8 @@ START_TEST(s21_is_not_equal_1897) {
 }
 
 START_TEST(s21_is_not_equal_1898) {
-  char *example = "( 1621067812599179192161677168 != 1284498584684448188407955394 ) = True";
+  char *example =
+      "( 1621067812599179192161677168 != 1284498584684448188407955394 ) = True";
   s21_decimal value_1 = {{0xA3AA2F70, 0x35544F99, 0x53CEA76, 0x0}};
   s21_decimal value_2 = {{0xB4973FC2, 0xCDB0529C, 0x4268327, 0x0}};
   int code = 1;
@@ -19044,7 +19417,8 @@ START_TEST(s21_is_not_equal_1902) {
 }
 
 START_TEST(s21_is_not_equal_1903) {
-  char *example = "( -75190.855784856343469621565 != 16572092960648390272621 ) = True";
+  char *example =
+      "( -75190.855784856343469621565 != 16572092960648390272621 ) = True";
   s21_decimal value_1 = {{0x14F4013D, 0x75AB932D, 0x3E3248, 0x80150000}};
   s21_decimal value_2 = {{0x86D4666D, 0x5FFD58FF, 0x382, 0x0}};
   int code = 1;
@@ -19054,7 +19428,8 @@ START_TEST(s21_is_not_equal_1903) {
 }
 
 START_TEST(s21_is_not_equal_1904) {
-  char *example = "( 1746606091588748924719207127 != 1859135021472630775 ) = True";
+  char *example =
+      "( 1746606091588748924719207127 != 1859135021472630775 ) = True";
   s21_decimal value_1 = {{0xA91412D7, 0xF2E7A0FC, 0x5A4C239, 0x0}};
   s21_decimal value_2 = {{0xB05D47F7, 0x19CCF973, 0x0, 0x0}};
   int code = 1;
@@ -19144,7 +19519,8 @@ START_TEST(s21_is_not_equal_1912) {
 }
 
 START_TEST(s21_is_not_equal_1913) {
-  char *example = "( 1253172138354930163595490026 != 1696960856778583352849914507 ) = True";
+  char *example =
+      "( 1253172138354930163595490026 != 1696960856778583352849914507 ) = True";
   s21_decimal value_1 = {{0x459632EA, 0xBEC13BF9, 0x40C9985, 0x0}};
   s21_decimal value_2 = {{0x5D06DA8B, 0x608A4A74, 0x57BB170, 0x0}};
   int code = 1;
@@ -19164,7 +19540,8 @@ START_TEST(s21_is_not_equal_1914) {
 }
 
 START_TEST(s21_is_not_equal_1915) {
-  char *example = "( 1009747680860868281549713420 != 1810418596749289153247067961 ) = True";
+  char *example =
+      "( 1009747680860868281549713420 != 1810418596749289153247067961 ) = True";
   s21_decimal value_1 = {{0xE7ABF00C, 0x766B7D50, 0x3433E63, 0x0}};
   s21_decimal value_2 = {{0x5D683F39, 0xC90201F7, 0x5D98B0C, 0x0}};
   int code = 1;
@@ -19174,7 +19551,8 @@ START_TEST(s21_is_not_equal_1915) {
 }
 
 START_TEST(s21_is_not_equal_1916) {
-  char *example = "( -68.269023175352150813450720 != 0.19732902638533705314932800 ) = True";
+  char *example =
+      "( -68.269023175352150813450720 != 0.19732902638533705314932800 ) = True";
   s21_decimal value_1 = {{0x6331D030, 0x1DBF579A, 0x5A5A7, 0x80170000}};
   s21_decimal value_2 = {{0x72F8F890, 0x3A5B4379, 0x29C9, 0x180000}};
   int code = 1;
@@ -19224,7 +19602,8 @@ START_TEST(s21_is_not_equal_1920) {
 }
 
 START_TEST(s21_is_not_equal_1921) {
-  char *example = "( 10174066273665473 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 10174066273665473 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x6629C1C1, 0x242542, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -19244,7 +19623,8 @@ START_TEST(s21_is_not_equal_1922) {
 }
 
 START_TEST(s21_is_not_equal_1923) {
-  char *example = "( -9763.4496218356821955409522 != -43.581308426358266686771191 ) = True";
+  char *example =
+      "( -9763.4496218356821955409522 != -43.581308426358266686771191 ) = True";
   s21_decimal value_1 = {{0x11EF7672, 0xA53DC087, 0x50C2E8, 0x80160000}};
   s21_decimal value_2 = {{0x595A8FF7, 0x76BA58B7, 0x240CB3, 0x80180000}};
   int code = 1;
@@ -19274,7 +19654,8 @@ START_TEST(s21_is_not_equal_1925) {
 }
 
 START_TEST(s21_is_not_equal_1926) {
-  char *example = "( -5999.9699231855643327387994 != 1543219995616867636638224206 ) = True";
+  char *example =
+      "( -5999.9699231855643327387994 != 1543219995616867636638224206 ) = True";
   s21_decimal value_1 = {{0x971ED95A, 0x3678EDF0, 0x31A16E, 0x80160000}};
   s21_decimal value_2 = {{0x56CD8F4E, 0x97F27EA7, 0x4FC858B, 0x0}};
   int code = 1;
@@ -19304,7 +19685,8 @@ START_TEST(s21_is_not_equal_1928) {
 }
 
 START_TEST(s21_is_not_equal_1929) {
-  char *example = "( -3.415364452607705090598 != 1327299597058355650627409528 ) = True";
+  char *example =
+      "( -3.415364452607705090598 != 1327299597058355650627409528 ) = True";
   s21_decimal value_1 = {{0x32B60A26, 0x25B40245, 0xB9, 0x80150000}};
   s21_decimal value_2 = {{0xA25C9678, 0x555F9CFD, 0x449EA9F, 0x0}};
   int code = 1;
@@ -19314,7 +19696,8 @@ START_TEST(s21_is_not_equal_1929) {
 }
 
 START_TEST(s21_is_not_equal_1930) {
-  char *example = "( 1814546556960930145785571519 != 1225906542896559485671966560 ) = True";
+  char *example =
+      "( 1814546556960930145785571519 != 1225906542896559485671966560 ) = True";
   s21_decimal value_1 = {{0x8DF368BF, 0xF4E772E7, 0x5DCF52D, 0x0}};
   s21_decimal value_2 = {{0xD0740760, 0xDA87A3D3, 0x3F60BCE, 0x0}};
   int code = 1;
@@ -19324,7 +19707,8 @@ START_TEST(s21_is_not_equal_1930) {
 }
 
 START_TEST(s21_is_not_equal_1931) {
-  char *example = "( 0.6149725448625562206631 != 1740981079177865370004748782 ) = True";
+  char *example =
+      "( 0.6149725448625562206631 != 1740981079177865370004748782 ) = True";
   s21_decimal value_1 = {{0x126241A7, 0x6095B8E2, 0x14D, 0x160000}};
   s21_decimal value_2 = {{0xA3F5F9EE, 0x6A400F6D, 0x5A01B15, 0x0}};
   int code = 1;
@@ -19334,7 +19718,8 @@ START_TEST(s21_is_not_equal_1931) {
 }
 
 START_TEST(s21_is_not_equal_1932) {
-  char *example = "( 1742265133962005160884496034 != -95.758169315459742586097304 ) = True";
+  char *example =
+      "( 1742265133962005160884496034 != -95.758169315459742586097304 ) = True";
   s21_decimal value_1 = {{0xC730E6A2, 0x2A1400BF, 0x5A12AFE, 0x0}};
   s21_decimal value_2 = {{0x578BCE98, 0xC29FEDA0, 0x4F3594, 0x80180000}};
   int code = 1;
@@ -19354,7 +19739,8 @@ START_TEST(s21_is_not_equal_1933) {
 }
 
 START_TEST(s21_is_not_equal_1934) {
-  char *example = "( -2169405.87411459287 != 1483962488360394127375168544 ) = True";
+  char *example =
+      "( -2169405.87411459287 != 1483962488360394127375168544 ) = True";
   s21_decimal value_1 = {{0x9A064CD7, 0x302BA50, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xFC357420, 0xB038CD25, 0x4CB8147, 0x0}};
   int code = 1;
@@ -19374,7 +19760,8 @@ START_TEST(s21_is_not_equal_1935) {
 }
 
 START_TEST(s21_is_not_equal_1936) {
-  char *example = "( 0.90640531374055237871153020 != 1826114789603810154081458475 ) = True";
+  char *example =
+      "( 0.90640531374055237871153020 != 1826114789603810154081458475 ) = True";
   s21_decimal value_1 = {{0x8435EB26, 0x4E1EA29C, 0x77F63, 0x190000}};
   s21_decimal value_2 = {{0x3E40992B, 0x1AD55AE9, 0x5E686D9, 0x0}};
   int code = 1;
@@ -19434,7 +19821,8 @@ START_TEST(s21_is_not_equal_1941) {
 }
 
 START_TEST(s21_is_not_equal_1942) {
-  char *example = "( -1405482955.6993020254270776 != 1615076696747039263302613369 ) = True";
+  char *example =
+      "( -1405482955.6993020254270776 != 1615076696747039263302613369 ) = True";
   s21_decimal value_1 = {{0x3D34B538, 0xD64456B4, 0xBA039, 0x80100000}};
   s21_decimal value_2 = {{0x60CBF979, 0x2ACD2288, 0x537F5CB, 0x0}};
   int code = 1;
@@ -19454,7 +19842,8 @@ START_TEST(s21_is_not_equal_1943) {
 }
 
 START_TEST(s21_is_not_equal_1944) {
-  char *example = "( 9.823627149212702 != 0.72833835000333343288516640 ) = True";
+  char *example =
+      "( 9.823627149212702 != 0.72833835000333343288516640 ) = True";
   s21_decimal value_1 = {{0x6EA27C1E, 0x22E689, 0x0, 0xF0000}};
   s21_decimal value_2 = {{0x5027CD0, 0x2BC84AF, 0x60651, 0x190000}};
   int code = 1;
@@ -19524,7 +19913,8 @@ START_TEST(s21_is_not_equal_1950) {
 }
 
 START_TEST(s21_is_not_equal_1951) {
-  char *example = "( 1614954307398699099886229430 != 122864775731169352868813863 ) = True";
+  char *example =
+      "( 1614954307398699099886229430 != 122864775731169352868813863 ) = True";
   s21_decimal value_1 = {{0x782897B6, 0x6D6525B6, 0x537DBE0, 0x0}};
   s21_decimal value_2 = {{0xE221DC27, 0xD6A6E194, 0x65A1A0, 0x0}};
   int code = 1;
@@ -19544,7 +19934,8 @@ START_TEST(s21_is_not_equal_1952) {
 }
 
 START_TEST(s21_is_not_equal_1953) {
-  char *example = "( 1633244981092517441462907988 != -22.206766640277024389260614 ) = True";
+  char *example =
+      "( 1633244981092517441462907988 != -22.206766640277024389260614 ) = True";
   s21_decimal value_1 = {{0x15A0B454, 0xD5C7A6F8, 0x546FD13, 0x0}};
   s21_decimal value_2 = {{0x8C88E546, 0x3B54D7C3, 0x125E77, 0x80180000}};
   int code = 1;
@@ -19634,7 +20025,8 @@ START_TEST(s21_is_not_equal_1961) {
 }
 
 START_TEST(s21_is_not_equal_1962) {
-  char *example = "( 1945833604745568961855173274 != 1243922305935433085697268083 ) = True";
+  char *example =
+      "( 1945833604745568961855173274 != 1243922305935433085697268083 ) = True";
   s21_decimal value_1 = {{0xD67F329A, 0x13F94529, 0x6498E4B, 0x0}};
   s21_decimal value_2 = {{0x65861973, 0x532DDFEA, 0x404F2CB, 0x0}};
   int code = 1;
@@ -19664,7 +20056,8 @@ START_TEST(s21_is_not_equal_1964) {
 }
 
 START_TEST(s21_is_not_equal_1965) {
-  char *example = "( 17025352118227275196 != 1899849638260344071490346979 ) = True";
+  char *example =
+      "( 17025352118227275196 != 1899849638260344071490346979 ) = True";
   s21_decimal value_1 = {{0x1EE18DBC, 0xEC46338C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x83679FE3, 0x4287B539, 0x62384CF, 0x0}};
   int code = 1;
@@ -19674,7 +20067,8 @@ START_TEST(s21_is_not_equal_1965) {
 }
 
 START_TEST(s21_is_not_equal_1966) {
-  char *example = "( 1138057116405280926000053159 != -13.7483607719204965356320 ) = True";
+  char *example =
+      "( 1138057116405280926000053159 != -13.7483607719204965356320 ) = True";
   s21_decimal value_1 = {{0xF9697BA7, 0xE6A54BA6, 0x3AD60F7, 0x0}};
   s21_decimal value_2 = {{0xDC71A850, 0x4CD5601F, 0x2E9, 0x80150000}};
   int code = 1;
@@ -19684,7 +20078,8 @@ START_TEST(s21_is_not_equal_1966) {
 }
 
 START_TEST(s21_is_not_equal_1967) {
-  char *example = "( 1204985290692109414157 != 169222957272447793800784854 ) = True";
+  char *example =
+      "( 1204985290692109414157 != 169222957272447793800784854 ) = True";
   s21_decimal value_1 = {{0x49FE2F0D, 0x5287B999, 0x41, 0x0}};
   s21_decimal value_2 = {{0x49E9ABD6, 0xE53CE5E2, 0x8BFA5A, 0x0}};
   int code = 1;
@@ -19824,7 +20219,8 @@ START_TEST(s21_is_not_equal_1980) {
 }
 
 START_TEST(s21_is_not_equal_1981) {
-  char *example = "( -80.852844274801174652858552 != 1680702603814271045824314341 ) = True";
+  char *example =
+      "( -80.852844274801174652858552 != 1680702603814271045824314341 ) = True";
   s21_decimal value_1 = {{0x793B30B8, 0x7881034D, 0x42E141, 0x80180000}};
   s21_decimal value_2 = {{0x88A7BE5, 0xB7C69468, 0x56E3E9E, 0x0}};
   int code = 1;
@@ -19914,7 +20310,8 @@ START_TEST(s21_is_not_equal_1989) {
 }
 
 START_TEST(s21_is_not_equal_1990) {
-  char *example = "( 15859505262211943561614 != -8192125.7266239436389566204 ) = True";
+  char *example =
+      "( 15859505262211943561614 != -8192125.7266239436389566204 ) = True";
   s21_decimal value_1 = {{0xBD3EF98E, 0xBED948B8, 0x35B, 0x0}};
   s21_decimal value_2 = {{0x413746FC, 0x414A4DC4, 0x43C380, 0x80130000}};
   int code = 1;
@@ -20014,7 +20411,8 @@ START_TEST(s21_is_not_equal_1999) {
 }
 
 START_TEST(s21_is_not_equal_2000) {
-  char *example = "( -93.13944148523984284 != 1542267195059033669441475 ) = True";
+  char *example =
+      "( -93.13944148523984284 != 1542267195059033669441475 ) = True";
   s21_decimal value_1 = {{0xE99A59C, 0x8141C6DB, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xE92517C3, 0x78E04062, 0x14696, 0x0}};
   int code = 1;
@@ -20044,7 +20442,8 @@ START_TEST(s21_is_not_equal_2002) {
 }
 
 START_TEST(s21_is_not_equal_2003) {
-  char *example = "( 1079241133778505744403021133 != 163229199035787612 ) = True";
+  char *example =
+      "( 1079241133778505744403021133 != 163229199035787612 ) = True";
   s21_decimal value_1 = {{0xB1523D4D, 0x180B0F07, 0x37CBA33, 0x0}};
   s21_decimal value_2 = {{0x797FE95C, 0x243E817, 0x0, 0x0}};
   int code = 1;
@@ -20134,7 +20533,8 @@ START_TEST(s21_is_not_equal_2011) {
 }
 
 START_TEST(s21_is_not_equal_2012) {
-  char *example = "( -6.32905549633354211 != 1860889989448685892972631259 ) = True";
+  char *example =
+      "( -6.32905549633354211 != 1860889989448685892972631259 ) = True";
   s21_decimal value_1 = {{0x7E44F9E3, 0x8C8883E, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xCD50D4DB, 0x77414426, 0x6034AC8, 0x0}};
   int code = 1;
@@ -20144,7 +20544,8 @@ START_TEST(s21_is_not_equal_2012) {
 }
 
 START_TEST(s21_is_not_equal_2013) {
-  char *example = "( 164961682607602780 != 1150226133127084301876261157 ) = True";
+  char *example =
+      "( 164961682607602780 != 1150226133127084301876261157 ) = True";
   s21_decimal value_1 = {{0xBD607C5C, 0x24A0FC6, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8C10F125, 0x9E8A65FD, 0x3B771DB, 0x0}};
   int code = 1;
@@ -20154,7 +20555,9 @@ START_TEST(s21_is_not_equal_2013) {
 }
 
 START_TEST(s21_is_not_equal_2014) {
-  char *example = "( -79228162514264337593543950335 != 1573896252176472255522274802 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1573896252176472255522274802 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x128DFDF2, 0xCB383217, 0x515E57E, 0x0}};
   int code = 1;
@@ -20164,7 +20567,8 @@ START_TEST(s21_is_not_equal_2014) {
 }
 
 START_TEST(s21_is_not_equal_2015) {
-  char *example = "( 1813358306661088876732897102 != 1148721487394284655309165681 ) = True";
+  char *example =
+      "( 1813358306661088876732897102 != 1148721487394284655309165681 ) = True";
   s21_decimal value_1 = {{0x4CE8574E, 0xC7615D2D, 0x5DBF98E, 0x0}};
   s21_decimal value_2 = {{0x7FF31471, 0x9C55BB77, 0x3B6333C, 0x0}};
   int code = 1;
@@ -20184,7 +20588,8 @@ START_TEST(s21_is_not_equal_2016) {
 }
 
 START_TEST(s21_is_not_equal_2017) {
-  char *example = "( 1173250409469835532144216196 != 11520877519622695813 ) = True";
+  char *example =
+      "( 1173250409469835532144216196 != 11520877519622695813 ) = True";
   s21_decimal value_1 = {{0xE8540884, 0x240DC601, 0x3CA7D70, 0x0}};
   s21_decimal value_2 = {{0x59E4EB85, 0x9FE26110, 0x0, 0x0}};
   int code = 1;
@@ -20194,7 +20599,8 @@ START_TEST(s21_is_not_equal_2017) {
 }
 
 START_TEST(s21_is_not_equal_2018) {
-  char *example = "( 1176019241058275526226498785 != 179365573572322033683008 ) = True";
+  char *example =
+      "( 1176019241058275526226498785 != 179365573572322033683008 ) = True";
   s21_decimal value_1 = {{0xFAD854E1, 0xCD5051B3, 0x3CCC7C2, 0x0}};
   s21_decimal value_2 = {{0x3F444A40, 0x6D5EBC7D, 0x25FB, 0x0}};
   int code = 1;
@@ -20214,7 +20620,8 @@ START_TEST(s21_is_not_equal_2019) {
 }
 
 START_TEST(s21_is_not_equal_2020) {
-  char *example = "( 18643611067437279322767843 != 0.07482356412338248315647768 ) = True";
+  char *example =
+      "( 18643611067437279322767843 != 0.07482356412338248315647768 ) = True";
   s21_decimal value_1 = {{0x283301E3, 0x2E5D8555, 0xF6BF0, 0x0}};
   s21_decimal value_2 = {{0x19793718, 0x5A97C655, 0x63073, 0x1A0000}};
   int code = 1;
@@ -20314,7 +20721,8 @@ START_TEST(s21_is_not_equal_2029) {
 }
 
 START_TEST(s21_is_not_equal_2030) {
-  char *example = "( 1736520740062305897451607858 != 13911020662300216935690 ) = True";
+  char *example =
+      "( 1736520740062305897451607858 != 13911020662300216935690 ) = True";
   s21_decimal value_1 = {{0xF13D732, 0xF2741F8A, 0x59C6A91, 0x0}};
   s21_decimal value_2 = {{0xA3A8450A, 0x1E31649D, 0x2F2, 0x0}};
   int code = 1;
@@ -20334,7 +20742,8 @@ START_TEST(s21_is_not_equal_2031) {
 }
 
 START_TEST(s21_is_not_equal_2032) {
-  char *example = "( 1944358458188763137896969350 != 1632290446909225076097114425 ) = True";
+  char *example =
+      "( 1944358458188763137896969350 != 1632290446909225076097114425 ) = True";
   s21_decimal value_1 = {{0x49B17486, 0x3912ABB0, 0x64855EB, 0x0}};
   s21_decimal value_2 = {{0xE31D6139, 0x6EEDC969, 0x54632F2, 0x0}};
   int code = 1;
@@ -20344,7 +20753,8 @@ START_TEST(s21_is_not_equal_2032) {
 }
 
 START_TEST(s21_is_not_equal_2033) {
-  char *example = "( -1.6906937604670956318939890 != 1592324417728849010565222021 ) = True";
+  char *example =
+      "( -1.6906937604670956318939890 != 1592324417728849010565222021 ) = True";
   s21_decimal value_1 = {{0x287715E5, 0xB141795F, 0x16604, 0x80180000}};
   s21_decimal value_2 = {{0xE6068E85, 0xA6715322, 0x52523CF, 0x0}};
   int code = 1;
@@ -20494,7 +20904,8 @@ START_TEST(s21_is_not_equal_2047) {
 }
 
 START_TEST(s21_is_not_equal_2048) {
-  char *example = "( 15673900116612660205 != -5279.8461599737726476769595 ) = True";
+  char *example =
+      "( 15673900116612660205 != -5279.8461599737726476769595 ) = True";
   s21_decimal value_1 = {{0xB7A6BBED, 0xD984E11C, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFAE0593B, 0x56A902DD, 0x2BAC82, 0x80160000}};
   int code = 1;
@@ -20584,7 +20995,8 @@ START_TEST(s21_is_not_equal_2056) {
 }
 
 START_TEST(s21_is_not_equal_2057) {
-  char *example = "( 1547251011082015430630483724 != -53759116.5262222580261 ) = True";
+  char *example =
+      "( 1547251011082015430630483724 != -53759116.5262222580261 ) = True";
   s21_decimal value_1 = {{0xE400A70C, 0x6138FB4E, 0x4FFDB25, 0x0}};
   s21_decimal value_2 = {{0xA317DA25, 0x24937C86, 0x1D, 0x800D0000}};
   int code = 1;
@@ -20644,7 +21056,8 @@ START_TEST(s21_is_not_equal_2062) {
 }
 
 START_TEST(s21_is_not_equal_2063) {
-  char *example = "( -227.94072608353778981592988 != 1427952595805858999876329136 ) = True";
+  char *example =
+      "( -227.94072608353778981592988 != 1427952595805858999876329136 ) = True";
   s21_decimal value_1 = {{0x5456DF9C, 0x26EF4531, 0x12DAD5, 0x80170000}};
   s21_decimal value_2 = {{0x61A1EB0, 0x54362878, 0x49D2CB9, 0x0}};
   int code = 1;
@@ -20684,7 +21097,8 @@ START_TEST(s21_is_not_equal_2066) {
 }
 
 START_TEST(s21_is_not_equal_2067) {
-  char *example = "( 1069920108060466154154339539 != 1217997076863162952692214294 ) = True";
+  char *example =
+      "( 1069920108060466154154339539 != 1217997076863162952692214294 ) = True";
   s21_decimal value_1 = {{0x917DACD3, 0x46FA20D1, 0x3750465, 0x0}};
   s21_decimal value_2 = {{0xF24F2A16, 0xD73EC8BD, 0x3EF80E9, 0x0}};
   int code = 1;
@@ -20764,7 +21178,8 @@ START_TEST(s21_is_not_equal_2074) {
 }
 
 START_TEST(s21_is_not_equal_2075) {
-  char *example = "( 1211245003860621937545074005 != 142588990079272709 ) = True";
+  char *example =
+      "( 1211245003860621937545074005 != 142588990079272709 ) = True";
   s21_decimal value_1 = {{0x49945555, 0x3ADA65A9, 0x3E9EB1B, 0x0}};
   s21_decimal value_2 = {{0x568E8705, 0x1FA93EE, 0x0, 0x0}};
   int code = 1;
@@ -20784,7 +21199,8 @@ START_TEST(s21_is_not_equal_2076) {
 }
 
 START_TEST(s21_is_not_equal_2077) {
-  char *example = "( 1107358296520928923421766567 != 1215160622356425139068070286 ) = True";
+  char *example =
+      "( 1107358296520928923421766567 != 1215160622356425139068070286 ) = True";
   s21_decimal value_1 = {{0x9C27F3A7, 0x8A572016, 0x393FC3D, 0x0}};
   s21_decimal value_2 = {{0x8323E98E, 0x557966C1, 0x3ED2845, 0x0}};
   int code = 1;
@@ -20824,7 +21240,8 @@ START_TEST(s21_is_not_equal_2080) {
 }
 
 START_TEST(s21_is_not_equal_2081) {
-  char *example = "( 1781607256983046451126828127 != -695.7234411859479386695 ) = True";
+  char *example =
+      "( 1781607256983046451126828127 != -695.7234411859479386695 ) = True";
   s21_decimal value_1 = {{0x4B7F7C5F, 0xED45E88D, 0x5C1B602, 0x0}};
   s21_decimal value_2 = {{0x17FC5A47, 0x2705DC94, 0x179, 0x80130000}};
   int code = 1;
@@ -20874,7 +21291,8 @@ START_TEST(s21_is_not_equal_2085) {
 }
 
 START_TEST(s21_is_not_equal_2086) {
-  char *example = "( 2.1513863153832486E-10 != 1823416066098653013344789876 ) = True";
+  char *example =
+      "( 2.1513863153832486E-10 != 1823416066098653013344789876 ) = True";
   s21_decimal value_1 = {{0x9B07D226, 0x4C6EBE, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x3382574, 0x2AD486D, 0x5E44B5F, 0x0}};
   int code = 1;
@@ -20884,7 +21302,8 @@ START_TEST(s21_is_not_equal_2086) {
 }
 
 START_TEST(s21_is_not_equal_2087) {
-  char *example = "( 150010652780476916174 != 1911473848171318309342005256 ) = True";
+  char *example =
+      "( 150010652780476916174 != 1911473848171318309342005256 ) = True";
   s21_decimal value_1 = {{0xD0CA61CE, 0x21D0E5E9, 0x8, 0x0}};
   s21_decimal value_2 = {{0xE3B9C808, 0xF11BACA7, 0x62D2254, 0x0}};
   int code = 1;
@@ -20894,7 +21313,8 @@ START_TEST(s21_is_not_equal_2087) {
 }
 
 START_TEST(s21_is_not_equal_2088) {
-  char *example = "( 184645553418228022853 != 1772738397111191509640674533 ) = True";
+  char *example =
+      "( 184645553418228022853 != 1772738397111191509640674533 ) = True";
   s21_decimal value_1 = {{0x30E53E45, 0x278C88A, 0xA, 0x0}};
   s21_decimal value_2 = {{0x8D7FFCE5, 0x11DFCDF3, 0x5BA5FF5, 0x0}};
   int code = 1;
@@ -20934,7 +21354,8 @@ START_TEST(s21_is_not_equal_2091) {
 }
 
 START_TEST(s21_is_not_equal_2092) {
-  char *example = "( -7.50324082091144 != 1513626735448949986539622097 ) = True";
+  char *example =
+      "( -7.50324082091144 != 1513626735448949986539622097 ) = True";
   s21_decimal value_1 = {{0x70612488, 0x2AA6A, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xD9F84ED1, 0xBECBA1B6, 0x4E40AED, 0x0}};
   int code = 1;
@@ -21094,7 +21515,8 @@ START_TEST(s21_is_not_equal_2107) {
 }
 
 START_TEST(s21_is_not_equal_2108) {
-  char *example = "( 1325977805610648325251588045 != 111652818733561419 ) = True";
+  char *example =
+      "( 1325977805610648325251588045 != 111652818733561419 ) = True";
   s21_decimal value_1 = {{0xE862DFCD, 0xE022D268, 0x448D2B8, 0x0}};
   s21_decimal value_2 = {{0xA6C8F64B, 0x18CABA5, 0x0, 0x0}};
   int code = 1;
@@ -21144,7 +21566,8 @@ START_TEST(s21_is_not_equal_2112) {
 }
 
 START_TEST(s21_is_not_equal_2113) {
-  char *example = "( 0.19546044019265460 != 1737441440429627235649464810 ) = True";
+  char *example =
+      "( 0.19546044019265460 != 1737441440429627235649464810 ) = True";
   s21_decimal value_1 = {{0xCD0DA192, 0x6F1B3, 0x0, 0x100000}};
   s21_decimal value_2 = {{0x6D3829EA, 0x36C92EAF, 0x59D2D89, 0x0}};
   int code = 1;
@@ -21214,7 +21637,8 @@ START_TEST(s21_is_not_equal_2119) {
 }
 
 START_TEST(s21_is_not_equal_2120) {
-  char *example = "( -31.510366119977571222074312 != 1820802360226013163479247971 ) = True";
+  char *example =
+      "( -31.510366119977571222074312 != 1820802360226013163479247971 ) = True";
   s21_decimal value_1 = {{0x746CB3C8, 0x5EC274C8, 0x1A1094, 0x80180000}};
   s21_decimal value_2 = {{0xC59E2C63, 0xBB2F31B1, 0x5E221E5, 0x0}};
   int code = 1;
@@ -21404,7 +21828,8 @@ START_TEST(s21_is_not_equal_2138) {
 }
 
 START_TEST(s21_is_not_equal_2139) {
-  char *example = "( 155819361307134545 != 1170841411308803158080327173 ) = True";
+  char *example =
+      "( 155819361307134545 != 1170841411308803158080327173 ) = True";
   s21_decimal value_1 = {{0x2FD70A51, 0x22994E2, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFA118E05, 0x16BEDE55, 0x3C87F50, 0x0}};
   int code = 1;
@@ -21514,7 +21939,8 @@ START_TEST(s21_is_not_equal_2149) {
 }
 
 START_TEST(s21_is_not_equal_2150) {
-  char *example = "( 1760213757623368133579274852 != 17529715778738076537412 ) = True";
+  char *example =
+      "( 1760213757623368133579274852 != 17529715778738076537412 ) = True";
   s21_decimal value_1 = {{0xDC1E7A64, 0xB15E96, 0x5B003C3, 0x0}};
   s21_decimal value_2 = {{0xFB185244, 0x49AD0858, 0x3B6, 0x0}};
   int code = 1;
@@ -21524,7 +21950,8 @@ START_TEST(s21_is_not_equal_2150) {
 }
 
 START_TEST(s21_is_not_equal_2151) {
-  char *example = "( 1490524947848581975418940257 != 162240319597177409 ) = True";
+  char *example =
+      "( 1490524947848581975418940257 != 162240319597177409 ) = True";
   s21_decimal value_1 = {{0x80112B61, 0x547F0F7A, 0x4D0EEEF, 0x0}};
   s21_decimal value_2 = {{0x9D5EA41, 0x24064B6, 0x0, 0x0}};
   int code = 1;
@@ -21654,7 +22081,8 @@ START_TEST(s21_is_not_equal_2163) {
 }
 
 START_TEST(s21_is_not_equal_2164) {
-  char *example = "( -99555.06474051659360943699 != 1491778019310289307176 ) = True";
+  char *example =
+      "( -99555.06474051659360943699 != 1491778019310289307176 ) = True";
   s21_decimal value_1 = {{0xFCECBE53, 0x165DC011, 0x83C29, 0x80140000}};
   s21_decimal value_2 = {{0xB59C4628, 0xDE942CC8, 0x50, 0x0}};
   int code = 1;
@@ -21674,7 +22102,8 @@ START_TEST(s21_is_not_equal_2165) {
 }
 
 START_TEST(s21_is_not_equal_2166) {
-  char *example = "( -1.0140337727081721505952 != -7.499862566789681846733 ) = True";
+  char *example =
+      "( -1.0140337727081721505952 != -7.499862566789681846733 ) = True";
   s21_decimal value_1 = {{0xDFA28A0, 0xB5748CF8, 0x225, 0x80160000}};
   s21_decimal value_2 = {{0x345519CD, 0x91805485, 0x196, 0x80150000}};
   int code = 1;
@@ -21694,7 +22123,8 @@ START_TEST(s21_is_not_equal_2167) {
 }
 
 START_TEST(s21_is_not_equal_2168) {
-  char *example = "( 1585531043754946858691202843 != 1101799410445623071399751341 ) = True";
+  char *example =
+      "( 1585531043754946858691202843 != 1101799410445623071399751341 ) = True";
   s21_decimal value_1 = {{0xBD420F1B, 0x1BEF0906, 0x51F8542, 0x0}};
   s21_decimal value_2 = {{0xE3082EAD, 0xB8F07E1B, 0x38F6319, 0x0}};
   int code = 1;
@@ -21704,7 +22134,8 @@ START_TEST(s21_is_not_equal_2168) {
 }
 
 START_TEST(s21_is_not_equal_2169) {
-  char *example = "( 1962978359247553769746136980 != 1540910833775302889817139507 ) = True";
+  char *example =
+      "( 1962978359247553769746136980 != 1540910833775302889817139507 ) = True";
   s21_decimal value_1 = {{0xB302FF94, 0x14F825E7, 0x657BCD6, 0x0}};
   s21_decimal value_2 = {{0x6A066933, 0xADE5674C, 0x4FA9C8F, 0x0}};
   int code = 1;
@@ -21754,7 +22185,8 @@ START_TEST(s21_is_not_equal_2173) {
 }
 
 START_TEST(s21_is_not_equal_2174) {
-  char *example = "( 1149350212117754994755515978 != 1670627072973669898 ) = True";
+  char *example =
+      "( 1149350212117754994755515978 != 1670627072973669898 ) = True";
   s21_decimal value_1 = {{0xD37E364A, 0xD8A30163, 0x3B6B85F, 0x0}};
   s21_decimal value_2 = {{0xB4BF060A, 0x172F4278, 0x0, 0x0}};
   int code = 1;
@@ -21764,7 +22196,8 @@ START_TEST(s21_is_not_equal_2174) {
 }
 
 START_TEST(s21_is_not_equal_2175) {
-  char *example = "( -2859.0002310418920371041142 != 1948221275915913479456920549 ) = True";
+  char *example =
+      "( -2859.0002310418920371041142 != 1948221275915913479456920549 ) = True";
   s21_decimal value_1 = {{0x7CEB376, 0x217D29C9, 0x17A62B, 0x80160000}};
   s21_decimal value_2 = {{0x109193E5, 0xFDD4A178, 0x64B87E6, 0x0}};
   int code = 1;
@@ -21814,7 +22247,8 @@ START_TEST(s21_is_not_equal_2179) {
 }
 
 START_TEST(s21_is_not_equal_2180) {
-  char *example = "( -310.92201957991483575547572 != -695.15507558872220712434090 ) = True";
+  char *example =
+      "( -310.92201957991483575547572 != -695.15507558872220712434090 ) = True";
   s21_decimal value_1 = {{0xAA62B6B4, 0xA5402F1E, 0x19B807, 0x80170000}};
   s21_decimal value_2 = {{0xDD083291, 0x52535105, 0x5C00C, 0x80160000}};
   int code = 1;
@@ -21824,7 +22258,8 @@ START_TEST(s21_is_not_equal_2180) {
 }
 
 START_TEST(s21_is_not_equal_2181) {
-  char *example = "( 1762510600710829317577 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1762510600710829317577 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x45531DC9, 0x8BBF852A, 0x5F, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -21854,7 +22289,8 @@ START_TEST(s21_is_not_equal_2183) {
 }
 
 START_TEST(s21_is_not_equal_2184) {
-  char *example = "( 127489300317892171 != 1779575855009445830731482545 ) = True";
+  char *example =
+      "( 127489300317892171 != 1779575855009445830731482545 ) = True";
   s21_decimal value_1 = {{0xDA1C6E4B, 0x1C4EED7, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC4B7C5B1, 0x67BB27B7, 0x5C007D8, 0x0}};
   int code = 1;
@@ -21864,7 +22300,8 @@ START_TEST(s21_is_not_equal_2184) {
 }
 
 START_TEST(s21_is_not_equal_2185) {
-  char *example = "( 1254496415389824697828498202 != 1210784450730198231542825280 ) = True";
+  char *example =
+      "( 1254496415389824697828498202 != 1210784450730198231542825280 ) = True";
   s21_decimal value_1 = {{0xA5D9DB1A, 0xF271A01D, 0x40DB1F2, 0x0}};
   s21_decimal value_2 = {{0x40828140, 0x983C205D, 0x3E98994, 0x0}};
   int code = 1;
@@ -21874,7 +22311,8 @@ START_TEST(s21_is_not_equal_2185) {
 }
 
 START_TEST(s21_is_not_equal_2186) {
-  char *example = "( 1904129967664390312012912170 != -3.879062150281451111 ) = True";
+  char *example =
+      "( 1904129967664390312012912170 != -3.879062150281451111 ) = True";
   s21_decimal value_1 = {{0xE519962A, 0x61BF3C27, 0x6270F34, 0x0}};
   s21_decimal value_2 = {{0x39305667, 0x35D53279, 0x0, 0x80120000}};
   int code = 1;
@@ -21924,7 +22362,8 @@ START_TEST(s21_is_not_equal_2190) {
 }
 
 START_TEST(s21_is_not_equal_2191) {
-  char *example = "( -52717.547191220146602237152 != 162605294273891004314461 ) = True";
+  char *example =
+      "( -52717.547191220146602237152 != 162605294273891004314461 ) = True";
   s21_decimal value_1 = {{0xB4EBDCE0, 0xF5AB0F09, 0x2B9B5F, 0x80150000}};
   s21_decimal value_2 = {{0xEC8FF35D, 0xD9C53654, 0x226E, 0x0}};
   int code = 1;
@@ -21944,7 +22383,8 @@ START_TEST(s21_is_not_equal_2192) {
 }
 
 START_TEST(s21_is_not_equal_2193) {
-  char *example = "( 1443522161724006288039532368 != 1432089377513057448308877 ) = True";
+  char *example =
+      "( 1443522161724006288039532368 != 1432089377513057448308877 ) = True";
   s21_decimal value_1 = {{0xC8E2D750, 0x30488BC8, 0x4AA0DB5, 0x0}};
   s21_decimal value_2 = {{0xA80B308D, 0xB880C16A, 0x12F41, 0x0}};
   int code = 1;
@@ -21964,7 +22404,8 @@ START_TEST(s21_is_not_equal_2194) {
 }
 
 START_TEST(s21_is_not_equal_2195) {
-  char *example = "( 0.96572717610184157839441286 != 0.4209991209849003 ) = True";
+  char *example =
+      "( 0.96572717610184157839441286 != 0.4209991209849003 ) = True";
   s21_decimal value_1 = {{0xD82B3D86, 0x8304A3A7, 0x4FE211, 0x1A0000}};
   s21_decimal value_2 = {{0xF69210AB, 0xEF4F6, 0x0, 0x100000}};
   int code = 1;
@@ -22144,7 +22585,8 @@ START_TEST(s21_is_not_equal_2212) {
 }
 
 START_TEST(s21_is_not_equal_2213) {
-  char *example = "( -7973.501945199663956 != 1826406128251856032191705297 ) = True";
+  char *example =
+      "( -7973.501945199663956 != 1826406128251856032191705297 ) = True";
   s21_decimal value_1 = {{0x13831B54, 0x6EA791C6, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x3B1370D1, 0x9AC56E53, 0x5E6C48A, 0x0}};
   int code = 1;
@@ -22194,7 +22636,8 @@ START_TEST(s21_is_not_equal_2217) {
 }
 
 START_TEST(s21_is_not_equal_2218) {
-  char *example = "( 16774703362060758 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 16774703362060758 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xFB1BB1D6, 0x3B9880, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -22224,7 +22667,8 @@ START_TEST(s21_is_not_equal_2220) {
 }
 
 START_TEST(s21_is_not_equal_2221) {
-  char *example = "( 8.39670734905970622718383937 != -983.19834562495583498629613 ) = True";
+  char *example =
+      "( 8.39670734905970622718383937 != -983.19834562495583498629613 ) = True";
   s21_decimal value_1 = {{0x76899741, 0xBF74E93C, 0x2B68F31, 0x1A0000}};
   s21_decimal value_2 = {{0x215171ED, 0xE95B9490, 0x515408, 0x80170000}};
   int code = 1;
@@ -22264,7 +22708,8 @@ START_TEST(s21_is_not_equal_2224) {
 }
 
 START_TEST(s21_is_not_equal_2225) {
-  char *example = "( 0.39723848007841702952267517 != 0.02581171974618204617739672 ) = True";
+  char *example =
+      "( 0.39723848007841702952267517 != 0.02581171974618204617739672 ) = True";
   s21_decimal value_1 = {{0x7F076EFD, 0x1D900D1E, 0x20DBDA, 0x1A0000}};
   s21_decimal value_2 = {{0x38CA8D98, 0x9CF59006, 0x22295, 0x1A0000}};
   int code = 1;
@@ -22364,7 +22809,8 @@ START_TEST(s21_is_not_equal_2234) {
 }
 
 START_TEST(s21_is_not_equal_2235) {
-  char *example = "( -233.67550851391635879766867 != -374414.96536356593256158489 ) = True";
+  char *example =
+      "( -233.67550851391635879766867 != -374414.96536356593256158489 ) = True";
   s21_decimal value_1 = {{0xD4922B53, 0x784DCE2B, 0x135445, 0x80170000}};
   s21_decimal value_2 = {{0xEE58D519, 0x982379C3, 0x1EF88B, 0x80140000}};
   int code = 1;
@@ -22394,7 +22840,9 @@ START_TEST(s21_is_not_equal_2237) {
 }
 
 START_TEST(s21_is_not_equal_2238) {
-  char *example = "( -79228162514264337593543950335 != -86222715232427.754582868266 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != -86222715232427.754582868266 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x5CE6812A, 0xC23590FF, 0x47525E, 0x800C0000}};
   int code = 1;
@@ -22434,7 +22882,8 @@ START_TEST(s21_is_not_equal_2241) {
 }
 
 START_TEST(s21_is_not_equal_2242) {
-  char *example = "( 0.88168992971402541800815289 != -2.87813535608031529391 ) = True";
+  char *example =
+      "( 0.88168992971402541800815289 != -2.87813535608031529391 ) = True";
   s21_decimal value_1 = {{0x2272FAB9, 0xAFAF9129, 0x48EE82, 0x1A0000}};
   s21_decimal value_2 = {{0xE9F5C9AF, 0x9A3715BB, 0xF, 0x80140000}};
   int code = 1;
@@ -22534,7 +22983,8 @@ START_TEST(s21_is_not_equal_2251) {
 }
 
 START_TEST(s21_is_not_equal_2252) {
-  char *example = "( 11753494440128199649397322 != 101105841806210713982 ) = True";
+  char *example =
+      "( 11753494440128199649397322 != 101105841806210713982 ) = True";
   s21_decimal value_1 = {{0xC6540A4A, 0x35D7262A, 0x9B8E6, 0x0}};
   s21_decimal value_2 = {{0xE807497E, 0x7B201B70, 0x5, 0x0}};
   int code = 1;
@@ -22544,7 +22994,8 @@ START_TEST(s21_is_not_equal_2252) {
 }
 
 START_TEST(s21_is_not_equal_2253) {
-  char *example = "( 1289035011825338774066 != 1820220362266127015154017179 ) = True";
+  char *example =
+      "( 1289035011825338774066 != 1820220362266127015154017179 ) = True";
   s21_decimal value_1 = {{0xAAC57232, 0xE0F451A7, 0x45, 0x0}};
   s21_decimal value_2 = {{0xDC4BE39B, 0x8EFE1296, 0x5E1A6A7, 0x0}};
   int code = 1;
@@ -22584,7 +23035,8 @@ START_TEST(s21_is_not_equal_2256) {
 }
 
 START_TEST(s21_is_not_equal_2257) {
-  char *example = "( 1607332570247863661837235357 != 1326830649768066692331501745 ) = True";
+  char *example =
+      "( 1607332570247863661837235357 != 1326830649768066692331501745 ) = True";
   s21_decimal value_1 = {{0xFFB1349D, 0x3A7D26FC, 0x5318DE9, 0x0}};
   s21_decimal value_2 = {{0x6D7E78B1, 0xA662C469, 0x4498751, 0x0}};
   int code = 1;
@@ -22614,7 +23066,8 @@ START_TEST(s21_is_not_equal_2259) {
 }
 
 START_TEST(s21_is_not_equal_2260) {
-  char *example = "( -8.60116383856218633523327 != -968.85821945964082486273918 ) = True";
+  char *example =
+      "( -8.60116383856218633523327 != -968.85821945964082486273918 ) = True";
   s21_decimal value_1 = {{0x2F49D07F, 0xAA4952, 0xB623, 0x80170000}};
   s21_decimal value_2 = {{0x5B3677E, 0xEE8D41A1, 0x50245E, 0x80170000}};
   int code = 1;
@@ -22644,7 +23097,8 @@ START_TEST(s21_is_not_equal_2262) {
 }
 
 START_TEST(s21_is_not_equal_2263) {
-  char *example = "( 726.306145707138444053147718 != 1810751170767340813463 ) = True";
+  char *example =
+      "( 726.306145707138444053147718 != 1810751170767340813463 ) = True";
   s21_decimal value_1 = {{0x95B37046, 0xDA29ED7, 0x258C94F, 0x180000}};
   s21_decimal value_2 = {{0xC209BC97, 0x2938740A, 0x62, 0x0}};
   int code = 1;
@@ -22724,7 +23178,8 @@ START_TEST(s21_is_not_equal_2270) {
 }
 
 START_TEST(s21_is_not_equal_2271) {
-  char *example = "( 3.032705799523196E-11 != 1068976983947370315438683 ) = True";
+  char *example =
+      "( 3.032705799523196E-11 != 1068976983947370315438683 ) = True";
   s21_decimal value_1 = {{0xD7E38B7C, 0xAC63A, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x7E14DA5B, 0x5BC13156, 0xE25D, 0x0}};
   int code = 1;
@@ -22734,7 +23189,8 @@ START_TEST(s21_is_not_equal_2271) {
 }
 
 START_TEST(s21_is_not_equal_2272) {
-  char *example = "( 0.96477919308359488 != -35.091233909119863716655320 ) = True";
+  char *example =
+      "( 0.96477919308359488 != -35.091233909119863716655320 ) = True";
   s21_decimal value_1 = {{0xD0B2740, 0x156C228, 0x0, 0x110000}};
   s21_decimal value_2 = {{0x5A4C1E7C, 0xF5CF7DE7, 0x2E715, 0x80170000}};
   int code = 1;
@@ -22764,7 +23220,8 @@ START_TEST(s21_is_not_equal_2274) {
 }
 
 START_TEST(s21_is_not_equal_2275) {
-  char *example = "( 12416316822533898 != 0.78705385818397617673014088 ) = True";
+  char *example =
+      "( 12416316822533898 != 0.78705385818397617673014088 ) = True";
   s21_decimal value_1 = {{0x9A0370A, 0x2C1C93, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF8710B48, 0x83B84ACB, 0x411A83, 0x1A0000}};
   int code = 1;
@@ -22794,7 +23251,8 @@ START_TEST(s21_is_not_equal_2277) {
 }
 
 START_TEST(s21_is_not_equal_2278) {
-  char *example = "( 1947893633687596476551020571 != 1466309963902264521052442766 ) = True";
+  char *example =
+      "( 1947893633687596476551020571 != 1466309963902264521052442766 ) = True";
   s21_decimal value_1 = {{0x2B06401B, 0x78825614, 0x64B4285, 0x0}};
   s21_decimal value_2 = {{0x8D10D08E, 0x6B850B3D, 0x4BCE736, 0x0}};
   int code = 1;
@@ -22814,7 +23272,8 @@ START_TEST(s21_is_not_equal_2279) {
 }
 
 START_TEST(s21_is_not_equal_2280) {
-  char *example = "( 1101620461095364807362222968 != 1653146344553502107810957266 ) = True";
+  char *example =
+      "( 1101620461095364807362222968 != 1653146344553502107810957266 ) = True";
   s21_decimal value_1 = {{0x827A1B78, 0xDBD40482, 0x38F3D34, 0x0}};
   s21_decimal value_2 = {{0x812087D2, 0xE8FA45DE, 0x557735A, 0x0}};
   int code = 1;
@@ -22864,7 +23323,8 @@ START_TEST(s21_is_not_equal_2284) {
 }
 
 START_TEST(s21_is_not_equal_2285) {
-  char *example = "( 1447249118963588884596853245 != -7.8550089954593352912804356 ) = True";
+  char *example =
+      "( 1447249118963588884596853245 != -7.8550089954593352912804356 ) = True";
   s21_decimal value_1 = {{0xF0A109FD, 0xF205EA69, 0x4AD22EB, 0x0}};
   s21_decimal value_2 = {{0x54D51A04, 0xE8ACB191, 0x40F9A0, 0x80190000}};
   int code = 1;
@@ -22884,7 +23344,8 @@ START_TEST(s21_is_not_equal_2286) {
 }
 
 START_TEST(s21_is_not_equal_2287) {
-  char *example = "( -619.18697205401647379451732 != 121393033473934263 ) = True";
+  char *example =
+      "( -619.18697205401647379451732 != 121393033473934263 ) = True";
   s21_decimal value_1 = {{0x32590F54, 0x4D272304, 0x3337CB, 0x80170000}};
   s21_decimal value_2 = {{0x1E6BC3B7, 0x1AF4652, 0x0, 0x0}};
   int code = 1;
@@ -22924,7 +23385,8 @@ START_TEST(s21_is_not_equal_2290) {
 }
 
 START_TEST(s21_is_not_equal_2291) {
-  char *example = "( 1962678211890253674897570671 != 1389668556710424123 ) = True";
+  char *example =
+      "( 1962678211890253674897570671 != 1389668556710424123 ) = True";
   s21_decimal value_1 = {{0xA16D7B6F, 0xFA23652, 0x6577D47, 0x0}};
   s21_decimal value_2 = {{0x86412E3B, 0x13491830, 0x0, 0x0}};
   int code = 1;
@@ -22964,7 +23426,8 @@ START_TEST(s21_is_not_equal_2294) {
 }
 
 START_TEST(s21_is_not_equal_2295) {
-  char *example = "( 1720018442555815556152421785 != 15088570036938727179591097 ) = True";
+  char *example =
+      "( 1720018442555815556152421785 != 15088570036938727179591097 ) = True";
   s21_decimal value_1 = {{0x1301ED99, 0x9B512DF8, 0x58EC412, 0x0}};
   s21_decimal value_2 = {{0x4AA69DB9, 0x54BC587, 0xC7B21, 0x0}};
   int code = 1;
@@ -22974,7 +23437,8 @@ START_TEST(s21_is_not_equal_2295) {
 }
 
 START_TEST(s21_is_not_equal_2296) {
-  char *example = "( 1837662805726386005007 != 1133637787665536153305109356 ) = True";
+  char *example =
+      "( 1837662805726386005007 != 1133637787665536153305109356 ) = True";
   s21_decimal value_1 = {{0xCE9240F, 0x9EB1C974, 0x63, 0x0}};
   s21_decimal value_2 = {{0xC7A536C, 0x9C247CF3, 0x3A9B923, 0x0}};
   int code = 1;
@@ -23004,7 +23468,8 @@ START_TEST(s21_is_not_equal_2298) {
 }
 
 START_TEST(s21_is_not_equal_2299) {
-  char *example = "( 1465508105124501428100226847 != 7.5674568428909854E-10 ) = True";
+  char *example =
+      "( 1465508105124501428100226847 != 7.5674568428909854E-10 ) = True";
   s21_decimal value_1 = {{0x6A755F1F, 0x918CD197, 0x4BC3D69, 0x0}};
   s21_decimal value_2 = {{0x79BC751E, 0x10CD99E, 0x0, 0x1A0000}};
   int code = 1;
@@ -23044,7 +23509,8 @@ START_TEST(s21_is_not_equal_2302) {
 }
 
 START_TEST(s21_is_not_equal_2303) {
-  char *example = "( -6.7722061111623426647033930 != -3923.660888427888 ) = True";
+  char *example =
+      "( -6.7722061111623426647033930 != -3923.660888427888 ) = True";
   s21_decimal value_1 = {{0x9DE60DA1, 0x766C865, 0x59A12, 0x80180000}};
   s21_decimal value_2 = {{0x7D794D70, 0xDF08C, 0x0, 0x800C0000}};
   int code = 1;
@@ -23054,7 +23520,8 @@ START_TEST(s21_is_not_equal_2303) {
 }
 
 START_TEST(s21_is_not_equal_2304) {
-  char *example = "( 1839537732733095250 != 1040197054378416585944510018 ) = True";
+  char *example =
+      "( 1839537732733095250 != 1040197054378416585944510018 ) = True";
   s21_decimal value_1 = {{0x567BCD52, 0x198759D2, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF68EAE42, 0x4EFA3068, 0x35C6E4B, 0x0}};
   int code = 1;
@@ -23084,7 +23551,8 @@ START_TEST(s21_is_not_equal_2306) {
 }
 
 START_TEST(s21_is_not_equal_2307) {
-  char *example = "( 1203632907286952316281433086 != -9848677.6888957890906226823 ) = True";
+  char *example =
+      "( 1203632907286952316281433086 != -9848677.6888957890906226823 ) = True";
   s21_decimal value_1 = {{0xBCBA2BFE, 0xA5D4C547, 0x3E39F2E, 0x0}};
   s21_decimal value_2 = {{0x989F0087, 0xDF8A5FAD, 0x517762, 0x80130000}};
   int code = 1;
@@ -23114,7 +23582,8 @@ START_TEST(s21_is_not_equal_2309) {
 }
 
 START_TEST(s21_is_not_equal_2310) {
-  char *example = "( 153778388082246359125 != 1390251575838012489862751319 ) = True";
+  char *example =
+      "( 153778388082246359125 != 1390251575838012489862751319 ) = True";
   s21_decimal value_1 = {{0x3E751855, 0x561A9535, 0x8, 0x0}};
   s21_decimal value_2 = {{0xD6182457, 0xF0F5A8B1, 0x47DFD38, 0x0}};
   int code = 1;
@@ -23154,7 +23623,8 @@ START_TEST(s21_is_not_equal_2313) {
 }
 
 START_TEST(s21_is_not_equal_2314) {
-  char *example = "( 1234524975564717682882929478 != -7.5714832420722290792512044 ) = True";
+  char *example =
+      "( 1234524975564717682882929478 != -7.5714832420722290792512044 ) = True";
   s21_decimal value_1 = {{0xDDFA6346, 0x655A06D, 0x3FD2CD5, 0x0}};
   s21_decimal value_2 = {{0xDE06BA2C, 0x4A3D300E, 0x3EA13D, 0x80190000}};
   int code = 1;
@@ -23194,7 +23664,8 @@ START_TEST(s21_is_not_equal_2317) {
 }
 
 START_TEST(s21_is_not_equal_2318) {
-  char *example = "( 1283655461105453687081468245 != 1598550366738796187843385 ) = True";
+  char *example =
+      "( 1283655461105453687081468245 != 1598550366738796187843385 ) = True";
   s21_decimal value_1 = {{0xC4330155, 0xFB904F48, 0x425D09D, 0x0}};
   s21_decimal value_2 = {{0x43B97B39, 0x96CA2A1B, 0x15281, 0x0}};
   int code = 1;
@@ -23204,7 +23675,8 @@ START_TEST(s21_is_not_equal_2318) {
 }
 
 START_TEST(s21_is_not_equal_2319) {
-  char *example = "( 1693157692434132429972191202 != 18980731836185027132512 ) = True";
+  char *example =
+      "( 1693157692434132429972191202 != 18980731836185027132512 ) = True";
   s21_decimal value_1 = {{0xD96837E2, 0x6CC508A0, 0x5788C16, 0x0}};
   s21_decimal value_2 = {{0x7461BC60, 0xF291A0C8, 0x404, 0x0}};
   int code = 1;
@@ -23224,7 +23696,8 @@ START_TEST(s21_is_not_equal_2320) {
 }
 
 START_TEST(s21_is_not_equal_2321) {
-  char *example = "( 1.1170569903622063E-10 != 9983.19981401424024829514164 ) = True";
+  char *example =
+      "( 1.1170569903622063E-10 != 9983.19981401424024829514164 ) = True";
   s21_decimal value_1 = {{0xFB0B47AF, 0x27AF92, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x95D951B4, 0xA230B368, 0x339CA7A, 0x170000}};
   int code = 1;
@@ -23244,7 +23717,8 @@ START_TEST(s21_is_not_equal_2322) {
 }
 
 START_TEST(s21_is_not_equal_2323) {
-  char *example = "( -65.4197977732425489 != 1618809640089297007396807691 ) = True";
+  char *example =
+      "( -65.4197977732425489 != 1618809640089297007396807691 ) = True";
   s21_decimal value_1 = {{0x3B852711, 0x9142D98, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x4904640B, 0x6E675C7A, 0x53B0C46, 0x0}};
   int code = 1;
@@ -23314,7 +23788,8 @@ START_TEST(s21_is_not_equal_2329) {
 }
 
 START_TEST(s21_is_not_equal_2330) {
-  char *example = "( 1506138940175589120149482398 != 1930769001477200817049064018 ) = True";
+  char *example =
+      "( 1506138940175589120149482398 != 1930769001477200817049064018 ) = True";
   s21_decimal value_1 = {{0xA45EEB9E, 0x8CD7E7A1, 0x4DDD953, 0x0}};
   s21_decimal value_2 = {{0x92C05252, 0x4C680932, 0x63D183D, 0x0}};
   int code = 1;
@@ -23444,7 +23919,8 @@ START_TEST(s21_is_not_equal_2342) {
 }
 
 START_TEST(s21_is_not_equal_2343) {
-  char *example = "( 1326228337585993637902416851 != -8701.1691405337509184673917 ) = True";
+  char *example =
+      "( 1326228337585993637902416851 != -8701.1691405337509184673917 ) = True";
   s21_decimal value_1 = {{0x72F3FBD3, 0x3DBA9BAD, 0x44907C6, 0x0}};
   s21_decimal value_2 = {{0x43E4187D, 0x3E1F4F80, 0x47F971, 0x80160000}};
   int code = 1;
@@ -23484,7 +23960,8 @@ START_TEST(s21_is_not_equal_2346) {
 }
 
 START_TEST(s21_is_not_equal_2347) {
-  char *example = "( 1780944025297791021060482801 != 10236591846015841264383116 ) = True";
+  char *example =
+      "( 1780944025297791021060482801 != 10236591846015841264383116 ) = True";
   s21_decimal value_1 = {{0xD66066F1, 0x10AD7CCE, 0x5C12991, 0x0}};
   s21_decimal value_2 = {{0xD246B48C, 0xC183A35D, 0x877AE, 0x0}};
   int code = 1;
@@ -23554,7 +24031,8 @@ START_TEST(s21_is_not_equal_2353) {
 }
 
 START_TEST(s21_is_not_equal_2354) {
-  char *example = "( -9.2521159566180986345847605 != 12319823576089800881 ) = True";
+  char *example =
+      "( -9.2521159566180986345847605 != 12319823576089800881 ) = True";
   s21_decimal value_1 = {{0x60757B35, 0x1C314148, 0x4C881E, 0x80190000}};
   s21_decimal value_2 = {{0xEC50B0B1, 0xAAF8CE44, 0x0, 0x0}};
   int code = 1;
@@ -23574,7 +24052,8 @@ START_TEST(s21_is_not_equal_2355) {
 }
 
 START_TEST(s21_is_not_equal_2356) {
-  char *example = "( -73.718246217104560371008410 != -59.28319662947034 ) = True";
+  char *example =
+      "( -73.718246217104560371008410 != -59.28319662947034 ) = True";
   s21_decimal value_1 = {{0x77FCCD29, 0x69DB44E1, 0x6190B, 0x80170000}};
   s21_decimal value_2 = {{0x7B9FFADA, 0x150FC6, 0x0, 0x800E0000}};
   int code = 1;
@@ -23634,7 +24113,8 @@ START_TEST(s21_is_not_equal_2361) {
 }
 
 START_TEST(s21_is_not_equal_2362) {
-  char *example = "( 1475105098257109068835490286 != -16.778738799266188680810646 ) = True";
+  char *example =
+      "( 1475105098257109068835490286 != -16.778738799266188680810646 ) = True";
   s21_decimal value_1 = {{0x36089EE, 0x9BD6636B, 0x4C42DA7, 0x0}};
   s21_decimal value_2 = {{0x59D4D096, 0x40BD2C76, 0xDE109, 0x80180000}};
   int code = 1;
@@ -23674,7 +24154,8 @@ START_TEST(s21_is_not_equal_2365) {
 }
 
 START_TEST(s21_is_not_equal_2366) {
-  char *example = "( 1811437922570084426682590595 != 1122228934103574322 ) = True";
+  char *example =
+      "( 1811437922570084426682590595 != 1122228934103574322 ) = True";
   s21_decimal value_1 = {{0xD8ADE583, 0x8C74B39B, 0x5DA62E6, 0x0}};
   s21_decimal value_2 = {{0xDE8A732, 0xF92F545, 0x0, 0x0}};
   int code = 1;
@@ -23744,7 +24225,8 @@ START_TEST(s21_is_not_equal_2372) {
 }
 
 START_TEST(s21_is_not_equal_2373) {
-  char *example = "( 124375254752093310642573 != 1672001281322077199444792736 ) = True";
+  char *example =
+      "( 124375254752093310642573 != 1672001281322077199444792736 ) = True";
   s21_decimal value_1 = {{0xE48D698D, 0x6564DCAF, 0x1A56, 0x0}};
   s21_decimal value_2 = {{0xCA8CD5A0, 0x1494E87D, 0x5670C0B, 0x0}};
   int code = 1;
@@ -23844,7 +24326,8 @@ START_TEST(s21_is_not_equal_2382) {
 }
 
 START_TEST(s21_is_not_equal_2383) {
-  char *example = "( 1492528319557823555670847734 != 1129659262030785257325840694 ) = True";
+  char *example =
+      "( 1492528319557823555670847734 != 1129659262030785257325840694 ) = True";
   s21_decimal value_1 = {{0x96B730F6, 0x53FA3478, 0x4D2972A, 0x0}};
   s21_decimal value_2 = {{0xB671C936, 0x4D98733B, 0x3A66EA7, 0x0}};
   int code = 1;
@@ -23914,7 +24397,8 @@ START_TEST(s21_is_not_equal_2389) {
 }
 
 START_TEST(s21_is_not_equal_2390) {
-  char *example = "( 1772993855002063497912198866 != 10241504673456822398 ) = True";
+  char *example =
+      "( 1772993855002063497912198866 != 10241504673456822398 ) = True";
   s21_decimal value_1 = {{0x91A926D2, 0x7847101C, 0x5BA960D, 0x0}};
   s21_decimal value_2 = {{0x1AE5987E, 0x8E21223D, 0x0, 0x0}};
   int code = 1;
@@ -24024,7 +24508,8 @@ START_TEST(s21_is_not_equal_2400) {
 }
 
 START_TEST(s21_is_not_equal_2401) {
-  char *example = "( -45.891651447664406095904099 != 9.0084926775607432E-10 ) = True";
+  char *example =
+      "( -45.891651447664406095904099 != 9.0084926775607432E-10 ) = True";
   s21_decimal value_1 = {{0x9F1ABD63, 0x68F0DCB5, 0x25F5EF, 0x80180000}};
   s21_decimal value_2 = {{0x7C13C088, 0x1400BC3, 0x0, 0x1A0000}};
   int code = 1;
@@ -24084,7 +24569,8 @@ START_TEST(s21_is_not_equal_2406) {
 }
 
 START_TEST(s21_is_not_equal_2407) {
-  char *example = "( 1985236907556303385679546865 != 1641582769723730310181942145 ) = True";
+  char *example =
+      "( 1985236907556303385679546865 != 1641582769723730310181942145 ) = True";
   s21_decimal value_1 = {{0x692C9F1, 0x674EE274, 0x66A2644, 0x0}};
   s21_decimal value_2 = {{0xEFB7F381, 0x4330B5A0, 0x54DE2AC, 0x0}};
   int code = 1;
@@ -24104,7 +24590,8 @@ START_TEST(s21_is_not_equal_2408) {
 }
 
 START_TEST(s21_is_not_equal_2409) {
-  char *example = "( 1603587925417715343417736930 != 1693493240955589737568857631 ) = True";
+  char *example =
+      "( 1603587925417715343417736930 != 1693493240955589737568857631 ) = True";
   s21_decimal value_1 = {{0xB5D8FEE2, 0xA01ED5B4, 0x52E74F3, 0x0}};
   s21_decimal value_2 = {{0xFACEE1F, 0x8BF31DCA, 0x578D324, 0x0}};
   int code = 1;
@@ -24204,7 +24691,8 @@ START_TEST(s21_is_not_equal_2418) {
 }
 
 START_TEST(s21_is_not_equal_2419) {
-  char *example = "( 73.5517922782913652008293841 != -73079.86556346411 ) = True";
+  char *example =
+      "( 73.5517922782913652008293841 != -73079.86556346411 ) = True";
   s21_decimal value_1 = {{0x3C0A15D1, 0x7D39C9B6, 0x26067FA, 0x190000}};
   s21_decimal value_2 = {{0x36B6E02B, 0x19F693, 0x0, 0x800B0000}};
   int code = 1;
@@ -24264,7 +24752,8 @@ START_TEST(s21_is_not_equal_2424) {
 }
 
 START_TEST(s21_is_not_equal_2425) {
-  char *example = "( 1527766664867509906751580117 != 196563540898017854124 ) = True";
+  char *example =
+      "( 1527766664867509906751580117 != 196563540898017854124 ) = True";
   s21_decimal value_1 = {{0x9C2F67D5, 0xDAE2391F, 0x4EFBD2C, 0x0}};
   s21_decimal value_2 = {{0x2B5242AC, 0xA7DDFB02, 0xA, 0x0}};
   int code = 1;
@@ -24304,7 +24793,8 @@ START_TEST(s21_is_not_equal_2428) {
 }
 
 START_TEST(s21_is_not_equal_2429) {
-  char *example = "( 1347222717815889538713581778 != -853.719939911933515388 ) = True";
+  char *example =
+      "( 1347222717815889538713581778 != -853.719939911933515388 ) = True";
   s21_decimal value_1 = {{0x77CEF8D2, 0xDFB74C4F, 0x45A6581, 0x0}};
   s21_decimal value_2 = {{0xD6A0567C, 0x47BE8225, 0x2E, 0x80120000}};
   int code = 1;
@@ -24404,7 +24894,8 @@ START_TEST(s21_is_not_equal_2438) {
 }
 
 START_TEST(s21_is_not_equal_2439) {
-  char *example = "( 1626189645811216500511721852 != 1449733001103582970105551 ) = True";
+  char *example =
+      "( 1626189645811216500511721852 != 1449733001103582970105551 ) = True";
   s21_decimal value_1 = {{0xAA03C97C, 0x57D54026, 0x541270D, 0x0}};
   s21_decimal value_2 = {{0x4FDDCECF, 0x2EF7A113, 0x132FE, 0x0}};
   int code = 1;
@@ -24414,7 +24905,8 @@ START_TEST(s21_is_not_equal_2439) {
 }
 
 START_TEST(s21_is_not_equal_2440) {
-  char *example = "( 10334084811168141336 != 1063517793142182692736175783 ) = True";
+  char *example =
+      "( 10334084811168141336 != 1063517793142182692736175783 ) = True";
   s21_decimal value_1 = {{0x286FD018, 0x8F6A0B62, 0x0, 0x0}};
   s21_decimal value_2 = {{0x82A38EA7, 0x170FF43B, 0x36FB8A7, 0x0}};
   int code = 1;
@@ -24454,7 +24946,8 @@ START_TEST(s21_is_not_equal_2443) {
 }
 
 START_TEST(s21_is_not_equal_2444) {
-  char *example = "( 1969756442920057223486064462 != -80.097584169064026446235736 ) = True";
+  char *example =
+      "( 1969756442920057223486064462 != -80.097584169064026446235736 ) = True";
   s21_decimal value_1 = {{0x4F13474E, 0xBBEB8163, 0x65D5826, 0x0}};
   s21_decimal value_2 = {{0x9F600858, 0xBD044EE7, 0x424152, 0x80180000}};
   int code = 1;
@@ -24464,7 +24957,8 @@ START_TEST(s21_is_not_equal_2444) {
 }
 
 START_TEST(s21_is_not_equal_2445) {
-  char *example = "( 15383544824042555253 != -6.1853561585646157323223707 ) = True";
+  char *example =
+      "( 15383544824042555253 != -6.1853561585646157323223707 ) = True";
   s21_decimal value_1 = {{0xF5B0775, 0xD57D5483, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBD96C29B, 0x4AD7DAB3, 0x332A00, 0x80190000}};
   int code = 1;
@@ -24534,7 +25028,8 @@ START_TEST(s21_is_not_equal_2451) {
 }
 
 START_TEST(s21_is_not_equal_2452) {
-  char *example = "( 1016443737755326989016349509 != 12433873265738389281288 ) = True";
+  char *example =
+      "( 1016443737755326989016349509 != 12433873265738389281288 ) = True";
   s21_decimal value_1 = {{0x2359BB45, 0x6F267599, 0x348C855, 0x0}};
   s21_decimal value_2 = {{0x82DA5A08, 0xAA7A1B4, 0x2A2, 0x0}};
   int code = 1;
@@ -24544,7 +25039,8 @@ START_TEST(s21_is_not_equal_2452) {
 }
 
 START_TEST(s21_is_not_equal_2453) {
-  char *example = "( 0.89830808012748571505872411 != -9197254.9318339517387893 ) = True";
+  char *example =
+      "( 0.89830808012748571505872411 != -9197254.9318339517387893 ) = True";
   s21_decimal value_1 = {{0x33604E1B, 0xDC3497EF, 0x4A4E69, 0x1A0000}};
   s21_decimal value_2 = {{0x421A9475, 0xD7860994, 0x1379, 0x80100000}};
   int code = 1;
@@ -24614,7 +25110,8 @@ START_TEST(s21_is_not_equal_2459) {
 }
 
 START_TEST(s21_is_not_equal_2460) {
-  char *example = "( 1634190159262277611883147064 != 1495741422789162052984059 ) = True";
+  char *example =
+      "( 1634190159262277611883147064 != 1495741422789162052984059 ) = True";
   s21_decimal value_1 = {{0x4B12F38, 0xBDC4347, 0x547C53A, 0x0}};
   s21_decimal value_2 = {{0x57E19CFB, 0x4E14B10B, 0x13CBC, 0x0}};
   int code = 1;
@@ -24674,7 +25171,8 @@ START_TEST(s21_is_not_equal_2465) {
 }
 
 START_TEST(s21_is_not_equal_2466) {
-  char *example = "( -6.1961319783510219293269489 != -3.3496009735037826928264830 ) = True";
+  char *example =
+      "( -6.1961319783510219293269489 != -3.3496009735037826928264830 ) = True";
   s21_decimal value_1 = {{0x54191DF1, 0xE03F68AA, 0x3340D1, 0x80190000}};
   s21_decimal value_2 = {{0x867AD73, 0x3B8D1722, 0x2C54E, 0x80180000}};
   int code = 1;
@@ -24694,7 +25192,8 @@ START_TEST(s21_is_not_equal_2467) {
 }
 
 START_TEST(s21_is_not_equal_2468) {
-  char *example = "( 16558002938409819365134 != -2.8944257538202478063817513 ) = True";
+  char *example =
+      "( 16558002938409819365134 != -2.8944257538202478063817513 ) = True";
   s21_decimal value_1 = {{0x9F74DF0E, 0x9C73886C, 0x381, 0x0}};
   s21_decimal value_2 = {{0xF79E9329, 0x585EB24A, 0x17F12F, 0x80190000}};
   int code = 1;
@@ -24764,7 +25263,8 @@ START_TEST(s21_is_not_equal_2474) {
 }
 
 START_TEST(s21_is_not_equal_2475) {
-  char *example = "( 126608692655328877848517 != 1559758553663674944694052036 ) = True";
+  char *example =
+      "( 126608692655328877848517 != 1559758553663674944694052036 ) = True";
   s21_decimal value_1 = {{0x2DCBA7C5, 0x7892406B, 0x1ACF, 0x0}};
   s21_decimal value_2 = {{0xC894E4C4, 0x9F2B05ED, 0x50A33B8, 0x0}};
   int code = 1;
@@ -24984,7 +25484,8 @@ START_TEST(s21_is_not_equal_2496) {
 }
 
 START_TEST(s21_is_not_equal_2497) {
-  char *example = "( 1019237419129681125244133907 != 1496588579593319202438788827 ) = True";
+  char *example =
+      "( 1019237419129681125244133907 != 1496588579593319202438788827 ) = True";
   s21_decimal value_1 = {{0xCA0BE213, 0x34775665, 0x34B17EB, 0x0}};
   s21_decimal value_2 = {{0x927436DB, 0x7731CC1F, 0x4D5F2F5, 0x0}};
   int code = 1;
@@ -25014,7 +25515,8 @@ START_TEST(s21_is_not_equal_2499) {
 }
 
 START_TEST(s21_is_not_equal_2500) {
-  char *example = "( -28.9182885938853998694726 != 0.30646381984427888654340517 ) = True";
+  char *example =
+      "( -28.9182885938853998694726 != 0.30646381984427888654340517 ) = True";
   s21_decimal value_1 = {{0xF1071146, 0xA2BA8CCA, 0x3D3C, 0x80160000}};
   s21_decimal value_2 = {{0xB7CED1A5, 0xB241D27B, 0x19599F, 0x1A0000}};
   int code = 1;
@@ -25044,7 +25546,8 @@ START_TEST(s21_is_not_equal_2502) {
 }
 
 START_TEST(s21_is_not_equal_2503) {
-  char *example = "( 183560997306047037 != -549.60630700998974543087697 ) = True";
+  char *example =
+      "( 183560997306047037 != -549.60630700998974543087697 ) = True";
   s21_decimal value_1 = {{0x270B1A3D, 0x28C23C1, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2FA5C851, 0xC2A6F11B, 0x2D765D, 0x80170000}};
   int code = 1;
@@ -25134,7 +25637,8 @@ START_TEST(s21_is_not_equal_2511) {
 }
 
 START_TEST(s21_is_not_equal_2512) {
-  char *example = "( -4.4472374428939584241 != -13.541533691924393608702908 ) = True";
+  char *example =
+      "( -4.4472374428939584241 != -13.541533691924393608702908 ) = True";
   s21_decimal value_1 = {{0x1B1C02F1, 0x692D9CEB, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0x14CD6BBC, 0x32B3CD6, 0xB3388, 0x80180000}};
   int code = 1;
@@ -25144,7 +25648,8 @@ START_TEST(s21_is_not_equal_2512) {
 }
 
 START_TEST(s21_is_not_equal_2513) {
-  char *example = "( 1049194476195794531701384994 != 1808954760588933531401963723 ) = True";
+  char *example =
+      "( 1049194476195794531701384994 != 1808954760588933531401963723 ) = True";
   s21_decimal value_1 = {{0x83366722, 0x85C6B9CD, 0x363DF92, 0x0}};
   s21_decimal value_2 = {{0xD0A7C8CB, 0x116396E6, 0x5D85512, 0x0}};
   int code = 1;
@@ -25174,7 +25679,8 @@ START_TEST(s21_is_not_equal_2515) {
 }
 
 START_TEST(s21_is_not_equal_2516) {
-  char *example = "( -6160.961471601168148103 != 10530973540319609434653579 ) = True";
+  char *example =
+      "( -6160.961471601168148103 != 10530973540319609434653579 ) = True";
   s21_decimal value_1 = {{0x9780E687, 0xFC84183F, 0x14D, 0x80120000}};
   s21_decimal value_2 = {{0xD9DBC38B, 0x3833C794, 0x8B605, 0x0}};
   int code = 1;
@@ -25254,7 +25760,8 @@ START_TEST(s21_is_not_equal_2523) {
 }
 
 START_TEST(s21_is_not_equal_2524) {
-  char *example = "( 1259972684144817418592235905 != 0.04223337298393863453375725 ) = True";
+  char *example =
+      "( 1259972684144817418592235905 != 0.04223337298393863453375725 ) = True";
   s21_decimal value_1 = {{0x1A2AB181, 0x123446A0, 0x4123998, 0x0}};
   s21_decimal value_2 = {{0x164F7CED, 0x92DE3136, 0x37E53, 0x1A0000}};
   int code = 1;
@@ -25324,7 +25831,8 @@ START_TEST(s21_is_not_equal_2530) {
 }
 
 START_TEST(s21_is_not_equal_2531) {
-  char *example = "( -76.01197487867068193 != 1970464490900482572108454315 ) = True";
+  char *example =
+      "( -76.01197487867068193 != 1970464490900482572108454315 ) = True";
   s21_decimal value_1 = {{0xA3E87F21, 0x697CE0D7, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xB65C59AB, 0x178CCF43, 0x65DEE16, 0x0}};
   int code = 1;
@@ -25364,7 +25872,8 @@ START_TEST(s21_is_not_equal_2534) {
 }
 
 START_TEST(s21_is_not_equal_2535) {
-  char *example = "( 0.7763650784318254749 != 1393059762401270933531388032 ) = True";
+  char *example =
+      "( 0.7763650784318254749 != 1393059762401270933531388032 ) = True";
   s21_decimal value_1 = {{0x3778EE9D, 0x6BBE0741, 0x0, 0x130000}};
   s21_decimal value_2 = {{0x5B5BE880, 0xA35922D, 0x4804FE1, 0x0}};
   int code = 1;
@@ -25374,7 +25883,8 @@ START_TEST(s21_is_not_equal_2535) {
 }
 
 START_TEST(s21_is_not_equal_2536) {
-  char *example = "( 1703174693667742157854506510 != 1206266315861486020013948196 ) = True";
+  char *example =
+      "( 1703174693667742157854506510 != 1206266315861486020013948196 ) = True";
   s21_decimal value_1 = {{0xE1EC7E0E, 0x265C3D8F, 0x580D545, 0x0}};
   s21_decimal value_2 = {{0x4A317D24, 0x33D6315, 0x3E5CCD4, 0x0}};
   int code = 1;
@@ -25404,7 +25914,8 @@ START_TEST(s21_is_not_equal_2538) {
 }
 
 START_TEST(s21_is_not_equal_2539) {
-  char *example = "( 1409004305243886910849388124 != -290.80694475526320770491747 ) = True";
+  char *example =
+      "( 1409004305243886910849388124 != -290.80694475526320770491747 ) = True";
   s21_decimal value_1 = {{0x782F8E5C, 0x7078C0DF, 0x48D8044, 0x0}};
   s21_decimal value_2 = {{0xEEF7A563, 0x9B3C3873, 0x180E13, 0x80170000}};
   int code = 1;
@@ -25464,7 +25975,8 @@ START_TEST(s21_is_not_equal_2544) {
 }
 
 START_TEST(s21_is_not_equal_2545) {
-  char *example = "( 151124115271584525815253736 != -8.1391218117864074790115015 ) = True";
+  char *example =
+      "( 151124115271584525815253736 != -8.1391218117864074790115015 ) = True";
   s21_decimal value_1 = {{0xF2220AE8, 0xB461FB65, 0x7D01C6, 0x0}};
   s21_decimal value_2 = {{0xE82D16C7, 0xC6759223, 0x435342, 0x80190000}};
   int code = 1;
@@ -25524,7 +26036,8 @@ START_TEST(s21_is_not_equal_2550) {
 }
 
 START_TEST(s21_is_not_equal_2551) {
-  char *example = "( 1211419296772808942642 != 1125923378351396549390727035 ) = True";
+  char *example =
+      "( 1211419296772808942642 != 1125923378351396549390727035 ) = True";
   s21_decimal value_1 = {{0x54CAA432, 0xABD1E80A, 0x41, 0x0}};
   s21_decimal value_2 = {{0x1F43777B, 0xA49E4740, 0x3A3578C, 0x0}};
   int code = 1;
@@ -25574,7 +26087,8 @@ START_TEST(s21_is_not_equal_2555) {
 }
 
 START_TEST(s21_is_not_equal_2556) {
-  char *example = "( 19517247021128411060813 != -1.3706342624710670931675476 ) = True";
+  char *example =
+      "( 19517247021128411060813 != -1.3706342624710670931675476 ) = True";
   s21_decimal value_1 = {{0xE5C91A4D, 0x83676E8, 0x422, 0x0}};
   s21_decimal value_2 = {{0x5E1F4954, 0x529122CE, 0xB566E, 0x80190000}};
   int code = 1;
@@ -25584,7 +26098,8 @@ START_TEST(s21_is_not_equal_2556) {
 }
 
 START_TEST(s21_is_not_equal_2557) {
-  char *example = "( 1773956043066575620376681873 != -6.7635023670313509 ) = True";
+  char *example =
+      "( 1773956043066575620376681873 != -6.7635023670313509 ) = True";
   s21_decimal value_1 = {{0x138CDD91, 0xCA116F09, 0x5BB61CD, 0x0}};
   s21_decimal value_2 = {{0x183E8225, 0xF049B2, 0x0, 0x80100000}};
   int code = 1;
@@ -25594,7 +26109,8 @@ START_TEST(s21_is_not_equal_2557) {
 }
 
 START_TEST(s21_is_not_equal_2558) {
-  char *example = "( 1520482373356003459297978230 != 2.388142680113E-10 ) = True";
+  char *example =
+      "( 1520482373356003459297978230 != 2.388142680113E-10 ) = True";
   s21_decimal value_1 = {{0x90382776, 0x9EF4EC7E, 0x4E9B6AA, 0x0}};
   s21_decimal value_2 = {{0x8656831, 0x22C, 0x0, 0x160000}};
   int code = 1;
@@ -25644,7 +26160,8 @@ START_TEST(s21_is_not_equal_2562) {
 }
 
 START_TEST(s21_is_not_equal_2563) {
-  char *example = "( 17441253411708266090529107 != 1701492874996862028426317474 ) = True";
+  char *example =
+      "( 17441253411708266090529107 != 1701492874996862028426317474 ) = True";
   s21_decimal value_1 = {{0x37DF0153, 0x3DF333AD, 0xE6D54, 0x0}};
   s21_decimal value_2 = {{0xD2550EA2, 0x93B6F14B, 0x57F7121, 0x0}};
   int code = 1;
@@ -25714,7 +26231,8 @@ START_TEST(s21_is_not_equal_2569) {
 }
 
 START_TEST(s21_is_not_equal_2570) {
-  char *example = "( 19309788505800479364 != 1863289729202770983583574937 ) = True";
+  char *example =
+      "( 19309788505800479364 != 1863289729202770983583574937 ) = True";
   s21_decimal value_1 = {{0xA0289284, 0xBFA2656, 0x1, 0x0}};
   s21_decimal value_2 = {{0x44A56B99, 0x9E5B2A69, 0x60546F2, 0x0}};
   int code = 1;
@@ -25744,7 +26262,8 @@ START_TEST(s21_is_not_equal_2572) {
 }
 
 START_TEST(s21_is_not_equal_2573) {
-  char *example = "( 1352104063696509714108927772 != 1014448361982188894972652918 ) = True";
+  char *example =
+      "( 1352104063696509714108927772 != 1014448361982188894972652918 ) = True";
   s21_decimal value_1 = {{0xF6AE4F1C, 0x2A105577, 0x45E6F2C, 0x0}};
   s21_decimal value_2 = {{0xF531AD76, 0xE592E270, 0x34721CB, 0x0}};
   int code = 1;
@@ -25754,7 +26273,8 @@ START_TEST(s21_is_not_equal_2573) {
 }
 
 START_TEST(s21_is_not_equal_2574) {
-  char *example = "( -7.247566692604604294 != 14028621794522425467904348 ) = True";
+  char *example =
+      "( -7.247566692604604294 != 14028621794522425467904348 ) = True";
   s21_decimal value_1 = {{0xF6A66F86, 0x64948781, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xED2CA15C, 0x1C801E5F, 0xB9AAD, 0x0}};
   int code = 1;
@@ -25764,7 +26284,8 @@ START_TEST(s21_is_not_equal_2574) {
 }
 
 START_TEST(s21_is_not_equal_2575) {
-  char *example = "( 1937487187957870574968279929 != -2.0508356749383915543798973 ) = True";
+  char *example =
+      "( 1937487187957870574968279929 != -2.0508356749383915543798973 ) = True";
   s21_decimal value_1 = {{0x7B349379, 0xEAD6A4DB, 0x642A6DE, 0x0}};
   s21_decimal value_2 = {{0x86F124BD, 0x3F4141BE, 0x10F6D0, 0x80190000}};
   int code = 1;
@@ -25844,7 +26365,8 @@ START_TEST(s21_is_not_equal_2582) {
 }
 
 START_TEST(s21_is_not_equal_2583) {
-  char *example = "( 1141836421786345573539601117 != 17779406148471262 ) = True";
+  char *example =
+      "( 1141836421786345573539601117 != 17779406148471262 ) = True";
   s21_decimal value_1 = {{0xE47B5ADD, 0x74C8F7DD, 0x3B08144, 0x0}};
   s21_decimal value_2 = {{0x93CC09DE, 0x3F2A46, 0x0, 0x0}};
   int code = 1;
@@ -25864,7 +26386,8 @@ START_TEST(s21_is_not_equal_2584) {
 }
 
 START_TEST(s21_is_not_equal_2585) {
-  char *example = "( -91.343539482642875186732500 != 1234420291782130492409053998 ) = True";
+  char *example =
+      "( -91.343539482642875186732500 != 1234420291782130492409053998 ) = True";
   s21_decimal value_1 = {{0xF13CEDBD, 0x6E95E67F, 0xC16D, 0x80160000}};
   s21_decimal value_2 = {{0x8F37032E, 0x1B0347D4, 0x3FD16AA, 0x0}};
   int code = 1;
@@ -25914,7 +26437,8 @@ START_TEST(s21_is_not_equal_2589) {
 }
 
 START_TEST(s21_is_not_equal_2590) {
-  char *example = "( -6.887577485349560508878 != 16537495696291251402956 ) = True";
+  char *example =
+      "( -6.887577485349560508878 != 16537495696291251402956 ) = True";
   s21_decimal value_1 = {{0xD6C7E1CE, 0x6056BEF9, 0x175, 0x80150000}};
   s21_decimal value_2 = {{0x9748B8CC, 0x7FDB2C5E, 0x380, 0x0}};
   int code = 1;
@@ -25924,7 +26448,8 @@ START_TEST(s21_is_not_equal_2590) {
 }
 
 START_TEST(s21_is_not_equal_2591) {
-  char *example = "( 108307479223312406 != 1026567096168751661388133682 ) = True";
+  char *example =
+      "( 108307479223312406 != 1026567096168751661388133682 ) = True";
   s21_decimal value_1 = {{0x199FA016, 0x180C914, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC2BF532, 0xCB1D3BBC, 0x3512809, 0x0}};
   int code = 1;
@@ -26024,7 +26549,9 @@ START_TEST(s21_is_not_equal_2600) {
 }
 
 START_TEST(s21_is_not_equal_2601) {
-  char *example = "( 1852479481849513145126800202 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1852479481849513145126800202 != -79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x2B92CB4A, 0xEF700796, 0x5FC55C9, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -26044,7 +26571,8 @@ START_TEST(s21_is_not_equal_2602) {
 }
 
 START_TEST(s21_is_not_equal_2603) {
-  char *example = "( 0.26207896799874310470402084 != 14312994952550505955 ) = True";
+  char *example =
+      "( 0.26207896799874310470402084 != 14312994952550505955 ) = True";
   s21_decimal value_1 = {{0xC7EC8024, 0xEEAD815D, 0x15ADBC, 0x1A0000}};
   s21_decimal value_2 = {{0x6ABB5DE3, 0xC6A1F913, 0x0, 0x0}};
   int code = 1;
@@ -26084,7 +26612,8 @@ START_TEST(s21_is_not_equal_2606) {
 }
 
 START_TEST(s21_is_not_equal_2607) {
-  char *example = "( -955.78097623771687974000831 != -8.340684115189844949 ) = True";
+  char *example =
+      "( -955.78097623771687974000831 != -8.340684115189844949 ) = True";
   s21_decimal value_1 = {{0x6BC6D8BF, 0xDE5B40D, 0x4F0F73, 0x80170000}};
   s21_decimal value_2 = {{0xDA24BD5, 0x73C01003, 0x0, 0x80120000}};
   int code = 1;
@@ -26134,7 +26663,8 @@ START_TEST(s21_is_not_equal_2611) {
 }
 
 START_TEST(s21_is_not_equal_2612) {
-  char *example = "( 1675214286149494575231357184 != 0.00868466905390441897226079 ) = True";
+  char *example =
+      "( 1675214286149494575231357184 != 0.00868466905390441897226079 ) = True";
   s21_decimal value_1 = {{0xB2FB5100, 0x6BCD536F, 0x569B46C, 0x0}};
   s21_decimal value_2 = {{0xE2D96F5F, 0xAF6E5DBC, 0xB7E7, 0x1A0000}};
   int code = 1;
@@ -26244,7 +26774,8 @@ START_TEST(s21_is_not_equal_2622) {
 }
 
 START_TEST(s21_is_not_equal_2623) {
-  char *example = "( 1022142267256960461848415543 != 0.00226914878335829588762833 ) = True";
+  char *example =
+      "( 1022142267256960461848415543 != 0.00226914878335829588762833 ) = True";
   s21_decimal value_1 = {{0x89D78D37, 0x5663F5F7, 0x34D7F0B, 0x0}};
   s21_decimal value_2 = {{0xB86AE0D1, 0x14882FE2, 0x300D, 0x1A0000}};
   int code = 1;
@@ -26274,7 +26805,8 @@ START_TEST(s21_is_not_equal_2625) {
 }
 
 START_TEST(s21_is_not_equal_2626) {
-  char *example = "( 1368078181912615324847 != 1025469363953081989002423068 ) = True";
+  char *example =
+      "( 1368078181912615324847 != 1025469363953081989002423068 ) = True";
   s21_decimal value_1 = {{0x87AC0CAF, 0x29E6120F, 0x4A, 0x0}};
   s21_decimal value_2 = {{0xCB3BEB1C, 0x9C5AF6B5, 0x3503F95, 0x0}};
   int code = 1;
@@ -26304,7 +26836,8 @@ START_TEST(s21_is_not_equal_2628) {
 }
 
 START_TEST(s21_is_not_equal_2629) {
-  char *example = "( -519.59737197069315446473320 != -7832.8581425294004255057815 ) = True";
+  char *example =
+      "( -519.59737197069315446473320 != -7832.8581425294004255057815 ) = True";
   s21_decimal value_1 = {{0xD0EE6A4, 0x4CBCB0D4, 0x44C4A, 0x80160000}};
   s21_decimal value_2 = {{0xF1ADE797, 0xE84EAE4B, 0x40CAB8, 0x80160000}};
   int code = 1;
@@ -26314,7 +26847,8 @@ START_TEST(s21_is_not_equal_2629) {
 }
 
 START_TEST(s21_is_not_equal_2630) {
-  char *example = "( 1952789622365850262309408660 != 1313249753189430331048182924 ) = True";
+  char *example =
+      "( 1952789622365850262309408660 != 1313249753189430331048182924 ) = True";
   s21_decimal value_1 = {{0x86078F94, 0x8C7ED223, 0x64F4F49, 0x0}};
   s21_decimal value_2 = {{0x8F93C48C, 0xC56D788D, 0x43E4B73, 0x0}};
   int code = 1;
@@ -26324,7 +26858,8 @@ START_TEST(s21_is_not_equal_2630) {
 }
 
 START_TEST(s21_is_not_equal_2631) {
-  char *example = "( -7.9311294733016845002405132 != 1119422049699673226027540705 ) = True";
+  char *example =
+      "( -7.9311294733016845002405132 != 1119422049699673226027540705 ) = True";
   s21_decimal value_1 = {{0x34F6F50C, 0xE7115DF8, 0x419AD1, 0x80190000}};
   s21_decimal value_2 = {{0x551D20E1, 0xE91EEC5A, 0x39DF6D6, 0x0}};
   int code = 1;
@@ -26354,7 +26889,8 @@ START_TEST(s21_is_not_equal_2633) {
 }
 
 START_TEST(s21_is_not_equal_2634) {
-  char *example = "( -10.558031075010950715426337 != 10566807757257156 ) = True";
+  char *example =
+      "( -10.558031075010950715426337 != 10566807757257156 ) = True";
   s21_decimal value_1 = {{0xBF844621, 0x2ED6464, 0x8BBC0, 0x80180000}};
   s21_decimal value_2 = {{0xA6C7F9C4, 0x258A74, 0x0, 0x0}};
   int code = 1;
@@ -26394,7 +26930,8 @@ START_TEST(s21_is_not_equal_2637) {
 }
 
 START_TEST(s21_is_not_equal_2638) {
-  char *example = "( 4.9048118051457574E-10 != -6185.0130755588298646147955 ) = True";
+  char *example =
+      "( 4.9048118051457574E-10 != -6185.0130755588298646147955 ) = True";
   s21_decimal value_1 = {{0xE55BCA26, 0xAE4100, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x7646D373, 0x4E82FA65, 0x332946, 0x80160000}};
   int code = 1;
@@ -26444,7 +26981,8 @@ START_TEST(s21_is_not_equal_2642) {
 }
 
 START_TEST(s21_is_not_equal_2643) {
-  char *example = "( 187517011956504637 != 1858884712947138084292161605 ) = True";
+  char *example =
+      "( 187517011956504637 != 1858884712947138084292161605 ) = True";
   s21_decimal value_1 = {{0x9702983D, 0x29A31BA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9C1A7045, 0x357870AA, 0x601A226, 0x0}};
   int code = 1;
@@ -26484,7 +27022,8 @@ START_TEST(s21_is_not_equal_2646) {
 }
 
 START_TEST(s21_is_not_equal_2647) {
-  char *example = "( -32.589683736261235563470944 != 16166796747932192173632 ) = True";
+  char *example =
+      "( -32.589683736261235563470944 != 16166796747932192173632 ) = True";
   s21_decimal value_1 = {{0x4D92A060, 0x4B9D98F6, 0x1AF522, 0x80180000}};
   s21_decimal value_2 = {{0x56AF6E40, 0x675FF2E2, 0x36C, 0x0}};
   int code = 1;
@@ -26524,7 +27063,8 @@ START_TEST(s21_is_not_equal_2650) {
 }
 
 START_TEST(s21_is_not_equal_2651) {
-  char *example = "( -750.96418292586835744548104 != 1066079222864781542537642526 ) = True";
+  char *example =
+      "( -750.96418292586835744548104 != 1066079222864781542537642526 ) = True";
   s21_decimal value_1 = {{0x42CA6508, 0xFE30FF56, 0x3E1E48, 0x80170000}};
   s21_decimal value_2 = {{0x715D421E, 0x793CB796, 0x371D70E, 0x0}};
   int code = 1;
@@ -26564,7 +27104,8 @@ START_TEST(s21_is_not_equal_2654) {
 }
 
 START_TEST(s21_is_not_equal_2655) {
-  char *example = "( 1960912129744826611814996314 != 0.515398983427334 ) = True";
+  char *example =
+      "( 1960912129744826611814996314 != 0.515398983427334 ) = True";
   s21_decimal value_1 = {{0x8BE1995A, 0x8E5E44A4, 0x656074B, 0x0}};
   s21_decimal value_2 = {{0xAD532506, 0x1D4C0, 0x0, 0xF0000}};
   int code = 1;
@@ -26634,7 +27175,8 @@ START_TEST(s21_is_not_equal_2661) {
 }
 
 START_TEST(s21_is_not_equal_2662) {
-  char *example = "( 107300609950389733174077193 != 1844978003660674512786073374 ) = True";
+  char *example =
+      "( 107300609950389733174077193 != 1844978003660674512786073374 ) = True";
   s21_decimal value_1 = {{0xAF68E709, 0xB88A6301, 0x58C1C9, 0x0}};
   s21_decimal value_2 = {{0x3830A71E, 0xFCE351AB, 0x5F62149, 0x0}};
   int code = 1;
@@ -26704,7 +27246,8 @@ START_TEST(s21_is_not_equal_2668) {
 }
 
 START_TEST(s21_is_not_equal_2669) {
-  char *example = "( 1861434942432697875662990210 != 1422790860146334171617869830 ) = True";
+  char *example =
+      "( 1861434942432697875662990210 != 1422790860146334171617869830 ) = True";
   s21_decimal value_1 = {{0xA82D6B82, 0x6D21DE65, 0x603BE2E, 0x0}};
   s21_decimal value_2 = {{0x178C006, 0x1402363F, 0x498E7AF, 0x0}};
   int code = 1;
@@ -26774,7 +27317,8 @@ START_TEST(s21_is_not_equal_2675) {
 }
 
 START_TEST(s21_is_not_equal_2676) {
-  char *example = "( 1912400287173964204294100750 != 0.88048423195176911500734976 ) = True";
+  char *example =
+      "( 1912400287173964204294100750 != 0.88048423195176911500734976 ) = True";
   s21_decimal value_1 = {{0xA3B1570E, 0x4D00F2E4, 0x62DE683, 0x0}};
   s21_decimal value_2 = {{0x9A97F200, 0x95EA5200, 0x48D4FA, 0x1A0000}};
   int code = 1;
@@ -26784,7 +27328,8 @@ START_TEST(s21_is_not_equal_2676) {
 }
 
 START_TEST(s21_is_not_equal_2677) {
-  char *example = "( -125.39656314682992327750399 != 0.409823521795045805 ) = True";
+  char *example =
+      "( -125.39656314682992327750399 != 0.409823521795045805 ) = True";
   s21_decimal value_1 = {{0xDDAD72FF, 0x2184A19F, 0xA5F60, 0x80170000}};
   s21_decimal value_2 = {{0x5D3179AD, 0x5AFFC52, 0x0, 0x120000}};
   int code = 1;
@@ -26814,7 +27359,8 @@ START_TEST(s21_is_not_equal_2679) {
 }
 
 START_TEST(s21_is_not_equal_2680) {
-  char *example = "( 236.063155064523070303132617 != 1786706381303904691529 ) = True";
+  char *example =
+      "( 236.063155064523070303132617 != 1786706381303904691529 ) = True";
   s21_decimal value_1 = {{0x8C285BC9, 0x473A88EC, 0xC34451, 0x180000}};
   s21_decimal value_2 = {{0x76DF6549, 0xDB88336B, 0x60, 0x0}};
   int code = 1;
@@ -26844,7 +27390,8 @@ START_TEST(s21_is_not_equal_2682) {
 }
 
 START_TEST(s21_is_not_equal_2683) {
-  char *example = "( 1550996731713273203514439191 != 1326162791132098264858031302 ) = True";
+  char *example =
+      "( 1550996731713273203514439191 != 1326162791132098264858031302 ) = True";
   s21_decimal value_1 = {{0x2547617, 0x4D549DCD, 0x502F455, 0x0}};
   s21_decimal value_2 = {{0xD8AF4C6, 0xF5F341D5, 0x448F9E4, 0x0}};
   int code = 1;
@@ -26864,7 +27411,8 @@ START_TEST(s21_is_not_equal_2684) {
 }
 
 START_TEST(s21_is_not_equal_2685) {
-  char *example = "( 1325582066867431185103469727 != 1464943559412598480524323616 ) = True";
+  char *example =
+      "( 1325582066867431185103469727 != 1464943559412598480524323616 ) = True";
   s21_decimal value_1 = {{0xBBB83C9F, 0xD5D49024, 0x4487EEB, 0x0}};
   s21_decimal value_2 = {{0x1540AB20, 0x7BF3D53C, 0x4BBC5DD, 0x0}};
   int code = 1;
@@ -26944,7 +27492,8 @@ START_TEST(s21_is_not_equal_2692) {
 }
 
 START_TEST(s21_is_not_equal_2693) {
-  char *example = "( 1119155149891414848603959038 != 1619246885873025141699578991 ) = True";
+  char *example =
+      "( 1119155149891414848603959038 != 1619246885873025141699578991 ) = True";
   s21_decimal value_1 = {{0xEDA02EFE, 0x3E374125, 0x39DBE52, 0x0}};
   s21_decimal value_2 = {{0x78710C6F, 0x929C35C4, 0x53B68DD, 0x0}};
   int code = 1;
@@ -26984,7 +27533,8 @@ START_TEST(s21_is_not_equal_2696) {
 }
 
 START_TEST(s21_is_not_equal_2697) {
-  char *example = "( 1737438348547697832953662026 != -3.37386233665839470076 ) = True";
+  char *example =
+      "( 1737438348547697832953662026 != -3.37386233665839470076 ) = True";
   s21_decimal value_1 = {{0xD4244A4A, 0x9A4DF562, 0x59D2CE1, 0x0}};
   s21_decimal value_2 = {{0x5F4C95FC, 0x4A2CAFF8, 0x12, 0x80140000}};
   int code = 1;
@@ -27054,7 +27604,8 @@ START_TEST(s21_is_not_equal_2703) {
 }
 
 START_TEST(s21_is_not_equal_2704) {
-  char *example = "( 1894765044811096434263868 != 125137905814958741976448376 ) = True";
+  char *example =
+      "( 1894765044811096434263868 != 125137905814958741976448376 ) = True";
   s21_decimal value_1 = {{0xB689C73C, 0x6B3CD03C, 0x1913B, 0x0}};
   s21_decimal value_2 = {{0xF33EFD78, 0x779D40AE, 0x6782FB, 0x0}};
   int code = 1;
@@ -27074,7 +27625,8 @@ START_TEST(s21_is_not_equal_2705) {
 }
 
 START_TEST(s21_is_not_equal_2706) {
-  char *example = "( 1452862222548601507585685966 != -7.9465547889026123469611010 ) = True";
+  char *example =
+      "( 1452862222548601507585685966 != -7.9465547889026123469611010 ) = True";
   s21_decimal value_1 = {{0x125B79CE, 0xE684EA06, 0x4B1C78A, 0x0}};
   s21_decimal value_2 = {{0x53F97CCD, 0x9929DF37, 0x692BF, 0x80180000}};
   int code = 1;
@@ -27104,7 +27656,8 @@ START_TEST(s21_is_not_equal_2708) {
 }
 
 START_TEST(s21_is_not_equal_2709) {
-  char *example = "( 1071681662545490915846934237 != -3398.6727005831358 ) = True";
+  char *example =
+      "( 1071681662545490915846934237 != -3398.6727005831358 ) = True";
   s21_decimal value_1 = {{0xAE7A4EDD, 0x5655072D, 0x376796B, 0x0}};
   s21_decimal value_2 = {{0x8642C0BE, 0x78BEBF, 0x0, 0x800D0000}};
   int code = 1;
@@ -27134,7 +27687,8 @@ START_TEST(s21_is_not_equal_2711) {
 }
 
 START_TEST(s21_is_not_equal_2712) {
-  char *example = "( -8.6438737116997262668669915 != -56738.453883289724581384861 ) = True";
+  char *example =
+      "( -8.6438737116997262668669915 != -56738.453883289724581384861 ) = True";
   s21_decimal value_1 = {{0xDBB323DB, 0x5415CBF7, 0x47801D, 0x80190000}};
   s21_decimal value_2 = {{0x50A1129D, 0xBF8927A1, 0x2EEED5, 0x80150000}};
   int code = 1;
@@ -27334,7 +27888,8 @@ START_TEST(s21_is_not_equal_2731) {
 }
 
 START_TEST(s21_is_not_equal_2732) {
-  char *example = "( 136875263819663073 != 1318823162637024639363217234 ) = True";
+  char *example =
+      "( 136875263819663073 != 1318823162637024639363217234 ) = True";
   s21_decimal value_1 = {{0xC68246E1, 0x1E64753, 0x0, 0x0}};
   s21_decimal value_2 = {{0x56127752, 0xE71B7EC2, 0x442E7AA, 0x0}};
   int code = 1;
@@ -27474,7 +28029,8 @@ START_TEST(s21_is_not_equal_2745) {
 }
 
 START_TEST(s21_is_not_equal_2746) {
-  char *example = "( -48.543151151081800727529529 != -9.4126889049397489429513378 ) = True";
+  char *example =
+      "( -48.543151151081800727529529 != -9.4126889049397489429513378 ) = True";
   s21_decimal value_1 = {{0x9C00839, 0x7F328752, 0x282769, 0x80180000}};
   s21_decimal value_2 = {{0x3D4204A2, 0xE13CBB46, 0x4DDC24, 0x80190000}};
   int code = 1;
@@ -27564,7 +28120,8 @@ START_TEST(s21_is_not_equal_2754) {
 }
 
 START_TEST(s21_is_not_equal_2755) {
-  char *example = "( 1190148478873353280455560025 != 169853279941399770 ) = True";
+  char *example =
+      "( 1190148478873353280455560025 != 169853279941399770 ) = True";
   s21_decimal value_1 = {{0x1431CB59, 0x5198F8A0, 0x3D877BE, 0x0}};
   s21_decimal value_2 = {{0x7ED794DA, 0x25B70A8, 0x0, 0x0}};
   int code = 1;
@@ -27634,7 +28191,8 @@ START_TEST(s21_is_not_equal_2761) {
 }
 
 START_TEST(s21_is_not_equal_2762) {
-  char *example = "( 1293024790967599330447194793 != 1440345095101509818434916 ) = True";
+  char *example =
+      "( 1293024790967599330447194793 != 1440345095101509818434916 ) = True";
   s21_decimal value_1 = {{0x82CDFAA9, 0x5F4ABFA0, 0x42D90A6, 0x0}};
   s21_decimal value_2 = {{0x9818C564, 0x43998F72, 0x13101, 0x0}};
   int code = 1;
@@ -27764,7 +28322,8 @@ START_TEST(s21_is_not_equal_2774) {
 }
 
 START_TEST(s21_is_not_equal_2775) {
-  char *example = "( 0.3559844001067233455077 != 1452271367622488982763069416 ) = True";
+  char *example =
+      "( 0.3559844001067233455077 != 1452271367622488982763069416 ) = True";
   s21_decimal value_1 = {{0xD9BC2BE5, 0xFAC27A1B, 0xC0, 0x160000}};
   s21_decimal value_2 = {{0x55EBDFE8, 0x973ABA3F, 0x4B14A6C, 0x0}};
   int code = 1;
@@ -27794,7 +28353,8 @@ START_TEST(s21_is_not_equal_2777) {
 }
 
 START_TEST(s21_is_not_equal_2778) {
-  char *example = "( 11886809060649689 != 1895859013742486320688131843 ) = True";
+  char *example =
+      "( 11886809060649689 != 1895859013742486320688131843 ) = True";
   s21_decimal value_1 = {{0x6792AAD9, 0x2A3AFD, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3D27EF03, 0x12402874, 0x62037C3, 0x0}};
   int code = 1;
@@ -27804,7 +28364,8 @@ START_TEST(s21_is_not_equal_2778) {
 }
 
 START_TEST(s21_is_not_equal_2779) {
-  char *example = "( 16489511275337795217412 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 16489511275337795217412 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xA3B7A804, 0xE5F043BE, 0x37D, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -27834,7 +28395,8 @@ START_TEST(s21_is_not_equal_2781) {
 }
 
 START_TEST(s21_is_not_equal_2782) {
-  char *example = "( -59.355931157180061542129788 != 1605812070901694450611 ) = True";
+  char *example =
+      "( -59.355931157180061542129788 != 1605812070901694450611 ) = True";
   s21_decimal value_1 = {{0x798A207C, 0x79BC0DF0, 0x31191B, 0x80180000}};
   s21_decimal value_2 = {{0x31E1CBB3, 0xD1E8287, 0x57, 0x0}};
   int code = 1;
@@ -27904,7 +28466,8 @@ START_TEST(s21_is_not_equal_2788) {
 }
 
 START_TEST(s21_is_not_equal_2789) {
-  char *example = "( -67680469491.092532212103201 != 2.7054524986410473E-10 ) = True";
+  char *example =
+      "( -67680469491.092532212103201 != 2.7054524986410473E-10 ) = True";
   s21_decimal value_1 = {{0x848D7821, 0x9A54A4F8, 0x37FBE5, 0x800F0000}};
   s21_decimal value_2 = {{0x7761C5E9, 0x601DF2, 0x0, 0x1A0000}};
   int code = 1;
@@ -27984,7 +28547,8 @@ START_TEST(s21_is_not_equal_2796) {
 }
 
 START_TEST(s21_is_not_equal_2797) {
-  char *example = "( 13408762132587026295522 != 1230140287962246261981434679 ) = True";
+  char *example =
+      "( 13408762132587026295522 != 1230140287962246261981434679 ) = True";
   s21_decimal value_1 = {{0xDEF3AAE2, 0xE3F4A4EB, 0x2D6, 0x0}};
   s21_decimal value_2 = {{0x7E75D337, 0xA22F0F3A, 0x3F98C56, 0x0}};
   int code = 1;
@@ -27994,7 +28558,8 @@ START_TEST(s21_is_not_equal_2797) {
 }
 
 START_TEST(s21_is_not_equal_2798) {
-  char *example = "( 1838023164463926496917151136 != 1731261632680133344901920680 ) = True";
+  char *example =
+      "( 1838023164463926496917151136 != 1731261632680133344901920680 ) = True";
   s21_decimal value_1 = {{0xD135DA0, 0x66472CA9, 0x5F0608B, 0x0}};
   s21_decimal value_2 = {{0x51C6F7A8, 0x2A2532B5, 0x59810E9, 0x0}};
   int code = 1;
@@ -28014,7 +28579,8 @@ START_TEST(s21_is_not_equal_2799) {
 }
 
 START_TEST(s21_is_not_equal_2800) {
-  char *example = "( -6239.87481901025903319093 != 1371156929904292747149866090 ) = True";
+  char *example =
+      "( -6239.87481901025903319093 != 1371156929904292747149866090 ) = True";
   s21_decimal value_1 = {{0x2FC91835, 0x6DDE599D, 0x8422, 0x80140000}};
   s21_decimal value_2 = {{0xB538746A, 0x1C6D1499, 0x46E31C6, 0x0}};
   int code = 1;
@@ -28034,7 +28600,8 @@ START_TEST(s21_is_not_equal_2801) {
 }
 
 START_TEST(s21_is_not_equal_2802) {
-  char *example = "( 1600150520301600010 != 0.37488779148187045142459284 ) = True";
+  char *example =
+      "( 1600150520301600010 != 0.37488779148187045142459284 ) = True";
   s21_decimal value_1 = {{0x95BBBD0A, 0x1634E06B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1D53F394, 0xCA314B8C, 0x1F028E, 0x1A0000}};
   int code = 1;
@@ -28044,7 +28611,8 @@ START_TEST(s21_is_not_equal_2802) {
 }
 
 START_TEST(s21_is_not_equal_2803) {
-  char *example = "( 524410574860.9867681757 != 1237166836336115793891280893 ) = True";
+  char *example =
+      "( 524410574860.9867681757 != 1237166836336115793891280893 ) = True";
   s21_decimal value_1 = {{0xCB178FDD, 0x489639E5, 0x11C, 0xA0000}};
   s21_decimal value_2 = {{0x9599C7FD, 0x9589A8C0, 0x3FF5C44, 0x0}};
   int code = 1;
@@ -28074,7 +28642,8 @@ START_TEST(s21_is_not_equal_2805) {
 }
 
 START_TEST(s21_is_not_equal_2806) {
-  char *example = "( 1615954972621916479862871077 != 0.0490971878439172109559582 ) = True";
+  char *example =
+      "( 1615954972621916479862871077 != 0.0490971878439172109559582 ) = True";
   s21_decimal value_1 = {{0x2D201425, 0x99079258, 0x538AFC6, 0x0}};
   s21_decimal value_2 = {{0xE0ECE71E, 0xA38C6FED, 0x67F7, 0x190000}};
   int code = 1;
@@ -28104,7 +28673,8 @@ START_TEST(s21_is_not_equal_2808) {
 }
 
 START_TEST(s21_is_not_equal_2809) {
-  char *example = "( -26025126.973484521050537087 != 1868643586685905153788354427 ) = True";
+  char *example =
+      "( -26025126.973484521050537087 != 1868643586685905153788354427 ) = True";
   s21_decimal value_1 = {{0x1A66FC7F, 0xF5CF37E5, 0x158708, 0x80120000}};
   s21_decimal value_2 = {{0x93F21F7B, 0xD075D848, 0x609B4AB, 0x0}};
   int code = 1;
@@ -28144,7 +28714,8 @@ START_TEST(s21_is_not_equal_2812) {
 }
 
 START_TEST(s21_is_not_equal_2813) {
-  char *example = "( 1066135400609916359359729276 != 11967734302922145 ) = True";
+  char *example =
+      "( 1066135400609916359359729276 != 11967734302922145 ) = True";
   s21_decimal value_1 = {{0xE2F60E7C, 0xE0104D40, 0x371E2F3, 0x0}};
   s21_decimal value_2 = {{0x47E455A1, 0x2A8497, 0x0, 0x0}};
   int code = 1;
@@ -28274,7 +28845,8 @@ START_TEST(s21_is_not_equal_2825) {
 }
 
 START_TEST(s21_is_not_equal_2826) {
-  char *example = "( 8.0365451738111357E-10 != 1783710794931188834090482465 ) = True";
+  char *example =
+      "( 8.0365451738111357E-10 != 1783710794931188834090482465 ) = True";
   s21_decimal value_1 = {{0xDB105D7D, 0x11D83F3, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x8DADFB21, 0xF2902658, 0x5C37373, 0x0}};
   int code = 1;
@@ -28324,7 +28896,8 @@ START_TEST(s21_is_not_equal_2830) {
 }
 
 START_TEST(s21_is_not_equal_2831) {
-  char *example = "( 15050309313229535337 != 1547546984309511402078211008 ) = True";
+  char *example =
+      "( 15050309313229535337 != 1547546984309511402078211008 ) = True";
   s21_decimal value_1 = {{0x96CCB869, 0xD0DD7094, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1B6E0BC0, 0x1EDEDD87, 0x50019D2, 0x0}};
   int code = 1;
@@ -28334,7 +28907,8 @@ START_TEST(s21_is_not_equal_2831) {
 }
 
 START_TEST(s21_is_not_equal_2832) {
-  char *example = "( 1254736521764724333367739101 != -511.31721517379226877409389 ) = True";
+  char *example =
+      "( 1254736521764724333367739101 != -511.31721517379226877409389 ) = True";
   s21_decimal value_1 = {{0x1DFF42DD, 0x23C4193D, 0x40DE4CB, 0x0}};
   s21_decimal value_2 = {{0xD7B5B86D, 0x2D77693C, 0x2A4B90, 0x80170000}};
   int code = 1;
@@ -28374,7 +28948,8 @@ START_TEST(s21_is_not_equal_2835) {
 }
 
 START_TEST(s21_is_not_equal_2836) {
-  char *example = "( 1963631846284663875587608227 != 11802331039010398349784 ) = True";
+  char *example =
+      "( 1963631846284663875587608227 != 11802331039010398349784 ) = True";
   s21_decimal value_1 = {{0xD4A10EA3, 0xAF67CED5, 0x6584737, 0x0}};
   s21_decimal value_2 = {{0xD5BF29D8, 0xCE3EEC8C, 0x27F, 0x0}};
   int code = 1;
@@ -28404,7 +28979,8 @@ START_TEST(s21_is_not_equal_2838) {
 }
 
 START_TEST(s21_is_not_equal_2839) {
-  char *example = "( -3.8634174082030680971169325 != 1171038614263361664314054079 ) = True";
+  char *example =
+      "( -3.8634174082030680971169325 != 1171038614263361664314054079 ) = True";
   s21_decimal value_1 = {{0x44304E2D, 0xC60A63E3, 0x1FF51A, 0x80190000}};
   s21_decimal value_2 = {{0xC97D15BF, 0x7B810743, 0x3C8A912, 0x0}};
   int code = 1;
@@ -28434,7 +29010,8 @@ START_TEST(s21_is_not_equal_2841) {
 }
 
 START_TEST(s21_is_not_equal_2842) {
-  char *example = "( 1501503137617664616383167841 != 0.411560179342269498896 ) = True";
+  char *example =
+      "( 1501503137617664616383167841 != 0.411560179342269498896 ) = True";
   s21_decimal value_1 = {{0x2FBCBD61, 0x30A025E8, 0x4DA03A8, 0x0}};
   s21_decimal value_2 = {{0x90084610, 0x4F8B7A92, 0x16, 0x150000}};
   int code = 1;
@@ -28464,7 +29041,8 @@ START_TEST(s21_is_not_equal_2844) {
 }
 
 START_TEST(s21_is_not_equal_2845) {
-  char *example = "( -5281.148889336210126771 != -40083.195846332731485133408 ) = True";
+  char *example =
+      "( -5281.148889336210126771 != -40083.195846332731485133408 ) = True";
   s21_decimal value_1 = {{0x1189F7B3, 0x4AA9E620, 0x11E, 0x80120000}};
   s21_decimal value_2 = {{0x75011A60, 0x669D4E43, 0x2127F2, 0x80150000}};
   int code = 1;
@@ -28494,7 +29072,8 @@ START_TEST(s21_is_not_equal_2847) {
 }
 
 START_TEST(s21_is_not_equal_2848) {
-  char *example = "( 9.2181053558815463E-10 != -429282.95836787231544786803 ) = True";
+  char *example =
+      "( 9.2181053558815463E-10 != -429282.95836787231544786803 ) = True";
   s21_decimal value_1 = {{0x864FAE7, 0x1477E2E, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xB0B3F73, 0x9492F2D7, 0x23826B, 0x80140000}};
   int code = 1;
@@ -28544,7 +29123,8 @@ START_TEST(s21_is_not_equal_2852) {
 }
 
 START_TEST(s21_is_not_equal_2853) {
-  char *example = "( 0.2098447940285493377 != 34.9197317378876459656506368 ) = True";
+  char *example =
+      "( 0.2098447940285493377 != 34.9197317378876459656506368 ) = True";
   s21_decimal value_1 = {{0x9C5DF081, 0x1D1F2F48, 0x0, 0x130000}};
   s21_decimal value_2 = {{0xC896C00, 0x81A45FD1, 0x120D968, 0x190000}};
   int code = 1;
@@ -28624,7 +29204,8 @@ START_TEST(s21_is_not_equal_2860) {
 }
 
 START_TEST(s21_is_not_equal_2861) {
-  char *example = "( 1305574859571159625 != 10203406716762108540404826 ) = True";
+  char *example =
+      "( 1305574859571159625 != 10203406716762108540404826 ) = True";
   s21_decimal value_1 = {{0xE46B6249, 0x121E556A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5F7AC45A, 0xC9550172, 0x870A7, 0x0}};
   int code = 1;
@@ -28694,7 +29275,8 @@ START_TEST(s21_is_not_equal_2867) {
 }
 
 START_TEST(s21_is_not_equal_2868) {
-  char *example = "( -52847554.581324802353423321 != 1689146902190321612 ) = True";
+  char *example =
+      "( -52847554.581324802353423321 != 1689146902190321612 ) = True";
   s21_decimal value_1 = {{0x6D2E63D9, 0xACA43A8C, 0x2BB6E7, 0x80120000}};
   s21_decimal value_2 = {{0x76816FCC, 0x17710E28, 0x0, 0x0}};
   int code = 1;
@@ -28804,7 +29386,8 @@ START_TEST(s21_is_not_equal_2878) {
 }
 
 START_TEST(s21_is_not_equal_2879) {
-  char *example = "( 14909575657832437 != 0.32940431945367460552028793 ) = True";
+  char *example =
+      "( 14909575657832437 != 0.32940431945367460552028793 ) = True";
   s21_decimal value_1 = {{0x18D63FF5, 0x34F82E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB946B279, 0x64D5E76A, 0x1B3F68, 0x1A0000}};
   int code = 1;
@@ -28834,7 +29417,8 @@ START_TEST(s21_is_not_equal_2881) {
 }
 
 START_TEST(s21_is_not_equal_2882) {
-  char *example = "( 1546485219320880827739077379 != 1878190263634881144817458990 ) = True";
+  char *example =
+      "( 1546485219320880827739077379 != 1878190263634881144817458990 ) = True";
   s21_decimal value_1 = {{0xEA4AFB03, 0xB9A81606, 0x4FF38FB, 0x0}};
   s21_decimal value_2 = {{0xDFEC1F2E, 0x356D8FB0, 0x6119A42, 0x0}};
   int code = 1;
@@ -28844,7 +29428,8 @@ START_TEST(s21_is_not_equal_2882) {
 }
 
 START_TEST(s21_is_not_equal_2883) {
-  char *example = "( -134.52560508444300566780215 != 114308284984994899701 ) = True";
+  char *example =
+      "( -134.52560508444300566780215 != 114308284984994899701 ) = True";
   s21_decimal value_1 = {{0x2D9AD937, 0xC4353DD2, 0xB20B0, 0x80170000}};
   s21_decimal value_2 = {{0x6BD26F5, 0x32589B90, 0x6, 0x0}};
   int code = 1;
@@ -28864,7 +29449,8 @@ START_TEST(s21_is_not_equal_2884) {
 }
 
 START_TEST(s21_is_not_equal_2885) {
-  char *example = "( -897390.966508714 != -4.3553122870593609447869411 ) = True";
+  char *example =
+      "( -897390.966508714 != -4.3553122870593609447869411 ) = True";
   s21_decimal value_1 = {{0x1DC88CAA, 0x3302C, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0x2B258BE3, 0x8590D63C, 0x2406BB, 0x80190000}};
   int code = 1;
@@ -28894,7 +29480,8 @@ START_TEST(s21_is_not_equal_2887) {
 }
 
 START_TEST(s21_is_not_equal_2888) {
-  char *example = "( 1188045127709059114389301083 != 1921269709945835951334484758 ) = True";
+  char *example =
+      "( 1188045127709059114389301083 != 1921269709945835951334484758 ) = True";
   s21_decimal value_1 = {{0x4EA9675B, 0x6C744329, 0x3D6BA57, 0x0}};
   s21_decimal value_2 = {{0xFE29EB16, 0xAC35A467, 0x6353CAF, 0x0}};
   int code = 1;
@@ -28934,7 +29521,8 @@ START_TEST(s21_is_not_equal_2891) {
 }
 
 START_TEST(s21_is_not_equal_2892) {
-  char *example = "( 1215695699765350346209385186 != 1069820111700701068182387976 ) = True";
+  char *example =
+      "( 1215695699765350346209385186 != 1069820111700701068182387976 ) = True";
   s21_decimal value_1 = {{0x4BF45AE2, 0xF0374E9E, 0x3ED9993, 0x0}};
   s21_decimal value_2 = {{0xB09B7D08, 0x76B6F5E4, 0x374EF38, 0x0}};
   int code = 1;
@@ -29054,7 +29642,8 @@ START_TEST(s21_is_not_equal_2903) {
 }
 
 START_TEST(s21_is_not_equal_2904) {
-  char *example = "( 1937060031734474674744319012 != 1522857032097064209981911163 ) = True";
+  char *example =
+      "( 1937060031734474674744319012 != 1522857032097064209981911163 ) = True";
   s21_decimal value_1 = {{0xE843DC24, 0xBB68CCF3, 0x6424C6A, 0x0}};
   s21_decimal value_2 = {{0xE080307B, 0x2114C604, 0x4EBAD85, 0x0}};
   int code = 1;
@@ -29134,7 +29723,8 @@ START_TEST(s21_is_not_equal_2911) {
 }
 
 START_TEST(s21_is_not_equal_2912) {
-  char *example = "( -783.07719694715728197426677 != 1733479374114811788367246750 ) = True";
+  char *example =
+      "( -783.07719694715728197426677 != 1733479374114811788367246750 ) = True";
   s21_decimal value_1 = {{0x50D19DF5, 0xFDA3178A, 0x40C64D, 0x80170000}};
   s21_decimal value_2 = {{0x9420359E, 0x2B30390B, 0x599E689, 0x0}};
   int code = 1;
@@ -29224,7 +29814,8 @@ START_TEST(s21_is_not_equal_2920) {
 }
 
 START_TEST(s21_is_not_equal_2921) {
-  char *example = "( 10483101839263856 != 1214599393143862196919572602 ) = True";
+  char *example =
+      "( 10483101839263856 != 1214599393143862196919572602 ) = True";
   s21_decimal value_1 = {{0x59460870, 0x253E53, 0x0, 0x0}};
   s21_decimal value_2 = {{0x46E3987A, 0x98CFC91, 0x3ECB16D, 0x0}};
   int code = 1;
@@ -29284,7 +29875,8 @@ START_TEST(s21_is_not_equal_2926) {
 }
 
 START_TEST(s21_is_not_equal_2927) {
-  char *example = "( 1706538510202310623519381986 != 2.1314676200931600E-10 ) = True";
+  char *example =
+      "( 1706538510202310623519381986 != 2.1314676200931600E-10 ) = True";
   s21_decimal value_1 = {{0xF0A119E2, 0x27393C0, 0x5839D96, 0x0}};
   s21_decimal value_2 = {{0x1908DAE4, 0xC1DB, 0x0, 0x180000}};
   int code = 1;
@@ -29324,7 +29916,8 @@ START_TEST(s21_is_not_equal_2930) {
 }
 
 START_TEST(s21_is_not_equal_2931) {
-  char *example = "( 1938316992210546624459285524 != 1552539671297127760458065886 ) = True";
+  char *example =
+      "( 1938316992210546624459285524 != 1552539671297127760458065886 ) = True";
   s21_decimal value_1 = {{0x5A8DA414, 0xB22DDA5E, 0x6435696, 0x0}};
   s21_decimal value_2 = {{0x40FEA7DE, 0x3979BD3F, 0x5043B10, 0x0}};
   int code = 1;
@@ -29424,7 +30017,8 @@ START_TEST(s21_is_not_equal_2940) {
 }
 
 START_TEST(s21_is_not_equal_2941) {
-  char *example = "( 1675606015624428484431279 != 12071015104586179606275 ) = True";
+  char *example =
+      "( 1675606015624428484431279 != 12071015104586179606275 ) = True";
   s21_decimal value_1 = {{0x9D3A0DAF, 0xC8BBFD43, 0x162D2, 0x0}};
   s21_decimal value_2 = {{0x61F2F703, 0x5EFC7AA4, 0x28E, 0x0}};
   int code = 1;
@@ -29434,7 +30028,8 @@ START_TEST(s21_is_not_equal_2941) {
 }
 
 START_TEST(s21_is_not_equal_2942) {
-  char *example = "( 15501040294599693078974 != 1778354609411777462139560512 ) = True";
+  char *example =
+      "( 15501040294599693078974 != 1778354609411777462139560512 ) = True";
   s21_decimal value_1 = {{0x372691BE, 0x5025E3E8, 0x348, 0x0}};
   s21_decimal value_2 = {{0xCD7B2240, 0x8C7724D2, 0x5BF053C, 0x0}};
   int code = 1;
@@ -29494,7 +30089,8 @@ START_TEST(s21_is_not_equal_2947) {
 }
 
 START_TEST(s21_is_not_equal_2948) {
-  char *example = "( 1595114415895341570494867623 != -481.93208798962221252598006 ) = True";
+  char *example =
+      "( 1595114415895341570494867623 != -481.93208798962221252598006 ) = True";
   s21_decimal value_1 = {{0xBF58A8A7, 0xC0FB404D, 0x527729D, 0x0}};
   s21_decimal value_2 = {{0x4297D8F6, 0x157D5C9B, 0x27DD4F, 0x80170000}};
   int code = 1;
@@ -29524,7 +30120,8 @@ START_TEST(s21_is_not_equal_2950) {
 }
 
 START_TEST(s21_is_not_equal_2951) {
-  char *example = "( 1682433341142649988 != 1716842332432075356202595166 ) = True";
+  char *example =
+      "( 1682433341142649988 != 1716842332432075356202595166 ) = True";
   s21_decimal value_1 = {{0xB914CC84, 0x17593435, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCE97F35E, 0x54F730E5, 0x58C2381, 0x0}};
   int code = 1;
@@ -29554,7 +30151,8 @@ START_TEST(s21_is_not_equal_2953) {
 }
 
 START_TEST(s21_is_not_equal_2954) {
-  char *example = "( 259.190274979011703885008425 != 1075135122710460204687845876 ) = True";
+  char *example =
+      "( 259.190274979011703885008425 != 1075135122710460204687845876 ) = True";
   s21_decimal value_1 = {{0x6FCC0E29, 0xF601FF83, 0xD665AC, 0x180000}};
   s21_decimal value_2 = {{0xFE8069F4, 0xC9B44E9B, 0x37954B7, 0x0}};
   int code = 1;
@@ -29644,7 +30242,8 @@ START_TEST(s21_is_not_equal_2962) {
 }
 
 START_TEST(s21_is_not_equal_2963) {
-  char *example = "( 1933432171249416873159842821 != -976839106.30430820791354672 ) = True";
+  char *example =
+      "( 1933432171249416873159842821 != -976839106.30430820791354672 ) = True";
   s21_decimal value_1 = {{0x487A5C05, 0x566C184, 0x63F4C30, 0x0}};
   s21_decimal value_2 = {{0xC4120530, 0x67F7750D, 0x50CD5F, 0x80110000}};
   int code = 1;
@@ -29674,7 +30273,8 @@ START_TEST(s21_is_not_equal_2965) {
 }
 
 START_TEST(s21_is_not_equal_2966) {
-  char *example = "( 1188611757248795250485347538 != -615.8916573012228070 ) = True";
+  char *example =
+      "( 1188611757248795250485347538 != -615.8916573012228070 ) = True";
   s21_decimal value_1 = {{0xC58FC4D2, 0x78F8E535, 0x3D73254, 0x0}};
   s21_decimal value_2 = {{0xFD90E597, 0x88C1632, 0x0, 0x800F0000}};
   int code = 1;
@@ -29704,7 +30304,9 @@ START_TEST(s21_is_not_equal_2968) {
 }
 
 START_TEST(s21_is_not_equal_2969) {
-  char *example = "( 1142842863185279788139922380 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1142842863185279788139922380 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0xE7FC3CC, 0xC0F5DF78, 0x3B15663, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -29714,7 +30316,8 @@ START_TEST(s21_is_not_equal_2969) {
 }
 
 START_TEST(s21_is_not_equal_2970) {
-  char *example = "( -2.39177112793643676232 != 1899857062679655931734010476 ) = True";
+  char *example =
+      "( -2.39177112793643676232 != 1899857062679655931734010476 ) = True";
   s21_decimal value_1 = {{0x4AAF248, 0xF73FCCDF, 0xC, 0x80140000}};
   s21_decimal value_2 = {{0x27562A6C, 0xBD0BC11A, 0x6238661, 0x0}};
   int code = 1;
@@ -29794,7 +30397,8 @@ START_TEST(s21_is_not_equal_2977) {
 }
 
 START_TEST(s21_is_not_equal_2978) {
-  char *example = "( -61787.228702112064789399385 != -503.690941359680094 ) = True";
+  char *example =
+      "( -61787.228702112064789399385 != -503.690941359680094 ) = True";
   s21_decimal value_1 = {{0xCE39C759, 0x61292B1F, 0x331BF4, 0x80150000}};
   s21_decimal value_2 = {{0x14536A5E, 0x6FD783E, 0x0, 0x800F0000}};
   int code = 1;
@@ -29834,7 +30438,8 @@ START_TEST(s21_is_not_equal_2981) {
 }
 
 START_TEST(s21_is_not_equal_2982) {
-  char *example = "( 1889744519183206237914967642 != 1988268133719683633660207523 ) = True";
+  char *example =
+      "( 1889744519183206237914967642 != 1988268133719683633660207523 ) = True";
   s21_decimal value_1 = {{0xA94AAE5A, 0xA83473D2, 0x61B28F7, 0x0}};
   s21_decimal value_2 = {{0xF16EA1A3, 0x80CD1044, 0x66CA827, 0x0}};
   int code = 1;
@@ -29854,7 +30459,8 @@ START_TEST(s21_is_not_equal_2983) {
 }
 
 START_TEST(s21_is_not_equal_2984) {
-  char *example = "( 1685716362070964820740065311 != -996.0459089510200051012994 ) = True";
+  char *example =
+      "( 1685716362070964820740065311 != -996.0459089510200051012994 ) = True";
   s21_decimal value_1 = {{0xF3AAC81F, 0x18FB55AA, 0x5726453, 0x0}};
   s21_decimal value_2 = {{0x1F1C9582, 0x91B66F88, 0x83D35, 0x80160000}};
   int code = 1;
@@ -29874,7 +30480,8 @@ START_TEST(s21_is_not_equal_2985) {
 }
 
 START_TEST(s21_is_not_equal_2986) {
-  char *example = "( 1774865469428282914288662 != -395.47313987730200542917873 ) = True";
+  char *example =
+      "( 1774865469428282914288662 != -395.47313987730200542917873 ) = True";
   s21_decimal value_1 = {{0x9444B416, 0xA65F44BE, 0x177D7, 0x0}};
   s21_decimal value_2 = {{0x396D34F1, 0x2FE40708, 0x20B678, 0x80170000}};
   int code = 1;
@@ -29914,7 +30521,8 @@ START_TEST(s21_is_not_equal_2989) {
 }
 
 START_TEST(s21_is_not_equal_2990) {
-  char *example = "( -163.63430491247574674861619 != 172531860436591589 ) = True";
+  char *example =
+      "( -163.63430491247574674861619 != 172531860436591589 ) = True";
   s21_decimal value_1 = {{0xE81C6E33, 0x582A5B40, 0xD8917, 0x80170000}};
   s21_decimal value_2 = {{0x1DC2A3E5, 0x264F4D0, 0x0, 0x0}};
   int code = 1;
@@ -29974,7 +30582,8 @@ START_TEST(s21_is_not_equal_2995) {
 }
 
 START_TEST(s21_is_not_equal_2996) {
-  char *example = "( -5.8109491667391379 != 1427209682984721510327715070 ) = True";
+  char *example =
+      "( -5.8109491667391379 != 1427209682984721510327715070 ) = True";
   s21_decimal value_1 = {{0x58E9D393, 0xCE7246, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x35CD04FE, 0xF1B858BE, 0x49C8F67, 0x0}};
   int code = 1;
@@ -30004,7 +30613,8 @@ START_TEST(s21_is_not_equal_2998) {
 }
 
 START_TEST(s21_is_not_equal_2999) {
-  char *example = "( -21182.54118525593192445 != 3.4341748982491273E-10 ) = True";
+  char *example =
+      "( -21182.54118525593192445 != 3.4341748982491273E-10 ) = True";
   s21_decimal value_1 = {{0xC62C07FD, 0xD4AE61CE, 0x72, 0x80110000}};
   s21_decimal value_2 = {{0x85112889, 0x7A01A3, 0x0, 0x1A0000}};
   int code = 1;
@@ -30014,7 +30624,8 @@ START_TEST(s21_is_not_equal_2999) {
 }
 
 START_TEST(s21_is_not_equal_3000) {
-  char *example = "( 15246696379670044825066 != -2.7558429845940576451655713 ) = True";
+  char *example =
+      "( 15246696379670044825066 != -2.7558429845940576451655713 ) = True";
   s21_decimal value_1 = {{0xB34B55EA, 0x866AC8D9, 0x33A, 0x0}};
   s21_decimal value_2 = {{0xA6D17821, 0x79B7EFE3, 0x16CBB9, 0x80190000}};
   int code = 1;
@@ -30024,7 +30635,8 @@ START_TEST(s21_is_not_equal_3000) {
 }
 
 START_TEST(s21_is_not_equal_3001) {
-  char *example = "( 0.20379723676032454331812102 != 1431741269584276874441032599 ) = True";
+  char *example =
+      "( 0.20379723676032454331812102 != 1431741269584276874441032599 ) = True";
   s21_decimal value_1 = {{0x63614906, 0x8C203D2, 0x10DB93, 0x1A0000}};
   s21_decimal value_2 = {{0xFFBC8397, 0xBEFB418B, 0x4A04F01, 0x0}};
   int code = 1;
@@ -30074,7 +30686,8 @@ START_TEST(s21_is_not_equal_3005) {
 }
 
 START_TEST(s21_is_not_equal_3006) {
-  char *example = "( 1895500115606247325796935250 != 1815910702916151887654113365 ) = True";
+  char *example =
+      "( 1895500115606247325796935250 != 1815910702916151887654113365 ) = True";
   s21_decimal value_1 = {{0xDD942652, 0x2A123EE8, 0x61FEBC3, 0x0}};
   s21_decimal value_2 = {{0x87E55055, 0x7502720C, 0x5DE160C, 0x0}};
   int code = 1;
@@ -30124,7 +30737,8 @@ START_TEST(s21_is_not_equal_3010) {
 }
 
 START_TEST(s21_is_not_equal_3011) {
-  char *example = "( 0.351709537924152715361725 != 0.3950497570995593960360097 ) = True";
+  char *example =
+      "( 0.351709537924152715361725 != 0.3950497570995593960360097 ) = True";
   s21_decimal value_1 = {{0x8C07BDBD, 0x36565905, 0x4A7A, 0x180000}};
   s21_decimal value_2 = {{0xAC3608A1, 0xE7068B50, 0x3448C, 0x190000}};
   int code = 1;
@@ -30214,7 +30828,8 @@ START_TEST(s21_is_not_equal_3019) {
 }
 
 START_TEST(s21_is_not_equal_3020) {
-  char *example = "( 1422508009391775499864009685 != 1986863047893331919531603582 ) = True";
+  char *example =
+      "( 1422508009391775499864009685 != 1986863047893331919531603582 ) = True";
   s21_decimal value_1 = {{0xC31C6BD5, 0xB5416EA8, 0x498ABC9, 0x0}};
   s21_decimal value_2 = {{0xCEEF67E, 0xA5D9E526, 0x66B7E9D, 0x0}};
   int code = 1;
@@ -30274,7 +30889,8 @@ START_TEST(s21_is_not_equal_3025) {
 }
 
 START_TEST(s21_is_not_equal_3026) {
-  char *example = "( 1975551848108067702716122394 != -158.51837076621360180372 ) = True";
+  char *example =
+      "( 1975551848108067702716122394 != -158.51837076621360180372 ) = True";
   s21_decimal value_1 = {{0x84B6451A, 0x47612442, 0x6622360, 0x0}};
   s21_decimal value_2 = {{0x6C12C94, 0x546E6A8E, 0x35B, 0x80140000}};
   int code = 1;
@@ -30284,7 +30900,8 @@ START_TEST(s21_is_not_equal_3026) {
 }
 
 START_TEST(s21_is_not_equal_3027) {
-  char *example = "( -260.31492658638556261149714 != 1360737660970694741360312530 ) = True";
+  char *example =
+      "( -260.31492658638556261149714 != 1360737660970694741360312530 ) = True";
   s21_decimal value_1 = {{0xE26C12, 0xB6FF0A5, 0x158862, 0x80170000}};
   s21_decimal value_2 = {{0x348F00D2, 0x690D95F2, 0x4659368, 0x0}};
   int code = 1;
@@ -30304,7 +30921,8 @@ START_TEST(s21_is_not_equal_3028) {
 }
 
 START_TEST(s21_is_not_equal_3029) {
-  char *example = "( 1477842086339434699676539 != 1300913854954346028434033596 ) = True";
+  char *example =
+      "( 1477842086339434699676539 != 1300913854954346028434033596 ) = True";
   s21_decimal value_1 = {{0x2769DB7B, 0xFAE33EC4, 0x138F1, 0x0}};
   s21_decimal value_2 = {{0x5D58BBC, 0x634D655D, 0x4341739, 0x0}};
   int code = 1;
@@ -30314,7 +30932,8 @@ START_TEST(s21_is_not_equal_3029) {
 }
 
 START_TEST(s21_is_not_equal_3030) {
-  char *example = "( 1462562824313130529515133983 != 1879880413748296674338128988 ) = True";
+  char *example =
+      "( 1462562824313130529515133983 != 1879880413748296674338128988 ) = True";
   s21_decimal value_1 = {{0xB7345C1F, 0x936A5A49, 0x4B9CDB9, 0x0}};
   s21_decimal value_2 = {{0x5DDBC45C, 0x6E10B807, 0x6130029, 0x0}};
   int code = 1;
@@ -30324,7 +30943,8 @@ START_TEST(s21_is_not_equal_3030) {
 }
 
 START_TEST(s21_is_not_equal_3031) {
-  char *example = "( 18724015676002153 != 1850235152416459593118433899 ) = True";
+  char *example =
+      "( 18724015676002153 != 1850235152416459593118433899 ) = True";
   s21_decimal value_1 = {{0x9F230F69, 0x428564, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5960C26B, 0x97CB7C57, 0x5FA7A88, 0x0}};
   int code = 1;
@@ -30334,7 +30954,8 @@ START_TEST(s21_is_not_equal_3031) {
 }
 
 START_TEST(s21_is_not_equal_3032) {
-  char *example = "( 163699203174042873 != 145757611357893051545922076 ) = True";
+  char *example =
+      "( 163699203174042873 != 145757611357893051545922076 ) = True";
   s21_decimal value_1 = {{0xD7340CF9, 0x245938E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x90C5AA1C, 0xF1CC7951, 0x78915F, 0x0}};
   int code = 1;
@@ -30364,7 +30985,8 @@ START_TEST(s21_is_not_equal_3034) {
 }
 
 START_TEST(s21_is_not_equal_3035) {
-  char *example = "( 152320301392405864 != 1908426181938023300906619133 ) = True";
+  char *example =
+      "( 152320301392405864 != 1908426181938023300906619133 ) = True";
   s21_decimal value_1 = {{0xD0932568, 0x21D2681, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAD8810FD, 0x9FD03A96, 0x62A9CF6, 0x0}};
   int code = 1;
@@ -30604,7 +31226,8 @@ START_TEST(s21_is_not_equal_3058) {
 }
 
 START_TEST(s21_is_not_equal_3059) {
-  char *example = "( 1787144086720869207650596510 != 1026377061996987816 ) = True";
+  char *example =
+      "( 1787144086720869207650596510 != 1026377061996987816 ) = True";
   s21_decimal value_1 = {{0xEC1FF69E, 0x1180A923, 0x5C64A7B, 0x0}};
   s21_decimal value_2 = {{0xF9F085A8, 0xE3E6C7F, 0x0, 0x0}};
   int code = 1;
@@ -30614,7 +31237,8 @@ START_TEST(s21_is_not_equal_3059) {
 }
 
 START_TEST(s21_is_not_equal_3060) {
-  char *example = "( -605.84928492582010196054 != 1675944697154595024920858 ) = True";
+  char *example =
+      "( -605.84928492582010196054 != 1675944697154595024920858 ) = True";
   s21_decimal value_1 = {{0x88ED9056, 0x50C82F4B, 0xCD4, 0x80140000}};
   s21_decimal value_2 = {{0xF79DE11A, 0x24E27E89, 0x162E5, 0x0}};
   int code = 1;
@@ -30694,7 +31318,8 @@ START_TEST(s21_is_not_equal_3067) {
 }
 
 START_TEST(s21_is_not_equal_3068) {
-  char *example = "( -889.02130702891692385794145 != 1940176749287657677202932725 ) = True";
+  char *example =
+      "( -889.02130702891692385794145 != 1940176749287657677202932725 ) = True";
   s21_decimal value_1 = {{0xE8C27861, 0x298EAC5D, 0x4989C2, 0x80170000}};
   s21_decimal value_2 = {{0x42C43F5, 0x5444F394, 0x644E068, 0x0}};
   int code = 1;
@@ -30704,7 +31329,8 @@ START_TEST(s21_is_not_equal_3068) {
 }
 
 START_TEST(s21_is_not_equal_3069) {
-  char *example = "( 1150504287737496653246816067 != 17920175216594890401587570 ) = True";
+  char *example =
+      "( 1150504287737496653246816067 != 17920175216594890401587570 ) = True";
   s21_decimal value_1 = {{0xA9ECDF43, 0x6933A1BC, 0x3B7ACC2, 0x0}};
   s21_decimal value_2 = {{0xEBE92172, 0xA5227F96, 0xED2BE, 0x0}};
   int code = 1;
@@ -30714,7 +31340,8 @@ START_TEST(s21_is_not_equal_3069) {
 }
 
 START_TEST(s21_is_not_equal_3070) {
-  char *example = "( 184473502444283957906778 != 1915936710675875691124523197 ) = True";
+  char *example =
+      "( 184473502444283957906778 != 1915936710675875691124523197 ) = True";
   s21_decimal value_1 = {{0x53808D5A, 0x541F8292, 0x2710, 0x0}};
   s21_decimal value_2 = {{0xC52480BD, 0x33F638A7, 0x630D361, 0x0}};
   int code = 1;
@@ -30734,7 +31361,8 @@ START_TEST(s21_is_not_equal_3071) {
 }
 
 START_TEST(s21_is_not_equal_3072) {
-  char *example = "( 134458606186664876992 != 1885412418329254497296596973 ) = True";
+  char *example =
+      "( 134458606186664876992 != 1885412418329254497296596973 ) = True";
   s21_decimal value_1 = {{0x3E4CDBC0, 0x49FCEDEF, 0x7, 0x0}};
   s21_decimal value_2 = {{0x9FD83FED, 0xFFCAACBC, 0x617939B, 0x0}};
   int code = 1;
@@ -30784,7 +31412,8 @@ START_TEST(s21_is_not_equal_3076) {
 }
 
 START_TEST(s21_is_not_equal_3077) {
-  char *example = "( -157.74376565057080858004873 != 8.880499652247765029052141 ) = True";
+  char *example =
+      "( -157.74376565057080858004873 != 8.880499652247765029052141 ) = True";
   s21_decimal value_1 = {{0x37FC4D89, 0xAAC53A75, 0xD0C5A, 0x80170000}};
   s21_decimal value_2 = {{0x8A055EED, 0xD9CD1FAC, 0x75884, 0x180000}};
   int code = 1;
@@ -30834,7 +31463,8 @@ START_TEST(s21_is_not_equal_3081) {
 }
 
 START_TEST(s21_is_not_equal_3082) {
-  char *example = "( 1412488711218169921982824005 != 0.410150882223501363529317 ) = True";
+  char *example =
+      "( 1412488711218169921982824005 != 0.410150882223501363529317 ) = True";
   s21_decimal value_1 = {{0xA831FE45, 0x77381535, 0x490621E, 0x0}};
   s21_decimal value_2 = {{0x4C1E4665, 0x52E9A5C4, 0x56DA, 0x180000}};
   int code = 1;
@@ -30984,7 +31614,8 @@ START_TEST(s21_is_not_equal_3096) {
 }
 
 START_TEST(s21_is_not_equal_3097) {
-  char *example = "( 1254850087745319190988350 != 1871652578639704681489194684 ) = True";
+  char *example =
+      "( 1254850087745319190988350 != 1871652578639704681489194684 ) = True";
   s21_decimal value_1 = {{0x72DD063E, 0x8F3F93A9, 0x109B9, 0x0}};
   s21_decimal value_2 = {{0x5B995EBC, 0x984F8253, 0x60C31D9, 0x0}};
   int code = 1;
@@ -30994,7 +31625,8 @@ START_TEST(s21_is_not_equal_3097) {
 }
 
 START_TEST(s21_is_not_equal_3098) {
-  char *example = "( 1099551428792645467898589688 != 1841464578092791689392617020 ) = True";
+  char *example =
+      "( 1099551428792645467898589688 != 1841464578092791689392617020 ) = True";
   s21_decimal value_1 = {{0xAB7B31F8, 0x6490443A, 0x38D8712, 0x0}};
   s21_decimal value_2 = {{0x722F63C, 0xCE60DAB3, 0x5F3394A, 0x0}};
   int code = 1;
@@ -31014,7 +31646,8 @@ START_TEST(s21_is_not_equal_3099) {
 }
 
 START_TEST(s21_is_not_equal_3100) {
-  char *example = "( -654.88948067881282139693602 != 1713268537225361124 ) = True";
+  char *example =
+      "( -654.88948067881282139693602 != 1713268537225361124 ) = True";
   s21_decimal value_1 = {{0xBD25A222, 0xFD0B0478, 0x362BD2, 0x80170000}};
   s21_decimal value_2 = {{0x462BB6E4, 0x17C6C0A8, 0x0, 0x0}};
   int code = 1;
@@ -31054,7 +31687,8 @@ START_TEST(s21_is_not_equal_3103) {
 }
 
 START_TEST(s21_is_not_equal_3104) {
-  char *example = "( -674098.88924361906579121393 != 1836687682152271979786570085 ) = True";
+  char *example =
+      "( -674098.88924361906579121393 != 1836687682152271979786570085 ) = True";
   s21_decimal value_1 = {{0x210D24F1, 0x66A400C0, 0x37C299, 0x80140000}};
   s21_decimal value_2 = {{0x1C348965, 0xC222C36A, 0x5EF45BE, 0x0}};
   int code = 1;
@@ -31104,7 +31738,8 @@ START_TEST(s21_is_not_equal_3108) {
 }
 
 START_TEST(s21_is_not_equal_3109) {
-  char *example = "( 1144012915650436770955140169 != -10529.81362962483 ) = True";
+  char *example =
+      "( 1144012915650436770955140169 != -10529.81362962483 ) = True";
   s21_decimal value_1 = {{0x3B8E1C49, 0x6CCBC019, 0x3B24E28, 0x0}};
   s21_decimal value_2 = {{0x54183033, 0x3BDAE, 0x0, 0x800B0000}};
   int code = 1;
@@ -31114,7 +31749,8 @@ START_TEST(s21_is_not_equal_3109) {
 }
 
 START_TEST(s21_is_not_equal_3110) {
-  char *example = "( 1035289632579462690564796373 != 1797307025643703169733851545 ) = True";
+  char *example =
+      "( 1035289632579462690564796373 != 1797307025643703169733851545 ) = True";
   s21_decimal value_1 = {{0xB434EFD5, 0x709166DE, 0x3585F1B, 0x0}};
   s21_decimal value_2 = {{0xCC6B7999, 0x1760A07F, 0x5CEB291, 0x0}};
   int code = 1;
@@ -31124,7 +31760,8 @@ START_TEST(s21_is_not_equal_3110) {
 }
 
 START_TEST(s21_is_not_equal_3111) {
-  char *example = "( 1384813282026107844362858276 != -756341.62258861198837406 ) = True";
+  char *example =
+      "( 1384813282026107844362858276 != -756341.62258861198837406 ) = True";
   s21_decimal value_1 = {{0x3616F24, 0x7166C4EB, 0x4797D9E, 0x0}};
   s21_decimal value_2 = {{0xDDF2869E, 0x22DAD777, 0x1004, 0x80110000}};
   int code = 1;
@@ -31144,7 +31781,8 @@ START_TEST(s21_is_not_equal_3112) {
 }
 
 START_TEST(s21_is_not_equal_3113) {
-  char *example = "( 0.212053459641598041401877 != -341.31398208242179764603219 ) = True";
+  char *example =
+      "( 0.212053459641598041401877 != -341.31398208242179764603219 ) = True";
   s21_decimal value_1 = {{0x23742A15, 0x70EAB4A7, 0x2CE7, 0x180000}};
   s21_decimal value_2 = {{0x4B774953, 0xCDEB0247, 0x1C3B9A, 0x80170000}};
   int code = 1;
@@ -31154,7 +31792,8 @@ START_TEST(s21_is_not_equal_3113) {
 }
 
 START_TEST(s21_is_not_equal_3114) {
-  char *example = "( 0.47950692377688032153285580 != 0.18088406497694358567943469 ) = True";
+  char *example =
+      "( 0.47950692377688032153285580 != 0.18088406497694358567943469 ) = True";
   s21_decimal value_1 = {{0x7B25C52E, 0x3967D114, 0x3F765, 0x190000}};
   s21_decimal value_2 = {{0x2AC07D2D, 0x7B281007, 0xEF65E, 0x1A0000}};
   int code = 1;
@@ -31164,7 +31803,8 @@ START_TEST(s21_is_not_equal_3114) {
 }
 
 START_TEST(s21_is_not_equal_3115) {
-  char *example = "( -5021183.6658322079757016801 != -81.472767593814133120370002 ) = True";
+  char *example =
+      "( -5021183.6658322079757016801 != -81.472767593814133120370002 ) = True";
   s21_decimal value_1 = {{0x22269EE1, 0x1E95B7A0, 0x2988C5, 0x80130000}};
   s21_decimal value_2 = {{0xBFDB0552, 0x94C84713, 0x436487, 0x80180000}};
   int code = 1;
@@ -31194,7 +31834,8 @@ START_TEST(s21_is_not_equal_3117) {
 }
 
 START_TEST(s21_is_not_equal_3118) {
-  char *example = "( 12472734380654839215726905 != 1621249317384770693056695370 ) = True";
+  char *example =
+      "( 12472734380654839215726905 != 1621249317384770693056695370 ) = True";
   s21_decimal value_1 = {{0x2D34A139, 0x491E329F, 0xA5134, 0x0}};
   s21_decimal value_2 = {{0x65140C4A, 0x9A3AD980, 0x53D10E5, 0x0}};
   int code = 1;
@@ -31234,7 +31875,8 @@ START_TEST(s21_is_not_equal_3121) {
 }
 
 START_TEST(s21_is_not_equal_3122) {
-  char *example = "( 12542616474763752806337151 != -3.1367546293727887742198274 ) = True";
+  char *example =
+      "( 12542616474763752806337151 != -3.1367546293727887742198274 ) = True";
   s21_decimal value_1 = {{0xD1A0CA7F, 0x99FDD779, 0xA6000, 0x0}};
   s21_decimal value_2 = {{0xD327E202, 0x17842290, 0x19F256, 0x80190000}};
   int code = 1;
@@ -31244,7 +31886,8 @@ START_TEST(s21_is_not_equal_3122) {
 }
 
 START_TEST(s21_is_not_equal_3123) {
-  char *example = "( -909.63494193125396163623997 != 199136667300495818431730135 ) = True";
+  char *example =
+      "( -909.63494193125396163623997 != 199136667300495818431730135 ) = True";
   s21_decimal value_1 = {{0x5C487C3D, 0xE6AB6812, 0x4B3E44, 0x80170000}};
   s21_decimal value_2 = {{0x5FA911D7, 0x5D8D3746, 0xA4B8D4, 0x0}};
   int code = 1;
@@ -31514,7 +32157,8 @@ START_TEST(s21_is_not_equal_3149) {
 }
 
 START_TEST(s21_is_not_equal_3150) {
-  char *example = "( 17953837048570377 != 1730103262328082590602316288 ) = True";
+  char *example =
+      "( 17953837048570377 != 1730103262328082590602316288 ) = True";
   s21_decimal value_1 = {{0x6FA2A209, 0x3FC8EB, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA28F4A00, 0xC83259B4, 0x5971B9D, 0x0}};
   int code = 1;
@@ -31524,7 +32168,8 @@ START_TEST(s21_is_not_equal_3150) {
 }
 
 START_TEST(s21_is_not_equal_3151) {
-  char *example = "( 1316016960441703601933148027 != 1939363504391237206400761431 ) = True";
+  char *example =
+      "( 1316016960441703601933148027 != 1939363504391237206400761431 ) = True";
   s21_decimal value_1 = {{0x363C5F7B, 0x607EB2B7, 0x440956E, 0x0}};
   s21_decimal value_2 = {{0x432EFE57, 0x3C293949, 0x6443432, 0x0}};
   int code = 1;
@@ -31664,7 +32309,8 @@ START_TEST(s21_is_not_equal_3164) {
 }
 
 START_TEST(s21_is_not_equal_3165) {
-  char *example = "( -2973.7131063915884411201879 != -5717213.4935702065683 ) = True";
+  char *example =
+      "( -2973.7131063915884411201879 != -5717213.4935702065683 ) = True";
   s21_decimal value_1 = {{0x51A1A957, 0x1AEB0EA8, 0x189915, 0x80160000}};
   s21_decimal value_2 = {{0x2538D213, 0x196C39D0, 0x3, 0x800D0000}};
   int code = 1;
@@ -31674,7 +32320,8 @@ START_TEST(s21_is_not_equal_3165) {
 }
 
 START_TEST(s21_is_not_equal_3166) {
-  char *example = "( -1.6935769135203793811412384 != 119446488757664724866424 ) = True";
+  char *example =
+      "( -1.6935769135203793811412384 != 119446488757664724866424 ) = True";
   s21_decimal value_1 = {{0x542E15A0, 0xE26BA556, 0xE0249, 0x80190000}};
   s21_decimal value_2 = {{0xC7C4D578, 0x35067E79, 0x194B, 0x0}};
   int code = 1;
@@ -31724,7 +32371,8 @@ START_TEST(s21_is_not_equal_3170) {
 }
 
 START_TEST(s21_is_not_equal_3171) {
-  char *example = "( 1626118928242763134958931732 != 14454138997395898 ) = True";
+  char *example =
+      "( 1626118928242763134958931732 != 14454138997395898 ) = True";
   s21_decimal value_1 = {{0xFA098F14, 0xBC6C798C, 0x5411813, 0x0}};
   s21_decimal value_2 = {{0x7C7951BA, 0x3359F6, 0x0, 0x0}};
   int code = 1;
@@ -31814,7 +32462,8 @@ START_TEST(s21_is_not_equal_3179) {
 }
 
 START_TEST(s21_is_not_equal_3180) {
-  char *example = "( 122456844351568823161103 != 182869406054850353920 ) = True";
+  char *example =
+      "( 122456844351568823161103 != 182869406054850353920 ) = True";
   s21_decimal value_1 = {{0x7F9F910F, 0x6619FD95, 0x19EE, 0x0}};
   s21_decimal value_2 = {{0x5A05DB00, 0xE9D2A3EC, 0x9, 0x0}};
   int code = 1;
@@ -31824,7 +32473,8 @@ START_TEST(s21_is_not_equal_3180) {
 }
 
 START_TEST(s21_is_not_equal_3181) {
-  char *example = "( 1208052520511109903214011675 != 1270656322387966474899216701 ) = True";
+  char *example =
+      "( 1208052520511109903214011675 != 1270656322387966474899216701 ) = True";
   s21_decimal value_1 = {{0xB1E1651B, 0x5C593E2C, 0x3E74712, 0x0}};
   s21_decimal value_2 = {{0xCCE8D93D, 0x42C21153, 0x41B0FF1, 0x0}};
   int code = 1;
@@ -31904,7 +32554,8 @@ START_TEST(s21_is_not_equal_3188) {
 }
 
 START_TEST(s21_is_not_equal_3189) {
-  char *example = "( 1873379882132694119274562940 != 0.735638261781394105390 ) = True";
+  char *example =
+      "( 1873379882132694119274562940 != 0.735638261781394105390 ) = True";
   s21_decimal value_1 = {{0x718CC57C, 0xE7AA7E17, 0x60D9F9E, 0x0}};
   s21_decimal value_2 = {{0xB294D06B, 0xFCE73626, 0x3, 0x140000}};
   int code = 1;
@@ -31944,7 +32595,8 @@ START_TEST(s21_is_not_equal_3192) {
 }
 
 START_TEST(s21_is_not_equal_3193) {
-  char *example = "( 1279681567485363537667443536 != 1675721923910202476512222044 ) = True";
+  char *example =
+      "( 1279681567485363537667443536 != 1675721923910202476512222044 ) = True";
   s21_decimal value_1 = {{0x36B44B50, 0xC7221E0D, 0x422871C, 0x0}};
   s21_decimal value_2 = {{0x675D1B5C, 0x84EDAB25, 0x56A1FEB, 0x0}};
   int code = 1;
@@ -32024,7 +32676,8 @@ START_TEST(s21_is_not_equal_3200) {
 }
 
 START_TEST(s21_is_not_equal_3201) {
-  char *example = "( -82991.372994667767521573353 != -16.161906502417417238802 ) = True";
+  char *example =
+      "( -82991.372994667767521573353 != -16.161906502417417238802 ) = True";
   s21_decimal value_1 = {{0x255779E9, 0x584C9736, 0x44A61B, 0x80150000}};
   s21_decimal value_2 = {{0x8213F912, 0x23824E7F, 0x36C, 0x80150000}};
   int code = 1;
@@ -32064,7 +32717,8 @@ START_TEST(s21_is_not_equal_3204) {
 }
 
 START_TEST(s21_is_not_equal_3205) {
-  char *example = "( 1642304108332245470006618413 != -21346216.235390245305148095 ) = True";
+  char *example =
+      "( 1642304108332245470006618413 != -21346216.235390245305148095 ) = True";
   s21_decimal value_1 = {{0x482A292D, 0x1B563A6C, 0x54E7B6C, 0x0}};
   s21_decimal value_2 = {{0xA8A162BF, 0xB36A1AB0, 0x11A83C, 0x80120000}};
   int code = 1;
@@ -32084,7 +32738,8 @@ START_TEST(s21_is_not_equal_3206) {
 }
 
 START_TEST(s21_is_not_equal_3207) {
-  char *example = "( -2.4327175600685663713132708 != -914.15353630948220 ) = True";
+  char *example =
+      "( -2.4327175600685663713132708 != -914.15353630948220 ) = True";
   s21_decimal value_1 = {{0x9B0680A4, 0xD4F32343, 0x141F7A, 0x80190000}};
   s21_decimal value_2 = {{0x9004D926, 0x207A2D, 0x0, 0x800D0000}};
   int code = 1;
@@ -32114,7 +32769,8 @@ START_TEST(s21_is_not_equal_3209) {
 }
 
 START_TEST(s21_is_not_equal_3210) {
-  char *example = "( 1467053226306203580756749709 != 1253846857800866105 ) = True";
+  char *example =
+      "( 1467053226306203580756749709 != 1253846857800866105 ) = True";
   s21_decimal value_1 = {{0x445D6D8D, 0xC17274D3, 0x4BD849A, 0x0}};
   s21_decimal value_2 = {{0xF1F5D939, 0x11668F12, 0x0, 0x0}};
   int code = 1;
@@ -32134,7 +32790,8 @@ START_TEST(s21_is_not_equal_3211) {
 }
 
 START_TEST(s21_is_not_equal_3212) {
-  char *example = "( 1728361767329416943228891 != 1128882847812472042203597179 ) = True";
+  char *example =
+      "( 1728361767329416943228891 != 1128882847812472042203597179 ) = True";
   s21_decimal value_1 = {{0xCE9FD7DB, 0xADDCB4FF, 0x16DFE, 0x0}};
   s21_decimal value_2 = {{0xC897497B, 0xCDD2A231, 0x3A5CA3D, 0x0}};
   int code = 1;
@@ -32144,7 +32801,8 @@ START_TEST(s21_is_not_equal_3212) {
 }
 
 START_TEST(s21_is_not_equal_3213) {
-  char *example = "( 1335991348008709485813043 != 1641671510324741052808977870 ) = True";
+  char *example =
+      "( 1335991348008709485813043 != 1641671510324741052808977870 ) = True";
   s21_decimal value_1 = {{0xC420DD33, 0x3C70D464, 0x11AE8, 0x0}};
   s21_decimal value_2 = {{0x60425DCE, 0xE66BC90B, 0x54DF576, 0x0}};
   int code = 1;
@@ -32154,7 +32812,8 @@ START_TEST(s21_is_not_equal_3213) {
 }
 
 START_TEST(s21_is_not_equal_3214) {
-  char *example = "( 1707871874842505064811133624 != 1433017293734448419766573 ) = True";
+  char *example =
+      "( 1707871874842505064811133624 != 1433017293734448419766573 ) = True";
   s21_decimal value_1 = {{0xFE50FAB8, 0xD9FF9FF6, 0x584B7EF, 0x0}};
   s21_decimal value_2 = {{0xFB9F012D, 0x5ED6875, 0x12F74, 0x0}};
   int code = 1;
@@ -32184,7 +32843,8 @@ START_TEST(s21_is_not_equal_3216) {
 }
 
 START_TEST(s21_is_not_equal_3217) {
-  char *example = "( -79228162514264337593543950335 != 0.490435469069375137 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 0.490435469069375137 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xEF21D6A1, 0x6CE6075, 0x0, 0x120000}};
   int code = 1;
@@ -32194,7 +32854,8 @@ START_TEST(s21_is_not_equal_3217) {
 }
 
 START_TEST(s21_is_not_equal_3218) {
-  char *example = "( 16228817888691811 != 1838272743665166013719669494 ) = True";
+  char *example =
+      "( 16228817888691811 != 1838272743665166013719669494 ) = True";
   s21_decimal value_1 = {{0x1D614663, 0x39A806, 0x0, 0x0}};
   s21_decimal value_2 = {{0x67A86AF6, 0x1D795CB8, 0x5F09565, 0x0}};
   int code = 1;
@@ -32274,7 +32935,8 @@ START_TEST(s21_is_not_equal_3225) {
 }
 
 START_TEST(s21_is_not_equal_3226) {
-  char *example = "( 1995477206501186218866716653 != 1421419941985696520323416460 ) = True";
+  char *example =
+      "( 1995477206501186218866716653 != 1421419941985696520323416460 ) = True";
   s21_decimal value_1 = {{0x1B772FED, 0x1F27604C, 0x6729EBC, 0x0}};
   s21_decimal value_2 = {{0x9DAB418C, 0x74AC6603, 0x497C561, 0x0}};
   int code = 1;
@@ -32324,7 +32986,8 @@ START_TEST(s21_is_not_equal_3230) {
 }
 
 START_TEST(s21_is_not_equal_3231) {
-  char *example = "( 1862836554443145637464459335 != 1928651913816833567440721336 ) = True";
+  char *example =
+      "( 1862836554443145637464459335 != 1928651913816833567440721336 ) = True";
   s21_decimal value_1 = {{0x47BD4847, 0xF733C1F0, 0x604E6FB, 0x0}};
   s21_decimal value_2 = {{0xE86F55B8, 0xBF15D456, 0x63B57ED, 0x0}};
   int code = 1;
@@ -32344,7 +33007,8 @@ START_TEST(s21_is_not_equal_3232) {
 }
 
 START_TEST(s21_is_not_equal_3233) {
-  char *example = "( 0.45311833795058500021695675 != 1342431323590223999155655342 ) = True";
+  char *example =
+      "( 0.45311833795058500021695675 != 1342431323590223999155655342 ) = True";
   s21_decimal value_1 = {{0xBB36B4BB, 0x6E973D38, 0x257B27, 0x1A0000}};
   s21_decimal value_2 = {{0xA02152AE, 0xDF594019, 0x4566EE3, 0x0}};
   int code = 1;
@@ -32434,7 +33098,8 @@ START_TEST(s21_is_not_equal_3241) {
 }
 
 START_TEST(s21_is_not_equal_3242) {
-  char *example = "( -6.0405272994019100452698218 != 13241237286831158 ) = True";
+  char *example =
+      "( -6.0405272994019100452698218 != 13241237286831158 ) = True";
   s21_decimal value_1 = {{0xBFCFB86A, 0x691587B7, 0x31F750, 0x80190000}};
   s21_decimal value_2 = {{0xCCDE4436, 0x2F0AD5, 0x0, 0x0}};
   int code = 1;
@@ -32474,7 +33139,9 @@ START_TEST(s21_is_not_equal_3245) {
 }
 
 START_TEST(s21_is_not_equal_3246) {
-  char *example = "( -4.3912851224701494800425500 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( -4.3912851224701494800425500 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0xA99AE19F, 0x34503616, 0x5CFD, 0x80170000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -32624,7 +33291,8 @@ START_TEST(s21_is_not_equal_3260) {
 }
 
 START_TEST(s21_is_not_equal_3261) {
-  char *example = "( -15.425527627084958481836505 != 1408279197282905271911748583 ) = True";
+  char *example =
+      "( -15.425527627084958481836505 != 1408279197282905271911748583 ) = True";
   s21_decimal value_1 = {{0x1FC8E9D9, 0x873B75B3, 0xCC27B, 0x80180000}};
   s21_decimal value_2 = {{0x7DB693E7, 0x420D2AB3, 0x48CE6B8, 0x0}};
   int code = 1;
@@ -32714,7 +33382,8 @@ START_TEST(s21_is_not_equal_3269) {
 }
 
 START_TEST(s21_is_not_equal_3270) {
-  char *example = "( 131682534037594801763291 != 1098633656437231722133700783 ) = True";
+  char *example =
+      "( 131682534037594801763291 != 1098633656437231722133700783 ) = True";
   s21_decimal value_1 = {{0xCB24F3DB, 0x8643EF39, 0x1BE2, 0x0}};
   s21_decimal value_2 = {{0x3E2FC0AF, 0xDA8F29C4, 0x38CC4B9, 0x0}};
   int code = 1;
@@ -32994,7 +33663,8 @@ START_TEST(s21_is_not_equal_3297) {
 }
 
 START_TEST(s21_is_not_equal_3298) {
-  char *example = "( -3621.8747731691367282169350 != 1918883939677015441087286672 ) = True";
+  char *example =
+      "( -3621.8747731691367282169350 != 1918883939677015441087286672 ) = True";
   s21_decimal value_1 = {{0x2A831567, 0x39918A5B, 0x2FEF6, 0x80150000}};
   s21_decimal value_2 = {{0x5224D90, 0xCEA920C7, 0x633437A, 0x0}};
   int code = 1;
@@ -33004,7 +33674,8 @@ START_TEST(s21_is_not_equal_3298) {
 }
 
 START_TEST(s21_is_not_equal_3299) {
-  char *example = "( -1.3397330440699521719536052 != 2.1856347673714571E-10 ) = True";
+  char *example =
+      "( -1.3397330440699521719536052 != 2.1856347673714571E-10 ) = True";
   s21_decimal value_1 = {{0x7ECF09B4, 0xBD0C1562, 0xB14FE, 0x80190000}};
   s21_decimal value_2 = {{0x7F2DDF8B, 0x4DA63B, 0x0, 0x1A0000}};
   int code = 1;
@@ -33044,7 +33715,8 @@ START_TEST(s21_is_not_equal_3302) {
 }
 
 START_TEST(s21_is_not_equal_3303) {
-  char *example = "( 1137559239850917723284746984 != 4.51967926602510594078619 ) = True";
+  char *example =
+      "( 1137559239850917723284746984 != 4.51967926602510594078619 ) = True";
   s21_decimal value_1 = {{0xAC34B2E8, 0xF578415B, 0x3ACF789, 0x0}};
   s21_decimal value_2 = {{0x728DF79B, 0x3AFB3847, 0x5FB5, 0x170000}};
   int code = 1;
@@ -33054,7 +33726,8 @@ START_TEST(s21_is_not_equal_3303) {
 }
 
 START_TEST(s21_is_not_equal_3304) {
-  char *example = "( 1738189735104481906247296392 != 18664527794589753503 ) = True";
+  char *example =
+      "( 1738189735104481906247296392 != 18664527794589753503 ) = True";
   s21_decimal value_1 = {{0x798F6588, 0x59804FE7, 0x59DCBFE, 0x0}};
   s21_decimal value_2 = {{0xE8ED609F, 0x305B923, 0x1, 0x0}};
   int code = 1;
@@ -33144,7 +33817,8 @@ START_TEST(s21_is_not_equal_3312) {
 }
 
 START_TEST(s21_is_not_equal_3313) {
-  char *example = "( 1380158560713709180651781763 != 1239373128793512707 ) = True";
+  char *example =
+      "( 1380158560713709180651781763 != 1239373128793512707 ) = True";
   s21_decimal value_1 = {{0x5F2F3E83, 0x7EB934CD, 0x475A3F1, 0x0}};
   s21_decimal value_2 = {{0x4DE6DB03, 0x1133234B, 0x0, 0x0}};
   int code = 1;
@@ -33154,7 +33828,8 @@ START_TEST(s21_is_not_equal_3313) {
 }
 
 START_TEST(s21_is_not_equal_3314) {
-  char *example = "( 1810235821249380999703517348 != 1495210850599622505242 ) = True";
+  char *example =
+      "( 1810235821249380999703517348 != 1495210850599622505242 ) = True";
   s21_decimal value_1 = {{0x2FA358A4, 0x8167559A, 0x5D96458, 0x0}};
   s21_decimal value_2 = {{0x5C29731A, 0xE380AA7, 0x51, 0x0}};
   int code = 1;
@@ -33184,7 +33859,8 @@ START_TEST(s21_is_not_equal_3316) {
 }
 
 START_TEST(s21_is_not_equal_3317) {
-  char *example = "( 1446093502679825979874430695 != 1651665563999067155170626295 ) = True";
+  char *example =
+      "( 1446093502679825979874430695 != 1651665563999067155170626295 ) = True";
   s21_decimal value_1 = {{0xFBB74EE7, 0xDC732587, 0x4AC2E35, 0x0}};
   s21_decimal value_2 = {{0x8C408AF7, 0xA2A73AE6, 0x55639C9, 0x0}};
   int code = 1;
@@ -33234,7 +33910,8 @@ START_TEST(s21_is_not_equal_3321) {
 }
 
 START_TEST(s21_is_not_equal_3322) {
-  char *example = "( 2.71304383180614E-10 != 1246950450487244423877921363 ) = True";
+  char *example =
+      "( 2.71304383180614E-10 != 1246950450487244423877921363 ) = True";
   s21_decimal value_1 = {{0xF962AF46, 0xF6BF, 0x0, 0x180000}};
   s21_decimal value_2 = {{0xD5908A53, 0x5EB87AE2, 0x4077407, 0x0}};
   int code = 1;
@@ -33274,7 +33951,8 @@ START_TEST(s21_is_not_equal_3325) {
 }
 
 START_TEST(s21_is_not_equal_3326) {
-  char *example = "( -3.439112222910678220532670 != 1297185638059093861570180131 ) = True";
+  char *example =
+      "( -3.439112222910678220532670 != 1297185638059093861570180131 ) = True";
   s21_decimal value_1 = {{0x5B829793, 0x76F7B9FA, 0x48D3, 0x80170000}};
   s21_decimal value_2 = {{0x9123F423, 0x58541933, 0x43101BE, 0x0}};
   int code = 1;
@@ -33394,7 +34072,8 @@ START_TEST(s21_is_not_equal_3337) {
 }
 
 START_TEST(s21_is_not_equal_3338) {
-  char *example = "( 2.004528506982669E-10 != 1925698717249953185626971346 ) = True";
+  char *example =
+      "( 2.004528506982669E-10 != 1925698717249953185626971346 ) = True";
   s21_decimal value_1 = {{0xA999D10D, 0x71F1B, 0x0, 0x190000}};
   s21_decimal value_2 = {{0x9019DCD2, 0xA3C67CA1, 0x638E690, 0x0}};
   int code = 1;
@@ -33404,7 +34083,8 @@ START_TEST(s21_is_not_equal_3338) {
 }
 
 START_TEST(s21_is_not_equal_3339) {
-  char *example = "( 1354109769982033706978379933 != 1758587175117475605740369106 ) = True";
+  char *example =
+      "( 1354109769982033706978379933 != 1758587175117475605740369106 ) = True";
   s21_decimal value_1 = {{0x3D6C089D, 0xB84C9233, 0x46017E5, 0x0}};
   s21_decimal value_2 = {{0x6A29B4D2, 0xC9D2FCCD, 0x5AEAB51, 0x0}};
   int code = 1;
@@ -33424,7 +34104,8 @@ START_TEST(s21_is_not_equal_3340) {
 }
 
 START_TEST(s21_is_not_equal_3341) {
-  char *example = "( 28.3129512288211945090610484 != 1625652935416768844863913418 ) = True";
+  char *example =
+      "( 28.3129512288211945090610484 != 1625652935416768844863913418 ) = True";
   s21_decimal value_1 = {{0xA0C67534, 0x9DAA71F1, 0xEA3301, 0x190000}};
   s21_decimal value_2 = {{0xBE4C3DCA, 0x36DD578C, 0x540B566, 0x0}};
   int code = 1;
@@ -33474,7 +34155,8 @@ START_TEST(s21_is_not_equal_3345) {
 }
 
 START_TEST(s21_is_not_equal_3346) {
-  char *example = "( 146878846253460589 != 1773045994174374525199607153 ) = True";
+  char *example =
+      "( 146878846253460589 != 1773045994174374525199607153 ) = True";
   s21_decimal value_1 = {{0x4FF4EC6D, 0x209D188, 0x0, 0x0}};
   s21_decimal value_2 = {{0x11CE6571, 0xF0A5BBD1, 0x5BAA117, 0x0}};
   int code = 1;
@@ -33494,7 +34176,8 @@ START_TEST(s21_is_not_equal_3347) {
 }
 
 START_TEST(s21_is_not_equal_3348) {
-  char *example = "( 1095276237192758271400362205 != -932.06481747751150259770763 ) = True";
+  char *example =
+      "( 1095276237192758271400362205 != -932.06481747751150259770763 ) = True";
   s21_decimal value_1 = {{0x96A40DD, 0xCAB3DAB2, 0x389FDC3, 0x0}};
   s21_decimal value_2 = {{0xC043958B, 0x80021ACF, 0x4D193D, 0x80170000}};
   int code = 1;
@@ -33524,7 +34207,8 @@ START_TEST(s21_is_not_equal_3350) {
 }
 
 START_TEST(s21_is_not_equal_3351) {
-  char *example = "( 1233067771541972878897125213 != 1662179613244345818533262129 ) = True";
+  char *example =
+      "( 1233067771541972878897125213 != 1662179613244345818533262129 ) = True";
   s21_decimal value_1 = {{0x139B175D, 0xD61D37D5, 0x3FBF841, 0x0}};
   s21_decimal value_2 = {{0xEE5AF331, 0x6314837F, 0x55EEC39, 0x0}};
   int code = 1;
@@ -33584,7 +34268,8 @@ START_TEST(s21_is_not_equal_3356) {
 }
 
 START_TEST(s21_is_not_equal_3357) {
-  char *example = "( 1802034124559944355435114959 != 184437237619263825 ) = True";
+  char *example =
+      "( 1802034124559944355435114959 != 184437237619263825 ) = True";
   s21_decimal value_1 = {{0x9F61F1CF, 0xA3156668, 0x5D29B91, 0x0}};
   s21_decimal value_2 = {{0xBFA68951, 0x28F40B0, 0x0, 0x0}};
   int code = 1;
@@ -33634,7 +34319,8 @@ START_TEST(s21_is_not_equal_3361) {
 }
 
 START_TEST(s21_is_not_equal_3362) {
-  char *example = "( 1633307476489746198271085003 != 169973945906614194 ) = True";
+  char *example =
+      "( 1633307476489746198271085003 != 169973945906614194 ) = True";
   s21_decimal value_1 = {{0xCADBC9CB, 0xB7A43FB7, 0x5470A4F, 0x0}};
   s21_decimal value_2 = {{0x3AD5CFB2, 0x25BDE67, 0x0, 0x0}};
   int code = 1;
@@ -33654,7 +34340,8 @@ START_TEST(s21_is_not_equal_3363) {
 }
 
 START_TEST(s21_is_not_equal_3364) {
-  char *example = "( -34916.31515271649095650539 != 106847471014113899920 ) = True";
+  char *example =
+      "( -34916.31515271649095650539 != 106847471014113899920 ) = True";
   s21_decimal value_1 = {{0x2E890CEB, 0xB945A2F2, 0x2E361, 0x80140000}};
   s21_decimal value_2 = {{0x11AF590, 0xCACE78C9, 0x5, 0x0}};
   int code = 1;
@@ -33754,7 +34441,8 @@ START_TEST(s21_is_not_equal_3373) {
 }
 
 START_TEST(s21_is_not_equal_3374) {
-  char *example = "( 1808863774988898677805283477 != -7997.4683766216640302026722 ) = True";
+  char *example =
+      "( 1808863774988898677805283477 != -7997.4683766216640302026722 ) = True";
   s21_decimal value_1 = {{0x4F27F895, 0xBA89C592, 0x5D841CD, 0x0}};
   s21_decimal value_2 = {{0xD5BE0FE2, 0x4B4DFB72, 0x42274C, 0x80160000}};
   int code = 1;
@@ -33774,7 +34462,8 @@ START_TEST(s21_is_not_equal_3375) {
 }
 
 START_TEST(s21_is_not_equal_3376) {
-  char *example = "( 1309845446223481239729280960 != -8.9893968685566489422893 ) = True";
+  char *example =
+      "( 1309845446223481239729280960 != -8.9893968685566489422893 ) = True";
   s21_decimal value_1 = {{0x975F17C0, 0xEBB8B52E, 0x43B7A8F, 0x0}};
   s21_decimal value_2 = {{0x3F1A6C2D, 0x296C30DD, 0x1309, 0x80160000}};
   int code = 1;
@@ -33874,7 +34563,8 @@ START_TEST(s21_is_not_equal_3385) {
 }
 
 START_TEST(s21_is_not_equal_3386) {
-  char *example = "( 160423018430233573903081216 != 1657705735120321457915284347 ) = True";
+  char *example =
+      "( 160423018430233573903081216 != 1657705735120321457915284347 ) = True";
   s21_decimal value_1 = {{0x2E589F00, 0x41438E41, 0x84B2E5, 0x0}};
   s21_decimal value_2 = {{0x45A1CB7B, 0xF7CC0189, 0x55B38D7, 0x0}};
   int code = 1;
@@ -33884,7 +34574,8 @@ START_TEST(s21_is_not_equal_3386) {
 }
 
 START_TEST(s21_is_not_equal_3387) {
-  char *example = "( -12.708768691830732756730489 != 1144018514583024291927275219 ) = True";
+  char *example =
+      "( -12.708768691830732756730489 != 1144018514583024291927275219 ) = True";
   s21_decimal value_1 = {{0x3929C279, 0xBB342DB8, 0xA832F, 0x80180000}};
   s21_decimal value_2 = {{0x5DC7B6D3, 0xF1982408, 0x3B24F57, 0x0}};
   int code = 1;
@@ -33924,7 +34615,8 @@ START_TEST(s21_is_not_equal_3390) {
 }
 
 START_TEST(s21_is_not_equal_3391) {
-  char *example = "( -345.49682021254759802762 != 1582069192749510495537736595 ) = True";
+  char *example =
+      "( -345.49682021254759802762 != 1582069192749510495537736595 ) = True";
   s21_decimal value_1 = {{0x45ED678A, 0xF127EA45, 0x750, 0x80140000}};
   s21_decimal value_2 = {{0x94142B93, 0xCA420D5E, 0x51CA82E, 0x0}};
   int code = 1;
@@ -33954,7 +34646,8 @@ START_TEST(s21_is_not_equal_3393) {
 }
 
 START_TEST(s21_is_not_equal_3394) {
-  char *example = "( 0.71541943714626661173882829 != 1488282478538868446 ) = True";
+  char *example =
+      "( 0.71541943714626661173882829 != 1488282478538868446 ) = True";
   s21_decimal value_1 = {{0x36C6EFCD, 0x8A3AEDFE, 0x3B2D98, 0x1A0000}};
   s21_decimal value_2 = {{0x6ABF46DE, 0x14A77107, 0x0, 0x0}};
   int code = 1;
@@ -34004,7 +34697,8 @@ START_TEST(s21_is_not_equal_3398) {
 }
 
 START_TEST(s21_is_not_equal_3399) {
-  char *example = "( 1783582374920970037219459273 != 1808419784322591596154737 ) = True";
+  char *example =
+      "( 1783582374920970037219459273 != 1808419784322591596154737 ) = True";
   s21_decimal value_1 = {{0x901680C9, 0x48E936B9, 0x5C35842, 0x0}};
   s21_decimal value_2 = {{0x18130F71, 0xA208C6BD, 0x17EF2, 0x0}};
   int code = 1;
@@ -34044,7 +34738,8 @@ START_TEST(s21_is_not_equal_3402) {
 }
 
 START_TEST(s21_is_not_equal_3403) {
-  char *example = "( 1051313569579238702459587881 != 1177653281509681069761679765 ) = True";
+  char *example =
+      "( 1051313569579238702459587881 != 1177653281509681069761679765 ) = True";
   s21_decimal value_1 = {{0x26270D29, 0xCE18BE58, 0x365A04E, 0x0}};
   s21_decimal value_2 = {{0x5BC6D195, 0x4FF7BDB0, 0x3CE21C8, 0x0}};
   int code = 1;
@@ -34054,7 +34749,8 @@ START_TEST(s21_is_not_equal_3403) {
 }
 
 START_TEST(s21_is_not_equal_3404) {
-  char *example = "( -33401.7203032788468384702 != 1277108493840482520332171210 ) = True";
+  char *example =
+      "( -33401.7203032788468384702 != 1277108493840482520332171210 ) = True";
   s21_decimal value_1 = {{0x64CE43BE, 0x1BDE2B55, 0x46BB, 0x80130000}};
   s21_decimal value_2 = {{0x9466F7CA, 0x2D136335, 0x420663E, 0x0}};
   int code = 1;
@@ -34164,7 +34860,8 @@ START_TEST(s21_is_not_equal_3414) {
 }
 
 START_TEST(s21_is_not_equal_3415) {
-  char *example = "( -5.735102944203285871506 != -28.039451114660397850460 ) = True";
+  char *example =
+      "( -5.735102944203285871506 != -28.039451114660397850460 ) = True";
   s21_decimal value_1 = {{0xDC63B92, 0xE68AADE0, 0x136, 0x80150000}};
   s21_decimal value_2 = {{0xC25F3656, 0x8E26F0, 0x98, 0x80140000}};
   int code = 1;
@@ -34204,7 +34901,8 @@ START_TEST(s21_is_not_equal_3418) {
 }
 
 START_TEST(s21_is_not_equal_3419) {
-  char *example = "( 1412271404124716340421038269 != 1182054363097570826619473467 ) = True";
+  char *example =
+      "( 1412271404124716340421038269 != 1182054363097570826619473467 ) = True";
   s21_decimal value_1 = {{0xA9AB90BD, 0x397CAB80, 0x490341A, 0x0}};
   s21_decimal value_2 = {{0xBA44E3B, 0x6C5E8DCF, 0x3D1C5BF, 0x0}};
   int code = 1;
@@ -34244,7 +34942,8 @@ START_TEST(s21_is_not_equal_3422) {
 }
 
 START_TEST(s21_is_not_equal_3423) {
-  char *example = "( 1592401495032147742 != 1893390092275512101954517411 ) = True";
+  char *example =
+      "( 1592401495032147742 != 1893390092275512101954517411 ) = True";
   s21_decimal value_1 = {{0xB312F1E, 0x161958B9, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDD01F9A3, 0x92048DF4, 0x61E2CF2, 0x0}};
   int code = 1;
@@ -34274,7 +34973,8 @@ START_TEST(s21_is_not_equal_3425) {
 }
 
 START_TEST(s21_is_not_equal_3426) {
-  char *example = "( -4796.225591534067 != 1602073992681313860118244446 ) = True";
+  char *example =
+      "( -4796.225591534067 != 1602073992681313860118244446 ) = True";
   s21_decimal value_1 = {{0x4AA561F3, 0x110A24, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x3605EC5E, 0x2AD96FF7, 0x52D345D, 0x0}};
   int code = 1;
@@ -34284,7 +34984,8 @@ START_TEST(s21_is_not_equal_3426) {
 }
 
 START_TEST(s21_is_not_equal_3427) {
-  char *example = "( -60075.316532705201927617339 != -1.584733108610122 ) = True";
+  char *example =
+      "( -60075.316532705201927617339 != -1.584733108610122 ) = True";
   s21_decimal value_1 = {{0x9F35FB3B, 0x6F5402FB, 0x31B171, 0x80150000}};
   s21_decimal value_2 = {{0x6E00A44A, 0x5A14E, 0x0, 0x800F0000}};
   int code = 1;
@@ -34294,7 +34995,8 @@ START_TEST(s21_is_not_equal_3427) {
 }
 
 START_TEST(s21_is_not_equal_3428) {
-  char *example = "( -98.158766756301950618416748 != -5.2015383400392729503154117 ) = True";
+  char *example =
+      "( -98.158766756301950618416748 != -5.2015383400392729503154117 ) = True";
   s21_decimal value_1 = {{0xDB83B66C, 0x68854D43, 0x5131ED, 0x80180000}};
   s21_decimal value_2 = {{0x1AAB3FC5, 0x9592A0B5, 0x2B06AF, 0x80190000}};
   int code = 1;
@@ -34324,7 +35026,8 @@ START_TEST(s21_is_not_equal_3430) {
 }
 
 START_TEST(s21_is_not_equal_3431) {
-  char *example = "( 1866171295652686695397148250 != -224.23395359729039999038622 ) = True";
+  char *example =
+      "( 1866171295652686695397148250 != -224.23395359729039999038622 ) = True";
   s21_decimal value_1 = {{0x87E1465A, 0xA61A2760, 0x607A924, 0x0}};
   s21_decimal value_2 = {{0xE434F49E, 0xB2BBA939, 0x128C56, 0x80170000}};
   int code = 1;
@@ -34354,7 +35057,8 @@ START_TEST(s21_is_not_equal_3433) {
 }
 
 START_TEST(s21_is_not_equal_3434) {
-  char *example = "( 132516770892590696636040 != -4340247.5197449570254000 ) = True";
+  char *example =
+      "( 132516770892590696636040 != -4340247.5197449570254000 ) = True";
   s21_decimal value_1 = {{0x44841E88, 0xBFA09EDE, 0x1C0F, 0x0}};
   s21_decimal value_2 = {{0x64AF07CE, 0x5A54913C, 0x2, 0x800D0000}};
   int code = 1;
@@ -34384,7 +35088,8 @@ START_TEST(s21_is_not_equal_3436) {
 }
 
 START_TEST(s21_is_not_equal_3437) {
-  char *example = "( 1983036469582003737425361308 != -7.918820237963126 ) = True";
+  char *example =
+      "( 1983036469582003737425361308 != -7.918820237963126 ) = True";
   s21_decimal value_1 = {{0xE2E4399C, 0x6C043CF7, 0x668544E, 0x0}};
   s21_decimal value_2 = {{0x352EF76, 0x1C2220, 0x0, 0x800F0000}};
   int code = 1;
@@ -34444,7 +35149,8 @@ START_TEST(s21_is_not_equal_3442) {
 }
 
 START_TEST(s21_is_not_equal_3443) {
-  char *example = "( 0.43653036545970366928549121 != 1105818486471548612015861311 ) = True";
+  char *example =
+      "( 0.43653036545970366928549121 != 1105818486471548612015861311 ) = True";
   s21_decimal value_1 = {{0x65DA7501, 0xDA5A0C0E, 0x241BE3, 0x1A0000}};
   s21_decimal value_2 = {{0xEDA0AE3F, 0x4535EFFB, 0x392B62C, 0x0}};
   int code = 1;
@@ -34454,7 +35160,8 @@ START_TEST(s21_is_not_equal_3443) {
 }
 
 START_TEST(s21_is_not_equal_3444) {
-  char *example = "( 0.67470210791031021837226097 != 109500316827995654603400 ) = True";
+  char *example =
+      "( 0.67470210791031021837226097 != 109500316827995654603400 ) = True";
   s21_decimal value_1 = {{0x23B41071, 0x74B4D95D, 0x37CF5F, 0x1A0000}};
   s21_decimal value_2 = {{0xE1544288, 0x6296D84, 0x1730, 0x0}};
   int code = 1;
@@ -34504,7 +35211,8 @@ START_TEST(s21_is_not_equal_3448) {
 }
 
 START_TEST(s21_is_not_equal_3449) {
-  char *example = "( 1090259650937923128116154300 != -645.38650601659314 ) = True";
+  char *example =
+      "( 1090259650937923128116154300 != -645.38650601659314 ) = True";
   s21_decimal value_1 = {{0x5FC48FBC, 0x1B236B3C, 0x385D776, 0x0}};
   s21_decimal value_2 = {{0x8F651BB2, 0xE5498F, 0x0, 0x800E0000}};
   int code = 1;
@@ -34744,7 +35452,8 @@ START_TEST(s21_is_not_equal_3472) {
 }
 
 START_TEST(s21_is_not_equal_3473) {
-  char *example = "( 1513540395173251711767438688 != 1379297473290303397 ) = True";
+  char *example =
+      "( 1513540395173251711767438688 != 1379297473290303397 ) = True";
   s21_decimal value_1 = {{0xFA6C6560, 0x3AC52084, 0x4E3F8A5, 0x0}};
   s21_decimal value_2 = {{0x7F0FF7A5, 0x13243FBE, 0x0, 0x0}};
   int code = 1;
@@ -34774,7 +35483,8 @@ START_TEST(s21_is_not_equal_3475) {
 }
 
 START_TEST(s21_is_not_equal_3476) {
-  char *example = "( 1849119062761251358625976246 != 1106898275260125627484623538 ) = True";
+  char *example =
+      "( 1849119062761251358625976246 != 1106898275260125627484623538 ) = True";
   s21_decimal value_1 = {{0xAF474FB6, 0x4062A8E0, 0x5F98E31, 0x0}};
   s21_decimal value_2 = {{0x96DE52B2, 0xBCE55496, 0x3939AD3, 0x0}};
   int code = 1;
@@ -34794,7 +35504,8 @@ START_TEST(s21_is_not_equal_3477) {
 }
 
 START_TEST(s21_is_not_equal_3478) {
-  char *example = "( 127767764210534924424 != -4.4171488457961429483848 ) = True";
+  char *example =
+      "( 127767764210534924424 != -4.4171488457961429483848 ) = True";
   s21_decimal value_1 = {{0x5ACD4088, 0xED22489B, 0x6, 0x0}};
   s21_decimal value_2 = {{0xA2034148, 0x8A8B41F0, 0x95A, 0x80160000}};
   int code = 1;
@@ -34804,7 +35515,8 @@ START_TEST(s21_is_not_equal_3478) {
 }
 
 START_TEST(s21_is_not_equal_3479) {
-  char *example = "( 0.09839859774762854782874629 != 1226922166564999621397 ) = True";
+  char *example =
+      "( 0.09839859774762854782874629 != 1226922166564999621397 ) = True";
   s21_decimal value_1 = {{0x1C6C3405, 0xDE034760, 0x823AB, 0x1A0000}};
   s21_decimal value_2 = {{0x87736B15, 0x82F729FA, 0x42, 0x0}};
   int code = 1;
@@ -34934,7 +35646,8 @@ START_TEST(s21_is_not_equal_3491) {
 }
 
 START_TEST(s21_is_not_equal_3492) {
-  char *example = "( 1538420339596469076988158040 != -474.982332436652496065 ) = True";
+  char *example =
+      "( 1538420339596469076988158040 != -474.982332436652496065 ) = True";
   s21_decimal value_1 = {{0x474E6058, 0xB82549A0, 0x4F88D2D, 0x0}};
   s21_decimal value_2 = {{0x712C14C1, 0xBFB43AC9, 0x19, 0x80120000}};
   int code = 1;
@@ -34964,7 +35677,8 @@ START_TEST(s21_is_not_equal_3494) {
 }
 
 START_TEST(s21_is_not_equal_3495) {
-  char *example = "( 199484980769037769 != 1502636735888812653127091954 ) = True";
+  char *example =
+      "( 199484980769037769 != 1502636735888812653127091954 ) = True";
   s21_decimal value_1 = {{0x78C39DC9, 0x2C4B688, 0x0, 0x0}};
   s21_decimal value_2 = {{0x691F46F2, 0xACE451FF, 0x4DAF3B4, 0x0}};
   int code = 1;
@@ -34994,7 +35708,8 @@ START_TEST(s21_is_not_equal_3497) {
 }
 
 START_TEST(s21_is_not_equal_3498) {
-  char *example = "( 18130862266679779038238741 != -533387.54634162668153 ) = True";
+  char *example =
+      "( 18130862266679779038238741 != -533387.54634162668153 ) = True";
   s21_decimal value_1 = {{0x9C529815, 0x34F47F6, 0xEFF5C, 0x0}};
   s21_decimal value_2 = {{0x2AFC8279, 0xE43952BD, 0x2, 0x800E0000}};
   int code = 1;
@@ -35054,7 +35769,8 @@ START_TEST(s21_is_not_equal_3503) {
 }
 
 START_TEST(s21_is_not_equal_3504) {
-  char *example = "( -79228162514264337593543950335 != 1508499487205776 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1508499487205776 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xE8142990, 0x55BF8, 0x0, 0x0}};
   int code = 1;
@@ -35064,7 +35780,8 @@ START_TEST(s21_is_not_equal_3504) {
 }
 
 START_TEST(s21_is_not_equal_3505) {
-  char *example = "( 132109250018892812698890 != 1129660824576400028162396428 ) = True";
+  char *example =
+      "( 132109250018892812698890 != 1129660824576400028162396428 ) = True";
   s21_decimal value_1 = {{0xCD50C50A, 0xA823A360, 0x1BF9, 0x0}};
   s21_decimal value_2 = {{0x5685110C, 0x245A125, 0x3A66EFC, 0x0}};
   int code = 1;
@@ -35104,7 +35821,8 @@ START_TEST(s21_is_not_equal_3508) {
 }
 
 START_TEST(s21_is_not_equal_3509) {
-  char *example = "( 184743861234125372595402848 != 1493437713869963928554786325 ) = True";
+  char *example =
+      "( 184743861234125372595402848 != 1493437713869963928554786325 ) = True";
   s21_decimal value_1 = {{0x8287860, 0xC900E618, 0x98D108, 0x0}};
   s21_decimal value_2 = {{0xA28D4E15, 0xB1465E93, 0x4D357BC, 0x0}};
   int code = 1;
@@ -35224,7 +35942,8 @@ START_TEST(s21_is_not_equal_3520) {
 }
 
 START_TEST(s21_is_not_equal_3521) {
-  char *example = "( -5.608150140459844758978596 != 8.39008790777347818168287015 ) = True";
+  char *example =
+      "( -5.608150140459844758978596 != 8.39008790777347818168287015 ) = True";
   s21_decimal value_1 = {{0x5A8C024, 0x6DA4C755, 0x4A392, 0x80180000}};
   s21_decimal value_2 = {{0x3707F27, 0xAF4C8D19, 0x2B60305, 0x1A0000}};
   int code = 1;
@@ -35284,7 +36003,8 @@ START_TEST(s21_is_not_equal_3526) {
 }
 
 START_TEST(s21_is_not_equal_3527) {
-  char *example = "( 1891420060636634390919720 != -6.01410626882925990024 ) = True";
+  char *example =
+      "( 1891420060636634390919720 != -6.01410626882925990024 ) = True";
   s21_decimal value_1 = {{0xB52EFA28, 0x1641C80C, 0x19086, 0x0}};
   s21_decimal value_2 = {{0x6DCB9088, 0x9A3FC2BD, 0x20, 0x80140000}};
   int code = 1;
@@ -35324,7 +36044,8 @@ START_TEST(s21_is_not_equal_3530) {
 }
 
 START_TEST(s21_is_not_equal_3531) {
-  char *example = "( 1663270011178261711853680718 != 1327404888882969201 ) = True";
+  char *example =
+      "( 1663270011178261711853680718 != 1327404888882969201 ) = True";
   s21_decimal value_1 = {{0xF923784E, 0xFA3BAC26, 0x55FD31F, 0x0}};
   s21_decimal value_2 = {{0xAAFC7A71, 0x126BE3B6, 0x0, 0x0}};
   int code = 1;
@@ -35354,7 +36075,8 @@ START_TEST(s21_is_not_equal_3533) {
 }
 
 START_TEST(s21_is_not_equal_3534) {
-  char *example = "( -7.4051201451819526263493492 != 11172467025781964195358 ) = True";
+  char *example =
+      "( -7.4051201451819526263493492 != 11172467025781964195358 ) = True";
   s21_decimal value_1 = {{0x6EE95374, 0xACA97DA1, 0x3D40F3, 0x80190000}};
   s21_decimal value_2 = {{0x72FCC61E, 0xA9206DAE, 0x25D, 0x0}};
   int code = 1;
@@ -35364,7 +36086,8 @@ START_TEST(s21_is_not_equal_3534) {
 }
 
 START_TEST(s21_is_not_equal_3535) {
-  char *example = "( -51.66236547875816951906 != 1842955003100764269387429057 ) = True";
+  char *example =
+      "( -51.66236547875816951906 != 1842955003100764269387429057 ) = True";
   s21_decimal value_1 = {{0x12695062, 0xFEF4066, 0x118, 0x80140000}};
   s21_decimal value_2 = {{0x99EFB4C1, 0xE861E7A2, 0x5F474E6, 0x0}};
   int code = 1;
@@ -35404,7 +36127,8 @@ START_TEST(s21_is_not_equal_3538) {
 }
 
 START_TEST(s21_is_not_equal_3539) {
-  char *example = "( 1654679435928321748868546928 != -807.70692095152911332811876 ) = True";
+  char *example =
+      "( 1654679435928321748868546928 != -807.70692095152911332811876 ) = True";
   s21_decimal value_1 = {{0x6DE04170, 0xF5C4721B, 0x558B7FF, 0x0}};
   s21_decimal value_2 = {{0xFEE62464, 0xFDFCA21B, 0x42CFDB, 0x80170000}};
   int code = 1;
@@ -35444,7 +36168,8 @@ START_TEST(s21_is_not_equal_3542) {
 }
 
 START_TEST(s21_is_not_equal_3543) {
-  char *example = "( -979.30912359013435505119768 != 1982008023721140997558594118 ) = True";
+  char *example =
+      "( -979.30912359013435505119768 != 1982008023721140997558594118 ) = True";
   s21_decimal value_1 = {{0x5B601218, 0x658B47B2, 0x5101AD, 0x80170000}};
   s21_decimal value_2 = {{0x1D6F6A46, 0x42967202, 0x6677A86, 0x0}};
   int code = 1;
@@ -35464,7 +36189,8 @@ START_TEST(s21_is_not_equal_3544) {
 }
 
 START_TEST(s21_is_not_equal_3545) {
-  char *example = "( 1744684039098023965 != 1201377126157033455780001749 ) = True";
+  char *example =
+      "( 1744684039098023965 != 1201377126157033455780001749 ) = True";
   s21_decimal value_1 = {{0xCBBB401D, 0x18365CE3, 0x0, 0x0}};
   s21_decimal value_2 = {{0x237677D5, 0x81F820BA, 0x3E1C180, 0x0}};
   int code = 1;
@@ -35494,7 +36220,8 @@ START_TEST(s21_is_not_equal_3547) {
 }
 
 START_TEST(s21_is_not_equal_3548) {
-  char *example = "( 3.3185819488705058E-10 != -455.45025761987991687101037 ) = True";
+  char *example =
+      "( 3.3185819488705058E-10 != -455.45025761987991687101037 ) = True";
   s21_decimal value_1 = {{0xB6345A22, 0x75E653, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x28037A6D, 0xCB39EF9A, 0x25AC88, 0x80170000}};
   int code = 1;
@@ -35574,7 +36301,8 @@ START_TEST(s21_is_not_equal_3555) {
 }
 
 START_TEST(s21_is_not_equal_3556) {
-  char *example = "( 12050222993740183400191 != 112386344916741639992217 ) = True";
+  char *example =
+      "( 12050222993740183400191 != 112386344916741639992217 ) = True";
   s21_decimal value_1 = {{0x2FCC6EFF, 0x3E700FFD, 0x28D, 0x0}};
   s21_decimal value_2 = {{0xC1517399, 0x79D8E566, 0x17CC, 0x0}};
   int code = 1;
@@ -35604,7 +36332,8 @@ START_TEST(s21_is_not_equal_3558) {
 }
 
 START_TEST(s21_is_not_equal_3559) {
-  char *example = "( 17865897939464575608182059 != 1224382506071111641614538747 ) = True";
+  char *example =
+      "( 17865897939464575608182059 != 1224382506071111641614538747 ) = True";
   s21_decimal value_1 = {{0x4534552B, 0x449996E8, 0xEC740, 0x0}};
   s21_decimal value_2 = {{0x203C57FB, 0xA6DAE02E, 0x3F4C914, 0x0}};
   int code = 1;
@@ -35644,7 +36373,8 @@ START_TEST(s21_is_not_equal_3562) {
 }
 
 START_TEST(s21_is_not_equal_3563) {
-  char *example = "( -932.43856126310165394277699 != 1728976620926271683440625955 ) = True";
+  char *example =
+      "( -932.43856126310165394277699 != 1728976620926271683440625955 ) = True";
   s21_decimal value_1 = {{0xA118C543, 0x91B40C4A, 0x4D2127, 0x80170000}};
   s21_decimal value_2 = {{0x292B4923, 0x6DE308A9, 0x5962D0A, 0x0}};
   int code = 1;
@@ -35664,7 +36394,8 @@ START_TEST(s21_is_not_equal_3564) {
 }
 
 START_TEST(s21_is_not_equal_3565) {
-  char *example = "( -52.2890778901928946140 != -791.90919172183091611235484 ) = True";
+  char *example =
+      "( -52.2890778901928946140 != -791.90919172183091611235484 ) = True";
   s21_decimal value_1 = {{0x3DADEA96, 0xD5A81F4D, 0x2, 0x80120000}};
   s21_decimal value_2 = {{0xDD8CF49C, 0x5493CCB9, 0x418154, 0x80170000}};
   int code = 1;
@@ -35674,7 +36405,8 @@ START_TEST(s21_is_not_equal_3565) {
 }
 
 START_TEST(s21_is_not_equal_3566) {
-  char *example = "( -8.981789587776483484672 != 1510424890981342605196311455 ) = True";
+  char *example =
+      "( -8.981789587776483484672 != 1510424890981342605196311455 ) = True";
   s21_decimal value_1 = {{0x9F7DE400, 0xE75EBA85, 0x1E6, 0x80150000}};
   s21_decimal value_2 = {{0xBA56BB9F, 0x68AE2BD6, 0x4E164E9, 0x0}};
   int code = 1;
@@ -35684,7 +36416,8 @@ START_TEST(s21_is_not_equal_3566) {
 }
 
 START_TEST(s21_is_not_equal_3567) {
-  char *example = "( -882.30075450848725693578972 != 1834007359627665173404233 ) = True";
+  char *example =
+      "( -882.30075450848725693578972 != 1834007359627665173404233 ) = True";
   s21_decimal value_1 = {{0x64733EDC, 0xF95FD49E, 0x48FB71, 0x80170000}};
   s21_decimal value_2 = {{0x3C0C5A49, 0xBCF991EB, 0x1845D, 0x0}};
   int code = 1;
@@ -35784,7 +36517,8 @@ START_TEST(s21_is_not_equal_3576) {
 }
 
 START_TEST(s21_is_not_equal_3577) {
-  char *example = "( 8.1456994681418250E-10 != -9.3496674482216278210564947 ) = True";
+  char *example =
+      "( 8.1456994681418250E-10 != -9.3496674482216278210564947 ) = True";
   s21_decimal value_1 = {{0x733EE501, 0x1CF078, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xF7EED353, 0xE13353D7, 0x4D56B0, 0x80190000}};
   int code = 1;
@@ -35824,7 +36558,8 @@ START_TEST(s21_is_not_equal_3580) {
 }
 
 START_TEST(s21_is_not_equal_3581) {
-  char *example = "( 1079319360123865051475752176 != 0.18291147472050854476573106 ) = True";
+  char *example =
+      "( 1079319360123865051475752176 != 0.18291147472050854476573106 ) = True";
   s21_decimal value_1 = {{0xE4C34F0, 0xC0AA4261, 0x37CCAC3, 0x0}};
   s21_decimal value_2 = {{0xC94AE9B2, 0x1760E98A, 0xF214D, 0x1A0000}};
   int code = 1;
@@ -35854,7 +36589,8 @@ START_TEST(s21_is_not_equal_3583) {
 }
 
 START_TEST(s21_is_not_equal_3584) {
-  char *example = "( 1851964450481880971 != -626744.68265751655772760247 ) = True";
+  char *example =
+      "( 1851964450481880971 != -626744.68265751655772760247 ) = True";
   s21_decimal value_1 = {{0x79FBF8B, 0x19B37FDB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x32DEA8B7, 0xBB8F48A8, 0x33D7D5, 0x80140000}};
   int code = 1;
@@ -35984,7 +36720,8 @@ START_TEST(s21_is_not_equal_3596) {
 }
 
 START_TEST(s21_is_not_equal_3597) {
-  char *example = "( 1260157358905628981828 != 1339660530988378452371490320 ) = True";
+  char *example =
+      "( 1260157358905628981828 != 1339660530988378452371490320 ) = True";
   s21_decimal value_1 = {{0x28727A44, 0x50324953, 0x44, 0x0}};
   s21_decimal value_2 = {{0xD9C8C610, 0xE78F8DF2, 0x4542426, 0x0}};
   int code = 1;
@@ -36014,7 +36751,8 @@ START_TEST(s21_is_not_equal_3599) {
 }
 
 START_TEST(s21_is_not_equal_3600) {
-  char *example = "( 1251208934473256719172209987 != 1378729928527678881719267040 ) = True";
+  char *example =
+      "( 1251208934473256719172209987 != 1378729928527678881719267040 ) = True";
   s21_decimal value_1 = {{0xE5AB8D43, 0x3FDC89ED, 0x40AF9CC, 0x0}};
   s21_decimal value_2 = {{0xE7A2EE0, 0x3063EBF8, 0x474756B, 0x0}};
   int code = 1;
@@ -36114,7 +36852,8 @@ START_TEST(s21_is_not_equal_3609) {
 }
 
 START_TEST(s21_is_not_equal_3610) {
-  char *example = "( 0.89640759725755340051130659 != 1136446332153373476623489028 ) = True";
+  char *example =
+      "( 0.89640759725755340051130659 != 1136446332153373476623489028 ) = True";
   s21_decimal value_1 = {{0xC8132923, 0x5267C291, 0x4A262B, 0x1A0000}};
   s21_decimal value_2 = {{0xA88C1804, 0x1C97F28E, 0x3AC0BDF, 0x0}};
   int code = 1;
@@ -36164,7 +36903,8 @@ START_TEST(s21_is_not_equal_3614) {
 }
 
 START_TEST(s21_is_not_equal_3615) {
-  char *example = "( -1.3789594735967993409434163 != -10128706.5743823932 ) = True";
+  char *example =
+      "( -1.3789594735967993409434163 != -10128706.5743823932 ) = True";
   s21_decimal value_1 = {{0x5361F233, 0x6DB396C0, 0xB680F, 0x80190000}};
   s21_decimal value_2 = {{0xB600943C, 0x167D80C, 0x0, 0x800A0000}};
   int code = 1;
@@ -36184,7 +36924,8 @@ START_TEST(s21_is_not_equal_3616) {
 }
 
 START_TEST(s21_is_not_equal_3617) {
-  char *example = "( 1273203866534831355549807717 != 1349867910715146703378420594 ) = True";
+  char *example =
+      "( 1273203866534831355549807717 != 1349867910715146703378420594 ) = True";
   s21_decimal value_1 = {{0x24717465, 0xE7DBFB92, 0x41D2B67, 0x0}};
   s21_decimal value_2 = {{0xA3819372, 0x117B8E12, 0x45C95A6, 0x0}};
   int code = 1;
@@ -36204,7 +36945,8 @@ START_TEST(s21_is_not_equal_3618) {
 }
 
 START_TEST(s21_is_not_equal_3619) {
-  char *example = "( -7.12055637950868915041 != 1821033089135149520316913544 ) = True";
+  char *example =
+      "( -7.12055637950868915041 != 1821033089135149520316913544 ) = True";
   s21_decimal value_1 = {{0x77B28361, 0x99C1CE15, 0x26, 0x80140000}};
   s21_decimal value_2 = {{0xEF71D788, 0x9206C70E, 0x5E252C1, 0x0}};
   int code = 1;
@@ -36264,7 +37006,8 @@ START_TEST(s21_is_not_equal_3624) {
 }
 
 START_TEST(s21_is_not_equal_3625) {
-  char *example = "( 1939079420929442880641691669 != 3.7116434726585991E-10 ) = True";
+  char *example =
+      "( 1939079420929442880641691669 != 3.7116434726585991E-10 ) = True";
   s21_decimal value_1 = {{0xEA19F015, 0xA289608, 0x643F80A, 0x0}};
   s21_decimal value_2 = {{0x63350687, 0x83DD33, 0x0, 0x1A0000}};
   int code = 1;
@@ -36334,7 +37077,8 @@ START_TEST(s21_is_not_equal_3631) {
 }
 
 START_TEST(s21_is_not_equal_3632) {
-  char *example = "( 1730689207950557193575999735 != 1348741206867474328168998045 ) = True";
+  char *example =
+      "( 1730689207950557193575999735 != 1348741206867474328168998045 ) = True";
   s21_decimal value_1 = {{0xBE4628F7, 0xF5365965, 0x59797B1, 0x0}};
   s21_decimal value_2 = {{0x9E0A49D, 0x548FF8E0, 0x45BA70F, 0x0}};
   int code = 1;
@@ -36394,7 +37138,8 @@ START_TEST(s21_is_not_equal_3637) {
 }
 
 START_TEST(s21_is_not_equal_3638) {
-  char *example = "( 14232839304627928976525 != 1052663127831862043538813436 ) = True";
+  char *example =
+      "( 14232839304627928976525 != 1052663127831862043538813436 ) = True";
   s21_decimal value_1 = {{0x9D6C4C8D, 0x9052E2BE, 0x303, 0x0}};
   s21_decimal value_2 = {{0x3E3EF1FC, 0x81292D34, 0x366BE16, 0x0}};
   int code = 1;
@@ -36464,7 +37209,8 @@ START_TEST(s21_is_not_equal_3644) {
 }
 
 START_TEST(s21_is_not_equal_3645) {
-  char *example = "( 6.0028893778556134E-10 != 1885141296234329579024035581 ) = True";
+  char *example =
+      "( 6.0028893778556134E-10 != 1885141296234329579024035581 ) = True";
   s21_decimal value_1 = {{0xF9EE34E6, 0xD543F5, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x5CD82EFD, 0x70E368F2, 0x6175A32, 0x0}};
   int code = 1;
@@ -36554,7 +37300,8 @@ START_TEST(s21_is_not_equal_3653) {
 }
 
 START_TEST(s21_is_not_equal_3654) {
-  char *example = "( 1006183980017095962642361999 != 0.8213150289298815 ) = True";
+  char *example =
+      "( 1006183980017095962642361999 != 0.8213150289298815 ) = True";
   s21_decimal value_1 = {{0x99942E8F, 0xDA4CAAAD, 0x3404BBE, 0x0}};
   s21_decimal value_2 = {{0x117B057F, 0x1D2DD1, 0x0, 0x100000}};
   int code = 1;
@@ -36564,7 +37311,8 @@ START_TEST(s21_is_not_equal_3654) {
 }
 
 START_TEST(s21_is_not_equal_3655) {
-  char *example = "( -5.7790062406148931118837784 != -15.719297936519031434297259 ) = True";
+  char *example =
+      "( -5.7790062406148931118837784 != -15.719297936519031434297259 ) = True";
   s21_decimal value_1 = {{0x72363018, 0x8F790F55, 0x2FCD85, 0x80190000}};
   s21_decimal value_2 = {{0xC76CBFAB, 0xD940362E, 0xD00B0, 0x80180000}};
   int code = 1;
@@ -36584,7 +37332,8 @@ START_TEST(s21_is_not_equal_3656) {
 }
 
 START_TEST(s21_is_not_equal_3657) {
-  char *example = "( 1819161706799224942468761719 != -5.1088490461591653765215359 ) = True";
+  char *example =
+      "( 1819161706799224942468761719 != -5.1088490461591653765215359 ) = True";
   s21_decimal value_1 = {{0x66E38877, 0xBB0FAC35, 0x5E0C679, 0x0}};
   s21_decimal value_2 = {{0xD95DF47F, 0x9E0C2A63, 0x2A4268, 0x80190000}};
   int code = 1;
@@ -36614,7 +37363,8 @@ START_TEST(s21_is_not_equal_3659) {
 }
 
 START_TEST(s21_is_not_equal_3660) {
-  char *example = "( 0.217954400262938631209 != 0.2130013024509635615110594 ) = True";
+  char *example =
+      "( 0.217954400262938631209 != 0.2130013024509635615110594 ) = True";
   s21_decimal value_1 = {{0x69C31C29, 0xD0B99444, 0xB, 0x150000}};
   s21_decimal value_2 = {{0xBBDB5C2, 0x3CC832D8, 0x1C30C, 0x190000}};
   int code = 1;
@@ -36694,7 +37444,8 @@ START_TEST(s21_is_not_equal_3667) {
 }
 
 START_TEST(s21_is_not_equal_3668) {
-  char *example = "( 0.81918908058569230126115904 != 1436829379768011185822680078 ) = True";
+  char *example =
+      "( 0.81918908058569230126115904 != 1436829379768011185822680078 ) = True";
   s21_decimal value_1 = {{0x85DF6C40, 0xE77C1459, 0x43C300, 0x1A0000}};
   s21_decimal value_2 = {{0x93A8C40E, 0xC07440C8, 0x4A48474, 0x0}};
   int code = 1;
@@ -36734,7 +37485,8 @@ START_TEST(s21_is_not_equal_3671) {
 }
 
 START_TEST(s21_is_not_equal_3672) {
-  char *example = "( 1184835354700677155300463060 != 1422660941856975153296029129 ) = True";
+  char *example =
+      "( 1184835354700677155300463060 != 1422660941856975153296029129 ) = True";
   s21_decimal value_1 = {{0x4C1251D4, 0x47BB8A04, 0x3D412A5, 0x0}};
   s21_decimal value_2 = {{0x169FB5C9, 0x318E7AD1, 0x498CC2C, 0x0}};
   int code = 1;
@@ -36744,7 +37496,8 @@ START_TEST(s21_is_not_equal_3672) {
 }
 
 START_TEST(s21_is_not_equal_3673) {
-  char *example = "( -461.97601849149267350579001 != 115086471899329895243135 ) = True";
+  char *example =
+      "( -461.97601849149267350579001 != 115086471899329895243135 ) = True";
   s21_decimal value_1 = {{0xB29AE739, 0x3B1407D, 0x2636B9, 0x80170000}};
   s21_decimal value_2 = {{0xF59E9D7F, 0xD9A2F62D, 0x185E, 0x0}};
   int code = 1;
@@ -36764,7 +37517,8 @@ START_TEST(s21_is_not_equal_3674) {
 }
 
 START_TEST(s21_is_not_equal_3675) {
-  char *example = "( 1998790720106313681425570421 != 25.6491178524517639462 ) = True";
+  char *example =
+      "( 1998790720106313681425570421 != 25.6491178524517639462 ) = True";
   s21_decimal value_1 = {{0x39229A75, 0xDDD343D, 0x6755C66, 0x0}};
   s21_decimal value_2 = {{0x672CA526, 0xE787B7EB, 0xD, 0x130000}};
   int code = 1;
@@ -36784,7 +37538,8 @@ START_TEST(s21_is_not_equal_3676) {
 }
 
 START_TEST(s21_is_not_equal_3677) {
-  char *example = "( 1178138318356783861350772773 != -34751.7273775643331635305 ) = True";
+  char *example =
+      "( 1178138318356783861350772773 != -34751.7273775643331635305 ) = True";
   s21_decimal value_1 = {{0xDFDFB025, 0x36692A52, 0x3CE887E, 0x0}};
   s21_decimal value_2 = {{0x10C3A869, 0xF2FC2985, 0x4996, 0x80130000}};
   int code = 1;
@@ -36824,7 +37579,8 @@ START_TEST(s21_is_not_equal_3680) {
 }
 
 START_TEST(s21_is_not_equal_3681) {
-  char *example = "( 1328533679929458451704284861 != 15922973694241154214278026 ) = True";
+  char *example =
+      "( 1328533679929458451704284861 != 15922973694241154214278026 ) = True";
   s21_decimal value_1 = {{0x3CAD86BD, 0x19988DB6, 0x44AEFF3, 0x0}};
   s21_decimal value_2 = {{0x3BBA338A, 0x2232B60A, 0xD2BD2, 0x0}};
   int code = 1;
@@ -36904,7 +37660,8 @@ START_TEST(s21_is_not_equal_3688) {
 }
 
 START_TEST(s21_is_not_equal_3689) {
-  char *example = "( 1523633209755698201 != 1639242504575864017942837136 ) = True";
+  char *example =
+      "( 1523633209755698201 != 1639242504575864017942837136 ) = True";
   s21_decimal value_1 = {{0xEB7A0419, 0x15250854, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBB897790, 0x3C0DDD65, 0x54BF31A, 0x0}};
   int code = 1;
@@ -36964,7 +37721,8 @@ START_TEST(s21_is_not_equal_3694) {
 }
 
 START_TEST(s21_is_not_equal_3695) {
-  char *example = "( -9.4763569777588054767069388 != 13176343929575395508248230 ) = True";
+  char *example =
+      "( -9.4763569777588054767069388 != 13176343929575395508248230 ) = True";
   s21_decimal value_1 = {{0xFC1E68CC, 0x6948CD85, 0x4E62F7, 0x80190000}};
   s21_decimal value_2 = {{0x2B325EA6, 0x9232EB5, 0xAE633, 0x0}};
   int code = 1;
@@ -37034,7 +37792,8 @@ START_TEST(s21_is_not_equal_3701) {
 }
 
 START_TEST(s21_is_not_equal_3702) {
-  char *example = "( -27169048.510460281617513999 != 0.404922124186232 ) = True";
+  char *example =
+      "( -27169048.510460281617513999 != 0.404922124186232 ) = True";
   s21_decimal value_1 = {{0x4321FE0F, 0x122B1B4B, 0x167945, 0x80120000}};
   s21_decimal value_2 = {{0x475FB278, 0x17046, 0x0, 0xF0000}};
   int code = 1;
@@ -37044,7 +37803,8 @@ START_TEST(s21_is_not_equal_3702) {
 }
 
 START_TEST(s21_is_not_equal_3703) {
-  char *example = "( 1468115941686224754466673673 != 154675000176911558547941670 ) = True";
+  char *example =
+      "( 1468115941686224754466673673 != 154675000176911558547941670 ) = True";
   s21_decimal value_1 = {{0xCE84D409, 0xABFDBAAF, 0x4BE65A4, 0x0}};
   s21_decimal value_2 = {{0xE5C92926, 0x8FA0FBCC, 0x7FF1B4, 0x0}};
   int code = 1;
@@ -37064,7 +37824,8 @@ START_TEST(s21_is_not_equal_3704) {
 }
 
 START_TEST(s21_is_not_equal_3705) {
-  char *example = "( 1949223317567544844909826506 != -2.37499380260045260237106 ) = True";
+  char *example =
+      "( 1949223317567544844909826506 != -2.37499380260045260237106 ) = True";
   s21_decimal value_1 = {{0x7C2851CA, 0xC73F1BFD, 0x64C5C17, 0x0}};
   s21_decimal value_2 = {{0x7A0EA932, 0xDE00F4DD, 0x324A, 0x80170000}};
   int code = 1;
@@ -37084,7 +37845,8 @@ START_TEST(s21_is_not_equal_3706) {
 }
 
 START_TEST(s21_is_not_equal_3707) {
-  char *example = "( -682957.10656161506565288778 != 0.2839267401800526430 ) = True";
+  char *example =
+      "( -682957.10656161506565288778 != 0.2839267401800526430 ) = True";
   s21_decimal value_1 = {{0x77D3F34A, 0xE4AB8BCE, 0x387E2D, 0x80140000}};
   s21_decimal value_2 = {{0xAAAAAAA3, 0x3F0B5DD, 0x0, 0x120000}};
   int code = 1;
@@ -37094,7 +37856,8 @@ START_TEST(s21_is_not_equal_3707) {
 }
 
 START_TEST(s21_is_not_equal_3708) {
-  char *example = "( 1809541365390862390975097312 != 1688583360355126185797692142 ) = True";
+  char *example =
+      "( 1809541365390862390975097312 != 1688583360355126185797692142 ) = True";
   s21_decimal value_1 = {{0xE4D569E0, 0xFA5B73C1, 0x5D8D149, 0x0}};
   s21_decimal value_2 = {{0x65E92AEE, 0x62D09281, 0x574C36F, 0x0}};
   int code = 1;
@@ -37154,7 +37917,8 @@ START_TEST(s21_is_not_equal_3713) {
 }
 
 START_TEST(s21_is_not_equal_3714) {
-  char *example = "( 1061029458623564389 != 1728173387824883195188075981 ) = True";
+  char *example =
+      "( 1061029458623564389 != 1728173387824883195188075981 ) = True";
   s21_decimal value_1 = {{0xC97B8A65, 0xEB988AB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x84ABDDCD, 0x13587731, 0x59582F3, 0x0}};
   int code = 1;
@@ -37234,7 +37998,8 @@ START_TEST(s21_is_not_equal_3721) {
 }
 
 START_TEST(s21_is_not_equal_3722) {
-  char *example = "( -3.5419990926196722790767345 != -209.34463200196256337058254 ) = True";
+  char *example =
+      "( -3.5419990926196722790767345 != -209.34463200196256337058254 ) = True";
   s21_decimal value_1 = {{0xD5AB1AF1, 0x8E3A7D1C, 0x1D4C79, 0x80190000}};
   s21_decimal value_2 = {{0xC5F159CE, 0x8629AED5, 0x11510B, 0x80170000}};
   int code = 1;
@@ -37274,7 +38039,8 @@ START_TEST(s21_is_not_equal_3725) {
 }
 
 START_TEST(s21_is_not_equal_3726) {
-  char *example = "( -240840.09088584875547340657 != 153699500697022857356 ) = True";
+  char *example =
+      "( -240840.09088584875547340657 != 153699500697022857356 ) = True";
   s21_decimal value_1 = {{0x9E7CAF71, 0xBFB15EFE, 0x13EBFC, 0x80140000}};
   s21_decimal value_2 = {{0x90F3808C, 0x5502518C, 0x8, 0x0}};
   int code = 1;
@@ -37294,7 +38060,8 @@ START_TEST(s21_is_not_equal_3727) {
 }
 
 START_TEST(s21_is_not_equal_3728) {
-  char *example = "( 15999421889130237947 != -7523.37099227056660055345 ) = True";
+  char *example =
+      "( 15999421889130237947 != -7523.37099227056660055345 ) = True";
   s21_decimal value_1 = {{0x89378FFB, 0xDE095D70, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC8F88531, 0x469F7E38, 0x9F50, 0x80140000}};
   int code = 1;
@@ -37314,7 +38081,8 @@ START_TEST(s21_is_not_equal_3729) {
 }
 
 START_TEST(s21_is_not_equal_3730) {
-  char *example = "( 35021.9590739366787095681300 != 1664449008312826513413790677 ) = True";
+  char *example =
+      "( 35021.9590739366787095681300 != 1664449008312826513413790677 ) = True";
   s21_decimal value_1 = {{0xAECF1D0D, 0x6BAA095F, 0x2E59E, 0x140000}};
   s21_decimal value_2 = {{0xAA1A5BD5, 0x8A4AE84D, 0x560CCC9, 0x0}};
   int code = 1;
@@ -37374,7 +38142,8 @@ START_TEST(s21_is_not_equal_3735) {
 }
 
 START_TEST(s21_is_not_equal_3736) {
-  char *example = "( 0.7118544057603648 != 1172333628698550055784166321 ) = True";
+  char *example =
+      "( 0.7118544057603648 != 1172333628698550055784166321 ) = True";
   s21_decimal value_1 = {{0x31DF1640, 0x194A47, 0x0, 0x100000}};
   s21_decimal value_2 = {{0x684833B1, 0x5B0B2A91, 0x3C9BB4D, 0x0}};
   int code = 1;
@@ -37394,7 +38163,8 @@ START_TEST(s21_is_not_equal_3737) {
 }
 
 START_TEST(s21_is_not_equal_3738) {
-  char *example = "( -14.843703073893890017 != 1266216893530185653216380872 ) = True";
+  char *example =
+      "( -14.843703073893890017 != 1266216893530185653216380872 ) = True";
   s21_decimal value_1 = {{0xE6D1B7E1, 0xCDFF6D4C, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xD5CC87C8, 0x5714F7D3, 0x41763DB, 0x0}};
   int code = 1;
@@ -37414,7 +38184,8 @@ START_TEST(s21_is_not_equal_3739) {
 }
 
 START_TEST(s21_is_not_equal_3740) {
-  char *example = "( 1078279575579598738244023191 != -32431950.061240738423442191 ) = True";
+  char *example =
+      "( 1078279575579598738244023191 != -32431950.061240738423442191 ) = True";
   s21_decimal value_1 = {{0xD948B397, 0xEB64D6C9, 0x37BEE94, 0x0}};
   s21_decimal value_2 = {{0xA7FB0B0F, 0x8924BEA5, 0x1AD3BB, 0x80120000}};
   int code = 1;
@@ -37514,7 +38285,8 @@ START_TEST(s21_is_not_equal_3749) {
 }
 
 START_TEST(s21_is_not_equal_3750) {
-  char *example = "( 1371487154410010967678886093 != -982.87060222319735832039373 ) = True";
+  char *example =
+      "( 1371487154410010967678886093 != -982.87060222319735832039373 ) = True";
   s21_decimal value_1 = {{0xF20BA0CD, 0x9E0B9EE7, 0x46E77B3, 0x0}};
   s21_decimal value_2 = {{0xA3A3CFCD, 0x3604EC86, 0x514D18, 0x80170000}};
   int code = 1;
@@ -37614,7 +38386,8 @@ START_TEST(s21_is_not_equal_3759) {
 }
 
 START_TEST(s21_is_not_equal_3760) {
-  char *example = "( 13588253987467922 != 1295031416649999566070208507 ) = True";
+  char *example =
+      "( 13588253987467922 != 1295031416649999566070208507 ) = True";
   s21_decimal value_1 = {{0xEC0A7292, 0x304671, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBEA5D7FB, 0xC4B8D820, 0x42F3991, 0x0}};
   int code = 1;
@@ -37634,7 +38407,8 @@ START_TEST(s21_is_not_equal_3761) {
 }
 
 START_TEST(s21_is_not_equal_3762) {
-  char *example = "( -7490.3474616571751524347210 != 12790001156534006549 ) = True";
+  char *example =
+      "( -7490.3474616571751524347210 != 12790001156534006549 ) = True";
   s21_decimal value_1 = {{0xA6C49E21, 0x8CADFF80, 0x63224, 0x80150000}};
   s21_decimal value_2 = {{0x9C0B7315, 0xB17F3649, 0x0, 0x0}};
   int code = 1;
@@ -37644,7 +38418,8 @@ START_TEST(s21_is_not_equal_3762) {
 }
 
 START_TEST(s21_is_not_equal_3763) {
-  char *example = "( 160852906036985779 != 1465816177525496829103546760 ) = True";
+  char *example =
+      "( 160852906036985779 != 1465816177525496829103546760 ) = True";
   s21_decimal value_1 = {{0xA56C7FB3, 0x23B76DD, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA873A188, 0x34F5E55F, 0x4BC7EA6, 0x0}};
   int code = 1;
@@ -37654,7 +38429,8 @@ START_TEST(s21_is_not_equal_3763) {
 }
 
 START_TEST(s21_is_not_equal_3764) {
-  char *example = "( 1928974395353587643835196799 != 1107141649339622042858478359 ) = True";
+  char *example =
+      "( 1928974395353587643835196799 != 1107141649339622042858478359 ) = True";
   s21_decimal value_1 = {{0x87CFA57F, 0x816C9DC3, 0x63B9C37, 0x0}};
   s21_decimal value_2 = {{0x41CDB17, 0x12BA9F71, 0x393CE5D, 0x0}};
   int code = 1;
@@ -37674,7 +38450,8 @@ START_TEST(s21_is_not_equal_3765) {
 }
 
 START_TEST(s21_is_not_equal_3766) {
-  char *example = "( 7.3583638037114136E-10 != 10404849512132681181765 ) = True";
+  char *example =
+      "( 7.3583638037114136E-10 != 10404849512132681181765 ) = True";
   s21_decimal value_1 = {{0xCE7BAD18, 0x1056BED, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x80E8AA45, 0xC4B3007, 0x234, 0x0}};
   int code = 1;
@@ -37694,7 +38471,8 @@ START_TEST(s21_is_not_equal_3767) {
 }
 
 START_TEST(s21_is_not_equal_3768) {
-  char *example = "( 19024224792277626719809 != 1074110253036288319520339784 ) = True";
+  char *example =
+      "( 19024224792277626719809 != 1074110253036288319520339784 ) = True";
   s21_decimal value_1 = {{0xE7710E41, 0x4E27A5E9, 0x407, 0x0}};
   s21_decimal value_2 = {{0x53157748, 0x7DD5E388, 0x3787BB1, 0x0}};
   int code = 1;
@@ -37724,7 +38502,8 @@ START_TEST(s21_is_not_equal_3770) {
 }
 
 START_TEST(s21_is_not_equal_3771) {
-  char *example = "( 135996127063540109 != -6.3227648300281236371573513 ) = True";
+  char *example =
+      "( 135996127063540109 != -6.3227648300281236371573513 ) = True";
   s21_decimal value_1 = {{0xCC73818D, 0x1E327C1, 0x0, 0x0}};
   s21_decimal value_2 = {{0x46A48B09, 0xAEB2CBE0, 0x344CF9, 0x80190000}};
   int code = 1;
@@ -37894,7 +38673,8 @@ START_TEST(s21_is_not_equal_3787) {
 }
 
 START_TEST(s21_is_not_equal_3788) {
-  char *example = "( 1094890571506492844868018447 != 1020774562543308296853705628 ) = True";
+  char *example =
+      "( 1094890571506492844868018447 != 1020774562543308296853705628 ) = True";
   s21_decimal value_1 = {{0x6DEEA10F, 0xD024D0AB, 0x389AC18, 0x0}};
   s21_decimal value_2 = {{0x82C4D39C, 0xEA973576, 0x34C5D6B, 0x0}};
   int code = 1;
@@ -37934,7 +38714,8 @@ START_TEST(s21_is_not_equal_3791) {
 }
 
 START_TEST(s21_is_not_equal_3792) {
-  char *example = "( -69.167922361102839502334 != 1768408253842717866492898009 ) = True";
+  char *example =
+      "( -69.167922361102839502334 != 1768408253842717866492898009 ) = True";
   s21_decimal value_1 = {{0x74BED5FE, 0x99BFE810, 0xEA5, 0x80150000}};
   s21_decimal value_2 = {{0x6B032AD9, 0x886ABB76, 0x5B6CB03, 0x0}};
   int code = 1;
@@ -38154,7 +38935,8 @@ START_TEST(s21_is_not_equal_3813) {
 }
 
 START_TEST(s21_is_not_equal_3814) {
-  char *example = "( -9271.60234228473131 != 1851962934531704299922730262 ) = True";
+  char *example =
+      "( -9271.60234228473131 != 1851962934531704299922730262 ) = True";
   s21_decimal value_1 = {{0x1B0E5D2B, 0xCDDEF52, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xC9892D16, 0xD95E4D6C, 0x5FBE867, 0x0}};
   int code = 1;
@@ -38224,7 +39006,8 @@ START_TEST(s21_is_not_equal_3820) {
 }
 
 START_TEST(s21_is_not_equal_3821) {
-  char *example = "( 1281173721695395191249738787 != -77230.00269361266 ) = True";
+  char *example =
+      "( 1281173721695395191249738787 != -77230.00269361266 ) = True";
   s21_decimal value_1 = {{0x7CB89C23, 0x9EA2FA02, 0x423C316, 0x0}};
   s21_decimal value_2 = {{0x1FA7D072, 0x1B7007, 0x0, 0x800B0000}};
   int code = 1;
@@ -38234,7 +39017,8 @@ START_TEST(s21_is_not_equal_3821) {
 }
 
 START_TEST(s21_is_not_equal_3822) {
-  char *example = "( 19908044845186535796625 != 14465085288417869953127682 ) = True";
+  char *example =
+      "( 19908044845186535796625 != 14465085288417869953127682 ) = True";
   s21_decimal value_1 = {{0xE1EA2F91, 0x379F3D5A, 0x437, 0x0}};
   s21_decimal value_2 = {{0x10425502, 0xD8412D95, 0xBF719, 0x0}};
   int code = 1;
@@ -38264,7 +39048,8 @@ START_TEST(s21_is_not_equal_3824) {
 }
 
 START_TEST(s21_is_not_equal_3825) {
-  char *example = "( 1714768915719898448114014815 != 1565904191140582525975812339 ) = True";
+  char *example =
+      "( 1714768915719898448114014815 != 1565904191140582525975812339 ) = True";
   s21_decimal value_1 = {{0x269CDA5F, 0x2FCBFC8E, 0x58A6C71, 0x0}};
   s21_decimal value_2 = {{0x480658F3, 0x4C042E85, 0x50F491C, 0x0}};
   int code = 1;
@@ -38304,7 +39089,8 @@ START_TEST(s21_is_not_equal_3828) {
 }
 
 START_TEST(s21_is_not_equal_3829) {
-  char *example = "( -3669.8541213274845624186283 != 17729446682528406 ) = True";
+  char *example =
+      "( -3669.8541213274845624186283 != 17729446682528406 ) = True";
   s21_decimal value_1 = {{0xF788B5AB, 0xE7D06CEB, 0x1E5B37, 0x80160000}};
   s21_decimal value_2 = {{0x7B938A96, 0x3EFCD6, 0x0, 0x0}};
   int code = 1;
@@ -38364,7 +39150,8 @@ START_TEST(s21_is_not_equal_3834) {
 }
 
 START_TEST(s21_is_not_equal_3835) {
-  char *example = "( 1668533063952651493850737812 != -9877174355.11329972 ) = True";
+  char *example =
+      "( 1668533063952651493850737812 != -9877174355.11329972 ) = True";
   s21_decimal value_1 = {{0x3673EC94, 0xA3DB7EF8, 0x5642D9E, 0x0}};
   s21_decimal value_2 = {{0x421CD4B4, 0xDB513C6, 0x0, 0x80080000}};
   int code = 1;
@@ -38384,7 +39171,8 @@ START_TEST(s21_is_not_equal_3836) {
 }
 
 START_TEST(s21_is_not_equal_3837) {
-  char *example = "( 1018513772135541085339020847 != 127803439235096502095 ) = True";
+  char *example =
+      "( 1018513772135541085339020847 != 127803439235096502095 ) = True";
   s21_decimal value_1 = {{0x464A6E2F, 0x3908A220, 0x34A7EAE, 0x0}};
   s21_decimal value_2 = {{0x4925DF4F, 0xEDA106DA, 0x6, 0x0}};
   int code = 1;
@@ -38544,7 +39332,8 @@ START_TEST(s21_is_not_equal_3852) {
 }
 
 START_TEST(s21_is_not_equal_3853) {
-  char *example = "( -18250.359919249933402375359 != 1271715900753597034841971687 ) = True";
+  char *example =
+      "( -18250.359919249933402375359 != 1271715900753597034841971687 ) = True";
   s21_decimal value_1 = {{0x23BC04BF, 0xFE6026D2, 0xF18A9, 0x80150000}};
   s21_decimal value_2 = {{0x48FB1BE7, 0x1E7B678A, 0x41BF051, 0x0}};
   int code = 1;
@@ -38564,7 +39353,8 @@ START_TEST(s21_is_not_equal_3854) {
 }
 
 START_TEST(s21_is_not_equal_3855) {
-  char *example = "( 198574514479798623320 != 0.30044571105750956977038033 ) = True";
+  char *example =
+      "( 198574514479798623320 != 0.30044571105750956977038033 ) = True";
   s21_decimal value_1 = {{0x960F1C58, 0xC3C664D3, 0xA, 0x0}};
   s21_decimal value_2 = {{0xDED222D1, 0x76951880, 0x18DA2F, 0x1A0000}};
   int code = 1;
@@ -38584,7 +39374,8 @@ START_TEST(s21_is_not_equal_3856) {
 }
 
 START_TEST(s21_is_not_equal_3857) {
-  char *example = "( -3.7438574970449647620439660 != -1.788349110166574 ) = True";
+  char *example =
+      "( -3.7438574970449647620439660 != -1.788349110166574 ) = True";
   s21_decimal value_1 = {{0x752DC63E, 0xEBED3B40, 0x318CA, 0x80180000}};
   s21_decimal value_2 = {{0x7972242E, 0x65A7E, 0x0, 0x800F0000}};
   int code = 1;
@@ -38624,7 +39415,8 @@ START_TEST(s21_is_not_equal_3860) {
 }
 
 START_TEST(s21_is_not_equal_3861) {
-  char *example = "( 1648602732796853361554 != 10549436661362143502937 ) = True";
+  char *example =
+      "( 1648602732796853361554 != 10549436661362143502937 ) = True";
   s21_decimal value_1 = {{0x9EAC1B92, 0x5EF57ACE, 0x59, 0x0}};
   s21_decimal value_2 = {{0xAD67A259, 0xE2D7EE32, 0x23B, 0x0}};
   int code = 1;
@@ -38694,7 +39486,8 @@ START_TEST(s21_is_not_equal_3867) {
 }
 
 START_TEST(s21_is_not_equal_3868) {
-  char *example = "( 1084879795659457865473434468 != 1193812026620239002990913952 ) = True";
+  char *example =
+      "( 1084879795659457865473434468 != 1193812026620239002990913952 ) = True";
   s21_decimal value_1 = {{0x3ECDA364, 0x9125A5F5, 0x381643B, 0x0}};
   s21_decimal value_2 = {{0xB5C5A9A0, 0xA3DA4556, 0x3DB7F87, 0x0}};
   int code = 1;
@@ -38754,7 +39547,8 @@ START_TEST(s21_is_not_equal_3873) {
 }
 
 START_TEST(s21_is_not_equal_3874) {
-  char *example = "( 1087809586099730769565978718 != 0.09557408928480496794221484 ) = True";
+  char *example =
+      "( 1087809586099730769565978718 != 0.09557408928480496794221484 ) = True";
   s21_decimal value_1 = {{0x96B0105E, 0xD332D323, 0x383D0A3, 0x0}};
   s21_decimal value_2 = {{0x82CC3BAC, 0x2D1A1A4A, 0x7E7DC, 0x1A0000}};
   int code = 1;
@@ -38774,7 +39568,8 @@ START_TEST(s21_is_not_equal_3875) {
 }
 
 START_TEST(s21_is_not_equal_3876) {
-  char *example = "( 158186598777604200 != 1263726071984243866474385197 ) = True";
+  char *example =
+      "( 158186598777604200 != 1263726071984243866474385197 ) = True";
   s21_decimal value_1 = {{0x9C5DC868, 0x231FDDF, 0x0, 0x0}};
   s21_decimal value_2 = {{0x70C0F2D, 0xA2333FEB, 0x4155467, 0x0}};
   int code = 1;
@@ -38794,7 +39589,8 @@ START_TEST(s21_is_not_equal_3877) {
 }
 
 START_TEST(s21_is_not_equal_3878) {
-  char *example = "( -726.44200078870972262198396 != 90.1795464950635490288922159 ) = True";
+  char *example =
+      "( -726.44200078870972262198396 != 90.1795464950635490288922159 ) = True";
   s21_decimal value_1 = {{0x55672C7C, 0xFA29B9AF, 0x3C1701, 0x80170000}};
   s21_decimal value_2 = {{0x7AACEE2F, 0x1CA26162, 0x2E9F29E, 0x190000}};
   int code = 1;
@@ -38804,7 +39600,8 @@ START_TEST(s21_is_not_equal_3878) {
 }
 
 START_TEST(s21_is_not_equal_3879) {
-  char *example = "( 1289893413395248020810397 != 11937405554073136317244415 ) = True";
+  char *example =
+      "( 1289893413395248020810397 != 11937405554073136317244415 ) = True";
   s21_decimal value_1 = {{0x89916A9D, 0x4315F6C6, 0x11125, 0x0}};
   s21_decimal value_2 = {{0x899AA3FF, 0xD41583E, 0x9DFD8, 0x0}};
   int code = 1;
@@ -38894,7 +39691,8 @@ START_TEST(s21_is_not_equal_3887) {
 }
 
 START_TEST(s21_is_not_equal_3888) {
-  char *example = "( 1393922991509145796314483544 != 1368822297024464179222171857 ) = True";
+  char *example =
+      "( 1393922991509145796314483544 != 1368822297024464179222171857 ) = True";
   s21_decimal value_1 = {{0x51914B58, 0xC8990E89, 0x48106AC, 0x0}};
   s21_decimal value_2 = {{0xF90650D1, 0x68B5EFA4, 0x46C4365, 0x0}};
   int code = 1;
@@ -38944,7 +39742,8 @@ START_TEST(s21_is_not_equal_3892) {
 }
 
 START_TEST(s21_is_not_equal_3893) {
-  char *example = "( 168705013181048422653174537 != 0.21910392711847644860327635 ) = True";
+  char *example =
+      "( 168705013181048422653174537 != 0.21910392711847644860327635 ) = True";
   s21_decimal value_1 = {{0x6172309, 0x170A8790, 0x8B8CAD, 0x0}};
   s21_decimal value_2 = {{0x38F926D3, 0xC4D7459D, 0x121FB4, 0x1A0000}};
   int code = 1;
@@ -38964,7 +39763,8 @@ START_TEST(s21_is_not_equal_3894) {
 }
 
 START_TEST(s21_is_not_equal_3895) {
-  char *example = "( 1426527807360918457066499868 != -8.3327293206426946547490570 ) = True";
+  char *example =
+      "( 1426527807360918457066499868 != -8.3327293206426946547490570 ) = True";
   s21_decimal value_1 = {{0x73F0AF1C, 0x64806BC1, 0x49BFF03, 0x0}};
   s21_decimal value_2 = {{0x65FC6981, 0x295F3076, 0x6E486, 0x80180000}};
   int code = 1;
@@ -39004,7 +39804,8 @@ START_TEST(s21_is_not_equal_3898) {
 }
 
 START_TEST(s21_is_not_equal_3899) {
-  char *example = "( 1131688504094071892318128 != -32.818571754542520619866366 ) = True";
+  char *example =
+      "( 1131688504094071892318128 != -32.818571754542520619866366 ) = True";
   s21_decimal value_1 = {{0xA22597B0, 0xF4ECA2E3, 0xEFA4, 0x0}};
   s21_decimal value_2 = {{0x94C598FE, 0x56F70F18, 0x1B259A, 0x80180000}};
   int code = 1;
@@ -39024,7 +39825,8 @@ START_TEST(s21_is_not_equal_3900) {
 }
 
 START_TEST(s21_is_not_equal_3901) {
-  char *example = "( -434.30795780728929498454 != 1224961494919257764962 ) = True";
+  char *example =
+      "( -434.30795780728929498454 != 1224961494919257764962 ) = True";
   s21_decimal value_1 = {{0xE1C9B556, 0x635E405A, 0x932, 0x80140000}};
   s21_decimal value_2 = {{0x41D3B462, 0x67C17581, 0x42, 0x0}};
   int code = 1;
@@ -39034,7 +39836,8 @@ START_TEST(s21_is_not_equal_3901) {
 }
 
 START_TEST(s21_is_not_equal_3902) {
-  char *example = "( -2.5193841949299643716407257 != 1749397533090185312508221152 ) = True";
+  char *example =
+      "( -2.5193841949299643716407257 != 1749397533090185312508221152 ) = True";
   s21_decimal value_1 = {{0x88430FD9, 0xE8A2D091, 0x14D700, 0x80190000}};
   s21_decimal value_2 = {{0x125696E0, 0x4BBD5A73, 0x5A71156, 0x0}};
   int code = 1;
@@ -39044,7 +39847,8 @@ START_TEST(s21_is_not_equal_3902) {
 }
 
 START_TEST(s21_is_not_equal_3903) {
-  char *example = "( -494511.39915756476158862932 != 13846680417388126801035119 ) = True";
+  char *example =
+      "( -494511.39915756476158862932 != 13846680417388126801035119 ) = True";
   s21_decimal value_1 = {{0xAE626654, 0xAA9AFC48, 0x28E7AF, 0x80140000}};
   s21_decimal value_2 = {{0xBAD0FF6F, 0xCACD575, 0xB7426, 0x0}};
   int code = 1;
@@ -39054,7 +39858,8 @@ START_TEST(s21_is_not_equal_3903) {
 }
 
 START_TEST(s21_is_not_equal_3904) {
-  char *example = "( -7824.7601958797289972773841 != 13625170394022446851391 ) = True";
+  char *example =
+      "( -7824.7601958797289972773841 != 13625170394022446851391 ) = True";
   s21_decimal value_1 = {{0xFC9333D1, 0x745B22, 0x40B993, 0x80160000}};
   s21_decimal value_2 = {{0xE50F653F, 0x9F393C1D, 0x2E2, 0x0}};
   int code = 1;
@@ -39114,7 +39919,8 @@ START_TEST(s21_is_not_equal_3909) {
 }
 
 START_TEST(s21_is_not_equal_3910) {
-  char *example = "( 1127555304207518854720047569 != -583740.4042555253 ) = True";
+  char *example =
+      "( 1127555304207518854720047569 != -583740.4042555253 ) = True";
   s21_decimal value_1 = {{0xB668C9D1, 0x855E1CBC, 0x3A4B11F, 0x0}};
   s21_decimal value_2 = {{0x8A5DEF75, 0x14BD16, 0x0, 0x800A0000}};
   int code = 1;
@@ -39144,7 +39950,8 @@ START_TEST(s21_is_not_equal_3912) {
 }
 
 START_TEST(s21_is_not_equal_3913) {
-  char *example = "( 1591762951822249599672780143 != -47779.021956339385823438695 ) = True";
+  char *example =
+      "( 1591762951822249599672780143 != -47779.021956339385823438695 ) = True";
   s21_decimal value_1 = {{0x9CF0056F, 0x85BAC4D6, 0x524ACEA, 0x0}};
   s21_decimal value_2 = {{0x7BCCA767, 0xF85FFF14, 0x278599, 0x80150000}};
   int code = 1;
@@ -39164,7 +39971,8 @@ START_TEST(s21_is_not_equal_3914) {
 }
 
 START_TEST(s21_is_not_equal_3915) {
-  char *example = "( 1175747358792367917107219486 != 1374375262729089055336306903 ) = True";
+  char *example =
+      "( 1175747358792367917107219486 != 1374375262729089055336306903 ) = True";
   s21_decimal value_1 = {{0xD04F8C1E, 0x8EB34B6, 0x3CC8E30, 0x0}};
   s21_decimal value_2 = {{0x93AA18D7, 0x4876AABE, 0x470DB48, 0x0}};
   int code = 1;
@@ -39194,7 +40002,8 @@ START_TEST(s21_is_not_equal_3917) {
 }
 
 START_TEST(s21_is_not_equal_3918) {
-  char *example = "( 10133958053439557 != -8.3269130781714173626799256 ) = True";
+  char *example =
+      "( 10133958053439557 != -8.3269130781714173626799256 ) = True";
   s21_decimal value_1 = {{0xF9F1A845, 0x2400C7, 0x0, 0x0}};
   s21_decimal value_2 = {{0x54D1D498, 0x9FEE0617, 0x44E0EC, 0x80190000}};
   int code = 1;
@@ -39204,7 +40013,8 @@ START_TEST(s21_is_not_equal_3918) {
 }
 
 START_TEST(s21_is_not_equal_3919) {
-  char *example = "( -8.0117626982228270819525495 != 1292633523456147796669306072 ) = True";
+  char *example =
+      "( -8.0117626982228270819525495 != 1292633523456147796669306072 ) = True";
   s21_decimal value_1 = {{0xE4334377, 0x42ECCC68, 0x424591, 0x80190000}};
   s21_decimal value_2 = {{0x187914D8, 0xB7CABE94, 0x42D3DCB, 0x0}};
   int code = 1;
@@ -39214,7 +40024,8 @@ START_TEST(s21_is_not_equal_3919) {
 }
 
 START_TEST(s21_is_not_equal_3920) {
-  char *example = "( -50318.340074306643886668200 != 1650043065283791486644320857 ) = True";
+  char *example =
+      "( -50318.340074306643886668200 != 1650043065283791486644320857 ) = True";
   s21_decimal value_1 = {{0x2E2616FA, 0xA076C3E7, 0x6A8D, 0x80130000}};
   s21_decimal value_2 = {{0x16FAFA59, 0xCDC3A24C, 0x554E235, 0x0}};
   int code = 1;
@@ -39264,7 +40075,8 @@ START_TEST(s21_is_not_equal_3924) {
 }
 
 START_TEST(s21_is_not_equal_3925) {
-  char *example = "( -918543.78494747675983547393 != 16677842186544208205607989 ) = True";
+  char *example =
+      "( -918543.78494747675983547393 != 16677842186544208205607989 ) = True";
   s21_decimal value_1 = {{0xE6DB0C01, 0xD5F80235, 0x4BFAEB, 0x80140000}};
   s21_decimal value_2 = {{0x6D087435, 0xA2F502FC, 0xDCBAB, 0x0}};
   int code = 1;
@@ -39274,7 +40086,8 @@ START_TEST(s21_is_not_equal_3925) {
 }
 
 START_TEST(s21_is_not_equal_3926) {
-  char *example = "( 1726059496769377090184387195 != 1270376148235110649242282 ) = True";
+  char *example =
+      "( 1726059496769377090184387195 != 1270376148235110649242282 ) = True";
   s21_decimal value_1 = {{0x3D639A7B, 0xCFD41335, 0x593C350, 0x0}};
   s21_decimal value_2 = {{0x821D22AA, 0x3A9F0E88, 0x10D03, 0x0}};
   int code = 1;
@@ -39294,7 +40107,8 @@ START_TEST(s21_is_not_equal_3927) {
 }
 
 START_TEST(s21_is_not_equal_3928) {
-  char *example = "( 1022255236880467013195848751 != 16908411319310815942 ) = True";
+  char *example =
+      "( 1022255236880467013195848751 != 16908411319310815942 ) = True";
   s21_decimal value_1 = {{0x358CDC2F, 0x6EDAAE75, 0x34D96F7, 0x0}};
   s21_decimal value_2 = {{0xA3B712C6, 0xEAA6BE82, 0x0, 0x0}};
   int code = 1;
@@ -39444,7 +40258,8 @@ START_TEST(s21_is_not_equal_3942) {
 }
 
 START_TEST(s21_is_not_equal_3943) {
-  char *example = "( -218820.7977555479 != 1742114055782874927380455560 ) = True";
+  char *example =
+      "( -218820.7977555479 != 1742114055782874927380455560 ) = True";
   s21_decimal value_1 = {{0xDF326617, 0x7C629, 0x0, 0x800A0000}};
   s21_decimal value_2 = {{0xE5CE6088, 0x332A704C, 0x5A10B00, 0x0}};
   int code = 1;
@@ -39484,7 +40299,8 @@ START_TEST(s21_is_not_equal_3946) {
 }
 
 START_TEST(s21_is_not_equal_3947) {
-  char *example = "( 1970495038987701036874736649 != 10798478896818083165 ) = True";
+  char *example =
+      "( 1970495038987701036874736649 != 10798478896818083165 ) = True";
   s21_decimal value_1 = {{0x696C2409, 0x1B6C21C1, 0x65DF48E, 0x0}};
   s21_decimal value_2 = {{0x764D55D, 0x95DBE758, 0x0, 0x0}};
   int code = 1;
@@ -39514,7 +40330,8 @@ START_TEST(s21_is_not_equal_3949) {
 }
 
 START_TEST(s21_is_not_equal_3950) {
-  char *example = "( 1269569312965585715611265868 != 131726157198010488 ) = True";
+  char *example =
+      "( 1269569312965585715611265868 != 131726157198010488 ) = True";
   s21_decimal value_1 = {{0x93B36B4C, 0x5CA630C6, 0x41A29C2, 0x0}};
   s21_decimal value_2 = {{0xF76A2878, 0x1D3FC3D, 0x0, 0x0}};
   int code = 1;
@@ -39564,7 +40381,8 @@ START_TEST(s21_is_not_equal_3954) {
 }
 
 START_TEST(s21_is_not_equal_3955) {
-  char *example = "( 162572274443393442479 != 154254348728525638195015 ) = True";
+  char *example =
+      "( 162572274443393442479 != 154254348728525638195015 ) = True";
   s21_decimal value_1 = {{0xEDC822AF, 0xD024BE42, 0x8, 0x0}};
   s21_decimal value_2 = {{0x172DD747, 0x251EBE07, 0x20AA, 0x0}};
   int code = 1;
@@ -39624,7 +40442,8 @@ START_TEST(s21_is_not_equal_3960) {
 }
 
 START_TEST(s21_is_not_equal_3961) {
-  char *example = "( 79228162514264337593543950335 != -1.35365885883904246069523 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -1.35365885883904246069523 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xB0C6B913, 0x330A6C35, 0x1CAA, 0x80170000}};
   int code = 1;
@@ -39644,7 +40463,8 @@ START_TEST(s21_is_not_equal_3962) {
 }
 
 START_TEST(s21_is_not_equal_3963) {
-  char *example = "( 183599108219394036041 != -37.021629513692992007852595 ) = True";
+  char *example =
+      "( 183599108219394036041 != -37.021629513692992007852595 ) = True";
   s21_decimal value_1 = {{0xFF7B9149, 0xF3F3102C, 0x9, 0x0}};
   s21_decimal value_2 = {{0xC9105233, 0x8EB0C80B, 0x1E9FA2, 0x80180000}};
   int code = 1;
@@ -39704,7 +40524,8 @@ START_TEST(s21_is_not_equal_3968) {
 }
 
 START_TEST(s21_is_not_equal_3969) {
-  char *example = "( -620312.7582691817038537753 != 14732964422087810182971653 ) = True";
+  char *example =
+      "( -620312.7582691817038537753 != 14732964422087810182971653 ) = True";
   s21_decimal value_1 = {{0x2997E419, 0x38565FB8, 0x52190, 0x80130000}};
   s21_decimal value_2 = {{0x3A0A8105, 0x9A07A1EA, 0xC2FD3, 0x0}};
   int code = 1;
@@ -39744,7 +40565,8 @@ START_TEST(s21_is_not_equal_3972) {
 }
 
 START_TEST(s21_is_not_equal_3973) {
-  char *example = "( 167408883336129272425 != 1569652595843966372991234377 ) = True";
+  char *example =
+      "( 167408883336129272425 != 1569652595843966372991234377 ) = True";
   s21_decimal value_1 = {{0x86CBDA69, 0x1343D46C, 0x9, 0x0}};
   s21_decimal value_2 = {{0xA6707149, 0xB91B92DA, 0x51262DD, 0x0}};
   int code = 1;
@@ -39784,7 +40606,8 @@ START_TEST(s21_is_not_equal_3976) {
 }
 
 START_TEST(s21_is_not_equal_3977) {
-  char *example = "( -29.808904469782988103151397 != 0.48852264248832893893687674 ) = True";
+  char *example =
+      "( -29.808904469782988103151397 != 0.48852264248832893893687674 ) = True";
   s21_decimal value_1 = {{0x7E88EF25, 0xF303DAFC, 0x18A847, 0x80180000}};
   s21_decimal value_2 = {{0x9497397A, 0x8D2D348E, 0x2868DE, 0x1A0000}};
   int code = 1;
@@ -39854,7 +40677,8 @@ START_TEST(s21_is_not_equal_3983) {
 }
 
 START_TEST(s21_is_not_equal_3984) {
-  char *example = "( 1433662832783026727210160335 != -2.18485188614468354974149 ) = True";
+  char *example =
+      "( 1433662832783026727210160335 != -2.18485188614468354974149 ) = True";
   s21_decimal value_1 = {{0xD4BF90CF, 0xE5502260, 0x4A1E5E9, 0x0}};
   s21_decimal value_2 = {{0xC68021C5, 0x1B1634B7, 0x2E44, 0x80170000}};
   int code = 1;
@@ -39864,7 +40688,8 @@ START_TEST(s21_is_not_equal_3984) {
 }
 
 START_TEST(s21_is_not_equal_3985) {
-  char *example = "( 0.41085361324464380908295810 != 15082885077989585202707 ) = True";
+  char *example =
+      "( 0.41085361324464380908295810 != 15082885077989585202707 ) = True";
   s21_decimal value_1 = {{0x570B6F0D, 0x30A596AC, 0x36604, 0x190000}};
   s21_decimal value_2 = {{0xA9262E13, 0xA51421E1, 0x331, 0x0}};
   int code = 1;
@@ -39874,7 +40699,8 @@ START_TEST(s21_is_not_equal_3985) {
 }
 
 START_TEST(s21_is_not_equal_3986) {
-  char *example = "( 1938735288878665393930464386 != 1640498854582398729445732061 ) = True";
+  char *example =
+      "( 1938735288878665393930464386 != 1640498854582398729445732061 ) = True";
   s21_decimal value_1 = {{0x89876C82, 0x9A9479A8, 0x643AF2A, 0x0}};
   s21_decimal value_2 = {{0xED186EDD, 0x1ADB7119, 0x54CFD25, 0x0}};
   int code = 1;
@@ -39914,7 +40740,8 @@ START_TEST(s21_is_not_equal_3989) {
 }
 
 START_TEST(s21_is_not_equal_3990) {
-  char *example = "( 3.6259530195678384E-10 != 136756070007079458798897053 ) = True";
+  char *example =
+      "( 3.6259530195678384E-10 != 136756070007079458798897053 ) = True";
   s21_decimal value_1 = {{0xC10934B0, 0x80D1D9, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xB0C1079D, 0x68FD266D, 0x711F39, 0x0}};
   int code = 1;
@@ -39944,7 +40771,8 @@ START_TEST(s21_is_not_equal_3992) {
 }
 
 START_TEST(s21_is_not_equal_3993) {
-  char *example = "( 16005288655125399 != -599.84799111949133405436159 ) = True";
+  char *example =
+      "( 16005288655125399 != -599.84799111949133405436159 ) = True";
   s21_decimal value_1 = {{0xA8D0FB97, 0x38DCB9, 0x0, 0x0}};
   s21_decimal value_2 = {{0xCA738FF, 0x79C51F30, 0x319E46, 0x80170000}};
   int code = 1;
@@ -39954,7 +40782,8 @@ START_TEST(s21_is_not_equal_3993) {
 }
 
 START_TEST(s21_is_not_equal_3994) {
-  char *example = "( 12509231837119673615229 != 1088303609684854724716078821 ) = True";
+  char *example =
+      "( 12509231837119673615229 != 1088303609684854724716078821 ) = True";
   s21_decimal value_1 = {{0xD39437D, 0x20770F1C, 0x2A6, 0x0}};
   s21_decimal value_2 = {{0x51B726E5, 0xE5AF583E, 0x3843940, 0x0}};
   int code = 1;
@@ -40064,7 +40893,8 @@ START_TEST(s21_is_not_equal_4004) {
 }
 
 START_TEST(s21_is_not_equal_4005) {
-  char *example = "( 1717301260005861001508213245 != -876.551624033839 ) = True";
+  char *example =
+      "( 1717301260005861001508213245 != -876.551624033839 ) = True";
   s21_decimal value_1 = {{0x599CD1FD, 0xD8742872, 0x58C84AF, 0x0}};
   s21_decimal value_2 = {{0x142D862F, 0x31D38, 0x0, 0x800C0000}};
   int code = 1;
@@ -40084,7 +40914,8 @@ START_TEST(s21_is_not_equal_4006) {
 }
 
 START_TEST(s21_is_not_equal_4007) {
-  char *example = "( -8661260.075476626998622 != -5.1472903951408790909298401 ) = True";
+  char *example =
+      "( -8661260.075476626998622 != -5.1472903951408790909298401 ) = True";
   s21_decimal value_1 = {{0xC958855E, 0x87212552, 0x1D5, 0x800F0000}};
   s21_decimal value_2 = {{0x261126E1, 0xB6E3C11E, 0x2A93CF, 0x80190000}};
   int code = 1;
@@ -40124,7 +40955,8 @@ START_TEST(s21_is_not_equal_4010) {
 }
 
 START_TEST(s21_is_not_equal_4011) {
-  char *example = "( 1272791330888129472972806298 != 14503380190988645 ) = True";
+  char *example =
+      "( 1272791330888129472972806298 != 14503380190988645 ) = True";
   s21_decimal value_1 = {{0x7661589A, 0x4DB0F3BD, 0x41CD40C, 0x0}};
   s21_decimal value_2 = {{0x58538965, 0x3386BF, 0x0, 0x0}};
   int code = 1;
@@ -40144,7 +40976,8 @@ START_TEST(s21_is_not_equal_4012) {
 }
 
 START_TEST(s21_is_not_equal_4013) {
-  char *example = "( 1201980420368322016456223458 != -645.59605273426182452357082 ) = True";
+  char *example =
+      "( 1201980420368322016456223458 != -645.59605273426182452357082 ) = True";
   s21_decimal value_1 = {{0x57642AE2, 0x2704E9F3, 0x3E24141, 0x0}};
   s21_decimal value_2 = {{0x41127DA, 0x36F0DCB6, 0x356707, 0x80170000}};
   int code = 1;
@@ -40204,7 +41037,8 @@ START_TEST(s21_is_not_equal_4018) {
 }
 
 START_TEST(s21_is_not_equal_4019) {
-  char *example = "( 1835074510567636661488882226 != 1786935964153504485419365729 ) = True";
+  char *example =
+      "( 1835074510567636661488882226 != 1786935964153504485419365729 ) = True";
   s21_decimal value_1 = {{0x20009232, 0x8D2FC6F4, 0x5EDF024, 0x0}};
   s21_decimal value_2 = {{0xCDC9B561, 0xB8ACB78B, 0x5C61E68, 0x0}};
   int code = 1;
@@ -40254,7 +41088,8 @@ START_TEST(s21_is_not_equal_4023) {
 }
 
 START_TEST(s21_is_not_equal_4024) {
-  char *example = "( 2.5185396720784037E-10 != -1.835263294431767248746 ) = True";
+  char *example =
+      "( 2.5185396720784037E-10 != -1.835263294431767248746 ) = True";
   s21_decimal value_1 = {{0x2111D2A5, 0x5979FC, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xDE9F3F6A, 0x7D6502A4, 0x63, 0x80150000}};
   int code = 1;
@@ -40344,7 +41179,8 @@ START_TEST(s21_is_not_equal_4032) {
 }
 
 START_TEST(s21_is_not_equal_4033) {
-  char *example = "( -4.5690971259631108043030148 != -10.771870020015110654886295 ) = True";
+  char *example =
+      "( -4.5690971259631108043030148 != -10.771870020015110654886295 ) = True";
   s21_decimal value_1 = {{0x4017BE84, 0x83DFC5A1, 0x25CB70, 0x80190000}};
   s21_decimal value_2 = {{0xBC718197, 0x3E6E5E63, 0x8E908, 0x80180000}};
   int code = 1;
@@ -40474,7 +41310,8 @@ START_TEST(s21_is_not_equal_4045) {
 }
 
 START_TEST(s21_is_not_equal_4046) {
-  char *example = "( 1211807039772534586419303350 != 8.5235420544584933979545223 ) = True";
+  char *example =
+      "( 1211807039772534586419303350 != 8.5235420544584933979545223 ) = True";
   s21_decimal value_1 = {{0xE5D5D3B6, 0x41FAA054, 0x3EA621F, 0x0}};
   s21_decimal value_2 = {{0x25D15E87, 0x68070F65, 0x46814D, 0x190000}};
   int code = 1;
@@ -40554,7 +41391,8 @@ START_TEST(s21_is_not_equal_4053) {
 }
 
 START_TEST(s21_is_not_equal_4054) {
-  char *example = "( 138931112141822716585890804 != 1134981868583365372633153286 ) = True";
+  char *example =
+      "( 138931112141822716585890804 != 1134981868583365372633153286 ) = True";
   s21_decimal value_1 = {{0x8CED3F4, 0xAE35384D, 0x72EBCE, 0x0}};
   s21_decimal value_2 = {{0xA3FFF06, 0x61EAACB8, 0x3AAD5C2, 0x0}};
   int code = 1;
@@ -40594,7 +41432,8 @@ START_TEST(s21_is_not_equal_4057) {
 }
 
 START_TEST(s21_is_not_equal_4058) {
-  char *example = "( 1749263683146640075531164732 != 9.17105516058377088912721434 ) = True";
+  char *example =
+      "( 1749263683146640075531164732 != 9.17105516058377088912721434 ) = True";
   s21_decimal value_1 = {{0x6F0B1C3C, 0x46A00373, 0x5A6F4FE, 0x0}};
   s21_decimal value_2 = {{0x99DA061A, 0xA53BFD1E, 0x2F69CA5, 0x1A0000}};
   int code = 1;
@@ -40724,7 +41563,8 @@ START_TEST(s21_is_not_equal_4070) {
 }
 
 START_TEST(s21_is_not_equal_4071) {
-  char *example = "( 109004626266062997503 != 1550812938548131004222939365 ) = True";
+  char *example =
+      "( 109004626266062997503 != 1550812938548131004222939365 ) = True";
   s21_decimal value_1 = {{0xC6E647FF, 0xE8BE3A0E, 0x5, 0x0}};
   s21_decimal value_2 = {{0xCAFE20E5, 0xDAC8BEE4, 0x502CD69, 0x0}};
   int code = 1;
@@ -40774,7 +41614,8 @@ START_TEST(s21_is_not_equal_4075) {
 }
 
 START_TEST(s21_is_not_equal_4076) {
-  char *example = "( 1667324379303303723644729072 != 0.96536520228248648271703425 ) = True";
+  char *example =
+      "( 1667324379303303723644729072 != 0.96536520228248648271703425 ) = True";
   s21_decimal value_1 = {{0x2971B6F0, 0xB6C466E7, 0x5632DAB, 0x0}};
   s21_decimal value_2 = {{0x32D2AD81, 0x3F6EB342, 0x4FDA67, 0x1A0000}};
   int code = 1;
@@ -40864,7 +41705,8 @@ START_TEST(s21_is_not_equal_4084) {
 }
 
 START_TEST(s21_is_not_equal_4085) {
-  char *example = "( -21.332510351066706581063629 != -89.1404087547486 ) = True";
+  char *example =
+      "( -21.332510351066706581063629 != -89.1404087547486 ) = True";
   s21_decimal value_1 = {{0xA7F307CD, 0xB40F6351, 0x11A555, 0x80180000}};
   s21_decimal value_2 = {{0x2FFD565E, 0x32ABA, 0x0, 0x800D0000}};
   int code = 1;
@@ -40924,7 +41766,8 @@ START_TEST(s21_is_not_equal_4090) {
 }
 
 START_TEST(s21_is_not_equal_4091) {
-  char *example = "( 1068024016947382230524555713 != 1173717854774689837331979271 ) = True";
+  char *example =
+      "( 1068024016947382230524555713 != 1173717854774689837331979271 ) = True";
   s21_decimal value_1 = {{0x862EF1C1, 0xF8D86C41, 0x37372E1, 0x0}};
   s21_decimal value_2 = {{0x17FF1C07, 0x66CE6BA1, 0x3CAE06C, 0x0}};
   int code = 1;
@@ -40964,7 +41807,8 @@ START_TEST(s21_is_not_equal_4094) {
 }
 
 START_TEST(s21_is_not_equal_4095) {
-  char *example = "( 711251.097838578516763675332 != -2.3976177502430907584977880 ) = True";
+  char *example =
+      "( 711251.097838578516763675332 != -2.3976177502430907584977880 ) = True";
   s21_decimal value_1 = {{0xAABD0AC4, 0x45E0FDC5, 0x24C5547, 0x150000}};
   s21_decimal value_2 = {{0xA7FDF5FC, 0x1E61D2D1, 0x1FBB7, 0x80180000}};
   int code = 1;
@@ -41104,7 +41948,8 @@ START_TEST(s21_is_not_equal_4108) {
 }
 
 START_TEST(s21_is_not_equal_4109) {
-  char *example = "( 1282875313919630407412831856 != -239845.887732045223 ) = True";
+  char *example =
+      "( 1282875313919630407412831856 != -239845.887732045223 ) = True";
   s21_decimal value_1 = {{0x86A15670, 0x1E75C1F3, 0x4252B6A, 0x0}};
   s21_decimal value_2 = {{0x6B1B55A7, 0x3541A90, 0x0, 0x800C0000}};
   int code = 1;
@@ -41194,7 +42039,8 @@ START_TEST(s21_is_not_equal_4117) {
 }
 
 START_TEST(s21_is_not_equal_4118) {
-  char *example = "( 1085137155985753224443331701 != 1529978592615149782 ) = True";
+  char *example =
+      "( 1085137155985753224443331701 != 1529978592615149782 ) = True";
   s21_decimal value_1 = {{0x95500475, 0x19254223, 0x3819ABB, 0x0}};
   s21_decimal value_2 = {{0x7EC730D6, 0x153B936C, 0x0, 0x0}};
   int code = 1;
@@ -41324,7 +42170,8 @@ START_TEST(s21_is_not_equal_4130) {
 }
 
 START_TEST(s21_is_not_equal_4131) {
-  char *example = "( 1895069458081549958657247892 != 0.05447107667512687822116558 ) = True";
+  char *example =
+      "( 1895069458081549958657247892 != 0.05447107667512687822116558 ) = True";
   s21_decimal value_1 = {{0x9E3E8A94, 0x2C536002, 0x61F9091, 0x0}};
   s21_decimal value_2 = {{0x95E016CE, 0x4C60457B, 0x48178, 0x1A0000}};
   int code = 1;
@@ -41334,7 +42181,8 @@ START_TEST(s21_is_not_equal_4131) {
 }
 
 START_TEST(s21_is_not_equal_4132) {
-  char *example = "( 14441889891580993 != 1869325397789738967436188265 ) = True";
+  char *example =
+      "( 14441889891580993 != 1869325397789738967436188265 ) = True";
   s21_decimal value_1 = {{0x84DF7C41, 0x334ED2, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBF855A69, 0xDE48CB16, 0x60A450C, 0x0}};
   int code = 1;
@@ -41344,7 +42192,8 @@ START_TEST(s21_is_not_equal_4132) {
 }
 
 START_TEST(s21_is_not_equal_4133) {
-  char *example = "( 1180833309431104762653078073 != -5.3121533886396640778714598 ) = True";
+  char *example =
+      "( 1180833309431104762653078073 != -5.3121533886396640778714598 ) = True";
   s21_decimal value_1 = {{0xED3E7239, 0xF8AF2683, 0x3D0C32D, 0x0}};
   s21_decimal value_2 = {{0x798AFDE6, 0x1F4D10D0, 0x2BF0EC, 0x80190000}};
   int code = 1;
@@ -41364,7 +42213,8 @@ START_TEST(s21_is_not_equal_4134) {
 }
 
 START_TEST(s21_is_not_equal_4135) {
-  char *example = "( 1465712339222623770935660293 != 1884272175364251510 ) = True";
+  char *example =
+      "( 1465712339222623770935660293 != 1884272175364251510 ) = True";
   s21_decimal value_1 = {{0x10998F05, 0x1F06E53C, 0x4BC68A9, 0x0}};
   s21_decimal value_2 = {{0x68BD1F76, 0x1A26478F, 0x0, 0x0}};
   int code = 1;
@@ -41384,7 +42234,8 @@ START_TEST(s21_is_not_equal_4136) {
 }
 
 START_TEST(s21_is_not_equal_4137) {
-  char *example = "( 13440222614458434988171516 != 1920530917174130525284875 ) = True";
+  char *example =
+      "( 13440222614458434988171516 != 1920530917174130525284875 ) = True";
   s21_decimal value_1 = {{0xE36E60FC, 0xED8882A3, 0xB1E13, 0x0}};
   s21_decimal value_2 = {{0x642B2A0B, 0x308C00F9, 0x196B0, 0x0}};
   int code = 1;
@@ -41394,7 +42245,8 @@ START_TEST(s21_is_not_equal_4137) {
 }
 
 START_TEST(s21_is_not_equal_4138) {
-  char *example = "( 1287876668072439588119517363 != 1280538421495099645 ) = True";
+  char *example =
+      "( 1287876668072439588119517363 != 1280538421495099645 ) = True";
   s21_decimal value_1 = {{0xE8FA18B3, 0x1224F7EE, 0x4294E7E, 0x0}};
   s21_decimal value_2 = {{0xE67470FD, 0x11C562E8, 0x0, 0x0}};
   int code = 1;
@@ -41484,7 +42336,8 @@ START_TEST(s21_is_not_equal_4146) {
 }
 
 START_TEST(s21_is_not_equal_4147) {
-  char *example = "( 1863605710654660162116202921 != 1026318731993407555911091374 ) = True";
+  char *example =
+      "( 1863605710654660162116202921 != 1026318731993407555911091374 ) = True";
   s21_decimal value_1 = {{0xF20131A9, 0x1E58A22, 0x60589DC, 0x0}};
   s21_decimal value_2 = {{0x6E9104AE, 0xF1CA2A11, 0x350F371, 0x0}};
   int code = 1;
@@ -41564,7 +42417,8 @@ START_TEST(s21_is_not_equal_4154) {
 }
 
 START_TEST(s21_is_not_equal_4155) {
-  char *example = "( -1043.4145369000641966349356 != 1829812680935653811590632497 ) = True";
+  char *example =
+      "( -1043.4145369000641966349356 != 1829812680935653811590632497 ) = True";
   s21_decimal value_1 = {{0x7F2F9C2C, 0x27630A9E, 0x8A184, 0x80160000}};
   s21_decimal value_2 = {{0x3AB99431, 0x3212B6C1, 0x5E995E8, 0x0}};
   int code = 1;
@@ -41604,7 +42458,8 @@ START_TEST(s21_is_not_equal_4158) {
 }
 
 START_TEST(s21_is_not_equal_4159) {
-  char *example = "( -446.460382149163 != 1265682972523553989257906941 ) = True";
+  char *example =
+      "( -446.460382149163 != 1265682972523553989257906941 ) = True";
   s21_decimal value_1 = {{0xA87BFA2B, 0x1960D, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x8564CAFD, 0x6CA54F0F, 0x416F2CB, 0x0}};
   int code = 1;
@@ -41634,7 +42489,8 @@ START_TEST(s21_is_not_equal_4161) {
 }
 
 START_TEST(s21_is_not_equal_4162) {
-  char *example = "( 1052402287605410985890832407 != 1419411686874611364257370481 ) = True";
+  char *example =
+      "( 1052402287605410985890832407 != 1419411686874611364257370481 ) = True";
   s21_decimal value_1 = {{0x61806017, 0x53D8AEB7, 0x36686DA, 0x0}};
   s21_decimal value_2 = {{0x46EC9171, 0xBA60B9A9, 0x4961C1D, 0x0}};
   int code = 1;
@@ -41754,7 +42610,8 @@ START_TEST(s21_is_not_equal_4173) {
 }
 
 START_TEST(s21_is_not_equal_4174) {
-  char *example = "( 1331006861684501389062864369 != 108655819007854639750604 ) = True";
+  char *example =
+      "( 1331006861684501389062864369 != 108655819007854639750604 ) = True";
   s21_decimal value_1 = {{0x456E7DF1, 0x8D33DABC, 0x44CFBAA, 0x0}};
   s21_decimal value_2 = {{0x286A9DCC, 0x3E667871, 0x1702, 0x0}};
   int code = 1;
@@ -41764,7 +42621,8 @@ START_TEST(s21_is_not_equal_4174) {
 }
 
 START_TEST(s21_is_not_equal_4175) {
-  char *example = "( 5.023352242382E-10 != 1062484068290608295316296184 ) = True";
+  char *example =
+      "( 5.023352242382E-10 != 1062484068290608295316296184 ) = True";
   s21_decimal value_1 = {{0x972040CE, 0x491, 0x0, 0x160000}};
   s21_decimal value_2 = {{0xB62C11F8, 0xC0EBA64F, 0x36EDDC0, 0x0}};
   int code = 1;
@@ -41944,7 +42802,8 @@ START_TEST(s21_is_not_equal_4192) {
 }
 
 START_TEST(s21_is_not_equal_4193) {
-  char *example = "( 1814236849014456947816951434 != -3.5616815758445339847493470 ) = True";
+  char *example =
+      "( 1814236849014456947816951434 != -3.5616815758445339847493470 ) = True";
   s21_decimal value_1 = {{0xAB4E6E8A, 0xA7BD948E, 0x5DCB398, 0x0}};
   s21_decimal value_2 = {{0x86A6E723, 0x252608DB, 0x2F237, 0x80180000}};
   int code = 1;
@@ -41984,7 +42843,8 @@ START_TEST(s21_is_not_equal_4196) {
 }
 
 START_TEST(s21_is_not_equal_4197) {
-  char *example = "( 1214800677109537832157659590 != 1810235821249380999703517348 ) = True";
+  char *example =
+      "( 1214800677109537832157659590 != 1810235821249380999703517348 ) = True";
   s21_decimal value_1 = {{0xD4AD41C6, 0xA9B72A66, 0x3ECDC0C, 0x0}};
   s21_decimal value_2 = {{0x2FA358A4, 0x8167559A, 0x5D96458, 0x0}};
   int code = 1;
@@ -42074,7 +42934,8 @@ START_TEST(s21_is_not_equal_4205) {
 }
 
 START_TEST(s21_is_not_equal_4206) {
-  char *example = "( -378299.33652435919 != 0.14272796938947706924908741 ) = True";
+  char *example =
+      "( -378299.33652435919 != 0.14272796938947706924908741 ) = True";
   s21_decimal value_1 = {{0xCD3AE3CF, 0x86661F, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xC8DD40C5, 0xDF57BDCE, 0xBCE61, 0x1A0000}};
   int code = 1;
@@ -42094,7 +42955,8 @@ START_TEST(s21_is_not_equal_4207) {
 }
 
 START_TEST(s21_is_not_equal_4208) {
-  char *example = "( 7.0927258679100447E-10 != 1263245951943133324313700095 ) = True";
+  char *example =
+      "( 7.0927258679100447E-10 != 1263245951943133324313700095 ) = True";
   s21_decimal value_1 = {{0x4A75C41F, 0xFBFBF7, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x262926FF, 0x4625BAE1, 0x414EEBC, 0x0}};
   int code = 1;
@@ -42104,7 +42966,8 @@ START_TEST(s21_is_not_equal_4208) {
 }
 
 START_TEST(s21_is_not_equal_4209) {
-  char *example = "( 17566593541867666885 != -4.6333797849959522240011000 ) = True";
+  char *example =
+      "( 17566593541867666885 != -4.6333797849959522240011000 ) = True";
   s21_decimal value_1 = {{0x28B17DC5, 0xF3C913C1, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5B36060B, 0xC29D698E, 0x9CF, 0x80160000}};
   int code = 1;
@@ -42244,7 +43107,8 @@ START_TEST(s21_is_not_equal_4222) {
 }
 
 START_TEST(s21_is_not_equal_4223) {
-  char *example = "( 1451393054229036912856972549 != -8.3866384323183984564220557 ) = True";
+  char *example =
+      "( 1451393054229036912856972549 != -8.3866384323183984564220557 ) = True";
   s21_decimal value_1 = {{0x7502BD05, 0x20538963, 0x4B0906F, 0x0}};
   s21_decimal value_2 = {{0x874BB28D, 0xCDD88400, 0x455F65, 0x80190000}};
   int code = 1;
@@ -42254,7 +43118,8 @@ START_TEST(s21_is_not_equal_4223) {
 }
 
 START_TEST(s21_is_not_equal_4224) {
-  char *example = "( 4.3275834544576546E-10 != -1.9080157970947362171737327 ) = True";
+  char *example =
+      "( 4.3275834544576546E-10 != -1.9080157970947362171737327 ) = True";
   s21_decimal value_1 = {{0x69635822, 0x99BF24, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x772D54EF, 0x6FA90F21, 0xFC861, 0x80190000}};
   int code = 1;
@@ -42424,7 +43289,8 @@ START_TEST(s21_is_not_equal_4240) {
 }
 
 START_TEST(s21_is_not_equal_4241) {
-  char *example = "( 1714360802174947665349637149 != 172256673062321024 ) = True";
+  char *example =
+      "( 1714360802174947665349637149 != 172256673062321024 ) = True";
   s21_decimal value_1 = {{0xF1BAF41D, 0x4E9E560C, 0x58A1605, 0x0}};
   s21_decimal value_2 = {{0x1011FB80, 0x263FA88, 0x0, 0x0}};
   int code = 1;
@@ -42434,7 +43300,8 @@ START_TEST(s21_is_not_equal_4241) {
 }
 
 START_TEST(s21_is_not_equal_4242) {
-  char *example = "( -4.73989008072766466310 != -31.392058187987100003240927 ) = True";
+  char *example =
+      "( -4.73989008072766466310 != -31.392058187987100003240927 ) = True";
   s21_decimal value_1 = {{0x71B350E7, 0x91CAB927, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0xCEB48BDF, 0xE26229BC, 0x19F786, 0x80180000}};
   int code = 1;
@@ -42464,7 +43331,8 @@ START_TEST(s21_is_not_equal_4244) {
 }
 
 START_TEST(s21_is_not_equal_4245) {
-  char *example = "( 1932747885367550911485004486 != 12002035389164687844 ) = True";
+  char *example =
+      "( 1932747885367550911485004486 != 12002035389164687844 ) = True";
   s21_decimal value_1 = {{0xA1834AC6, 0xCF220A68, 0x63EBB48, 0x0}};
   s21_decimal value_2 = {{0xD0D411E4, 0xA68FCB98, 0x0, 0x0}};
   int code = 1;
@@ -42484,7 +43352,8 @@ START_TEST(s21_is_not_equal_4246) {
 }
 
 START_TEST(s21_is_not_equal_4247) {
-  char *example = "( 18301784715931191207811 != -505670.5747202839930559317 ) = True";
+  char *example =
+      "( 18301784715931191207811 != -505670.5747202839930559317 ) = True";
   s21_decimal value_1 = {{0xD011E783, 0x2448E820, 0x3E0, 0x0}};
   s21_decimal value_2 = {{0xFB9D5B55, 0x915DC1B2, 0x42ECC, 0x80130000}};
   int code = 1;
@@ -42534,7 +43403,8 @@ START_TEST(s21_is_not_equal_4251) {
 }
 
 START_TEST(s21_is_not_equal_4252) {
-  char *example = "( 2.1608101138004476E-10 != 1817806209049047401841481509 ) = True";
+  char *example =
+      "( 2.1608101138004476E-10 != 1817806209049047401841481509 ) = True";
   s21_decimal value_1 = {{0x1899F9FC, 0x4CC474, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x714ED725, 0xCE9089C, 0x5DFA770, 0x0}};
   int code = 1;
@@ -42554,7 +43424,8 @@ START_TEST(s21_is_not_equal_4253) {
 }
 
 START_TEST(s21_is_not_equal_4254) {
-  char *example = "( -173.7029651034407626799 != -96.679130337886851939273157 ) = True";
+  char *example =
+      "( -173.7029651034407626799 != -96.679130337886851939273157 ) = True";
   s21_decimal value_1 = {{0x329AE82F, 0x2A210070, 0x5E, 0x80130000}};
   s21_decimal value_2 = {{0x134589C5, 0x2845F276, 0x4FF89A, 0x80180000}};
   int code = 1;
@@ -42624,7 +43495,8 @@ START_TEST(s21_is_not_equal_4260) {
 }
 
 START_TEST(s21_is_not_equal_4261) {
-  char *example = "( 1769089462935156528032878163 != -4.533186440824250552 ) = True";
+  char *example =
+      "( 1769089462935156528032878163 != -4.533186440824250552 ) = True";
   s21_decimal value_1 = {{0x5BE18E53, 0xF3A78FF8, 0x5B75B43, 0x0}};
   s21_decimal value_2 = {{0xD1F260B8, 0x3EE91D0C, 0x0, 0x80120000}};
   int code = 1;
@@ -42704,7 +43576,8 @@ START_TEST(s21_is_not_equal_4268) {
 }
 
 START_TEST(s21_is_not_equal_4269) {
-  char *example = "( -10.7509556063855908462299 != 126090120284308352624 ) = True";
+  char *example =
+      "( -10.7509556063855908462299 != 126090120284308352624 ) = True";
   s21_decimal value_1 = {{0x5A8F9EDB, 0x1ACE6E09, 0x16C4, 0x80160000}};
   s21_decimal value_2 = {{0x3079AE70, 0xD5DA1858, 0x6, 0x0}};
   int code = 1;
@@ -42804,7 +43677,8 @@ START_TEST(s21_is_not_equal_4278) {
 }
 
 START_TEST(s21_is_not_equal_4279) {
-  char *example = "( 1223260750570652697521451310 != 1896703838703092148028694811 ) = True";
+  char *example =
+      "( 1223260750570652697521451310 != 1896703838703092148028694811 ) = True";
   s21_decimal value_1 = {{0x865A712E, 0x2A0C2021, 0x3F3DB8A, 0x0}};
   s21_decimal value_2 = {{0x1255E11B, 0x1FC9E4FA, 0x620EAA9, 0x0}};
   int code = 1;
@@ -42824,7 +43698,8 @@ START_TEST(s21_is_not_equal_4280) {
 }
 
 START_TEST(s21_is_not_equal_4281) {
-  char *example = "( -7.53384312799379230 != 1199738836588515357125240088 ) = True";
+  char *example =
+      "( -7.53384312799379230 != 1199738836588515357125240088 ) = True";
   s21_decimal value_1 = {{0x72603983, 0x10BA7E7, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xE11FE518, 0xA6F837A8, 0x3E06694, 0x0}};
   int code = 1;
@@ -42984,7 +43859,8 @@ START_TEST(s21_is_not_equal_4296) {
 }
 
 START_TEST(s21_is_not_equal_4297) {
-  char *example = "( 5.5766661254868090E-10 != 149043450651072109436144 ) = True";
+  char *example =
+      "( 5.5766661254868090E-10 != 149043450651072109436144 ) = True";
   s21_decimal value_1 = {{0xC370CAD9, 0x13CFF2, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xDFA75CF0, 0xA961DD1A, 0x1F8F, 0x0}};
   int code = 1;
@@ -42994,7 +43870,8 @@ START_TEST(s21_is_not_equal_4297) {
 }
 
 START_TEST(s21_is_not_equal_4298) {
-  char *example = "( -5.4156357906631211526407745 != 1219478908934470166411649199 ) = True";
+  char *example =
+      "( -5.4156357906631211526407745 != 1219478908934470166411649199 ) = True";
   s21_decimal value_1 = {{0x97444641, 0xB78E784, 0x2CCC0E, 0x80190000}};
   s21_decimal value_2 = {{0x5A9AA0AF, 0x1E4C33DB, 0x3F0BAB4, 0x0}};
   int code = 1;
@@ -43044,7 +43921,8 @@ START_TEST(s21_is_not_equal_4302) {
 }
 
 START_TEST(s21_is_not_equal_4303) {
-  char *example = "( -746.55205676053392110410442 != 1409049440772806082017522861 ) = True";
+  char *example =
+      "( -746.55205676053392110410442 != 1409049440772806082017522861 ) = True";
   s21_decimal value_1 = {{0x9E645ACA, 0xCF1EFACC, 0x3DC0DA, 0x80170000}};
   s21_decimal value_2 = {{0xF06A74AD, 0x3DC3BE93, 0x48D89D3, 0x0}};
   int code = 1;
@@ -43054,7 +43932,8 @@ START_TEST(s21_is_not_equal_4303) {
 }
 
 START_TEST(s21_is_not_equal_4304) {
-  char *example = "( -9.6949458151677575902534035 != 1746736613617214089703626847 ) = True";
+  char *example =
+      "( -9.6949458151677575902534035 != 1746736613617214089703626847 ) = True";
   s21_decimal value_1 = {{0xC0181993, 0xA84FC2FB, 0x5031D8, 0x80190000}};
   s21_decimal value_2 = {{0xB79A985F, 0x8FEB8AB5, 0x5A4DDDD, 0x0}};
   int code = 1;
@@ -43084,7 +43963,8 @@ START_TEST(s21_is_not_equal_4306) {
 }
 
 START_TEST(s21_is_not_equal_4307) {
-  char *example = "( 1363699780600093582095089013 != -76.485750351023056402185274 ) = True";
+  char *example =
+      "( 1363699780600093582095089013 != -76.485750351023056402185274 ) = True";
   s21_decimal value_1 = {{0xF54FD75, 0x3CBB31C8, 0x46806A9, 0x0}};
   s21_decimal value_2 = {{0x20EAFC3A, 0xD5B1665B, 0x3F447C, 0x80180000}};
   int code = 1;
@@ -43234,7 +44114,8 @@ START_TEST(s21_is_not_equal_4321) {
 }
 
 START_TEST(s21_is_not_equal_4322) {
-  char *example = "( -4.53147843085783822382174 != -68670733286.249251044724566 ) = True";
+  char *example =
+      "( -4.53147843085783822382174 != -68670733286.249251044724566 ) = True";
   s21_decimal value_1 = {{0xC376345E, 0x319CA659, 0x5FF5, 0x80170000}};
   s21_decimal value_2 = {{0x11D20F56, 0xE927518F, 0x38CD97, 0x800F0000}};
   int code = 1;
@@ -43244,7 +44125,8 @@ START_TEST(s21_is_not_equal_4322) {
 }
 
 START_TEST(s21_is_not_equal_4323) {
-  char *example = "( 1312000847674266886306951397 != -3845.75255550157 ) = True";
+  char *example =
+      "( 1312000847674266886306951397 != -3845.75255550157 ) = True";
   s21_decimal value_1 = {{0x15FE70E5, 0x77B23869, 0x43D42FC, 0x0}};
   s21_decimal value_2 = {{0xE77F18CD, 0x15DC4, 0x0, 0x800B0000}};
   int code = 1;
@@ -43264,7 +44146,8 @@ START_TEST(s21_is_not_equal_4324) {
 }
 
 START_TEST(s21_is_not_equal_4325) {
-  char *example = "( 0.7587156055102497124465 != -83.691707208276892658660 ) = True";
+  char *example =
+      "( 0.7587156055102497124465 != -83.691707208276892658660 ) = True";
   s21_decimal value_1 = {{0xDE667071, 0x4CF119A3, 0x19B, 0x160000}};
   s21_decimal value_2 = {{0x6E51EACA, 0xB1934CD3, 0x1C5, 0x80140000}};
   int code = 1;
@@ -43304,7 +44187,8 @@ START_TEST(s21_is_not_equal_4328) {
 }
 
 START_TEST(s21_is_not_equal_4329) {
-  char *example = "( 1003825422401900234899 != -776.27739725871991900945067 ) = True";
+  char *example =
+      "( 1003825422401900234899 != -776.27739725871991900945067 ) = True";
   s21_decimal value_1 = {{0xF3B5C893, 0x6AE04F2D, 0x36, 0x0}};
   s21_decimal value_2 = {{0xFA353AAB, 0x33EA7870, 0x403650, 0x80170000}};
   int code = 1;
@@ -43334,7 +44218,8 @@ START_TEST(s21_is_not_equal_4331) {
 }
 
 START_TEST(s21_is_not_equal_4332) {
-  char *example = "( -955.06667695204169924075737 != 1927125104056927969919807228 ) = True";
+  char *example =
+      "( -955.06667695204169924075737 != 1927125104056927969919807228 ) = True";
   s21_decimal value_1 = {{0x437DE0D9, 0xD48167E0, 0x4F0052, 0x80170000}};
   s21_decimal value_2 = {{0x7C9AAEFC, 0x3936E300, 0x63A149D, 0x0}};
   int code = 1;
@@ -43344,7 +44229,8 @@ START_TEST(s21_is_not_equal_4332) {
 }
 
 START_TEST(s21_is_not_equal_4333) {
-  char *example = "( 7.7505541093164176554 != 0.2670172062304022850965588 ) = True";
+  char *example =
+      "( 7.7505541093164176554 != 0.2670172062304022850965588 ) = True";
   s21_decimal value_1 = {{0x767DD4AA, 0x339AFEFB, 0x4, 0x130000}};
   s21_decimal value_2 = {{0x1E0C1054, 0x514A7F9A, 0x2356E, 0x190000}};
   int code = 1;
@@ -43404,7 +44290,8 @@ START_TEST(s21_is_not_equal_4338) {
 }
 
 START_TEST(s21_is_not_equal_4339) {
-  char *example = "( 1991756924498748519702 != 105376932004879255572710 ) = True";
+  char *example =
+      "( 1991756924498748519702 != 105376932004879255572710 ) = True";
   s21_decimal value_1 = {{0x186E3516, 0xF92E120D, 0x6B, 0x0}};
   s21_decimal value_2 = {{0x177590E6, 0x7EB3C386, 0x1650, 0x0}};
   int code = 1;
@@ -43414,7 +44301,8 @@ START_TEST(s21_is_not_equal_4339) {
 }
 
 START_TEST(s21_is_not_equal_4340) {
-  char *example = "( -528.32653490094992788893429 != 1369502719739770224306364775 ) = True";
+  char *example =
+      "( -528.32653490094992788893429 != 1369502719739770224306364775 ) = True";
   s21_decimal value_1 = {{0xD5752EF5, 0xE2759666, 0x2BB3BF, 0x80170000}};
   s21_decimal value_2 = {{0x23CD2167, 0x32C5F871, 0x46CD37B, 0x0}};
   int code = 1;
@@ -43464,7 +44352,8 @@ START_TEST(s21_is_not_equal_4344) {
 }
 
 START_TEST(s21_is_not_equal_4345) {
-  char *example = "( -6.594880703110335628217641 != -945.8720120084360784 ) = True";
+  char *example =
+      "( -6.594880703110335628217641 != -945.8720120084360784 ) = True";
   s21_decimal value_1 = {{0xBE068D29, 0x3303FF5F, 0x57485, 0x80180000}};
   s21_decimal value_2 = {{0xB377EE50, 0x83441FD5, 0x0, 0x80100000}};
   int code = 1;
@@ -43474,7 +44363,8 @@ START_TEST(s21_is_not_equal_4345) {
 }
 
 START_TEST(s21_is_not_equal_4346) {
-  char *example = "( 15825364686455256536181 != -31872922.753204744120622567 ) = True";
+  char *example =
+      "( 15825364686455256536181 != -31872922.753204744120622567 ) = True";
   s21_decimal value_1 = {{0x989A5475, 0xE50D97F4, 0x359, 0x0}};
   s21_decimal value_2 = {{0xE9ADDE7, 0x9AC8A987, 0x1A5D5A, 0x80120000}};
   int code = 1;
@@ -43564,7 +44454,8 @@ START_TEST(s21_is_not_equal_4354) {
 }
 
 START_TEST(s21_is_not_equal_4355) {
-  char *example = "( -8.6328705962792530 != -9.343637542833752077891436 ) = True";
+  char *example =
+      "( -8.6328705962792530 != -9.343637542833752077891436 ) = True";
   s21_decimal value_1 = {{0xD1487BD5, 0x1EAB8C, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x59E5F76C, 0x9B2C2DEB, 0x7BA97, 0x80180000}};
   int code = 1;
@@ -43594,7 +44485,8 @@ START_TEST(s21_is_not_equal_4357) {
 }
 
 START_TEST(s21_is_not_equal_4358) {
-  char *example = "( -30.993517672900212847530651 != -45287.584314877691553326899 ) = True";
+  char *example =
+      "( -30.993517672900212847530651 != -45287.584314877691553326899 ) = True";
   s21_decimal value_1 = {{0x21A3D29B, 0xF5AEA85C, 0x19A321, 0x80180000}};
   s21_decimal value_2 = {{0x573B2733, 0xDD734C07, 0x257604, 0x80150000}};
   int code = 1;
@@ -43784,7 +44676,8 @@ START_TEST(s21_is_not_equal_4376) {
 }
 
 START_TEST(s21_is_not_equal_4377) {
-  char *example = "( 165637444647807780701563996 != -6.473469985579307365956789 ) = True";
+  char *example =
+      "( 165637444647807780701563996 != -6.473469985579307365956789 ) = True";
   s21_decimal value_1 = {{0x96036C5C, 0xDDD9D3D8, 0x890317, 0x0}};
   s21_decimal value_2 = {{0x4759FCB5, 0x82D71274, 0x55ACF, 0x80180000}};
   int code = 1;
@@ -43804,7 +44697,8 @@ START_TEST(s21_is_not_equal_4378) {
 }
 
 START_TEST(s21_is_not_equal_4379) {
-  char *example = "( -28130.419018431033396576929 != 1280024379410826420947703749 ) = True";
+  char *example =
+      "( -28130.419018431033396576929 != 1280024379410826420947703749 ) = True";
   s21_decimal value_1 = {{0x5E42A1, 0x12152B71, 0x1744D9, 0x80150000}};
   s21_decimal value_2 = {{0xB4FAD7C5, 0xA64AF71E, 0x422CFB4, 0x0}};
   int code = 1;
@@ -43864,7 +44758,8 @@ START_TEST(s21_is_not_equal_4384) {
 }
 
 START_TEST(s21_is_not_equal_4385) {
-  char *example = "( 1853403498849190929368011597 != 1740788324939478974376217795 ) = True";
+  char *example =
+      "( 1853403498849190929368011597 != 1740788324939478974376217795 ) = True";
   s21_decimal value_1 = {{0x1EDED34D, 0xFF4A3AA6, 0x5FD1974, 0x0}};
   s21_decimal value_2 = {{0xB8B48CC3, 0x2FD4B2B9, 0x59FF244, 0x0}};
   int code = 1;
@@ -43894,7 +44789,8 @@ START_TEST(s21_is_not_equal_4387) {
 }
 
 START_TEST(s21_is_not_equal_4388) {
-  char *example = "( 1259759999235587312402235518 != 1422647889648292496352300143 ) = True";
+  char *example =
+      "( 1259759999235587312402235518 != 1422647889648292496352300143 ) = True";
   s21_decimal value_1 = {{0xA3EF007E, 0x6629FAC9, 0x4120C8E, 0x0}};
   s21_decimal value_2 = {{0x72454C6F, 0xA1C62781, 0x498C968, 0x0}};
   int code = 1;
@@ -43904,7 +44800,8 @@ START_TEST(s21_is_not_equal_4388) {
 }
 
 START_TEST(s21_is_not_equal_4389) {
-  char *example = "( 158004344334577848531960455 != -6.98590059586553792635 ) = True";
+  char *example =
+      "( 158004344334577848531960455 != -6.98590059586553792635 ) = True";
   s21_decimal value_1 = {{0x9A564287, 0xAB635BF1, 0x82B2B8, 0x0}};
   s21_decimal value_2 = {{0xBB82487B, 0xDEE275E7, 0x25, 0x80140000}};
   int code = 1;
@@ -43914,7 +44811,8 @@ START_TEST(s21_is_not_equal_4389) {
 }
 
 START_TEST(s21_is_not_equal_4390) {
-  char *example = "( 1394555094358324816365834227 != 1669478073539379867289516078 ) = True";
+  char *example =
+      "( 1394555094358324816365834227 != 1669478073539379867289516078 ) = True";
   s21_decimal value_1 = {{0x6F494FF3, 0x25CFBE6D, 0x4818C87, 0x0}};
   s21_decimal value_2 = {{0xBC0DF82E, 0xB660DD0C, 0x564F5BB, 0x0}};
   int code = 1;
@@ -43924,7 +44822,8 @@ START_TEST(s21_is_not_equal_4390) {
 }
 
 START_TEST(s21_is_not_equal_4391) {
-  char *example = "( 0.23244292647511192398833708 != -876.343107452870643098 ) = True";
+  char *example =
+      "( 0.23244292647511192398833708 != -876.343107452870643098 ) = True";
   s21_decimal value_1 = {{0x4895A82C, 0xA11ADADC, 0x133A2B, 0x1A0000}};
   s21_decimal value_2 = {{0xE254CD9A, 0x81B42529, 0x2F, 0x80120000}};
   int code = 1;
@@ -43934,7 +44833,8 @@ START_TEST(s21_is_not_equal_4391) {
 }
 
 START_TEST(s21_is_not_equal_4392) {
-  char *example = "( 1358323046085137344273806323 != 18663858124209496723855 ) = True";
+  char *example =
+      "( 1358323046085137344273806323 != 18663858124209496723855 ) = True";
   s21_decimal value_1 = {{0xB06773F3, 0xE008A172, 0x4639417, 0x0}};
   s21_decimal value_2 = {{0x3373118F, 0xC5100E9C, 0x3F3, 0x0}};
   int code = 1;
@@ -43944,7 +44844,8 @@ START_TEST(s21_is_not_equal_4392) {
 }
 
 START_TEST(s21_is_not_equal_4393) {
-  char *example = "( 1736509933244017581003073372 != 124393251719326796352114213 ) = True";
+  char *example =
+      "( 1736509933244017581003073372 != 124393251719326796352114213 ) = True";
   s21_decimal value_1 = {{0xEE37675C, 0x1BB8F74A, 0x59C6848, 0x0}};
   s21_decimal value_2 = {{0xDCA8CE25, 0xB015B9EA, 0x66E54B, 0x0}};
   int code = 1;
@@ -44024,7 +44925,8 @@ START_TEST(s21_is_not_equal_4400) {
 }
 
 START_TEST(s21_is_not_equal_4401) {
-  char *example = "( 1512916004101726500265 != -670.69524516822296914025197 ) = True";
+  char *example =
+      "( 1512916004101726500265 != -670.69524516822296914025197 ) = True";
   s21_decimal value_1 = {{0x3ED575A9, 0x3ED61F5, 0x52, 0x0}};
   s21_decimal value_2 = {{0xD05FDAED, 0x359D8F64, 0x377A86, 0x80170000}};
   int code = 1;
@@ -44074,7 +44976,8 @@ START_TEST(s21_is_not_equal_4405) {
 }
 
 START_TEST(s21_is_not_equal_4406) {
-  char *example = "( 1604271086176944021344511568 != -9.1313143594917875259816306 ) = True";
+  char *example =
+      "( 1604271086176944021344511568 != -9.1313143594917875259816306 ) = True";
   s21_decimal value_1 = {{0xC566650, 0xD82CF75C, 0x52F059D, 0x0}};
   s21_decimal value_2 = {{0xBEE03972, 0x6EDFF067, 0x4B884F, 0x80190000}};
   int code = 1;
@@ -44154,7 +45057,8 @@ START_TEST(s21_is_not_equal_4413) {
 }
 
 START_TEST(s21_is_not_equal_4414) {
-  char *example = "( 1055321989739776849973171082 != -78.418664755050070895503851 ) = True";
+  char *example =
+      "( 1055321989739776849973171082 != -78.418664755050070895503851 ) = True";
   s21_decimal value_1 = {{0x76A9538A, 0xB2877794, 0x368F11F, 0x0}};
   s21_decimal value_2 = {{0xB9FC29EB, 0x55A48980, 0x40DDCC, 0x80180000}};
   int code = 1;
@@ -44294,7 +45198,8 @@ START_TEST(s21_is_not_equal_4427) {
 }
 
 START_TEST(s21_is_not_equal_4428) {
-  char *example = "( 1179112431387705848 != 0.17110188933476448036589082 ) = True";
+  char *example =
+      "( 1179112431387705848 != 0.17110188933476448036589082 ) = True";
   s21_decimal value_1 = {{0x571C81F8, 0x105D0C82, 0x0, 0x0}};
   s21_decimal value_2 = {{0x829A0E1A, 0x335ED29E, 0xE2739, 0x1A0000}};
   int code = 1;
@@ -44314,7 +45219,8 @@ START_TEST(s21_is_not_equal_4429) {
 }
 
 START_TEST(s21_is_not_equal_4430) {
-  char *example = "( 117386973785749726727880 != 1822028538191544686764740696 ) = True";
+  char *example =
+      "( 117386973785749726727880 != 1822028538191544686764740696 ) = True";
   s21_decimal value_1 = {{0x7B48EC8, 0x8F837B4C, 0x18DB, 0x0}};
   s21_decimal value_2 = {{0xB4E1D058, 0xF8CDFB52, 0x5E3258C, 0x0}};
   int code = 1;
@@ -44394,7 +45300,8 @@ START_TEST(s21_is_not_equal_4437) {
 }
 
 START_TEST(s21_is_not_equal_4438) {
-  char *example = "( -5.839269101339138310838040 != 9.6150481548936729E-10 ) = True";
+  char *example =
+      "( -5.839269101339138310838040 != 9.6150481548936729E-10 ) = True";
   s21_decimal value_1 = {{0x72080F1C, 0xBDC10D6E, 0x7BA6, 0x80170000}};
   s21_decimal value_2 = {{0x81B50619, 0x155985A, 0x0, 0x1A0000}};
   int code = 1;
@@ -44404,7 +45311,8 @@ START_TEST(s21_is_not_equal_4438) {
 }
 
 START_TEST(s21_is_not_equal_4439) {
-  char *example = "( 1582310501374798420354350938 != 17621235891835773889 ) = True";
+  char *example =
+      "( 1582310501374798420354350938 != 17621235891835773889 ) = True";
   s21_decimal value_1 = {{0x8E0D3F5A, 0x2827ECD8, 0x51CDB48, 0x0}};
   s21_decimal value_2 = {{0xAC3C23C1, 0xF48B34AE, 0x0, 0x0}};
   int code = 1;
@@ -44444,7 +45352,8 @@ START_TEST(s21_is_not_equal_4442) {
 }
 
 START_TEST(s21_is_not_equal_4443) {
-  char *example = "( 129000226729788600286155 != -57.932278250796779249116132 ) = True";
+  char *example =
+      "( 129000226729788600286155 != -57.932278250796779249116132 ) = True";
   s21_decimal value_1 = {{0xCC24FBCB, 0x1DC6123F, 0x1B51, 0x0}};
   s21_decimal value_2 = {{0xA80CA3E4, 0x18C9AEB6, 0x2FEBA3, 0x80180000}};
   int code = 1;
@@ -44534,7 +45443,8 @@ START_TEST(s21_is_not_equal_4451) {
 }
 
 START_TEST(s21_is_not_equal_4452) {
-  char *example = "( 11275963816095622 != -9453.4849795689735407305612 ) = True";
+  char *example =
+      "( 11275963816095622 != -9453.4849795689735407305612 ) = True";
   s21_decimal value_1 = {{0xE9C22F86, 0x280F6D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE0C4838C, 0x79E87F66, 0x4E3288, 0x80160000}};
   int code = 1;
@@ -44594,7 +45504,8 @@ START_TEST(s21_is_not_equal_4457) {
 }
 
 START_TEST(s21_is_not_equal_4458) {
-  char *example = "( 18612328046332628664 != 1310573095024185335487457065 ) = True";
+  char *example =
+      "( 18612328046332628664 != 1310573095024185335487457065 ) = True";
   s21_decimal value_1 = {{0xECB24EB8, 0x24C45BE, 0x1, 0x0}};
   s21_decimal value_2 = {{0x82BCE729, 0xD76054FB, 0x43C14A5, 0x0}};
   int code = 1;
@@ -44694,7 +45605,8 @@ START_TEST(s21_is_not_equal_4467) {
 }
 
 START_TEST(s21_is_not_equal_4468) {
-  char *example = "( 1695755251648731885667887544 != -7084.70128450206253185 ) = True";
+  char *example =
+      "( 1695755251648731885667887544 != -7084.70128450206253185 ) = True";
   s21_decimal value_1 = {{0x2FA029B8, 0x645E3C48, 0x57AB224, 0x0}};
   s21_decimal value_2 = {{0x99E94081, 0x67FF8430, 0x26, 0x80110000}};
   int code = 1;
@@ -44704,7 +45616,8 @@ START_TEST(s21_is_not_equal_4468) {
 }
 
 START_TEST(s21_is_not_equal_4469) {
-  char *example = "( 1224911442054467490430910477 != -1.7902331298988541763089357 ) = True";
+  char *example =
+      "( 1224911442054467490430910477 != -1.7902331298988541763089357 ) = True";
   s21_decimal value_1 = {{0xE0F9000D, 0x54322760, 0x3F53916, 0x0}};
   s21_decimal value_2 = {{0x26BF73CD, 0x530855BE, 0xECEF7, 0x80190000}};
   int code = 1;
@@ -44724,7 +45637,8 @@ START_TEST(s21_is_not_equal_4470) {
 }
 
 START_TEST(s21_is_not_equal_4471) {
-  char *example = "( 1917690304237739815114505660 != 1235826937807893909514834632 ) = True";
+  char *example =
+      "( 1917690304237739815114505660 != 1235826937807893909514834632 ) = True";
   s21_decimal value_1 = {{0x9BDDFDBC, 0xB3508331, 0x63246B7, 0x0}};
   s21_decimal value_2 = {{0xA51952C8, 0x8A143D9A, 0x3FE4088, 0x0}};
   int code = 1;
@@ -44754,7 +45668,8 @@ START_TEST(s21_is_not_equal_4473) {
 }
 
 START_TEST(s21_is_not_equal_4474) {
-  char *example = "( 0.16377342088934198389683965 != 1599416724672274747887150795 ) = True";
+  char *example =
+      "( 0.16377342088934198389683965 != 1599416724672274747887150795 ) = True";
   s21_decimal value_1 = {{0x309EB6FD, 0x7E5DC06F, 0xD8C09, 0x1A0000}};
   s21_decimal value_2 = {{0xD1766CB, 0x61457C32, 0x52B01AA, 0x0}};
   int code = 1;
@@ -44764,7 +45679,8 @@ START_TEST(s21_is_not_equal_4474) {
 }
 
 START_TEST(s21_is_not_equal_4475) {
-  char *example = "( 1563456381123479011066600111 != -9.7908672738961404502350042 ) = True";
+  char *example =
+      "( 1563456381123479011066600111 != -9.7908672738961404502350042 ) = True";
   s21_decimal value_1 = {{0x47AB5AAF, 0x4001502C, 0x50D42C4, 0x0}};
   s21_decimal value_2 = {{0x791618DA, 0xC8D0E8EE, 0x50FCF7, 0x80190000}};
   int code = 1;
@@ -44954,7 +45870,8 @@ START_TEST(s21_is_not_equal_4493) {
 }
 
 START_TEST(s21_is_not_equal_4494) {
-  char *example = "( -7.562171991858142663 != 1793238073369448400827997204 ) = True";
+  char *example =
+      "( -7.562171991858142663 != 1793238073369448400827997204 ) = True";
   s21_decimal value_1 = {{0x491CDDC7, 0x68F23B5C, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x4B745C14, 0xBF1D7EE1, 0x5CB54EE, 0x0}};
   int code = 1;
@@ -44984,7 +45901,8 @@ START_TEST(s21_is_not_equal_4496) {
 }
 
 START_TEST(s21_is_not_equal_4497) {
-  char *example = "( -3.5765957894973245247478460 != 0.06206751201110782699244 ) = True";
+  char *example =
+      "( -3.5765957894973245247478460 != 0.06206751201110782699244 ) = True";
   s21_decimal value_1 = {{0x13D73C46, 0xA570E32E, 0x2F55F, 0x80180000}};
   s21_decimal value_2 = {{0xD4CE6EC, 0x77F9E4A2, 0x150, 0x170000}};
   int code = 1;
@@ -45014,7 +45932,8 @@ START_TEST(s21_is_not_equal_4499) {
 }
 
 START_TEST(s21_is_not_equal_4500) {
-  char *example = "( -424.657107978858107 != 0.64452022682199601102704285 ) = True";
+  char *example =
+      "( -424.657107978858107 != 0.64452022682199601102704285 ) = True";
   s21_decimal value_1 = {{0xC86CAE7B, 0x5E4AF63, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xEEBBCE9D, 0x26916921, 0x35503F, 0x1A0000}};
   int code = 1;
@@ -45034,7 +45953,8 @@ START_TEST(s21_is_not_equal_4501) {
 }
 
 START_TEST(s21_is_not_equal_4502) {
-  char *example = "( 1842588124464738294276017336 != 4.5618344399884168261 ) = True";
+  char *example =
+      "( 1842588124464738294276017336 != 4.5618344399884168261 ) = True";
   s21_decimal value_1 = {{0xDC7CCB8, 0x60853C55, 0x5F42736, 0x0}};
   s21_decimal value_2 = {{0xC86AC45, 0x7914EA89, 0x2, 0x130000}};
   int code = 1;
@@ -45104,7 +46024,8 @@ START_TEST(s21_is_not_equal_4508) {
 }
 
 START_TEST(s21_is_not_equal_4509) {
-  char *example = "( 1568156471692145487275625612 != 1494071306205862616771367065 ) = True";
+  char *example =
+      "( 1568156471692145487275625612 != 1494071306205862616771367065 ) = True";
   s21_decimal value_1 = {{0x10700C8C, 0xAB98373E, 0x511260C, 0x0}};
   s21_decimal value_2 = {{0xFB189099, 0xCD44E65D, 0x4D3DDE7, 0x0}};
   int code = 1;
@@ -45134,7 +46055,8 @@ START_TEST(s21_is_not_equal_4511) {
 }
 
 START_TEST(s21_is_not_equal_4512) {
-  char *example = "( -37794.113307993798069992560 != 1068662750693946943072207448 ) = True";
+  char *example =
+      "( -37794.113307993798069992560 != 1068662750693946943072207448 ) = True";
   s21_decimal value_1 = {{0x96BCD2D8, 0x4C7CBE9B, 0x32052, 0x80140000}};
   s21_decimal value_2 = {{0x2F818258, 0xCC3EF46F, 0x373FA23, 0x0}};
   int code = 1;
@@ -45224,7 +46146,8 @@ START_TEST(s21_is_not_equal_4520) {
 }
 
 START_TEST(s21_is_not_equal_4521) {
-  char *example = "( -15134.504958933752460852174 != -2.84056497905706575304 ) = True";
+  char *example =
+      "( -15134.504958933752460852174 != -2.84056497905706575304 ) = True";
   s21_decimal value_1 = {{0x522FBBCE, 0x28657A5B, 0xC84DB, 0x80150000}};
   s21_decimal value_2 = {{0x7321A5C8, 0x661367D9, 0xF, 0x80140000}};
   int code = 1;
@@ -45244,7 +46167,8 @@ START_TEST(s21_is_not_equal_4522) {
 }
 
 START_TEST(s21_is_not_equal_4523) {
-  char *example = "( 12685691403369613102 != 1741941439246592502309022282 ) = True";
+  char *example =
+      "( 12685691403369613102 != 1741941439246592502309022282 ) = True";
   s21_decimal value_1 = {{0xA412872E, 0xB00CA11E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x54036A4A, 0xA380CD0A, 0x5A0E672, 0x0}};
   int code = 1;
@@ -45254,7 +46178,8 @@ START_TEST(s21_is_not_equal_4523) {
 }
 
 START_TEST(s21_is_not_equal_4524) {
-  char *example = "( 12586964319783364419432 != 14296807469057436910354 ) = True";
+  char *example =
+      "( 12586964319783364419432 != 14296807469057436910354 ) = True";
   s21_decimal value_1 = {{0x73B95F68, 0x5738503F, 0x2AA, 0x0}};
   s21_decimal value_2 = {{0x18058312, 0x80F7560, 0x307, 0x0}};
   int code = 1;
@@ -45274,7 +46199,8 @@ START_TEST(s21_is_not_equal_4525) {
 }
 
 START_TEST(s21_is_not_equal_4526) {
-  char *example = "( 1609940819310064906259588135 != -6.17566284812624 ) = True";
+  char *example =
+      "( 1609940819310064906259588135 != -6.17566284812624 ) = True";
   s21_decimal value_1 = {{0x9456E427, 0xB186273A, 0x533B63A, 0x0}};
   s21_decimal value_2 = {{0x5B081150, 0x231AC, 0x0, 0x800E0000}};
   int code = 1;
@@ -45354,7 +46280,8 @@ START_TEST(s21_is_not_equal_4533) {
 }
 
 START_TEST(s21_is_not_equal_4534) {
-  char *example = "( 1852385383103221713561694092 != 17128636171278094244 ) = True";
+  char *example =
+      "( 1852385383103221713561694092 != 17128636171278094244 ) = True";
   s21_decimal value_1 = {{0xFB2FAF8C, 0xD500EC0D, 0x5FC41DC, 0x0}};
   s21_decimal value_2 = {{0xABF00FA4, 0xEDB523D8, 0x0, 0x0}};
   int code = 1;
@@ -45414,7 +46341,8 @@ START_TEST(s21_is_not_equal_4539) {
 }
 
 START_TEST(s21_is_not_equal_4540) {
-  char *example = "( 1363296084224690269144227121 != 0.794147066551611 ) = True";
+  char *example =
+      "( 1363296084224690269144227121 != 0.794147066551611 ) = True";
   s21_decimal value_1 = {{0x85A41D31, 0xD0183788, 0x467B12C, 0x0}};
   s21_decimal value_2 = {{0xC5CD1D3B, 0x2D245, 0x0, 0xF0000}};
   int code = 1;
@@ -45454,7 +46382,8 @@ START_TEST(s21_is_not_equal_4543) {
 }
 
 START_TEST(s21_is_not_equal_4544) {
-  char *example = "( -6179765761.550664965931 != 0.00892180210102264189300177 ) = True";
+  char *example =
+      "( -6179765761.550664965931 != 0.00892180210102264189300177 ) = True";
   s21_decimal value_1 = {{0xFCB59F2B, 0x17A5A53, 0x14F, 0x800C0000}};
   s21_decimal value_2 = {{0xCF522DD1, 0x2FA462AA, 0xBCED, 0x1A0000}};
   int code = 1;
@@ -45684,7 +46613,8 @@ START_TEST(s21_is_not_equal_4566) {
 }
 
 START_TEST(s21_is_not_equal_4567) {
-  char *example = "( -32.92602549677938 != -6.8451635058121051776267934 ) = True";
+  char *example =
+      "( -32.92602549677938 != -6.8451635058121051776267934 ) = True";
   s21_decimal value_1 = {{0xC55C2F72, 0xBB29A, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x1204B69E, 0x926F3F20, 0x389F32, 0x80190000}};
   int code = 1;
@@ -45744,7 +46674,8 @@ START_TEST(s21_is_not_equal_4572) {
 }
 
 START_TEST(s21_is_not_equal_4573) {
-  char *example = "( -7260.2921171066881234219014 != 18506828902431817792 ) = True";
+  char *example =
+      "( -7260.2921171066881234219014 != 18506828902431817792 ) = True";
   s21_decimal value_1 = {{0x13D0B006, 0x3E3D52E4, 0x3C0E44, 0x80160000}};
   s21_decimal value_2 = {{0x58618040, 0xD576D5, 0x1, 0x0}};
   int code = 1;
@@ -45834,7 +46765,8 @@ START_TEST(s21_is_not_equal_4581) {
 }
 
 START_TEST(s21_is_not_equal_4582) {
-  char *example = "( 1134705941464698853411018713 != 1743970931891629688336345989 ) = True";
+  char *example =
+      "( 1134705941464698853411018713 != 1743970931891629688336345989 ) = True";
   s21_decimal value_1 = {{0xB44C57D9, 0x57E9D60C, 0x3AA9B54, 0x0}};
   s21_decimal value_2 = {{0xB666EB85, 0xA7C9D97C, 0x5A29435, 0x0}};
   int code = 1;
@@ -45904,7 +46836,8 @@ START_TEST(s21_is_not_equal_4588) {
 }
 
 START_TEST(s21_is_not_equal_4589) {
-  char *example = "( -5.2899094627434692543055774 != -5.7003464750004428528217595 ) = True";
+  char *example =
+      "( -5.2899094627434692543055774 != -5.7003464750004428528217595 ) = True";
   s21_decimal value_1 = {{0x4761079E, 0xAA770CA0, 0x2BC1D1, 0x80190000}};
   s21_decimal value_2 = {{0xB084EDFB, 0x41C5CE7, 0x2F26F4, 0x80190000}};
   int code = 1;
@@ -46034,7 +46967,8 @@ START_TEST(s21_is_not_equal_4601) {
 }
 
 START_TEST(s21_is_not_equal_4602) {
-  char *example = "( 10743385252807015015595019 != 2.567210424346527E-11 ) = True";
+  char *example =
+      "( 10743385252807015015595019 != 2.567210424346527E-11 ) = True";
   s21_decimal value_1 = {{0x307F3C0B, 0x14E04564, 0x8E300, 0x0}};
   s21_decimal value_2 = {{0x4168279F, 0x91EDD, 0x0, 0x1A0000}};
   int code = 1;
@@ -46054,7 +46988,8 @@ START_TEST(s21_is_not_equal_4603) {
 }
 
 START_TEST(s21_is_not_equal_4604) {
-  char *example = "( -8130.3256562693832478654741 != -1.59864137275896 ) = True";
+  char *example =
+      "( -8130.3256562693832478654741 != -1.59864137275896 ) = True";
   s21_decimal value_1 = {{0x6918115, 0x5EA94F19, 0x4340A2, 0x80160000}};
   s21_decimal value_2 = {{0x451D59F8, 0x9165, 0x0, 0x800E0000}};
   int code = 1;
@@ -46064,7 +46999,8 @@ START_TEST(s21_is_not_equal_4604) {
 }
 
 START_TEST(s21_is_not_equal_4605) {
-  char *example = "( 1394781623213022436019034263 != 1679039576033809281235041281 ) = True";
+  char *example =
+      "( 1394781623213022436019034263 != 1679039576033809281235041281 ) = True";
   s21_decimal value_1 = {{0x20965897, 0x4D30789A, 0x481BC7F, 0x0}};
   s21_decimal value_2 = {{0x30803C01, 0xCD1EB53D, 0x56CDE75, 0x0}};
   int code = 1;
@@ -46074,7 +47010,8 @@ START_TEST(s21_is_not_equal_4605) {
 }
 
 START_TEST(s21_is_not_equal_4606) {
-  char *example = "( 12210931037670696647022 != -1.6441217420770084882016919 ) = True";
+  char *example =
+      "( 12210931037670696647022 != -1.6441217420770084882016919 ) = True";
   s21_decimal value_1 = {{0xE1E9796E, 0xF4B5BA79, 0x295, 0x0}};
   s21_decimal value_2 = {{0x26E4EA97, 0x2EAAE729, 0xD9990, 0x80190000}};
   int code = 1;
@@ -46094,7 +47031,8 @@ START_TEST(s21_is_not_equal_4607) {
 }
 
 START_TEST(s21_is_not_equal_4608) {
-  char *example = "( 1316577820675589560650889685 != 1381790955241498895842337658 ) = True";
+  char *example =
+      "( 1316577820675589560650889685 != 1381790955241498895842337658 ) = True";
   s21_decimal value_1 = {{0xD77EF9D5, 0xABCF851E, 0x4410C32, 0x0}};
   s21_decimal value_2 = {{0x5520E37A, 0xC79948AB, 0x476FD9D, 0x0}};
   int code = 1;
@@ -46164,7 +47102,8 @@ START_TEST(s21_is_not_equal_4614) {
 }
 
 START_TEST(s21_is_not_equal_4615) {
-  char *example = "( 120483649204778465121660951 != 1686964317234689405677059505 ) = True";
+  char *example =
+      "( 120483649204778465121660951 != 1686964317234689405677059505 ) = True";
   s21_decimal value_1 = {{0xB39DF017, 0xB5F99E17, 0x63A967, 0x0}};
   s21_decimal value_2 = {{0x5141BDB1, 0xE1F00758, 0x5736C96, 0x0}};
   int code = 1;
@@ -46214,7 +47153,8 @@ START_TEST(s21_is_not_equal_4619) {
 }
 
 START_TEST(s21_is_not_equal_4620) {
-  char *example = "( 1934463640058334829475194943 != 1942717239040462787516391644 ) = True";
+  char *example =
+      "( 1934463640058334829475194943 != 1942717239040462787516391644 ) = True";
   s21_decimal value_1 = {{0x5046E83F, 0xEA9746E, 0x640269C, 0x0}};
   s21_decimal value_2 = {{0xFF0560DC, 0x8DFC983D, 0x646FA60, 0x0}};
   int code = 1;
@@ -46264,7 +47204,8 @@ START_TEST(s21_is_not_equal_4624) {
 }
 
 START_TEST(s21_is_not_equal_4625) {
-  char *example = "( 19865819508618382 != 1366272847598456785640968842 ) = True";
+  char *example =
+      "( 19865819508618382 != 1366272847598456785640968842 ) = True";
   s21_decimal value_1 = {{0x8AFBB48E, 0x4693DB, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD69528A, 0x7A8CBFE3, 0x46A2787, 0x0}};
   int code = 1;
@@ -46274,7 +47215,8 @@ START_TEST(s21_is_not_equal_4625) {
 }
 
 START_TEST(s21_is_not_equal_4626) {
-  char *example = "( 99.2208890250794010899200727 != 1851364405571331737970551037 ) = True";
+  char *example =
+      "( 99.2208890250794010899200727 != 1851364405571331737970551037 ) = True";
   s21_decimal value_1 = {{0xAF193AD7, 0xB7ED75FB, 0x334BC67, 0x190000}};
   s21_decimal value_2 = {{0xC25828FD, 0x8775A0EB, 0x5FB69A9, 0x0}};
   int code = 1;
@@ -46334,7 +47276,8 @@ START_TEST(s21_is_not_equal_4631) {
 }
 
 START_TEST(s21_is_not_equal_4632) {
-  char *example = "( 1184864805383364864915116405 != -6.7732352020443930246003 ) = True";
+  char *example =
+      "( 1184864805383364864915116405 != -6.7732352020443930246003 ) = True";
   s21_decimal value_1 = {{0x9A159175, 0xCE0EC615, 0x3D418E1, 0x0}};
   s21_decimal value_2 = {{0x6FF33B73, 0xC7358536, 0xE57, 0x80160000}};
   int code = 1;
@@ -46364,7 +47307,8 @@ START_TEST(s21_is_not_equal_4634) {
 }
 
 START_TEST(s21_is_not_equal_4635) {
-  char *example = "( 11829336963244729 != -59915.941777950485634708241 ) = True";
+  char *example =
+      "( 11829336963244729 != -59915.941777950485634708241 ) = True";
   s21_decimal value_1 = {{0x239F62B9, 0x2A06B8, 0x0, 0x0}};
   s21_decimal value_2 = {{0x688D7311, 0xB64CBD35, 0x318FB1, 0x80150000}};
   int code = 1;
@@ -46374,7 +47318,8 @@ START_TEST(s21_is_not_equal_4635) {
 }
 
 START_TEST(s21_is_not_equal_4636) {
-  char *example = "( 193066621883198061848 != 1834937626313465040865498387 ) = True";
+  char *example =
+      "( 193066621883198061848 != 1834937626313465040865498387 ) = True";
   s21_decimal value_1 = {{0x24ADBD18, 0x77566DB1, 0xA, 0x0}};
   s21_decimal value_2 = {{0xCE729513, 0xA8D91B9, 0x5EDD328, 0x0}};
   int code = 1;
@@ -46474,7 +47419,8 @@ START_TEST(s21_is_not_equal_4645) {
 }
 
 START_TEST(s21_is_not_equal_4646) {
-  char *example = "( 16994064067830045135955 != -7.09082333633442340115944 ) = True";
+  char *example =
+      "( 16994064067830045135955 != -7.09082333633442340115944 ) = True";
   s21_decimal value_1 = {{0xF7A6D453, 0x4003DF47, 0x399, 0x0}};
   s21_decimal value_2 = {{0x4F0795E8, 0x6E2A1866, 0x9627, 0x80170000}};
   int code = 1;
@@ -46484,7 +47430,8 @@ START_TEST(s21_is_not_equal_4646) {
 }
 
 START_TEST(s21_is_not_equal_4647) {
-  char *example = "( 1057180684434067634133 != 1754212035719202150898190241 ) = True";
+  char *example =
+      "( 1057180684434067634133 != 1754212035719202150898190241 ) = True";
   s21_decimal value_1 = {{0x38EF37D5, 0x4F54474F, 0x39, 0x0}};
   s21_decimal value_2 = {{0xF27C7A1, 0x1A01519, 0x5AB0CD9, 0x0}};
   int code = 1;
@@ -46554,7 +47501,8 @@ START_TEST(s21_is_not_equal_4653) {
 }
 
 START_TEST(s21_is_not_equal_4654) {
-  char *example = "( -3675.7037914036226 != 15630187492987621122179900 ) = True";
+  char *example =
+      "( -3675.7037914036226 != 15630187492987621122179900 ) = True";
   s21_decimal value_1 = {{0xCBDC9802, 0x829654, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xB673033C, 0x296C8DBA, 0xCEDD2, 0x0}};
   int code = 1;
@@ -46694,7 +47642,8 @@ START_TEST(s21_is_not_equal_4667) {
 }
 
 START_TEST(s21_is_not_equal_4668) {
-  char *example = "( -2.022769956854460 != 0.2063360148713977889459989 ) = True";
+  char *example =
+      "( -2.022769956854460 != 0.2063360148713977889459989 ) = True";
   s21_decimal value_1 = {{0x48795C46, 0xB7F8, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xA13C8F15, 0xFA50A0C3, 0x1B4EE, 0x190000}};
   int code = 1;
@@ -46714,7 +47663,8 @@ START_TEST(s21_is_not_equal_4669) {
 }
 
 START_TEST(s21_is_not_equal_4670) {
-  char *example = "( 1605052178266285088666304753 != 0.64881712661336654044807007 ) = True";
+  char *example =
+      "( 1605052178266285088666304753 != 0.64881712661336654044807007 ) = True";
   s21_decimal value_1 = {{0x97F840F1, 0xEE732BCE, 0x52FAB04, 0x0}};
   s21_decimal value_2 = {{0xC8093F5F, 0xB0EBEF33, 0x35AB3C, 0x1A0000}};
   int code = 1;
@@ -46744,7 +47694,8 @@ START_TEST(s21_is_not_equal_4672) {
 }
 
 START_TEST(s21_is_not_equal_4673) {
-  char *example = "( -20.64904341822760 != 1714252389519227199901831657 ) = True";
+  char *example =
+      "( -20.64904341822760 != 1714252389519227199901831657 ) = True";
   s21_decimal value_1 = {{0x4CFA9C84, 0xBBCD, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x9A5291E9, 0x3EC96727, 0x589FF10, 0x0}};
   int code = 1;
@@ -46884,7 +47835,8 @@ START_TEST(s21_is_not_equal_4686) {
 }
 
 START_TEST(s21_is_not_equal_4687) {
-  char *example = "( 1341630838786156291227360049 != 14606216674464433 ) = True";
+  char *example =
+      "( 1341630838786156291227360049 != 14606216674464433 ) = True";
   s21_decimal value_1 = {{0x78A39B31, 0x81182AC7, 0x455C561, 0x0}};
   s21_decimal value_2 = {{0xD464D2B1, 0x33E446, 0x0, 0x0}};
   int code = 1;
@@ -46904,7 +47856,8 @@ START_TEST(s21_is_not_equal_4688) {
 }
 
 START_TEST(s21_is_not_equal_4689) {
-  char *example = "( 1438180730231259064993800442 != 18153656601797078546015869 ) = True";
+  char *example =
+      "( 1438180730231259064993800442 != 18153656601797078546015869 ) = True";
   s21_decimal value_1 = {{0x2DB360FA, 0x9B6FE31F, 0x4A5A29D, 0x0}};
   s21_decimal value_2 = {{0x757A667D, 0xB2417395, 0xF042F, 0x0}};
   int code = 1;
@@ -46914,7 +47867,8 @@ START_TEST(s21_is_not_equal_4689) {
 }
 
 START_TEST(s21_is_not_equal_4690) {
-  char *example = "( 1463188520119716466121268 != -3375.6368973717443038280124 ) = True";
+  char *example =
+      "( 1463188520119716466121268 != -3375.6368973717443038280124 ) = True";
   s21_decimal value_1 = {{0x8E73DA34, 0x9BCE17DA, 0x135D7, 0x0}};
   s21_decimal value_2 = {{0xD125F9BC, 0x6DC79012, 0x1BEC30, 0x80160000}};
   int code = 1;
@@ -46944,7 +47898,8 @@ START_TEST(s21_is_not_equal_4692) {
 }
 
 START_TEST(s21_is_not_equal_4693) {
-  char *example = "( 12227696811200368 != -29.673937004668744641743777 ) = True";
+  char *example =
+      "( 12227696811200368 != -29.673937004668744641743777 ) = True";
   s21_decimal value_1 = {{0x84DA4F70, 0x2B7106, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFE8F0BA1, 0x592C59DB, 0x188BB3, 0x80180000}};
   int code = 1;
@@ -47024,7 +47979,8 @@ START_TEST(s21_is_not_equal_4700) {
 }
 
 START_TEST(s21_is_not_equal_4701) {
-  char *example = "( 1741453791649565460005 != -3.9828974321396065712482965 ) = True";
+  char *example =
+      "( 1741453791649565460005 != -3.9828974321396065712482965 ) = True";
   s21_decimal value_1 = {{0x3D774625, 0x6786B4E3, 0x5E, 0x0}};
   s21_decimal value_2 = {{0x4BF82A95, 0x63C37BB, 0x20F21D, 0x80190000}};
   int code = 1;
@@ -47044,7 +48000,8 @@ START_TEST(s21_is_not_equal_4702) {
 }
 
 START_TEST(s21_is_not_equal_4703) {
-  char *example = "( -59.532326111430817437163074 != 1397211408290818509797941877 ) = True";
+  char *example =
+      "( -59.532326111430817437163074 != 1397211408290818509797941877 ) = True";
   s21_decimal value_1 = {{0xDB379E42, 0xDD7AE47A, 0x313E75, 0x80180000}};
   s21_decimal value_2 = {{0xACDD6275, 0x36EAE70D, 0x483BF06, 0x0}};
   int code = 1;
@@ -47114,7 +48071,8 @@ START_TEST(s21_is_not_equal_4709) {
 }
 
 START_TEST(s21_is_not_equal_4710) {
-  char *example = "( 9.0074136810657371E-10 != 1582357732937980352362910290 ) = True";
+  char *example =
+      "( 9.0074136810657371E-10 != 1582357732937980352362910290 ) = True";
   s21_decimal value_1 = {{0x400C965B, 0x14001F3, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x31F31252, 0x95C48344, 0x51CE548, 0x0}};
   int code = 1;
@@ -47164,7 +48122,8 @@ START_TEST(s21_is_not_equal_4714) {
 }
 
 START_TEST(s21_is_not_equal_4715) {
-  char *example = "( 1691830636154397681365324149 != 1814532443355037464172446104 ) = True";
+  char *example =
+      "( 1691830636154397681365324149 != 1814532443355037464172446104 ) = True";
   s21_decimal value_1 = {{0xAA1C9175, 0x8F4F7B61, 0x5777312, 0x0}};
   s21_decimal value_2 = {{0x72804198, 0xDB46BC99, 0x5DCF230, 0x0}};
   int code = 1;
@@ -47174,7 +48133,8 @@ START_TEST(s21_is_not_equal_4715) {
 }
 
 START_TEST(s21_is_not_equal_4716) {
-  char *example = "( -313.40229277276582325540 != 163183390220196832282626 ) = True";
+  char *example =
+      "( -313.40229277276582325540 != 163183390220196832282626 ) = True";
   s21_decimal value_1 = {{0xD0CB6AEA, 0xE54E2000, 0xA9, 0x80130000}};
   s21_decimal value_2 = {{0xBB0802, 0x3076969D, 0x228E, 0x0}};
   int code = 1;
@@ -47194,7 +48154,8 @@ START_TEST(s21_is_not_equal_4717) {
 }
 
 START_TEST(s21_is_not_equal_4718) {
-  char *example = "( 1204946423152603223241492460 != 15698480858638746 ) = True";
+  char *example =
+      "( 1204946423152603223241492460 != 15698480858638746 ) = True";
   s21_decimal value_1 = {{0x265F87EC, 0x7C4BFD76, 0x3E4B554, 0x0}};
   s21_decimal value_2 = {{0x6717A99A, 0x37C5AF, 0x0, 0x0}};
   int code = 1;
@@ -47274,7 +48235,8 @@ START_TEST(s21_is_not_equal_4725) {
 }
 
 START_TEST(s21_is_not_equal_4726) {
-  char *example = "( 1642401058626392257884015217 != -294746.111545550 ) = True";
+  char *example =
+      "( 1642401058626392257884015217 != -294746.111545550 ) = True";
   s21_decimal value_1 = {{0xE4834A71, 0xCAF26840, 0x54E8FF3, 0x0}};
   s21_decimal value_2 = {{0x97BA4E7B, 0x1ACE, 0x0, 0x80080000}};
   int code = 1;
@@ -47284,7 +48246,8 @@ START_TEST(s21_is_not_equal_4726) {
 }
 
 START_TEST(s21_is_not_equal_4727) {
-  char *example = "( -4.1995072387853201981774505 != 191516208231371219 ) = True";
+  char *example =
+      "( -4.1995072387853201981774505 != 191516208231371219 ) = True";
   s21_decimal value_1 = {{0xCE1F1AA9, 0x6F928B14, 0x22BCCD, 0x80190000}};
   s21_decimal value_2 = {{0x85C51D3, 0x2A866FA, 0x0, 0x0}};
   int code = 1;
@@ -47314,7 +48277,8 @@ START_TEST(s21_is_not_equal_4729) {
 }
 
 START_TEST(s21_is_not_equal_4730) {
-  char *example = "( -6.905983046859743 != 0.52722485121159944054736760 ) = True";
+  char *example =
+      "( -6.905983046859743 != 0.52722485121159944054736760 ) = True";
   s21_decimal value_1 = {{0x7A553BDF, 0x1888F4, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x72358D8C, 0x2A1F07B3, 0x45C71, 0x190000}};
   int code = 1;
@@ -47344,7 +48308,8 @@ START_TEST(s21_is_not_equal_4732) {
 }
 
 START_TEST(s21_is_not_equal_4733) {
-  char *example = "( 102185232374041284741 != 1695429955796281070156475076 ) = True";
+  char *example =
+      "( 102185232374041284741 != 1695429955796281070156475076 ) = True";
   s21_decimal value_1 = {{0x917A1085, 0x8A1ADF71, 0x5, 0x0}};
   s21_decimal value_2 = {{0x9B376AC4, 0x118D938E, 0x57A6D42, 0x0}};
   int code = 1;
@@ -47374,7 +48339,8 @@ START_TEST(s21_is_not_equal_4735) {
 }
 
 START_TEST(s21_is_not_equal_4736) {
-  char *example = "( 1140430990090882267308941163 != 5.1591097304368E-10 ) = True";
+  char *example =
+      "( 1140430990090882267308941163 != 5.1591097304368E-10 ) = True";
   s21_decimal value_1 = {{0x4CCDF6B, 0xD9EFE03F, 0x3AF57A7, 0x0}};
   s21_decimal value_2 = {{0xFD074530, 0x2EEB, 0x0, 0x170000}};
   int code = 1;
@@ -47494,7 +48460,8 @@ START_TEST(s21_is_not_equal_4747) {
 }
 
 START_TEST(s21_is_not_equal_4748) {
-  char *example = "( 1382534946963658458348769890 != 1139293109927834425048356457 ) = True";
+  char *example =
+      "( 1382534946963658458348769890 != 1139293109927834425048356457 ) = True";
   s21_decimal value_1 = {{0x35F5D262, 0xA6D983B5, 0x4779B29, 0x0}};
   s21_decimal value_2 = {{0xC916D669, 0x3E7BC7B7, 0x3AE66B3, 0x0}};
   int code = 1;
@@ -47544,7 +48511,8 @@ START_TEST(s21_is_not_equal_4752) {
 }
 
 START_TEST(s21_is_not_equal_4753) {
-  char *example = "( -8.77966010552715193535917 != -9.54899377571473126222 ) = True";
+  char *example =
+      "( -8.77966010552715193535917 != -9.54899377571473126222 ) = True";
   s21_decimal value_1 = {{0xC5FECDAD, 0xA1FF3668, 0xB9EA, 0x80170000}};
   s21_decimal value_2 = {{0xA543F34E, 0xC3E414A0, 0x33, 0x80140000}};
   int code = 1;
@@ -47644,7 +48612,8 @@ START_TEST(s21_is_not_equal_4762) {
 }
 
 START_TEST(s21_is_not_equal_4763) {
-  char *example = "( 1204495930448457345880684789 != 1218372260977039853283334868 ) = True";
+  char *example =
+      "( 1204495930448457345880684789 != 1218372260977039853283334868 ) = True";
   s21_decimal value_1 = {{0x42C9F8F5, 0x3A23C56D, 0x3E455EF, 0x0}};
   s21_decimal value_2 = {{0x6E6A5AD4, 0x9CC43927, 0x3EFD05C, 0x0}};
   int code = 1;
@@ -47854,7 +48823,8 @@ START_TEST(s21_is_not_equal_4783) {
 }
 
 START_TEST(s21_is_not_equal_4784) {
-  char *example = "( 1602604791553571791787121816 != -2783.2801998939104055326787 ) = True";
+  char *example =
+      "( 1602604791553571791787121816 != -2783.2801998939104055326787 ) = True";
   s21_decimal value_1 = {{0x90A1DC98, 0xD4F79999, 0x52DA4C3, 0x0}};
   s21_decimal value_2 = {{0xD45AF843, 0x383CFA14, 0x1705D3, 0x80160000}};
   int code = 1;
@@ -47884,7 +48854,8 @@ START_TEST(s21_is_not_equal_4786) {
 }
 
 START_TEST(s21_is_not_equal_4787) {
-  char *example = "( 189139618932627747 != 0.95245137514179731284846553 ) = True";
+  char *example =
+      "( 189139618932627747 != 0.95245137514179731284846553 ) = True";
   s21_decimal value_1 = {{0x376E9923, 0x29FF57B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2C9467D9, 0x4025DC6F, 0x4EC8F1, 0x1A0000}};
   int code = 1;
@@ -47894,7 +48865,8 @@ START_TEST(s21_is_not_equal_4787) {
 }
 
 START_TEST(s21_is_not_equal_4788) {
-  char *example = "( -4.0332203161795499772537260 != 16210659307920044195 ) = True";
+  char *example =
+      "( -4.0332203161795499772537260 != 16210659307920044195 ) = True";
   s21_decimal value_1 = {{0x3233175E, 0x4FBAE83C, 0x35611, 0x80180000}};
   s21_decimal value_2 = {{0xB77430A3, 0xE0F7D4C0, 0x0, 0x0}};
   int code = 1;
@@ -47914,7 +48886,8 @@ START_TEST(s21_is_not_equal_4789) {
 }
 
 START_TEST(s21_is_not_equal_4790) {
-  char *example = "( 0.061090879060519787 != 1269644781262895881785969723 ) = True";
+  char *example =
+      "( 0.061090879060519787 != 1269644781262895881785969723 ) = True";
   s21_decimal value_1 = {{0xB16B2B6B, 0xD909D4, 0x0, 0x120000}};
   s21_decimal value_2 = {{0x2A580C3B, 0x81AA5C32, 0x41A39BD, 0x0}};
   int code = 1;
@@ -47924,7 +48897,8 @@ START_TEST(s21_is_not_equal_4790) {
 }
 
 START_TEST(s21_is_not_equal_4791) {
-  char *example = "( -80.583960431183395551718689 != 164431848910061132291488144 ) = True";
+  char *example =
+      "( -80.583960431183395551718689 != 164431848910061132291488144 ) = True";
   s21_decimal value_1 = {{0x8A482D21, 0x3F93C897, 0x42A851, 0x80180000}};
   s21_decimal value_2 = {{0xA0BFB990, 0x64053B3E, 0x8803CC, 0x0}};
   int code = 1;
@@ -47954,7 +48928,8 @@ START_TEST(s21_is_not_equal_4793) {
 }
 
 START_TEST(s21_is_not_equal_4794) {
-  char *example = "( 0.98185795831957330380180135 != 1510821223442656043303 ) = True";
+  char *example =
+      "( 0.98185795831957330380180135 != 1510821223442656043303 ) = True";
   s21_decimal value_1 = {{0x10C3CAA7, 0xA84C1BA7, 0x5137A6, 0x1A0000}};
   s21_decimal value_2 = {{0x1494A127, 0xE6DB3A0C, 0x51, 0x0}};
   int code = 1;
@@ -47964,7 +48939,8 @@ START_TEST(s21_is_not_equal_4794) {
 }
 
 START_TEST(s21_is_not_equal_4795) {
-  char *example = "( 1944322854907417377933571872 != 1300005679815250174036868630 ) = True";
+  char *example =
+      "( 1944322854907417377933571872 != 1300005679815250174036868630 ) = True";
   s21_decimal value_1 = {{0x2F973720, 0x2A4A05FD, 0x6484E61, 0x0}};
   s21_decimal value_2 = {{0xA9E6FE16, 0x1D6DFBCA, 0x43356E9, 0x0}};
   int code = 1;
@@ -48024,7 +49000,8 @@ START_TEST(s21_is_not_equal_4800) {
 }
 
 START_TEST(s21_is_not_equal_4801) {
-  char *example = "( 0.862590099294428145 != 1371745699676646772552369241 ) = True";
+  char *example =
+      "( 0.862590099294428145 != 1371745699676646772552369241 ) = True";
   s21_decimal value_1 = {{0x7369BF1, 0xBF88920, 0x0, 0x120000}};
   s21_decimal value_2 = {{0xBD120459, 0x6264FCA3, 0x46EAE73, 0x0}};
   int code = 1;
@@ -48154,7 +49131,8 @@ START_TEST(s21_is_not_equal_4813) {
 }
 
 START_TEST(s21_is_not_equal_4814) {
-  char *example = "( 4.8719128056894171E-10 != -7.2487006959806509687530818 ) = True";
+  char *example =
+      "( 4.8719128056894171E-10 != -7.2487006959806509687530818 ) = True";
   s21_decimal value_1 = {{0xF19912DB, 0xAD15C9, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x25C06542, 0x85696965, 0x3BF5B8, 0x80190000}};
   int code = 1;
@@ -48304,7 +49282,8 @@ START_TEST(s21_is_not_equal_4828) {
 }
 
 START_TEST(s21_is_not_equal_4829) {
-  char *example = "( 1066695101198555220143408152 != 177619643057745551685 ) = True";
+  char *example =
+      "( 1066695101198555220143408152 != 177619643057745551685 ) = True";
   s21_decimal value_1 = {{0x8DC68418, 0x4E11977C, 0x3725979, 0x0}};
   s21_decimal value_2 = {{0xB499E145, 0xA0F7BC4A, 0x9, 0x0}};
   int code = 1;
@@ -48334,7 +49313,8 @@ START_TEST(s21_is_not_equal_4831) {
 }
 
 START_TEST(s21_is_not_equal_4832) {
-  char *example = "( 178288748555073669905 != 166085778718478639496287 ) = True";
+  char *example =
+      "( 178288748555073669905 != 166085778718478639496287 ) = True";
   s21_decimal value_1 = {{0x521ACB11, 0xAA40E032, 0x9, 0x0}};
   s21_decimal value_2 = {{0x8B4AFC5F, 0x8731E849, 0x232B, 0x0}};
   int code = 1;
@@ -48544,7 +49524,8 @@ START_TEST(s21_is_not_equal_4852) {
 }
 
 START_TEST(s21_is_not_equal_4853) {
-  char *example = "( 1310968719150952145017240857 != 1358453004767259711674101958 ) = True";
+  char *example =
+      "( 1310968719150952145017240857 != 1358453004767259711674101958 ) = True";
   s21_decimal value_1 = {{0xE2B1FD19, 0xAB0F28EF, 0x43C686C, 0x0}};
   s21_decimal value_2 = {{0x217DB0C6, 0xF30C4922, 0x463AF9C, 0x0}};
   int code = 1;
@@ -48564,7 +49545,8 @@ START_TEST(s21_is_not_equal_4854) {
 }
 
 START_TEST(s21_is_not_equal_4855) {
-  char *example = "( 1572326004172122254016757530 != -3.28254108126403 ) = True";
+  char *example =
+      "( 1572326004172122254016757530 != -3.28254108126403 ) = True";
   s21_decimal value_1 = {{0xF1EBBF1A, 0x7A9C083F, 0x51498FB, 0x0}};
   s21_decimal value_2 = {{0x9D82CCC3, 0x12A8B, 0x0, 0x800E0000}};
   int code = 1;
@@ -48744,7 +49726,8 @@ START_TEST(s21_is_not_equal_4872) {
 }
 
 START_TEST(s21_is_not_equal_4873) {
-  char *example = "( 104427888590469515092 != 170862672643472652117816 ) = True";
+  char *example =
+      "( 104427888590469515092 != 170862672643472652117816 ) = True";
   s21_decimal value_1 = {{0xEF00C754, 0xA93A6363, 0x5, 0x0}};
   s21_decimal value_2 = {{0x28E22738, 0x7BEA4C00, 0x242E, 0x0}};
   int code = 1;
@@ -48754,7 +49737,8 @@ START_TEST(s21_is_not_equal_4873) {
 }
 
 START_TEST(s21_is_not_equal_4874) {
-  char *example = "( 145206037821860121894820625 != 1332996555600546377840884308 ) = True";
+  char *example =
+      "( 145206037821860121894820625 != 1332996555600546377840884308 ) = True";
   s21_decimal value_1 = {{0xB3CD9B11, 0x154E2535, 0x781C93, 0x0}};
   s21_decimal value_2 = {{0x72A67A54, 0x132C037B, 0x44EA100, 0x0}};
   int code = 1;
@@ -48784,7 +49768,8 @@ START_TEST(s21_is_not_equal_4876) {
 }
 
 START_TEST(s21_is_not_equal_4877) {
-  char *example = "( 1769732154474686605495704947 != -64438.593918957477269486243 ) = True";
+  char *example =
+      "( 1769732154474686605495704947 != -64438.593918957477269486243 ) = True";
   s21_decimal value_1 = {{0xB0DD1D73, 0x54774CDC, 0x5B7E35C, 0x0}};
   s21_decimal value_2 = {{0xD0BA3AA3, 0x2D0A8D0E, 0x354D67, 0x80150000}};
   int code = 1;
@@ -48794,7 +49779,8 @@ START_TEST(s21_is_not_equal_4877) {
 }
 
 START_TEST(s21_is_not_equal_4878) {
-  char *example = "( 1088340986613535315806677310 != 1243171198432336528400808765 ) = True";
+  char *example =
+      "( 1088340986613535315806677310 != 1243171198432336528400808765 ) = True";
   s21_decimal value_1 = {{0x1F78693E, 0x1AC523C9, 0x384412B, 0x0}};
   s21_decimal value_2 = {{0x15F97B3D, 0xB4A15FB4, 0x40453BD, 0x0}};
   int code = 1;
@@ -48824,7 +49810,8 @@ START_TEST(s21_is_not_equal_4880) {
 }
 
 START_TEST(s21_is_not_equal_4881) {
-  char *example = "( 1069166830815464154154468943 != -793970.94309517927 ) = True";
+  char *example =
+      "( 1069166830815464154154468943 != -793970.94309517927 ) = True";
   s21_decimal value_1 = {{0x4269064F, 0x935E164, 0x37464E2, 0x0}};
   s21_decimal value_2 = {{0x92845A67, 0x11A133C, 0x0, 0x800B0000}};
   int code = 1;
@@ -48864,7 +49851,8 @@ START_TEST(s21_is_not_equal_4884) {
 }
 
 START_TEST(s21_is_not_equal_4885) {
-  char *example = "( -9080.8093192008946531733826 != 0.23761835478764359814952577 ) = True";
+  char *example =
+      "( -9080.8093192008946531733826 != 0.23761835478764359814952577 ) = True";
   s21_decimal value_1 = {{0xAE0C9142, 0x988D0A73, 0x4B1D5C, 0x80160000}};
   s21_decimal value_2 = {{0x49AF3681, 0xAEB2D02D, 0x13A7C3, 0x1A0000}};
   int code = 1;
@@ -48894,7 +49882,8 @@ START_TEST(s21_is_not_equal_4887) {
 }
 
 START_TEST(s21_is_not_equal_4888) {
-  char *example = "( -9639.640503702482341095051 != 111384892924000986 ) = True";
+  char *example =
+      "( -9639.640503702482341095051 != 111384892924000986 ) = True";
   s21_decimal value_1 = {{0xCC668B, 0xF5743921, 0x7F945, 0x80150000}};
   s21_decimal value_2 = {{0x50147ADA, 0x18BB7F8, 0x0, 0x0}};
   int code = 1;
@@ -48904,7 +49893,8 @@ START_TEST(s21_is_not_equal_4888) {
 }
 
 START_TEST(s21_is_not_equal_4889) {
-  char *example = "( 0.72103365057634506900085227 != 7.5235778224667767E-10 ) = True";
+  char *example =
+      "( 0.72103365057634506900085227 != 7.5235778224667767E-10 ) = True";
   s21_decimal value_1 = {{0xDA8999EB, 0x407FCDDE, 0x3BA47B, 0x1A0000}};
   s21_decimal value_2 = {{0xAB7B3C77, 0x10B4A8A, 0x0, 0x1A0000}};
   int code = 1;
@@ -48974,7 +49964,8 @@ START_TEST(s21_is_not_equal_4895) {
 }
 
 START_TEST(s21_is_not_equal_4896) {
-  char *example = "( -1.7773048463303687983033097 != 1980684765927269271591422098 ) = True";
+  char *example =
+      "( -1.7773048463303687983033097 != 1980684765927269271591422098 ) = True";
   s21_decimal value_1 = {{0x2E3B6B09, 0xE3459030, 0xEB396, 0x80190000}};
   s21_decimal value_2 = {{0x9DAB8892, 0x4FB593F0, 0x6666250, 0x0}};
   int code = 1;
@@ -48984,7 +49975,8 @@ START_TEST(s21_is_not_equal_4896) {
 }
 
 START_TEST(s21_is_not_equal_4897) {
-  char *example = "( 928.505590659593310405522572 != -38.223453346083321567788614 ) = True";
+  char *example =
+      "( 928.505590659593310405522572 != -38.223453346083321567788614 ) = True";
   s21_decimal value_1 = {{0x9509F48C, 0xED8B1366, 0x3000AB4, 0x180000}};
   s21_decimal value_2 = {{0x8C103E46, 0x8ED19F7C, 0x1F9E21, 0x80180000}};
   int code = 1;
@@ -49004,7 +49996,8 @@ START_TEST(s21_is_not_equal_4898) {
 }
 
 START_TEST(s21_is_not_equal_4899) {
-  char *example = "( 0.99372095788612375956621554 != -87.52587273392619801635193 ) = True";
+  char *example =
+      "( 0.99372095788612375956621554 != -87.52587273392619801635193 ) = True";
   s21_decimal value_1 = {{0xF7FB08F2, 0x1B5F46DE, 0x5232DC, 0x1A0000}};
   s21_decimal value_2 = {{0x73C96979, 0xB4F313BF, 0x73D6E, 0x80170000}};
   int code = 1;
@@ -49014,7 +50007,8 @@ START_TEST(s21_is_not_equal_4899) {
 }
 
 START_TEST(s21_is_not_equal_4900) {
-  char *example = "( 1546217216445819042082719720 != 0.879021170873216731 ) = True";
+  char *example =
+      "( 1546217216445819042082719720 != 0.879021170873216731 ) = True";
   s21_decimal value_1 = {{0xC17207E8, 0x429FE56B, 0x4FF003B, 0x0}};
   s21_decimal value_2 = {{0xFFF22EDB, 0xC32E918, 0x0, 0x120000}};
   int code = 1;
@@ -49034,7 +50028,8 @@ START_TEST(s21_is_not_equal_4901) {
 }
 
 START_TEST(s21_is_not_equal_4902) {
-  char *example = "( 1912285492253509390 != 1698652475231445384388387307 ) = True";
+  char *example =
+      "( 1912285492253509390 != 1698652475231445384388387307 ) = True";
   s21_decimal value_1 = {{0x2E7470E, 0x1A89CD86, 0x0, 0x0}};
   s21_decimal value_2 = {{0x496BA1EB, 0x327B15CA, 0x57D17A7, 0x0}};
   int code = 1;
@@ -49084,7 +50079,8 @@ START_TEST(s21_is_not_equal_4906) {
 }
 
 START_TEST(s21_is_not_equal_4907) {
-  char *example = "( 1973879397854774174733759705 != 0.91424413275439184552444061 ) = True";
+  char *example =
+      "( 1973879397854774174733759705 != 0.91424413275439184552444061 ) = True";
   s21_decimal value_1 = {{0x1AA2F4D9, 0x91A52701, 0x660C138, 0x0}};
   s21_decimal value_2 = {{0xA0CCC09D, 0x5FE3F680, 0x4B9FDF, 0x1A0000}};
   int code = 1;
@@ -49114,7 +50110,8 @@ START_TEST(s21_is_not_equal_4909) {
 }
 
 START_TEST(s21_is_not_equal_4910) {
-  char *example = "( 19119978604147550276072 != 1466164589821010191297593000 ) = True";
+  char *example =
+      "( 19119978604147550276072 != 1466164589821010191297593000 ) = True";
   s21_decimal value_1 = {{0xE3D149E8, 0x7F01867B, 0x40C, 0x0}};
   s21_decimal value_2 = {{0x2D8BEA8, 0xACDE0752, 0x4BCC86D, 0x0}};
   int code = 1;
@@ -49144,7 +50141,8 @@ START_TEST(s21_is_not_equal_4912) {
 }
 
 START_TEST(s21_is_not_equal_4913) {
-  char *example = "( 19767466604376505252389 != 1022201075008492192367315649 ) = True";
+  char *example =
+      "( 19767466604376505252389 != 1022201075008492192367315649 ) = True";
   s21_decimal value_1 = {{0x5AB8FA25, 0x98B50027, 0x42F, 0x0}};
   s21_decimal value_2 = {{0x31570AC1, 0x4FE33F41, 0x34D8B7F, 0x0}};
   int code = 1;
@@ -49244,7 +50242,8 @@ START_TEST(s21_is_not_equal_4922) {
 }
 
 START_TEST(s21_is_not_equal_4923) {
-  char *example = "( 1504801926437196289438867294 != 1050097819253866875803371387 ) = True";
+  char *example =
+      "( 1504801926437196289438867294 != 1050097819253866875803371387 ) = True";
   s21_decimal value_1 = {{0x67775F5E, 0xE3E2C5BC, 0x4DCBE33, 0x0}};
   s21_decimal value_2 = {{0x520B877B, 0xD90DC9F4, 0x3649EDC, 0x0}};
   int code = 1;
@@ -49284,7 +50283,8 @@ START_TEST(s21_is_not_equal_4926) {
 }
 
 START_TEST(s21_is_not_equal_4927) {
-  char *example = "( 0.32703388536502471170749380 != 1326203599441028404236958951 ) = True";
+  char *example =
+      "( 0.32703388536502471170749380 != 1326203599441028404236958951 ) = True";
   s21_decimal value_1 = {{0x2F9E71FA, 0x6CABAD0D, 0x2B485, 0x190000}};
   s21_decimal value_2 = {{0x5C42BCE7, 0x2F009A1B, 0x4490289, 0x0}};
   int code = 1;
@@ -49314,7 +50314,8 @@ START_TEST(s21_is_not_equal_4929) {
 }
 
 START_TEST(s21_is_not_equal_4930) {
-  char *example = "( 1915690308738398485213075204 != 1365738701530664936434268477 ) = True";
+  char *example =
+      "( 1915690308738398485213075204 != 1365738701530664936434268477 ) = True";
   s21_decimal value_1 = {{0x605FD704, 0xBA28768D, 0x6309F33, 0x0}};
   s21_decimal value_2 = {{0x51FF793D, 0x5CC33A5B, 0x469B66B, 0x0}};
   int code = 1;
@@ -49424,7 +50425,8 @@ START_TEST(s21_is_not_equal_4940) {
 }
 
 START_TEST(s21_is_not_equal_4941) {
-  char *example = "( -4.5306421025298584488 != -834.19487659141366131312747 ) = True";
+  char *example =
+      "( -4.5306421025298584488 != -834.19487659141366131312747 ) = True";
   s21_decimal value_1 = {{0xF93613A8, 0x74C0BDE0, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0x8B21C86B, 0x7CC5293E, 0x4500C3, 0x80170000}};
   int code = 1;
@@ -49434,7 +50436,8 @@ START_TEST(s21_is_not_equal_4941) {
 }
 
 START_TEST(s21_is_not_equal_4942) {
-  char *example = "( -60200444124372.664411008698 != -8647927.588594388 ) = True";
+  char *example =
+      "( -60200444124372.664411008698 != -8647927.588594388 ) = True";
   s21_decimal value_1 = {{0x7C6CAEBA, 0x9D7E8625, 0x31CBF0, 0x800C0000}};
   s21_decimal value_2 = {{0x8BF622D4, 0x1EB93E, 0x0, 0x80090000}};
   int code = 1;
@@ -49444,7 +50447,8 @@ START_TEST(s21_is_not_equal_4942) {
 }
 
 START_TEST(s21_is_not_equal_4943) {
-  char *example = "( -49446.908083718286954704184 != 2.2592644526636098E-10 ) = True";
+  char *example =
+      "( -49446.908083718286954704184 != 2.2592644526636098E-10 ) = True";
   s21_decimal value_1 = {{0x593AD38, 0x42236AC2, 0x28E6CA, 0x80150000}};
   s21_decimal value_2 = {{0xF78BFC42, 0x5043E3, 0x0, 0x1A0000}};
   int code = 1;
@@ -49474,7 +50478,8 @@ START_TEST(s21_is_not_equal_4945) {
 }
 
 START_TEST(s21_is_not_equal_4946) {
-  char *example = "( 0.311756659663473051 != -29.552902555193186801741314 ) = True";
+  char *example =
+      "( 0.311756659663473051 != -29.552902555193186801741314 ) = True";
   s21_decimal value_1 = {{0xBB9A899B, 0x4539507, 0x0, 0x120000}};
   s21_decimal value_2 = {{0x1960EE02, 0xEC417D6, 0x187212, 0x80180000}};
   int code = 1;
@@ -49484,7 +50489,8 @@ START_TEST(s21_is_not_equal_4946) {
 }
 
 START_TEST(s21_is_not_equal_4947) {
-  char *example = "( -9.0127753544612379127791 != 5.5734834571463560E-10 ) = True";
+  char *example =
+      "( -9.0127753544612379127791 != 5.5734834571463560E-10 ) = True";
   s21_decimal value_1 = {{0x6E206FEF, 0xD5D6DB85, 0x1315, 0x80160000}};
   s21_decimal value_2 = {{0xBD9FEDF4, 0x13CD0D, 0x0, 0x190000}};
   int code = 1;
@@ -49604,7 +50610,8 @@ START_TEST(s21_is_not_equal_4958) {
 }
 
 START_TEST(s21_is_not_equal_4959) {
-  char *example = "( -43.82063313824059930046 != 1928304810300989298274857851 ) = True";
+  char *example =
+      "( -43.82063313824059930046 != 1928304810300989298274857851 ) = True";
   s21_decimal value_1 = {{0xAA2EB5BE, 0x8D5846C1, 0xED, 0x80140000}};
   s21_decimal value_2 = {{0x9545F37B, 0x3A252138, 0x63B0E6D, 0x0}};
   int code = 1;
@@ -49684,7 +50691,8 @@ START_TEST(s21_is_not_equal_4966) {
 }
 
 START_TEST(s21_is_not_equal_4967) {
-  char *example = "( 1119059261274885221514053075 != 15292758586521101 ) = True";
+  char *example =
+      "( 1119059261274885221514053075 != 15292758586521101 ) = True";
   s21_decimal value_1 = {{0xC52D85D3, 0x1C57AB1D, 0x39DAA04, 0x0}};
   s21_decimal value_2 = {{0xD32F760D, 0x3654AE, 0x0, 0x0}};
   int code = 1;
@@ -49694,7 +50702,8 @@ START_TEST(s21_is_not_equal_4967) {
 }
 
 START_TEST(s21_is_not_equal_4968) {
-  char *example = "( -431568.46181368904119113160 != 13277404927748719 ) = True";
+  char *example =
+      "( -431568.46181368904119113160 != 13277404927748719 ) = True";
   s21_decimal value_1 = {{0xC1A10894, 0xBB603E6C, 0x391E1, 0x80130000}};
   s21_decimal value_2 = {{0xBC41EA6F, 0x2F2BBA, 0x0, 0x0}};
   int code = 1;
@@ -49774,7 +50783,8 @@ START_TEST(s21_is_not_equal_4975) {
 }
 
 START_TEST(s21_is_not_equal_4976) {
-  char *example = "( 1533130057745155022028194411 != 1389445013926773153646260966 ) = True";
+  char *example =
+      "( 1533130057745155022028194411 != 1389445013926773153646260966 ) = True";
   s21_decimal value_1 = {{0xD61AC26B, 0xF72B6A03, 0x4F42CEA, 0x0}};
   s21_decimal value_2 = {{0xEBA832E6, 0x21E6CCAB, 0x47D526D, 0x0}};
   int code = 1;
@@ -49784,7 +50794,8 @@ START_TEST(s21_is_not_equal_4976) {
 }
 
 START_TEST(s21_is_not_equal_4977) {
-  char *example = "( 1847099578195692620570859485 != 1225482530732065957791783389 ) = True";
+  char *example =
+      "( 1847099578195692620570859485 != 1225482530732065957791783389 ) = True";
   s21_decimal value_1 = {{0x6CF297DD, 0xC61A7900, 0x5F7E28C, 0x0}};
   s21_decimal value_2 = {{0x459DD9DD, 0x1BAEDDB1, 0x3F5B205, 0x0}};
   int code = 1;
@@ -49924,7 +50935,8 @@ START_TEST(s21_is_not_equal_4990) {
 }
 
 START_TEST(s21_is_not_equal_4991) {
-  char *example = "( -4.6785087626727680491 != 1819164864785865306871200078 ) = True";
+  char *example =
+      "( -4.6785087626727680491 != 1819164864785865306871200078 ) = True";
   s21_decimal value_1 = {{0x88A069EB, 0x89460551, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0xC45C794E, 0xECEE01E3, 0x5E0C724, 0x0}};
   int code = 1;
@@ -49944,7 +50956,8 @@ START_TEST(s21_is_not_equal_4992) {
 }
 
 START_TEST(s21_is_not_equal_4993) {
-  char *example = "( 1218967644969842662444019924 != 12938134016999250703 ) = True";
+  char *example =
+      "( 1218967644969842662444019924 != 12938134016999250703 ) = True";
   s21_decimal value_1 = {{0x5EEEB0D4, 0x717B97B8, 0x3F04E70, 0x0}};
   s21_decimal value_2 = {{0xDBA35B0F, 0xB38D7C56, 0x0, 0x0}};
   int code = 1;
@@ -50104,7 +51117,8 @@ START_TEST(s21_is_not_equal_5008) {
 }
 
 START_TEST(s21_is_not_equal_5009) {
-  char *example = "( 1460065712679956484469929873 != 1552842934463556795584698039 ) = True";
+  char *example =
+      "( 1460065712679956484469929873 != 1552842934463556795584698039 ) = True";
   s21_decimal value_1 = {{0x384DB791, 0xE209AEF3, 0x4B7BCF0, 0x0}};
   s21_decimal value_2 = {{0x172356B7, 0x27596356, 0x5047B48, 0x0}};
   int code = 1;
@@ -50134,7 +51148,8 @@ START_TEST(s21_is_not_equal_5011) {
 }
 
 START_TEST(s21_is_not_equal_5012) {
-  char *example = "( 1451749360294021538275105094 != 1761669594712913099868525701 ) = True";
+  char *example =
+      "( 1451749360294021538275105094 != 1761669594712913099868525701 ) = True";
   s21_decimal value_1 = {{0x4AF39946, 0x844A7277, 0x4B0DBE2, 0x0}};
   s21_decimal value_2 = {{0x988AD485, 0x16E78041, 0x5B1380C, 0x0}};
   int code = 1;
@@ -50184,7 +51199,8 @@ START_TEST(s21_is_not_equal_5016) {
 }
 
 START_TEST(s21_is_not_equal_5017) {
-  char *example = "( 2.779917699662823E-11 != 1127882507795945110856959285 ) = True";
+  char *example =
+      "( 2.779917699662823E-11 != 1127882507795945110856959285 ) = True";
   s21_decimal value_1 = {{0x6FE43E7, 0x9E052, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xC6A28535, 0x43567781, 0x3A4F669, 0x0}};
   int code = 1;
@@ -50294,7 +51310,8 @@ START_TEST(s21_is_not_equal_5027) {
 }
 
 START_TEST(s21_is_not_equal_5028) {
-  char *example = "( -41635539.880007593655246707 != -93316834463.353269506026128 ) = True";
+  char *example =
+      "( -41635539.880007593655246707 != -93316834463.353269506026128 ) = True";
   s21_decimal value_1 = {{0xE2E39F73, 0x23B7F25D, 0x2270AB, 0x80120000}};
   s21_decimal value_2 = {{0x98B42A90, 0xBB945131, 0x4D309B, 0x800F0000}};
   int code = 1;
@@ -50314,7 +51331,8 @@ START_TEST(s21_is_not_equal_5029) {
 }
 
 START_TEST(s21_is_not_equal_5030) {
-  char *example = "( 167655376378542029493537 != 1761810067415844695475997488 ) = True";
+  char *example =
+      "( 167655376378542029493537 != 1761810067415844695475997488 ) = True";
   s21_decimal value_1 = {{0xB5FB5521, 0x9DBCFC07, 0x2380, 0x0}};
   s21_decimal value_2 = {{0xD1FFCB30, 0x2144B443, 0x5B155CB, 0x0}};
   int code = 1;
@@ -50374,7 +51392,8 @@ START_TEST(s21_is_not_equal_5035) {
 }
 
 START_TEST(s21_is_not_equal_5036) {
-  char *example = "( 1153366293776614933786779104 != -7328.1337806844349865962907 ) = True";
+  char *example =
+      "( 1153366293776614933786779104 != -7328.1337806844349865962907 ) = True";
   s21_decimal value_1 = {{0xE6D3DDE0, 0x11B79DEF, 0x3BA0AD0, 0x0}};
   s21_decimal value_2 = {{0xF00EAD9B, 0x485B2D1C, 0x3C9DED, 0x80160000}};
   int code = 1;
@@ -50454,7 +51473,8 @@ START_TEST(s21_is_not_equal_5043) {
 }
 
 START_TEST(s21_is_not_equal_5044) {
-  char *example = "( -7.19386314749786382 != 1009252482713376537129304644 ) = True";
+  char *example =
+      "( -7.19386314749786382 != 1009252482713376537129304644 ) = True";
   s21_decimal value_1 = {{0xB2F0390E, 0x9FBC60A, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x2F78C244, 0xB79B2DCE, 0x342D586, 0x0}};
   int code = 1;
@@ -50474,7 +51494,8 @@ START_TEST(s21_is_not_equal_5045) {
 }
 
 START_TEST(s21_is_not_equal_5046) {
-  char *example = "( 1841203061158951781065070727 != 0.31390502389197779454228813 ) = True";
+  char *example =
+      "( 1841203061158951781065070727 != 0.31390502389197779454228813 ) = True";
   s21_decimal value_1 = {{0xBB809887, 0xF1DCC366, 0x5F301E9, 0x0}};
   s21_decimal value_2 = {{0x6495794D, 0x8B5685D3, 0x19F732, 0x1A0000}};
   int code = 1;
@@ -50494,7 +51515,8 @@ START_TEST(s21_is_not_equal_5047) {
 }
 
 START_TEST(s21_is_not_equal_5048) {
-  char *example = "( 1879596513627236340511537411 != -98.18615467171452947 ) = True";
+  char *example =
+      "( 1879596513627236340511537411 != -98.18615467171452947 ) = True";
   s21_decimal value_1 = {{0x554BF903, 0x2C6D36F6, 0x612C40B, 0x0}};
   s21_decimal value_2 = {{0x2E91813, 0x8842BABF, 0x0, 0x80110000}};
   int code = 1;
@@ -50504,7 +51526,8 @@ START_TEST(s21_is_not_equal_5048) {
 }
 
 START_TEST(s21_is_not_equal_5049) {
-  char *example = "( 3.1998106539895690E-10 != 1127623411383673493295710 ) = True";
+  char *example =
+      "( 3.1998106539895690E-10 != 1127623411383673493295710 ) = True";
   s21_decimal value_1 = {{0xF9612AC1, 0xB5E35, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xEBB2925E, 0x966E2890, 0xEEC8, 0x0}};
   int code = 1;
@@ -50514,7 +51537,8 @@ START_TEST(s21_is_not_equal_5049) {
 }
 
 START_TEST(s21_is_not_equal_5050) {
-  char *example = "( 1769444304069866074873287413 != 1132166128471986431863214449 ) = True";
+  char *example =
+      "( 1769444304069866074873287413 != 1132166128471986431863214449 ) = True";
   s21_decimal value_1 = {{0x9BEC52F5, 0xEDA0A565, 0x5B7A667, 0x0}};
   s21_decimal value_2 = {{0xB3C2D171, 0xCE21080E, 0x3A88180, 0x0}};
   int code = 1;
@@ -50544,7 +51568,8 @@ START_TEST(s21_is_not_equal_5052) {
 }
 
 START_TEST(s21_is_not_equal_5053) {
-  char *example = "( 1713450673207555412053294986 != 1454146453550465853758043055 ) = True";
+  char *example =
+      "( 1713450673207555412053294986 != 1454146453550465853758043055 ) = True";
   s21_decimal value_1 = {{0xE2C97F8A, 0x1DEE68BA, 0x589554B, 0x0}};
   s21_decimal value_2 = {{0xA36EF3AF, 0x33DBFA2F, 0x4B2D77D, 0x0}};
   int code = 1;
@@ -50564,7 +51589,8 @@ START_TEST(s21_is_not_equal_5054) {
 }
 
 START_TEST(s21_is_not_equal_5055) {
-  char *example = "( 1659974246678233557037464094 != 10493839169235282724396 ) = True";
+  char *example =
+      "( 1659974246678233557037464094 != 10493839169235282724396 ) = True";
   s21_decimal value_1 = {{0xDBCFBA1E, 0x39D6513D, 0x55D1938, 0x0}};
   s21_decimal value_2 = {{0x3D4A862C, 0xDF45F5AD, 0x238, 0x0}};
   int code = 1;
@@ -50584,7 +51610,8 @@ START_TEST(s21_is_not_equal_5056) {
 }
 
 START_TEST(s21_is_not_equal_5057) {
-  char *example = "( 1676964792579602222 != -358.83956877014474773265635 ) = True";
+  char *example =
+      "( 1676964792579602222 != -358.83956877014474773265635 ) = True";
   s21_decimal value_1 = {{0xA8B372E, 0x1745C698, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA60C7CE3, 0x333E74E5, 0x1DAEB9, 0x80170000}};
   int code = 1;
@@ -50734,7 +51761,8 @@ START_TEST(s21_is_not_equal_5071) {
 }
 
 START_TEST(s21_is_not_equal_5072) {
-  char *example = "( 1917268052257614920501991736 != 1339027642758969293696304824 ) = True";
+  char *example =
+      "( 1917268052257614920501991736 != 1339027642758969293696304824 ) = True";
   s21_decimal value_1 = {{0x6E2C9938, 0x5FEED279, 0x631ED4D, 0x0}};
   s21_decimal value_2 = {{0x88DA86B8, 0xF701C7DE, 0x4539E21, 0x0}};
   int code = 1;
@@ -50794,7 +51822,8 @@ START_TEST(s21_is_not_equal_5077) {
 }
 
 START_TEST(s21_is_not_equal_5078) {
-  char *example = "( 1607711817976569054981873394 != 1085759976081058165785645874 ) = True";
+  char *example =
+      "( 1607711817976569054981873394 != 1085759976081058165785645874 ) = True";
   s21_decimal value_1 = {{0xD0595EF2, 0x49FE93F5, 0x531DE38, 0x0}};
   s21_decimal value_2 = {{0x806C5332, 0x3E4547B1, 0x3821E9E, 0x0}};
   int code = 1;
@@ -51034,7 +52063,8 @@ START_TEST(s21_is_not_equal_5101) {
 }
 
 START_TEST(s21_is_not_equal_5102) {
-  char *example = "( -8.2966359429147735722890768 != 115867784179712465 ) = True";
+  char *example =
+      "( -8.2966359429147735722890768 != 115867784179712465 ) = True";
   s21_decimal value_1 = {{0xE6E91610, 0x5B58364A, 0x44A0CF, 0x80190000}};
   s21_decimal value_2 = {{0xC4F181D1, 0x19BA522, 0x0, 0x0}};
   int code = 1;
@@ -51104,7 +52134,8 @@ START_TEST(s21_is_not_equal_5108) {
 }
 
 START_TEST(s21_is_not_equal_5109) {
-  char *example = "( 5.120447036926289E-11 != -8.2803813812869722737270946 ) = True";
+  char *example =
+      "( 5.120447036926289E-11 != -8.2803813812869722737270946 ) = True";
   s21_decimal value_1 = {{0xFABA2951, 0x123104, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x3AE0E0A2, 0xBDC5D506, 0x447E63, 0x80190000}};
   int code = 1;
@@ -51164,7 +52195,8 @@ START_TEST(s21_is_not_equal_5114) {
 }
 
 START_TEST(s21_is_not_equal_5115) {
-  char *example = "( 19599220059836072 != 1362143382893798850439367048 ) = True";
+  char *example =
+      "( 19599220059836072 != 1362143382893798850439367048 ) = True";
   s21_decimal value_1 = {{0x58A8EA8, 0x45A163, 0x0, 0x0}};
   s21_decimal value_2 = {{0x59AF4988, 0xBF9E632F, 0x466BD14, 0x0}};
   int code = 1;
@@ -51324,7 +52356,8 @@ START_TEST(s21_is_not_equal_5130) {
 }
 
 START_TEST(s21_is_not_equal_5131) {
-  char *example = "( 1594839260708247915925732966 != 0.23836712003764560951852893 ) = True";
+  char *example =
+      "( 1594839260708247915925732966 != 0.23836712003764560951852893 ) = True";
   s21_decimal value_1 = {{0x3B99FE66, 0x8FAE4549, 0x5273859, 0x0}};
   s21_decimal value_2 = {{0x2DE53F5D, 0xBF396707, 0x13B79E, 0x1A0000}};
   int code = 1;
@@ -51334,7 +52367,8 @@ START_TEST(s21_is_not_equal_5131) {
 }
 
 START_TEST(s21_is_not_equal_5132) {
-  char *example = "( 1468897850188894479165 != 1333840160465485688835536 ) = True";
+  char *example =
+      "( 1468897850188894479165 != 1333840160465485688835536 ) = True";
   s21_decimal value_1 = {{0x4402A33D, 0xA10D7C31, 0x4F, 0x0}};
   s21_decimal value_2 = {{0xC8718DD0, 0x9EB76B4F, 0x11A73, 0x0}};
   int code = 1;
@@ -51444,7 +52478,8 @@ START_TEST(s21_is_not_equal_5142) {
 }
 
 START_TEST(s21_is_not_equal_5143) {
-  char *example = "( -1000.5359050957664 != 1484112474381837642956517772 ) = True";
+  char *example =
+      "( -1000.5359050957664 != 1484112474381837642956517772 ) = True";
   s21_decimal value_1 = {{0x30152360, 0x238BD2, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xCF73B18C, 0x7266D006, 0x4CBA10A, 0x0}};
   int code = 1;
@@ -51464,7 +52499,8 @@ START_TEST(s21_is_not_equal_5144) {
 }
 
 START_TEST(s21_is_not_equal_5145) {
-  char *example = "( 1397781785059837779803615771 != 0.0373682558929361005509293 ) = True";
+  char *example =
+      "( 1397781785059837779803615771 != 0.0373682558929361005509293 ) = True";
   s21_decimal value_1 = {{0xD61BB21B, 0x66B04470, 0x48437CE, 0x0}};
   s21_decimal value_2 = {{0x30CCFAAD, 0x5F42A334, 0x4F21, 0x190000}};
   int code = 1;
@@ -51524,7 +52560,8 @@ START_TEST(s21_is_not_equal_5150) {
 }
 
 START_TEST(s21_is_not_equal_5151) {
-  char *example = "( 1384482607738672607972431000 != 1732555986597746072068271096 ) = True";
+  char *example =
+      "( 1384482607738672607972431000 != 1732555986597746072068271096 ) = True";
   s21_decimal value_1 = {{0x3ADE1498, 0x8DCE9208, 0x4793798, 0x0}};
   s21_decimal value_2 = {{0x538BABF8, 0x3B298284, 0x5992300, 0x0}};
   int code = 1;
@@ -51624,7 +52661,8 @@ START_TEST(s21_is_not_equal_5160) {
 }
 
 START_TEST(s21_is_not_equal_5161) {
-  char *example = "( 0.03305616813970578012985202 != 162602982703833362554099290 ) = True";
+  char *example =
+      "( 0.03305616813970578012985202 != 162602982703833362554099290 ) = True";
   s21_decimal value_1 = {{0x80555772, 0xD8B7DDBF, 0x2BBFD, 0x1A0000}};
   s21_decimal value_2 = {{0x53F3165A, 0x5AE1AB88, 0x868085, 0x0}};
   int code = 1;
@@ -51664,7 +52702,8 @@ START_TEST(s21_is_not_equal_5164) {
 }
 
 START_TEST(s21_is_not_equal_5165) {
-  char *example = "( 1788635070060953458185892565 != 1845336880805959082716327665 ) = True";
+  char *example =
+      "( 1788635070060953458185892565 != 1845336880805959082716327665 ) = True";
   s21_decimal value_1 = {{0x5F3872D5, 0x6FEBD778, 0x5C78635, 0x0}};
   s21_decimal value_2 = {{0xEB8E6EF1, 0xC1C26160, 0x5F66D48, 0x0}};
   int code = 1;
@@ -51694,7 +52733,8 @@ START_TEST(s21_is_not_equal_5167) {
 }
 
 START_TEST(s21_is_not_equal_5168) {
-  char *example = "( 1917101758731557669282260503 != 1022511796267330616320721994 ) = True";
+  char *example =
+      "( 1917101758731557669282260503 != 1022511796267330616320721994 ) = True";
   s21_decimal value_1 = {{0x16802617, 0x95AA1A44, 0x631CA16, 0x0}};
   s21_decimal value_2 = {{0x11B2044A, 0x8B95D104, 0x34DCD4B, 0x0}};
   int code = 1;
@@ -51704,7 +52744,8 @@ START_TEST(s21_is_not_equal_5168) {
 }
 
 START_TEST(s21_is_not_equal_5169) {
-  char *example = "( -12.06505667355488505890 != 1867331155762740577459660648 ) = True";
+  char *example =
+      "( -12.06505667355488505890 != 1867331155762740577459660648 ) = True";
   s21_decimal value_1 = {{0x3DF3219D, 0x8A5CEB36, 0x6, 0x80130000}};
   s21_decimal value_2 = {{0xF4AE6768, 0xCA98A325, 0x6089EC0, 0x0}};
   int code = 1;
@@ -51744,7 +52785,8 @@ START_TEST(s21_is_not_equal_5172) {
 }
 
 START_TEST(s21_is_not_equal_5173) {
-  char *example = "( -14.318551217647590 != 1807181829682056027495124135 ) = True";
+  char *example =
+      "( -14.318551217647590 != 1807181829682056027495124135 ) = True";
   s21_decimal value_1 = {{0xBFE71197, 0x51643, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xC8B6CCA7, 0x4A772856, 0x5D6DDA3, 0x0}};
   int code = 1;
@@ -51814,7 +52856,8 @@ START_TEST(s21_is_not_equal_5179) {
 }
 
 START_TEST(s21_is_not_equal_5180) {
-  char *example = "( 188690059309965704 != -1486.5366183779850553094872 ) = True";
+  char *example =
+      "( 188690059309965704 != -1486.5366183779850553094872 ) = True";
   s21_decimal value_1 = {{0xF5D16188, 0x29E5C9B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3EAF72D8, 0x1D957E3A, 0xC4BDD, 0x80160000}};
   int code = 1;
@@ -51874,7 +52917,8 @@ START_TEST(s21_is_not_equal_5185) {
 }
 
 START_TEST(s21_is_not_equal_5186) {
-  char *example = "( 3.545255066684125E-11 != 1645682696569003405240523976 ) = True";
+  char *example =
+      "( 3.545255066684125E-11 != 1645682696569003405240523976 ) = True";
   s21_decimal value_1 = {{0x4E34ADD, 0xC9864, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xD0795CC8, 0xBDF9FE1A, 0x55146DD, 0x0}};
   int code = 1;
@@ -51954,7 +52998,9 @@ START_TEST(s21_is_not_equal_5193) {
 }
 
 START_TEST(s21_is_not_equal_5194) {
-  char *example = "( 1186743278477040395496180724 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1186743278477040395496180724 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x2007CBF4, 0x90DEEFB, 0x3D5A6AA, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -52024,7 +53070,8 @@ START_TEST(s21_is_not_equal_5200) {
 }
 
 START_TEST(s21_is_not_equal_5201) {
-  char *example = "( 14756601613590627077686663 != 1586968908736599185859701628 ) = True";
+  char *example =
+      "( 14756601613590627077686663 != 1586968908736599185859701628 ) = True";
   s21_decimal value_1 = {{0xDCBD8587, 0xF9F53684, 0xC34D4, 0x0}};
   s21_decimal value_2 = {{0x84B26B7C, 0xED0B9EA5, 0x520B5BC, 0x0}};
   int code = 1;
@@ -52054,7 +53101,8 @@ START_TEST(s21_is_not_equal_5203) {
 }
 
 START_TEST(s21_is_not_equal_5204) {
-  char *example = "( -897.69155840453857743526732 != -63.523573510842488217266351 ) = True";
+  char *example =
+      "( -897.69155840453857743526732 != -63.523573510842488217266351 ) = True";
   s21_decimal value_1 = {{0xBA14DB4C, 0xB070C119, 0x4A415B, 0x80170000}};
   s21_decimal value_2 = {{0x7111E8AF, 0xD1FA425F, 0x348BA3, 0x80180000}};
   int code = 1;
@@ -52134,7 +53182,8 @@ START_TEST(s21_is_not_equal_5211) {
 }
 
 START_TEST(s21_is_not_equal_5212) {
-  char *example = "( 13961795484553836931963034 != -53.76645002771000634731609 ) = True";
+  char *example =
+      "( 13961795484553836931963034 != -53.76645002771000634731609 ) = True";
   s21_decimal value_1 = {{0x740DD89A, 0x732696E8, 0xB8C86, 0x0}};
   s21_decimal value_2 = {{0xBB756C59, 0x8277661D, 0x4728C, 0x80170000}};
   int code = 1;
@@ -52184,7 +53233,8 @@ START_TEST(s21_is_not_equal_5216) {
 }
 
 START_TEST(s21_is_not_equal_5217) {
-  char *example = "( 141659967074880052268355 != 1183856488386454783858898767 ) = True";
+  char *example =
+      "( 141659967074880052268355 != 1183856488386454783858898767 ) = True";
   s21_decimal value_1 = {{0x4D440D43, 0x66F6C3EE, 0x1DFF, 0x0}};
   s21_decimal value_2 = {{0x8E48F74F, 0xD4BB48C6, 0x3D3435C, 0x0}};
   int code = 1;
@@ -52194,7 +53244,8 @@ START_TEST(s21_is_not_equal_5217) {
 }
 
 START_TEST(s21_is_not_equal_5218) {
-  char *example = "( -9917367021206.2560811403602 != 15638769297085487153501 ) = True";
+  char *example =
+      "( -9917367021206.2560811403602 != 15638769297085487153501 ) = True";
   s21_decimal value_1 = {{0x542AC952, 0x6F533E93, 0x5208D7, 0x800D0000}};
   s21_decimal value_2 = {{0xC9CC815D, 0xC78599F2, 0x34F, 0x0}};
   int code = 1;
@@ -52264,7 +53315,8 @@ START_TEST(s21_is_not_equal_5224) {
 }
 
 START_TEST(s21_is_not_equal_5225) {
-  char *example = "( 1675868144365151630595474829 != 13402700397795606 ) = True";
+  char *example =
+      "( 1675868144365151630595474829 != 13402700397795606 ) = True";
   s21_decimal value_1 = {{0x988C458D, 0x2560163A, 0x56A3EE2, 0x0}};
   s21_decimal value_2 = {{0x5C3DD916, 0x2F9DAF, 0x0, 0x0}};
   int code = 1;
@@ -52274,7 +53326,8 @@ START_TEST(s21_is_not_equal_5225) {
 }
 
 START_TEST(s21_is_not_equal_5226) {
-  char *example = "( 1197811249734342117337359547 != 16064272408897609 ) = True";
+  char *example =
+      "( 1197811249734342117337359547 != 16064272408897609 ) = True";
   s21_decimal value_1 = {{0xB9A464BB, 0xF5A051F3, 0x3DECE65, 0x0}};
   s21_decimal value_2 = {{0xE281E849, 0x39125E, 0x0, 0x0}};
   int code = 1;
@@ -52344,7 +53397,8 @@ START_TEST(s21_is_not_equal_5232) {
 }
 
 START_TEST(s21_is_not_equal_5233) {
-  char *example = "( 1531442626095506845342103486 != 145088808125942312786100 ) = True";
+  char *example =
+      "( 1531442626095506845342103486 != 145088808125942312786100 ) = True";
   s21_decimal value_1 = {{0xD403F7BE, 0x1CCBAB0B, 0x4F2C797, 0x0}};
   s21_decimal value_2 = {{0xF054D8B4, 0x47B14517, 0x1EB9, 0x0}};
   int code = 1;
@@ -52384,7 +53438,8 @@ START_TEST(s21_is_not_equal_5236) {
 }
 
 START_TEST(s21_is_not_equal_5237) {
-  char *example = "( -4.2787100300360710160547501 != 14196151997035030108 ) = True";
+  char *example =
+      "( -4.2787100300360710160547501 != 14196151997035030108 ) = True";
   s21_decimal value_1 = {{0xAC8A7EAD, 0x5AE14CEE, 0x236485, 0x80190000}};
   s21_decimal value_2 = {{0xE0B9A65C, 0xC502DD06, 0x0, 0x0}};
   int code = 1;
@@ -52414,7 +53469,8 @@ START_TEST(s21_is_not_equal_5239) {
 }
 
 START_TEST(s21_is_not_equal_5240) {
-  char *example = "( 1204293356993206877338862775 != 118934980427219689582815 ) = True";
+  char *example =
+      "( 1204293356993206877338862775 != 118934980427219689582815 ) = True";
   s21_decimal value_1 = {{0x507204B7, 0xB2B6574A, 0x3E42B09, 0x0}};
   s21_decimal value_2 = {{0xF250B0DF, 0x7A6BDA05, 0x192F, 0x0}};
   int code = 1;
@@ -52504,7 +53560,8 @@ START_TEST(s21_is_not_equal_5248) {
 }
 
 START_TEST(s21_is_not_equal_5249) {
-  char *example = "( 0.78319176103991713541820969 != 0.466141050574136 ) = True";
+  char *example =
+      "( 0.78319176103991713541820969 != 0.466141050574136 ) = True";
   s21_decimal value_1 = {{0x255E9229, 0xB410964, 0x40C8BB, 0x1A0000}};
   s21_decimal value_2 = {{0xEBBC1538, 0x1A7F3, 0x0, 0xF0000}};
   int code = 1;
@@ -52524,7 +53581,8 @@ START_TEST(s21_is_not_equal_5250) {
 }
 
 START_TEST(s21_is_not_equal_5251) {
-  char *example = "( 1324575686334128050809828309 != 1473206897219222376841322001 ) = True";
+  char *example =
+      "( 1324575686334128050809828309 != 1473206897219222376841322001 ) = True";
   s21_decimal value_1 = {{0x655B73D5, 0xD655D187, 0x447A9CF, 0x0}};
   s21_decimal value_2 = {{0x25959E11, 0xEC9DF999, 0x4C29BB1, 0x0}};
   int code = 1;
@@ -52634,7 +53692,8 @@ START_TEST(s21_is_not_equal_5261) {
 }
 
 START_TEST(s21_is_not_equal_5262) {
-  char *example = "( -4.5295388766255573833057512 != -2992.43031362020 ) = True";
+  char *example =
+      "( -4.5295388766255573833057512 != -2992.43031362020 ) = True";
   s21_decimal value_1 = {{0x6B84E8, 0xF1F87675, 0x2577AB, 0x80190000}};
   s21_decimal value_2 = {{0x4B7565CA, 0x1B37, 0x0, 0x800A0000}};
   int code = 1;
@@ -52724,7 +53783,8 @@ START_TEST(s21_is_not_equal_5270) {
 }
 
 START_TEST(s21_is_not_equal_5271) {
-  char *example = "( 12552387885498534 != -56863.728115652409476887937 ) = True";
+  char *example =
+      "( 12552387885498534 != -56863.728115652409476887937 ) = True";
   s21_decimal value_1 = {{0x8CFF80A6, 0x2C9854, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAA09B581, 0xE0C01229, 0x2F095C, 0x80150000}};
   int code = 1;
@@ -52774,7 +53834,8 @@ START_TEST(s21_is_not_equal_5275) {
 }
 
 START_TEST(s21_is_not_equal_5276) {
-  char *example = "( 1780921141929728287438756942 != 1808350284321502661 ) = True";
+  char *example =
+      "( 1780921141929728287438756942 != 1808350284321502661 ) = True";
   s21_decimal value_1 = {{0x2A1F5C4E, 0x8E26C108, 0x5C124B8, 0x0}};
   s21_decimal value_2 = {{0xA675B5C5, 0x19188D00, 0x0, 0x0}};
   int code = 1;
@@ -52854,7 +53915,8 @@ START_TEST(s21_is_not_equal_5283) {
 }
 
 START_TEST(s21_is_not_equal_5284) {
-  char *example = "( 1693935443823658234063002869 != -2.404600541204727394294 ) = True";
+  char *example =
+      "( 1693935443823658234063002869 != -2.404600541204727394294 ) = True";
   s21_decimal value_1 = {{0x4B129CF5, 0x69854EE1, 0x57930C8, 0x0}};
   s21_decimal value_2 = {{0x23D2EFF6, 0x5A893C1B, 0x82, 0x80150000}};
   int code = 1;
@@ -52894,7 +53956,8 @@ START_TEST(s21_is_not_equal_5287) {
 }
 
 START_TEST(s21_is_not_equal_5288) {
-  char *example = "( 1078626533700975235700005 != 1092853222985874334462278335 ) = True";
+  char *example =
+      "( 1078626533700975235700005 != 1092853222985874334462278335 ) = True";
   s21_decimal value_1 = {{0x5D7C1525, 0x762898BC, 0xE468, 0x0}};
   s21_decimal value_2 = {{0x92A47ABF, 0xEDAF2138, 0x387FCAB, 0x0}};
   int code = 1;
@@ -52934,7 +53997,8 @@ START_TEST(s21_is_not_equal_5291) {
 }
 
 START_TEST(s21_is_not_equal_5292) {
-  char *example = "( 1580826947944543263811115 != -43.515011737020894960762194 ) = True";
+  char *example =
+      "( 1580826947944543263811115 != -43.515011737020894960762194 ) = True";
   s21_decimal value_1 = {{0x442A662B, 0xCCF1C76E, 0x14EC0, 0x0}};
   s21_decimal value_2 = {{0x74593D52, 0x8357474A, 0x23FEA9, 0x80180000}};
   int code = 1;
@@ -52964,7 +54028,8 @@ START_TEST(s21_is_not_equal_5294) {
 }
 
 START_TEST(s21_is_not_equal_5295) {
-  char *example = "( -7.51302861365597857 != -5561285.9833125092112824736 ) = True";
+  char *example =
+      "( -7.51302861365597857 != -5561285.9833125092112824736 ) = True";
   s21_decimal value_1 = {{0xCA6E56A1, 0xA6D29F8, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xEAE579A0, 0x2C265BC3, 0x2E007B, 0x80130000}};
   int code = 1;
@@ -52984,7 +54049,8 @@ START_TEST(s21_is_not_equal_5296) {
 }
 
 START_TEST(s21_is_not_equal_5297) {
-  char *example = "( 0.34524517832358777495465391 != 1991672122962912650563534531 ) = True";
+  char *example =
+      "( 0.34524517832358777495465391 != 1991672122962912650563534531 ) = True";
   s21_decimal value_1 = {{0x8BFADAF, 0xDCA5034A, 0x1C8ED9, 0x1A0000}};
   s21_decimal value_2 = {{0x8739BEC3, 0x2137F919, 0x66F78FA, 0x0}};
   int code = 1;
@@ -53104,7 +54170,8 @@ START_TEST(s21_is_not_equal_5308) {
 }
 
 START_TEST(s21_is_not_equal_5309) {
-  char *example = "( 1036992098354667137165586515 != 176899676443965240910 ) = True";
+  char *example =
+      "( 1036992098354667137165586515 != 176899676443965240910 ) = True";
   s21_decimal value_1 = {{0x208A7053, 0x4B58A90E, 0x359C79E, 0x0}};
   s21_decimal value_2 = {{0x9C15B64E, 0x96F9E678, 0x9, 0x0}};
   int code = 1;
@@ -53304,7 +54371,8 @@ START_TEST(s21_is_not_equal_5328) {
 }
 
 START_TEST(s21_is_not_equal_5329) {
-  char *example = "( -9.9828543585996219518374832 != -5785.823781491685908671034 ) = True";
+  char *example =
+      "( -9.9828543585996219518374832 != -5785.823781491685908671034 ) = True";
   s21_decimal value_1 = {{0x55B953B0, 0x310CB366, 0x529384, 0x80190000}};
   s21_decimal value_2 = {{0x2D9DEA3A, 0x22BBA27F, 0x4C932, 0x80150000}};
   int code = 1;
@@ -53374,7 +54442,8 @@ START_TEST(s21_is_not_equal_5335) {
 }
 
 START_TEST(s21_is_not_equal_5336) {
-  char *example = "( -16.685030246253395089973352 != 1893929572241982278 ) = True";
+  char *example =
+      "( -16.685030246253395089973352 != 1893929572241982278 ) = True";
   s21_decimal value_1 = {{0xDAEA6068, 0x4D531084, 0xDCD31, 0x80180000}};
   s21_decimal value_2 = {{0x57174346, 0x1A4896E9, 0x0, 0x0}};
   int code = 1;
@@ -53394,7 +54463,8 @@ START_TEST(s21_is_not_equal_5337) {
 }
 
 START_TEST(s21_is_not_equal_5338) {
-  char *example = "( 0.97141679350219305498307455 != 1135687843688966519 ) = True";
+  char *example =
+      "( 0.97141679350219305498307455 != 1135687843688966519 ) = True";
   s21_decimal value_1 = {{0xEB11EB7F, 0xFD512D20, 0x505A8C, 0x1A0000}};
   s21_decimal value_2 = {{0xA2CF6977, 0xFC2C613, 0x0, 0x0}};
   int code = 1;
@@ -53464,7 +54534,8 @@ START_TEST(s21_is_not_equal_5344) {
 }
 
 START_TEST(s21_is_not_equal_5345) {
-  char *example = "( 128074494947402521105 != -8306.9461213348337158565079 ) = True";
+  char *example =
+      "( 128074494947402521105 != -8306.9461213348337158565079 ) = True";
   s21_decimal value_1 = {{0x3F7D1A11, 0xF1640296, 0x6, 0x0}};
   s21_decimal value_2 = {{0x4CF5ACD7, 0x84074013, 0x44B6A4, 0x80160000}};
   int code = 1;
@@ -53484,7 +54555,8 @@ START_TEST(s21_is_not_equal_5346) {
 }
 
 START_TEST(s21_is_not_equal_5347) {
-  char *example = "( -3.7189792883146697766263128 != 11126303895362710412834090 ) = True";
+  char *example =
+      "( -3.7189792883146697766263128 != 11126303895362710412834090 ) = True";
   s21_decimal value_1 = {{0x936AD958, 0xB63FB679, 0x1EC33E, 0x80190000}};
   s21_decimal value_2 = {{0xC865B52A, 0x248B8BE0, 0x93416, 0x0}};
   int code = 1;
@@ -53624,7 +54696,8 @@ START_TEST(s21_is_not_equal_5360) {
 }
 
 START_TEST(s21_is_not_equal_5361) {
-  char *example = "( 1153194516816453947322130102 != 10827852270835371 ) = True";
+  char *example =
+      "( 1153194516816453947322130102 != 10827852270835371 ) = True";
   s21_decimal value_1 = {{0x4D69DEB6, 0x5838CDC, 0x3B9E670, 0x0}};
   s21_decimal value_2 = {{0xD04896AB, 0x2677DF, 0x0, 0x0}};
   int code = 1;
@@ -53754,7 +54827,8 @@ START_TEST(s21_is_not_equal_5373) {
 }
 
 START_TEST(s21_is_not_equal_5374) {
-  char *example = "( 1040087408220038692067464864 != -5571.194679354501256193 ) = True";
+  char *example =
+      "( 1040087408220038692067464864 != -5571.194679354501256193 ) = True";
   s21_decimal value_1 = {{0xCD45D6A0, 0x60DB7DF5, 0x35C5713, 0x0}};
   s21_decimal value_2 = {{0x1F525401, 0x3DB8B6B, 0x12E, 0x80120000}};
   int code = 1;
@@ -53804,7 +54878,8 @@ START_TEST(s21_is_not_equal_5378) {
 }
 
 START_TEST(s21_is_not_equal_5379) {
-  char *example = "( 1197330625888186286952554788 != -3.11031123772677289120724 ) = True";
+  char *example =
+      "( 1197330625888186286952554788 != -3.11031123772677289120724 ) = True";
   s21_decimal value_1 = {{0x52922124, 0x49DFB97F, 0x3DE689F, 0x0}};
   s21_decimal value_2 = {{0xD83393D4, 0x7EFF5BA, 0x41DD, 0x80170000}};
   int code = 1;
@@ -53814,7 +54889,8 @@ START_TEST(s21_is_not_equal_5379) {
 }
 
 START_TEST(s21_is_not_equal_5380) {
-  char *example = "( -139.12244176490321900532761 != 1330691317629348148622741 ) = True";
+  char *example =
+      "( -139.12244176490321900532761 != 1330691317629348148622741 ) = True";
   s21_decimal value_1 = {{0x117CF419, 0x449CA139, 0xB8208, 0x80170000}};
   s21_decimal value_2 = {{0xCF3595, 0xEBBE6721, 0x119C8, 0x0}};
   int code = 1;
@@ -53854,7 +54930,8 @@ START_TEST(s21_is_not_equal_5383) {
 }
 
 START_TEST(s21_is_not_equal_5384) {
-  char *example = "( 0.57849139711794170372518029 != -443127.07826817997090192020 ) = True";
+  char *example =
+      "( 0.57849139711794170372518029 != -443127.07826817997090192020 ) = True";
   s21_decimal value_1 = {{0xE32B708D, 0x25C8EEB2, 0x2FDA08, 0x1A0000}};
   s21_decimal value_2 = {{0x12A9CC42, 0xABA41A46, 0x3AA5B, 0x80130000}};
   int code = 1;
@@ -53864,7 +54941,8 @@ START_TEST(s21_is_not_equal_5384) {
 }
 
 START_TEST(s21_is_not_equal_5385) {
-  char *example = "( 186533674925157100 != -3.9930954252116349095671821 ) = True";
+  char *example =
+      "( 186533674925157100 != -3.9930954252116349095671821 ) = True";
   s21_decimal value_1 = {{0x988FEAEC, 0x296B363, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE8D2780D, 0x5E130CFF, 0x2107B5, 0x80190000}};
   int code = 1;
@@ -53874,7 +54952,8 @@ START_TEST(s21_is_not_equal_5385) {
 }
 
 START_TEST(s21_is_not_equal_5386) {
-  char *example = "( -2.29554870049427 != -22951319.860805791905232543 ) = True";
+  char *example =
+      "( -2.29554870049427 != -22951319.860805791905232543 ) = True";
   s21_decimal value_1 = {{0x687C5A93, 0xD0C7, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x718369F, 0x8AF002A6, 0x12FC21, 0x80120000}};
   int code = 1;
@@ -53884,7 +54963,8 @@ START_TEST(s21_is_not_equal_5386) {
 }
 
 START_TEST(s21_is_not_equal_5387) {
-  char *example = "( 1255713365619725989897085525 != -8.9690691845087163451029 ) = True";
+  char *example =
+      "( 1255713365619725989897085525 != -8.9690691845087163451029 ) = True";
   s21_decimal value_1 = {{0x1A18A255, 0xF381D0B0, 0x40EB3A5, 0x0}};
   s21_decimal value_2 = {{0x85220695, 0x2463C774, 0x12FE, 0x80160000}};
   int code = 1;
@@ -54054,7 +55134,8 @@ START_TEST(s21_is_not_equal_5403) {
 }
 
 START_TEST(s21_is_not_equal_5404) {
-  char *example = "( -8.13238441255391 != 1072363612133971924546422825 ) = True";
+  char *example =
+      "( -8.13238441255391 != 1072363612133971924546422825 ) = True";
   s21_decimal value_1 = {{0xD468A1DF, 0x2E3A2, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x74670829, 0xE60446E2, 0x37709D3, 0x0}};
   int code = 1;
@@ -54184,7 +55265,8 @@ START_TEST(s21_is_not_equal_5416) {
 }
 
 START_TEST(s21_is_not_equal_5417) {
-  char *example = "( -36.536248070856618546329609 != 1362855085055390498916457068 ) = True";
+  char *example =
+      "( -36.536248070856618546329609 != 1362855085055390498916457068 ) = True";
   s21_decimal value_1 = {{0x6507809, 0xFA056177, 0x1E38D9, 0x80180000}};
   s21_decimal value_2 = {{0x326CDA6C, 0x33331B21, 0x46753CA, 0x0}};
   int code = 1;
@@ -54214,7 +55296,8 @@ START_TEST(s21_is_not_equal_5419) {
 }
 
 START_TEST(s21_is_not_equal_5420) {
-  char *example = "( -9.7376188958765546195325019 != 118183620199050109121601091 ) = True";
+  char *example =
+      "( -9.7376188958765546195325019 != 118183620199050109121601091 ) = True";
   s21_decimal value_1 = {{0x254B105B, 0xC7E744C7, 0x508C35, 0x80190000}};
   s21_decimal value_2 = {{0xC7421E43, 0xE37B5418, 0x61C25A, 0x0}};
   int code = 1;
@@ -54224,7 +55307,8 @@ START_TEST(s21_is_not_equal_5420) {
 }
 
 START_TEST(s21_is_not_equal_5421) {
-  char *example = "( 1836034741743041110080560179 != 1555202655908372851103997245 ) = True";
+  char *example =
+      "( 1836034741743041110080560179 != 1555202655908372851103997245 ) = True";
   s21_decimal value_1 = {{0xAD911C33, 0xC9AF727D, 0x5EEBB7A, 0x0}};
   s21_decimal value_2 = {{0x7FC59D3D, 0xE8D88B7F, 0x5066EF8, 0x0}};
   int code = 1;
@@ -54314,7 +55398,8 @@ START_TEST(s21_is_not_equal_5429) {
 }
 
 START_TEST(s21_is_not_equal_5430) {
-  char *example = "( 8.162279947983686E-11 != -1327.4918767725246040428522 ) = True";
+  char *example =
+      "( 8.162279947983686E-11 != -1327.4918767725246040428522 ) = True";
   s21_decimal value_1 = {{0xE4DB5B46, 0x1CFF8C, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xE42ECFEA, 0xC9D3101E, 0xAFB12, 0x80160000}};
   int code = 1;
@@ -54334,7 +55419,8 @@ START_TEST(s21_is_not_equal_5431) {
 }
 
 START_TEST(s21_is_not_equal_5432) {
-  char *example = "( -65462166.5261181548 != -7084.8154330143694997243072 ) = True";
+  char *example =
+      "( -65462166.5261181548 != -7084.8154330143694997243072 ) = True";
   s21_decimal value_1 = {{0xAC2ADA6C, 0x915AEEF, 0x0, 0x800A0000}};
   s21_decimal value_2 = {{0x2B4D44C0, 0x245E786F, 0x3A9AAE, 0x80160000}};
   int code = 1;
@@ -54374,7 +55460,8 @@ START_TEST(s21_is_not_equal_5435) {
 }
 
 START_TEST(s21_is_not_equal_5436) {
-  char *example = "( 1034893490745738403262590540 != 15496287052694058 ) = True";
+  char *example =
+      "( 1034893490745738403262590540 != 15496287052694058 ) = True";
   s21_decimal value_1 = {{0xB15D6E4C, 0x8C41FC04, 0x3580B38, 0x0}};
   s21_decimal value_2 = {{0x7D1D022A, 0x370DCA, 0x0, 0x0}};
   int code = 1;
@@ -54504,7 +55591,8 @@ START_TEST(s21_is_not_equal_5448) {
 }
 
 START_TEST(s21_is_not_equal_5449) {
-  char *example = "( -789.58784513483089119231395 != 1510178746008773586873732722 ) = True";
+  char *example =
+      "( -789.58784513483089119231395 != 1510178746008773586873732722 ) = True";
   s21_decimal value_1 = {{0xF01F3DA3, 0x490A8334, 0x41502C, 0x80170000}};
   s21_decimal value_2 = {{0x1BABCE72, 0xDCFB2846, 0x4E130C9, 0x0}};
   int code = 1;
@@ -54524,7 +55612,8 @@ START_TEST(s21_is_not_equal_5450) {
 }
 
 START_TEST(s21_is_not_equal_5451) {
-  char *example = "( 19240013932130443615 != 1962678211890253674897570671 ) = True";
+  char *example =
+      "( 19240013932130443615 != 1962678211890253674897570671 ) = True";
   s21_decimal value_1 = {{0xBA33A15F, 0xB0242BB, 0x1, 0x0}};
   s21_decimal value_2 = {{0xA16D7B6F, 0xFA23652, 0x6577D47, 0x0}};
   int code = 1;
@@ -54544,7 +55633,8 @@ START_TEST(s21_is_not_equal_5452) {
 }
 
 START_TEST(s21_is_not_equal_5453) {
-  char *example = "( 18277081859931068 != 1402798202796149563181668413 ) = True";
+  char *example =
+      "( 18277081859931068 != 1402798202796149563181668413 ) = True";
   s21_decimal value_1 = {{0xBBCABBBC, 0x40EEE8, 0x0, 0x0}};
   s21_decimal value_2 = {{0x32E983D, 0xF396A3C1, 0x4885E12, 0x0}};
   int code = 1;
@@ -54574,7 +55664,8 @@ START_TEST(s21_is_not_equal_5455) {
 }
 
 START_TEST(s21_is_not_equal_5456) {
-  char *example = "( 1385362532739782379086132097 != 101121843456765351337201556 ) = True";
+  char *example =
+      "( 1385362532739782379086132097 != 101121843456765351337201556 ) = True";
   s21_decimal value_1 = {{0x2F95B381, 0x624254E8, 0x479F1ED, 0x0}};
   s21_decimal value_2 = {{0xB5150F94, 0x1E3A5F89, 0x53A562, 0x0}};
   int code = 1;
@@ -54684,7 +55775,8 @@ START_TEST(s21_is_not_equal_5466) {
 }
 
 START_TEST(s21_is_not_equal_5467) {
-  char *example = "( 108525253148729644301650 != 0.05413167868416430740005682 ) = True";
+  char *example =
+      "( 108525253148729644301650 != 0.05413167868416430740005682 ) = True";
   s21_decimal value_1 = {{0xDD5E3D52, 0x2A6F5B55, 0x16FB, 0x0}};
   s21_decimal value_2 = {{0x6BAE332, 0x6B0BC433, 0x47A48, 0x1A0000}};
   int code = 1;
@@ -54704,7 +55796,8 @@ START_TEST(s21_is_not_equal_5468) {
 }
 
 START_TEST(s21_is_not_equal_5469) {
-  char *example = "( 143598942930389301 != -6.9679139430939779715622824 ) = True";
+  char *example =
+      "( 143598942930389301 != -6.9679139430939779715622824 ) = True";
   s21_decimal value_1 = {{0x4F7CC935, 0x1FE2A7A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC34E7A8, 0xB7A758DC, 0x39A321, 0x80190000}};
   int code = 1;
@@ -54754,7 +55847,8 @@ START_TEST(s21_is_not_equal_5473) {
 }
 
 START_TEST(s21_is_not_equal_5474) {
-  char *example = "( 1560833164049500367151920437 != -5.9624788997315556141 ) = True";
+  char *example =
+      "( 1560833164049500367151920437 != -5.9624788997315556141 ) = True";
   s21_decimal value_1 = {{0x13077535, 0x5E142050, 0x50B1747, 0x0}};
   s21_decimal value_2 = {{0xF89CF32D, 0x3B75CDAF, 0x3, 0x80130000}};
   int code = 1;
@@ -54804,7 +55898,8 @@ START_TEST(s21_is_not_equal_5478) {
 }
 
 START_TEST(s21_is_not_equal_5479) {
-  char *example = "( 15731904492135123208203912 != 17288429819182874694747009 ) = True";
+  char *example =
+      "( 15731904492135123208203912 != 17288429819182874694747009 ) = True";
   s21_decimal value_1 = {{0xBB516E88, 0x405ACA9F, 0xD035C, 0x0}};
   s21_decimal value_2 = {{0xA3D78381, 0xA88F97ED, 0xE4CF7, 0x0}};
   int code = 1;
@@ -54834,7 +55929,8 @@ START_TEST(s21_is_not_equal_5481) {
 }
 
 START_TEST(s21_is_not_equal_5482) {
-  char *example = "( -79228162514264337593543950335 != -331.462080823492176 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != -331.462080823492176 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x9FFEFE50, 0x4999701, 0x0, 0x800F0000}};
   int code = 1;
@@ -54844,7 +55940,8 @@ START_TEST(s21_is_not_equal_5482) {
 }
 
 START_TEST(s21_is_not_equal_5483) {
-  char *example = "( 0.75608658474575674570 != 0.60390281627926135804820530 ) = True";
+  char *example =
+      "( 0.75608658474575674570 != 0.60390281627926135804820530 ) = True";
   s21_decimal value_1 = {{0xD81752E1, 0x68ED976D, 0x0, 0x130000}};
   s21_decimal value_2 = {{0xFFD5A605, 0x5F689D61, 0x4FED0, 0x190000}};
   int code = 1;
@@ -54934,7 +56031,8 @@ START_TEST(s21_is_not_equal_5491) {
 }
 
 START_TEST(s21_is_not_equal_5492) {
-  char *example = "( 130996563554033587982585 != 1112970267349149188562850745 ) = True";
+  char *example =
+      "( 130996563554033587982585 != 1112970267349149188562850745 ) = True";
   s21_decimal value_1 = {{0xAE1010F9, 0x568336DA, 0x1BBD, 0x0}};
   s21_decimal value_2 = {{0xC57393B9, 0x16AD92A6, 0x398A09F, 0x0}};
   int code = 1;
@@ -55114,7 +56212,8 @@ START_TEST(s21_is_not_equal_5509) {
 }
 
 START_TEST(s21_is_not_equal_5510) {
-  char *example = "( 1500953814283051161103762449 != 1327547241615884166602290945 ) = True";
+  char *example =
+      "( 1500953814283051161103762449 != 1327547241615884166602290945 ) = True";
   s21_decimal value_1 = {{0x64720411, 0x4FF32EBB, 0x4D98F55, 0x0}};
   s21_decimal value_2 = {{0xC121F701, 0x2BFEA013, 0x44A1F10, 0x0}};
   int code = 1;
@@ -55204,7 +56303,8 @@ START_TEST(s21_is_not_equal_5518) {
 }
 
 START_TEST(s21_is_not_equal_5519) {
-  char *example = "( 17148047022329516 != 1820975641915628208382935410 ) = True";
+  char *example =
+      "( 17148047022329516 != 1820975641915628208382935410 ) = True";
   s21_decimal value_1 = {{0xD35B8EAC, 0x3CEC0E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xBBC20172, 0x59B42CD6, 0x5E24697, 0x0}};
   int code = 1;
@@ -55364,7 +56464,8 @@ START_TEST(s21_is_not_equal_5534) {
 }
 
 START_TEST(s21_is_not_equal_5535) {
-  char *example = "( 1463967848069339905614492125 != -69557859988.6312491 ) = True";
+  char *example =
+      "( 1463967848069339905614492125 != -69557859988.6312491 ) = True";
   s21_decimal value_1 = {{0x5B8931DD, 0x10F813D0, 0x4BAF740, 0x0}};
   s21_decimal value_2 = {{0x1F96542B, 0x9A7310D, 0x0, 0x80070000}};
   int code = 1;
@@ -55444,7 +56545,8 @@ START_TEST(s21_is_not_equal_5542) {
 }
 
 START_TEST(s21_is_not_equal_5543) {
-  char *example = "( 164989921699428092 != -3.2902930581739005236419393 ) = True";
+  char *example =
+      "( 164989921699428092 != -3.2902930581739005236419393 ) = True";
   s21_decimal value_1 = {{0xAA69F6FC, 0x24A2975, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA8231B41, 0x70DE5E13, 0x1B3777, 0x80190000}};
   int code = 1;
@@ -55574,7 +56676,8 @@ START_TEST(s21_is_not_equal_5555) {
 }
 
 START_TEST(s21_is_not_equal_5556) {
-  char *example = "( 1791337219472733888385389996 != 18227035825458949246585 ) = True";
+  char *example =
+      "( 1791337219472733888385389996 != 18227035825458949246585 ) = True";
   s21_decimal value_1 = {{0x24AC15AC, 0x40153C9B, 0x5C9C269, 0x0}};
   s21_decimal value_2 = {{0xBF81CE79, 0x16EF8047, 0x3DC, 0x0}};
   int code = 1;
@@ -55704,7 +56807,8 @@ START_TEST(s21_is_not_equal_5568) {
 }
 
 START_TEST(s21_is_not_equal_5569) {
-  char *example = "( 1841549686739315082241644379 != -115.897402038978593665 ) = True";
+  char *example =
+      "( 1841549686739315082241644379 != -115.897402038978593665 ) = True";
   s21_decimal value_1 = {{0x4232175B, 0x8E1D8ACA, 0x5F34B50, 0x0}};
   s21_decimal value_2 = {{0x8BF3C381, 0x4866491A, 0x6, 0x80120000}};
   int code = 1;
@@ -55734,7 +56838,8 @@ START_TEST(s21_is_not_equal_5571) {
 }
 
 START_TEST(s21_is_not_equal_5572) {
-  char *example = "( 1398703951017265879137481022 != -2.7695467145874718060567 ) = True";
+  char *example =
+      "( 1398703951017265879137481022 != -2.7695467145874718060567 ) = True";
   s21_decimal value_1 = {{0x2495713E, 0x1E2B58A8, 0x484FB15, 0x0}};
   s21_decimal value_2 = {{0x9C37F017, 0x5FD0F84C, 0x5DD, 0x80160000}};
   int code = 1;
@@ -55754,7 +56859,8 @@ START_TEST(s21_is_not_equal_5573) {
 }
 
 START_TEST(s21_is_not_equal_5574) {
-  char *example = "( -5.90855504982750133 != 1030131744617051748576133059 ) = True";
+  char *example =
+      "( -5.90855504982750133 != 1030131744617051748576133059 ) = True";
   s21_decimal value_1 = {{0x8814B3B5, 0x83323F3, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xF669FFC3, 0xC5E39FC0, 0x3541AE1, 0x0}};
   int code = 1;
@@ -55764,7 +56870,8 @@ START_TEST(s21_is_not_equal_5574) {
 }
 
 START_TEST(s21_is_not_equal_5575) {
-  char *example = "( 1846448772812638176297090837 != 120129689200107629120029686 ) = True";
+  char *example =
+      "( 1846448772812638176297090837 != 120129689200107629120029686 ) = True";
   s21_decimal value_1 = {{0xFCABFF15, 0x8B17DBAE, 0x5F758BC, 0x0}};
   s21_decimal value_2 = {{0x414F83F6, 0x80234672, 0x635E73, 0x0}};
   int code = 1;
@@ -55784,7 +56891,8 @@ START_TEST(s21_is_not_equal_5576) {
 }
 
 START_TEST(s21_is_not_equal_5577) {
-  char *example = "( 1407162386913125809632216577 != 1888784067355741105245647466 ) = True";
+  char *example =
+      "( 1407162386913125809632216577 != 1888784067355741105245647466 ) = True";
   s21_decimal value_1 = {{0x23668601, 0xD8B7D337, 0x48BFA39, 0x0}};
   s21_decimal value_2 = {{0x7B57F26A, 0x758B3028, 0x61A5D95, 0x0}};
   int code = 1;
@@ -55854,7 +56962,8 @@ START_TEST(s21_is_not_equal_5583) {
 }
 
 START_TEST(s21_is_not_equal_5584) {
-  char *example = "( 0.16635937794522247193803577 != -2.0501547916263448220 ) = True";
+  char *example =
+      "( 0.16635937794522247193803577 != -2.0501547916263448220 ) = True";
   s21_decimal value_1 = {{0x2A05BB39, 0xFEB245FF, 0xDC2CB, 0x1A0000}};
   s21_decimal value_2 = {{0xB9740976, 0x1C739CEB, 0x0, 0x80120000}};
   int code = 1;
@@ -55884,7 +56993,8 @@ START_TEST(s21_is_not_equal_5586) {
 }
 
 START_TEST(s21_is_not_equal_5587) {
-  char *example = "( 193218428619614367186 != 6.93022675265379516949516826 ) = True";
+  char *example =
+      "( 193218428619614367186 != 6.93022675265379516949516826 ) = True";
   s21_decimal value_1 = {{0x4B48ADD2, 0x7971C11D, 0xA, 0x0}};
   s21_decimal value_2 = {{0x11DCD21A, 0x81563B3C, 0x23D4142, 0x1A0000}};
   int code = 1;
@@ -55904,7 +57014,8 @@ START_TEST(s21_is_not_equal_5588) {
 }
 
 START_TEST(s21_is_not_equal_5589) {
-  char *example = "( 1819682339229041002717124145 != -33381.786523987973802652870 ) = True";
+  char *example =
+      "( 1819682339229041002717124145 != -33381.786523987973802652870 ) = True";
   s21_decimal value_1 = {{0xD0A01631, 0x4572B514, 0x5E134B9, 0x0}};
   s21_decimal value_2 = {{0x1F862547, 0x700A833, 0x2C2E3, 0x80140000}};
   int code = 1;
@@ -55914,7 +57025,8 @@ START_TEST(s21_is_not_equal_5589) {
 }
 
 START_TEST(s21_is_not_equal_5590) {
-  char *example = "( -8278.5234802653732722228673 != 0.7389207025098174608180 ) = True";
+  char *example =
+      "( -8278.5234802653732722228673 != 0.7389207025098174608180 ) = True";
   s21_decimal value_1 = {{0x7494BDC1, 0x92361965, 0x447A74, 0x80160000}};
   s21_decimal value_2 = {{0x87C2F852, 0xE95AFF6, 0x28, 0x150000}};
   int code = 1;
@@ -55924,7 +57036,8 @@ START_TEST(s21_is_not_equal_5590) {
 }
 
 START_TEST(s21_is_not_equal_5591) {
-  char *example = "( -79228162514264337593543950335 != 97.636052501100 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 97.636052501100 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x539F4CD3, 0xE3, 0x0, 0xA0000}};
   int code = 1;
@@ -55944,7 +57057,8 @@ START_TEST(s21_is_not_equal_5592) {
 }
 
 START_TEST(s21_is_not_equal_5593) {
-  char *example = "( 79228162514264337593543950335 != -45758669.66121455 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -45758669.66121455 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xD0E1BEF, 0x1041BA, 0x0, 0x80080000}};
   int code = 1;
@@ -55954,7 +57068,8 @@ START_TEST(s21_is_not_equal_5593) {
 }
 
 START_TEST(s21_is_not_equal_5594) {
-  char *example = "( 10448354933709554574257 != 1419213609098070581200222808 ) = True";
+  char *example =
+      "( 10448354933709554574257 != 1419213609098070581200222808 ) = True";
   s21_decimal value_1 = {{0xAE0FE3B1, 0x680D7E73, 0x236, 0x0}};
   s21_decimal value_2 = {{0x665EFA58, 0xE9068ADB, 0x495F22B, 0x0}};
   int code = 1;
@@ -56134,7 +57249,8 @@ START_TEST(s21_is_not_equal_5611) {
 }
 
 START_TEST(s21_is_not_equal_5612) {
-  char *example = "( 17724023073164001178 != -1969.2437887952390526470925 ) = True";
+  char *example =
+      "( 17724023073164001178 != -1969.2437887952390526470925 ) = True";
   s21_decimal value_1 = {{0x42C47F9A, 0xF5F86114, 0x0, 0x0}};
   s21_decimal value_2 = {{0x17FE0B0D, 0x326D752C, 0x104A09, 0x80160000}};
   int code = 1;
@@ -56244,7 +57360,8 @@ START_TEST(s21_is_not_equal_5622) {
 }
 
 START_TEST(s21_is_not_equal_5623) {
-  char *example = "( -4247824.1815924249002 != 1044216067784669271260415832 ) = True";
+  char *example =
+      "( -4247824.1815924249002 != 1044216067784669271260415832 ) = True";
   s21_decimal value_1 = {{0x494F11AA, 0x4D8107DF, 0x2, 0x800D0000}};
   s21_decimal value_2 = {{0xB5D04758, 0x7639DD98, 0x35FC15A, 0x0}};
   int code = 1;
@@ -56324,7 +57441,8 @@ START_TEST(s21_is_not_equal_5630) {
 }
 
 START_TEST(s21_is_not_equal_5631) {
-  char *example = "( -3.8436476327827710241397 != 1540874055379728299960375300 ) = True";
+  char *example =
+      "( -3.8436476327827710241397 != 1540874055379728299960375300 ) = True";
   s21_decimal value_1 = {{0xD95D6A75, 0xA54336FA, 0x823, 0x80160000}};
   s21_decimal value_2 = {{0x7091804, 0xEB205C80, 0x4FA94C5, 0x0}};
   int code = 1;
@@ -56384,7 +57502,8 @@ START_TEST(s21_is_not_equal_5636) {
 }
 
 START_TEST(s21_is_not_equal_5637) {
-  char *example = "( 50.2503424162691885789863583 != 1664123388735388692980145049 ) = True";
+  char *example =
+      "( 50.2503424162691885789863583 != 1664123388735388692980145049 ) = True";
   s21_decimal value_1 = {{0xDC57DE9F, 0x353AE2B7, 0x19FA93D, 0x190000}};
   s21_decimal value_2 = {{0xE35B9B99, 0xAAE40F10, 0x56087D5, 0x0}};
   int code = 1;
@@ -56454,7 +57573,8 @@ START_TEST(s21_is_not_equal_5643) {
 }
 
 START_TEST(s21_is_not_equal_5644) {
-  char *example = "( 1605593128464658686 != 1207367884068657335782943519 ) = True";
+  char *example =
+      "( 1605593128464658686 != 1207367884068657335782943519 ) = True";
   s21_decimal value_1 = {{0x8BF1B0FE, 0x16483671, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF2412B1F, 0x251322E5, 0x3E6B618, 0x0}};
   int code = 1;
@@ -56654,7 +57774,8 @@ START_TEST(s21_is_not_equal_5663) {
 }
 
 START_TEST(s21_is_not_equal_5664) {
-  char *example = "( 1568200236054158223453892066 != 1814844439464771354742725106 ) = True";
+  char *example =
+      "( 1568200236054158223453892066 != 1814844439464771354742725106 ) = True";
   s21_decimal value_1 = {{0x63D2ADE2, 0x241FC84C, 0x5112F51, 0x0}};
   s21_decimal value_2 = {{0x873399F2, 0x33158556, 0x5DD3442, 0x0}};
   int code = 1;
@@ -56674,7 +57795,8 @@ START_TEST(s21_is_not_equal_5665) {
 }
 
 START_TEST(s21_is_not_equal_5666) {
-  char *example = "( 109261164536873387 != 0.54893839709842598052155580 ) = True";
+  char *example =
+      "( 109261164536873387 != 0.54893839709842598052155580 ) = True";
   s21_decimal value_1 = {{0x43F741AB, 0x1842C73, 0x0, 0x0}};
   s21_decimal value_2 = {{0x36B7B46, 0x19F1E76C, 0x48A6C, 0x190000}};
   int code = 1;
@@ -56724,7 +57846,8 @@ START_TEST(s21_is_not_equal_5670) {
 }
 
 START_TEST(s21_is_not_equal_5671) {
-  char *example = "( 1222491103733578109471750651 != 0.99703613758375519048114101 ) = True";
+  char *example =
+      "( 1222491103733578109471750651 != 0.99703613758375519048114101 ) = True";
   s21_decimal value_1 = {{0x422CF9FB, 0x868E3480, 0x3F3388F, 0x0}};
   s21_decimal value_2 = {{0xAA0B1FB5, 0xBB6938F7, 0x52790F, 0x1A0000}};
   int code = 1;
@@ -56764,7 +57887,8 @@ START_TEST(s21_is_not_equal_5674) {
 }
 
 START_TEST(s21_is_not_equal_5675) {
-  char *example = "( 5.9520435699421359E-10 != 13564516495528511447549434 ) = True";
+  char *example =
+      "( 5.9520435699421359E-10 != 13564516495528511447549434 ) = True";
   s21_decimal value_1 = {{0x5ABD90AF, 0xD37585, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x4FF8C5FA, 0xE9A3FAAB, 0xB3865, 0x0}};
   int code = 1;
@@ -56784,7 +57908,8 @@ START_TEST(s21_is_not_equal_5676) {
 }
 
 START_TEST(s21_is_not_equal_5677) {
-  char *example = "( 1081037591443800780414895923 != 1406783927820282696821776881 ) = True";
+  char *example =
+      "( 1081037591443800780414895923 != 1406783927820282696821776881 ) = True";
   s21_decimal value_1 = {{0xD1A7C733, 0x4253F03A, 0x37E369D, 0x0}};
   s21_decimal value_2 = {{0x93F221F1, 0x89BBD09D, 0x48BAA15, 0x0}};
   int code = 1;
@@ -56804,7 +57929,8 @@ START_TEST(s21_is_not_equal_5678) {
 }
 
 START_TEST(s21_is_not_equal_5679) {
-  char *example = "( 1029382891812377718673431028 != 139329566592076864140 ) = True";
+  char *example =
+      "( 1029382891812377718673431028 != 139329566592076864140 ) = True";
   s21_decimal value_1 = {{0x11C4D9F4, 0x61910CED, 0x3537C4E, 0x0}};
   s21_decimal value_2 = {{0xA5DFDA8C, 0x8D960E9D, 0x7, 0x0}};
   int code = 1;
@@ -56814,7 +57940,8 @@ START_TEST(s21_is_not_equal_5679) {
 }
 
 START_TEST(s21_is_not_equal_5680) {
-  char *example = "( 1719096853476065069 != -587.42012131398785256658022 ) = True";
+  char *example =
+      "( 1719096853476065069 != -587.42012131398785256658022 ) = True";
   s21_decimal value_1 = {{0xE5EEBF2D, 0x17DB757A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x55941466, 0xDBC37C45, 0x30971A, 0x80170000}};
   int code = 1;
@@ -56884,7 +58011,8 @@ START_TEST(s21_is_not_equal_5686) {
 }
 
 START_TEST(s21_is_not_equal_5687) {
-  char *example = "( -517.7538013271949493 != -4.7696220982021257558650851 ) = True";
+  char *example =
+      "( -517.7538013271949493 != -4.7696220982021257558650851 ) = True";
   s21_decimal value_1 = {{0x2C2800B5, 0x47DA4F64, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x269A6FE3, 0x5205EB1B, 0x277411, 0x80190000}};
   int code = 1;
@@ -56904,7 +58032,8 @@ START_TEST(s21_is_not_equal_5688) {
 }
 
 START_TEST(s21_is_not_equal_5689) {
-  char *example = "( -2.6270958175517441187267983 != 1309184788449342881 ) = True";
+  char *example =
+      "( -2.6270958175517441187267983 != 1309184788449342881 ) = True";
   s21_decimal value_1 = {{0x5CD2458F, 0x7F115B4E, 0x15BB17, 0x80190000}};
   s21_decimal value_2 = {{0xF4DE35A1, 0x122B28A0, 0x0, 0x0}};
   int code = 1;
@@ -56934,7 +58063,8 @@ START_TEST(s21_is_not_equal_5691) {
 }
 
 START_TEST(s21_is_not_equal_5692) {
-  char *example = "( 1537091997467654449882416771 != 1691032967172209163630 ) = True";
+  char *example =
+      "( 1537091997467654449882416771 != 1691032967172209163630 ) = True";
   s21_decimal value_1 = {{0x3F334683, 0x25F21EF3, 0x4F773E4, 0x0}};
   s21_decimal value_2 = {{0x9E52BD6E, 0xABCBF42A, 0x5B, 0x0}};
   int code = 1;
@@ -56984,7 +58114,8 @@ START_TEST(s21_is_not_equal_5696) {
 }
 
 START_TEST(s21_is_not_equal_5697) {
-  char *example = "( 141582025942986 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 141582025942986 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xA25CE7CA, 0x80C4, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -57034,7 +58165,8 @@ START_TEST(s21_is_not_equal_5701) {
 }
 
 START_TEST(s21_is_not_equal_5702) {
-  char *example = "( 1769886485513706180444331862 != -86.799965591690676492605048 ) = True";
+  char *example =
+      "( 1769886485513706180444331862 != -86.799965591690676492605048 ) = True";
   s21_decimal value_1 = {{0xCB829F56, 0xA1E0B046, 0x5B8040A, 0x0}};
   s21_decimal value_2 = {{0xF4949678, 0x90350324, 0x47CC9B, 0x80180000}};
   int code = 1;
@@ -57054,7 +58186,8 @@ START_TEST(s21_is_not_equal_5703) {
 }
 
 START_TEST(s21_is_not_equal_5704) {
-  char *example = "( 1217237697947545703810653541 != 0.1384205919502459252525 ) = True";
+  char *example =
+      "( 1217237697947545703810653541 != 0.1384205919502459252525 ) = True";
   s21_decimal value_1 = {{0x5678DD65, 0xD3C9E0C8, 0x3EEE01B, 0x0}};
   s21_decimal value_2 = {{0x4108AF2D, 0x9B74DF3, 0x4B, 0x160000}};
   int code = 1;
@@ -57074,7 +58207,8 @@ START_TEST(s21_is_not_equal_5705) {
 }
 
 START_TEST(s21_is_not_equal_5706) {
-  char *example = "( -5.26172518810899203173 != 1576588412707201457688771958 ) = True";
+  char *example =
+      "( -5.26172518810899203173 != 1576588412707201457688771958 ) = True";
   s21_decimal value_1 = {{0xB8304465, 0x861C4E13, 0x1C, 0x80140000}};
   s21_decimal value_2 = {{0x7A9D7D76, 0x1BCF3E7E, 0x5181F95, 0x0}};
   int code = 1;
@@ -57134,7 +58268,8 @@ START_TEST(s21_is_not_equal_5711) {
 }
 
 START_TEST(s21_is_not_equal_5712) {
-  char *example = "( -40203.486932942507096866903 != 1882482981225706059870532191 ) = True";
+  char *example =
+      "( -40203.486932942507096866903 != 1882482981225706059870532191 ) = True";
   s21_decimal value_1 = {{0xE4170057, 0x64CA245C, 0x21416B, 0x80150000}};
   s21_decimal value_2 = {{0x67B0725F, 0xE545B666, 0x6152746, 0x0}};
   int code = 1;
@@ -57154,7 +58289,8 @@ START_TEST(s21_is_not_equal_5713) {
 }
 
 START_TEST(s21_is_not_equal_5714) {
-  char *example = "( 0.533818893081074335302361 != -712.886750261162033 ) = True";
+  char *example =
+      "( 0.533818893081074335302361 != -712.886750261162033 ) = True";
   s21_decimal value_1 = {{0xC00942D9, 0x61537386, 0x710A, 0x180000}};
   s21_decimal value_2 = {{0xEA663031, 0x9E4AEB8, 0x0, 0x800F0000}};
   int code = 1;
@@ -57174,7 +58310,8 @@ START_TEST(s21_is_not_equal_5715) {
 }
 
 START_TEST(s21_is_not_equal_5716) {
-  char *example = "( -8308.89728976331 != -6.6994805601536428374574571 ) = True";
+  char *example =
+      "( -8308.89728976331 != -6.6994805601536428374574571 ) = True";
   s21_decimal value_1 = {{0x9724A5CB, 0x2F3B0, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x156D45EB, 0xB05D28AD, 0x376AB3, 0x80190000}};
   int code = 1;
@@ -57264,7 +58401,8 @@ START_TEST(s21_is_not_equal_5724) {
 }
 
 START_TEST(s21_is_not_equal_5725) {
-  char *example = "( 4.7549066779750351E-10 != 172608622373743261982819 ) = True";
+  char *example =
+      "( 4.7549066779750351E-10 != 172608622373743261982819 ) = True";
   s21_decimal value_1 = {{0xD2CEEFCF, 0xA8ED9F, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x5DA92063, 0x21D5C93E, 0x248D, 0x0}};
   int code = 1;
@@ -57294,7 +58432,8 @@ START_TEST(s21_is_not_equal_5727) {
 }
 
 START_TEST(s21_is_not_equal_5728) {
-  char *example = "( 3.0201565651001105E-10 != 0.8649346137989896922504735 ) = True";
+  char *example =
+      "( 3.0201565651001105E-10 != 0.8649346137989896922504735 ) = True";
   s21_decimal value_1 = {{0xF849DF11, 0x6B4C29, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x2D709E1F, 0xFE611DF3, 0x72791, 0x190000}};
   int code = 1;
@@ -57334,7 +58473,8 @@ START_TEST(s21_is_not_equal_5731) {
 }
 
 START_TEST(s21_is_not_equal_5732) {
-  char *example = "( -8.6856276913461073 != 1354464439780732227816985145 ) = True";
+  char *example =
+      "( -8.6856276913461073 != 1354464439780732227816985145 ) = True";
   s21_decimal value_1 = {{0xDBF09751, 0x1349352, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x38371239, 0x6881DD60, 0x4606300, 0x0}};
   int code = 1;
@@ -57464,7 +58604,8 @@ START_TEST(s21_is_not_equal_5744) {
 }
 
 START_TEST(s21_is_not_equal_5745) {
-  char *example = "( 17875070509276124075 != 1224690426234684295142649451 ) = True";
+  char *example =
+      "( 17875070509276124075 != 1224690426234684295142649451 ) = True";
   s21_decimal value_1 = {{0x876D3AB, 0xF81101EC, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDDFF2E6B, 0x98BFA8F, 0x3F50A49, 0x0}};
   int code = 1;
@@ -57524,7 +58665,8 @@ START_TEST(s21_is_not_equal_5750) {
 }
 
 START_TEST(s21_is_not_equal_5751) {
-  char *example = "( -207.338135146174532 != 1731840452982169860708354189 ) = True";
+  char *example =
+      "( -207.338135146174532 != 1731840452982169860708354189 ) = True";
   s21_decimal value_1 = {{0x75C79844, 0x2E09CEF, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x852DC88D, 0x1379CF86, 0x5988B7B, 0x0}};
   int code = 1;
@@ -57544,7 +58686,8 @@ START_TEST(s21_is_not_equal_5752) {
 }
 
 START_TEST(s21_is_not_equal_5753) {
-  char *example = "( 1829327487613136324 != -1.8177426018873080451779086 ) = True";
+  char *example =
+      "( 1829327487613136324 != -1.8177426018873080451779086 ) = True";
   s21_decimal value_1 = {{0x6509EDC4, 0x196313A8, 0x0, 0x0}};
   s21_decimal value_2 = {{0x432D4A0E, 0x3D2EA270, 0xF0938, 0x80190000}};
   int code = 1;
@@ -57564,7 +58707,8 @@ START_TEST(s21_is_not_equal_5754) {
 }
 
 START_TEST(s21_is_not_equal_5755) {
-  char *example = "( -287.22974224525670315815852 != -99.801876900571807835554265 ) = True";
+  char *example =
+      "( -287.22974224525670315815852 != -99.801876900571807835554265 ) = True";
   s21_decimal value_1 = {{0xAFD973AC, 0x8D7F4E7A, 0x17C253, 0x80170000}};
   s21_decimal value_2 = {{0x4C9501D9, 0x9672A00D, 0x528DDE, 0x80180000}};
   int code = 1;
@@ -57634,7 +58778,8 @@ START_TEST(s21_is_not_equal_5761) {
 }
 
 START_TEST(s21_is_not_equal_5762) {
-  char *example = "( 1032611334033509723 != 1959319428926972667035673434 ) = True";
+  char *example =
+      "( 1032611334033509723 != 1959319428926972667035673434 ) = True";
   s21_decimal value_1 = {{0x8C1C0D5B, 0xE549289, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2B8635A, 0x12607112, 0x654B607, 0x0}};
   int code = 1;
@@ -57824,7 +58969,8 @@ START_TEST(s21_is_not_equal_5780) {
 }
 
 START_TEST(s21_is_not_equal_5781) {
-  char *example = "( -8.6224852736373225126295224 != -933.09955938659534883645567 ) = True";
+  char *example =
+      "( -8.6224852736373225126295224 != -933.09955938659534883645567 ) = True";
   s21_decimal value_1 = {{0xF492F6B8, 0xA209126B, 0x4752D2, 0x80190000}};
   s21_decimal value_2 = {{0x53F1E87F, 0xD8DF8C3A, 0x4D2F26, 0x80170000}};
   int code = 1;
@@ -57874,7 +59020,8 @@ START_TEST(s21_is_not_equal_5785) {
 }
 
 START_TEST(s21_is_not_equal_5786) {
-  char *example = "( 1809377578246722824967520171 != 0.11760480559904007707418967 ) = True";
+  char *example =
+      "( 1809377578246722824967520171 != 0.11760480559904007707418967 ) = True";
   s21_decimal value_1 = {{0x9E937FAB, 0xF200E4D, 0x5D8AE9B, 0x0}};
   s21_decimal value_2 = {{0x3137E157, 0xEDBA7037, 0x9BA60, 0x1A0000}};
   int code = 1;
@@ -57954,7 +59101,8 @@ START_TEST(s21_is_not_equal_5793) {
 }
 
 START_TEST(s21_is_not_equal_5794) {
-  char *example = "( -4.3432910763186790377926624 != 101050654781905527350396 ) = True";
+  char *example =
+      "( -4.3432910763186790377926624 != 101050654781905527350396 ) = True";
   s21_decimal value_1 = {{0x60372FE0, 0xCF727EC6, 0x23ED46, 0x80190000}};
   s21_decimal value_2 = {{0xAF7A47C, 0xF78B7ED4, 0x1565, 0x0}};
   int code = 1;
@@ -57974,7 +59122,8 @@ START_TEST(s21_is_not_equal_5795) {
 }
 
 START_TEST(s21_is_not_equal_5796) {
-  char *example = "( 106530030099926602596167727 != -499714.85466698070940671988 ) = True";
+  char *example =
+      "( 106530030099926602596167727 != -499714.85466698070940671988 ) = True";
   s21_decimal value_1 = {{0x6253302F, 0x80E309D0, 0x581E9C, 0x0}};
   s21_decimal value_2 = {{0x9A1B5FF4, 0xA7BF84C7, 0x2955DF, 0x80140000}};
   int code = 1;
@@ -58024,7 +59173,8 @@ START_TEST(s21_is_not_equal_5800) {
 }
 
 START_TEST(s21_is_not_equal_5801) {
-  char *example = "( 0.666607037799257549 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 0.666607037799257549 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xACCCD5CD, 0x9404391, 0x0, 0x120000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -58034,7 +59184,8 @@ START_TEST(s21_is_not_equal_5801) {
 }
 
 START_TEST(s21_is_not_equal_5802) {
-  char *example = "( 15832997678222731275692 != 1097668882290101905102093921 ) = True";
+  char *example =
+      "( 15832997678222731275692 != 1097668882290101905102093921 ) = True";
   s21_decimal value_1 = {{0xD26A6DAC, 0x4EFB6D86, 0x35A, 0x0}};
   s21_decimal value_2 = {{0xD34E3E61, 0x57A9B3B3, 0x38BF86D, 0x0}};
   int code = 1;
@@ -58244,7 +59395,8 @@ START_TEST(s21_is_not_equal_5822) {
 }
 
 START_TEST(s21_is_not_equal_5823) {
-  char *example = "( -7143467.1522470496841987041 != 0.61200655432682032140 ) = True";
+  char *example =
+      "( -7143467.1522470496841987041 != 0.61200655432682032140 ) = True";
   s21_decimal value_1 = {{0xE33F73E1, 0x4D828064, 0x3B16E1, 0x80130000}};
   s21_decimal value_2 = {{0xA49BFACE, 0x54EED72F, 0x0, 0x130000}};
   int code = 1;
@@ -58364,7 +59516,8 @@ START_TEST(s21_is_not_equal_5834) {
 }
 
 START_TEST(s21_is_not_equal_5835) {
-  char *example = "( 1083705239152548899386909100 != 1592351801348839394861052942 ) = True";
+  char *example =
+      "( 1083705239152548899386909100 != 1592351801348839394861052942 ) = True";
   s21_decimal value_1 = {{0xE6D161AC, 0xBB2D0755, 0x3806B82, 0x0}};
   s21_decimal value_2 = {{0xB9EF40E, 0x1E82A3C1, 0x525299C, 0x0}};
   int code = 1;
@@ -58374,7 +59527,8 @@ START_TEST(s21_is_not_equal_5835) {
 }
 
 START_TEST(s21_is_not_equal_5836) {
-  char *example = "( 11661443936715519415 != 1465789168955061406196571290 ) = True";
+  char *example =
+      "( 11661443936715519415 != 1465789168955061406196571290 ) = True";
   s21_decimal value_1 = {{0xB80FB5B7, 0xA1D5C579, 0x0, 0x0}};
   s21_decimal value_2 = {{0x44C81C9A, 0x11C043E5, 0x4BC78EE, 0x0}};
   int code = 1;
@@ -58424,7 +59578,8 @@ START_TEST(s21_is_not_equal_5840) {
 }
 
 START_TEST(s21_is_not_equal_5841) {
-  char *example = "( 1745282312667376159480225784 != 15803080670841332 ) = True";
+  char *example =
+      "( 1745282312667376159480225784 != 15803080670841332 ) = True";
   s21_decimal value_1 = {{0x74821FF8, 0xBFEDF5C6, 0x5A3A9E7, 0x0}};
   s21_decimal value_2 = {{0x71BE09F4, 0x3824D1, 0x0, 0x0}};
   int code = 1;
@@ -58444,7 +59599,8 @@ START_TEST(s21_is_not_equal_5842) {
 }
 
 START_TEST(s21_is_not_equal_5843) {
-  char *example = "( -62.777489305215920343952852 != 177464345710535509 ) = True";
+  char *example =
+      "( -62.777489305215920343952852 != 177464345710535509 ) = True";
   s21_decimal value_1 = {{0x9F892DD4, 0x83AF648B, 0x33EDA6, 0x80180000}};
   s21_decimal value_2 = {{0xD65FA355, 0x2767AE1, 0x0, 0x0}};
   int code = 1;
@@ -58594,7 +59750,8 @@ START_TEST(s21_is_not_equal_5857) {
 }
 
 START_TEST(s21_is_not_equal_5858) {
-  char *example = "( 1225697574634484795504245872 != -3.4421005460290451215327538 ) = True";
+  char *example =
+      "( 1225697574634484795504245872 != -3.4421005460290451215327538 ) = True";
   s21_decimal value_1 = {{0x3042BC70, 0xA9548833, 0x3F5DF8E, 0x0}};
   s21_decimal value_2 = {{0xCA45A132, 0x71E8D732, 0x1C78EE, 0x80190000}};
   int code = 1;
@@ -58604,7 +59761,8 @@ START_TEST(s21_is_not_equal_5858) {
 }
 
 START_TEST(s21_is_not_equal_5859) {
-  char *example = "( 1159929377825366665082491894 != 3.3287303666065239E-10 ) = True";
+  char *example =
+      "( 1159929377825366665082491894 != 3.3287303666065239E-10 ) = True";
   s21_decimal value_1 = {{0x2D94D3F6, 0x9182BC0E, 0x3BF7899, 0x0}};
   s21_decimal value_2 = {{0x568BDF57, 0x7642A0, 0x0, 0x1A0000}};
   int code = 1;
@@ -58864,7 +60022,8 @@ START_TEST(s21_is_not_equal_5884) {
 }
 
 START_TEST(s21_is_not_equal_5885) {
-  char *example = "( 1435637451877695308400518219 != -484.161922504496 ) = True";
+  char *example =
+      "( 1435637451877695308400518219 != -484.161922504496 ) = True";
   s21_decimal value_1 = {{0xEA89644B, 0x361C2F1B, 0x4A3880E, 0x0}};
   s21_decimal value_2 = {{0xBB679730, 0x1B857, 0x0, 0x800C0000}};
   int code = 1;
@@ -58924,7 +60083,8 @@ START_TEST(s21_is_not_equal_5890) {
 }
 
 START_TEST(s21_is_not_equal_5891) {
-  char *example = "( 1821790475293789622508642487 != 1875049642155460506373677938 ) = True";
+  char *example =
+      "( 1821790475293789622508642487 != 1875049642155460506373677938 ) = True";
   s21_decimal value_1 = {{0xBD9EE0B7, 0x8E6CB661, 0x5E2F323, 0x0}};
   s21_decimal value_2 = {{0x5B696372, 0xC6F3B05D, 0x60F0134, 0x0}};
   int code = 1;
@@ -58944,7 +60104,9 @@ START_TEST(s21_is_not_equal_5892) {
 }
 
 START_TEST(s21_is_not_equal_5893) {
-  char *example = "( 1091488372201636990380944706 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1091488372201636990380944706 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x28C2D42, 0x381C72BB, 0x386DBA7, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -58964,7 +60126,8 @@ START_TEST(s21_is_not_equal_5894) {
 }
 
 START_TEST(s21_is_not_equal_5895) {
-  char *example = "( -2385.5462977650366 != 112110666370337645440071768 ) = True";
+  char *example =
+      "( -2385.5462977650366 != 112110666370337645440071768 ) = True";
   s21_decimal value_1 = {{0xCCBC3EBE, 0x54C06A, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xEE50F858, 0x66E1567D, 0x5CBC5B, 0x0}};
   int code = 1;
@@ -58974,7 +60137,8 @@ START_TEST(s21_is_not_equal_5895) {
 }
 
 START_TEST(s21_is_not_equal_5896) {
-  char *example = "( 1793811300343270982489316980 != 1097580633412012956055368052 ) = True";
+  char *example =
+      "( 1793811300343270982489316980 != 1097580633412012956055368052 ) = True";
   s21_decimal value_1 = {{0xDC099E74, 0x716C73D8, 0x5CBCE51, 0x0}};
   s21_decimal value_2 = {{0xF24DF174, 0x5C756065, 0x38BE5BD, 0x0}};
   int code = 1;
@@ -59244,7 +60408,8 @@ START_TEST(s21_is_not_equal_5922) {
 }
 
 START_TEST(s21_is_not_equal_5923) {
-  char *example = "( -20.508259989167632322247361 != 2.3872491660331999E-10 ) = True";
+  char *example =
+      "( -20.508259989167632322247361 != 2.3872491660331999E-10 ) = True";
   s21_decimal value_1 = {{0x378DBAC1, 0x6FE9B1, 0x10F6CB, 0x80180000}};
   s21_decimal value_2 = {{0x99514BDF, 0x54CFE7, 0x0, 0x1A0000}};
   int code = 1;
@@ -59284,7 +60449,8 @@ START_TEST(s21_is_not_equal_5926) {
 }
 
 START_TEST(s21_is_not_equal_5927) {
-  char *example = "( 1812586412393844666811488394 != -9.6265297926878355851766566 ) = True";
+  char *example =
+      "( 1812586412393844666811488394 != -9.6265297926878355851766566 ) = True";
   s21_decimal value_1 = {{0xD92B188A, 0x4E8789AB, 0x5DB561A, 0x0}};
   s21_decimal value_2 = {{0x352EEB26, 0x41E2A051, 0x4FA0F8, 0x80190000}};
   int code = 1;
@@ -59374,7 +60540,8 @@ START_TEST(s21_is_not_equal_5935) {
 }
 
 START_TEST(s21_is_not_equal_5936) {
-  char *example = "( 1912866160711818459857568030 != 1895361426522322712313 ) = True";
+  char *example =
+      "( 1912866160711818459857568030 != 1895361426522322712313 ) = True";
   s21_decimal value_1 = {{0x5C20411E, 0x5B1B798C, 0x62E492A, 0x0}};
   s21_decimal value_2 = {{0xE8AF36F9, 0xBF6C775D, 0x66, 0x0}};
   int code = 1;
@@ -59494,7 +60661,8 @@ START_TEST(s21_is_not_equal_5947) {
 }
 
 START_TEST(s21_is_not_equal_5948) {
-  char *example = "( 1.7255806804648E-10 != 1872568847309318115855254134 ) = True";
+  char *example =
+      "( 1.7255806804648E-10 != 1872568847309318115855254134 ) = True";
   s21_decimal value_1 = {{0xAE3C22A8, 0xFB1, 0x0, 0x170000}};
   s21_decimal value_2 = {{0x19014276, 0x9E7B8046, 0x60CF3E0, 0x0}};
   int code = 1;
@@ -59504,7 +60672,8 @@ START_TEST(s21_is_not_equal_5948) {
 }
 
 START_TEST(s21_is_not_equal_5949) {
-  char *example = "( 1804192129301393266685113591 != -307.943318627460506 ) = True";
+  char *example =
+      "( 1804192129301393266685113591 != -307.943318627460506 ) = True";
   s21_decimal value_1 = {{0x23D9F4F7, 0x4EF9430D, 0x5D4648B, 0x0}};
   s21_decimal value_2 = {{0x15BEA59A, 0x44608D1, 0x0, 0x800F0000}};
   int code = 1;
@@ -59564,7 +60733,8 @@ START_TEST(s21_is_not_equal_5954) {
 }
 
 START_TEST(s21_is_not_equal_5955) {
-  char *example = "( 17546222806553895940 != 0.79238651096307373391732294 ) = True";
+  char *example =
+      "( 17546222806553895940 != 0.79238651096307373391732294 ) = True";
   s21_decimal value_1 = {{0xBE80A404, 0xF380B4AD, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF4FDE46, 0xE2178D30, 0x418B6F, 0x1A0000}};
   int code = 1;
@@ -59634,7 +60804,8 @@ START_TEST(s21_is_not_equal_5961) {
 }
 
 START_TEST(s21_is_not_equal_5962) {
-  char *example = "( 1020165182564004047918925415 != 18707105389837027 ) = True";
+  char *example =
+      "( 1020165182564004047918925415 != 18707105389837027 ) = True";
   s21_decimal value_1 = {{0x7A4F0667, 0x5C8B25C0, 0x34BDC61, 0x0}};
   s21_decimal value_2 = {{0x63897AE3, 0x427603, 0x0, 0x0}};
   int code = 1;
@@ -59644,7 +60815,8 @@ START_TEST(s21_is_not_equal_5962) {
 }
 
 START_TEST(s21_is_not_equal_5963) {
-  char *example = "( -1.6148002864213786158354548 != 0.19177804382533118431970538 ) = True";
+  char *example =
+      "( -1.6148002864213786158354548 != 0.19177804382533118431970538 ) = True";
   s21_decimal value_1 = {{0x293ED074, 0xFD450082, 0xD5B78, 0x80190000}};
   s21_decimal value_2 = {{0xC4A5C4EA, 0xDBD72F83, 0xFDD0E, 0x1A0000}};
   int code = 1;
@@ -59764,7 +60936,8 @@ START_TEST(s21_is_not_equal_5974) {
 }
 
 START_TEST(s21_is_not_equal_5975) {
-  char *example = "( 166471842872088839290699564 != 1541647581618923481363 ) = True";
+  char *example =
+      "( 166471842872088839290699564 != 1541647581618923481363 ) = True";
   s21_decimal value_1 = {{0x53C93F2C, 0xAF5ACC35, 0x89B3C8, 0x0}};
   s21_decimal value_2 = {{0xC3F5A913, 0x92A8737B, 0x53, 0x0}};
   int code = 1;
@@ -59814,7 +60987,8 @@ START_TEST(s21_is_not_equal_5979) {
 }
 
 START_TEST(s21_is_not_equal_5980) {
-  char *example = "( 1930312659838898206384871473 != 1709904120127451289626435671 ) = True";
+  char *example =
+      "( 1930312659838898206384871473 != 1709904120127451289626435671 ) = True";
   s21_decimal value_1 = {{0x5DB45831, 0xF7FB6E98, 0x63CB79A, 0x0}};
   s21_decimal value_2 = {{0x35396057, 0x16D62192, 0x5866648, 0x0}};
   int code = 1;
@@ -59834,7 +61008,8 @@ START_TEST(s21_is_not_equal_5981) {
 }
 
 START_TEST(s21_is_not_equal_5982) {
-  char *example = "( 1510662834913717383682373967 != 1150215075515055235440 ) = True";
+  char *example =
+      "( 1510662834913717383682373967 != 1150215075515055235440 ) = True";
   s21_decimal value_1 = {{0x3B04B94F, 0x601581B7, 0x4E1974C, 0x0}};
   s21_decimal value_2 = {{0x8DF86170, 0x5A70D514, 0x3E, 0x0}};
   int code = 1;
@@ -59844,7 +61019,8 @@ START_TEST(s21_is_not_equal_5982) {
 }
 
 START_TEST(s21_is_not_equal_5983) {
-  char *example = "( -8.4651701402819336719800964 != 1045835053777413109249300032 ) = True";
+  char *example =
+      "( -8.4651701402819336719800964 != 1045835053777413109249300032 ) = True";
   s21_decimal value_1 = {{0xC38B9A84, 0xEDA38824, 0x4605B1, 0x80190000}};
   s21_decimal value_2 = {{0x9D1D5640, 0xDE4C12B3, 0x361182F, 0x0}};
   int code = 1;
@@ -59874,7 +61050,8 @@ START_TEST(s21_is_not_equal_5985) {
 }
 
 START_TEST(s21_is_not_equal_5986) {
-  char *example = "( 1378165080645858552166335882 != -60689.260218637757609906022 ) = True";
+  char *example =
+      "( 1378165080645858552166335882 != -60689.260218637757609906022 ) = True";
   s21_decimal value_1 = {{0xD765C58A, 0xB957BCB7, 0x473FDCE, 0x0}};
   s21_decimal value_2 = {{0xBF038F66, 0x63870995, 0x323373, 0x80150000}};
   int code = 1;
@@ -59884,7 +61061,8 @@ START_TEST(s21_is_not_equal_5986) {
 }
 
 START_TEST(s21_is_not_equal_5987) {
-  char *example = "( 158735746796214673 != 1624513226750843401399144651 ) = True";
+  char *example =
+      "( 158735746796214673 != 1624513226750843401399144651 ) = True";
   s21_decimal value_1 = {{0x18F1D991, 0x233F152, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAB3F90CB, 0x7BD60FAA, 0x53FC40E, 0x0}};
   int code = 1;
@@ -59934,7 +61112,8 @@ START_TEST(s21_is_not_equal_5991) {
 }
 
 START_TEST(s21_is_not_equal_5992) {
-  char *example = "( 1183342170081148040453570437 != 1934215850593357389839700045 ) = True";
+  char *example =
+      "( 1183342170081148040453570437 != 1934215850593357389839700045 ) = True";
   s21_decimal value_1 = {{0xE9C3F85, 0x946CC376, 0x3D2D673, 0x0}};
   s21_decimal value_2 = {{0xEA7904D, 0x5D0BC44D, 0x63FF223, 0x0}};
   int code = 1;
@@ -59944,7 +61123,8 @@ START_TEST(s21_is_not_equal_5992) {
 }
 
 START_TEST(s21_is_not_equal_5993) {
-  char *example = "( 13907111825773393735215427 != 1191509388063857736294669957 ) = True";
+  char *example =
+      "( 13907111825773393735215427 != 1191509388063857736294669957 ) = True";
   s21_decimal value_1 = {{0x48CA6943, 0xAF00889, 0xB80F2, 0x0}};
   s21_decimal value_2 = {{0x36B11E85, 0x5A91AE83, 0x3D997ED, 0x0}};
   int code = 1;
@@ -60054,7 +61234,8 @@ START_TEST(s21_is_not_equal_6003) {
 }
 
 START_TEST(s21_is_not_equal_6004) {
-  char *example = "( -4.0353152781689022413136167 != 1844968585002797199706682243 ) = True";
+  char *example =
+      "( -4.0353152781689022413136167 != 1844968585002797199706682243 ) = True";
   s21_decimal value_1 = {{0xBFC1E127, 0xCBAE3BAA, 0x21611C, 0x80190000}};
   s21_decimal value_2 = {{0xD365F383, 0x66C0A470, 0x5F61F4B, 0x0}};
   int code = 1;
@@ -60094,7 +61275,8 @@ START_TEST(s21_is_not_equal_6007) {
 }
 
 START_TEST(s21_is_not_equal_6008) {
-  char *example = "( 1458921503244783975674123153 != 173841145346804616955 ) = True";
+  char *example =
+      "( 1458921503244783975674123153 != 173841145346804616955 ) = True";
   s21_decimal value_1 = {{0x61DF9391, 0x2A49EEF5, 0x4B6CAA5, 0x0}};
   s21_decimal value_2 = {{0x9F570EFB, 0x6C87D0A4, 0x9, 0x0}};
   int code = 1;
@@ -60114,7 +61296,8 @@ START_TEST(s21_is_not_equal_6009) {
 }
 
 START_TEST(s21_is_not_equal_6010) {
-  char *example = "( 1545438830164044615214471997 != 164856540930964060 ) = True";
+  char *example =
+      "( 1545438830164044615214471997 != 164856540930964060 ) = True";
   s21_decimal value_1 = {{0x9E249B3D, 0xDAF93ED9, 0x4FE5B66, 0x0}};
   s21_decimal value_2 = {{0x8916FA5C, 0x249B026, 0x0, 0x0}};
   int code = 1;
@@ -60144,7 +61327,8 @@ START_TEST(s21_is_not_equal_6012) {
 }
 
 START_TEST(s21_is_not_equal_6013) {
-  char *example = "( 165330663462893411349 != -90001314.786733687147946638 ) = True";
+  char *example =
+      "( 165330663462893411349 != -90001314.786733687147946638 ) = True";
   s21_decimal value_1 = {{0xC96A5C15, 0xF66C8275, 0x8, 0x0}};
   s21_decimal value_2 = {{0x8C91628E, 0xD08DBCA, 0x4A7285, 0x80120000}};
   int code = 1;
@@ -60174,7 +61358,8 @@ START_TEST(s21_is_not_equal_6015) {
 }
 
 START_TEST(s21_is_not_equal_6016) {
-  char *example = "( 7.5244609174335854E-10 != 0.733354466288753311265 ) = True";
+  char *example =
+      "( 7.5244609174335854E-10 != 0.733354466288753311265 ) = True";
   s21_decimal value_1 = {{0xC919716E, 0x10B5292, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x7351FE21, 0xC156719C, 0x27, 0x150000}};
   int code = 1;
@@ -60224,7 +61409,8 @@ START_TEST(s21_is_not_equal_6020) {
 }
 
 START_TEST(s21_is_not_equal_6021) {
-  char *example = "( 1912827181211667185886299639 != 15252550666824060 ) = True";
+  char *example =
+      "( 1912827181211667185886299639 != 15252550666824060 ) = True";
   s21_decimal value_1 = {{0x21F005F7, 0x45E01835, 0x62E40E9, 0x0}};
   s21_decimal value_2 = {{0x306A297C, 0x36301D, 0x0, 0x0}};
   int code = 1;
@@ -60244,7 +61430,8 @@ START_TEST(s21_is_not_equal_6022) {
 }
 
 START_TEST(s21_is_not_equal_6023) {
-  char *example = "( 0.23215595028613212146612535 != 12807947552823085791089627 ) = True";
+  char *example =
+      "( 0.23215595028613212146612535 != 12807947552823085791089627 ) = True";
   s21_decimal value_1 = {{0x16ADB937, 0xEDA3A5A6, 0x133417, 0x1A0000}};
   s21_decimal value_2 = {{0x718293DB, 0x3A644623, 0xA9830, 0x0}};
   int code = 1;
@@ -60324,7 +61511,8 @@ START_TEST(s21_is_not_equal_6030) {
 }
 
 START_TEST(s21_is_not_equal_6031) {
-  char *example = "( -482.79154019232277405973172 != 1208203746764713045570811031 ) = True";
+  char *example =
+      "( -482.79154019232277405973172 != 1208203746764713045570811031 ) = True";
   s21_decimal value_1 = {{0x9893AB4, 0x2F050AEE, 0x27EF82, 0x80170000}};
   s21_decimal value_2 = {{0xA6A2F497, 0x5A350333, 0x3E76718, 0x0}};
   int code = 1;
@@ -60334,7 +61522,8 @@ START_TEST(s21_is_not_equal_6031) {
 }
 
 START_TEST(s21_is_not_equal_6032) {
-  char *example = "( 16978890150514163201 != 5.31802236271933141893339358 ) = True";
+  char *example =
+      "( 16978890150514163201 != 5.31802236271933141893339358 ) = True";
   s21_decimal value_1 = {{0x45C67E01, 0xEBA122A2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x29A558DE, 0xFEB3FE27, 0x1B7E580, 0x1A0000}};
   int code = 1;
@@ -60354,7 +61543,8 @@ START_TEST(s21_is_not_equal_6033) {
 }
 
 START_TEST(s21_is_not_equal_6034) {
-  char *example = "( -2.8309262082600870078723 != 189042564519928976413095024 ) = True";
+  char *example =
+      "( -2.8309262082600870078723 != 189042564519928976413095024 ) = True";
   s21_decimal value_1 = {{0xBDFE903, 0xA5EEA33A, 0x5FE, 0x80160000}};
   s21_decimal value_2 = {{0x6718F470, 0xF50D7A59, 0x9C5F51, 0x0}};
   int code = 1;
@@ -60434,7 +61624,8 @@ START_TEST(s21_is_not_equal_6041) {
 }
 
 START_TEST(s21_is_not_equal_6042) {
-  char *example = "( -4.1100690296142098281858557 != -31559.384101138711734914172 ) = True";
+  char *example =
+      "( -4.1100690296142098281858557 != -31559.384101138711734914172 ) = True";
   s21_decimal value_1 = {{0x462905FD, 0xE2AF3F3E, 0x21FF68, 0x80190000}};
   s21_decimal value_2 = {{0xE600C7C, 0xA3E6A272, 0x1A1AF5, 0x80150000}};
   int code = 1;
@@ -60494,7 +61685,8 @@ START_TEST(s21_is_not_equal_6047) {
 }
 
 START_TEST(s21_is_not_equal_6048) {
-  char *example = "( 1549177774957865839431941014 != -4.74442386608183 ) = True";
+  char *example =
+      "( 1549177774957865839431941014 != -4.74442386608183 ) = True";
   s21_decimal value_1 = {{0x1FCA7B96, 0x757288BA, 0x5017327, 0x0}};
   s21_decimal value_2 = {{0xB9EB9037, 0x1AF80, 0x0, 0x800E0000}};
   int code = 1;
@@ -60504,7 +61696,8 @@ START_TEST(s21_is_not_equal_6048) {
 }
 
 START_TEST(s21_is_not_equal_6049) {
-  char *example = "( 1557551282358678848957941176 != 1622614636696439260587957043 ) = True";
+  char *example =
+      "( 1557551282358678848957941176 != 1622614636696439260587957043 ) = True";
   s21_decimal value_1 = {{0x81D85B8, 0x345CF090, 0x5086050, 0x0}};
   s21_decimal value_2 = {{0x352B1B33, 0xB5ED5853, 0x53E3203, 0x0}};
   int code = 1;
@@ -60534,7 +61727,8 @@ START_TEST(s21_is_not_equal_6051) {
 }
 
 START_TEST(s21_is_not_equal_6052) {
-  char *example = "( 1673155650305739173166992441 != 1025289989944731012709948917 ) = True";
+  char *example =
+      "( 1673155650305739173166992441 != 1025289989944731012709948917 ) = True";
   s21_decimal value_1 = {{0x72524C39, 0x8C638C0E, 0x568007D, 0x0}};
   s21_decimal value_2 = {{0x65D31DF5, 0xB9EDDFB9, 0x3501999, 0x0}};
   int code = 1;
@@ -60564,7 +61758,8 @@ START_TEST(s21_is_not_equal_6054) {
 }
 
 START_TEST(s21_is_not_equal_6055) {
-  char *example = "( 1771200461813663596287265788 != 1354282610412847355870193704 ) = True";
+  char *example =
+      "( 1771200461813663596287265788 != 1354282610412847355870193704 ) = True";
   s21_decimal value_1 = {{0xFE728BFC, 0x6E272ABD, 0x5B91A49, 0x0}};
   s21_decimal value_2 = {{0x3BA22828, 0x6B1F5F5D, 0x4603C7F, 0x0}};
   int code = 1;
@@ -60594,7 +61789,8 @@ START_TEST(s21_is_not_equal_6057) {
 }
 
 START_TEST(s21_is_not_equal_6058) {
-  char *example = "( 147724176813373708 != 1426971128671573492369369440 ) = True";
+  char *example =
+      "( 147724176813373708 != 1426971128671573492369369440 ) = True";
   s21_decimal value_1 = {{0x2BB2B90C, 0x20CD25B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6A1EA960, 0xE394E38A, 0x49C5CE3, 0x0}};
   int code = 1;
@@ -60744,7 +61940,8 @@ START_TEST(s21_is_not_equal_6072) {
 }
 
 START_TEST(s21_is_not_equal_6073) {
-  char *example = "( -57.798315799158185117913 != 1727086895301472111496762589 ) = True";
+  char *example =
+      "( -57.798315799158185117913 != 1727086895301472111496762589 ) = True";
   s21_decimal value_1 = {{0x9F55C8D9, 0x40C326BB, 0xC3D, 0x80150000}};
   s21_decimal value_2 = {{0xE2CF94DD, 0x32A6A0E9, 0x5949CE0, 0x0}};
   int code = 1;
@@ -60754,7 +61951,8 @@ START_TEST(s21_is_not_equal_6073) {
 }
 
 START_TEST(s21_is_not_equal_6074) {
-  char *example = "( -8.46851457576389 != 1482607124705860244683088662 ) = True";
+  char *example =
+      "( -8.46851457576389 != 1482607124705860244683088662 ) = True";
   s21_decimal value_1 = {{0xF84E6DC5, 0x30234, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x1537E316, 0x470596FD, 0x4CA6245, 0x0}};
   int code = 1;
@@ -60774,7 +61972,8 @@ START_TEST(s21_is_not_equal_6075) {
 }
 
 START_TEST(s21_is_not_equal_6076) {
-  char *example = "( -18.145193592347191068747365 != -5.33700881901716193 ) = True";
+  char *example =
+      "( -18.145193592347191068747365 != -5.33700881901716193 ) = True";
   s21_decimal value_1 = {{0x605E6665, 0xEA6803DB, 0xF0264, 0x80180000}};
   s21_decimal value_2 = {{0xDA1082E1, 0x768161F, 0x0, 0x80110000}};
   int code = 1;
@@ -60814,7 +62013,8 @@ START_TEST(s21_is_not_equal_6079) {
 }
 
 START_TEST(s21_is_not_equal_6080) {
-  char *example = "( -48.457311235949944833231050 != -9019.8242427733282650965168 ) = True";
+  char *example =
+      "( -48.457311235949944833231050 != -9019.8242427733282650965168 ) = True";
   s21_decimal value_1 = {{0x72DDE0E1, 0x9C4E95D3, 0x4021F, 0x80170000}};
   s21_decimal value_2 = {{0x894DC4B0, 0x850CC590, 0x4A9C38, 0x80160000}};
   int code = 1;
@@ -60854,7 +62054,8 @@ START_TEST(s21_is_not_equal_6083) {
 }
 
 START_TEST(s21_is_not_equal_6084) {
-  char *example = "( 1951414272351504102416953688 != 1007538608618309515245036708 ) = True";
+  char *example =
+      "( 1951414272351504102416953688 != 1007538608618309515245036708 ) = True";
   s21_decimal value_1 = {{0x49A7B158, 0xACD5B6FC, 0x64E2C0B, 0x0}};
   s21_decimal value_2 = {{0x222CA4A4, 0x6A95E47A, 0x3416A99, 0x0}};
   int code = 1;
@@ -60894,7 +62095,8 @@ START_TEST(s21_is_not_equal_6087) {
 }
 
 START_TEST(s21_is_not_equal_6088) {
-  char *example = "( 1244015368294600243410988060 != 1731879507495253223 ) = True";
+  char *example =
+      "( 1244015368294600243410988060 != 1731879507495253223 ) = True";
   s21_decimal value_1 = {{0x52616C1C, 0x3EDA44EF, 0x4050680, 0x0}};
   s21_decimal value_2 = {{0x760874E7, 0x1808DF3C, 0x0, 0x0}};
   int code = 1;
@@ -60914,7 +62116,8 @@ START_TEST(s21_is_not_equal_6089) {
 }
 
 START_TEST(s21_is_not_equal_6090) {
-  char *example = "( -8142671.3294152467388627595 != 17850985031700323 ) = True";
+  char *example =
+      "( -8142671.3294152467388627595 != 17850985031700323 ) = True";
   s21_decimal value_1 = {{0xED44FA8B, 0xF8FBE6ED, 0x435AC6, 0x80130000}};
   s21_decimal value_2 = {{0x55B48F63, 0x3F6B60, 0x0, 0x0}};
   int code = 1;
@@ -60934,7 +62137,8 @@ START_TEST(s21_is_not_equal_6091) {
 }
 
 START_TEST(s21_is_not_equal_6092) {
-  char *example = "( 1953812643327595837004972600 != 1241907739057864347641223356 ) = True";
+  char *example =
+      "( 1953812643327595837004972600 != 1241907739057864347641223356 ) = True";
   s21_decimal value_1 = {{0x6B400238, 0xA0535062, 0x65027EB, 0x0}};
   s21_decimal value_2 = {{0xBDDC98BC, 0x6F8713EA, 0x4034831, 0x0}};
   int code = 1;
@@ -60954,7 +62158,8 @@ START_TEST(s21_is_not_equal_6093) {
 }
 
 START_TEST(s21_is_not_equal_6094) {
-  char *example = "( 0.5978991817012 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 0.5978991817012 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x17AEF134, 0x570, 0x0, 0xD0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -60964,7 +62169,8 @@ START_TEST(s21_is_not_equal_6094) {
 }
 
 START_TEST(s21_is_not_equal_6095) {
-  char *example = "( 6.0284403787855302E-10 != 1589703404309631514582446679 ) = True";
+  char *example =
+      "( 6.0284403787855302E-10 != 1589703404309631514582446679 ) = True";
   s21_decimal value_1 = {{0x894575C6, 0xD62C58, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xAE23F257, 0x3A5E8D13, 0x522F8CA, 0x0}};
   int code = 1;
@@ -60974,7 +62180,8 @@ START_TEST(s21_is_not_equal_6095) {
 }
 
 START_TEST(s21_is_not_equal_6096) {
-  char *example = "( -713218169.720932 != 1986408954138100663941726016 ) = True";
+  char *example =
+      "( -713218169.720932 != 1986408954138100663941726016 ) = True";
   s21_decimal value_1 = {{0xBA75064, 0x288AB, 0x0, 0x80060000}};
   s21_decimal value_2 = {{0x1525FF40, 0x2D123A26, 0x66B1E75, 0x0}};
   int code = 1;
@@ -61004,7 +62211,8 @@ START_TEST(s21_is_not_equal_6098) {
 }
 
 START_TEST(s21_is_not_equal_6099) {
-  char *example = "( 1082419999841128815624893753 != 1218662996230651081573236212 ) = True";
+  char *example =
+      "( 1082419999841128815624893753 != 1218662996230651081573236212 ) = True";
   s21_decimal value_1 = {{0x9AC6B539, 0xC4BAD07B, 0x37F5B59, 0x0}};
   s21_decimal value_2 = {{0xBD0B7DF4, 0x66ECA32C, 0x3F00DED, 0x0}};
   int code = 1;
@@ -61054,7 +62262,8 @@ START_TEST(s21_is_not_equal_6103) {
 }
 
 START_TEST(s21_is_not_equal_6104) {
-  char *example = "( 4.5697690048018342E-10 != 0.501749889931891393287 ) = True";
+  char *example =
+      "( 4.5697690048018342E-10 != 0.501749889931891393287 ) = True";
   s21_decimal value_1 = {{0x965E37A6, 0xA259CE, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x19BB4307, 0x332DB282, 0x1B, 0x150000}};
   int code = 1;
@@ -61064,7 +62273,8 @@ START_TEST(s21_is_not_equal_6104) {
 }
 
 START_TEST(s21_is_not_equal_6105) {
-  char *example = "( 0.75535957255165102171512953 != -2.3401424010987632271812587 ) = True";
+  char *example =
+      "( 0.75535957255165102171512953 != -2.3401424010987632271812587 ) = True";
   s21_decimal value_1 = {{0x26366079, 0x72A5B70A, 0x3E7B5C, 0x1A0000}};
   s21_decimal value_2 = {{0xEBBBE7EB, 0xBCD33F09, 0x135B71, 0x80190000}};
   int code = 1;
@@ -61104,7 +62314,8 @@ START_TEST(s21_is_not_equal_6108) {
 }
 
 START_TEST(s21_is_not_equal_6109) {
-  char *example = "( 1336799007729299323470646481 != 1109790815285304713421843717 ) = True";
+  char *example =
+      "( 1336799007729299323470646481 != 1109790815285304713421843717 ) = True";
   s21_decimal value_1 = {{0x87828CD1, 0x6AF6D17A, 0x451C633, 0x0}};
   s21_decimal value_2 = {{0x6E5CED05, 0xA5974319, 0x395FF58, 0x0}};
   int code = 1;
@@ -61114,7 +62325,8 @@ START_TEST(s21_is_not_equal_6109) {
 }
 
 START_TEST(s21_is_not_equal_6110) {
-  char *example = "( 1248798608754846071349811997 != 761283.7670844556585284235 ) = True";
+  char *example =
+      "( 1248798608754846071349811997 != 761283.7670844556585284235 ) = True";
   s21_decimal value_1 = {{0xB279B1D, 0x3AFE606B, 0x408FB64, 0x0}};
   s21_decimal value_2 = {{0xCE39328B, 0xC1CFB27B, 0x64C14, 0x130000}};
   int code = 1;
@@ -61364,7 +62576,8 @@ START_TEST(s21_is_not_equal_6134) {
 }
 
 START_TEST(s21_is_not_equal_6135) {
-  char *example = "( -14.02102483413152 != 1902082585429138280106924359 ) = True";
+  char *example =
+      "( -14.02102483413152 != 1902082585429138280106924359 ) = True";
   s21_decimal value_1 = {{0x6C7668A0, 0x4FB34, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xFA0F9947, 0x9186526A, 0x6255DA7, 0x0}};
   int code = 1;
@@ -61374,7 +62587,8 @@ START_TEST(s21_is_not_equal_6135) {
 }
 
 START_TEST(s21_is_not_equal_6136) {
-  char *example = "( 1030690822510966509262036990 != -90082318.379386062698145461 ) = True";
+  char *example =
+      "( 1030690822510966509262036990 != -90082318.379386062698145461 ) = True";
   s21_decimal value_1 = {{0x89075FFE, 0x7244D998, 0x3549145, 0x0}};
   s21_decimal value_2 = {{0x35366B5, 0x43B481B3, 0x4A83AC, 0x80120000}};
   int code = 1;
@@ -61404,7 +62618,8 @@ START_TEST(s21_is_not_equal_6138) {
 }
 
 START_TEST(s21_is_not_equal_6139) {
-  char *example = "( -5.7867885853568816257958532 != 1819518763423666503427160696 ) = True";
+  char *example =
+      "( -5.7867885853568816257958532 != 1819518763423666503427160696 ) = True";
   s21_decimal value_1 = {{0x61FC0284, 0x60C33D6C, 0x2FDE00, 0x80190000}};
   s21_decimal value_2 = {{0x9CDFA78, 0xCF216EBC, 0x5E11215, 0x0}};
   int code = 1;
@@ -61544,7 +62759,8 @@ START_TEST(s21_is_not_equal_6152) {
 }
 
 START_TEST(s21_is_not_equal_6153) {
-  char *example = "( 1107700975045294853 != 0.7004439382604472254952215 ) = True";
+  char *example =
+      "( 1107700975045294853 != 0.7004439382604472254952215 ) = True";
   s21_decimal value_1 = {{0xFEEDBB05, 0xF5F582A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x78377317, 0x6B76E868, 0x5CB3F, 0x190000}};
   int code = 1;
@@ -61574,7 +62790,8 @@ START_TEST(s21_is_not_equal_6155) {
 }
 
 START_TEST(s21_is_not_equal_6156) {
-  char *example = "( 1286348981968632266955021053 != 1515990327775321091979040407 ) = True";
+  char *example =
+      "( 1286348981968632266955021053 != 1515990327775321091979040407 ) = True";
   s21_decimal value_1 = {{0x789DAFD, 0xA8F0F0C, 0x4280AFE, 0x0}};
   s21_decimal value_2 = {{0x6CC35697, 0x5790A362, 0x4E5FF70, 0x0}};
   int code = 1;
@@ -61604,7 +62821,8 @@ START_TEST(s21_is_not_equal_6158) {
 }
 
 START_TEST(s21_is_not_equal_6159) {
-  char *example = "( 1864274510055037409806385467 != 1177891558947176723857574850 ) = True";
+  char *example =
+      "( 1864274510055037409806385467 != 1177891558947176723857574850 ) = True";
   s21_decimal value_1 = {{0x9556013B, 0xB20FA227, 0x606177B, 0x0}};
   s21_decimal value_2 = {{0x30E48BC2, 0x5BAF4804, 0x3CE543D, 0x0}};
   int code = 1;
@@ -61654,7 +62872,8 @@ START_TEST(s21_is_not_equal_6163) {
 }
 
 START_TEST(s21_is_not_equal_6164) {
-  char *example = "( 1090950626500556549980421511 != 1359739103748069478417653634 ) = True";
+  char *example =
+      "( 1090950626500556549980421511 != 1359739103748069478417653634 ) = True";
   s21_decimal value_1 = {{0xB1DBFD87, 0xF76080E6, 0x38669C7, 0x0}};
   s21_decimal value_2 = {{0xD8815F82, 0x83CDB32D, 0x464BFF4, 0x0}};
   int code = 1;
@@ -61694,7 +62913,8 @@ START_TEST(s21_is_not_equal_6167) {
 }
 
 START_TEST(s21_is_not_equal_6168) {
-  char *example = "( -541.36297966847477114969369 != 1761427487176679011823695657 ) = True";
+  char *example =
+      "( -541.36297966847477114969369 != 1761427487176679011823695657 ) = True";
   s21_decimal value_1 = {{0xD76F9D19, 0x97E27053, 0x2CC7CE, 0x80170000}};
   s21_decimal value_2 = {{0x5020B729, 0x69E3C80E, 0x5B104C7, 0x0}};
   int code = 1;
@@ -61794,7 +63014,8 @@ START_TEST(s21_is_not_equal_6177) {
 }
 
 START_TEST(s21_is_not_equal_6178) {
-  char *example = "( 120810324356249575881009 != -6.942130427237624712 ) = True";
+  char *example =
+      "( 120810324356249575881009 != -6.942130427237624712 ) = True";
   s21_decimal value_1 = {{0x5A0DF931, 0x240BE17A, 0x1995, 0x0}};
   s21_decimal value_2 = {{0xB3EDEB88, 0x605766D7, 0x0, 0x80120000}};
   int code = 1;
@@ -61804,7 +63025,8 @@ START_TEST(s21_is_not_equal_6178) {
 }
 
 START_TEST(s21_is_not_equal_6179) {
-  char *example = "( 1224503365362895012885671995 != 1588583700012656462425670476 ) = True";
+  char *example =
+      "( 1224503365362895012885671995 != 1588583700012656462425670476 ) = True";
   s21_decimal value_1 = {{0x4BC3B03B, 0x7276012F, 0x3F4E2AC, 0x0}};
   s21_decimal value_2 = {{0xB2CEC34C, 0xEFBA79E2, 0x5220BAE, 0x0}};
   int code = 1;
@@ -61814,7 +63036,8 @@ START_TEST(s21_is_not_equal_6179) {
 }
 
 START_TEST(s21_is_not_equal_6180) {
-  char *example = "( 1756455421419210419959774487 != 19102604094948181 ) = True";
+  char *example =
+      "( 1756455421419210419959774487 != 19102604094948181 ) = True";
   s21_decimal value_1 = {{0x39AC3D17, 0x305753C5, 0x5ACE7E7, 0x0}};
   s21_decimal value_2 = {{0x9B5D4355, 0x43DDB7, 0x0, 0x0}};
   int code = 1;
@@ -61824,7 +63047,8 @@ START_TEST(s21_is_not_equal_6180) {
 }
 
 START_TEST(s21_is_not_equal_6181) {
-  char *example = "( 1867191851425809460596227215 != 0.9654150118184502157464201 ) = True";
+  char *example =
+      "( 1867191851425809460596227215 != 0.9654150118184502157464201 ) = True";
   s21_decimal value_1 = {{0x7EA2BC8F, 0x16914E4E, 0x6088141, 0x0}};
   s21_decimal value_2 = {{0x2F655289, 0x86CE114B, 0x7FC58, 0x190000}};
   int code = 1;
@@ -61844,7 +63068,8 @@ START_TEST(s21_is_not_equal_6182) {
 }
 
 START_TEST(s21_is_not_equal_6183) {
-  char *example = "( -928.80338748697336818296872 != 16268122119873547 ) = True";
+  char *example =
+      "( -928.80338748697336818296872 != 16268122119873547 ) = True";
   s21_decimal value_1 = {{0xF95DE828, 0x40AC1F08, 0x4CD42D, 0x80170000}};
   s21_decimal value_2 = {{0x581E240B, 0x39CBC5, 0x0, 0x0}};
   int code = 1;
@@ -61894,7 +63119,8 @@ START_TEST(s21_is_not_equal_6187) {
 }
 
 START_TEST(s21_is_not_equal_6188) {
-  char *example = "( 0.85420726482890515656291750 != -17710084.128732479249371 ) = True";
+  char *example =
+      "( 0.85420726482890515656291750 != -17710084.128732479249371 ) = True";
   s21_decimal value_1 = {{0x99381EF7, 0xAFA6E256, 0x710DA, 0x190000}};
   s21_decimal value_2 = {{0xF6CC5BDB, 0x10CA2308, 0x3C0, 0x800F0000}};
   int code = 1;
@@ -61914,7 +63140,8 @@ START_TEST(s21_is_not_equal_6189) {
 }
 
 START_TEST(s21_is_not_equal_6190) {
-  char *example = "( -3744.48145113292007258 != 1464635488189264391306581710 ) = True";
+  char *example =
+      "( -3744.48145113292007258 != 1464635488189264391306581710 ) = True";
   s21_decimal value_1 = {{0xB9B0E75A, 0x4C830C11, 0x14, 0x80110000}};
   s21_decimal value_2 = {{0x11F596CE, 0xE8E2A62D, 0x4BB84A0, 0x0}};
   int code = 1;
@@ -61974,7 +63201,8 @@ START_TEST(s21_is_not_equal_6195) {
 }
 
 START_TEST(s21_is_not_equal_6196) {
-  char *example = "( -5720725.72139188519532625 != 1811207398729021819384 ) = True";
+  char *example =
+      "( -5720725.72139188519532625 != 1811207398729021819384 ) = True";
   s21_decimal value_1 = {{0x7697851, 0x1DC44E34, 0x7924, 0x80110000}};
   s21_decimal value_2 = {{0xBAA289F8, 0x2F8D4CF4, 0x62, 0x0}};
   int code = 1;
@@ -62004,7 +63232,8 @@ START_TEST(s21_is_not_equal_6198) {
 }
 
 START_TEST(s21_is_not_equal_6199) {
-  char *example = "( 0.05593963122611225924627514 != -31.0828697664003 ) = True";
+  char *example =
+      "( 0.05593963122611225924627514 != -31.0828697664003 ) = True";
   s21_decimal value_1 = {{0x29826C3A, 0x5938680E, 0x4A091, 0x1A0000}};
   s21_decimal value_2 = {{0x721C3A03, 0x11AB2, 0x0, 0x800D0000}};
   int code = 1;
@@ -62044,7 +63273,8 @@ START_TEST(s21_is_not_equal_6202) {
 }
 
 START_TEST(s21_is_not_equal_6203) {
-  char *example = "( 1905252491119460849851666933 != 1997149500658141178233246751 ) = True";
+  char *example =
+      "( 1905252491119460849851666933 != 1997149500658141178233246751 ) = True";
   s21_decimal value_1 = {{0xD34591F5, 0x8010D6A6, 0x627FCE8, 0x0}};
   s21_decimal value_2 = {{0x9416541F, 0x5E9DC4A8, 0x67400DB, 0x0}};
   int code = 1;
@@ -62154,7 +63384,8 @@ START_TEST(s21_is_not_equal_6213) {
 }
 
 START_TEST(s21_is_not_equal_6214) {
-  char *example = "( 12165524710914953531905 != 1413896773249840933071025274 ) = True";
+  char *example =
+      "( 12165524710914953531905 != 1413896773249840933071025274 ) = True";
   s21_decimal value_1 = {{0x62875201, 0x7E920CDD, 0x293, 0x0}};
   s21_decimal value_2 = {{0x8800F47A, 0xA950999E, 0x4918C49, 0x0}};
   int code = 1;
@@ -62164,7 +63395,8 @@ START_TEST(s21_is_not_equal_6214) {
 }
 
 START_TEST(s21_is_not_equal_6215) {
-  char *example = "( -2.3443861260474161136646174 != 170872058176878786205949413 ) = True";
+  char *example =
+      "( -2.3443861260474161136646174 != 170872058176878786205949413 ) = True";
   s21_decimal value_1 = {{0x48EBB81E, 0x43F7FCDA, 0x13646E, 0x80190000}};
   s21_decimal value_2 = {{0xCBC39DE5, 0xD5A9CAD0, 0x8D5790, 0x0}};
   int code = 1;
@@ -62174,7 +63406,8 @@ START_TEST(s21_is_not_equal_6215) {
 }
 
 START_TEST(s21_is_not_equal_6216) {
-  char *example = "( -67.9309814596508662 != 1522886040501318984517841879 ) = True";
+  char *example =
+      "( -67.9309814596508662 != 1522886040501318984517841879 ) = True";
   s21_decimal value_1 = {{0x5F761BF6, 0x96D64AD, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xAEB873D7, 0xAD8F5E9F, 0x4EBB3A9, 0x0}};
   int code = 1;
@@ -62224,7 +63457,8 @@ START_TEST(s21_is_not_equal_6220) {
 }
 
 START_TEST(s21_is_not_equal_6221) {
-  char *example = "( -17631437357.42955375 != -487.87728410116760393612 ) = True";
+  char *example =
+      "( -17631437357.42955375 != -487.87728410116760393612 ) = True";
   s21_decimal value_1 = {{0xD8E9FF6F, 0x1877F1E2, 0x0, 0x80080000}};
   s21_decimal value_2 = {{0xAAB9D78C, 0xC9BE1489, 0xA54, 0x80140000}};
   int code = 1;
@@ -62254,7 +63488,8 @@ START_TEST(s21_is_not_equal_6223) {
 }
 
 START_TEST(s21_is_not_equal_6224) {
-  char *example = "( -3.2991926548774923354394138 != 1134444774259418211823200191 ) = True";
+  char *example =
+      "( -3.2991926548774923354394138 != 1134444774259418211823200191 ) = True";
   s21_decimal value_1 = {{0x9464E1A, 0xEC03D067, 0x1B4A4F, 0x80190000}};
   s21_decimal value_2 = {{0x9FD527BF, 0x70DB2E76, 0x3AA6406, 0x0}};
   int code = 1;
@@ -62264,7 +63499,8 @@ START_TEST(s21_is_not_equal_6224) {
 }
 
 START_TEST(s21_is_not_equal_6225) {
-  char *example = "( 1073033034321768862817743959 != 124490735470703390 ) = True";
+  char *example =
+      "( 1073033034321768862817743959 != 124490735470703390 ) = True";
   s21_decimal value_1 = {{0x2EF07457, 0x5917C171, 0x3779795, 0x0}};
   s21_decimal value_2 = {{0x118EF31E, 0x1BA47AA, 0x0, 0x0}};
   int code = 1;
@@ -62344,7 +63580,8 @@ START_TEST(s21_is_not_equal_6232) {
 }
 
 START_TEST(s21_is_not_equal_6233) {
-  char *example = "( 1761736240739686338118089845 != 4.367608004561692E-10 ) = True";
+  char *example =
+      "( 1761736240739686338118089845 != 4.367608004561692E-10 ) = True";
   s21_decimal value_1 = {{0xAF7CFC75, 0xFA5274BB, 0x5B14628, 0x0}};
   s21_decimal value_2 = {{0xFBA14B1C, 0xF8450, 0x0, 0x190000}};
   int code = 1;
@@ -62354,7 +63591,8 @@ START_TEST(s21_is_not_equal_6233) {
 }
 
 START_TEST(s21_is_not_equal_6234) {
-  char *example = "( 1368960042947471235112623356 != 10891535102599117 ) = True";
+  char *example =
+      "( 1368960042947471235112623356 != 10891535102599117 ) = True";
   s21_decimal value_1 = {{0x2A31DCFC, 0xA166CD62, 0x46C6090, 0x0}};
   s21_decimal value_2 = {{0x20D95FCD, 0x26B1CB, 0x0, 0x0}};
   int code = 1;
@@ -62414,7 +63652,8 @@ START_TEST(s21_is_not_equal_6239) {
 }
 
 START_TEST(s21_is_not_equal_6240) {
-  char *example = "( 1777520643454017301936153849 != 0.635518409167079 ) = True";
+  char *example =
+      "( 1777520643454017301936153849 != 0.635518409167079 ) = True";
   s21_decimal value_1 = {{0xD9F524F9, 0x29DD5AF8, 0x5BE54A3, 0x0}};
   s21_decimal value_2 = {{0x2906D0E7, 0x24200, 0x0, 0xF0000}};
   int code = 1;
@@ -62424,7 +63663,8 @@ START_TEST(s21_is_not_equal_6240) {
 }
 
 START_TEST(s21_is_not_equal_6241) {
-  char *example = "( 11069523575196676921 != 1252573980259795333762328147 ) = True";
+  char *example =
+      "( 11069523575196676921 != 1252573980259795333762328147 ) = True";
   s21_decimal value_1 = {{0xF468F339, 0x999ED90A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x42252653, 0x87A29042, 0x40C1ADB, 0x0}};
   int code = 1;
@@ -62594,7 +63834,8 @@ START_TEST(s21_is_not_equal_6257) {
 }
 
 START_TEST(s21_is_not_equal_6258) {
-  char *example = "( -860.87762539471175889245410 != 1653970671363307020866340982 ) = True";
+  char *example =
+      "( -860.87762539471175889245410 != 1653970671363307020866340982 ) = True";
   s21_decimal value_1 = {{0x2BF487D, 0xB2232180, 0x71EFA, 0x80160000}};
   s21_decimal value_2 = {{0x6180C876, 0xC18744D1, 0x55821E9, 0x0}};
   int code = 1;
@@ -62654,7 +63895,8 @@ START_TEST(s21_is_not_equal_6263) {
 }
 
 START_TEST(s21_is_not_equal_6264) {
-  char *example = "( 1516478201489997108668833746 != 1874496569859630852431059130 ) = True";
+  char *example =
+      "( 1516478201489997108668833746 != 1874496569859630852431059130 ) = True";
   s21_decimal value_1 = {{0xBB709FD2, 0x7744B7F, 0x4E666C0, 0x0}};
   s21_decimal value_2 = {{0xA26298BA, 0xAAFCEDE7, 0x60E8C16, 0x0}};
   int code = 1;
@@ -62704,7 +63946,8 @@ START_TEST(s21_is_not_equal_6268) {
 }
 
 START_TEST(s21_is_not_equal_6269) {
-  char *example = "( 1790624739307353004072946755 != 1561500779311708421659 ) = True";
+  char *example =
+      "( 1790624739307353004072946755 != 1561500779311708421659 ) = True";
   s21_decimal value_1 = {{0x5E16CC43, 0x9F87D064, 0x5C92B89, 0x0}};
   s21_decimal value_2 = {{0x2A02BE1B, 0xA62D2D99, 0x54, 0x0}};
   int code = 1;
@@ -62914,7 +64157,8 @@ START_TEST(s21_is_not_equal_6289) {
 }
 
 START_TEST(s21_is_not_equal_6290) {
-  char *example = "( 1958610942134577302814999265 != -74.181136564502063407350246 ) = True";
+  char *example =
+      "( 1958610942134577302814999265 != -74.181136564502063407350246 ) = True";
   s21_decimal value_1 = {{0xDA5642E1, 0xED01D963, 0x6541FFF, 0x0}};
   s21_decimal value_2 = {{0xA29EC1E6, 0x7895ACAA, 0x3D5C77, 0x80180000}};
   int code = 1;
@@ -62934,7 +64178,8 @@ START_TEST(s21_is_not_equal_6291) {
 }
 
 START_TEST(s21_is_not_equal_6292) {
-  char *example = "( 1869436445670460427423429022 != 15087407356339577907 ) = True";
+  char *example =
+      "( 1869436445670460427423429022 != 15087407356339577907 ) = True";
   s21_decimal value_1 = {{0x6ADBB19E, 0xC935A25E, 0x60A5C90, 0x0}};
   s21_decimal value_2 = {{0xD83C6433, 0xD1613D0D, 0x0, 0x0}};
   int code = 1;
@@ -62944,7 +64189,8 @@ START_TEST(s21_is_not_equal_6292) {
 }
 
 START_TEST(s21_is_not_equal_6293) {
-  char *example = "( 1354425991641019954843305539 != 19702187456744364 ) = True";
+  char *example =
+      "( 1354425991641019954843305539 != 19702187456744364 ) = True";
   s21_decimal value_1 = {{0xCC1B4643, 0x2161FC09, 0x4605ADC, 0x0}};
   s21_decimal value_2 = {{0xFCA84BAC, 0x45FF08, 0x0, 0x0}};
   int code = 1;
@@ -63034,7 +64280,8 @@ START_TEST(s21_is_not_equal_6301) {
 }
 
 START_TEST(s21_is_not_equal_6302) {
-  char *example = "( 1052704191462769638964848104 != 1385957620863124746520 ) = True";
+  char *example =
+      "( 1052704191462769638964848104 != 1385957620863124746520 ) = True";
   s21_decimal value_1 = {{0x9EF1E5E8, 0x91846738, 0x366C6C8, 0x0}};
   s21_decimal value_2 = {{0x8C11B118, 0x2206990E, 0x4B, 0x0}};
   int code = 1;
@@ -63174,7 +64421,8 @@ START_TEST(s21_is_not_equal_6315) {
 }
 
 START_TEST(s21_is_not_equal_6316) {
-  char *example = "( 1235400456103457971808819022 != 157054381495228615722 ) = True";
+  char *example =
+      "( 1235400456103457971808819022 != 157054381495228615722 ) = True";
   s21_decimal value_1 = {{0xE1F8D74E, 0xEB7B2207, 0x3FDE638, 0x0}};
   s21_decimal value_2 = {{0x31C8CC2A, 0x83913FDC, 0x8, 0x0}};
   int code = 1;
@@ -63194,7 +64442,8 @@ START_TEST(s21_is_not_equal_6317) {
 }
 
 START_TEST(s21_is_not_equal_6318) {
-  char *example = "( 1736860184720759311828747425 != 1934826250970907111038858993 ) = True";
+  char *example =
+      "( 1736860184720759311828747425 != 1934826250970907111038858993 ) = True";
   s21_decimal value_1 = {{0x777B84A1, 0x4765680A, 0x59CB273, 0x0}};
   s21_decimal value_2 = {{0xAD4736F1, 0x3BF6A1F7, 0x6407365, 0x0}};
   int code = 1;
@@ -63224,7 +64473,8 @@ START_TEST(s21_is_not_equal_6320) {
 }
 
 START_TEST(s21_is_not_equal_6321) {
-  char *example = "( -7508.8916664988309365870228 != 17178397168476645930316 ) = True";
+  char *example =
+      "( -7508.8916664988309365870228 != 17178397168476645930316 ) = True";
   s21_decimal value_1 = {{0xBB5A4E94, 0x543203CD, 0x3E1CB2, 0x80160000}};
   s21_decimal value_2 = {{0x3A9EB54C, 0x3E2699AE, 0x3A3, 0x0}};
   int code = 1;
@@ -63244,7 +64494,8 @@ START_TEST(s21_is_not_equal_6322) {
 }
 
 START_TEST(s21_is_not_equal_6323) {
-  char *example = "( 1846093408426349674688947622 != 16399678267145346171 ) = True";
+  char *example =
+      "( 1846093408426349674688947622 != 16399678267145346171 ) = True";
   s21_decimal value_1 = {{0xCB7025A6, 0x338BBB80, 0x5F70D7C, 0x0}};
   s21_decimal value_2 = {{0xA7E45C7B, 0xE3975C7E, 0x0, 0x0}};
   int code = 1;
@@ -63264,7 +64515,8 @@ START_TEST(s21_is_not_equal_6324) {
 }
 
 START_TEST(s21_is_not_equal_6325) {
-  char *example = "( 1228432616401112083166237 != 13801723995463533437679565 ) = True";
+  char *example =
+      "( 1228432616401112083166237 != 13801723995463533437679565 ) = True";
   s21_decimal value_1 = {{0xD1F741D, 0x772FC5DE, 0x10421, 0x0}};
   s21_decimal value_2 = {{0xB87477CD, 0xF4FDB65F, 0xB6AA0, 0x0}};
   int code = 1;
@@ -63434,7 +64686,8 @@ START_TEST(s21_is_not_equal_6341) {
 }
 
 START_TEST(s21_is_not_equal_6342) {
-  char *example = "( 18434722505702094002724 != 0.30227760979914244467088304 ) = True";
+  char *example =
+      "( 18434722505702094002724 != 0.30227760979914244467088304 ) = True";
   s21_decimal value_1 = {{0x1849DA24, 0x592ACF97, 0x3E7, 0x0}};
   s21_decimal value_2 = {{0x7A8E5BB0, 0x34C8DA76, 0x1900FA, 0x1A0000}};
   int code = 1;
@@ -63464,7 +64717,8 @@ START_TEST(s21_is_not_equal_6344) {
 }
 
 START_TEST(s21_is_not_equal_6345) {
-  char *example = "( 11282858162926246699444708 != 135974026731241608038259 ) = True";
+  char *example =
+      "( 11282858162926246699444708 != 135974026731241608038259 ) = True";
   s21_decimal value_1 = {{0xF83A9E4, 0xF77364DB, 0x9553C, 0x0}};
   s21_decimal value_2 = {{0x754BC773, 0x2AB0BACB, 0x1CCB, 0x0}};
   int code = 1;
@@ -63514,7 +64768,8 @@ START_TEST(s21_is_not_equal_6349) {
 }
 
 START_TEST(s21_is_not_equal_6350) {
-  char *example = "( -8.2361529452909166189746758 != 1491010242346383625726654306 ) = True";
+  char *example =
+      "( -8.2361529452909166189746758 != 1491010242346383625726654306 ) = True";
   s21_decimal value_1 = {{0x15861A46, 0x754647DE, 0x4420BB, 0x80190000}};
   s21_decimal value_2 = {{0x293AF762, 0x328FA5A2, 0x4D155B3, 0x0}};
   int code = 1;
@@ -63534,7 +64789,8 @@ START_TEST(s21_is_not_equal_6351) {
 }
 
 START_TEST(s21_is_not_equal_6352) {
-  char *example = "( 1784166737410123710115192495 != 1261371739553110228194161656 ) = True";
+  char *example =
+      "( 1784166737410123710115192495 != 1261371739553110228194161656 ) = True";
   s21_decimal value_1 = {{0xA2059EAF, 0xA389CED4, 0x5C3D400, 0x0}};
   s21_decimal value_2 = {{0x55B1F3F8, 0x44AB7B2, 0x41361DB, 0x0}};
   int code = 1;
@@ -63584,7 +64840,8 @@ START_TEST(s21_is_not_equal_6356) {
 }
 
 START_TEST(s21_is_not_equal_6357) {
-  char *example = "( 141630717487955023 != -9.9979521580987093786036091 ) = True";
+  char *example =
+      "( 141630717487955023 != -9.9979521580987093786036091 ) = True";
   s21_decimal value_1 = {{0x1D273C4F, 0x1F72C63, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4B98077B, 0xB9A0B3E6, 0x52B37C, 0x80190000}};
   int code = 1;
@@ -63594,7 +64851,8 @@ START_TEST(s21_is_not_equal_6357) {
 }
 
 START_TEST(s21_is_not_equal_6358) {
-  char *example = "( 1893691869807992232691967061 != 6.7914856464992021E-10 ) = True";
+  char *example =
+      "( 1893691869807992232691967061 != 6.7914856464992021E-10 ) = True";
   s21_decimal value_1 = {{0x40352455, 0xF69426BE, 0x61E6CD9, 0x0}};
   s21_decimal value_2 = {{0xBE914715, 0xF14833, 0x0, 0x1A0000}};
   int code = 1;
@@ -63644,7 +64902,8 @@ START_TEST(s21_is_not_equal_6362) {
 }
 
 START_TEST(s21_is_not_equal_6363) {
-  char *example = "( 1914073683125626059508359027 != 17936614241615302937 ) = True";
+  char *example =
+      "( 1914073683125626059508359027 != 17936614241615302937 ) = True";
   s21_decimal value_1 = {{0x18F31F73, 0x46F0779E, 0x62F48DE, 0x0}};
   s21_decimal value_2 = {{0xD8B15119, 0xF8EBA79E, 0x0, 0x0}};
   int code = 1;
@@ -63674,7 +64933,8 @@ START_TEST(s21_is_not_equal_6365) {
 }
 
 START_TEST(s21_is_not_equal_6366) {
-  char *example = "( 1917080278692461020290386458 != 1182867484129740129721643095 ) = True";
+  char *example =
+      "( 1917080278692461020290386458 != 1182867484129740129721643095 ) = True";
   s21_decimal value_1 = {{0x4CE8A1A, 0x263D61FD, 0x631C58A, 0x0}};
   s21_decimal value_2 = {{0xB81BF057, 0xCD840FEC, 0x3D271EE, 0x0}};
   int code = 1;
@@ -63684,7 +64944,8 @@ START_TEST(s21_is_not_equal_6366) {
 }
 
 START_TEST(s21_is_not_equal_6367) {
-  char *example = "( 171942528225577796078845 != 1376274893513659860177030787 ) = True";
+  char *example =
+      "( 171942528225577796078845 != 1376274893513659860177030787 ) = True";
   s21_decimal value_1 = {{0xECA78CFD, 0x5EBFE9A, 0x2469, 0x0}};
   s21_decimal value_2 = {{0x6C4E8E83, 0x7967AEA4, 0x4726D8B, 0x0}};
   int code = 1;
@@ -63694,7 +64955,8 @@ START_TEST(s21_is_not_equal_6367) {
 }
 
 START_TEST(s21_is_not_equal_6368) {
-  char *example = "( 4817.9245363410691712 != 1909165114702951931697283847 ) = True";
+  char *example =
+      "( 4817.9245363410691712 != 1909165114702951931697283847 ) = True";
   s21_decimal value_1 = {{0xB87AE680, 0x9C9F1064, 0x2, 0x100000}};
   s21_decimal value_2 = {{0x53A5C307, 0x3FEDE799, 0x62B3970, 0x0}};
   int code = 1;
@@ -63764,7 +65026,8 @@ START_TEST(s21_is_not_equal_6374) {
 }
 
 START_TEST(s21_is_not_equal_6375) {
-  char *example = "( 1598736481633620276350044 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1598736481633620276350044 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xBAB50C5C, 0xADA718DE, 0x1528B, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -63814,7 +65077,8 @@ START_TEST(s21_is_not_equal_6379) {
 }
 
 START_TEST(s21_is_not_equal_6380) {
-  char *example = "( 1517761075497750915973324363 != 16789698735074031897566 ) = True";
+  char *example =
+      "( 1517761075497750915973324363 != 16789698735074031897566 ) = True";
   s21_decimal value_1 = {{0x6231E4B, 0xC4B7D1CA, 0x4E77668, 0x0}};
   s21_decimal value_2 = {{0xD8FB0BDE, 0x2BE05BE9, 0x38E, 0x0}};
   int code = 1;
@@ -63864,7 +65128,8 @@ START_TEST(s21_is_not_equal_6384) {
 }
 
 START_TEST(s21_is_not_equal_6385) {
-  char *example = "( -474049.08599257856275463505 != 19615043303424189827575 ) = True";
+  char *example =
+      "( -474049.08599257856275463505 != 19615043303424189827575 ) = True";
   s21_decimal value_1 = {{0xFE593D51, 0x3E96DEF1, 0x273661, 0x80140000}};
   s21_decimal value_2 = {{0xC78089F7, 0x5568A782, 0x427, 0x0}};
   int code = 1;
@@ -63894,7 +65159,8 @@ START_TEST(s21_is_not_equal_6387) {
 }
 
 START_TEST(s21_is_not_equal_6388) {
-  char *example = "( 1683485086687126260812562197 != 1998264389730927918944937 ) = True";
+  char *example =
+      "( 1683485086687126260812562197 != 1998264389730927918944937 ) = True";
   s21_decimal value_1 = {{0x74B3F15, 0x6AAA0024, 0x5708BD5, 0x0}};
   s21_decimal value_2 = {{0xF07792A9, 0x212F41CA, 0x1A726, 0x0}};
   int code = 1;
@@ -63954,7 +65220,8 @@ START_TEST(s21_is_not_equal_6393) {
 }
 
 START_TEST(s21_is_not_equal_6394) {
-  char *example = "( 1021106032326519255652823881 != -416085.792589534 ) = True";
+  char *example =
+      "( 1021106032326519255652823881 != -416085.792589534 ) = True";
   s21_decimal value_1 = {{0xAD42F349, 0xEDE821A6, 0x34CA39C, 0x0}};
   s21_decimal value_2 = {{0x85DD06DE, 0x17A6D, 0x0, 0x80090000}};
   int code = 1;
@@ -64004,7 +65271,8 @@ START_TEST(s21_is_not_equal_6398) {
 }
 
 START_TEST(s21_is_not_equal_6399) {
-  char *example = "( 1435779207990886524625689318 != 127954073555408713 ) = True";
+  char *example =
+      "( 1435779207990886524625689318 != 127954073555408713 ) = True";
   s21_decimal value_1 = {{0x96C51AE6, 0xD35E9271, 0x4A3A612, 0x0}};
   s21_decimal value_2 = {{0x4DD59749, 0x1C6958D, 0x0, 0x0}};
   int code = 1;
@@ -64034,7 +65302,8 @@ START_TEST(s21_is_not_equal_6401) {
 }
 
 START_TEST(s21_is_not_equal_6402) {
-  char *example = "( 0.908043567472478239012 != 1293534583442562576035190337 ) = True";
+  char *example =
+      "( 0.908043567472478239012 != 1293534583442562576035190337 ) = True";
   s21_decimal value_1 = {{0x5F83B924, 0x39A2CD98, 0x31, 0x150000}};
   s21_decimal value_2 = {{0x32F19641, 0x4715E668, 0x42DFC9A, 0x0}};
   int code = 1;
@@ -64074,7 +65343,8 @@ START_TEST(s21_is_not_equal_6405) {
 }
 
 START_TEST(s21_is_not_equal_6406) {
-  char *example = "( -35950.3131314451038568984 != 1750505128510396355885305356 ) = True";
+  char *example =
+      "( -35950.3131314451038568984 != 1750505128510396355885305356 ) = True";
   s21_decimal value_1 = {{0x3FE38218, 0xB42C3145, 0x4C20, 0x80130000}};
   s21_decimal value_2 = {{0x80D28E0C, 0x29F5505A, 0x5A7FBE1, 0x0}};
   int code = 1;
@@ -64204,7 +65474,8 @@ START_TEST(s21_is_not_equal_6418) {
 }
 
 START_TEST(s21_is_not_equal_6419) {
-  char *example = "( 129524320122591508977326 != -7.4532800847522725096115839 ) = True";
+  char *example =
+      "( 129524320122591508977326 != -7.4532800847522725096115839 ) = True";
   s21_decimal value_1 = {{0xD6C856AE, 0x8707D63C, 0x1B6D, 0x0}};
   s21_decimal value_2 = {{0xDF6CCE7F, 0x3AE24EBB, 0x3DA6EF, 0x80190000}};
   int code = 1;
@@ -64314,7 +65585,8 @@ START_TEST(s21_is_not_equal_6429) {
 }
 
 START_TEST(s21_is_not_equal_6430) {
-  char *example = "( -7031.3390525996399216939403 != 1043545104601117002877631752 ) = True";
+  char *example =
+      "( -7031.3390525996399216939403 != 1043545104601117002877631752 ) = True";
   s21_decimal value_1 = {{0x6A6DD18B, 0x89C48C88, 0x3A2970, 0x80160000}};
   s21_decimal value_2 = {{0x9737FD08, 0x7989B01C, 0x35F3345, 0x0}};
   int code = 1;
@@ -64324,7 +65596,8 @@ START_TEST(s21_is_not_equal_6430) {
 }
 
 START_TEST(s21_is_not_equal_6431) {
-  char *example = "( 1.460347963671274E-10 != 1991115879992527501430957338 ) = True";
+  char *example =
+      "( 1.460347963671274E-10 != 1991115879992527501430957338 ) = True";
   s21_decimal value_1 = {{0xC19F82EA, 0x5302D, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xE9D5251A, 0x234E595E, 0x66F0330, 0x0}};
   int code = 1;
@@ -64414,7 +65687,8 @@ START_TEST(s21_is_not_equal_6439) {
 }
 
 START_TEST(s21_is_not_equal_6440) {
-  char *example = "( -2255.755005834192366651697 != 1762545797949897805469384318 ) = True";
+  char *example =
+      "( -2255.755005834192366651697 != 1762545797949897805469384318 ) = True";
   s21_decimal value_1 = {{0x72DCC931, 0xB9513FF5, 0x1DDAC, 0x80150000}};
   s21_decimal value_2 = {{0xAAE0FE7E, 0x2980F222, 0x5B1F197, 0x0}};
   int code = 1;
@@ -64424,7 +65698,8 @@ START_TEST(s21_is_not_equal_6440) {
 }
 
 START_TEST(s21_is_not_equal_6441) {
-  char *example = "( 1621464231980137861646581959 != -1.832014461190072543036 ) = True";
+  char *example =
+      "( 1621464231980137861646581959 != -1.832014461190072543036 ) = True";
   s21_decimal value_1 = {{0x349700C7, 0x2561959D, 0x53D3E68, 0x0}};
   s21_decimal value_2 = {{0x14EDA73C, 0x504ED606, 0x63, 0x80150000}};
   int code = 1;
@@ -64474,7 +65749,8 @@ START_TEST(s21_is_not_equal_6445) {
 }
 
 START_TEST(s21_is_not_equal_6446) {
-  char *example = "( -113.47249459332669534162073 != 1591512646652308941433433533 ) = True";
+  char *example =
+      "( -113.47249459332669534162073 != 1591512646652308941433433533 ) = True";
   s21_decimal value_1 = {{0x9774CC99, 0xA032EEC9, 0x962DF, 0x80170000}};
   s21_decimal value_2 = {{0xEF4B6DBD, 0x73B1A56F, 0x52477E9, 0x0}};
   int code = 1;
@@ -64484,7 +65760,8 @@ START_TEST(s21_is_not_equal_6446) {
 }
 
 START_TEST(s21_is_not_equal_6447) {
-  char *example = "( 0.30062065031979853665741828 != 18995483218668694211578 ) = True";
+  char *example =
+      "( 0.30062065031979853665741828 != 18995483218668694211578 ) = True";
   s21_decimal value_1 = {{0x32DB2C04, 0xCF941AE4, 0x18DDE3, 0x1A0000}};
   s21_decimal value_2 = {{0xE9470BFA, 0xBF4910FE, 0x405, 0x0}};
   int code = 1;
@@ -64504,7 +65781,8 @@ START_TEST(s21_is_not_equal_6448) {
 }
 
 START_TEST(s21_is_not_equal_6449) {
-  char *example = "( -37.386433708405543 != 0.3366703632521197335788389 ) = True";
+  char *example =
+      "( -37.386433708405543 != 0.3366703632521197335788389 ) = True";
   s21_decimal value_1 = {{0x6C9BB327, 0x84D2C3, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x5776BB65, 0x5E9FB9B3, 0x2C8ED, 0x190000}};
   int code = 1;
@@ -64604,7 +65882,8 @@ START_TEST(s21_is_not_equal_6458) {
 }
 
 START_TEST(s21_is_not_equal_6459) {
-  char *example = "( 1937849221066676817218440403 != 175552648401653871 ) = True";
+  char *example =
+      "( 1937849221066676817218440403 != 175552648401653871 ) = True";
   s21_decimal value_1 = {{0x48030CD3, 0xC5807A84, 0x642F388, 0x0}};
   s21_decimal value_2 = {{0x1F5C106F, 0x26FB034, 0x0, 0x0}};
   int code = 1;
@@ -64654,7 +65933,8 @@ START_TEST(s21_is_not_equal_6463) {
 }
 
 START_TEST(s21_is_not_equal_6464) {
-  char *example = "( 1415949899367774070351709882 != 1009733320598289657472296310 ) = True";
+  char *example =
+      "( 1415949899367774070351709882 != 1009733320598289657472296310 ) = True";
   s21_decimal value_1 = {{0x8735C6BA, 0xD9EC156D, 0x4933F0D, 0x0}};
   s21_decimal value_2 = {{0x488D2576, 0xFDBE31FD, 0x3433B58, 0x0}};
   int code = 1;
@@ -64674,7 +65954,8 @@ START_TEST(s21_is_not_equal_6465) {
 }
 
 START_TEST(s21_is_not_equal_6466) {
-  char *example = "( 0.17597077840605755576193254 != 1054397450169575127898640833 ) = True";
+  char *example =
+      "( 0.17597077840605755576193254 != 1054397450169575127898640833 ) = True";
   s21_decimal value_1 = {{0x567890E6, 0x804F3CBC, 0xE8E53, 0x1A0000}};
   s21_decimal value_2 = {{0x870BD1C1, 0x4E8DD1B1, 0x3682D58, 0x0}};
   int code = 1;
@@ -64684,7 +65965,8 @@ START_TEST(s21_is_not_equal_6466) {
 }
 
 START_TEST(s21_is_not_equal_6467) {
-  char *example = "( -15.480282226102360994827973 != 1397446183002823388256428695 ) = True";
+  char *example =
+      "( -15.480282226102360994827973 != 1397446183002823388256428695 ) = True";
   s21_decimal value_1 = {{0x7D214EC5, 0xC7F05DBA, 0xCCE13, 0x80180000}};
   s21_decimal value_2 = {{0x66526297, 0x608DADC1, 0x483F0BD, 0x0}};
   int code = 1;
@@ -64704,7 +65986,8 @@ START_TEST(s21_is_not_equal_6468) {
 }
 
 START_TEST(s21_is_not_equal_6469) {
-  char *example = "( -66612.33168056800716817488 != 1097291284221163230845194220 ) = True";
+  char *example =
+      "( -66612.33168056800716817488 != 1097291284221163230845194220 ) = True";
   s21_decimal value_1 = {{0x7F48450, 0x2C71D5C2, 0x58292, 0x80140000}};
   s21_decimal value_2 = {{0xFB7CFEC, 0xB5C9184A, 0x38BA877, 0x0}};
   int code = 1;
@@ -64744,7 +66027,8 @@ START_TEST(s21_is_not_equal_6472) {
 }
 
 START_TEST(s21_is_not_equal_6473) {
-  char *example = "( 1156466685862506761898662697 != -2.610545560445721 ) = True";
+  char *example =
+      "( 1156466685862506761898662697 != -2.610545560445721 ) = True";
   s21_decimal value_1 = {{0xB12B9B29, 0xA934CF45, 0x3BC9B58, 0x0}};
   s21_decimal value_2 = {{0xCCE319, 0x94647, 0x0, 0x800F0000}};
   int code = 1;
@@ -64804,7 +66088,8 @@ START_TEST(s21_is_not_equal_6478) {
 }
 
 START_TEST(s21_is_not_equal_6479) {
-  char *example = "( 1247479697215946387989308129 != 1379365042574942838 ) = True";
+  char *example =
+      "( 1247479697215946387989308129 != 1379365042574942838 ) = True";
   s21_decimal value_1 = {{0xE45A2E1, 0xE484FFFA, 0x407E419, 0x0}};
   s21_decimal value_2 = {{0xB2456276, 0x13247D32, 0x0, 0x0}};
   int code = 1;
@@ -64844,7 +66129,8 @@ START_TEST(s21_is_not_equal_6482) {
 }
 
 START_TEST(s21_is_not_equal_6483) {
-  char *example = "( 17722796488675872241 != 1477941543421492605217600933 ) = True";
+  char *example =
+      "( 17722796488675872241 != 1477941543421492605217600933 ) = True";
   s21_decimal value_1 = {{0xCE10CDF1, 0xF5F40581, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD5AEF5A5, 0x9BF50FAF, 0x4C6864B, 0x0}};
   int code = 1;
@@ -64904,7 +66190,8 @@ START_TEST(s21_is_not_equal_6488) {
 }
 
 START_TEST(s21_is_not_equal_6489) {
-  char *example = "( -2.572434984423990482 != 1813931425387433255524244089 ) = True";
+  char *example =
+      "( -2.572434984423990482 != 1813931425387433255524244089 ) = True";
   s21_decimal value_1 = {{0x2E6124D2, 0x23B31FFD, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xFB961A79, 0x9B74063C, 0x5DC72EB, 0x0}};
   int code = 1;
@@ -64914,7 +66201,8 @@ START_TEST(s21_is_not_equal_6489) {
 }
 
 START_TEST(s21_is_not_equal_6490) {
-  char *example = "( 1826063189520642890510311185 != 1134970789801491789475471728 ) = True";
+  char *example =
+      "( 1826063189520642890510311185 != 1134970789801491789475471728 ) = True";
   s21_decimal value_1 = {{0xFE71F11, 0xDBD40F3E, 0x5E67BEB, 0x0}};
   s21_decimal value_2 = {{0xD987E170, 0xCCEEC498, 0x3AAD369, 0x0}};
   int code = 1;
@@ -64984,7 +66272,8 @@ START_TEST(s21_is_not_equal_6496) {
 }
 
 START_TEST(s21_is_not_equal_6497) {
-  char *example = "( 1850105549278427455487 != 1552683951770890947231636534 ) = True";
+  char *example =
+      "( 1850105549278427455487 != 1552683951770890947231636534 ) = True";
   s21_decimal value_1 = {{0x179F9FFF, 0x4B5F4ACA, 0x64, 0x0}};
   s21_decimal value_2 = {{0x47AA5C36, 0xAF467627, 0x504599D, 0x0}};
   int code = 1;
@@ -65144,7 +66433,8 @@ START_TEST(s21_is_not_equal_6512) {
 }
 
 START_TEST(s21_is_not_equal_6513) {
-  char *example = "( -81.665981609039206280510549 != 2.308014741087810E-11 ) = True";
+  char *example =
+      "( -81.665981609039206280510549 != 2.308014741087810E-11 ) = True";
   s21_decimal value_1 = {{0x1976BC55, 0xBBE31A8E, 0x438D71, 0x80180000}};
   s21_decimal value_2 = {{0xA7E0BD6D, 0xD1E9, 0x0, 0x190000}};
   int code = 1;
@@ -65214,7 +66504,8 @@ START_TEST(s21_is_not_equal_6519) {
 }
 
 START_TEST(s21_is_not_equal_6520) {
-  char *example = "( 1160150287637554526198126930 != 1539522226447819004054940524 ) = True";
+  char *example =
+      "( 1160150287637554526198126930 != 1539522226447819004054940524 ) = True";
   s21_decimal value_1 = {{0x55D75952, 0x1D024691, 0x3BFA761, 0x0}};
   s21_decimal value_2 = {{0x8FE52B6C, 0x200E91A3, 0x4F97683, 0x0}};
   int code = 1;
@@ -65304,7 +66595,8 @@ START_TEST(s21_is_not_equal_6528) {
 }
 
 START_TEST(s21_is_not_equal_6529) {
-  char *example = "( 1824495572287944452148771 != 0.99089754215824852725231665 ) = True";
+  char *example =
+      "( 1824495572287944452148771 != 0.99089754215824852725231665 ) = True";
   s21_decimal value_1 = {{0x54AB0E23, 0x1A68940D, 0x1825A, 0x0}};
   s21_decimal value_2 = {{0xD8B7031, 0x56EF8A62, 0x51F712, 0x1A0000}};
   int code = 1;
@@ -65314,7 +66606,8 @@ START_TEST(s21_is_not_equal_6529) {
 }
 
 START_TEST(s21_is_not_equal_6530) {
-  char *example = "( -7.9259710821159818646890952 != 420.76321683489682939 ) = True";
+  char *example =
+      "( -7.9259710821159818646890952 != 420.76321683489682939 ) = True";
   s21_decimal value_1 = {{0x487DA9C8, 0x887C1B48, 0x418FE5, 0x80190000}};
   s21_decimal value_2 = {{0x2777F5FB, 0x47ED1FA4, 0x2, 0x110000}};
   int code = 1;
@@ -65334,7 +66627,8 @@ START_TEST(s21_is_not_equal_6531) {
 }
 
 START_TEST(s21_is_not_equal_6532) {
-  char *example = "( 139843818255994794169 != 1505243676743565015020267338 ) = True";
+  char *example =
+      "( 139843818255994794169 != 1505243676743565015020267338 ) = True";
   s21_decimal value_1 = {{0x8EDB30B9, 0x94B90BC7, 0x7, 0x0}};
   s21_decimal value_2 = {{0xE2A0E74A, 0x38E6D2A8, 0x4DD1BBF, 0x0}};
   int code = 1;
@@ -65354,7 +66648,8 @@ START_TEST(s21_is_not_equal_6533) {
 }
 
 START_TEST(s21_is_not_equal_6534) {
-  char *example = "( 140006387693578405 != 1241764614830534022210394832 ) = True";
+  char *example =
+      "( 140006387693578405 != 1241764614830534022210394832 ) = True";
   s21_decimal value_1 = {{0x5CC2E8A5, 0x1F16711, 0x0, 0x0}};
   s21_decimal value_2 = {{0x50121AD0, 0xA7DEDFA4, 0x40329E2, 0x0}};
   int code = 1;
@@ -65384,7 +66679,8 @@ START_TEST(s21_is_not_equal_6536) {
 }
 
 START_TEST(s21_is_not_equal_6537) {
-  char *example = "( 0.28403021960035836752684774 != 163172109565143900831430328 ) = True";
+  char *example =
+      "( 0.28403021960035836752684774 != 163172109565143900831430328 ) = True";
   s21_decimal value_1 = {{0x9A5DE6E6, 0xE7DCB0B9, 0x177E92, 0x1A0000}};
   s21_decimal value_2 = {{0x8C1D36B8, 0xC8B2D21F, 0x86F909, 0x0}};
   int code = 1;
@@ -65394,7 +66690,8 @@ START_TEST(s21_is_not_equal_6537) {
 }
 
 START_TEST(s21_is_not_equal_6538) {
-  char *example = "( 1630786249408586151399365487 != 1705898028384781979357298581 ) = True";
+  char *example =
+      "( 1630786249408586151399365487 != 1705898028384781979357298581 ) = True";
   s21_decimal value_1 = {{0x13D19B6F, 0xB931A63B, 0x544F46B, 0x0}};
   s21_decimal value_2 = {{0x70C03F95, 0x6BB16B8E, 0x58315F5, 0x0}};
   int code = 1;
@@ -65414,7 +66711,8 @@ START_TEST(s21_is_not_equal_6539) {
 }
 
 START_TEST(s21_is_not_equal_6540) {
-  char *example = "( 1226272489403274245364342357 != -7179219949.3622974242675502 ) = True";
+  char *example =
+      "( 1226272489403274245364342357 != -7179219949.3622974242675502 ) = True";
   s21_decimal value_1 = {{0x70055E55, 0xDA7FC136, 0x3F6594C, 0x0}};
   s21_decimal value_2 = {{0x5570DB2E, 0xEED42B32, 0x3B6296, 0x80100000}};
   int code = 1;
@@ -65564,7 +66862,8 @@ START_TEST(s21_is_not_equal_6554) {
 }
 
 START_TEST(s21_is_not_equal_6555) {
-  char *example = "( 1419909618892502178944795777 != -9.881174292834368 ) = True";
+  char *example =
+      "( 1419909618892502178944795777 != -9.881174292834368 ) = True";
   s21_decimal value_1 = {{0xC9CC4481, 0xAD43CC75, 0x496858E, 0x0}};
   s21_decimal value_2 = {{0x2BB02840, 0x231AE0, 0x0, 0x800F0000}};
   int code = 1;
@@ -65614,7 +66913,8 @@ START_TEST(s21_is_not_equal_6559) {
 }
 
 START_TEST(s21_is_not_equal_6560) {
-  char *example = "( 1327265999181363567317327104 != 1145814750357389528598309 ) = True";
+  char *example =
+      "( 1327265999181363567317327104 != 1145814750357389528598309 ) = True";
   s21_decimal value_1 = {{0x57019D00, 0xFD2A71DF, 0x449E381, 0x0}};
   s21_decimal value_2 = {{0xF3090725, 0xBDF8F750, 0xF2A2, 0x0}};
   int code = 1;
@@ -65634,7 +66934,8 @@ START_TEST(s21_is_not_equal_6561) {
 }
 
 START_TEST(s21_is_not_equal_6562) {
-  char *example = "( 1254110332770213759890830071 != -498475.542683322762 ) = True";
+  char *example =
+      "( 1254110332770213759890830071 != -498475.542683322762 ) = True";
   s21_decimal value_1 = {{0xDBD932F7, 0x5DC5C95A, 0x40D6031, 0x0}};
   s21_decimal value_2 = {{0x72DC098A, 0x6EAF0DD, 0x0, 0x800C0000}};
   int code = 1;
@@ -65694,7 +66995,8 @@ START_TEST(s21_is_not_equal_6567) {
 }
 
 START_TEST(s21_is_not_equal_6568) {
-  char *example = "( 1602547549112612325268258399 != 18979192596703974 ) = True";
+  char *example =
+      "( 1602547549112612325268258399 != 18979192596703974 ) = True";
   s21_decimal value_1 = {{0x5845FE5F, 0xB684986A, 0x52D98A4, 0x0}};
   s21_decimal value_2 = {{0xA0D9AAE6, 0x436D79, 0x0, 0x0}};
   int code = 1;
@@ -65714,7 +67016,8 @@ START_TEST(s21_is_not_equal_6569) {
 }
 
 START_TEST(s21_is_not_equal_6570) {
-  char *example = "( -7.638499364990703 != 1857130853734190880164240231 ) = True";
+  char *example =
+      "( -7.638499364990703 != 1857130853734190880164240231 ) = True";
   s21_decimal value_1 = {{0xB9446EEF, 0x1B232C, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0xDFF95B67, 0x4F77E98B, 0x6002EC1, 0x0}};
   int code = 1;
@@ -65754,7 +67057,8 @@ START_TEST(s21_is_not_equal_6573) {
 }
 
 START_TEST(s21_is_not_equal_6574) {
-  char *example = "( 1507924533782887198160309294 != 6.2023004831879E-10 ) = True";
+  char *example =
+      "( 1507924533782887198160309294 != 6.2023004831879E-10 ) = True";
   s21_decimal value_1 = {{0x113FCC2E, 0xC60954D8, 0x4DF5370, 0x0}};
   s21_decimal value_2 = {{0xDB2BC087, 0x3868, 0x0, 0x170000}};
   int code = 1;
@@ -65844,7 +67148,9 @@ START_TEST(s21_is_not_equal_6582) {
 }
 
 START_TEST(s21_is_not_equal_6583) {
-  char *example = "( 79228162514264337593543950335 != -4.9298405707828548313454222 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -4.9298405707828548313454222 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x488E968E, 0xEDAD4259, 0x28C757, 0x80190000}};
   int code = 1;
@@ -66024,7 +67330,8 @@ START_TEST(s21_is_not_equal_6600) {
 }
 
 START_TEST(s21_is_not_equal_6601) {
-  char *example = "( 1225416229738425222608948013 != 1844043398152858947922011265 ) = True";
+  char *example =
+      "( 1225416229738425222608948013 != 1844043398152858947922011265 ) = True";
   s21_decimal value_1 = {{0xC83F8B2D, 0xEC8FD729, 0x3F5A3FA, 0x0}};
   s21_decimal value_2 = {{0x91F9A481, 0xEBF76B9D, 0x5F55B60, 0x0}};
   int code = 1;
@@ -66044,7 +67351,8 @@ START_TEST(s21_is_not_equal_6602) {
 }
 
 START_TEST(s21_is_not_equal_6603) {
-  char *example = "( 1774280584962828239 != 1049797236998870789735800398 ) = True";
+  char *example =
+      "( 1774280584962828239 != 1049797236998870789735800398 ) = True";
   s21_decimal value_1 = {{0x9E94E7CF, 0x189F82CA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8075E4E, 0x404CDC0E, 0x3645F36, 0x0}};
   int code = 1;
@@ -66094,7 +67402,8 @@ START_TEST(s21_is_not_equal_6607) {
 }
 
 START_TEST(s21_is_not_equal_6608) {
-  char *example = "( 1273550206805475018256983 != 1002868696337509111487316 ) = True";
+  char *example =
+      "( 1273550206805475018256983 != 1002868696337509111487316 ) = True";
   s21_decimal value_1 = {{0x8689B257, 0x4B885B65, 0x10DAF, 0x0}};
   s21_decimal value_2 = {{0x5FAEDB54, 0x9EF784E3, 0xD45D, 0x0}};
   int code = 1;
@@ -66104,7 +67413,8 @@ START_TEST(s21_is_not_equal_6608) {
 }
 
 START_TEST(s21_is_not_equal_6609) {
-  char *example = "( 1744644859755619252016903695 != -72.59912531433468 ) = True";
+  char *example =
+      "( 1744644859755619252016903695 != -72.59912531433468 ) = True";
   s21_decimal value_1 = {{0x54F5F60F, 0x5BAEC524, 0x5A322EB, 0x0}};
   s21_decimal value_2 = {{0x1B8957FC, 0x19CADA, 0x0, 0x800E0000}};
   int code = 1;
@@ -66134,7 +67444,8 @@ START_TEST(s21_is_not_equal_6611) {
 }
 
 START_TEST(s21_is_not_equal_6612) {
-  char *example = "( -8.8257737918338011548793520 != 1054244926437605310159188690 ) = True";
+  char *example =
+      "( -8.8257737918338011548793520 != 1054244926437605310159188690 ) = True";
   s21_decimal value_1 = {{0x818FDF78, 0x27EC3F35, 0x74CEE, 0x80180000}};
   s21_decimal value_2 = {{0x9214F2D2, 0xFA90E882, 0x3680D0B, 0x0}};
   int code = 1;
@@ -66144,7 +67455,8 @@ START_TEST(s21_is_not_equal_6612) {
 }
 
 START_TEST(s21_is_not_equal_6613) {
-  char *example = "( 15936674236004747059 != -7.2107479412338909381592076 ) = True";
+  char *example =
+      "( 15936674236004747059 != -7.2107479412338909381592076 ) = True";
   s21_decimal value_1 = {{0x122EC733, 0xDD2A70C8, 0x0, 0x0}};
   s21_decimal value_2 = {{0x35BF040C, 0x4AA40ABD, 0x3BA55A, 0x80190000}};
   int code = 1;
@@ -66194,7 +67506,8 @@ START_TEST(s21_is_not_equal_6617) {
 }
 
 START_TEST(s21_is_not_equal_6618) {
-  char *example = "( 1130635732995339886604272985 != 1976352312560914773133235309 ) = True";
+  char *example =
+      "( 1130635732995339886604272985 != 1976352312560914773133235309 ) = True";
   s21_decimal value_1 = {{0xF6A34559, 0xE6712CC4, 0x3A73D6D, 0x0}};
   s21_decimal value_2 = {{0x7FC0146D, 0x8B342A3C, 0x662CCE1, 0x0}};
   int code = 1;
@@ -66224,7 +67537,8 @@ START_TEST(s21_is_not_equal_6620) {
 }
 
 START_TEST(s21_is_not_equal_6621) {
-  char *example = "( 1437785173822655760997490869 != -503.690941359680094 ) = True";
+  char *example =
+      "( 1437785173822655760997490869 != -503.690941359680094 ) = True";
   s21_decimal value_1 = {{0xDAE320B5, 0x73884E16, 0x4A54EDA, 0x0}};
   s21_decimal value_2 = {{0x14536A5E, 0x6FD783E, 0x0, 0x800F0000}};
   int code = 1;
@@ -66264,7 +67578,8 @@ START_TEST(s21_is_not_equal_6624) {
 }
 
 START_TEST(s21_is_not_equal_6625) {
-  char *example = "( 1526547391737530983185896468 != 14591467618043218116 ) = True";
+  char *example =
+      "( 1526547391737530983185896468 != 14591467618043218116 ) = True";
   s21_decimal value_1 = {{0x973FD414, 0xED1B2732, 0x4EEBAFB, 0x0}};
   s21_decimal value_2 = {{0x5D14C8C4, 0xCA7F4E7D, 0x0, 0x0}};
   int code = 1;
@@ -66444,7 +67759,8 @@ START_TEST(s21_is_not_equal_6642) {
 }
 
 START_TEST(s21_is_not_equal_6643) {
-  char *example = "( -7.1249621800907372672708750 != -3.9192695745176871664174171 ) = True";
+  char *example =
+      "( -7.1249621800907372672708750 != -3.9192695745176871664174171 ) = True";
   s21_decimal value_1 = {{0x886F64DB, 0xF9462504, 0x5E4C4, 0x80180000}};
   s21_decimal value_2 = {{0x99DD445B, 0x4B2AF4C0, 0x206B60, 0x80190000}};
   int code = 1;
@@ -66514,7 +67830,8 @@ START_TEST(s21_is_not_equal_6649) {
 }
 
 START_TEST(s21_is_not_equal_6650) {
-  char *example = "( -76.725237736924391165516960 != -5.1507474533577895356135937 ) = True";
+  char *example =
+      "( -76.725237736924391165516960 != -5.1507474533577895356135937 ) = True";
   s21_decimal value_1 = {{0x5B3E9610, 0x58E1B81B, 0x658B8, 0x80170000}};
   s21_decimal value_2 = {{0xB9BBFA01, 0xCA17E91F, 0x2A9B21, 0x80190000}};
   int code = 1;
@@ -66554,7 +67871,8 @@ START_TEST(s21_is_not_equal_6653) {
 }
 
 START_TEST(s21_is_not_equal_6654) {
-  char *example = "( -66.608838878275798741243263 != 1600599217058447386644573535 ) = True";
+  char *example =
+      "( -66.608838878275798741243263 != 1600599217058447386644573535 ) = True";
   s21_decimal value_1 = {{0xB623557F, 0x6413DE79, 0x3718F8, 0x80180000}};
   s21_decimal value_2 = {{0xB323ED5F, 0x6BB0EB09, 0x52BFC11, 0x0}};
   int code = 1;
@@ -66574,7 +67892,8 @@ START_TEST(s21_is_not_equal_6655) {
 }
 
 START_TEST(s21_is_not_equal_6656) {
-  char *example = "( 11.4572292071286779961425596 != -781.20467085403387299122329 ) = True";
+  char *example =
+      "( 11.4572292071286779961425596 != -781.20467085403387299122329 ) = True";
   s21_decimal value_1 = {{0xEA583EBC, 0x66052FCC, 0x5EC5A0, 0x190000}};
   s21_decimal value_2 = {{0x67004C99, 0x1A898CF, 0x409EA7, 0x80170000}};
   int code = 1;
@@ -66644,7 +67963,8 @@ START_TEST(s21_is_not_equal_6662) {
 }
 
 START_TEST(s21_is_not_equal_6663) {
-  char *example = "( 0.29270897061261938210 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 0.29270897061261938210 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x4F5AB49D, 0x289F1C94, 0x0, 0x130000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -66654,7 +67974,8 @@ START_TEST(s21_is_not_equal_6663) {
 }
 
 START_TEST(s21_is_not_equal_6664) {
-  char *example = "( 1393435259918807214824444676 != 1653319614283473240581995934 ) = True";
+  char *example =
+      "( 1393435259918807214824444676 != 1653319614283473240581995934 ) = True";
   s21_decimal value_1 = {{0xEDB95304, 0xCD147A4F, 0x4809F64, 0x0}};
   s21_decimal value_2 = {{0x886FFD9E, 0xE186103D, 0x557980B, 0x0}};
   int code = 1;
@@ -66674,7 +67995,8 @@ START_TEST(s21_is_not_equal_6665) {
 }
 
 START_TEST(s21_is_not_equal_6666) {
-  char *example = "( 1655419405563997172353930045 != 11102180783269991 ) = True";
+  char *example =
+      "( 1655419405563997172353930045 != 11102180783269991 ) = True";
   s21_decimal value_1 = {{0xB08F133D, 0xCB5B01BF, 0x55954B1, 0x0}};
   s21_decimal value_2 = {{0xE5D1A867, 0x27715F, 0x0, 0x0}};
   int code = 1;
@@ -66724,7 +68046,8 @@ START_TEST(s21_is_not_equal_6670) {
 }
 
 START_TEST(s21_is_not_equal_6671) {
-  char *example = "( 1246444258794459580022725404 != 1030065974932698134529050477 ) = True";
+  char *example =
+      "( 1246444258794459580022725404 != 1030065974932698134529050477 ) = True";
   s21_decimal value_1 = {{0xCDF11B1C, 0xA9D16D99, 0x40708D6, 0x0}};
   s21_decimal value_2 = {{0x2A5E076D, 0x642A5EDD, 0x3540CF4, 0x0}};
   int code = 1;
@@ -66774,7 +68097,8 @@ START_TEST(s21_is_not_equal_6675) {
 }
 
 START_TEST(s21_is_not_equal_6676) {
-  char *example = "( 10105991497580454394813139 != 1134492634592823747444637960 ) = True";
+  char *example =
+      "( 10105991497580454394813139 != 1134492634592823747444637960 ) = True";
   s21_decimal value_1 = {{0xD1D5AD3, 0xE5974BAF, 0x85C06, 0x0}};
   s21_decimal value_2 = {{0x48028108, 0xF46857E2, 0x3AA6E28, 0x0}};
   int code = 1;
@@ -66794,7 +68118,8 @@ START_TEST(s21_is_not_equal_6677) {
 }
 
 START_TEST(s21_is_not_equal_6678) {
-  char *example = "( 1724260008794329193833760229 != -7467.4284465236841615051879 ) = True";
+  char *example =
+      "( 1724260008794329193833760229 != -7467.4284465236841615051879 ) = True";
   s21_decimal value_1 = {{0xACF05E5, 0x5F8C490D, 0x5924642, 0x0}};
   s21_decimal value_2 = {{0xA713CC67, 0x12824963, 0x3DC4E5, 0x80160000}};
   int code = 1;
@@ -66834,7 +68159,8 @@ START_TEST(s21_is_not_equal_6681) {
 }
 
 START_TEST(s21_is_not_equal_6682) {
-  char *example = "( 190774243053933586530325 != 9.9365481414532297E-10 ) = True";
+  char *example =
+      "( 190774243053933586530325 != 9.9365481414532297E-10 ) = True";
   s21_decimal value_1 = {{0x1FC7C015, 0xE476DC4B, 0x2865, 0x0}};
   s21_decimal value_2 = {{0xFEA61CC9, 0x1610460, 0x0, 0x1A0000}};
   int code = 1;
@@ -66844,7 +68170,8 @@ START_TEST(s21_is_not_equal_6682) {
 }
 
 START_TEST(s21_is_not_equal_6683) {
-  char *example = "( 15443080036935298303 != 1670104832624873729151363328 ) = True";
+  char *example =
+      "( 15443080036935298303 != 1670104832624873729151363328 ) = True";
   s21_decimal value_1 = {{0xFF746CFF, 0xD650D778, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4B8A6900, 0x63F935C3, 0x5657A74, 0x0}};
   int code = 1;
@@ -66854,7 +68181,8 @@ START_TEST(s21_is_not_equal_6683) {
 }
 
 START_TEST(s21_is_not_equal_6684) {
-  char *example = "( 19304282431924497 != -6833.5424779900179905624916 ) = True";
+  char *example =
+      "( 19304282431924497 != -6833.5424779900179905624916 ) = True";
   s21_decimal value_1 = {{0x80FFA911, 0x449524, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3489BB54, 0xCCDA31AF, 0x388696, 0x80160000}};
   int code = 1;
@@ -66894,7 +68222,8 @@ START_TEST(s21_is_not_equal_6687) {
 }
 
 START_TEST(s21_is_not_equal_6688) {
-  char *example = "( 1354612205099622068725918329 != 1980999092553910193024379381 ) = True";
+  char *example =
+      "( 1354612205099622068725918329 != 1980999092553910193024379381 ) = True";
   s21_decimal value_1 = {{0x2DC6AA79, 0xC83F8979, 0x460824A, 0x0}};
   s21_decimal value_2 = {{0xEAFFA9F5, 0xFDEFA803, 0x666A4DF, 0x0}};
   int code = 1;
@@ -66904,7 +68233,8 @@ START_TEST(s21_is_not_equal_6688) {
 }
 
 START_TEST(s21_is_not_equal_6689) {
-  char *example = "( 0.9214357573919406617550 != -13306.753235369520526195236 ) = True";
+  char *example =
+      "( 0.9214357573919406617550 != -13306.753235369520526195236 ) = True";
   s21_decimal value_1 = {{0x41A3B1FB, 0xF37D6B5F, 0x31, 0x150000}};
   s21_decimal value_2 = {{0x9B4EFA24, 0x89CFB859, 0xB01D0, 0x80150000}};
   int code = 1;
@@ -66954,7 +68284,8 @@ START_TEST(s21_is_not_equal_6693) {
 }
 
 START_TEST(s21_is_not_equal_6694) {
-  char *example = "( 178179003707468323844584 != 1720693216531398655969579 ) = True";
+  char *example =
+      "( 178179003707468323844584 != 1720693216531398655969579 ) = True";
   s21_decimal value_1 = {{0x12A171E8, 0x1A67BF1F, 0x25BB, 0x0}};
   s21_decimal value_2 = {{0xD04F892B, 0xF75763EC, 0x16C5E, 0x0}};
   int code = 1;
@@ -67074,7 +68405,8 @@ START_TEST(s21_is_not_equal_6705) {
 }
 
 START_TEST(s21_is_not_equal_6706) {
-  char *example = "( -25.61186491437819 != -8.2159253925857769690176420 ) = True";
+  char *example =
+      "( -25.61186491437819 != -8.2159253925857769690176420 ) = True";
   s21_decimal value_1 = {{0xB30692FB, 0x91962, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xF8CFE92A, 0x353E3E6D, 0x6CBCA, 0x80180000}};
   int code = 1;
@@ -67094,7 +68426,8 @@ START_TEST(s21_is_not_equal_6707) {
 }
 
 START_TEST(s21_is_not_equal_6708) {
-  char *example = "( 0.206352607285636690188 != 1174778350623252926771235626 ) = True";
+  char *example =
+      "( 0.206352607285636690188 != 1174778350623252926771235626 ) = True";
   s21_decimal value_1 = {{0xF80EF10C, 0x2FB7BB05, 0xB, 0x150000}};
   s21_decimal value_2 = {{0xDC640B2A, 0xFF29EBF1, 0x3CBC0FD, 0x0}};
   int code = 1;
@@ -67104,7 +68437,8 @@ START_TEST(s21_is_not_equal_6708) {
 }
 
 START_TEST(s21_is_not_equal_6709) {
-  char *example = "( 79228162514264337593543950335 != 19480560791598412 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != 19480560791598412 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x8202354C, 0x453577, 0x0, 0x0}};
   int code = 1;
@@ -67134,7 +68468,8 @@ START_TEST(s21_is_not_equal_6711) {
 }
 
 START_TEST(s21_is_not_equal_6712) {
-  char *example = "( 1672108145278172863571 != 1143083475757069809594683377 ) = True";
+  char *example =
+      "( 1672108145278172863571 != 1143083475757069809594683377 ) = True";
   s21_decimal value_1 = {{0xFEC11C53, 0xA5297AEB, 0x5A, 0x0}};
   s21_decimal value_2 = {{0xAA7C4FF1, 0x632CF673, 0x3B18957, 0x0}};
   int code = 1;
@@ -67174,7 +68509,8 @@ START_TEST(s21_is_not_equal_6715) {
 }
 
 START_TEST(s21_is_not_equal_6716) {
-  char *example = "( -4.8516374683903207977 != 1453315963952796451251803941 ) = True";
+  char *example =
+      "( -4.8516374683903207977 != 1453315963952796451251803941 ) = True";
   s21_decimal value_1 = {{0x67CE2A29, 0xA14CC9B9, 0x2, 0x80130000}};
   s21_decimal value_2 = {{0x6D29D725, 0x45723C55, 0x4B227A0, 0x0}};
   int code = 1;
@@ -67214,7 +68550,8 @@ START_TEST(s21_is_not_equal_6719) {
 }
 
 START_TEST(s21_is_not_equal_6720) {
-  char *example = "( 1597765770551819159497722028 != -15.017254752030323584285264 ) = True";
+  char *example =
+      "( 1597765770551819159497722028 != -15.017254752030323584285264 ) = True";
   s21_decimal value_1 = {{0x3205C8AC, 0xFA4EABA7, 0x529A40F, 0x0}};
   s21_decimal value_2 = {{0x96683A50, 0x2E791E8, 0xC6C07, 0x80180000}};
   int code = 1;
@@ -67224,7 +68561,8 @@ START_TEST(s21_is_not_equal_6720) {
 }
 
 START_TEST(s21_is_not_equal_6721) {
-  char *example = "( 170712975647169152953354 != 1378768452616251770383089492 ) = True";
+  char *example =
+      "( 170712975647169152953354 != 1378768452616251770383089492 ) = True";
   s21_decimal value_1 = {{0xC3DA2C0A, 0x5E73BAFD, 0x2426, 0x0}};
   s21_decimal value_2 = {{0x6873BF54, 0x95845BA4, 0x4747D93, 0x0}};
   int code = 1;
@@ -67304,7 +68642,8 @@ START_TEST(s21_is_not_equal_6728) {
 }
 
 START_TEST(s21_is_not_equal_6729) {
-  char *example = "( -1.9476231498675047 != 1505132662923784916428037003 ) = True";
+  char *example =
+      "( -1.9476231498675047 != 1505132662923784916428037003 ) = True";
   s21_decimal value_1 = {{0x840AB367, 0x453187, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xD8A69B8B, 0x26AAC115, 0x4DD043D, 0x0}};
   int code = 1;
@@ -67334,7 +68673,8 @@ START_TEST(s21_is_not_equal_6731) {
 }
 
 START_TEST(s21_is_not_equal_6732) {
-  char *example = "( -296.12767599921677660205063 != 1255120287773407948492423863 ) = True";
+  char *example =
+      "( -296.12767599921677660205063 != 1255120287773407948492423863 ) = True";
   s21_decimal value_1 = {{0x521A3007, 0x592761CC, 0x187EBF, 0x80170000}};
   s21_decimal value_2 = {{0xBF76C2B7, 0x23009B87, 0x40E360F, 0x0}};
   int code = 1;
@@ -67344,7 +68684,8 @@ START_TEST(s21_is_not_equal_6732) {
 }
 
 START_TEST(s21_is_not_equal_6733) {
-  char *example = "( -54351.70121324359 != -643660.95485350602204830293 ) = True";
+  char *example =
+      "( -54351.70121324359 != -643660.95485350602204830293 ) = True";
   s21_decimal value_1 = {{0x28601747, 0x134F42, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xC2CCDA55, 0x729C8C4, 0x353E0D, 0x80140000}};
   int code = 1;
@@ -67404,7 +68745,8 @@ START_TEST(s21_is_not_equal_6738) {
 }
 
 START_TEST(s21_is_not_equal_6739) {
-  char *example = "( 1200650316711424938011408719 != 13464859405598335 ) = True";
+  char *example =
+      "( 1200650316711424938011408719 != 13464859405598335 ) = True";
   s21_decimal value_1 = {{0xCC36394F, 0x16B4D542, 0x3E12798, 0x0}};
   s21_decimal value_2 = {{0xE1D23E7F, 0x2FD637, 0x0, 0x0}};
   int code = 1;
@@ -67414,7 +68756,8 @@ START_TEST(s21_is_not_equal_6739) {
 }
 
 START_TEST(s21_is_not_equal_6740) {
-  char *example = "( 1447789629302539329994489569 != -5.66523919574445 ) = True";
+  char *example =
+      "( 1447789629302539329994489569 != -5.66523919574445 ) = True";
   s21_decimal value_1 = {{0x61BBFEE1, 0x11D0A355, 0x4AD9561, 0x0}};
   s21_decimal value_2 = {{0x20FBA5AD, 0x20340, 0x0, 0x800E0000}};
   int code = 1;
@@ -67454,7 +68797,8 @@ START_TEST(s21_is_not_equal_6743) {
 }
 
 START_TEST(s21_is_not_equal_6744) {
-  char *example = "( 85.325781191331955518529 != 1751654874877232846360449697 ) = True";
+  char *example =
+      "( 85.325781191331955518529 != 1751654874877232846360449697 ) = True";
   s21_decimal value_1 = {{0xFE6AC41, 0x8515FE27, 0x1211, 0x150000}};
   s21_decimal value_2 = {{0xAFC692A1, 0xA11ECD0, 0x5A8EF59, 0x0}};
   int code = 1;
@@ -67484,7 +68828,8 @@ START_TEST(s21_is_not_equal_6746) {
 }
 
 START_TEST(s21_is_not_equal_6747) {
-  char *example = "( -8821.6497667814538375435134 != 7.4858151247970282E-10 ) = True";
+  char *example =
+      "( -8821.6497667814538375435134 != 7.4858151247970282E-10 ) = True";
   s21_decimal value_1 = {{0xF7D9937E, 0xEBC85133, 0x48F891, 0x80160000}};
   s21_decimal value_2 = {{0x89AD7FEA, 0x109F317, 0x0, 0x1A0000}};
   int code = 1;
@@ -67494,7 +68839,8 @@ START_TEST(s21_is_not_equal_6747) {
 }
 
 START_TEST(s21_is_not_equal_6748) {
-  char *example = "( 1999971026552281046353163263 != -873908.3953496019 ) = True";
+  char *example =
+      "( 1999971026552281046353163263 != -873908.3953496019 ) = True";
   s21_decimal value_1 = {{0x1817B3FF, 0x9844F7FE, 0x6765656, 0x0}};
   s21_decimal value_2 = {{0x8AB5DFD3, 0x1F0C26, 0x0, 0x800A0000}};
   int code = 1;
@@ -67624,7 +68970,8 @@ START_TEST(s21_is_not_equal_6760) {
 }
 
 START_TEST(s21_is_not_equal_6761) {
-  char *example = "( -6241.605746024643038730 != 1073439854646736047183788214 ) = True";
+  char *example =
+      "( -6241.605746024643038730 != 1073439854646736047183788214 ) = True";
   s21_decimal value_1 = {{0xF959B01, 0xD5F7CFA8, 0x21, 0x80110000}};
   s21_decimal value_2 = {{0x20CC78B6, 0x1F3D14A3, 0x377EDBB, 0x0}};
   int code = 1;
@@ -67684,7 +69031,8 @@ START_TEST(s21_is_not_equal_6766) {
 }
 
 START_TEST(s21_is_not_equal_6767) {
-  char *example = "( -1.7884091937690051008477215 != 1743041133352748330326453 ) = True";
+  char *example =
+      "( -1.7884091937690051008477215 != 1743041133352748330326453 ) = True";
   s21_decimal value_1 = {{0x11D3381F, 0x910BF50B, 0xECB1A, 0x80190000}};
   s21_decimal value_2 = {{0xCC7119B5, 0x72FD2C9A, 0x1711A, 0x0}};
   int code = 1;
@@ -67694,7 +69042,8 @@ START_TEST(s21_is_not_equal_6767) {
 }
 
 START_TEST(s21_is_not_equal_6768) {
-  char *example = "( 1118735689511661642455833861 != 1432012949351488136823695440 ) = True";
+  char *example =
+      "( 1118735689511661642455833861 != 1432012949351488136823695440 ) = True";
   s21_decimal value_1 = {{0x5B49DD05, 0x401263F2, 0x39D657F, 0x0}};
   s21_decimal value_2 = {{0xAF57E850, 0x89247B17, 0x4A08889, 0x0}};
   int code = 1;
@@ -67734,7 +69083,8 @@ START_TEST(s21_is_not_equal_6771) {
 }
 
 START_TEST(s21_is_not_equal_6772) {
-  char *example = "( -2.6426674148721548135622764 != -3.19605060933320338 ) = True";
+  char *example =
+      "( -2.6426674148721548135622764 != -3.19605060933320338 ) = True";
   s21_decimal value_1 = {{0x4C99E86C, 0xE04D5DDB, 0x15DC10, 0x80190000}};
   s21_decimal value_2 = {{0xD58FE92, 0x46F771C, 0x0, 0x80110000}};
   int code = 1;
@@ -67814,7 +69164,8 @@ START_TEST(s21_is_not_equal_6779) {
 }
 
 START_TEST(s21_is_not_equal_6780) {
-  char *example = "( 1473005988367582360527657350 != 1057850792429092116360909661 ) = True";
+  char *example =
+      "( 1473005988367582360527657350 != 1057850792429092116360909661 ) = True";
   s21_decimal value_1 = {{0x59035986, 0xA2348FB8, 0x4C27126, 0x0}};
   s21_decimal value_2 = {{0x713CD35D, 0x5DA8C8F2, 0x36B089E, 0x0}};
   int code = 1;
@@ -67884,7 +69235,8 @@ START_TEST(s21_is_not_equal_6786) {
 }
 
 START_TEST(s21_is_not_equal_6787) {
-  char *example = "( -9.825384359781210244301716 != 10902214503153563475122999 ) = True";
+  char *example =
+      "( -9.825384359781210244301716 != 10902214503153563475122999 ) = True";
   s21_decimal value_1 = {{0xF218C394, 0x2746779A, 0x8209B, 0x80180000}};
   s21_decimal value_2 = {{0xA9C01B37, 0x3B829224, 0x904A2, 0x0}};
   int code = 1;
@@ -67914,7 +69266,8 @@ START_TEST(s21_is_not_equal_6789) {
 }
 
 START_TEST(s21_is_not_equal_6790) {
-  char *example = "( -915.12140850185223591247394 != 1750442513815836899486515273 ) = True";
+  char *example =
+      "( -915.12140850185223591247394 != 1750442513815836899486515273 ) = True";
   s21_decimal value_1 = {{0xDB213E22, 0x188EC569, 0x4BB273, 0x80170000}};
   s21_decimal value_2 = {{0xD230C049, 0xD0837565, 0x5A7EE9E, 0x0}};
   int code = 1;
@@ -67944,7 +69297,8 @@ START_TEST(s21_is_not_equal_6792) {
 }
 
 START_TEST(s21_is_not_equal_6793) {
-  char *example = "( 1732409593852955926873730978 != 1158436520115893178445968332 ) = True";
+  char *example =
+      "( 1732409593852955926873730978 != 1158436520115893178445968332 ) = True";
   s21_decimal value_1 = {{0x26A36FA2, 0x43B69DE2, 0x5990400, 0x0}};
   s21_decimal value_2 = {{0xC6C9B3CC, 0x96FDC90C, 0x3BE3C79, 0x0}};
   int code = 1;
@@ -68014,7 +69368,8 @@ START_TEST(s21_is_not_equal_6799) {
 }
 
 START_TEST(s21_is_not_equal_6800) {
-  char *example = "( 1537123317855430750108466478 != 1.166430586755E-10 ) = True";
+  char *example =
+      "( 1537123317855430750108466478 != 1.166430586755E-10 ) = True";
   s21_decimal value_1 = {{0x4DD3D2E, 0x7A432F8, 0x4F77A86, 0x0}};
   s21_decimal value_2 = {{0x94AE4783, 0x10F, 0x0, 0x160000}};
   int code = 1;
@@ -68104,7 +69459,8 @@ START_TEST(s21_is_not_equal_6808) {
 }
 
 START_TEST(s21_is_not_equal_6809) {
-  char *example = "( -55.3527449474867949165114 != 1267291164791982376194070665 ) = True";
+  char *example =
+      "( -55.3527449474867949165114 != 1267291164791982376194070665 ) = True";
   s21_decimal value_1 = {{0x4E0F5A3A, 0xC87D5746, 0x7536, 0x80160000}};
   s21_decimal value_2 = {{0x885AD889, 0xB3B37EDD, 0x4184757, 0x0}};
   int code = 1;
@@ -68114,7 +69470,8 @@ START_TEST(s21_is_not_equal_6809) {
 }
 
 START_TEST(s21_is_not_equal_6810) {
-  char *example = "( 156943217329719170688 != 1490448801021590336495753464 ) = True";
+  char *example =
+      "( 156943217329719170688 != 1490448801021590336495753464 ) = True";
   s21_decimal value_1 = {{0xFCD75680, 0x820650A3, 0x8, 0x0}};
   s21_decimal value_2 = {{0x5B4D18F8, 0x66FD35C3, 0x4D0DECF, 0x0}};
   int code = 1;
@@ -68174,7 +69531,8 @@ START_TEST(s21_is_not_equal_6815) {
 }
 
 START_TEST(s21_is_not_equal_6816) {
-  char *example = "( 1486021655370127673916072257 != 100526862906222181433 ) = True";
+  char *example =
+      "( 1486021655370127673916072257 != 100526862906222181433 ) = True";
   s21_decimal value_1 = {{0xA74B2141, 0x5B0B3769, 0x4CD3553, 0x0}};
   s21_decimal value_2 = {{0xF5C3FC39, 0x73172932, 0x5, 0x0}};
   int code = 1;
@@ -68184,7 +69542,8 @@ START_TEST(s21_is_not_equal_6816) {
 }
 
 START_TEST(s21_is_not_equal_6817) {
-  char *example = "( 1923996589257306498599221473 != -7.6783866043340693010059333 ) = True";
+  char *example =
+      "( 1923996589257306498599221473 != -7.6783866043340693010059333 ) = True";
   s21_decimal value_1 = {{0x59FBF8E1, 0x18ABF114, 0x6377E20, 0x0}};
   s21_decimal value_2 = {{0x6AD71045, 0xB8035C9D, 0x3F839D, 0x80190000}};
   int code = 1;
@@ -68244,7 +69603,8 @@ START_TEST(s21_is_not_equal_6822) {
 }
 
 START_TEST(s21_is_not_equal_6823) {
-  char *example = "( 133550481636278896208 != 1454424733117049332558241794 ) = True";
+  char *example =
+      "( 133550481636278896208 != 1454424733117049332558241794 ) = True";
   s21_decimal value_1 = {{0xA8BB8650, 0x3D629F77, 0x7, 0x0}};
   s21_decimal value_2 = {{0xE0A8A002, 0xC4A2B586, 0x4B3126A, 0x0}};
   int code = 1;
@@ -68264,7 +69624,8 @@ START_TEST(s21_is_not_equal_6824) {
 }
 
 START_TEST(s21_is_not_equal_6825) {
-  char *example = "( 197176208271058140619852691 != 1221880052942192086362347813 ) = True";
+  char *example =
+      "( 197176208271058140619852691 != 1221880052942192086362347813 ) = True";
   s21_decimal value_1 = {{0x4D5FCB93, 0xAB229ACF, 0xA319AF, 0x0}};
   s21_decimal value_2 = {{0x151FD925, 0x655534C2, 0x3F2B72A, 0x0}};
   int code = 1;
@@ -68394,7 +69755,8 @@ START_TEST(s21_is_not_equal_6837) {
 }
 
 START_TEST(s21_is_not_equal_6838) {
-  char *example = "( 1240095428808026961981041853 != 1.4060368352259186E-10 ) = True";
+  char *example =
+      "( 1240095428808026961981041853 != 1.4060368352259186E-10 ) = True";
   s21_decimal value_1 = {{0xF6616CBD, 0xE670400A, 0x401C86B, 0x0}};
   s21_decimal value_2 = {{0x9D0C2C72, 0x31F3D4, 0x0, 0x1A0000}};
   int code = 1;
@@ -68514,7 +69876,8 @@ START_TEST(s21_is_not_equal_6849) {
 }
 
 START_TEST(s21_is_not_equal_6850) {
-  char *example = "( 0.11829348762133213487465411 != 13449724422769216 ) = True";
+  char *example =
+      "( 0.11829348762133213487465411 != 13449724422769216 ) = True";
   s21_decimal value_1 = {{0x88283C3, 0x4806884E, 0x9C8F6, 0x1A0000}};
   s21_decimal value_2 = {{0xFE8BCA40, 0x2FC873, 0x0, 0x0}};
   int code = 1;
@@ -68604,7 +69967,8 @@ START_TEST(s21_is_not_equal_6858) {
 }
 
 START_TEST(s21_is_not_equal_6859) {
-  char *example = "( -374.68507802965313487251680 != 16390259488420301 ) = True";
+  char *example =
+      "( -374.68507802965313487251680 != 16390259488420301 ) = True";
   s21_decimal value_1 = {{0xDCA9DB0, 0x30139575, 0x3196D, 0x80160000}};
   s21_decimal value_2 = {{0xAA9571CD, 0x3A3ADA, 0x0, 0x0}};
   int code = 1;
@@ -68664,7 +70028,8 @@ START_TEST(s21_is_not_equal_6864) {
 }
 
 START_TEST(s21_is_not_equal_6865) {
-  char *example = "( 1133920338800452232635367851 != 111908258770020948347311 ) = True";
+  char *example =
+      "( 1133920338800452232635367851 != 111908258770020948347311 ) = True";
   s21_decimal value_1 = {{0x27EE41AB, 0xBCD6770D, 0x3A9F4F8, 0x0}};
   s21_decimal value_2 = {{0xC73589AF, 0x8F11B3F7, 0x17B2, 0x0}};
   int code = 1;
@@ -68764,7 +70129,8 @@ START_TEST(s21_is_not_equal_6874) {
 }
 
 START_TEST(s21_is_not_equal_6875) {
-  char *example = "( 1400572102615624626194169933 != 19344609822920219036329742 ) = True";
+  char *example =
+      "( 1400572102615624626194169933 != 19344609822920219036329742 ) = True";
   s21_decimal value_1 = {{0x8EA1404D, 0xD1A4E890, 0x48686AD, 0x0}};
   s21_decimal value_2 = {{0x9509A70E, 0x6658F27B, 0x100061, 0x0}};
   int code = 1;
@@ -68834,7 +70200,8 @@ START_TEST(s21_is_not_equal_6881) {
 }
 
 START_TEST(s21_is_not_equal_6882) {
-  char *example = "( 17731602405473897 != 1571269679392896908409188134 ) = True";
+  char *example =
+      "( 17731602405473897 != 1571269679392896908409188134 ) = True";
   s21_decimal value_1 = {{0x66AD3E69, 0x3EFECC, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFE702F26, 0xFF779F56, 0x513B94B, 0x0}};
   int code = 1;
@@ -68854,7 +70221,8 @@ START_TEST(s21_is_not_equal_6883) {
 }
 
 START_TEST(s21_is_not_equal_6884) {
-  char *example = "( 1021471232565071216628675146 != -66.15021376239183662934415 ) = True";
+  char *example =
+      "( 1021471232565071216628675146 != -66.15021376239183662934415 ) = True";
   s21_decimal value_1 = {{0x7BF3324A, 0x795322DE, 0x34CF0F2, 0x0}};
   s21_decimal value_2 = {{0xA063E98F, 0x700EC33, 0x578C9, 0x80170000}};
   int code = 1;
@@ -68894,7 +70262,8 @@ START_TEST(s21_is_not_equal_6887) {
 }
 
 START_TEST(s21_is_not_equal_6888) {
-  char *example = "( 1962087752153491479434430217 != -8.623531002672054364 ) = True";
+  char *example =
+      "( 1962087752153491479434430217 != -8.623531002672054364 ) = True";
   s21_decimal value_1 = {{0x3BDD0709, 0x2CB2A2DE, 0x657003E, 0x0}};
   s21_decimal value_2 = {{0xEBD6005C, 0x77ACEFC1, 0x0, 0x80120000}};
   int code = 1;
@@ -68934,7 +70303,8 @@ START_TEST(s21_is_not_equal_6891) {
 }
 
 START_TEST(s21_is_not_equal_6892) {
-  char *example = "( 11662607077280268194709 != 3069.92275972524800542282444 ) = True";
+  char *example =
+      "( 11662607077280268194709 != 3069.92275972524800542282444 ) = True";
   s21_decimal value_1 = {{0x57109395, 0x3B2FB1A5, 0x278, 0x0}};
   s21_decimal value_2 = {{0x360092CC, 0xA095AFED, 0xFDF024, 0x170000}};
   int code = 1;
@@ -68944,7 +70314,8 @@ START_TEST(s21_is_not_equal_6892) {
 }
 
 START_TEST(s21_is_not_equal_6893) {
-  char *example = "( -12249.113540806326105144171 != 1987193268090904130530324388 ) = True";
+  char *example =
+      "( -12249.113540806326105144171 != 1987193268090904130530324388 ) = True";
   s21_decimal value_1 = {{0xF88BFB6B, 0xC68D9A62, 0xA21D9, 0x80150000}};
   s21_decimal value_2 = {{0xEF302FA4, 0xEBAED37B, 0x66BC48A, 0x0}};
   int code = 1;
@@ -68974,7 +70345,8 @@ START_TEST(s21_is_not_equal_6895) {
 }
 
 START_TEST(s21_is_not_equal_6896) {
-  char *example = "( 1214196386169837614969107539 != 1961675211438801656308560776 ) = True";
+  char *example =
+      "( 1214196386169837614969107539 != 1961675211438801656308560776 ) = True";
   s21_decimal value_1 = {{0x8B03B453, 0xFC47B7AB, 0x3EC5C15, 0x0}};
   s21_decimal value_2 = {{0x536BF388, 0x4C327EDB, 0x656A8E2, 0x0}};
   int code = 1;
@@ -68994,7 +70366,8 @@ START_TEST(s21_is_not_equal_6897) {
 }
 
 START_TEST(s21_is_not_equal_6898) {
-  char *example = "( 1673114922738895143706877039 != 18444730232998611511 ) = True";
+  char *example =
+      "( 1673114922738895143706877039 != 18444730232998611511 ) = True";
   s21_decimal value_1 = {{0x1150DC6F, 0xB3DBB74F, 0x567F7DD, 0x0}};
   s21_decimal value_2 = {{0x2BCA4A37, 0xFFF8D86C, 0x0, 0x0}};
   int code = 1;
@@ -69024,7 +70397,8 @@ START_TEST(s21_is_not_equal_6900) {
 }
 
 START_TEST(s21_is_not_equal_6901) {
-  char *example = "( 1738748437054408574590455903 != 18378382449293515644669 ) = True";
+  char *example =
+      "( 1738748437054408574590455903 != 18378382449293515644669 ) = True";
   s21_decimal value_1 = {{0xB467105F, 0xA49C3069, 0x59E424D, 0x0}};
   s21_decimal value_2 = {{0xFD815EFD, 0x4B4AB8C9, 0x3E4, 0x0}};
   int code = 1;
@@ -69084,7 +70458,8 @@ START_TEST(s21_is_not_equal_6906) {
 }
 
 START_TEST(s21_is_not_equal_6907) {
-  char *example = "( 0.59689491959142288657270677 != -6.0251038662087763712482470 ) = True";
+  char *example =
+      "( 0.59689491959142288657270677 != -6.0251038662087763712482470 ) = True";
   s21_decimal value_1 = {{0xC0E4C795, 0xD7C3E5B6, 0x315FBD, 0x1A0000}};
   s21_decimal value_2 = {{0xCDCB1C77, 0x88F9AC77, 0x4FBDD, 0x80180000}};
   int code = 1;
@@ -69114,7 +70489,8 @@ START_TEST(s21_is_not_equal_6909) {
 }
 
 START_TEST(s21_is_not_equal_6910) {
-  char *example = "( 1622067160788379195660181398 != -71.46674141617766889135 ) = True";
+  char *example =
+      "( 1622067160788379195660181398 != -71.46674141617766889135 ) = True";
   s21_decimal value_1 = {{0x8A021F96, 0xFB71F75F, 0x53DBE14, 0x0}};
   s21_decimal value_2 = {{0x54B576AF, 0x6C06FB19, 0x183, 0x80140000}};
   int code = 1;
@@ -69194,7 +70570,8 @@ START_TEST(s21_is_not_equal_6917) {
 }
 
 START_TEST(s21_is_not_equal_6918) {
-  char *example = "( 0.63480312224860031649794 != 6.31656495614603085163398130 ) = True";
+  char *example =
+      "( 0.63480312224860031649794 != 6.31656495614603085163398130 ) = True";
   s21_decimal value_1 = {{0xC51B8802, 0x464D9366, 0xD71, 0x170000}};
   s21_decimal value_2 = {{0x7D3D0065, 0xB95B51A3, 0x343FD8, 0x190000}};
   int code = 1;
@@ -69284,7 +70661,8 @@ START_TEST(s21_is_not_equal_6926) {
 }
 
 START_TEST(s21_is_not_equal_6927) {
-  char *example = "( 1072285322271433802493550999 != 1503048043288294306734366190 ) = True";
+  char *example =
+      "( 1072285322271433802493550999 != 1503048043288294306734366190 ) = True";
   s21_decimal value_1 = {{0x85916197, 0xCBEAB9EE, 0x376F93F, 0x0}};
   s21_decimal value_2 = {{0x1A775DEE, 0xB1B4A690, 0x4DB4ACD, 0x0}};
   int code = 1;
@@ -69334,7 +70712,8 @@ START_TEST(s21_is_not_equal_6931) {
 }
 
 START_TEST(s21_is_not_equal_6932) {
-  char *example = "( -9.236381892187071728751 != 1391472284793431806090875336 ) = True";
+  char *example =
+      "( -9.236381892187071728751 != 1391472284793431806090875336 ) = True";
   s21_decimal value_1 = {{0xDCB84C6F, 0xB48C4A7E, 0x1F4, 0x80150000}};
   s21_decimal value_2 = {{0x147B11C8, 0xB4D16954, 0x47EFFB7, 0x0}};
   int code = 1;
@@ -69414,7 +70793,8 @@ START_TEST(s21_is_not_equal_6939) {
 }
 
 START_TEST(s21_is_not_equal_6940) {
-  char *example = "( 1867663271803927338284 != 1815323165869562323788849332 ) = True";
+  char *example =
+      "( 1867663271803927338284 != 1815323165869562323788849332 ) = True";
   s21_decimal value_1 = {{0xCCEB1D2C, 0x3F08DA66, 0x65, 0x0}};
   s21_decimal value_2 = {{0xC9D360B4, 0x28C3986, 0x5DD99A2, 0x0}};
   int code = 1;
@@ -69564,7 +70944,8 @@ START_TEST(s21_is_not_equal_6954) {
 }
 
 START_TEST(s21_is_not_equal_6955) {
-  char *example = "( 12731553465486925 != 1704719331678540056569376105 ) = True";
+  char *example =
+      "( 12731553465486925 != 1704719331678540056569376105 ) = True";
   s21_decimal value_1 = {{0xC9BFCE4D, 0x2D3B47, 0x0, 0x0}};
   s21_decimal value_2 = {{0x775CED69, 0x24E9FF53, 0x5821C5C, 0x0}};
   int code = 1;
@@ -69594,7 +70975,8 @@ START_TEST(s21_is_not_equal_6957) {
 }
 
 START_TEST(s21_is_not_equal_6958) {
-  char *example = "( 1424446976549448855531631497 != 178126355581458540 ) = True";
+  char *example =
+      "( 1424446976549448855531631497 != 178126355581458540 ) = True";
   s21_decimal value_1 = {{0x48353389, 0x54093E4A, 0x49A4661, 0x0}};
   s21_decimal value_2 = {{0x591586C, 0x278D4FA, 0x0, 0x0}};
   int code = 1;
@@ -69644,7 +71026,8 @@ START_TEST(s21_is_not_equal_6962) {
 }
 
 START_TEST(s21_is_not_equal_6963) {
-  char *example = "( 1310466238563656169842910 != 1373632155004596566497077378 ) = True";
+  char *example =
+      "( 1310466238563656169842910 != 1373632155004596566497077378 ) = True";
   s21_decimal value_1 = {{0x891A68DE, 0x846359F1, 0x11580, 0x0}};
   s21_decimal value_2 = {{0xFACAA882, 0x55250A49, 0x4703DEC, 0x0}};
   int code = 1;
@@ -69674,7 +71057,8 @@ START_TEST(s21_is_not_equal_6965) {
 }
 
 START_TEST(s21_is_not_equal_6966) {
-  char *example = "( 1614392322239745149146516573 != 1488627902373013840230825280 ) = True";
+  char *example =
+      "( 1614392322239745149146516573 != 1488627902373013840230825280 ) = True";
   s21_decimal value_1 = {{0xE2484C5D, 0x269BA613, 0x53764DF, 0x0}};
   s21_decimal value_2 = {{0x5F7B3D40, 0x49ECB3F4, 0x4CF5D38, 0x0}};
   int code = 1;
@@ -69694,7 +71078,8 @@ START_TEST(s21_is_not_equal_6967) {
 }
 
 START_TEST(s21_is_not_equal_6968) {
-  char *example = "( 0.36292846105869977387479436 != -8.642348868750811727 ) = True";
+  char *example =
+      "( 0.36292846105869977387479436 != -8.642348868750811727 ) = True";
   s21_decimal value_1 = {{0xB987318C, 0x2132ECFE, 0x1E054F, 0x1A0000}};
   s21_decimal value_2 = {{0xCAE4224F, 0x77EFCA81, 0x0, 0x80120000}};
   int code = 1;
@@ -69724,7 +71109,8 @@ START_TEST(s21_is_not_equal_6970) {
 }
 
 START_TEST(s21_is_not_equal_6971) {
-  char *example = "( -6047.43763683861788 != 1655421616268135881169625372 ) = True";
+  char *example =
+      "( -6047.43763683861788 != 1655421616268135881169625372 ) = True";
   s21_decimal value_1 = {{0xBE82651C, 0x8647B3F, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x8966E11C, 0xA309D717, 0x5595529, 0x0}};
   int code = 1;
@@ -69764,7 +71150,8 @@ START_TEST(s21_is_not_equal_6974) {
 }
 
 START_TEST(s21_is_not_equal_6975) {
-  char *example = "( -62.38587822749984064 != 1416187423320851138173872707 ) = True";
+  char *example =
+      "( -62.38587822749984064 != 1416187423320851138173872707 ) = True";
   s21_decimal value_1 = {{0x43172540, 0x5693EA92, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0xC1BE2A43, 0xCF1392E, 0x493715A, 0x0}};
   int code = 1;
@@ -69804,7 +71191,8 @@ START_TEST(s21_is_not_equal_6978) {
 }
 
 START_TEST(s21_is_not_equal_6979) {
-  char *example = "( 1495013479473393120485649234 != 1519233048165374753 ) = True";
+  char *example =
+      "( 1495013479473393120485649234 != 1519233048165374753 ) = True";
   s21_decimal value_1 = {{0xAAE52B52, 0x1DF44172, 0x4D4A56B, 0x0}};
   s21_decimal value_2 = {{0x76EE5B21, 0x15156668, 0x0, 0x0}};
   int code = 1;
@@ -69854,7 +71242,8 @@ START_TEST(s21_is_not_equal_6983) {
 }
 
 START_TEST(s21_is_not_equal_6984) {
-  char *example = "( 1266125313596942556857609120 != 0.02728796731559173344638 ) = True";
+  char *example =
+      "( 1266125313596942556857609120 != 0.02728796731559173344638 ) = True";
   s21_decimal value_1 = {{0x4C33ABA0, 0xC8336E83, 0x4175076, 0x0}};
   s21_decimal value_2 = {{0x7F7ECD7E, 0xEDA97991, 0x93, 0x170000}};
   int code = 1;
@@ -69864,7 +71253,8 @@ START_TEST(s21_is_not_equal_6984) {
 }
 
 START_TEST(s21_is_not_equal_6985) {
-  char *example = "( 1877224990593354685575815386 != 16124541387737909 ) = True";
+  char *example =
+      "( 1877224990593354685575815386 != 16124541387737909 ) = True";
   s21_decimal value_1 = {{0xF14760DA, 0xA6FB2722, 0x610CDDA, 0x0}};
   s21_decimal value_2 = {{0x59950B35, 0x39492F, 0x0, 0x0}};
   int code = 1;
@@ -69874,7 +71264,8 @@ START_TEST(s21_is_not_equal_6985) {
 }
 
 START_TEST(s21_is_not_equal_6986) {
-  char *example = "( -513.86446866220364 != 1300627364942572133279861941 ) = True";
+  char *example =
+      "( -513.86446866220364 != 1300627364942572133279861941 ) = True";
   s21_decimal value_1 = {{0x7FBB054C, 0xB68FB3, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x53640CB5, 0xBBB5BA24, 0x433DA8E, 0x0}};
   int code = 1;
@@ -69924,7 +71315,8 @@ START_TEST(s21_is_not_equal_6990) {
 }
 
 START_TEST(s21_is_not_equal_6991) {
-  char *example = "( 0.31380123143545705297744457 != 1499682873921725811 ) = True";
+  char *example =
+      "( 0.31380123143545705297744457 != 1499682873921725811 ) = True";
   s21_decimal value_1 = {{0x56DA1249, 0xE25E84DD, 0x19F4FF, 0x1A0000}};
   s21_decimal value_2 = {{0xCFD76573, 0x14CFF1A0, 0x0, 0x0}};
   int code = 1;
@@ -69944,7 +71336,8 @@ START_TEST(s21_is_not_equal_6992) {
 }
 
 START_TEST(s21_is_not_equal_6993) {
-  char *example = "( -79228162514264337593543950335 != 16273535401864476 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 16273535401864476 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xB8DE2D1C, 0x39D0B1, 0x0, 0x0}};
   int code = 1;
@@ -69954,7 +71347,8 @@ START_TEST(s21_is_not_equal_6993) {
 }
 
 START_TEST(s21_is_not_equal_6994) {
-  char *example = "( 1606402808865506423645318972 != 7.8666844292837869E-10 ) = True";
+  char *example =
+      "( 1606402808865506423645318972 != 7.8666844292837869E-10 ) = True";
   s21_decimal value_1 = {{0xA512AF3C, 0xC3500801, 0x530C906, 0x0}};
   s21_decimal value_2 = {{0xFDACF1ED, 0x1177B13, 0x0, 0x1A0000}};
   int code = 1;
@@ -69984,7 +71378,8 @@ START_TEST(s21_is_not_equal_6996) {
 }
 
 START_TEST(s21_is_not_equal_6997) {
-  char *example = "( -6718121107.2797971596686829 != 6.7481892481256936E-10 ) = True";
+  char *example =
+      "( -6718121107.2797971596686829 != 6.7481892481256936E-10 ) = True";
   s21_decimal value_1 = {{0x16EFB5ED, 0xBFF0B689, 0x37922C, 0x80100000}};
   s21_decimal value_2 = {{0x761DCDE8, 0xEFBE6C, 0x0, 0x1A0000}};
   int code = 1;
@@ -70054,7 +71449,8 @@ START_TEST(s21_is_not_equal_7003) {
 }
 
 START_TEST(s21_is_not_equal_7004) {
-  char *example = "( 79228162514264337593543950335 != -1029.71029268552 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -1029.71029268552 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xCF9F2848, 0x5DA6, 0x0, 0x800B0000}};
   int code = 1;
@@ -70114,7 +71510,8 @@ START_TEST(s21_is_not_equal_7009) {
 }
 
 START_TEST(s21_is_not_equal_7010) {
-  char *example = "( 13277496752148140 != 1981718990641972430862474365 ) = True";
+  char *example =
+      "( 13277496752148140 != 1981718990641972430862474365 ) = True";
   s21_decimal value_1 = {{0x1D6B0EAC, 0x2F2BD0, 0x0, 0x0}};
   s21_decimal value_2 = {{0xDF9EDC7D, 0xBED87514, 0x6673D51, 0x0}};
   int code = 1;
@@ -70174,7 +71571,8 @@ START_TEST(s21_is_not_equal_7015) {
 }
 
 START_TEST(s21_is_not_equal_7016) {
-  char *example = "( 1404397208354560632758335975 != 1855973907863535607767089995 ) = True";
+  char *example =
+      "( 1404397208354560632758335975 != 1855973907863535607767089995 ) = True";
   s21_decimal value_1 = {{0x9245F9E7, 0x376E7C15, 0x489B0AD, 0x0}};
   s21_decimal value_2 = {{0x3447C34B, 0x262B9A82, 0x5FF39C3, 0x0}};
   int code = 1;
@@ -70184,7 +71582,8 @@ START_TEST(s21_is_not_equal_7016) {
 }
 
 START_TEST(s21_is_not_equal_7017) {
-  char *example = "( 14894002796035244321176 != -9010472.3061627512167543718 ) = True";
+  char *example =
+      "( 14894002796035244321176 != -9010472.3061627512167543718 ) = True";
   s21_decimal value_1 = {{0x6B7C6998, 0x67CF772F, 0x327, 0x0}};
   s21_decimal value_2 = {{0x1D8F33A6, 0xD3219334, 0x4A886A, 0x80130000}};
   int code = 1;
@@ -70234,7 +71633,8 @@ START_TEST(s21_is_not_equal_7021) {
 }
 
 START_TEST(s21_is_not_equal_7022) {
-  char *example = "( 20.526413520614544879360285 != -7142.3615750697480865771751 ) = True";
+  char *example =
+      "( 20.526413520614544879360285 != -7142.3615750697480865771751 ) = True";
   s21_decimal value_1 = {{0xA183991D, 0x1B4B6720, 0x10FAA3, 0x180000}};
   s21_decimal value_2 = {{0x4B64F0E7, 0xF7DAE4D3, 0x3B1489, 0x80160000}};
   int code = 1;
@@ -70254,7 +71654,8 @@ START_TEST(s21_is_not_equal_7023) {
 }
 
 START_TEST(s21_is_not_equal_7024) {
-  char *example = "( -17.365110805893022413699800 != 1555331282620083726416808578 ) = True";
+  char *example =
+      "( -17.365110805893022413699800 != 1555331282620083726416808578 ) = True";
   s21_decimal value_1 = {{0x643D8326, 0xA53AF098, 0x24C5, 0x80160000}};
   s21_decimal value_2 = {{0x541B0A82, 0xC70EB303, 0x5068A35, 0x0}};
   int code = 1;
@@ -70464,7 +71865,8 @@ START_TEST(s21_is_not_equal_7044) {
 }
 
 START_TEST(s21_is_not_equal_7045) {
-  char *example = "( 1418801950427037074487 != -4.6992238382899330222024707 ) = True";
+  char *example =
+      "( 1418801950427037074487 != -4.6992238382899330222024707 ) = True";
   s21_decimal value_1 = {{0x4AEC8437, 0xE9D518C7, 0x4C, 0x0}};
   s21_decimal value_2 = {{0xBB966803, 0x58E46160, 0x26DEFE, 0x80190000}};
   int code = 1;
@@ -70544,7 +71946,8 @@ START_TEST(s21_is_not_equal_7052) {
 }
 
 START_TEST(s21_is_not_equal_7053) {
-  char *example = "( 1910233249370322554071291718 != 1880373815354034156679607574 ) = True";
+  char *example =
+      "( 1910233249370322554071291718 != 1880373815354034156679607574 ) = True";
   s21_decimal value_1 = {{0x45A01746, 0xF231792B, 0x62C1B9F, 0x0}};
   s21_decimal value_2 = {{0x31BA3516, 0xC8DA9086, 0x61368A4, 0x0}};
   int code = 1;
@@ -70584,7 +71987,8 @@ START_TEST(s21_is_not_equal_7056) {
 }
 
 START_TEST(s21_is_not_equal_7057) {
-  char *example = "( 1814980665043861175 != 1038868751904712007234747705 ) = True";
+  char *example =
+      "( 1814980665043861175 != 1038868751904712007234747705 ) = True";
   s21_decimal value_1 = {{0x76243EB7, 0x19301B4C, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAA1DFD39, 0xE31A4638, 0x35B5503, 0x0}};
   int code = 1;
@@ -70644,7 +72048,8 @@ START_TEST(s21_is_not_equal_7062) {
 }
 
 START_TEST(s21_is_not_equal_7063) {
-  char *example = "( -5902.60846687060471 != 1615836326197959319169632674 ) = True";
+  char *example =
+      "( -5902.60846687060471 != 1615836326197959319169632674 ) = True";
   s21_decimal value_1 = {{0xDB9A81F7, 0x831071C, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x8DED89A2, 0xC3223D00, 0x53896A6, 0x0}};
   int code = 1;
@@ -70654,7 +72059,8 @@ START_TEST(s21_is_not_equal_7063) {
 }
 
 START_TEST(s21_is_not_equal_7064) {
-  char *example = "( -32.076857471787585052032689 != -70021.944765167467177671764 ) = True";
+  char *example =
+      "( -32.076857471787585052032689 != -70021.944765167467177671764 ) = True";
   s21_decimal value_1 = {{0xADBB3EB1, 0xED88F42C, 0x1A8889, 0x80180000}};
   s21_decimal value_2 = {{0x6CAF7C54, 0x3B576C70, 0x39EBB9, 0x80150000}};
   int code = 1;
@@ -70754,7 +72160,8 @@ START_TEST(s21_is_not_equal_7073) {
 }
 
 START_TEST(s21_is_not_equal_7074) {
-  char *example = "( -90.644399962956469362157756 != 163732054182072421795371 ) = True";
+  char *example =
+      "( -90.644399962956469362157756 != 163732054182072421795371 ) = True";
   s21_decimal value_1 = {{0x1BDAE8BC, 0xC4A70F1F, 0x4AFAB2, 0x80180000}};
   s21_decimal value_2 = {{0x2DB5462B, 0xEEB48CFE, 0x22AB, 0x0}};
   int code = 1;
@@ -70774,7 +72181,8 @@ START_TEST(s21_is_not_equal_7075) {
 }
 
 START_TEST(s21_is_not_equal_7076) {
-  char *example = "( -1.1352266023075704792531338 != 19848808900990862140269 ) = True";
+  char *example =
+      "( -1.1352266023075704792531338 != 19848808900990862140269 ) = True";
   s21_decimal value_1 = {{0x2801C18A, 0x9301902F, 0x963EF, 0x80190000}};
   s21_decimal value_2 = {{0x5BECA36D, 0x18EE3F4, 0x434, 0x0}};
   int code = 1;
@@ -70824,7 +72232,8 @@ START_TEST(s21_is_not_equal_7080) {
 }
 
 START_TEST(s21_is_not_equal_7081) {
-  char *example = "( -3995725.4208005906311582 != 1896200753678011405738 ) = True";
+  char *example =
+      "( -3995725.4208005906311582 != 1896200753678011405738 ) = True";
   s21_decimal value_1 = {{0x4E4F299E, 0x164B9793, 0x876, 0x80100000}};
   s21_decimal value_2 = {{0xCDD915AA, 0xCB125AF7, 0x66, 0x0}};
   int code = 1;
@@ -70854,7 +72263,8 @@ START_TEST(s21_is_not_equal_7083) {
 }
 
 START_TEST(s21_is_not_equal_7084) {
-  char *example = "( -48.2190591593785535454670 != 1800555396710082345332690082 ) = True";
+  char *example =
+      "( -48.2190591593785535454670 != 1800555396710082345332690082 ) = True";
   s21_decimal value_1 = {{0x205D22FB, 0xF5DF0DEE, 0xA35, 0x80150000}};
   s21_decimal value_2 = {{0x1E64CCA2, 0xA3C1F8D6, 0x5D1626F, 0x0}};
   int code = 1;
@@ -70874,7 +72284,8 @@ START_TEST(s21_is_not_equal_7085) {
 }
 
 START_TEST(s21_is_not_equal_7086) {
-  char *example = "( 1094894759528668037236525675 != -9.47149929033922152 ) = True";
+  char *example =
+      "( 1094894759528668037236525675 != -9.47149929033922152 ) = True";
   s21_decimal value_1 = {{0x25D20A6B, 0xD8A07BEA, 0x389ACFB, 0x0}};
   s21_decimal value_2 = {{0x9D1A7668, 0xD24F3D7, 0x0, 0x80110000}};
   int code = 1;
@@ -70944,7 +72355,8 @@ START_TEST(s21_is_not_equal_7092) {
 }
 
 START_TEST(s21_is_not_equal_7093) {
-  char *example = "( 1973767729652457010790565944 != -7.2599437305920574493478863 ) = True";
+  char *example =
+      "( 1973767729652457010790565944 != -7.2599437305920574493478863 ) = True";
   s21_decimal value_1 = {{0x49868838, 0x6074B09, 0x660A993, 0x0}};
   s21_decimal value_2 = {{0x323ECFCF, 0x61E5F6A2, 0x3C0D87, 0x80190000}};
   int code = 1;
@@ -70954,7 +72366,8 @@ START_TEST(s21_is_not_equal_7093) {
 }
 
 START_TEST(s21_is_not_equal_7094) {
-  char *example = "( 1925415137313152982709146353 != -64.259629439434170566 ) = True";
+  char *example =
+      "( 1925415137313152982709146353 != -64.259629439434170566 ) = True";
   s21_decimal value_1 = {{0xA59F92F1, 0xBD95FBBE, 0x638AA83, 0x0}};
   s21_decimal value_2 = {{0x57B520C6, 0x7BC81083, 0x3, 0x80120000}};
   int code = 1;
@@ -70964,7 +72377,8 @@ START_TEST(s21_is_not_equal_7094) {
 }
 
 START_TEST(s21_is_not_equal_7095) {
-  char *example = "( 1293796212186715097639098216 != 1297052027248159908968065384 ) = True";
+  char *example =
+      "( 1293796212186715097639098216 != 1297052027248159908968065384 ) = True";
   s21_decimal value_1 = {{0x624B1768, 0x334804A1, 0x42E3401, 0x0}};
   s21_decimal value_2 = {{0xE694E968, 0x49D8752F, 0x430E573, 0x0}};
   int code = 1;
@@ -70994,7 +72408,8 @@ START_TEST(s21_is_not_equal_7097) {
 }
 
 START_TEST(s21_is_not_equal_7098) {
-  char *example = "( -416.0156772556058 != 1142324557554687859692782574 ) = True";
+  char *example =
+      "( -416.0156772556058 != 1142324557554687859692782574 ) = True";
   s21_decimal value_1 = {{0xFAA35D1A, 0xEC7A3, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x9349C3EE, 0x59664508, 0x3B0E8A2, 0x0}};
   int code = 1;
@@ -71134,7 +72549,8 @@ START_TEST(s21_is_not_equal_7111) {
 }
 
 START_TEST(s21_is_not_equal_7112) {
-  char *example = "( 193697984617677099274940543 != 1623329293834456417003259045 ) = True";
+  char *example =
+      "( 193697984617677099274940543 != 1623329293834456417003259045 ) = True";
   s21_decimal value_1 = {{0x832D307F, 0xC9534F79, 0xA03924, 0x0}};
   s21_decimal value_2 = {{0x141A44A5, 0x5A0B3B22, 0x53EC959, 0x0}};
   int code = 1;
@@ -71144,7 +72560,8 @@ START_TEST(s21_is_not_equal_7112) {
 }
 
 START_TEST(s21_is_not_equal_7113) {
-  char *example = "( 1221598026291970695034841174 != 1173716668395576448513201107 ) = True";
+  char *example =
+      "( 1221598026291970695034841174 != 1173716668395576448513201107 ) = True";
   s21_decimal value_1 = {{0xC9482856, 0xB3532DA2, 0x3F27B71, 0x0}};
   s21_decimal value_2 = {{0x4493D3D3, 0x167D1DB5, 0x3CAE02C, 0x0}};
   int code = 1;
@@ -71234,7 +72651,8 @@ START_TEST(s21_is_not_equal_7121) {
 }
 
 START_TEST(s21_is_not_equal_7122) {
-  char *example = "( 169990989176861427761552196 != 1324267231399509795726994295 ) = True";
+  char *example =
+      "( 169990989176861427761552196 != 1324267231399509795726994295 ) = True";
   s21_decimal value_1 = {{0xF5461B44, 0xFD0976A7, 0x8C9CFD, 0x0}};
   s21_decimal value_2 = {{0xCAB4AB77, 0x76344E82, 0x447687E, 0x0}};
   int code = 1;
@@ -71354,7 +72772,8 @@ START_TEST(s21_is_not_equal_7133) {
 }
 
 START_TEST(s21_is_not_equal_7134) {
-  char *example = "( 1915717879686575305821706028 != 1518468705557992066037038934 ) = True";
+  char *example =
+      "( 1915717879686575305821706028 != 1518468705557992066037038934 ) = True";
   s21_decimal value_1 = {{0x8AD72C, 0x59ED303A, 0x630A50A, 0x0}};
   s21_decimal value_2 = {{0x8883BF56, 0x788A5E5F, 0x4E80C41, 0x0}};
   int code = 1;
@@ -71384,7 +72803,8 @@ START_TEST(s21_is_not_equal_7136) {
 }
 
 START_TEST(s21_is_not_equal_7137) {
-  char *example = "( -14017.16438248951 != 1362373659722616242953292460 ) = True";
+  char *example =
+      "( -14017.16438248951 != 1362373659722616242953292460 ) = True";
   s21_decimal value_1 = {{0x8A60ADF7, 0x4FADA, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0xCDB48AAC, 0x149609AC, 0x466EDD8, 0x0}};
   int code = 1;
@@ -71504,7 +72924,8 @@ START_TEST(s21_is_not_equal_7148) {
 }
 
 START_TEST(s21_is_not_equal_7149) {
-  char *example = "( 1745546425057817701341778533 != 11531923497964673 ) = True";
+  char *example =
+      "( 1745546425057817701341778533 != 11531923497964673 ) = True";
   s21_decimal value_1 = {{0xC578D265, 0x4FA438F0, 0x5A3E1D5, 0x0}};
   s21_decimal value_2 = {{0x2BAC5481, 0x28F839, 0x0, 0x0}};
   int code = 1;
@@ -71624,7 +73045,8 @@ START_TEST(s21_is_not_equal_7160) {
 }
 
 START_TEST(s21_is_not_equal_7161) {
-  char *example = "( -3880.6446935713984563532850 != 11454820654322198453877224 ) = True";
+  char *example =
+      "( -3880.6446935713984563532850 != 11454820654322198453877224 ) = True";
   s21_decimal value_1 = {{0x5FECA205, 0x2B9D6A6A, 0x335C2, 0x80150000}};
   s21_decimal value_2 = {{0x868EF9E8, 0x126AD125, 0x979A7, 0x0}};
   int code = 1;
@@ -71644,7 +73066,8 @@ START_TEST(s21_is_not_equal_7162) {
 }
 
 START_TEST(s21_is_not_equal_7163) {
-  char *example = "( 174562268494128692646841331 != -6.2967633809263380737087652 ) = True";
+  char *example =
+      "( 174562268494128692646841331 != -6.2967633809263380737087652 ) = True";
   s21_decimal value_1 = {{0xF47B0BF3, 0x89698966, 0x9064FF, 0x0}};
   s21_decimal value_2 = {{0xA534D8A4, 0x44C3DEF3, 0x3415EA, 0x80190000}};
   int code = 1;
@@ -71694,7 +73117,8 @@ START_TEST(s21_is_not_equal_7167) {
 }
 
 START_TEST(s21_is_not_equal_7168) {
-  char *example = "( 1802983596754063821333366399 != 1663635883699516652 ) = True";
+  char *example =
+      "( 1802983596754063821333366399 != 1663635883699516652 ) = True";
   s21_decimal value_1 = {{0xB7BC867F, 0xA0B916C7, 0x5D364A0, 0x0}};
   s21_decimal value_2 = {{0x9B80B4EC, 0x17166C05, 0x0, 0x0}};
   int code = 1;
@@ -71754,7 +73178,8 @@ START_TEST(s21_is_not_equal_7173) {
 }
 
 START_TEST(s21_is_not_equal_7174) {
-  char *example = "( 1261557969343990079046383570 != 1375304707683222670725684353 ) = True";
+  char *example =
+      "( 1261557969343990079046383570 != 1375304707683222670725684353 ) = True";
   s21_decimal value_1 = {{0x8C7577D2, 0x8DD02D33, 0x413894A, 0x0}};
   s21_decimal value_2 = {{0x95451C81, 0x9850E8D9, 0x471A019, 0x0}};
   int code = 1;
@@ -71834,7 +73259,8 @@ START_TEST(s21_is_not_equal_7181) {
 }
 
 START_TEST(s21_is_not_equal_7182) {
-  char *example = "( -8.0322868642516976889501029 != 1235890630213220237641197403 ) = True";
+  char *example =
+      "( -8.0322868642516976889501029 != 1235890630213220237641197403 ) = True";
   s21_decimal value_1 = {{0x2DF81565, 0x6F22C411, 0x427107, 0x80190000}};
   s21_decimal value_2 = {{0xC6DF275B, 0x4FC3E112, 0x3FE4E05, 0x0}};
   int code = 1;
@@ -71854,7 +73280,8 @@ START_TEST(s21_is_not_equal_7183) {
 }
 
 START_TEST(s21_is_not_equal_7184) {
-  char *example = "( 0.0046354743548294006242591 != 1671063280050731796509334471 ) = True";
+  char *example =
+      "( 0.0046354743548294006242591 != 1671063280050731796509334471 ) = True";
   s21_decimal value_1 = {{0x5A9EFD1F, 0xE54B7B37, 0x9D0, 0x190000}};
   s21_decimal value_2 = {{0x9B819BC7, 0xEDF97793, 0x5664569, 0x0}};
   int code = 1;
@@ -71864,7 +73291,8 @@ START_TEST(s21_is_not_equal_7184) {
 }
 
 START_TEST(s21_is_not_equal_7185) {
-  char *example = "( 104467941172930519911996682 != -8.6553233490138450376 ) = True";
+  char *example =
+      "( 104467941172930519911996682 != -8.6553233490138450376 ) = True";
   s21_decimal value_1 = {{0x12A19D0A, 0x70513241, 0x5669F2, 0x0}};
   s21_decimal value_2 = {{0xD52549C8, 0xB12ADB47, 0x4, 0x80130000}};
   int code = 1;
@@ -71904,7 +73332,8 @@ START_TEST(s21_is_not_equal_7188) {
 }
 
 START_TEST(s21_is_not_equal_7189) {
-  char *example = "( 1154231600453483373243990127 != 1092034856076629296692650674 ) = True";
+  char *example =
+      "( 1154231600453483373243990127 != 1092034856076629296692650674 ) = True";
   s21_decimal value_1 = {{0xA481006F, 0x702AE285, 0x3BAC20C, 0x0}};
   s21_decimal value_2 = {{0x8460E2B2, 0x2B5E6092, 0x3874F60, 0x0}};
   int code = 1;
@@ -71914,7 +73343,8 @@ START_TEST(s21_is_not_equal_7189) {
 }
 
 START_TEST(s21_is_not_equal_7190) {
-  char *example = "( -2.7381669943304500466988787 != 1125961547819451159844 ) = True";
+  char *example =
+      "( -2.7381669943304500466988787 != 1125961547819451159844 ) = True";
   s21_decimal value_1 = {{0xC0D0B6F3, 0x4D4BFA7A, 0x16A64B, 0x80190000}};
   s21_decimal value_2 = {{0x4F641524, 0x9DAFE24, 0x3D, 0x0}};
   int code = 1;
@@ -71924,7 +73354,8 @@ START_TEST(s21_is_not_equal_7190) {
 }
 
 START_TEST(s21_is_not_equal_7191) {
-  char *example = "( -5.5635354468340193508079336 != 118829806308274104 ) = True";
+  char *example =
+      "( -5.5635354468340193508079336 != 118829806308274104 ) = True";
   s21_decimal value_1 = {{0xFA3E36E8, 0x9BEC9636, 0x2E053E, 0x80190000}};
   s21_decimal value_2 = {{0x49BBAFB8, 0x1A62B14, 0x0, 0x0}};
   int code = 1;
@@ -71964,7 +73395,8 @@ START_TEST(s21_is_not_equal_7194) {
 }
 
 START_TEST(s21_is_not_equal_7195) {
-  char *example = "( 166255063342507995 != -861.91354830439340979373037 ) = True";
+  char *example =
+      "( 166255063342507995 != -861.91354830439340979373037 ) = True";
   s21_decimal value_1 = {{0x68A3E7DB, 0x24EA819, 0x0, 0x0}};
   s21_decimal value_2 = {{0xEE3DC3ED, 0xB5347310, 0x474BBA, 0x80170000}};
   int code = 1;
@@ -72014,7 +73446,8 @@ START_TEST(s21_is_not_equal_7199) {
 }
 
 START_TEST(s21_is_not_equal_7200) {
-  char *example = "( 1998723542318957270508590162 != 1512240532814299978524965158 ) = True";
+  char *example =
+      "( 1998723542318957270508590162 != 1512240532814299978524965158 ) = True";
   s21_decimal value_1 = {{0x48C95452, 0x56C926C1, 0x6754E2C, 0x0}};
   s21_decimal value_2 = {{0x9A66B926, 0x8CC5EBDB, 0x4E2E563, 0x0}};
   int code = 1;
@@ -72044,7 +73477,8 @@ START_TEST(s21_is_not_equal_7202) {
 }
 
 START_TEST(s21_is_not_equal_7203) {
-  char *example = "( 1887755011233485702 != -2.7789133131505373719170621 ) = True";
+  char *example =
+      "( 1887755011233485702 != -2.7789133131505373719170621 ) = True";
   s21_decimal value_1 = {{0x53891386, 0x1A32A72E, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE3AA0E3D, 0xECF64EAD, 0x16FC93, 0x80190000}};
   int code = 1;
@@ -72054,7 +73488,8 @@ START_TEST(s21_is_not_equal_7203) {
 }
 
 START_TEST(s21_is_not_equal_7204) {
-  char *example = "( -98.768741344929862225164433 != -464.46736512418415838985127 ) = True";
+  char *example =
+      "( -98.768741344929862225164433 != -464.46736512418415838985127 ) = True";
   s21_decimal value_1 = {{0xDCCEF891, 0x326E0A78, 0x51B318, 0x80180000}};
   s21_decimal value_2 = {{0x9CB37BA7, 0xA1AF4FC3, 0x266B7A, 0x80170000}};
   int code = 1;
@@ -72194,7 +73629,8 @@ START_TEST(s21_is_not_equal_7217) {
 }
 
 START_TEST(s21_is_not_equal_7218) {
-  char *example = "( 1342006155700577991466958524 != 17505758816496807622784 ) = True";
+  char *example =
+      "( 1342006155700577991466958524 != 17505758816496807622784 ) = True";
   s21_decimal value_1 = {{0x3E243EBC, 0x7997EB14, 0x45614DB, 0x0}};
   s21_decimal value_2 = {{0x5AD0B880, 0xFD34CE1E, 0x3B4, 0x0}};
   int code = 1;
@@ -72204,7 +73640,8 @@ START_TEST(s21_is_not_equal_7218) {
 }
 
 START_TEST(s21_is_not_equal_7219) {
-  char *example = "( 4969299.52630696182798580160 != 1385803255920159199813997714 ) = True";
+  char *example =
+      "( 4969299.52630696182798580160 != 1385803255920159199813997714 ) = True";
   s21_decimal value_1 = {{0xBFF0BF60, 0xABCBAD09, 0x291AE6, 0x130000}};
   s21_decimal value_2 = {{0xD7349492, 0x909D223, 0x47A4F41, 0x0}};
   int code = 1;
@@ -72214,7 +73651,8 @@ START_TEST(s21_is_not_equal_7219) {
 }
 
 START_TEST(s21_is_not_equal_7220) {
-  char *example = "( 17613397622621093181303 != 145829278599687275696667613 ) = True";
+  char *example =
+      "( 17613397622621093181303 != 145829278599687275696667613 ) = True";
   s21_decimal value_1 = {{0x67FF3777, 0xD2FEA9FE, 0x3BA, 0x0}};
   s21_decimal value_2 = {{0x47F0BBDD, 0x892B7D8, 0x78A08D, 0x0}};
   int code = 1;
@@ -72224,7 +73662,8 @@ START_TEST(s21_is_not_equal_7220) {
 }
 
 START_TEST(s21_is_not_equal_7221) {
-  char *example = "( 1902331709343451758873884349 != 0.98780448221042073915676530 ) = True";
+  char *example =
+      "( 1902331709343451758873884349 != 0.98780448221042073915676530 ) = True";
   s21_decimal value_1 = {{0xB3FD36BD, 0x9A586B75, 0x6259268, 0x0}};
   s21_decimal value_2 = {{0xB8DDAF25, 0xE1FF4B48, 0x82BC1, 0x190000}};
   int code = 1;
@@ -72394,7 +73833,8 @@ START_TEST(s21_is_not_equal_7237) {
 }
 
 START_TEST(s21_is_not_equal_7238) {
-  char *example = "( 1041408667358382785809114455 != 0.34239528201819784402203135 ) = True";
+  char *example =
+      "( 1041408667358382785809114455 != 0.34239528201819784402203135 ) = True";
   s21_decimal value_1 = {{0x53506557, 0xFAD186FA, 0x35D6EDC, 0x0}};
   s21_decimal value_2 = {{0xC59071FF, 0x8B0647D9, 0x1C5280, 0x1A0000}};
   int code = 1;
@@ -72424,7 +73864,8 @@ START_TEST(s21_is_not_equal_7240) {
 }
 
 START_TEST(s21_is_not_equal_7241) {
-  char *example = "( 1534001036532711785077553732 != 122075907309034016 ) = True";
+  char *example =
+      "( 1534001036532711785077553732 != 122075907309034016 ) = True";
   s21_decimal value_1 = {{0xF3E63A44, 0xD1F7E97F, 0x4F4E55A, 0x0}};
   s21_decimal value_2 = {{0x12C9DA20, 0x1B1B364, 0x0, 0x0}};
   int code = 1;
@@ -72444,7 +73885,8 @@ START_TEST(s21_is_not_equal_7242) {
 }
 
 START_TEST(s21_is_not_equal_7243) {
-  char *example = "( -2.0711520628330509160303823 != 1917448209110656757068 ) = True";
+  char *example =
+      "( -2.0711520628330509160303823 != 1917448209110656757068 ) = True";
   s21_decimal value_1 = {{0xC58A4CCF, 0xC875074E, 0x1121D5, 0x80190000}};
   s21_decimal value_2 = {{0x319E2D4C, 0xF1F07B1C, 0x67, 0x0}};
   int code = 1;
@@ -72474,7 +73916,8 @@ START_TEST(s21_is_not_equal_7245) {
 }
 
 START_TEST(s21_is_not_equal_7246) {
-  char *example = "( -48.176107547230205836690091 != 17567952625350498278045961 ) = True";
+  char *example =
+      "( -48.176107547230205836690091 != 17567952625350498278045961 ) = True";
   s21_decimal value_1 = {{0x420E82AB, 0x5F268A7, 0x27D9B0, 0x80180000}};
   s21_decimal value_2 = {{0x4739F909, 0x9EC09A15, 0xE8828, 0x0}};
   int code = 1;
@@ -72494,7 +73937,8 @@ START_TEST(s21_is_not_equal_7247) {
 }
 
 START_TEST(s21_is_not_equal_7248) {
-  char *example = "( 1956677765666689329064214081 != 0.1966692743017041 ) = True";
+  char *example =
+      "( 1956677765666689329064214081 != 0.1966692743017041 ) = True";
   s21_decimal value_1 = {{0xB15E7E41, 0x3830D92C, 0x65286A2, 0x0}};
   s21_decimal value_2 = {{0x56547251, 0x6FCB2, 0x0, 0x100000}};
   int code = 1;
@@ -72524,7 +73968,8 @@ START_TEST(s21_is_not_equal_7250) {
 }
 
 START_TEST(s21_is_not_equal_7251) {
-  char *example = "( -846.71165497783103821300383 != 0.60111166400025757341022347 ) = True";
+  char *example =
+      "( -846.71165497783103821300383 != 0.60111166400025757341022347 ) = True";
   s21_decimal value_1 = {{0xB349C29F, 0x1437F47E, 0x4609D1, 0x80170000}};
   s21_decimal value_2 = {{0x5D89788B, 0xDC2E064A, 0x31B908, 0x1A0000}};
   int code = 1;
@@ -72604,7 +74049,8 @@ START_TEST(s21_is_not_equal_7258) {
 }
 
 START_TEST(s21_is_not_equal_7259) {
-  char *example = "( -4142.980670319504020066 != 1329545927535568237921 ) = True";
+  char *example =
+      "( -4142.980670319504020066 != 1329545927535568237921 ) = True";
   s21_decimal value_1 = {{0x7C65262, 0x97681934, 0xE0, 0x80120000}};
   s21_decimal value_2 = {{0x7CCA3561, 0x132800DB, 0x48, 0x0}};
   int code = 1;
@@ -72624,7 +74070,8 @@ START_TEST(s21_is_not_equal_7260) {
 }
 
 START_TEST(s21_is_not_equal_7261) {
-  char *example = "( -9.2435114804863741360155786 != 1846163009439070923903684594 ) = True";
+  char *example =
+      "( -9.2435114804863741360155786 != 1846163009439070923903684594 ) = True";
   s21_decimal value_1 = {{0xA4C52C8A, 0x9D40BBEE, 0x4C75E5, 0x80190000}};
   s21_decimal value_2 = {{0x6ADF4FF2, 0x47A1AF82, 0x5F71C39, 0x0}};
   int code = 1;
@@ -72644,7 +74091,8 @@ START_TEST(s21_is_not_equal_7262) {
 }
 
 START_TEST(s21_is_not_equal_7263) {
-  char *example = "( -589.87785666067687714054078 != 1904210427036777672174017 ) = True";
+  char *example =
+      "( -589.87785666067687714054078 != 1904210427036777672174017 ) = True";
   s21_decimal value_1 = {{0x8913DFBE, 0x44B9FDA4, 0x30CB26, 0x80170000}};
   s21_decimal value_2 = {{0xE53569C1, 0x743F72B6, 0x1933B, 0x0}};
   int code = 1;
@@ -72654,7 +74102,8 @@ START_TEST(s21_is_not_equal_7263) {
 }
 
 START_TEST(s21_is_not_equal_7264) {
-  char *example = "( 1997142499283035758989665130 != 121675998692955711158490 ) = True";
+  char *example =
+      "( 1997142499283035758989665130 != 121675998692955711158490 ) = True";
   s21_decimal value_1 = {{0xA2FBE36A, 0xD304A927, 0x673FF5F, 0x0}};
   s21_decimal value_2 = {{0x472538DA, 0x11B0F02C, 0x19C4, 0x0}};
   int code = 1;
@@ -72664,7 +74113,8 @@ START_TEST(s21_is_not_equal_7264) {
 }
 
 START_TEST(s21_is_not_equal_7265) {
-  char *example = "( 1910882130402964672 != 1420665761940904620395607597 ) = True";
+  char *example =
+      "( 1910882130402964672 != 1420665761940904620395607597 ) = True";
   s21_decimal value_1 = {{0x5E4F74C0, 0x1A84D12C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5418362D, 0x460AFCE9, 0x49725AD, 0x0}};
   int code = 1;
@@ -72714,7 +74164,8 @@ START_TEST(s21_is_not_equal_7269) {
 }
 
 START_TEST(s21_is_not_equal_7270) {
-  char *example = "( -252.92233153310668515688907 != 0.255718917669264574582 ) = True";
+  char *example =
+      "( -252.92233153310668515688907 != 0.255718917669264574582 ) = True";
   s21_decimal value_1 = {{0xA2ABC1CB, 0xB4E32DA7, 0x14EBD6, 0x80170000}};
   s21_decimal value_2 = {{0x67E04876, 0xDCD018C3, 0xD, 0x150000}};
   int code = 1;
@@ -72734,7 +74185,8 @@ START_TEST(s21_is_not_equal_7271) {
 }
 
 START_TEST(s21_is_not_equal_7272) {
-  char *example = "( 0.18351437395585503373846379 != 1842688433216852762601178993 ) = True";
+  char *example =
+      "( 0.18351437395585503373846379 != 1842688433216852762601178993 ) = True";
   s21_decimal value_1 = {{0xABF8676B, 0x6A24F299, 0xF2E11, 0x1A0000}};
   s21_decimal value_2 = {{0x2B8BC771, 0x2018F9E5, 0x5F43C74, 0x0}};
   int code = 1;
@@ -72784,7 +74236,8 @@ START_TEST(s21_is_not_equal_7276) {
 }
 
 START_TEST(s21_is_not_equal_7277) {
-  char *example = "( 1870473809759406183821342997 != 1401413747467681692183452379 ) = True";
+  char *example =
+      "( 1870473809759406183821342997 != 1401413747467681692183452379 ) = True";
   s21_decimal value_1 = {{0xF18BF915, 0x67EA5408, 0x60B383C, 0x0}};
   s21_decimal value_2 = {{0x1C785ADB, 0x7A4F80ED, 0x48738E7, 0x0}};
   int code = 1;
@@ -72804,7 +74257,8 @@ START_TEST(s21_is_not_equal_7278) {
 }
 
 START_TEST(s21_is_not_equal_7279) {
-  char *example = "( 1602457558583555026778285 != 1676686159594854024707919469 ) = True";
+  char *example =
+      "( 1602457558583555026778285 != 1676686159594854024707919469 ) = True";
   s21_decimal value_1 = {{0x9D82F8AD, 0x65F813B9, 0x15355, 0x0}};
   s21_decimal value_2 = {{0x7C94E6D, 0xD7281E1F, 0x56AEC1A, 0x0}};
   int code = 1;
@@ -72894,7 +74348,8 @@ START_TEST(s21_is_not_equal_7287) {
 }
 
 START_TEST(s21_is_not_equal_7288) {
-  char *example = "( 1445397638519732567389237211 != 11838835144013280647029524 ) = True";
+  char *example =
+      "( 1445397638519732567389237211 != 11838835144013280647029524 ) = True";
   s21_decimal value_1 = {{0x5FC7EFDB, 0xFD4AFEE7, 0x4AB9ADA, 0x0}};
   s21_decimal value_2 = {{0x79D3A314, 0x8A053338, 0x9CAF8, 0x0}};
   int code = 1;
@@ -72904,7 +74359,8 @@ START_TEST(s21_is_not_equal_7288) {
 }
 
 START_TEST(s21_is_not_equal_7289) {
-  char *example = "( 184034154661425376881750320 != -50423001.08691177 ) = True";
+  char *example =
+      "( 184034154661425376881750320 != -50423001.08691177 ) = True";
   s21_decimal value_1 = {{0x35DF3130, 0x83C82206, 0x983ABF, 0x0}};
   s21_decimal value_2 = {{0xFAD456E9, 0x11E9F1, 0x0, 0x80080000}};
   int code = 1;
@@ -72934,7 +74390,8 @@ START_TEST(s21_is_not_equal_7291) {
 }
 
 START_TEST(s21_is_not_equal_7292) {
-  char *example = "( 0.9432067959227675686322 != -12188.54500369737392848 ) = True";
+  char *example =
+      "( 0.9432067959227675686322 != -12188.54500369737392848 ) = True";
   s21_decimal value_1 = {{0x531B5B2, 0x503CDBAE, 0x1FF, 0x160000}};
   s21_decimal value_2 = {{0x806B22D0, 0x13010E51, 0x42, 0x80110000}};
   int code = 1;
@@ -73004,7 +74461,8 @@ START_TEST(s21_is_not_equal_7298) {
 }
 
 START_TEST(s21_is_not_equal_7299) {
-  char *example = "( -66.084358681532078116 != 1071779249553284329970921785 ) = True";
+  char *example =
+      "( -66.084358681532078116 != 1071779249553284329970921785 ) = True";
   s21_decimal value_1 = {{0x46389824, 0x951ACE17, 0x3, 0x80120000}};
   s21_decimal value_2 = {{0x7BD8F139, 0x8A1E7D29, 0x3768E15, 0x0}};
   int code = 1;
@@ -73054,7 +74512,8 @@ START_TEST(s21_is_not_equal_7303) {
 }
 
 START_TEST(s21_is_not_equal_7304) {
-  char *example = "( 1581997450863462424165985837 != 1801805442725357460542809731 ) = True";
+  char *example =
+      "( 1581997450863462424165985837 != 1801805442725357460542809731 ) = True";
   s21_decimal value_1 = {{0x8D37AE2D, 0xA7962573, 0x51C98FD, 0x0}};
   s21_decimal value_2 = {{0x239D6683, 0xC51B91EA, 0x5D26B24, 0x0}};
   int code = 1;
@@ -73114,7 +74573,8 @@ START_TEST(s21_is_not_equal_7309) {
 }
 
 START_TEST(s21_is_not_equal_7310) {
-  char *example = "( -724177695.33242313519131621 != 150464222408142658 ) = True";
+  char *example =
+      "( -724177695.33242313519131621 != 150464222408142658 ) = True";
   s21_decimal value_1 = {{0xD287EBE5, 0x2718F8DD, 0x3BE70F, 0x80110000}};
   s21_decimal value_2 = {{0xC00AEF42, 0x2168E69, 0x0, 0x0}};
   int code = 1;
@@ -73134,7 +74594,8 @@ START_TEST(s21_is_not_equal_7311) {
 }
 
 START_TEST(s21_is_not_equal_7312) {
-  char *example = "( -80.510062317709352899 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( -80.510062317709352899 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0xBA0DFC3, 0x5D4D331E, 0x4, 0x80120000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -73164,7 +74625,8 @@ START_TEST(s21_is_not_equal_7314) {
 }
 
 START_TEST(s21_is_not_equal_7315) {
-  char *example = "( -389.12430226033036930 != 1683225630078009151766919116 ) = True";
+  char *example =
+      "( -389.12430226033036930 != 1683225630078009151766919116 ) = True";
   s21_decimal value_1 = {{0x90FCBB0D, 0x360078E9, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x1203F7CC, 0x3EE5BC29, 0x57054E4, 0x0}};
   int code = 1;
@@ -73454,7 +74916,8 @@ START_TEST(s21_is_not_equal_7343) {
 }
 
 START_TEST(s21_is_not_equal_7344) {
-  char *example = "( 107284718686548573395322702 != 12959188526078998476963406 ) = True";
+  char *example =
+      "( 107284718686548573395322702 != 12959188526078998476963406 ) = True";
   s21_decimal value_1 = {{0xFD3F874E, 0x40F3F6FE, 0x58BE6C, 0x0}};
   s21_decimal value_2 = {{0x46D33E4E, 0x486C15F, 0xAB837, 0x0}};
   int code = 1;
@@ -73524,7 +74987,8 @@ START_TEST(s21_is_not_equal_7350) {
 }
 
 START_TEST(s21_is_not_equal_7351) {
-  char *example = "( 8.451787663305E-10 != -6139.4316511689441607166615 ) = True";
+  char *example =
+      "( 8.451787663305E-10 != -6139.4316511689441607166615 ) = True";
   s21_decimal value_1 = {{0xD5CD27C9, 0x7AF, 0x0, 0x160000}};
   s21_decimal value_2 = {{0xA9002A97, 0x9127AFC0, 0x32C8C0, 0x80160000}};
   int code = 1;
@@ -73564,7 +75028,8 @@ START_TEST(s21_is_not_equal_7354) {
 }
 
 START_TEST(s21_is_not_equal_7355) {
-  char *example = "( 1072929895148639748 != 1586716866921160442915078037 ) = True";
+  char *example =
+      "( 1072929895148639748 != 1586716866921160442915078037 ) = True";
   s21_decimal value_1 = {{0x153B5604, 0xEE3D00E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x2EE03F95, 0xB63647E1, 0x520805D, 0x0}};
   int code = 1;
@@ -73694,7 +75159,8 @@ START_TEST(s21_is_not_equal_7367) {
 }
 
 START_TEST(s21_is_not_equal_7368) {
-  char *example = "( 1584257009308624398254644098 != 15073375147643361981261369 ) = True";
+  char *example =
+      "( 1584257009308624398254644098 != 15073375147643361981261369 ) = True";
   s21_decimal value_1 = {{0xDC209B82, 0x903A528A, 0x51E7778, 0x0}};
   s21_decimal value_2 = {{0x1E726639, 0x4DD8B95E, 0xC77E9, 0x0}};
   int code = 1;
@@ -73724,7 +75190,8 @@ START_TEST(s21_is_not_equal_7370) {
 }
 
 START_TEST(s21_is_not_equal_7371) {
-  char *example = "( 1426077118686396842523325426 != 1047893918034397192346379478 ) = True";
+  char *example =
+      "( 1426077118686396842523325426 != 1047893918034397192346379478 ) = True";
   s21_decimal value_1 = {{0x95C573F2, 0x82B59148, 0x49B9F93, 0x0}};
   s21_decimal value_2 = {{0xBACBA4D6, 0x1F94A761, 0x362CC2B, 0x0}};
   int code = 1;
@@ -73784,7 +75251,8 @@ START_TEST(s21_is_not_equal_7376) {
 }
 
 START_TEST(s21_is_not_equal_7377) {
-  char *example = "( 1359385707781705167687166933 != -5.61484083441242 ) = True";
+  char *example =
+      "( 1359385707781705167687166933 != -5.61484083441242 ) = True";
   s21_decimal value_1 = {{0x1DE0ABD5, 0xE191F6EA, 0x464751E, 0x0}};
   s21_decimal value_2 = {{0xB3572E5A, 0x1FEAA, 0x0, 0x800E0000}};
   int code = 1;
@@ -73834,7 +75302,8 @@ START_TEST(s21_is_not_equal_7381) {
 }
 
 START_TEST(s21_is_not_equal_7382) {
-  char *example = "( 1110859447811759082350235484 != -18.8639481034309 ) = True";
+  char *example =
+      "( 1110859447811759082350235484 != -18.8639481034309 ) = True";
   s21_decimal value_1 = {{0x32ACF5C, 0x55099B91, 0x396E1A3, 0x0}};
   s21_decimal value_2 = {{0xD41F645, 0xAB91, 0x0, 0x800D0000}};
   int code = 1;
@@ -74004,7 +75473,8 @@ START_TEST(s21_is_not_equal_7398) {
 }
 
 START_TEST(s21_is_not_equal_7399) {
-  char *example = "( 1172333628698550055784166321 != -503.41937607036650141039 ) = True";
+  char *example =
+      "( 1172333628698550055784166321 != -503.41937607036650141039 ) = True";
   s21_decimal value_1 = {{0x684833B1, 0x5B0B2A91, 0x3C9BB4D, 0x0}};
   s21_decimal value_2 = {{0x49E4356F, 0xABA5A95, 0xAA9, 0x80140000}};
   int code = 1;
@@ -74044,7 +75514,9 @@ START_TEST(s21_is_not_equal_7402) {
 }
 
 START_TEST(s21_is_not_equal_7403) {
-  char *example = "( -79228162514264337593543950335 != 1919269543079474474669163833 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1919269543079474474669163833 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xF199C539, 0x68DBA2E1, 0x6339522, 0x0}};
   int code = 1;
@@ -74134,7 +75606,8 @@ START_TEST(s21_is_not_equal_7411) {
 }
 
 START_TEST(s21_is_not_equal_7412) {
-  char *example = "( 1059492037591901298763945842 != -8330.0605386587052889 ) = True";
+  char *example =
+      "( 1059492037591901298763945842 != -8330.0605386587052889 ) = True";
   s21_decimal value_1 = {{0x6EDED772, 0x71C4F658, 0x36C642A, 0x0}};
   s21_decimal value_2 = {{0xEA831B59, 0x84073340, 0x4, 0x80100000}};
   int code = 1;
@@ -74244,7 +75717,8 @@ START_TEST(s21_is_not_equal_7422) {
 }
 
 START_TEST(s21_is_not_equal_7423) {
-  char *example = "( 10085746950285299 != -2.5687991582649818548768774 ) = True";
+  char *example =
+      "( 10085746950285299 != -2.5687991582649818548768774 ) = True";
   s21_decimal value_1 = {{0xF44427F3, 0x23D4EE, 0x0, 0x0}};
   s21_decimal value_2 = {{0x6B879006, 0xD0649796, 0x153FA4, 0x80190000}};
   int code = 1;
@@ -74304,7 +75778,8 @@ START_TEST(s21_is_not_equal_7428) {
 }
 
 START_TEST(s21_is_not_equal_7429) {
-  char *example = "( -4.480886907608316877 != 0.93517098288748496408990072 ) = True";
+  char *example =
+      "( -4.480886907608316877 != 0.93517098288748496408990072 ) = True";
   s21_decimal value_1 = {{0xD6B13BCD, 0x3E2F4EE6, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x704AD178, 0xE742AEE, 0x4D5B04, 0x1A0000}};
   int code = 1;
@@ -74454,7 +75929,8 @@ START_TEST(s21_is_not_equal_7443) {
 }
 
 START_TEST(s21_is_not_equal_7444) {
-  char *example = "( 1018105527856642679768 != 1856390490352633791654349380 ) = True";
+  char *example =
+      "( 1018105527856642679768 != 1856390490352633791654349380 ) = True";
   s21_decimal value_1 = {{0x6CC063D8, 0x310D6F6E, 0x37, 0x0}};
   s21_decimal value_2 = {{0x7C834A44, 0x218EF8AF, 0x5FF91FA, 0x0}};
   int code = 1;
@@ -74464,7 +75940,8 @@ START_TEST(s21_is_not_equal_7444) {
 }
 
 START_TEST(s21_is_not_equal_7445) {
-  char *example = "( 158143553846380805 != 1190928298970969350337151611 ) = True";
+  char *example =
+      "( 158143553846380805 != 1190928298970969350337151611 ) = True";
   s21_decimal value_1 = {{0x6E880905, 0x231D6B9, 0x0, 0x0}};
   s21_decimal value_2 = {{0x130B427B, 0x7370C67D, 0x3D91CE0, 0x0}};
   int code = 1;
@@ -74584,7 +76061,8 @@ START_TEST(s21_is_not_equal_7456) {
 }
 
 START_TEST(s21_is_not_equal_7457) {
-  char *example = "( -45099.96212140901312126 != -65.582885609621601580813062 ) = True";
+  char *example =
+      "( -45099.96212140901312126 != -65.582885609621601580813062 ) = True";
   s21_decimal value_1 = {{0x47AEA67E, 0x7CC53BF5, 0xF4, 0x80110000}};
   s21_decimal value_2 = {{0x8F150B06, 0x5A5082DD, 0x363FB7, 0x80180000}};
   int code = 1;
@@ -74614,7 +76092,8 @@ START_TEST(s21_is_not_equal_7459) {
 }
 
 START_TEST(s21_is_not_equal_7460) {
-  char *example = "( 5.0475434739150553E-10 != -6307.1915286307314862630 ) = True";
+  char *example =
+      "( 5.0475434739150553E-10 != -6307.1915286307314862630 ) = True";
   s21_decimal value_1 = {{0xF582AED9, 0xB35323, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x53BD3437, 0xE9DD9E5B, 0x155, 0x80120000}};
   int code = 1;
@@ -74634,7 +76113,8 @@ START_TEST(s21_is_not_equal_7461) {
 }
 
 START_TEST(s21_is_not_equal_7462) {
-  char *example = "( 1332235463271331735881486773 != 1546692964957315674518261914 ) = True";
+  char *example =
+      "( 1332235463271331735881486773 != 1546692964957315674518261914 ) = True";
   s21_decimal value_1 = {{0x843D91B5, 0x2D532EBF, 0x44DFFD5, 0x0}};
   s21_decimal value_2 = {{0x14A3109A, 0xA3845BF7, 0x4FF64F9, 0x0}};
   int code = 1;
@@ -74644,7 +76124,8 @@ START_TEST(s21_is_not_equal_7462) {
 }
 
 START_TEST(s21_is_not_equal_7463) {
-  char *example = "( 108345319705342064537988 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 108345319705342064537988 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x13D13184, 0x695B59E7, 0x16F1, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -74764,7 +76245,8 @@ START_TEST(s21_is_not_equal_7474) {
 }
 
 START_TEST(s21_is_not_equal_7475) {
-  char *example = "( 1172864189989768476135862163 != 1259304542206314744195194749 ) = True";
+  char *example =
+      "( 1172864189989768476135862163 != 1259304542206314744195194749 ) = True";
   s21_decimal value_1 = {{0x62C92F93, 0x240FEB86, 0x3CA2BA7, 0x0}};
   s21_decimal value_2 = {{0x3E661F7D, 0x627FA26, 0x411AC1C, 0x0}};
   int code = 1;
@@ -74814,7 +76296,8 @@ START_TEST(s21_is_not_equal_7479) {
 }
 
 START_TEST(s21_is_not_equal_7480) {
-  char *example = "( 1645189803056515343172 != 1967127993096877093796475081 ) = True";
+  char *example =
+      "( 1645189803056515343172 != 1967127993096877093796475081 ) = True";
   s21_decimal value_1 = {{0x6E756344, 0x2F98514A, 0x59, 0x0}};
   s21_decimal value_2 = {{0xE5E070C9, 0x2F02A711, 0x65B2B8E, 0x0}};
   int code = 1;
@@ -74824,7 +76307,8 @@ START_TEST(s21_is_not_equal_7480) {
 }
 
 START_TEST(s21_is_not_equal_7481) {
-  char *example = "( 1010716222960671852690236449 != 1246885903287343968340240703 ) = True";
+  char *example =
+      "( 1010716222960671852690236449 != 1246885903287343968340240703 ) = True";
   s21_decimal value_1 = {{0xCF896421, 0x3C29F4B0, 0x3440B7C, 0x0}};
   s21_decimal value_2 = {{0xC821693F, 0x42607724, 0x407665C, 0x0}};
   int code = 1;
@@ -74864,7 +76348,8 @@ START_TEST(s21_is_not_equal_7484) {
 }
 
 START_TEST(s21_is_not_equal_7485) {
-  char *example = "( -87.505593003287934403452152 != -2.3083724124226386300944357 ) = True";
+  char *example =
+      "( -87.505593003287934403452152 != -2.3083724124226386300944357 ) = True";
   s21_decimal value_1 = {{0x816D9CF8, 0xB3B25498, 0x486207, 0x80180000}};
   s21_decimal value_2 = {{0x86E2BFE5, 0x3135CBD3, 0x13182B, 0x80190000}};
   int code = 1;
@@ -74904,7 +76389,9 @@ START_TEST(s21_is_not_equal_7488) {
 }
 
 START_TEST(s21_is_not_equal_7489) {
-  char *example = "( 79228162514264337593543950335 != 1152739802361295588156145234 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != 1152739802361295588156145234 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xE61E7E52, 0xE6CAC2C4, 0x3B98625, 0x0}};
   int code = 1;
@@ -74944,7 +76431,8 @@ START_TEST(s21_is_not_equal_7492) {
 }
 
 START_TEST(s21_is_not_equal_7493) {
-  char *example = "( 1401102504122456363534816287 != 11576392340581700 ) = True";
+  char *example =
+      "( 1401102504122456363534816287 != 11576392340581700 ) = True";
   s21_decimal value_1 = {{0x4A9A941F, 0xF1357C68, 0x486F6FE, 0x0}};
   s21_decimal value_2 = {{0xE13DAD44, 0x2920AA, 0x0, 0x0}};
   int code = 1;
@@ -75024,7 +76512,8 @@ START_TEST(s21_is_not_equal_7500) {
 }
 
 START_TEST(s21_is_not_equal_7501) {
-  char *example = "( -8.0416813671117067788157804 != -7609.043196676809090623382 ) = True";
+  char *example =
+      "( -8.0416813671117067788157804 != -7609.043196676809090623382 ) = True";
   s21_decimal value_1 = {{0x88CB036C, 0x344EEDC1, 0x4284EC, 0x80190000}};
   s21_decimal value_2 = {{0x2CD36796, 0xEE76AE7, 0x64B47, 0x80150000}};
   int code = 1;
@@ -75044,7 +76533,8 @@ START_TEST(s21_is_not_equal_7502) {
 }
 
 START_TEST(s21_is_not_equal_7503) {
-  char *example = "( 1490055663975100840670656580 != 152144385469793135 ) = True";
+  char *example =
+      "( 1490055663975100840670656580 != 152144385469793135 ) = True";
   s21_decimal value_1 = {{0xC6B7F844, 0x667A80E8, 0x4D08B8F, 0x0}};
   s21_decimal value_2 = {{0x327F436F, 0x21C8683, 0x0, 0x0}};
   int code = 1;
@@ -75074,7 +76564,8 @@ START_TEST(s21_is_not_equal_7505) {
 }
 
 START_TEST(s21_is_not_equal_7506) {
-  char *example = "( -16.16306034569820554060 != 1293448550022624921962264202 ) = True";
+  char *example =
+      "( -16.16306034569820554060 != 1293448550022624921962264202 ) = True";
   s21_decimal value_1 = {{0xD7079EE, 0xC313417D, 0x8, 0x80130000}};
   s21_decimal value_2 = {{0x8A79B68A, 0x658A0DB4, 0x42DEA62, 0x0}};
   int code = 1;
@@ -75104,7 +76595,8 @@ START_TEST(s21_is_not_equal_7508) {
 }
 
 START_TEST(s21_is_not_equal_7509) {
-  char *example = "( 1035282880840516445123592930 != 1594806959409766188163330345 ) = True";
+  char *example =
+      "( 1035282880840516445123592930 != 1594806959409766188163330345 ) = True";
   s21_decimal value_1 = {{0x7A7742E2, 0x6D5E1781, 0x3585DAD, 0x0}};
   s21_decimal value_2 = {{0xCBCCF129, 0x811D4FC4, 0x5273182, 0x0}};
   int code = 1;
@@ -75154,7 +76646,8 @@ START_TEST(s21_is_not_equal_7513) {
 }
 
 START_TEST(s21_is_not_equal_7514) {
-  char *example = "( 1477438219983276722896450833 != 1035901438673230554 ) = True";
+  char *example =
+      "( 1477438219983276722896450833 != 1035901438673230554 ) = True";
   s21_decimal value_1 = {{0x45733511, 0x64154035, 0x4C61BB6, 0x0}};
   s21_decimal value_2 = {{0xBA6F1ADA, 0xE6042DE, 0x0, 0x0}};
   int code = 1;
@@ -75234,7 +76727,8 @@ START_TEST(s21_is_not_equal_7521) {
 }
 
 START_TEST(s21_is_not_equal_7522) {
-  char *example = "( 1983755866096211045322514779 != -7.7344753896333577783477649 ) = True";
+  char *example =
+      "( 1983755866096211045322514779 != -7.7344753896333577783477649 ) = True";
   s21_decimal value_1 = {{0x8D12E15B, 0xFC30BE6D, 0x668ECA4, 0x0}};
   s21_decimal value_2 = {{0xC92E0591, 0x829EF66F, 0x3FFA63, 0x80190000}};
   int code = 1;
@@ -75424,7 +76918,8 @@ START_TEST(s21_is_not_equal_7540) {
 }
 
 START_TEST(s21_is_not_equal_7541) {
-  char *example = "( -668.91758938729175643620402 != 1760968430931541837459347075 ) = True";
+  char *example =
+      "( -668.91758938729175643620402 != 1760968430931541837459347075 ) = True";
   s21_decimal value_1 = {{0x29808432, 0x84A4A619, 0x3754E1, 0x80170000}};
   s21_decimal value_2 = {{0x7225D683, 0xECBA5805, 0x5B0A391, 0x0}};
   int code = 1;
@@ -75464,7 +76959,8 @@ START_TEST(s21_is_not_equal_7544) {
 }
 
 START_TEST(s21_is_not_equal_7545) {
-  char *example = "( 1959324016376442144158908532 != 164976997214578575 ) = True";
+  char *example =
+      "( 1959324016376442144158908532 != 164976997214578575 ) = True";
   s21_decimal value_1 = {{0xF8D40074, 0xC206EC35, 0x654B6FF, 0x0}};
   s21_decimal value_2 = {{0x7315E78F, 0x24A1DB4, 0x0, 0x0}};
   int code = 1;
@@ -75544,7 +77040,8 @@ START_TEST(s21_is_not_equal_7552) {
 }
 
 START_TEST(s21_is_not_equal_7553) {
-  char *example = "( 1598166391060564498687293457 != 1008280669940547698107103120 ) = True";
+  char *example =
+      "( 1598166391060564498687293457 != 1008280669940547698107103120 ) = True";
   s21_decimal value_1 = {{0x39BD7811, 0xA8B8191D, 0x529F8E5, 0x0}};
   s21_decimal value_2 = {{0xCF503790, 0xA427EAB7, 0x34207BC, 0x0}};
   int code = 1;
@@ -75574,7 +77071,8 @@ START_TEST(s21_is_not_equal_7555) {
 }
 
 START_TEST(s21_is_not_equal_7556) {
-  char *example = "( -79228162514264337593543950335 != 1352881339995065596995610 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1352881339995065596995610 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xC26F681A, 0xD82A64F8, 0x11E7B, 0x0}};
   int code = 1;
@@ -75704,7 +77202,8 @@ START_TEST(s21_is_not_equal_7568) {
 }
 
 START_TEST(s21_is_not_equal_7569) {
-  char *example = "( 1399857608969716725 != 1047283946806380843030014498 ) = True";
+  char *example =
+      "( 1399857608969716725 != 1047283946806380843030014498 ) = True";
   s21_decimal value_1 = {{0x1EC483F5, 0x136D4B14, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD7E3EA22, 0x844F3495, 0x3624B00, 0x0}};
   int code = 1;
@@ -75724,7 +77223,8 @@ START_TEST(s21_is_not_equal_7570) {
 }
 
 START_TEST(s21_is_not_equal_7571) {
-  char *example = "( 11836247428830411193 != 1900197839353130151445056627 ) = True";
+  char *example =
+      "( 11836247428830411193 != 1900197839353130151445056627 ) = True";
   s21_decimal value_1 = {{0x4D1139B9, 0xA442CC53, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4A38CC73, 0x476905B5, 0x623CE8B, 0x0}};
   int code = 1;
@@ -75744,7 +77244,8 @@ START_TEST(s21_is_not_equal_7572) {
 }
 
 START_TEST(s21_is_not_equal_7573) {
-  char *example = "( 1781568410940377637618430279 != -18265108.2796526994550 ) = True";
+  char *example =
+      "( 1781568410940377637618430279 != -18265108.2796526994550 ) = True";
   s21_decimal value_1 = {{0xC31FB147, 0x1422C06B, 0x5C1ADC9, 0x0}};
   s21_decimal value_2 = {{0x28BECD3F, 0xFD7AB335, 0x0, 0x800C0000}};
   int code = 1;
@@ -75854,7 +77355,8 @@ START_TEST(s21_is_not_equal_7583) {
 }
 
 START_TEST(s21_is_not_equal_7584) {
-  char *example = "( 10829892895746480842947 != 1189096625860737797555101550 ) = True";
+  char *example =
+      "( 10829892895746480842947 != 1189096625860737797555101550 ) = True";
   s21_decimal value_1 = {{0x1F86A8C3, 0x16F4A173, 0x24B, 0x0}};
   s21_decimal value_2 = {{0x582A1F6E, 0x40AEF6F3, 0x3D79901, 0x0}};
   int code = 1;
@@ -75954,7 +77456,8 @@ START_TEST(s21_is_not_equal_7593) {
 }
 
 START_TEST(s21_is_not_equal_7594) {
-  char *example = "( 15433882586773445602 != 0.81100287356684693372129325 ) = True";
+  char *example =
+      "( 15433882586773445602 != 0.81100287356684693372129325 ) = True";
   s21_decimal value_1 = {{0xC1B7DBE2, 0xD6302A70, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4DDFD02D, 0x6316BEBA, 0x4315A7, 0x1A0000}};
   int code = 1;
@@ -75994,7 +77497,8 @@ START_TEST(s21_is_not_equal_7597) {
 }
 
 START_TEST(s21_is_not_equal_7598) {
-  char *example = "( -4366.68739036557120367307 != -252.421866448626499662044 ) = True";
+  char *example =
+      "( -4366.68739036557120367307 != -252.421866448626499662044 ) = True";
   s21_decimal value_1 = {{0x389FEACB, 0xDC1A479D, 0x5C77, 0x80140000}};
   s21_decimal value_2 = {{0xD39730DC, 0xD119C2A8, 0x3573, 0x80150000}};
   int code = 1;
@@ -76244,7 +77748,8 @@ START_TEST(s21_is_not_equal_7622) {
 }
 
 START_TEST(s21_is_not_equal_7623) {
-  char *example = "( 1167808257340017539921757500 != 188722406549208278653935465 ) = True";
+  char *example =
+      "( 1167808257340017539921757500 != 188722406549208278653935465 ) = True";
   s21_decimal value_1 = {{0x4FD4453C, 0x7B940E49, 0x3C5FD04, 0x0}};
   s21_decimal value_2 = {{0x98B71F69, 0x28AB8580, 0x9C1B86, 0x0}};
   int code = 1;
@@ -76284,7 +77789,8 @@ START_TEST(s21_is_not_equal_7626) {
 }
 
 START_TEST(s21_is_not_equal_7627) {
-  char *example = "( 1815293496960418897411337802 != -66.386005306032251911405104 ) = True";
+  char *example =
+      "( 1815293496960418897411337802 != -66.386005306032251911405104 ) = True";
   s21_decimal value_1 = {{0xA5A66E4A, 0xA7B8E032, 0x5DD9359, 0x0}};
   s21_decimal value_2 = {{0xA531FE30, 0x8F0BA9D5, 0x36E9C8, 0x80180000}};
   int code = 1;
@@ -76314,7 +77820,8 @@ START_TEST(s21_is_not_equal_7629) {
 }
 
 START_TEST(s21_is_not_equal_7630) {
-  char *example = "( 12638957814812335 != 1352966563022486420554052068 ) = True";
+  char *example =
+      "( 12638957814812335 != 1352966563022486420554052068 ) = True";
   s21_decimal value_1 = {{0xAEE20EAF, 0x2CE710, 0x0, 0x0}};
   s21_decimal value_2 = {{0x3E10F1E4, 0x58B1B001, 0x45F25D0, 0x0}};
   int code = 1;
@@ -76374,7 +77881,8 @@ START_TEST(s21_is_not_equal_7635) {
 }
 
 START_TEST(s21_is_not_equal_7636) {
-  char *example = "( 118205644305102245756 != 1563895285138332103226372637 ) = True";
+  char *example =
+      "( 118205644305102245756 != 1563895285138332103226372637 ) = True";
   s21_decimal value_1 = {{0x13CB8F7C, 0x686ECF37, 0x6, 0x0}};
   s21_decimal value_2 = {{0x488B321D, 0x48CA8FED, 0x50D9FB5, 0x0}};
   int code = 1;
@@ -76464,7 +77972,8 @@ START_TEST(s21_is_not_equal_7644) {
 }
 
 START_TEST(s21_is_not_equal_7645) {
-  char *example = "( 1699250492160125313979836706 != 1234601276463775575464334373 ) = True";
+  char *example =
+      "( 1699250492160125313979836706 != 1234601276463775575464334373 ) = True";
   s21_decimal value_1 = {{0x8AC0E922, 0xC285C2B4, 0x57D9649, 0x0}};
   s21_decimal value_2 = {{0xEE7DD425, 0x4E056A17, 0x3FD3CFD, 0x0}};
   int code = 1;
@@ -76514,7 +78023,8 @@ START_TEST(s21_is_not_equal_7649) {
 }
 
 START_TEST(s21_is_not_equal_7650) {
-  char *example = "( 1221785702474911709 != 1078387360470545217115565174 ) = True";
+  char *example =
+      "( 1221785702474911709 != 1078387360470545217115565174 ) = True";
   s21_decimal value_1 = {{0x83AB0FDD, 0x10F4A79F, 0x0, 0x0}};
   s21_decimal value_2 = {{0xAB6EAC76, 0xF33D45C8, 0x37C0567, 0x0}};
   int code = 1;
@@ -76524,7 +78034,8 @@ START_TEST(s21_is_not_equal_7650) {
 }
 
 START_TEST(s21_is_not_equal_7651) {
-  char *example = "( -76498.0116729087627 != -42.349816323754480259922906 ) = True";
+  char *example =
+      "( -76498.0116729087627 != -42.349816323754480259922906 ) = True";
   s21_decimal value_1 = {{0xF5DFC68B, 0xA9DC15C, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x7F357BDA, 0x24A4175E, 0x2307EC, 0x80180000}};
   int code = 1;
@@ -76574,7 +78085,8 @@ START_TEST(s21_is_not_equal_7655) {
 }
 
 START_TEST(s21_is_not_equal_7656) {
-  char *example = "( 17232266088467183674698 != 928.184167697294266339021725 ) = True";
+  char *example =
+      "( 17232266088467183674698 != 928.184167697294266339021725 ) = True";
   s21_decimal value_1 = {{0x908FA54A, 0x29BB7300, 0x3A6, 0x0}};
   s21_decimal value_2 = {{0xAE49D39D, 0x8DE03C42, 0x2FFC6A4, 0x180000}};
   int code = 1;
@@ -76614,7 +78126,8 @@ START_TEST(s21_is_not_equal_7659) {
 }
 
 START_TEST(s21_is_not_equal_7660) {
-  char *example = "( -5223.4115375444797004855304 != 1400891491826983695069 ) = True";
+  char *example =
+      "( -5223.4115375444797004855304 != 1400891491826983695069 ) = True";
   s21_decimal value_1 = {{0x226A3808, 0x118262E4, 0x2B3501, 0x80160000}};
   s21_decimal value_2 = {{0x4E66F2DD, 0xF1465D93, 0x4B, 0x0}};
   int code = 1;
@@ -76704,7 +78217,8 @@ START_TEST(s21_is_not_equal_7668) {
 }
 
 START_TEST(s21_is_not_equal_7669) {
-  char *example = "( 1234115174592505069890977523 != -4.8032944450740928614794411 ) = True";
+  char *example =
+      "( 1234115174592505069890977523 != -4.8032944450740928614794411 ) = True";
   s21_decimal value_1 = {{0xA4503EF3, 0xAB660FA9, 0x3FCD60D, 0x0}};
   s21_decimal value_2 = {{0xCC9084AB, 0x22DF363F, 0x27BB5F, 0x80190000}};
   int code = 1;
@@ -76734,7 +78248,8 @@ START_TEST(s21_is_not_equal_7671) {
 }
 
 START_TEST(s21_is_not_equal_7672) {
-  char *example = "( -40951820.287664837150863478 != 1160335166180255151634588317 ) = True";
+  char *example =
+      "( -40951820.287664837150863478 != 1160335166180255151634588317 ) = True";
   s21_decimal value_1 = {{0x896F7076, 0xA04BC448, 0x21DFE2, 0x80120000}};
   s21_decimal value_2 = {{0x6055229D, 0x6631D849, 0x3BFCE87, 0x0}};
   int code = 1;
@@ -76744,7 +78259,8 @@ START_TEST(s21_is_not_equal_7672) {
 }
 
 START_TEST(s21_is_not_equal_7673) {
-  char *example = "( 1870578264166579800962071700 != 1713351725928220400231037331 ) = True";
+  char *example =
+      "( 1870578264166579800962071700 != 1713351725928220400231037331 ) = True";
   s21_decimal value_1 = {{0x99797C94, 0xE4038145, 0x60B4E5A, 0x0}};
   s21_decimal value_2 = {{0xD99EB993, 0x2C95A2B0, 0x5894057, 0x0}};
   int code = 1;
@@ -76834,7 +78350,8 @@ START_TEST(s21_is_not_equal_7681) {
 }
 
 START_TEST(s21_is_not_equal_7682) {
-  char *example = "( 13804360899103666512 != 1532162413673193537436023636 ) = True";
+  char *example =
+      "( 13804360899103666512 != 1532162413673193537436023636 ) = True";
   s21_decimal value_1 = {{0x5E5DB150, 0xBF92F119, 0x0, 0x0}};
   s21_decimal value_2 = {{0x98A7B54, 0xE010BF10, 0x4F36002, 0x0}};
   int code = 1;
@@ -76884,7 +78401,8 @@ START_TEST(s21_is_not_equal_7686) {
 }
 
 START_TEST(s21_is_not_equal_7687) {
-  char *example = "( -90.88628834466920 != -6.3596644608574336947219524 ) = True";
+  char *example =
+      "( -90.88628834466920 != -6.3596644608574336947219524 ) = True";
   s21_decimal value_1 = {{0x21513FA4, 0x33A9B, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x98386C44, 0x32AB238, 0x349B1D, 0x80190000}};
   int code = 1;
@@ -76994,7 +78512,8 @@ START_TEST(s21_is_not_equal_7697) {
 }
 
 START_TEST(s21_is_not_equal_7698) {
-  char *example = "( 1110171920727820301822374409 != -5.61886797148472579198342 ) = True";
+  char *example =
+      "( 1110171920727820301822374409 != -5.61886797148472579198342 ) = True";
   s21_decimal value_1 = {{0xB0B0B209, 0x6A0DF3DA, 0x396500C, 0x0}};
   s21_decimal value_2 = {{0x260C0D86, 0xF1BE2AB2, 0x76FB, 0x80170000}};
   int code = 1;
@@ -77014,7 +78533,8 @@ START_TEST(s21_is_not_equal_7699) {
 }
 
 START_TEST(s21_is_not_equal_7700) {
-  char *example = "( -4592.5660752076207335 != 1707442746305085313016588981 ) = True";
+  char *example =
+      "( -4592.5660752076207335 != 1707442746305085313016588981 ) = True";
   s21_decimal value_1 = {{0x2299F4E7, 0x7D58B921, 0x2, 0x80100000}};
   s21_decimal value_2 = {{0x8132EAB5, 0xBF36C522, 0x5845D10, 0x0}};
   int code = 1;
@@ -77034,7 +78554,8 @@ START_TEST(s21_is_not_equal_7701) {
 }
 
 START_TEST(s21_is_not_equal_7702) {
-  char *example = "( 4.8281133789977152E-10 != -120.57495514700356253255810 ) = True";
+  char *example =
+      "( 4.8281133789977152E-10 != -120.57495514700356253255810 ) = True";
   s21_decimal value_1 = {{0x74E79A40, 0xAB876F, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x6C340D, 0xD06CB715, 0xFF53, 0x80160000}};
   int code = 1;
@@ -77064,7 +78585,8 @@ START_TEST(s21_is_not_equal_7704) {
 }
 
 START_TEST(s21_is_not_equal_7705) {
-  char *example = "( 1508389597343447420962018426 != 1636651737448883961312122355 ) = True";
+  char *example =
+      "( 1508389597343447420962018426 != 1636651737448883961312122355 ) = True";
   s21_decimal value_1 = {{0x1ECB147A, 0xEB727205, 0x4DFB5EB, 0x0}};
   s21_decimal value_2 = {{0x8F2515F3, 0x779B4190, 0x549CE7C, 0x0}};
   int code = 1;
@@ -77184,7 +78706,8 @@ START_TEST(s21_is_not_equal_7716) {
 }
 
 START_TEST(s21_is_not_equal_7717) {
-  char *example = "( -1.2626294320716722330207397 != 0.19549488239782324179440628 ) = True";
+  char *example =
+      "( -1.2626294320716722330207397 != 0.19549488239782324179440628 ) = True";
   s21_decimal value_1 = {{0x101D04A5, 0xC961C579, 0xA71B8, 0x80190000}};
   s21_decimal value_2 = {{0x56E213F4, 0xE18B0631, 0x102BC3, 0x1A0000}};
   int code = 1;
@@ -77224,7 +78747,8 @@ START_TEST(s21_is_not_equal_7720) {
 }
 
 START_TEST(s21_is_not_equal_7721) {
-  char *example = "( 1415062765725035449890357940 != 1845873307681117439627 ) = True";
+  char *example =
+      "( 1415062765725035449890357940 != 1845873307681117439627 ) = True";
   s21_decimal value_1 = {{0x7FDBC2B4, 0x3D789A22, 0x4928332, 0x0}};
   s21_decimal value_2 = {{0xE454068B, 0x10A3597A, 0x64, 0x0}};
   int code = 1;
@@ -77284,7 +78808,8 @@ START_TEST(s21_is_not_equal_7726) {
 }
 
 START_TEST(s21_is_not_equal_7727) {
-  char *example = "( -69.06648714248112430017 != 1586719829728900631322253186 ) = True";
+  char *example =
+      "( -69.06648714248112430017 != 1586719829728900631322253186 ) = True";
   s21_decimal value_1 = {{0x8F21DBC1, 0x69015C9D, 0x176, 0x80140000}};
   s21_decimal value_2 = {{0xEAB95782, 0x536DDDF3, 0x52080FE, 0x0}};
   int code = 1;
@@ -77364,7 +78889,8 @@ START_TEST(s21_is_not_equal_7734) {
 }
 
 START_TEST(s21_is_not_equal_7735) {
-  char *example = "( 1821868663697482109670359836 != -43.442512398328248288368 ) = True";
+  char *example =
+      "( 1821868663697482109670359836 != -43.442512398328248288368 ) = True";
   s21_decimal value_1 = {{0x1F93831C, 0x288008C8, 0x5E303B2, 0x0}};
   s21_decimal value_2 = {{0xFA464470, 0x5F809FB, 0x933, 0x80150000}};
   int code = 1;
@@ -77374,7 +78900,8 @@ START_TEST(s21_is_not_equal_7735) {
 }
 
 START_TEST(s21_is_not_equal_7736) {
-  char *example = "( 15685000719744588 != -6749.0687402246553877035003 ) = True";
+  char *example =
+      "( 15685000719744588 != -6749.0687402246553877035003 ) = True";
   s21_decimal value_1 = {{0xD033BE4C, 0x37B96C, 0x0, 0x0}};
   s21_decimal value_2 = {{0x829337FB, 0x7EC59C27, 0x37D3B5, 0x80160000}};
   int code = 1;
@@ -77414,7 +78941,8 @@ START_TEST(s21_is_not_equal_7739) {
 }
 
 START_TEST(s21_is_not_equal_7740) {
-  char *example = "( 1366724973662404957535742725 != -333.24476579135949002 ) = True";
+  char *example =
+      "( 1366724973662404957535742725 != -333.24476579135949002 ) = True";
   s21_decimal value_1 = {{0x88F42B05, 0x4820AE32, 0x46A8745, 0x0}};
   s21_decimal value_2 = {{0x593908CA, 0xCE7852E3, 0x1, 0x80110000}};
   int code = 1;
@@ -77434,7 +78962,8 @@ START_TEST(s21_is_not_equal_7741) {
 }
 
 START_TEST(s21_is_not_equal_7742) {
-  char *example = "( 1927246643000900805236282215 != 1023035297865288758355528955 ) = True";
+  char *example =
+      "( 1927246643000900805236282215 != 1023035297865288758355528955 ) = True";
   s21_decimal value_1 = {{0x550AD367, 0xDCE3A55F, 0x63A2E59, 0x0}};
   s21_decimal value_2 = {{0x8FCF8CFB, 0x9FADC19B, 0x34E3C26, 0x0}};
   int code = 1;
@@ -77504,7 +79033,8 @@ START_TEST(s21_is_not_equal_7748) {
 }
 
 START_TEST(s21_is_not_equal_7749) {
-  char *example = "( 139194331492591957 != 116348092470079921943498480 ) = True";
+  char *example =
+      "( 139194331492591957 != 116348092470079921943498480 ) = True";
   s21_decimal value_1 = {{0xCB5D2955, 0x1EE8481, 0x0, 0x0}};
   s21_decimal value_2 = {{0x88EC4EF0, 0xBB24CC6A, 0x603DAA, 0x0}};
   int code = 1;
@@ -77644,7 +79174,8 @@ START_TEST(s21_is_not_equal_7762) {
 }
 
 START_TEST(s21_is_not_equal_7763) {
-  char *example = "( 178707963019344498518768464 != 1833430298311748396230402 ) = True";
+  char *example =
+      "( 178707963019344498518768464 != 1833430298311748396230402 ) = True";
   s21_decimal value_1 = {{0x7D9DBB50, 0x16596636, 0x93D2E2, 0x0}};
   s21_decimal value_2 = {{0x9513A702, 0x74A3F07E, 0x1843E, 0x0}};
   int code = 1;
@@ -77674,7 +79205,8 @@ START_TEST(s21_is_not_equal_7765) {
 }
 
 START_TEST(s21_is_not_equal_7766) {
-  char *example = "( 1751397725384445522968310860 != -52486331916.945788032737149 ) = True";
+  char *example =
+      "( 1751397725384445522968310860 != -52486331916.945788032737149 ) = True";
   s21_decimal value_1 = {{0x1357F44C, 0xEFF96726, 0x5A8B8E4, 0x0}};
   s21_decimal value_2 = {{0xCC075F7D, 0xC1276588, 0x2B6A69, 0x800F0000}};
   int code = 1;
@@ -77834,7 +79366,8 @@ START_TEST(s21_is_not_equal_7781) {
 }
 
 START_TEST(s21_is_not_equal_7782) {
-  char *example = "( 1299809525430539940032479712 != 1477785378800475020240852239 ) = True";
+  char *example =
+      "( 1299809525430539940032479712 != 1477785378800475020240852239 ) = True";
   s21_decimal value_1 = {{0x1DF501E0, 0x9080444E, 0x4332D5F, 0x0}};
   s21_decimal value_2 = {{0xE84F950F, 0xE87BD3D0, 0x4C66539, 0x0}};
   int code = 1;
@@ -77854,7 +79387,8 @@ START_TEST(s21_is_not_equal_7783) {
 }
 
 START_TEST(s21_is_not_equal_7784) {
-  char *example = "( -7608409.0806297480405704261 != 1772348666262643590262566861 ) = True";
+  char *example =
+      "( -7608409.0806297480405704261 != 1772348666262643590262566861 ) = True";
   s21_decimal value_1 = {{0x887DE45, 0xD3C2A1EB, 0x3EEF6E, 0x80130000}};
   s21_decimal value_2 = {{0xB3CA2FCD, 0xB7DB1E26, 0x5BA0D6D, 0x0}};
   int code = 1;
@@ -77964,7 +79498,8 @@ START_TEST(s21_is_not_equal_7794) {
 }
 
 START_TEST(s21_is_not_equal_7795) {
-  char *example = "( 1278444018219803580472 != 1454652562913935894359872454 ) = True";
+  char *example =
+      "( 1278444018219803580472 != 1454652562913935894359872454 ) = True";
   s21_decimal value_1 = {{0x8E699838, 0x4DF98D15, 0x45, 0x0}};
   s21_decimal value_2 = {{0x71D493C6, 0x72368BDB, 0x4B342A9, 0x0}};
   int code = 1;
@@ -78124,7 +79659,8 @@ START_TEST(s21_is_not_equal_7810) {
 }
 
 START_TEST(s21_is_not_equal_7811) {
-  char *example = "( -8.3518098603974893006894354 != -8.6163369459542470511994991 ) = True";
+  char *example =
+      "( -8.3518098603974893006894354 != -8.6163369459542470511994991 ) = True";
   s21_decimal value_1 = {{0xD5F63512, 0x3289C028, 0x4515A5, 0x80190000}};
   s21_decimal value_2 = {{0x4F16A86F, 0x9E2A7536, 0x4745CD, 0x80190000}};
   int code = 1;
@@ -78164,7 +79700,8 @@ START_TEST(s21_is_not_equal_7814) {
 }
 
 START_TEST(s21_is_not_equal_7815) {
-  char *example = "( 1165349898907368782851155159 != 1957392351195817210346039683 ) = True";
+  char *example =
+      "( 1165349898907368782851155159 != 1957392351195817210346039683 ) = True";
   s21_decimal value_1 = {{0x180724D7, 0x9AE4FD71, 0x3C3F470, 0x0}};
   s21_decimal value_2 = {{0x4BB16983, 0xFA88DA96, 0x6531DF3, 0x0}};
   int code = 1;
@@ -78174,7 +79711,8 @@ START_TEST(s21_is_not_equal_7815) {
 }
 
 START_TEST(s21_is_not_equal_7816) {
-  char *example = "( 1983684474533442076057125870 != -70.927606453106006613774576 ) = True";
+  char *example =
+      "( 1983684474533442076057125870 != -70.927606453106006613774576 ) = True";
   s21_decimal value_1 = {{0xCD49C3EE, 0xD73B24C2, 0x668DD86, 0x0}};
   s21_decimal value_2 = {{0x93E750F0, 0x40128744, 0x3AAB81, 0x80180000}};
   int code = 1;
@@ -78214,7 +79752,8 @@ START_TEST(s21_is_not_equal_7819) {
 }
 
 START_TEST(s21_is_not_equal_7820) {
-  char *example = "( -2.70723817187349743 != -62.773480658306843929709444 ) = True";
+  char *example =
+      "( -2.70723817187349743 != -62.773480658306843929709444 ) = True";
   s21_decimal value_1 = {{0x9BB094EF, 0x3C1CDE0, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x44438B84, 0x3488AF76, 0x33ECCD, 0x80180000}};
   int code = 1;
@@ -78244,7 +79783,8 @@ START_TEST(s21_is_not_equal_7822) {
 }
 
 START_TEST(s21_is_not_equal_7823) {
-  char *example = "( 110359291842768641124 != -638589.37203166948947499315 ) = True";
+  char *example =
+      "( 110359291842768641124 != -638589.37203166948947499315 ) = True";
   s21_decimal value_1 = {{0xEFE39C64, 0xFB8AF738, 0x5, 0x0}};
   s21_decimal value_2 = {{0xEE619933, 0xEC235A79, 0x34D2A7, 0x80140000}};
   int code = 1;
@@ -78354,7 +79894,8 @@ START_TEST(s21_is_not_equal_7833) {
 }
 
 START_TEST(s21_is_not_equal_7834) {
-  char *example = "( -6.06217349739738517959 != 1537643319388579135478648981 ) = True";
+  char *example =
+      "( -6.06217349739738517959 != 1537643319388579135478648981 ) = True";
   s21_decimal value_1 = {{0xBDB51C7, 0xDCF4ABB6, 0x20, 0x80140000}};
   s21_decimal value_2 = {{0x9BD15095, 0x5E940339, 0x4F7E8A3, 0x0}};
   int code = 1;
@@ -78424,7 +79965,8 @@ START_TEST(s21_is_not_equal_7840) {
 }
 
 START_TEST(s21_is_not_equal_7841) {
-  char *example = "( 1678728743761895319683689099 != 1300101361024379660296386289 ) = True";
+  char *example =
+      "( 1678728743761895319683689099 != 1300101361024379660296386289 ) = True";
   s21_decimal value_1 = {{0xE6036A8B, 0x8CCE7772, 0x56C9CA3, 0x0}};
   s21_decimal value_2 = {{0x74D9F6F1, 0xF27649, 0x4336B2C, 0x0}};
   int code = 1;
@@ -78444,7 +79986,9 @@ START_TEST(s21_is_not_equal_7842) {
 }
 
 START_TEST(s21_is_not_equal_7843) {
-  char *example = "( -79228162514264337593543950335 != -8.6552600901583817124007946 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != -8.6552600901583817124007946 ) = "
+      "True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0xE44AD00A, 0xE586D140, 0x479839, 0x80190000}};
   int code = 1;
@@ -78514,7 +80058,8 @@ START_TEST(s21_is_not_equal_7849) {
 }
 
 START_TEST(s21_is_not_equal_7850) {
-  char *example = "( 1879547150529805109991 != 0.85744972863512009754984870 ) = True";
+  char *example =
+      "( 1879547150529805109991 != 0.85744972863512009754984870 ) = True";
   s21_decimal value_1 = {{0xA6AF4AE7, 0xE3F4DF23, 0x65, 0x0}};
   s21_decimal value_2 = {{0x9B0AACF7, 0x6DE60EC4, 0x717B8, 0x190000}};
   int code = 1;
@@ -78594,7 +80139,8 @@ START_TEST(s21_is_not_equal_7857) {
 }
 
 START_TEST(s21_is_not_equal_7858) {
-  char *example = "( -1.41704905544888572179470 != 174371367928272013570304 ) = True";
+  char *example =
+      "( -1.41704905544888572179470 != 174371367928272013570304 ) = True";
   s21_decimal value_1 = {{0xB876CB9B, 0x2F0FA0D4, 0x300, 0x80160000}};
   s21_decimal value_2 = {{0x4ADD3100, 0xB0D807A9, 0x24EC, 0x0}};
   int code = 1;
@@ -78624,7 +80170,8 @@ START_TEST(s21_is_not_equal_7860) {
 }
 
 START_TEST(s21_is_not_equal_7861) {
-  char *example = "( 1349583309246151975359647 != 1649933188410834523591148513 ) = True";
+  char *example =
+      "( 1349583309246151975359647 != 1649933188410834523591148513 ) = True";
   s21_decimal value_1 = {{0xF281D49F, 0xECB708C, 0x11DC9, 0x0}};
   s21_decimal value_2 = {{0xEBAE03E1, 0x5DD6188F, 0x554CAF1, 0x0}};
   int code = 1;
@@ -78664,7 +80211,8 @@ START_TEST(s21_is_not_equal_7864) {
 }
 
 START_TEST(s21_is_not_equal_7865) {
-  char *example = "( 1255454807584075063743 != 1745166800313634585430165290 ) = True";
+  char *example =
+      "( 1255454807584075063743 != 1745166800313634585430165290 ) = True";
   s21_decimal value_1 = {{0x252EA1BF, 0xEEF77D0, 0x44, 0x0}};
   s21_decimal value_2 = {{0x4B17872A, 0xCFFEC07E, 0x5A39171, 0x0}};
   int code = 1;
@@ -78744,7 +80292,8 @@ START_TEST(s21_is_not_equal_7872) {
 }
 
 START_TEST(s21_is_not_equal_7873) {
-  char *example = "( 10244138524338525274349507 != 0.0146563389809698955 ) = True";
+  char *example =
+      "( 10244138524338525274349507 != 0.0146563389809698955 ) = True";
   s21_decimal value_1 = {{0xB6F9FC3, 0xDCB6F1D5, 0x87947, 0x0}};
   s21_decimal value_2 = {{0x62AF288B, 0x208B2A0, 0x0, 0x130000}};
   int code = 1;
@@ -78834,7 +80383,8 @@ START_TEST(s21_is_not_equal_7881) {
 }
 
 START_TEST(s21_is_not_equal_7882) {
-  char *example = "( -7.2405552621458628579389973 != 0.53027071539166425761825645 ) = True";
+  char *example =
+      "( -7.2405552621458628579389973 != 0.53027071539166425761825645 ) = True";
   s21_decimal value_1 = {{0xE9D37215, 0xDF635D93, 0x3BE478, 0x80190000}};
   s21_decimal value_2 = {{0x2EF5C36D, 0x4EE3EDE6, 0x2BDCEB, 0x1A0000}};
   int code = 1;
@@ -78924,7 +80474,8 @@ START_TEST(s21_is_not_equal_7890) {
 }
 
 START_TEST(s21_is_not_equal_7891) {
-  char *example = "( 0.87339057580281626355831824 != 11193349220783423 ) = True";
+  char *example =
+      "( 0.87339057580281626355831824 != 11193349220783423 ) = True";
   s21_decimal value_1 = {{0x5AC41410, 0xCC6F02D8, 0x483EC3, 0x1A0000}};
   s21_decimal value_2 = {{0xB426D53F, 0x27C44A, 0x0, 0x0}};
   int code = 1;
@@ -78944,7 +80495,8 @@ START_TEST(s21_is_not_equal_7892) {
 }
 
 START_TEST(s21_is_not_equal_7893) {
-  char *example = "( 19405927443083660 != -82.835082877830835705431095 ) = True";
+  char *example =
+      "( 19405927443083660 != -82.835082877830835705431095 ) = True";
   s21_decimal value_1 = {{0x93C8318C, 0x44F196, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD3034437, 0xD738A48C, 0x448502, 0x80180000}};
   int code = 1;
@@ -78974,7 +80526,8 @@ START_TEST(s21_is_not_equal_7895) {
 }
 
 START_TEST(s21_is_not_equal_7896) {
-  char *example = "( 1487687142714340083906384073 != 1010202805055689436938091289 ) = True";
+  char *example =
+      "( 1487687142714340083906384073 != 1010202805055689436938091289 ) = True";
   s21_decimal value_1 = {{0xFDE810C9, 0x9B00DE76, 0x4CE9601, 0x0}};
   s21_decimal value_2 = {{0xAC23BB19, 0xCB6BFBD3, 0x3439EC3, 0x0}};
   int code = 1;
@@ -79014,7 +80567,8 @@ START_TEST(s21_is_not_equal_7899) {
 }
 
 START_TEST(s21_is_not_equal_7900) {
-  char *example = "( 144761829471602751054873 != 1583358768987952552675710222 ) = True";
+  char *example =
+      "( 144761829471602751054873 != 1583358768987952552675710222 ) = True";
   s21_decimal value_1 = {{0xFB842419, 0x8DF3BB60, 0x1EA7, 0x0}};
   s21_decimal value_2 = {{0xCBED150E, 0xDBA838AE, 0x51DB942, 0x0}};
   int code = 1;
@@ -79104,7 +80658,8 @@ START_TEST(s21_is_not_equal_7908) {
 }
 
 START_TEST(s21_is_not_equal_7909) {
-  char *example = "( 33.14789738157725344 != 0.01528083943116064578721438 ) = True";
+  char *example =
+      "( 33.14789738157725344 != 0.01528083943116064578721438 ) = True";
   s21_decimal value_1 = {{0x500056A0, 0x2E007FB4, 0x0, 0x110000}};
   s21_decimal value_2 = {{0x6B99D69E, 0x98B71058, 0x14395, 0x1A0000}};
   int code = 1;
@@ -79114,7 +80669,8 @@ START_TEST(s21_is_not_equal_7909) {
 }
 
 START_TEST(s21_is_not_equal_7910) {
-  char *example = "( -35.61255237709198705089 != 1415795199095684435688637977 ) = True";
+  char *example =
+      "( -35.61255237709198705089 != 1415795199095684435688637977 ) = True";
   s21_decimal value_1 = {{0x8C16C1C1, 0xE58325B, 0xC1, 0x80140000}};
   s21_decimal value_2 = {{0x205D4619, 0x885F5113, 0x4931E4B, 0x0}};
   int code = 1;
@@ -79124,7 +80680,9 @@ START_TEST(s21_is_not_equal_7910) {
 }
 
 START_TEST(s21_is_not_equal_7911) {
-  char *example = "( 1805865662937431378991663327 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1805865662937431378991663327 != -79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x9E5248DF, 0xBFA9F27F, 0x5D5C6ED, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -79134,7 +80692,8 @@ START_TEST(s21_is_not_equal_7911) {
 }
 
 START_TEST(s21_is_not_equal_7912) {
-  char *example = "( -399.97932105951819920375444 != 1471497903475934017736506840 ) = True";
+  char *example =
+      "( -399.97932105951819920375444 != 1471497903475934017736506840 ) = True";
   s21_decimal value_1 = {{0x61D8FE94, 0x3E848C7B, 0x2115E4, 0x80170000}};
   s21_decimal value_2 = {{0x75117DD8, 0x301535C0, 0x4C131CD, 0x0}};
   int code = 1;
@@ -79184,7 +80743,8 @@ START_TEST(s21_is_not_equal_7916) {
 }
 
 START_TEST(s21_is_not_equal_7917) {
-  char *example = "( 18133845149174238707280 != -5697.93567920441714491383 ) = True";
+  char *example =
+      "( 18133845149174238707280 != -5697.93567920441714491383 ) = True";
   s21_decimal value_1 = {{0xD6EA7E50, 0x9A7B5F1, 0x3D7, 0x0}};
   s21_decimal value_2 = {{0x53773FF7, 0x923AD7EF, 0x78A8, 0x80140000}};
   int code = 1;
@@ -79204,7 +80764,8 @@ START_TEST(s21_is_not_equal_7918) {
 }
 
 START_TEST(s21_is_not_equal_7919) {
-  char *example = "( 1828046300529098424267 != -32.37699656791147187322422 ) = True";
+  char *example =
+      "( 1828046300529098424267 != -32.37699656791147187322422 ) = True";
   s21_decimal value_1 = {{0x43E2FFCB, 0x193D18ED, 0x63, 0x0}};
   s21_decimal value_2 = {{0x96E4BE36, 0xCD28793, 0x2AD9C, 0x80170000}};
   int code = 1;
@@ -79324,7 +80885,8 @@ START_TEST(s21_is_not_equal_7930) {
 }
 
 START_TEST(s21_is_not_equal_7931) {
-  char *example = "( -5.5000083454643091311747077 != -63.177400569729112234364362 ) = True";
+  char *example =
+      "( -5.5000083454643091311747077 != -63.177400569729112234364362 ) = True";
   s21_decimal value_1 = {{0x71A4E005, 0x7F987AC8, 0x2D7EB8, 0x80190000}};
   s21_decimal value_2 = {{0xCD8DCA, 0xBF5B229B, 0x344255, 0x80180000}};
   int code = 1;
@@ -79354,7 +80916,8 @@ START_TEST(s21_is_not_equal_7933) {
 }
 
 START_TEST(s21_is_not_equal_7934) {
-  char *example = "( -4.89095034413397242722683 != 14383675978543092928 ) = True";
+  char *example =
+      "( -4.89095034413397242722683 != 14383675978543092928 ) = True";
   s21_decimal value_1 = {{0xCBE6B97B, 0xE51AFE6E, 0x6791, 0x80170000}};
   s21_decimal value_2 = {{0x316154C0, 0xC79D1518, 0x0, 0x0}};
   int code = 1;
@@ -79364,7 +80927,8 @@ START_TEST(s21_is_not_equal_7934) {
 }
 
 START_TEST(s21_is_not_equal_7935) {
-  char *example = "( -3.61583636129066849030 != -459577.97923570957810613278 ) = True";
+  char *example =
+      "( -3.61583636129066849030 != -459577.97923570957810613278 ) = True";
   s21_decimal value_1 = {{0x76B681E7, 0xF5CC5021, 0x1, 0x80130000}};
   s21_decimal value_2 = {{0x3C9F3C1E, 0x37B29EAB, 0x2603F1, 0x80140000}};
   int code = 1;
@@ -79394,7 +80958,8 @@ START_TEST(s21_is_not_equal_7937) {
 }
 
 START_TEST(s21_is_not_equal_7938) {
-  char *example = "( 1957867399399436088078415494 != 19646889344499432178236 ) = True";
+  char *example =
+      "( 1957867399399436088078415494 != 19646889344499432178236 ) = True";
   s21_decimal value_1 = {{0x1E1EB686, 0x64B3F0B4, 0x653828C, 0x0}};
   s21_decimal value_2 = {{0x27D2423C, 0xF5C8524, 0x429, 0x0}};
   int code = 1;
@@ -79404,7 +80969,8 @@ START_TEST(s21_is_not_equal_7938) {
 }
 
 START_TEST(s21_is_not_equal_7939) {
-  char *example = "( 199047228111607097685974 != 1490025387715969989176750007 ) = True";
+  char *example =
+      "( 199047228111607097685974 != 1490025387715969989176750007 ) = True";
   s21_decimal value_1 = {{0x17EF77D6, 0x5F320A18, 0x2A26, 0x0}};
   s21_decimal value_2 = {{0x46846FB7, 0x1EFA8BE5, 0x4D08526, 0x0}};
   int code = 1;
@@ -79414,7 +80980,8 @@ START_TEST(s21_is_not_equal_7939) {
 }
 
 START_TEST(s21_is_not_equal_7940) {
-  char *example = "( 1953444899498473085581117148 != 1242248041658110807 ) = True";
+  char *example =
+      "( 1953444899498473085581117148 != 1242248041658110807 ) = True";
   s21_decimal value_1 = {{0x8ED3C6DC, 0x317F4B8D, 0x64FDA0C, 0x0}};
   s21_decimal value_2 = {{0x1DF4D357, 0x113D5A03, 0x0, 0x0}};
   int code = 1;
@@ -79444,7 +81011,8 @@ START_TEST(s21_is_not_equal_7942) {
 }
 
 START_TEST(s21_is_not_equal_7943) {
-  char *example = "( 0.12852778488815534881294256 != 1141279401209239118795268731 ) = True";
+  char *example =
+      "( 0.12852778488815534881294256 != 1141279401209239118795268731 ) = True";
   s21_decimal value_1 = {{0xCBB2C7B0, 0x849BCECA, 0xAA1AE, 0x1A0000}};
   s21_decimal value_2 = {{0x1DEC627B, 0x4F694F0C, 0x3B00B50, 0x0}};
   int code = 1;
@@ -79454,7 +81022,8 @@ START_TEST(s21_is_not_equal_7943) {
 }
 
 START_TEST(s21_is_not_equal_7944) {
-  char *example = "( 14354790633673578 != -1363396.3597575037774807676 ) = True";
+  char *example =
+      "( 14354790633673578 != -1363396.3597575037774807676 ) = True";
   s21_decimal value_1 = {{0x248B936A, 0x32FF9B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x101427C, 0xA5C95F78, 0xB471A, 0x80130000}};
   int code = 1;
@@ -79464,7 +81033,8 @@ START_TEST(s21_is_not_equal_7944) {
 }
 
 START_TEST(s21_is_not_equal_7945) {
-  char *example = "( 1251259227231485032588351021 != 13941123383864654291494070 ) = True";
+  char *example =
+      "( 1251259227231485032588351021 != 13941123383864654291494070 ) = True";
   s21_decimal value_1 = {{0x8ECB962D, 0xA016A420, 0x40B0472, 0x0}};
   s21_decimal value_2 = {{0x750B64B6, 0xD01FB394, 0xB8825, 0x0}};
   int code = 1;
@@ -79534,7 +81104,8 @@ START_TEST(s21_is_not_equal_7951) {
 }
 
 START_TEST(s21_is_not_equal_7952) {
-  char *example = "( 1344872149474262983828068345 != 1702496544683422587634018 ) = True";
+  char *example =
+      "( 1344872149474262983828068345 != 1702496544683422587634018 ) = True";
   s21_decimal value_1 = {{0xC76457F9, 0x4F0B0BC7, 0x45873C1, 0x0}};
   s21_decimal value_2 = {{0x4BE14162, 0x85CA684A, 0x16884, 0x0}};
   int code = 1;
@@ -79614,7 +81185,8 @@ START_TEST(s21_is_not_equal_7959) {
 }
 
 START_TEST(s21_is_not_equal_7960) {
-  char *example = "( 19632423866230693367976 != -43073267.149712672508177043 ) = True";
+  char *example =
+      "( 19632423866230693367976 != -43073267.149712672508177043 ) = True";
   s21_decimal value_1 = {{0x158310A8, 0x469CD14C, 0x428, 0x0}};
   s21_decimal value_2 = {{0x3256A93, 0x7DB16998, 0x23A11E, 0x80120000}};
   int code = 1;
@@ -79664,7 +81236,8 @@ START_TEST(s21_is_not_equal_7964) {
 }
 
 START_TEST(s21_is_not_equal_7965) {
-  char *example = "( 1915068362239041771 != 13487485094322975426851053 ) = True";
+  char *example =
+      "( 1915068362239041771 != 13487485094322975426851053 ) = True";
   s21_decimal value_1 = {{0x6BD8E0EB, 0x1A93B087, 0x0, 0x0}};
   s21_decimal value_2 = {{0xE44DB0ED, 0x8333816, 0xB2816, 0x0}};
   int code = 1;
@@ -79704,7 +81277,8 @@ START_TEST(s21_is_not_equal_7968) {
 }
 
 START_TEST(s21_is_not_equal_7969) {
-  char *example = "( 1890045959526811380041820654 != 18621481334617091 ) = True";
+  char *example =
+      "( 1890045959526811380041820654 != 18621481334617091 ) = True";
   s21_decimal value_1 = {{0x86C2A9EE, 0xC554854F, 0x61B68CC, 0x0}};
   s21_decimal value_2 = {{0x7C243403, 0x422823, 0x0, 0x0}};
   int code = 1;
@@ -79744,7 +81318,8 @@ START_TEST(s21_is_not_equal_7972) {
 }
 
 START_TEST(s21_is_not_equal_7973) {
-  char *example = "( 1750578455007087857444536258 != -1593.1964338629195161569625 ) = True";
+  char *example =
+      "( 1750578455007087857444536258 != -1593.1964338629195161569625 ) = True";
   s21_decimal value_1 = {{0x272F3FC2, 0x338520D8, 0x5A80B68, 0x0}};
   s21_decimal value_2 = {{0xDB9E8959, 0x8474027C, 0xD2DB9, 0x80160000}};
   int code = 1;
@@ -79764,7 +81339,8 @@ START_TEST(s21_is_not_equal_7974) {
 }
 
 START_TEST(s21_is_not_equal_7975) {
-  char *example = "( 1819263384697461147053765520 != 0.41590246550150590916458116 ) = True";
+  char *example =
+      "( 1819263384697461147053765520 != 0.41590246550150590916458116 ) = True";
   s21_decimal value_1 = {{0x9226B390, 0xB35B9171, 0x5E0DC01, 0x0}};
   s21_decimal value_2 = {{0xE863F684, 0xC87F67C4, 0x226713, 0x1A0000}};
   int code = 1;
@@ -79774,7 +81350,8 @@ START_TEST(s21_is_not_equal_7975) {
 }
 
 START_TEST(s21_is_not_equal_7976) {
-  char *example = "( 1569585186470751642876553091 != 1833027333188506907945241284 ) = True";
+  char *example =
+      "( 1569585186470751642876553091 != 1833027333188506907945241284 ) = True";
   s21_decimal value_1 = {{0x1E5EA783, 0x74214639, 0x5125497, 0x0}};
   s21_decimal value_2 = {{0xB6BC8AC4, 0xD7EA030D, 0x5EC3EA2, 0x0}};
   int code = 1;
@@ -79814,7 +81391,8 @@ START_TEST(s21_is_not_equal_7979) {
 }
 
 START_TEST(s21_is_not_equal_7980) {
-  char *example = "( 0.30489367516520934947977996 != 19204083309994145351708 ) = True";
+  char *example =
+      "( 0.30489367516520934947977996 != 19204083309994145351708 ) = True";
   s21_decimal value_1 = {{0xD49C7B0C, 0xECC9EB69, 0x19385F, 0x1A0000}};
   s21_decimal value_2 = {{0x78D6081C, 0xE3176D8, 0x411, 0x0}};
   int code = 1;
@@ -79884,7 +81462,8 @@ START_TEST(s21_is_not_equal_7986) {
 }
 
 START_TEST(s21_is_not_equal_7987) {
-  char *example = "( 1943969364425327925989 != 1403956599756420995217813437 ) = True";
+  char *example =
+      "( 1943969364425327925989 != 1403956599756420995217813437 ) = True";
   s21_decimal value_1 = {{0x8D8E5AE5, 0x61FE8D5A, 0x69, 0x0}};
   s21_decimal value_2 = {{0x9416EFBD, 0xC6CCE07C, 0x489535F, 0x0}};
   int code = 1;
@@ -79894,7 +81473,8 @@ START_TEST(s21_is_not_equal_7987) {
 }
 
 START_TEST(s21_is_not_equal_7988) {
-  char *example = "( -92.811243554741845780840477 != 119540868422504440364 ) = True";
+  char *example =
+      "( -92.811243554741845780840477 != 119540868422504440364 ) = True";
   s21_decimal value_1 = {{0x89BC01D, 0x983B6A8B, 0x4CC58B, 0x80180000}};
   s21_decimal value_2 = {{0xC116622C, 0x7AF67A79, 0x6, 0x0}};
   int code = 1;
@@ -79924,7 +81504,8 @@ START_TEST(s21_is_not_equal_7990) {
 }
 
 START_TEST(s21_is_not_equal_7991) {
-  char *example = "( 0.652486660155533980933 != -82.384870527037762787263085 ) = True";
+  char *example =
+      "( 0.652486660155533980933 != -82.384870527037762787263085 ) = True";
   s21_decimal value_1 = {{0x93A07505, 0x5F124863, 0x23, 0x150000}};
   s21_decimal value_2 = {{0xE9FEC26D, 0xC7BF9D83, 0x4425AC, 0x80180000}};
   int code = 1;
@@ -79954,7 +81535,8 @@ START_TEST(s21_is_not_equal_7993) {
 }
 
 START_TEST(s21_is_not_equal_7994) {
-  char *example = "( -5.9201885672228344365828205 != 124711445314768838969565099 ) = True";
+  char *example =
+      "( -5.9201885672228344365828205 != 124711445314768838969565099 ) = True";
   s21_decimal value_1 = {{0xAD33C86D, 0xA72E824F, 0x30F87C, 0x80190000}};
   s21_decimal value_2 = {{0xA4589FAB, 0xFF48C288, 0x6728AC, 0x0}};
   int code = 1;
@@ -79964,7 +81546,8 @@ START_TEST(s21_is_not_equal_7994) {
 }
 
 START_TEST(s21_is_not_equal_7995) {
-  char *example = "( -635.87063108060082824500052 != -47976300.995421382131198332 ) = True";
+  char *example =
+      "( -635.87063108060082824500052 != -47976300.995421382131198332 ) = True";
   s21_decimal value_1 = {{0xECA35354, 0x9922C178, 0x349915, 0x80170000}};
   s21_decimal value_2 = {{0x95F2297C, 0x7D04AF02, 0x27AF60, 0x80120000}};
   int code = 1;
@@ -80004,7 +81587,8 @@ START_TEST(s21_is_not_equal_7998) {
 }
 
 START_TEST(s21_is_not_equal_7999) {
-  char *example = "( 1885168187888118296865118921 != -9.4581386489694096385288810 ) = True";
+  char *example =
+      "( 1885168187888118296865118921 != -9.4581386489694096385288810 ) = True";
   s21_decimal value_1 = {{0x8F379AC9, 0x3D8DABB2, 0x6175FE4, 0x0}};
   s21_decimal value_2 = {{0x8AC17771, 0xB93A2F70, 0x7D2D6, 0x80180000}};
   int code = 1;
@@ -80054,7 +81638,8 @@ START_TEST(s21_is_not_equal_8003) {
 }
 
 START_TEST(s21_is_not_equal_8004) {
-  char *example = "( -4.8553694537305613952694502 != -99.261431901336357338094010 ) = True";
+  char *example =
+      "( -4.8553694537305613952694502 != -99.261431901336357338094010 ) = True";
   s21_decimal value_1 = {{0xD03138E6, 0xE12FC9F, 0x2829A5, 0x80190000}};
   s21_decimal value_2 = {{0x3A6068F9, 0x4CF151F9, 0x835F1, 0x80170000}};
   int code = 1;
@@ -80074,7 +81659,8 @@ START_TEST(s21_is_not_equal_8005) {
 }
 
 START_TEST(s21_is_not_equal_8006) {
-  char *example = "( 1169097498776250511230991793 != -5.3206453599571451771316704 ) = True";
+  char *example =
+      "( 1169097498776250511230991793 != -5.3206453599571451771316704 ) = True";
   s21_decimal value_1 = {{0x56CB7DB1, 0x66A9D64B, 0x3C70E06, 0x0}};
   s21_decimal value_2 = {{0xB5FF69E0, 0xA10FA961, 0x2C02E7, 0x80190000}};
   int code = 1;
@@ -80134,7 +81720,8 @@ START_TEST(s21_is_not_equal_8011) {
 }
 
 START_TEST(s21_is_not_equal_8012) {
-  char *example = "( 0.32941668251267117845401104 != -34.883903749158310243305330 ) = True";
+  char *example =
+      "( 0.32941668251267117845401104 != -34.883903749158310243305330 ) = True";
   s21_decimal value_1 = {{0x1F94E10, 0x6A06C8ED, 0x1B3FAB, 0x1A0000}};
   s21_decimal value_2 = {{0x87382725, 0x569F5A0, 0x2E2B2, 0x80170000}};
   int code = 1;
@@ -80164,7 +81751,8 @@ START_TEST(s21_is_not_equal_8014) {
 }
 
 START_TEST(s21_is_not_equal_8015) {
-  char *example = "( -512.2407480835015022671987 != 1732794293298600038668749821 ) = True";
+  char *example =
+      "( -512.2407480835015022671987 != 1732794293298600038668749821 ) = True";
   s21_decimal value_1 = {{0x673AF873, 0x44158D75, 0x43CB6, 0x80160000}};
   s21_decimal value_2 = {{0x8878CBFD, 0xDCFD622F, 0x5995576, 0x0}};
   int code = 1;
@@ -80174,7 +81762,8 @@ START_TEST(s21_is_not_equal_8015) {
 }
 
 START_TEST(s21_is_not_equal_8016) {
-  char *example = "( 106374322872632601566404084 != 1721277510243621088776523602 ) = True";
+  char *example =
+      "( 106374322872632601566404084 != 1721277510243621088776523602 ) = True";
   s21_decimal value_1 = {{0xBF525DF4, 0x9906BE2A, 0x57FDA3, 0x0}};
   s21_decimal value_2 = {{0x9DA98F52, 0xCD862E97, 0x58FCEB0, 0x0}};
   int code = 1;
@@ -80194,7 +81783,8 @@ START_TEST(s21_is_not_equal_8017) {
 }
 
 START_TEST(s21_is_not_equal_8018) {
-  char *example = "( 1731491654502929845199596346 != 1873721940601522525206739323 ) = True";
+  char *example =
+      "( 1731491654502929845199596346 != 1873721940601522525206739323 ) = True";
   s21_decimal value_1 = {{0xD3686B3A, 0xAC317846, 0x598419E, 0x0}};
   s21_decimal value_2 = {{0x4C27F97B, 0xEE83A616, 0x60DE80D, 0x0}};
   int code = 1;
@@ -80214,7 +81804,8 @@ START_TEST(s21_is_not_equal_8019) {
 }
 
 START_TEST(s21_is_not_equal_8020) {
-  char *example = "( 1396921356973490659365779566 != 1768933044282766886886653009 ) = True";
+  char *example =
+      "( 1396921356973490659365779566 != 1768933044282766886886653009 ) = True";
   s21_decimal value_1 = {{0x7858786E, 0x8048471D, 0x483819A, 0x0}};
   s21_decimal value_2 = {{0x516F3C51, 0x7AC99921, 0x5B73A24, 0x0}};
   int code = 1;
@@ -80364,7 +81955,8 @@ START_TEST(s21_is_not_equal_8034) {
 }
 
 START_TEST(s21_is_not_equal_8035) {
-  char *example = "( 1069931603989558758266828064 != 1126892424875780424110887559 ) = True";
+  char *example =
+      "( 1069931603989558758266828064 != 1126892424875780424110887559 ) = True";
   s21_decimal value_1 = {{0xD44AF520, 0x790AAA7F, 0x37506D4, 0x0}};
   s21_decimal value_2 = {{0xF17ED287, 0xC2A8D9DA, 0x3A424C0, 0x0}};
   int code = 1;
@@ -80404,7 +81996,8 @@ START_TEST(s21_is_not_equal_8038) {
 }
 
 START_TEST(s21_is_not_equal_8039) {
-  char *example = "( 1520980017770023937146584197 != -74.621667981136590126314231 ) = True";
+  char *example =
+      "( 1520980017770023937146584197 != -74.621667981136590126314231 ) = True";
   s21_decimal value_1 = {{0x344F7C85, 0xFA89CB03, 0x4EA200B, 0x0}};
   s21_decimal value_2 = {{0x8049F2F7, 0xBA1B7E4A, 0x3DB9C0, 0x80180000}};
   int code = 1;
@@ -80414,7 +82007,8 @@ START_TEST(s21_is_not_equal_8039) {
 }
 
 START_TEST(s21_is_not_equal_8040) {
-  char *example = "( 1215437252553870689879588476 != -806.29827987468809038045221 ) = True";
+  char *example =
+      "( 1215437252553870689879588476 != -806.29827987468809038045221 ) = True";
   s21_decimal value_1 = {{0x2655FE7C, 0x7CA7D5E2, 0x3ED62D9, 0x0}};
   s21_decimal value_2 = {{0x74A9A025, 0xBBCA6972, 0x42B207, 0x80170000}};
   int code = 1;
@@ -80504,7 +82098,8 @@ START_TEST(s21_is_not_equal_8048) {
 }
 
 START_TEST(s21_is_not_equal_8049) {
-  char *example = "( 1575225932770717000362660144 != 1226331674117089295464489081 ) = True";
+  char *example =
+      "( 1575225932770717000362660144 != 1226331674117089295464489081 ) = True";
   s21_decimal value_1 = {{0xDEA89130, 0xEC5BCDF6, 0x516FF10, 0x0}};
   s21_decimal value_2 = {{0x9F516079, 0x436619F2, 0x3F665D5, 0x0}};
   int code = 1;
@@ -80534,7 +82129,8 @@ START_TEST(s21_is_not_equal_8051) {
 }
 
 START_TEST(s21_is_not_equal_8052) {
-  char *example = "( 1459263725477232176 != -4.1692745264408184645869953 ) = True";
+  char *example =
+      "( 1459263725477232176 != -4.1692745264408184645869953 ) = True";
   s21_decimal value_1 = {{0x76AEFE30, 0x144058A0, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8509E181, 0x3FE79B96, 0x227CC8, 0x80190000}};
   int code = 1;
@@ -80544,7 +82140,8 @@ START_TEST(s21_is_not_equal_8052) {
 }
 
 START_TEST(s21_is_not_equal_8053) {
-  char *example = "( -58.5993711506523 != -6.7806808238014575187954589 ) = True";
+  char *example =
+      "( -58.5993711506523 != -6.7806808238014575187954589 ) = True";
   s21_decimal value_1 = {{0x4B03D45B, 0x214F5, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x1FD18B9D, 0x70A6FF33, 0x3816A6, 0x80190000}};
   int code = 1;
@@ -80584,7 +82181,8 @@ START_TEST(s21_is_not_equal_8056) {
 }
 
 START_TEST(s21_is_not_equal_8057) {
-  char *example = "( 1566952118223864410677638341 != -4.9800501962501062004264252 ) = True";
+  char *example =
+      "( 1566952118223864410677638341 != -4.9800501962501062004264252 ) = True";
   s21_decimal value_1 = {{0xBD62F4C5, 0x89B757C0, 0x5102704, 0x0}};
   s21_decimal value_2 = {{0xE4674D3C, 0x9EF54F07, 0x2931AA, 0x80190000}};
   int code = 1;
@@ -80614,7 +82212,8 @@ START_TEST(s21_is_not_equal_8059) {
 }
 
 START_TEST(s21_is_not_equal_8060) {
-  char *example = "( -50089.023795201768532105275 != 118003049441258841230 ) = True";
+  char *example =
+      "( -50089.023795201768532105275 != 118003049441258841230 ) = True";
   s21_decimal value_1 = {{0x7BBA583B, 0x6BBAFA23, 0x296EC3, 0x80150000}};
   s21_decimal value_2 = {{0x8717248E, 0x659F0C42, 0x6, 0x0}};
   int code = 1;
@@ -80634,7 +82233,8 @@ START_TEST(s21_is_not_equal_8061) {
 }
 
 START_TEST(s21_is_not_equal_8062) {
-  char *example = "( 1672402484903678481805061 != 1467603601240622220737620894 ) = True";
+  char *example =
+      "( 1672402484903678481805061 != 1467603601240622220737620894 ) = True";
   s21_decimal value_1 = {{0x72382F05, 0x1ED093C6, 0x16225, 0x0}};
   s21_decimal value_2 = {{0x7FC5AB9E, 0xA4006F33, 0x4BDF926, 0x0}};
   int code = 1;
@@ -80744,7 +82344,8 @@ START_TEST(s21_is_not_equal_8072) {
 }
 
 START_TEST(s21_is_not_equal_8073) {
-  char *example = "( -58.802868901074438401224729 != 150044423346862808435541 ) = True";
+  char *example =
+      "( -58.802868901074438401224729 != 150044423346862808435541 ) = True";
   s21_decimal value_1 = {{0xF366F019, 0xE9198F4A, 0x30A3FD, 0x80180000}};
   s21_decimal value_2 = {{0xC5690B55, 0xECAB408B, 0x1FC5, 0x0}};
   int code = 1;
@@ -80764,7 +82365,8 @@ START_TEST(s21_is_not_equal_8074) {
 }
 
 START_TEST(s21_is_not_equal_8075) {
-  char *example = "( -1.3123449558946167101866 != -6.3499083927610738518638925 ) = True";
+  char *example =
+      "( -1.3123449558946167101866 != -6.3499083927610738518638925 ) = True";
   s21_decimal value_1 = {{0x870F99AA, 0x6C72C2D8, 0x2C7, 0x80160000}};
   s21_decimal value_2 = {{0x2589C14D, 0x3CBCEC78, 0x348674, 0x80190000}};
   int code = 1;
@@ -80814,7 +82416,8 @@ START_TEST(s21_is_not_equal_8079) {
 }
 
 START_TEST(s21_is_not_equal_8080) {
-  char *example = "( 1857739694123910612144915123 != 1655971023746621536531527032 ) = True";
+  char *example =
+      "( 1857739694123910612144915123 != 1655971023746621536531527032 ) = True";
   s21_decimal value_1 = {{0xE6C482B3, 0x9D34AD01, 0x600AFAE, 0x0}};
   s21_decimal value_2 = {{0x347A3578, 0x1371E438, 0x559C981, 0x0}};
   int code = 1;
@@ -80874,7 +82477,8 @@ START_TEST(s21_is_not_equal_8085) {
 }
 
 START_TEST(s21_is_not_equal_8086) {
-  char *example = "( 19601458949465716846 != 1395663568336704676366377 ) = True";
+  char *example =
+      "( 19601458949465716846 != 1395663568336704676366377 ) = True";
   s21_decimal value_1 = {{0xC24E386E, 0x10065F0F, 0x1, 0x0}};
   s21_decimal value_2 = {{0x68E90829, 0x12DA3BBB, 0x1278B, 0x0}};
   int code = 1;
@@ -80884,7 +82488,8 @@ START_TEST(s21_is_not_equal_8086) {
 }
 
 START_TEST(s21_is_not_equal_8087) {
-  char *example = "( 1432652207282089406115975759 != -225226.23919337173 ) = True";
+  char *example =
+      "( 1432652207282089406115975759 != -225226.23919337173 ) = True";
   s21_decimal value_1 = {{0xEFCD924F, 0xC70ECF45, 0x4A10FE7, 0x0}};
   s21_decimal value_2 = {{0x61F2ED5, 0x500435, 0x0, 0x800B0000}};
   int code = 1;
@@ -80904,7 +82509,8 @@ START_TEST(s21_is_not_equal_8088) {
 }
 
 START_TEST(s21_is_not_equal_8089) {
-  char *example = "( 1718192337806860071667317589 != 1249785810123989102331825 ) = True";
+  char *example =
+      "( 1718192337806860071667317589 != 1249785810123989102331825 ) = True";
   s21_decimal value_1 = {{0x9BD13B55, 0x4518A492, 0x58D4161, 0x0}};
   s21_decimal value_2 = {{0x46BB87B1, 0x64732C1, 0x108A7, 0x0}};
   int code = 1;
@@ -80984,7 +82590,8 @@ START_TEST(s21_is_not_equal_8096) {
 }
 
 START_TEST(s21_is_not_equal_8097) {
-  char *example = "( -8.7633728538254306110123901 != -6.4397173468966711003870344 ) = True";
+  char *example =
+      "( -8.7633728538254306110123901 != -6.4397173468966711003870344 ) = True";
   s21_decimal value_1 = {{0xBF84AF7D, 0xF1762559, 0x487D29, 0x80190000}};
   s21_decimal value_2 = {{0xC9927488, 0xC4D34967, 0x3544A1, 0x80190000}};
   int code = 1;
@@ -81014,7 +82621,8 @@ START_TEST(s21_is_not_equal_8099) {
 }
 
 START_TEST(s21_is_not_equal_8100) {
-  char *example = "( 1477228843705307750329279002 != -33.251035901480728037303318 ) = True";
+  char *example =
+      "( 1477228843705307750329279002 != -33.251035901480728037303318 ) = True";
   s21_decimal value_1 = {{0xDD80E21A, 0x14867E7D, 0x4C5EF60, 0x0}};
   s21_decimal value_2 = {{0x11122416, 0x44A17A25, 0x1B812E, 0x80180000}};
   int code = 1;
@@ -81104,7 +82712,8 @@ START_TEST(s21_is_not_equal_8108) {
 }
 
 START_TEST(s21_is_not_equal_8109) {
-  char *example = "( 18828610960422642194 != 1354828891016766981678970934 ) = True";
+  char *example =
+      "( 18828610960422642194 != 1354828891016766981678970934 ) = True";
   s21_decimal value_1 = {{0x604A212, 0x54CA9E9, 0x1, 0x0}};
   s21_decimal value_2 = {{0x537A3836, 0x596D6194, 0x460B02D, 0x0}};
   int code = 1;
@@ -81264,7 +82873,8 @@ START_TEST(s21_is_not_equal_8124) {
 }
 
 START_TEST(s21_is_not_equal_8125) {
-  char *example = "( 1627672043836824844785875402 != 14342130524152316335 ) = True";
+  char *example =
+      "( 1627672043836824844785875402 != 14342130524152316335 ) = True";
   s21_decimal value_1 = {{0xF97AF9CA, 0x4D144196, 0x54260F6, 0x0}};
   s21_decimal value_2 = {{0x4E62C1AF, 0xC7097BB9, 0x0, 0x0}};
   int code = 1;
@@ -81274,7 +82884,8 @@ START_TEST(s21_is_not_equal_8125) {
 }
 
 START_TEST(s21_is_not_equal_8126) {
-  char *example = "( 133125268474991179685863035 != -3.3542419430659943204961357 ) = True";
+  char *example =
+      "( 133125268474991179685863035 != -3.3542419430659943204961357 ) = True";
   s21_decimal value_1 = {{0xAE6E9E7B, 0x43C1171B, 0x6E1E5F, 0x0}};
   s21_decimal value_2 = {{0xD624BC4D, 0x336B5E89, 0x1BBEE2, 0x80190000}};
   int code = 1;
@@ -81314,7 +82925,8 @@ START_TEST(s21_is_not_equal_8129) {
 }
 
 START_TEST(s21_is_not_equal_8130) {
-  char *example = "( 1510534208276970614872583403 != -60.092217370891550489448532 ) = True";
+  char *example =
+      "( 1510534208276970614872583403 != -60.092217370891550489448532 ) = True";
   s21_decimal value_1 = {{0x91B3ACEB, 0x82E9ADA8, 0x4E17C0F, 0x0}};
   s21_decimal value_2 = {{0xE621054, 0xA19304FD, 0x31B505, 0x80180000}};
   int code = 1;
@@ -81344,7 +82956,8 @@ START_TEST(s21_is_not_equal_8132) {
 }
 
 START_TEST(s21_is_not_equal_8133) {
-  char *example = "( 2.7274966450208383E-10 != 1057117639190699718926028841 ) = True";
+  char *example =
+      "( 2.7274966450208383E-10 != 1057117639190699718926028841 ) = True";
   s21_decimal value_1 = {{0xFE867E7F, 0x60E66F, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xA0165029, 0xC961765, 0x36A6D5E, 0x0}};
   int code = 1;
@@ -81364,7 +82977,8 @@ START_TEST(s21_is_not_equal_8134) {
 }
 
 START_TEST(s21_is_not_equal_8135) {
-  char *example = "( 1541286996280798185868360342 != 1552226533413842017842153216 ) = True";
+  char *example =
+      "( 1541286996280798185868360342 != 1552226533413842017842153216 ) = True";
   s21_decimal value_1 = {{0x7711FA96, 0x7D5420E6, 0x4FAEC37, 0x0}};
   s21_decimal value_2 = {{0x7F10C700, 0xFC607079, 0x503F8C0, 0x0}};
   int code = 1;
@@ -81374,7 +82988,8 @@ START_TEST(s21_is_not_equal_8135) {
 }
 
 START_TEST(s21_is_not_equal_8136) {
-  char *example = "( -15.515557244047876494876093 != 1309355552967236496858047131 ) = True";
+  char *example =
+      "( -15.515557244047876494876093 != 1309355552967236496858047131 ) = True";
   s21_decimal value_1 = {{0xAA1E5DBD, 0xB27241E, 0xCD58C, 0x80180000}};
   s21_decimal value_2 = {{0x584629B, 0xC110184D, 0x43B12D2, 0x0}};
   int code = 1;
@@ -81394,7 +83009,8 @@ START_TEST(s21_is_not_equal_8137) {
 }
 
 START_TEST(s21_is_not_equal_8138) {
-  char *example = "( 79228162514264337593543950335 != -1.3953155563073841124 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != -1.3953155563073841124 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xC0C827E4, 0xC1A3910E, 0x0, 0x80130000}};
   int code = 1;
@@ -81414,7 +83030,8 @@ START_TEST(s21_is_not_equal_8139) {
 }
 
 START_TEST(s21_is_not_equal_8140) {
-  char *example = "( 5.7681087316642251E-10 != -29.681567485363537667443536 ) = True";
+  char *example =
+      "( 5.7681087316642251E-10 != -29.681567485363537667443536 ) = True";
   s21_decimal value_1 = {{0xAFC449CB, 0xCCECA4, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x14B44B50, 0xFF5D7DC1, 0x188D50, 0x80180000}};
   int code = 1;
@@ -81554,7 +83171,8 @@ START_TEST(s21_is_not_equal_8153) {
 }
 
 START_TEST(s21_is_not_equal_8154) {
-  char *example = "( -2.8691543826944382910477700 != 1743309625805583431516193772 ) = True";
+  char *example =
+      "( -2.8691543826944382910477700 != 1743309625805583431516193772 ) = True";
   s21_decimal value_1 = {{0xB4838089, 0xB79232EA, 0x3CC1, 0x80170000}};
   s21_decimal value_2 = {{0x71BA83EC, 0x2E401439, 0x5A2082C, 0x0}};
   int code = 1;
@@ -81584,7 +83202,8 @@ START_TEST(s21_is_not_equal_8156) {
 }
 
 START_TEST(s21_is_not_equal_8157) {
-  char *example = "( 0.63798085354081151950144913 != 86394567.9572204108680510 ) = True";
+  char *example =
+      "( 0.63798085354081151950144913 != 86394567.9572204108680510 ) = True";
   s21_decimal value_1 = {{0xAD9A4591, 0x2316B9DB, 0x34C5C5, 0x1A0000}};
   s21_decimal value_2 = {{0x9BDD4153, 0x757B5B0D, 0x124B, 0xF0000}};
   int code = 1;
@@ -81604,7 +83223,8 @@ START_TEST(s21_is_not_equal_8158) {
 }
 
 START_TEST(s21_is_not_equal_8159) {
-  char *example = "( 127465604283187156 != -9.6655531140358826004313474 ) = True";
+  char *example =
+      "( 127465604283187156 != -9.6655531140358826004313474 ) = True";
   s21_decimal value_1 = {{0xB0613FD4, 0x1C4D94A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xFCDFF582, 0xD79E14A0, 0x4FF39A, 0x80190000}};
   int code = 1;
@@ -81624,7 +83244,8 @@ START_TEST(s21_is_not_equal_8160) {
 }
 
 START_TEST(s21_is_not_equal_8161) {
-  char *example = "( 12293500846427256106 != -3.3763108939194502257523720 ) = True";
+  char *example =
+      "( 12293500846427256106 != -3.3763108939194502257523720 ) = True";
   s21_decimal value_1 = {{0xD542B52A, 0xAA9B49E2, 0x0, 0x0}};
   s21_decimal value_2 = {{0x899CB934, 0x2E28B5F5, 0x2CAF6, 0x80180000}};
   int code = 1;
@@ -81664,7 +83285,8 @@ START_TEST(s21_is_not_equal_8164) {
 }
 
 START_TEST(s21_is_not_equal_8165) {
-  char *example = "( -61.779649851477020026856 != 1616606180455409709836981665 ) = True";
+  char *example =
+      "( -61.779649851477020026856 != 1616606180455409709836981665 ) = True";
   s21_decimal value_1 = {{0x15F6A7E8, 0x14DF194E, 0xD15, 0x80150000}};
   s21_decimal value_2 = {{0xDF28D5A1, 0xA5295D76, 0x53939AC, 0x0}};
   int code = 1;
@@ -81704,7 +83326,8 @@ START_TEST(s21_is_not_equal_8168) {
 }
 
 START_TEST(s21_is_not_equal_8169) {
-  char *example = "( -5.97387853236086 != -699793.89252896988039872630 ) = True";
+  char *example =
+      "( -5.97387853236086 != -699793.89252896988039872630 ) = True";
   s21_decimal value_1 = {{0x32C90776, 0x21F52, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0x4312333F, 0x77F4985, 0x5C9DF, 0x80130000}};
   int code = 1;
@@ -81774,7 +83397,8 @@ START_TEST(s21_is_not_equal_8175) {
 }
 
 START_TEST(s21_is_not_equal_8176) {
-  char *example = "( -8950.4029944161032863502398 != 1519830875820916296919704201 ) = True";
+  char *example =
+      "( -8950.4029944161032863502398 != 1519830875820916296919704201 ) = True";
   s21_decimal value_1 = {{0x38EC503E, 0x2F8263FA, 0x4A0937, 0x80160000}};
   s21_decimal value_2 = {{0x8C66289, 0xDE685099, 0x4E92CB4, 0x0}};
   int code = 1;
@@ -81784,7 +83408,8 @@ START_TEST(s21_is_not_equal_8176) {
 }
 
 START_TEST(s21_is_not_equal_8177) {
-  char *example = "( 1397878815932270231415131626 != 1221701353038338187867847068 ) = True";
+  char *example =
+      "( 1397878815932270231415131626 != 1221701353038338187867847068 ) = True";
   s21_decimal value_1 = {{0xF478DEA, 0x748C0629, 0x4844C5A, 0x0}};
   s21_decimal value_2 = {{0x4735F99C, 0xDFC624E, 0x3F29153, 0x0}};
   int code = 1;
@@ -81834,7 +83459,8 @@ START_TEST(s21_is_not_equal_8181) {
 }
 
 START_TEST(s21_is_not_equal_8182) {
-  char *example = "( 1901388718870543555325351993 != 13981201265878098 ) = True";
+  char *example =
+      "( 1901388718870543555325351993 != 13981201265878098 ) = True";
   s21_decimal value_1 = {{0xC2A45839, 0xFCA85719, 0x624CAB8, 0x0}};
   s21_decimal value_2 = {{0x16FC6452, 0x31ABD4, 0x0, 0x0}};
   int code = 1;
@@ -81874,7 +83500,8 @@ START_TEST(s21_is_not_equal_8185) {
 }
 
 START_TEST(s21_is_not_equal_8186) {
-  char *example = "( 1395009808358476334319301008 != 1179537536009938460917069246 ) = True";
+  char *example =
+      "( 1395009808358476334319301008 != 1179537536009938460917069246 ) = True";
   s21_decimal value_1 = {{0x21BC7190, 0x3E380635, 0x481ECD1, 0x0}};
   s21_decimal value_2 = {{0x329375BE, 0xF4192595, 0x3CFB0C9, 0x0}};
   int code = 1;
@@ -81894,7 +83521,8 @@ START_TEST(s21_is_not_equal_8187) {
 }
 
 START_TEST(s21_is_not_equal_8188) {
-  char *example = "( -96.406080369346653820832691 != -80356396.6366604972231 ) = True";
+  char *example =
+      "( -96.406080369346653820832691 != -80356396.6366604972231 ) = True";
   s21_decimal value_1 = {{0xE4F84BB3, 0x16BFB7E2, 0x4FBEC8, 0x80180000}};
   s21_decimal value_2 = {{0x316DD0C7, 0x8FB0B1F2, 0x2B, 0x800D0000}};
   int code = 1;
@@ -82034,7 +83662,8 @@ START_TEST(s21_is_not_equal_8201) {
 }
 
 START_TEST(s21_is_not_equal_8202) {
-  char *example = "( 1957111127534320276287155318 != 186711442825343778 ) = True";
+  char *example =
+      "( 1957111127534320276287155318 != 186711442825343778 ) = True";
   s21_decimal value_1 = {{0x2F5E6C76, 0xD03BD9F1, 0x652E266, 0x0}};
   s21_decimal value_2 = {{0x691AF322, 0x2975511, 0x0, 0x0}};
   int code = 1;
@@ -82074,7 +83703,9 @@ START_TEST(s21_is_not_equal_8205) {
 }
 
 START_TEST(s21_is_not_equal_8206) {
-  char *example = "( 5.99024197771998539956273092 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 5.99024197771998539956273092 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x5B2ABFC4, 0xD46D1365, 0x1EF804E, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -82134,7 +83765,8 @@ START_TEST(s21_is_not_equal_8211) {
 }
 
 START_TEST(s21_is_not_equal_8212) {
-  char *example = "( 1262663297551474303372449410 != -27.739115793213530 ) = True";
+  char *example =
+      "( 1262663297551474303372449410 != -27.739115793213530 ) = True";
   s21_decimal value_1 = {{0x74A95682, 0x84227845, 0x414735A, 0x0}};
   s21_decimal value_2 = {{0x9E52E409, 0x9DADB, 0x0, 0x800E0000}};
   int code = 1;
@@ -82204,7 +83836,8 @@ START_TEST(s21_is_not_equal_8218) {
 }
 
 START_TEST(s21_is_not_equal_8219) {
-  char *example = "( 1246585045962115035747605614 != -529.913130672991523973890 ) = True";
+  char *example =
+      "( 1246585045962115035747605614 != -529.913130672991523973890 ) = True";
   s21_decimal value_1 = {{0xD1005C6E, 0xC041C1DA, 0x40726A6, 0x0}};
   s21_decimal value_2 = {{0xF961044D, 0xAA32CAB2, 0xB38, 0x80140000}};
   int code = 1;
@@ -82224,7 +83857,8 @@ START_TEST(s21_is_not_equal_8220) {
 }
 
 START_TEST(s21_is_not_equal_8221) {
-  char *example = "( 1765642633527232030553842410 != 16069121115683231626893 ) = True";
+  char *example =
+      "( 1765642633527232030553842410 != 16069121115683231626893 ) = True";
   s21_decimal value_1 = {{0x3FE2A2EA, 0xF4858985, 0x5B4815E, 0x0}};
   s21_decimal value_2 = {{0x83B3F68D, 0x1BDA64DC, 0x367, 0x0}};
   int code = 1;
@@ -82294,7 +83928,8 @@ START_TEST(s21_is_not_equal_8227) {
 }
 
 START_TEST(s21_is_not_equal_8228) {
-  char *example = "( -8.3830411813519184639225718 != 1650186622566995947558865306 ) = True";
+  char *example =
+      "( -8.3830411813519184639225718 != 1650186622566995947558865306 ) = True";
   s21_decimal value_1 = {{0x1DAEEF76, 0xBAFD5E64, 0x4557C7, 0x80190000}};
   s21_decimal value_2 = {{0x928D099A, 0xF475DAB, 0x555009C, 0x0}};
   int code = 1;
@@ -82414,7 +84049,8 @@ START_TEST(s21_is_not_equal_8239) {
 }
 
 START_TEST(s21_is_not_equal_8240) {
-  char *example = "( 1165220037459154626035482441 != -5599.3903922988252740684974 ) = True";
+  char *example =
+      "( 1165220037459154626035482441 != -5599.3903922988252740684974 ) = True";
   s21_decimal value_1 = {{0x4DC67F49, 0xCD45921B, 0x3C3D8F0, 0x0}};
   s21_decimal value_2 = {{0x8BD38CAE, 0x9D2CA432, 0x2E512B, 0x80160000}};
   int code = 1;
@@ -82434,7 +84070,8 @@ START_TEST(s21_is_not_equal_8241) {
 }
 
 START_TEST(s21_is_not_equal_8242) {
-  char *example = "( -6.5536830917822205245715 != 1815840466377913675282881001 ) = True";
+  char *example =
+      "( -6.5536830917822205245715 != 1815840466377913675282881001 ) = True";
   s21_decimal value_1 = {{0x5E15B913, 0xC23BAABF, 0xDE0, 0x80160000}};
   s21_decimal value_2 = {{0xEB0799E9, 0xED3C4B85, 0x5DE072C, 0x0}};
   int code = 1;
@@ -82444,7 +84081,8 @@ START_TEST(s21_is_not_equal_8242) {
 }
 
 START_TEST(s21_is_not_equal_8243) {
-  char *example = "( 1861831464939554963659 != -1.9104920650309960013628794 ) = True";
+  char *example =
+      "( 1861831464939554963659 != -1.9104920650309960013628794 ) = True";
   s21_decimal value_1 = {{0xE75180CB, 0xEE1A1CF4, 0x64, 0x0}};
   s21_decimal value_2 = {{0x83E2C57A, 0xD2DEC11D, 0xFCD9F, 0x80190000}};
   int code = 1;
@@ -82484,7 +84122,8 @@ START_TEST(s21_is_not_equal_8246) {
 }
 
 START_TEST(s21_is_not_equal_8247) {
-  char *example = "( 1295790793359146178670253165 != 16979349241783694948146079 ) = True";
+  char *example =
+      "( 1295790793359146178670253165 != 16979349241783694948146079 ) = True";
   s21_decimal value_1 = {{0xE798546D, 0xA98ECABB, 0x42FDA5F, 0x0}};
   s21_decimal value_2 = {{0xF3119B9F, 0x5DE46A74, 0xE0B84, 0x0}};
   int code = 1;
@@ -82614,7 +84253,8 @@ START_TEST(s21_is_not_equal_8259) {
 }
 
 START_TEST(s21_is_not_equal_8260) {
-  char *example = "( 17168405479113942948336 != 1051740525870538038001720797 ) = True";
+  char *example =
+      "( 17168405479113942948336 != 1051740525870538038001720797 ) = True";
   s21_decimal value_1 = {{0xB8A8D9F0, 0xB37CFD24, 0x3A2, 0x0}};
   s21_decimal value_2 = {{0x8022DDDD, 0x26E917B5, 0x365FAB8, 0x0}};
   int code = 1;
@@ -82744,7 +84384,8 @@ START_TEST(s21_is_not_equal_8272) {
 }
 
 START_TEST(s21_is_not_equal_8273) {
-  char *example = "( 14818661663509686832638445 != 163036840553461086972 ) = True";
+  char *example =
+      "( 14818661663509686832638445 != 163036840553461086972 ) = True";
   s21_decimal value_1 = {{0xD324A9ED, 0x422977AA, 0xC41F9, 0x0}};
   s21_decimal value_2 = {{0x5B0C7AFC, 0xD69736AD, 0x8, 0x0}};
   int code = 1;
@@ -82834,7 +84475,8 @@ START_TEST(s21_is_not_equal_8281) {
 }
 
 START_TEST(s21_is_not_equal_8282) {
-  char *example = "( 1409062697799861346957438 != 1684859877284319987899455686 ) = True";
+  char *example =
+      "( 1409062697799861346957438 != 1684859877284319987899455686 ) = True";
   s21_decimal value_1 = {{0xB4BEF87E, 0x7120C2D7, 0x12A61, 0x0}};
   s21_decimal value_2 = {{0x51BE58C6, 0xF6DA2313, 0x571AEF4, 0x0}};
   int code = 1;
@@ -82864,7 +84506,8 @@ START_TEST(s21_is_not_equal_8284) {
 }
 
 START_TEST(s21_is_not_equal_8285) {
-  char *example = "( -79228162514264337593543950335 != 1740308213593938 ) = True";
+  char *example =
+      "( -79228162514264337593543950335 != 1740308213593938 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   s21_decimal value_2 = {{0x14DEF752, 0x62ECD, 0x0, 0x0}};
   int code = 1;
@@ -82904,7 +84547,8 @@ START_TEST(s21_is_not_equal_8288) {
 }
 
 START_TEST(s21_is_not_equal_8289) {
-  char *example = "( 1785839298278557564352812847 != 1502830861359785756665207661 ) = True";
+  char *example =
+      "( 1785839298278557564352812847 != 1502830861359785756665207661 ) = True";
   s21_decimal value_1 = {{0x1287572F, 0x585DB826, 0x5C5362E, 0x0}};
   s21_decimal value_2 = {{0xB15A5B6D, 0x3CFC7335, 0x4DB1CD0, 0x0}};
   int code = 1;
@@ -82984,7 +84628,8 @@ START_TEST(s21_is_not_equal_8296) {
 }
 
 START_TEST(s21_is_not_equal_8297) {
-  char *example = "( -9.8392888748457940089464638 != 1848812962288557044814521331 ) = True";
+  char *example =
+      "( -9.8392888748457940089464638 != 1848812962288557044814521331 ) = True";
   s21_decimal value_1 = {{0x1A3A673E, 0x2FD957A9, 0x516381, 0x80190000}};
   s21_decimal value_2 = {{0xDAE323F3, 0x82FA3B35, 0x5F94D5F, 0x0}};
   int code = 1;
@@ -83044,7 +84689,8 @@ START_TEST(s21_is_not_equal_8302) {
 }
 
 START_TEST(s21_is_not_equal_8303) {
-  char *example = "( 1029909223600455676410824702 != -9.0380971253331639078005188 ) = True";
+  char *example =
+      "( 1029909223600455676410824702 != -9.0380971253331639078005188 ) = True";
   s21_decimal value_1 = {{0x131187FE, 0xE2702480, 0x353EBC2, 0x0}};
   s21_decimal value_2 = {{0x8D68A9C4, 0x44EAFC75, 0x4AC2EA, 0x80190000}};
   int code = 1;
@@ -83084,7 +84730,8 @@ START_TEST(s21_is_not_equal_8306) {
 }
 
 START_TEST(s21_is_not_equal_8307) {
-  char *example = "( 2.47280024256786E-10 != -293.97734158469000844297949 ) = True";
+  char *example =
+      "( 2.47280024256786E-10 != -293.97734158469000844297949 ) = True";
   s21_decimal value_1 = {{0x5E018112, 0xE0E6, 0x0, 0x180000}};
   s21_decimal value_2 = {{0xE31446DD, 0x5CAE8896, 0x185136, 0x80170000}};
   int code = 1;
@@ -83094,7 +84741,8 @@ START_TEST(s21_is_not_equal_8307) {
 }
 
 START_TEST(s21_is_not_equal_8308) {
-  char *example = "( 1759811634096380826454843396 != -938.426747969583436376 ) = True";
+  char *example =
+      "( 1759811634096380826454843396 != -938.426747969583436376 ) = True";
   s21_decimal value_1 = {{0xED87E004, 0xD7B67963, 0x5AFAE9B, 0x0}};
   s21_decimal value_2 = {{0xC40BD258, 0xDF498B47, 0x32, 0x80120000}};
   int code = 1;
@@ -83234,7 +84882,8 @@ START_TEST(s21_is_not_equal_8321) {
 }
 
 START_TEST(s21_is_not_equal_8322) {
-  char *example = "( 1498373662146516756504758255 != 1246776332898864326617527635 ) = True";
+  char *example =
+      "( 1498373662146516756504758255 != 1246776332898864326617527635 ) = True";
   s21_decimal value_1 = {{0xED3C7EF, 0xFC165497, 0x4D76CF6, 0x0}};
   s21_decimal value_2 = {{0x41FEF553, 0x6FC685B5, 0x4074F28, 0x0}};
   int code = 1;
@@ -83304,7 +84953,8 @@ START_TEST(s21_is_not_equal_8328) {
 }
 
 START_TEST(s21_is_not_equal_8329) {
-  char *example = "( -524.18502934142439077042433 != -49703.999230630173180557760 ) = True";
+  char *example =
+      "( -524.18502934142439077042433 != -49703.999230630173180557760 ) = True";
   s21_decimal value_1 = {{0xCE25D901, 0xBCEC5F3D, 0x2B5C0C, 0x80170000}};
   s21_decimal value_2 = {{0x67A6FF60, 0xEB73C662, 0x41C85, 0x80140000}};
   int code = 1;
@@ -83324,7 +84974,8 @@ START_TEST(s21_is_not_equal_8330) {
 }
 
 START_TEST(s21_is_not_equal_8331) {
-  char *example = "( 1610064418905521181955678757 != -9.23797217039918357 ) = True";
+  char *example =
+      "( 1610064418905521181955678757 != -9.23797217039918357 ) = True";
   s21_decimal value_1 = {{0x26576225, 0xA7B9FFD, 0x533D067, 0x0}};
   s21_decimal value_2 = {{0xA628A515, 0xCD1FCAC, 0x0, 0x80110000}};
   int code = 1;
@@ -83394,7 +85045,8 @@ START_TEST(s21_is_not_equal_8337) {
 }
 
 START_TEST(s21_is_not_equal_8338) {
-  char *example = "( 138799173978103937 != 1506763972650386445882375712 ) = True";
+  char *example =
+      "( 138799173978103937 != 1506763972650386445882375712 ) = True";
   s21_decimal value_1 = {{0x4152081, 0x1ED1D1D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xA1C3E20, 0xA0E6CFD2, 0x4DE5DAE, 0x0}};
   int code = 1;
@@ -83434,7 +85086,8 @@ START_TEST(s21_is_not_equal_8341) {
 }
 
 START_TEST(s21_is_not_equal_8342) {
-  char *example = "( 1037633034194414103857773410 != -4.8056011263549153544543310 ) = True";
+  char *example =
+      "( 1037633034194414103857773410 != -4.8056011263549153544543310 ) = True";
   s21_decimal value_1 = {{0xD1ACBB62, 0x7EEDC34D, 0x35A4F57, 0x0}};
   s21_decimal value_2 = {{0xD037A93B, 0x28B875CF, 0x3F9A0, 0x80180000}};
   int code = 1;
@@ -83554,7 +85207,8 @@ START_TEST(s21_is_not_equal_8353) {
 }
 
 START_TEST(s21_is_not_equal_8354) {
-  char *example = "( 3.92329755395225933375626754 != -26.6064685180052516335 ) = True";
+  char *example =
+      "( 3.92329755395225933375626754 != -26.6064685180052516335 ) = True";
   s21_decimal value_1 = {{0xC46C5E02, 0xA81112E4, 0x144870E, 0x1A0000}};
   s21_decimal value_2 = {{0x92B2DEF, 0x6C63A580, 0xE, 0x80130000}};
   int code = 1;
@@ -83564,7 +85218,8 @@ START_TEST(s21_is_not_equal_8354) {
 }
 
 START_TEST(s21_is_not_equal_8355) {
-  char *example = "( 1449955517502712373091029816 != -80788942.347271792625117752 ) = True";
+  char *example =
+      "( 1449955517502712373091029816 != -80788942.347271792625117752 ) = True";
   s21_decimal value_1 = {{0x3B1CD338, 0x1AAC2538, 0x4AF6006, 0x0}};
   s21_decimal value_2 = {{0x8666EA38, 0x571CFA40, 0x42D3B9, 0x80120000}};
   int code = 1;
@@ -83594,7 +85249,8 @@ START_TEST(s21_is_not_equal_8357) {
 }
 
 START_TEST(s21_is_not_equal_8358) {
-  char *example = "( 1033345826404646741699752404 != 5.3069704226443923E-10 ) = True";
+  char *example =
+      "( 1033345826404646741699752404 != 5.3069704226443923E-10 ) = True";
   s21_decimal value_1 = {{0x19D071D4, 0x7EEF3243, 0x356C37D, 0x0}};
   s21_decimal value_2 = {{0x64C09293, 0xBC8A9D, 0x0, 0x1A0000}};
   int code = 1;
@@ -83724,7 +85380,8 @@ START_TEST(s21_is_not_equal_8370) {
 }
 
 START_TEST(s21_is_not_equal_8371) {
-  char *example = "( 1391233351113532297063251302 != 1072032111358643323536576267 ) = True";
+  char *example =
+      "( 1391233351113532297063251302 != 1072032111358643323536576267 ) = True";
   s21_decimal value_1 = {{0xBDB93D66, 0x15E8819D, 0x47ECD1F, 0x0}};
   s21_decimal value_2 = {{0x74D28F0B, 0x34993BE7, 0x376C3A1, 0x0}};
   int code = 1;
@@ -83744,7 +85401,8 @@ START_TEST(s21_is_not_equal_8372) {
 }
 
 START_TEST(s21_is_not_equal_8373) {
-  char *example = "( 1645130768729187263362669872 != 164384425100474853597 ) = True";
+  char *example =
+      "( 1645130768729187263362669872 != 164384425100474853597 ) = True";
   s21_decimal value_1 = {{0xA5B89D30, 0xAC87C458, 0x550D1FD, 0x0}};
   s21_decimal value_2 = {{0xD09C28DD, 0xE94ACBAE, 0x8, 0x0}};
   int code = 1;
@@ -83794,7 +85452,8 @@ START_TEST(s21_is_not_equal_8377) {
 }
 
 START_TEST(s21_is_not_equal_8378) {
-  char *example = "( -7667.4315395202952439125608 != 1313535800244201978758065818 ) = True";
+  char *example =
+      "( -7667.4315395202952439125608 != 1313535800244201978758065818 ) = True";
   s21_decimal value_1 = {{0xAF9DD668, 0xF75D338C, 0x3F6C6A, 0x80160000}};
   s21_decimal value_2 = {{0xFF326E9A, 0x69C1BD1D, 0x43E8806, 0x0}};
   int code = 1;
@@ -83864,7 +85523,8 @@ START_TEST(s21_is_not_equal_8384) {
 }
 
 START_TEST(s21_is_not_equal_8385) {
-  char *example = "( -8.1087153993309603921537384 != -77.798194455581133855911024 ) = True";
+  char *example =
+      "( -8.1087153993309603921537384 != -77.798194455581133855911024 ) = True";
   s21_decimal value_1 = {{0x11DE2968, 0x6D0F08A0, 0x4312DF, 0x80190000}};
   s21_decimal value_2 = {{0xDF61EC70, 0x927C530A, 0x405A68, 0x80180000}};
   int code = 1;
@@ -83944,7 +85604,8 @@ START_TEST(s21_is_not_equal_8392) {
 }
 
 START_TEST(s21_is_not_equal_8393) {
-  char *example = "( 1155640382167182228306832312 != 1808911867865543231870762926 ) = True";
+  char *example =
+      "( 1155640382167182228306832312 != 1808911867865543231870762926 ) = True";
   s21_decimal value_1 = {{0x8D34ABB8, 0xA5DB9637, 0x3BBEC5E, 0x0}};
   s21_decimal value_2 = {{0xFC727FAE, 0xD9467ACF, 0x5D84BFC, 0x0}};
   int code = 1;
@@ -84044,7 +85705,8 @@ START_TEST(s21_is_not_equal_8402) {
 }
 
 START_TEST(s21_is_not_equal_8403) {
-  char *example = "( 11568155124897329857476535 != 114465755572476343173298 ) = True";
+  char *example =
+      "( 11568155124897329857476535 != 114465755572476343173298 ) = True";
   s21_decimal value_1 = {{0xEB18B7B7, 0xF226B577, 0x991A6, 0x0}};
   s21_decimal value_2 = {{0x2E6340B2, 0x3377939A, 0x183D, 0x0}};
   int code = 1;
@@ -84104,7 +85766,8 @@ START_TEST(s21_is_not_equal_8408) {
 }
 
 START_TEST(s21_is_not_equal_8409) {
-  char *example = "( -26.141037123635512525921243 != 1561460280402582803484554765 ) = True";
+  char *example =
+      "( -26.141037123635512525921243 != 1561460280402582803484554765 ) = True";
   s21_decimal value_1 = {{0x1F4F1BDB, 0x76472BED, 0x159F94, 0x80180000}};
   s21_decimal value_2 = {{0x1840B60D, 0x69C1EBF3, 0x50B9C13, 0x0}};
   int code = 1;
@@ -84254,7 +85917,8 @@ START_TEST(s21_is_not_equal_8423) {
 }
 
 START_TEST(s21_is_not_equal_8424) {
-  char *example = "( 79228162514264337593543950335 != 17861309121797168083028 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != 17861309121797168083028 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0xC47CB054, 0x43753D00, 0x3C8, 0x0}};
   int code = 1;
@@ -84274,7 +85938,8 @@ START_TEST(s21_is_not_equal_8425) {
 }
 
 START_TEST(s21_is_not_equal_8426) {
-  char *example = "( -7.3031119065385826571513091 != -4785694578612204.91 ) = True";
+  char *example =
+      "( -7.3031119065385826571513091 != -4785694578612204.91 ) = True";
   s21_decimal value_1 = {{0xC3FFED03, 0xE5C1B44B, 0x3C68F0, 0x80190000}};
   s21_decimal value_2 = {{0xE82B588B, 0x6A43862, 0x0, 0x80020000}};
   int code = 1;
@@ -84314,7 +85979,8 @@ START_TEST(s21_is_not_equal_8429) {
 }
 
 START_TEST(s21_is_not_equal_8430) {
-  char *example = "( 1615032257015184361205940789 != 159183100691596202340692 ) = True";
+  char *example =
+      "( 1615032257015184361205940789 != 159183100691596202340692 ) = True";
   s21_decimal value_1 = {{0x26364235, 0x15A1E44A, 0x537EC62, 0x0}};
   s21_decimal value_2 = {{0x155DF154, 0x554B42CB, 0x21B5, 0x0}};
   int code = 1;
@@ -84334,7 +86000,8 @@ START_TEST(s21_is_not_equal_8431) {
 }
 
 START_TEST(s21_is_not_equal_8432) {
-  char *example = "( 102991144842545775589750 != 1509628599900981687543871705 ) = True";
+  char *example =
+      "( 102991144842545775589750 != 1509628599900981687543871705 ) = True";
   s21_decimal value_1 = {{0xD92D3976, 0x294113D2, 0x15CF, 0x0}};
   s21_decimal value_2 = {{0xBAB38D9, 0x6208AA8B, 0x4E0BC4A, 0x0}};
   int code = 1;
@@ -84364,7 +86031,8 @@ START_TEST(s21_is_not_equal_8434) {
 }
 
 START_TEST(s21_is_not_equal_8435) {
-  char *example = "( 0.64430785521848705963929953 != 1440916544066614144136021679 ) = True";
+  char *example =
+      "( 0.64430785521848705963929953 != 1440916544066614144136021679 ) = True";
   s21_decimal value_1 = {{0x93DE3161, 0xE1C3554A, 0x354BBF, 0x1A0000}};
   s21_decimal value_2 = {{0xF73E86AF, 0x5F5367A3, 0x4A7E5F2, 0x0}};
   int code = 1;
@@ -84404,7 +86072,8 @@ START_TEST(s21_is_not_equal_8438) {
 }
 
 START_TEST(s21_is_not_equal_8439) {
-  char *example = "( 1750942295085179648132348475 != 928.696020380757892523167441 ) = True";
+  char *example =
+      "( 1750942295085179648132348475 != 928.696020380757892523167441 ) = True";
   s21_decimal value_1 = {{0xF8017A3B, 0x2EB75F9, 0x5A85874, 0x0}};
   s21_decimal value_2 = {{0x28150ED1, 0x24CE4EAF, 0x3003308, 0x180000}};
   int code = 1;
@@ -84444,7 +86113,8 @@ START_TEST(s21_is_not_equal_8442) {
 }
 
 START_TEST(s21_is_not_equal_8443) {
-  char *example = "( 1397727381898461931845656036 != 10613951208291100357188807 ) = True";
+  char *example =
+      "( 1397727381898461931845656036 != 10613951208291100357188807 ) = True";
   s21_decimal value_1 = {{0xD1131DE4, 0x3328AD68, 0x4842C49, 0x0}};
   s21_decimal value_2 = {{0x2A465CC7, 0x72ABD120, 0x8C797, 0x0}};
   int code = 1;
@@ -84524,7 +86194,8 @@ START_TEST(s21_is_not_equal_8450) {
 }
 
 START_TEST(s21_is_not_equal_8451) {
-  char *example = "( -6.970588886756057449318 != 14589238497467388101719796 ) = True";
+  char *example =
+      "( -6.970588886756057449318 != 14589238497467388101719796 ) = True";
   s21_decimal value_1 = {{0xEC648366, 0xE05A7CBD, 0x179, 0x80150000}};
   s21_decimal value_2 = {{0xCE3CF6F4, 0x34253C39, 0xC1164, 0x0}};
   int code = 1;
@@ -84604,7 +86275,8 @@ START_TEST(s21_is_not_equal_8458) {
 }
 
 START_TEST(s21_is_not_equal_8459) {
-  char *example = "( 1604195074057653712798646344 != 0.094654828772948330 ) = True";
+  char *example =
+      "( 1604195074057653712798646344 != 0.094654828772948330 ) = True";
   s21_decimal value_1 = {{0xCA208048, 0x381D024A, 0x52EF585, 0x0}};
   s21_decimal value_2 = {{0x788758F1, 0x21A0CE, 0x0, 0x110000}};
   int code = 1;
@@ -84684,7 +86356,8 @@ START_TEST(s21_is_not_equal_8466) {
 }
 
 START_TEST(s21_is_not_equal_8467) {
-  char *example = "( -53.5576225346082521116 != -1.2926763027895620983225441 ) = True";
+  char *example =
+      "( -53.5576225346082521116 != -1.2926763027895620983225441 ) = True";
   s21_decimal value_1 = {{0x9CF401C, 0x89CFB59, 0x1D, 0x80130000}};
   s21_decimal value_2 = {{0x1D4A7C61, 0x3A57D13E, 0xAB159, 0x80190000}};
   int code = 1;
@@ -84694,7 +86367,8 @@ START_TEST(s21_is_not_equal_8467) {
 }
 
 START_TEST(s21_is_not_equal_8468) {
-  char *example = "( 1928821293779967614491459540 != 1990608139587397977396766400 ) = True";
+  char *example =
+      "( 1928821293779967614491459540 != 1990608139587397977396766400 ) = True";
   s21_decimal value_1 = {{0xCAA67FD4, 0xDA45C53F, 0x63B7BCB, 0x0}};
   s21_decimal value_2 = {{0x4DD066C0, 0x79B3C407, 0x66E97AB, 0x0}};
   int code = 1;
@@ -84814,7 +86488,8 @@ START_TEST(s21_is_not_equal_8479) {
 }
 
 START_TEST(s21_is_not_equal_8480) {
-  char *example = "( -3.1809205977339898626189645 != 105894536476361944 ) = True";
+  char *example =
+      "( -3.1809205977339898626189645 != 105894536476361944 ) = True";
   s21_decimal value_1 = {{0xBC22294D, 0x82E37A65, 0x1A4FDC, 0x80190000}};
   s21_decimal value_2 = {{0x165404D8, 0x1783685, 0x0, 0x0}};
   int code = 1;
@@ -84874,7 +86549,8 @@ START_TEST(s21_is_not_equal_8485) {
 }
 
 START_TEST(s21_is_not_equal_8486) {
-  char *example = "( 1078749624203798031031164208 != -72.861371812294172619004696 ) = True";
+  char *example =
+      "( 1078749624203798031031164208 != -72.861371812294172619004696 ) = True";
   s21_decimal value_1 = {{0x11695D30, 0x4E75BBB3, 0x37C521E, 0x0}};
   s21_decimal value_2 = {{0xAA1F5B18, 0xE165B4ED, 0x3C44FE, 0x80180000}};
   int code = 1;
@@ -84884,7 +86560,8 @@ START_TEST(s21_is_not_equal_8486) {
 }
 
 START_TEST(s21_is_not_equal_8487) {
-  char *example = "( -8.30967378793393709 != -13.835232118478065212074397 ) = True";
+  char *example =
+      "( -8.30967378793393709 != -13.835232118478065212074397 ) = True";
   s21_decimal value_1 = {{0xA8EAEE2D, 0xB88306D, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x3224299D, 0x6F9CB272, 0xB71B9, 0x80180000}};
   int code = 1;
@@ -84894,7 +86571,8 @@ START_TEST(s21_is_not_equal_8487) {
 }
 
 START_TEST(s21_is_not_equal_8488) {
-  char *example = "( -3.63925897047943514152341 != 126477486026845553576279899 ) = True";
+  char *example =
+      "( -3.63925897047943514152341 != 126477486026845553576279899 ) = True";
   s21_decimal value_1 = {{0x94DBDD95, 0x76608310, 0x4D10, 0x80170000}};
   s21_decimal value_2 = {{0x5AAE7F5B, 0x418BDF98, 0x689EA6, 0x0}};
   int code = 1;
@@ -84904,7 +86582,8 @@ START_TEST(s21_is_not_equal_8488) {
 }
 
 START_TEST(s21_is_not_equal_8489) {
-  char *example = "( -6.738242741415179 != -4688.9865948466612402151320 ) = True";
+  char *example =
+      "( -6.738242741415179 != -4688.9865948466612402151320 ) = True";
   s21_decimal value_1 = {{0x65032D0B, 0x17F065, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x8C34D65C, 0x78FF3952, 0x3E0EE, 0x80150000}};
   int code = 1;
@@ -84914,7 +86593,8 @@ START_TEST(s21_is_not_equal_8489) {
 }
 
 START_TEST(s21_is_not_equal_8490) {
-  char *example = "( 165121082785679010654429475 != 0.73207009164480126852200909 ) = True";
+  char *example =
+      "( 165121082785679010654429475 != 0.73207009164480126852200909 ) = True";
   s21_decimal value_1 = {{0x5E31A123, 0xD57F0820, 0x8895BF, 0x0}};
   s21_decimal value_2 = {{0x9C86F9CD, 0xEB3AB8E0, 0x3C8E2F, 0x1A0000}};
   int code = 1;
@@ -85034,7 +86714,8 @@ START_TEST(s21_is_not_equal_8501) {
 }
 
 START_TEST(s21_is_not_equal_8502) {
-  char *example = "( 0.70324321512045634019447976 != 1294789304002900284846612632 ) = True";
+  char *example =
+      "( 0.70324321512045634019447976 != 1294789304002900284846612632 ) = True";
   s21_decimal value_1 = {{0x3968D4A8, 0x1BAC3577, 0x3A2BC1, 0x1A0000}};
   s21_decimal value_2 = {{0xE7E7A098, 0xD0C7AF1C, 0x42F064C, 0x0}};
   int code = 1;
@@ -85064,7 +86745,8 @@ START_TEST(s21_is_not_equal_8504) {
 }
 
 START_TEST(s21_is_not_equal_8505) {
-  char *example = "( 12295102118734454733702 != 1032328775049457620970436333 ) = True";
+  char *example =
+      "( 12295102118734454733702 != 1032328775049457620970436333 ) = True";
   s21_decimal value_1 = {{0xFFD23B86, 0x84D17ABE, 0x29A, 0x0}};
   s21_decimal value_2 = {{0xBE1CF6ED, 0x80992C7, 0x355EC1F, 0x0}};
   int code = 1;
@@ -85134,7 +86816,8 @@ START_TEST(s21_is_not_equal_8511) {
 }
 
 START_TEST(s21_is_not_equal_8512) {
-  char *example = "( 1273191178106706786086798761 != 1857530901842314023092519454 ) = True";
+  char *example =
+      "( 1273191178106706786086798761 != 1857530901842314023092519454 ) = True";
   s21_decimal value_1 = {{0xC5BBC5A9, 0x108BD272, 0x41D28B8, 0x0}};
   s21_decimal value_2 = {{0x12F6821E, 0xF639D1D4, 0x6008377, 0x0}};
   int code = 1;
@@ -85164,7 +86847,8 @@ START_TEST(s21_is_not_equal_8514) {
 }
 
 START_TEST(s21_is_not_equal_8515) {
-  char *example = "( 1210425962594758840635118529 != 1952227220996149501033034590 ) = True";
+  char *example =
+      "( 1210425962594758840635118529 != 1952227220996149501033034590 ) = True";
   s21_decimal value_1 = {{0x467C53C1, 0xE9F5A9C8, 0x3E93DAA, 0x0}};
   s21_decimal value_2 = {{0x6211B35E, 0xB59FB575, 0x64ED831, 0x0}};
   int code = 1;
@@ -85184,7 +86868,8 @@ START_TEST(s21_is_not_equal_8516) {
 }
 
 START_TEST(s21_is_not_equal_8517) {
-  char *example = "( 1497394051276796342765424870 != 167143572329872385609055291 ) = True";
+  char *example =
+      "( 1497394051276796342765424870 != 167143572329872385609055291 ) = True";
   s21_decimal value_1 = {{0x19D510E6, 0x2C4D92B4, 0x4D69D86, 0x0}};
   s21_decimal value_2 = {{0x43403C3B, 0x363BEB25, 0x8A4207, 0x0}};
   int code = 1;
@@ -85224,7 +86909,8 @@ START_TEST(s21_is_not_equal_8520) {
 }
 
 START_TEST(s21_is_not_equal_8521) {
-  char *example = "( 1989360296201534465914281881 != 17900211373358288632242 ) = True";
+  char *example =
+      "( 1989360296201534465914281881 != 17900211373358288632242 ) = True";
   s21_decimal value_1 = {{0xEC719F99, 0xBFF9CEC5, 0x66D8F6D, 0x0}};
   s21_decimal value_2 = {{0x53F679B2, 0x5F55CCAF, 0x3CA, 0x0}};
   int code = 1;
@@ -85254,7 +86940,8 @@ START_TEST(s21_is_not_equal_8523) {
 }
 
 START_TEST(s21_is_not_equal_8524) {
-  char *example = "( 1951140786821668157 != 189837552988589937731845965 ) = True";
+  char *example =
+      "( 1951140786821668157 != 189837552988589937731845965 ) = True";
   s21_decimal value_1 = {{0x41481D3D, 0x1B13D835, 0x0, 0x0}};
   s21_decimal value_2 = {{0x30C83F4D, 0x5E549411, 0x9D07AA, 0x0}};
   int code = 1;
@@ -85264,7 +86951,8 @@ START_TEST(s21_is_not_equal_8524) {
 }
 
 START_TEST(s21_is_not_equal_8525) {
-  char *example = "( 9.8820047674934041E-10 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( 9.8820047674934041E-10 != 79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x4E5A0319, 0x15F144F, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -85284,7 +86972,8 @@ START_TEST(s21_is_not_equal_8526) {
 }
 
 START_TEST(s21_is_not_equal_8527) {
-  char *example = "( -4.2841000144811779715605156 != 11613926856924230674762082 ) = True";
+  char *example =
+      "( -4.2841000144811779715605156 != 11613926856924230674762082 ) = True";
   s21_decimal value_1 = {{0xA6DDA2A4, 0x457BF790, 0x236FEF, 0x80190000}};
   s21_decimal value_2 = {{0xACA34962, 0x3C892EE7, 0x99B58, 0x0}};
   int code = 1;
@@ -85334,7 +87023,8 @@ START_TEST(s21_is_not_equal_8531) {
 }
 
 START_TEST(s21_is_not_equal_8532) {
-  char *example = "( 1537308484162481083076898930 != 16829859491457126226571 ) = True";
+  char *example =
+      "( 1537308484162481083076898930 != 16829859491457126226571 ) = True";
   s21_decimal value_1 = {{0x1A14F072, 0xEA5C1C1B, 0x4F7A1BB, 0x0}};
   s21_decimal value_2 = {{0x2651DA8B, 0x59380710, 0x390, 0x0}};
   int code = 1;
@@ -85374,7 +87064,8 @@ START_TEST(s21_is_not_equal_8535) {
 }
 
 START_TEST(s21_is_not_equal_8536) {
-  char *example = "( 1903023337526453930948919451 != 1353784268147757347415962259 ) = True";
+  char *example =
+      "( 1903023337526453930948919451 != 1353784268147757347415962259 ) = True";
   s21_decimal value_1 = {{0xC2D5809B, 0xD782D0C5, 0x62624DD, 0x0}};
   s21_decimal value_2 = {{0x3D5EB293, 0x3AE9767B, 0x45FD2F8, 0x0}};
   int code = 1;
@@ -85564,7 +87255,8 @@ START_TEST(s21_is_not_equal_8554) {
 }
 
 START_TEST(s21_is_not_equal_8555) {
-  char *example = "( 1709575383648239342182072811 != -1493878309014.3823609144460 ) = True";
+  char *example =
+      "( 1709575383648239342182072811 != -1493878309014.3823609144460 ) = True";
   s21_decimal value_1 = {{0x8D2E01EB, 0x3FBBB6D1, 0x58620AB, 0x0}};
   s21_decimal value_2 = {{0xFF33EA0E, 0x4E2EE614, 0x13C57, 0x800C0000}};
   int code = 1;
@@ -85654,7 +87346,8 @@ START_TEST(s21_is_not_equal_8563) {
 }
 
 START_TEST(s21_is_not_equal_8564) {
-  char *example = "( 1112652929905075940968611834 != -97528.926372521605035551529 ) = True";
+  char *example =
+      "( 1112652929905075940968611834 != -97528.926372521605035551529 ) = True";
   s21_decimal value_1 = {{0xAD93BFFA, 0x30F737DE, 0x3985D6C, 0x0}};
   s21_decimal value_2 = {{0xBA056B29, 0xB1526269, 0x50AC8D, 0x80150000}};
   int code = 1;
@@ -85764,7 +87457,8 @@ START_TEST(s21_is_not_equal_8574) {
 }
 
 START_TEST(s21_is_not_equal_8575) {
-  char *example = "( 1757148928838731407412698 != 1570167357798629465825913701 ) = True";
+  char *example =
+      "( 1757148928838731407412698 != 1570167357798629465825913701 ) = True";
   s21_decimal value_1 = {{0x6519CDDA, 0x3BFB2CCD, 0x17417, 0x0}};
   s21_decimal value_2 = {{0x9C8AAB65, 0x6493B36, 0x512CFDF, 0x0}};
   int code = 1;
@@ -85834,7 +87528,8 @@ START_TEST(s21_is_not_equal_8581) {
 }
 
 START_TEST(s21_is_not_equal_8582) {
-  char *example = "( 1892845137435601909064704225 != 1031746297811609590858697393 ) = True";
+  char *example =
+      "( 1892845137435601909064704225 != 1031746297811609590858697393 ) = True";
   s21_decimal value_1 = {{0x2BECA0E1, 0x82627A1F, 0x61DB98C, 0x0}};
   s21_decimal value_2 = {{0xC7B2CAB1, 0xE08714AA, 0x35570C6, 0x0}};
   int code = 1;
@@ -85934,7 +87629,8 @@ START_TEST(s21_is_not_equal_8591) {
 }
 
 START_TEST(s21_is_not_equal_8592) {
-  char *example = "( 1963265943162203814158056248 != -8.6619387501427423066341469 ) = True";
+  char *example =
+      "( 1963265943162203814158056248 != -8.6619387501427423066341469 ) = True";
   s21_decimal value_1 = {{0xC16BB38, 0x983873D, 0x657F9BC, 0x0}};
   s21_decimal value_2 = {{0x178E405D, 0x67C9A471, 0x47A65E, 0x80190000}};
   int code = 1;
@@ -85944,7 +87640,8 @@ START_TEST(s21_is_not_equal_8592) {
 }
 
 START_TEST(s21_is_not_equal_8593) {
-  char *example = "( 1263054573360220385186819101 != 1920167653276938981864934165 ) = True";
+  char *example =
+      "( 1263054573360220385186819101 != 1920167653276938981864934165 ) = True";
   s21_decimal value_1 = {{0x137E2C1D, 0x9EC862C0, 0x414C635, 0x0}};
   s21_decimal value_2 = {{0x1AF88B15, 0xF9B3D17, 0x6345351, 0x0}};
   int code = 1;
@@ -85954,7 +87651,8 @@ START_TEST(s21_is_not_equal_8593) {
 }
 
 START_TEST(s21_is_not_equal_8594) {
-  char *example = "( 1776083769323700202369891012 != -2.5330067362849637765538525 ) = True";
+  char *example =
+      "( 1776083769323700202369891012 != -2.5330067362849637765538525 ) = True";
   s21_decimal value_1 = {{0x693EBAC4, 0xF93DCFC, 0x5BD245E, 0x0}};
   s21_decimal value_2 = {{0x3850E2DD, 0xB404EF1D, 0x14F3D9, 0x80190000}};
   int code = 1;
@@ -85964,7 +87662,8 @@ START_TEST(s21_is_not_equal_8594) {
 }
 
 START_TEST(s21_is_not_equal_8595) {
-  char *example = "( 1320358997299270848744707751 != 0.96163461783713830559774835 ) = True";
+  char *example =
+      "( 1320358997299270848744707751 != 0.96163461783713830559774835 ) = True";
   s21_decimal value_1 = {{0xBB42D6A7, 0xAAA86EE6, 0x4442CE4, 0x0}};
   s21_decimal value_2 = {{0x2B077873, 0xB57FCF31, 0x4F8B67, 0x1A0000}};
   int code = 1;
@@ -86004,7 +87703,8 @@ START_TEST(s21_is_not_equal_8598) {
 }
 
 START_TEST(s21_is_not_equal_8599) {
-  char *example = "( 7719590.21816234859256752948 != 1016438009217445234524390 ) = True";
+  char *example =
+      "( 7719590.21816234859256752948 != 1016438009217445234524390 ) = True";
   s21_decimal value_1 = {{0x3EDE2B34, 0x6D17FDED, 0x27E8CAE, 0x140000}};
   s21_decimal value_2 = {{0xA508C0E6, 0x3702FFE3, 0xD73D, 0x0}};
   int code = 1;
@@ -86064,7 +87764,8 @@ START_TEST(s21_is_not_equal_8604) {
 }
 
 START_TEST(s21_is_not_equal_8605) {
-  char *example = "( -7.7049554196027745658 != 1146791225846220616107992062 ) = True";
+  char *example =
+      "( -7.7049554196027745658 != 1146791225846220616107992062 ) = True";
   s21_decimal value_1 = {{0xB471257A, 0x2D470150, 0x4, 0x80130000}};
   s21_decimal value_2 = {{0x71FEA3FE, 0xEC284336, 0x3B49A7C, 0x0}};
   int code = 1;
@@ -86114,7 +87815,8 @@ START_TEST(s21_is_not_equal_8609) {
 }
 
 START_TEST(s21_is_not_equal_8610) {
-  char *example = "( 1693735559396232695473358592 != -2.097783331440880786 ) = True";
+  char *example =
+      "( 1693735559396232695473358592 != -2.097783331440880786 ) = True";
   s21_decimal value_1 = {{0xF3D1C700, 0xA7D9D06F, 0x5790674, 0x0}};
   s21_decimal value_2 = {{0x4E44EC92, 0x1D1CD2D3, 0x0, 0x80120000}};
   int code = 1;
@@ -86484,7 +88186,8 @@ START_TEST(s21_is_not_equal_8646) {
 }
 
 START_TEST(s21_is_not_equal_8647) {
-  char *example = "( 16029256328645513909830917 != -495872.16086978607127187260 ) = True";
+  char *example =
+      "( 16029256328645513909830917 != -495872.16086978607127187260 ) = True";
   s21_decimal value_1 = {{0x35BF0505, 0xBA0BC746, 0xD4253, 0x0}};
   s21_decimal value_2 = {{0xC2B66186, 0xD64895A2, 0x41A0C, 0x80130000}};
   int code = 1;
@@ -86494,7 +88197,8 @@ START_TEST(s21_is_not_equal_8647) {
 }
 
 START_TEST(s21_is_not_equal_8648) {
-  char *example = "( -9.34737572730278 != 1032010939048950472290043349 ) = True";
+  char *example =
+      "( -9.34737572730278 != 1032010939048950472290043349 ) = True";
   s21_decimal value_1 = {{0x8CFB15A6, 0x35223, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xAE7B85D5, 0x1B76F4D4, 0x355A8D1, 0x0}};
   int code = 1;
@@ -86534,7 +88238,8 @@ START_TEST(s21_is_not_equal_8651) {
 }
 
 START_TEST(s21_is_not_equal_8652) {
-  char *example = "( 1810952670278602232319080894 != -6.6332982080027080244145656 ) = True";
+  char *example =
+      "( 1810952670278602232319080894 != -6.6332982080027080244145656 ) = True";
   s21_decimal value_1 = {{0x5FBA79BE, 0xF81F1561, 0x5D9FC24, 0x0}};
   s21_decimal value_2 = {{0xED752DF8, 0x29F75738, 0x36DE8E, 0x80190000}};
   int code = 1;
@@ -86544,7 +88249,8 @@ START_TEST(s21_is_not_equal_8652) {
 }
 
 START_TEST(s21_is_not_equal_8653) {
-  char *example = "( 19464662053724583166 != 1228642654810478170887812432 ) = True";
+  char *example =
+      "( 19464662053724583166 != 1228642654810478170887812432 ) = True";
   s21_decimal value_1 = {{0x794774FE, 0xE205F02, 0x1, 0x0}};
   s21_decimal value_2 = {{0x6CB1F550, 0xC716F2A8, 0x3F84F33, 0x0}};
   int code = 1;
@@ -86624,7 +88330,8 @@ START_TEST(s21_is_not_equal_8660) {
 }
 
 START_TEST(s21_is_not_equal_8661) {
-  char *example = "( 1036523014927477165145709043 != -280522.05644302998766333044 ) = True";
+  char *example =
+      "( 1036523014927477165145709043 != -280522.05644302998766333044 ) = True";
   s21_decimal value_1 = {{0xDA23D9F3, 0x3B146249, 0x3596449, 0x0}};
   s21_decimal value_2 = {{0xC8C3AC74, 0x1D790A35, 0x173449, 0x80140000}};
   int code = 1;
@@ -86694,7 +88401,8 @@ START_TEST(s21_is_not_equal_8667) {
 }
 
 START_TEST(s21_is_not_equal_8668) {
-  char *example = "( 1765371443406510924299344765 != 1614380584987223348926830016 ) = True";
+  char *example =
+      "( 1765371443406510924299344765 != 1614380584987223348926830016 ) = True";
   s21_decimal value_1 = {{0x79199B7D, 0xB5921883, 0x5B447F1, 0x0}};
   s21_decimal value_2 = {{0x226155C0, 0xDF821021, 0x5376262, 0x0}};
   int code = 1;
@@ -86754,7 +88462,8 @@ START_TEST(s21_is_not_equal_8673) {
 }
 
 START_TEST(s21_is_not_equal_8674) {
-  char *example = "( -8.372595087826329 != 1647210236917637086404926582 ) = True";
+  char *example =
+      "( -8.372595087826329 != 1647210236917637086404926582 ) = True";
   s21_decimal value_1 = {{0xB40EDD99, 0x1DBED4, 0x0, 0x800F0000}};
   s21_decimal value_2 = {{0x3653DC76, 0xDECD80CF, 0x5528A55, 0x0}};
   int code = 1;
@@ -86854,7 +88563,8 @@ START_TEST(s21_is_not_equal_8683) {
 }
 
 START_TEST(s21_is_not_equal_8684) {
-  char *example = "( -7.2134882781259547003547415 != 1986628616385213032117724337 ) = True";
+  char *example =
+      "( -7.2134882781259547003547415 != 1986628616385213032117724337 ) = True";
   s21_decimal value_1 = {{0xB6CF6F17, 0xD4C7A6C9, 0x3BAB27, 0x80190000}};
   s21_decimal value_2 = {{0x215A64B1, 0x17204262, 0x66B4CF9, 0x0}};
   int code = 1;
@@ -86874,7 +88584,8 @@ START_TEST(s21_is_not_equal_8685) {
 }
 
 START_TEST(s21_is_not_equal_8686) {
-  char *example = "( 1733681407795077679851173373 != 1711879509890643062641073011 ) = True";
+  char *example =
+      "( 1733681407795077679851173373 != 1711879509890643062641073011 ) = True";
   s21_decimal value_1 = {{0x30FAF5FD, 0x6FBBAE8F, 0x59A1151, 0x0}};
   s21_decimal value_2 = {{0xD2971B73, 0x2ECEC8F7, 0x5880896, 0x0}};
   int code = 1;
@@ -86884,7 +88595,8 @@ START_TEST(s21_is_not_equal_8686) {
 }
 
 START_TEST(s21_is_not_equal_8687) {
-  char *example = "( 1124282889623140106763993902 != 0.871984800438463971502791 ) = True";
+  char *example =
+      "( 1124282889623140106763993902 != 0.871984800438463971502791 ) = True";
   s21_decimal value_1 = {{0x8F7B832E, 0x92257BCE, 0x3A1FC29, 0x0}};
   s21_decimal value_2 = {{0xA054AAC7, 0x6408394E, 0xB8A6, 0x180000}};
   int code = 1;
@@ -86894,7 +88606,8 @@ START_TEST(s21_is_not_equal_8687) {
 }
 
 START_TEST(s21_is_not_equal_8688) {
-  char *example = "( 11585323465369732 != -9.7218430170588818996429118 ) = True";
+  char *example =
+      "( 11585323465369732 != -9.7218430170588818996429118 ) = True";
   s21_decimal value_1 = {{0x51C2E884, 0x2928CA, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4627813E, 0xA8EA8FED, 0x506ACD, 0x80190000}};
   int code = 1;
@@ -86904,7 +88617,8 @@ START_TEST(s21_is_not_equal_8688) {
 }
 
 START_TEST(s21_is_not_equal_8689) {
-  char *example = "( 1630838419046881501637639157 != -368.87905697866212042 ) = True";
+  char *example =
+      "( 1630838419046881501637639157 != -368.87905697866212042 ) = True";
   s21_decimal value_1 = {{0xA11FBF5, 0xD85D3D43, 0x544FF77, 0x0}};
   s21_decimal value_2 = {{0xAD6C62CA, 0xFFEC2ACA, 0x1, 0x80110000}};
   int code = 1;
@@ -86944,7 +88658,8 @@ START_TEST(s21_is_not_equal_8692) {
 }
 
 START_TEST(s21_is_not_equal_8693) {
-  char *example = "( 0.20937245090490889537106362 != -9238.901036446624674108667 ) = True";
+  char *example =
+      "( 0.20937245090490889537106362 != -9238.901036446624674108667 ) = True";
   s21_decimal value_1 = {{0xAC98B1BA, 0x54A562B7, 0x1151A2, 0x1A0000}};
   s21_decimal value_2 = {{0xD9AA54FB, 0xD429449E, 0x7A469, 0x80150000}};
   int code = 1;
@@ -86964,7 +88679,8 @@ START_TEST(s21_is_not_equal_8694) {
 }
 
 START_TEST(s21_is_not_equal_8695) {
-  char *example = "( 101976710682225796038795 != -74.934220408169617545656478 ) = True";
+  char *example =
+      "( 101976710682225796038795 != -74.934220408169617545656478 ) = True";
   s21_decimal value_1 = {{0x1321C08B, 0x2B26F5B7, 0x1598, 0x0}};
   s21_decimal value_2 = {{0x659A789E, 0x3A5E5B19, 0x3DFBF0, 0x80180000}};
   int code = 1;
@@ -86974,7 +88690,8 @@ START_TEST(s21_is_not_equal_8695) {
 }
 
 START_TEST(s21_is_not_equal_8696) {
-  char *example = "( 1702189759835571137948309157 != 1884067032633572217619747382 ) = True";
+  char *example =
+      "( 1702189759835571137948309157 != 1884067032633572217619747382 ) = True";
   s21_decimal value_1 = {{0xE99656A5, 0xC7A1F91C, 0x58004B3, 0x0}};
   s21_decimal value_2 = {{0x47281236, 0x7E965C9E, 0x61676B6, 0x0}};
   int code = 1;
@@ -87034,7 +88751,8 @@ START_TEST(s21_is_not_equal_8701) {
 }
 
 START_TEST(s21_is_not_equal_8702) {
-  char *example = "( 1661619141969785540281397268 != -37650.462868605722279216574 ) = True";
+  char *example =
+      "( 1661619141969785540281397268 != -37650.462868605722279216574 ) = True";
   s21_decimal value_1 = {{0xA8BC7014, 0x2DA8CF01, 0x55E758A, 0x0}};
   s21_decimal value_2 = {{0x40B05BE, 0xAE8E7745, 0x1F24CB, 0x80150000}};
   int code = 1;
@@ -87054,7 +88772,8 @@ START_TEST(s21_is_not_equal_8703) {
 }
 
 START_TEST(s21_is_not_equal_8704) {
-  char *example = "( 1384223649351511485342215659 != -63.359111588989127908381717 ) = True";
+  char *example =
+      "( 1384223649351511485342215659 != -63.359111588989127908381717 ) = True";
   s21_decimal value_1 = {{0x142EEDEB, 0x64424354, 0x47900C2, 0x0}};
   s21_decimal value_2 = {{0x2747D415, 0x5252D959, 0x3468D0, 0x80180000}};
   int code = 1;
@@ -87084,7 +88803,8 @@ START_TEST(s21_is_not_equal_8706) {
 }
 
 START_TEST(s21_is_not_equal_8707) {
-  char *example = "( 18377490981182148 != 880.716105312972654965898659 ) = True";
+  char *example =
+      "( 18377490981182148 != 880.716105312972654965898659 ) = True";
   s21_decimal value_1 = {{0xDCBDAC4, 0x414A3B, 0x0, 0x0}};
   s21_decimal value_2 = {{0x732B3DA3, 0xBC754CEC, 0x2D882E3, 0x180000}};
   int code = 1;
@@ -87164,7 +88884,8 @@ START_TEST(s21_is_not_equal_8714) {
 }
 
 START_TEST(s21_is_not_equal_8715) {
-  char *example = "( 1572420043744354063428931204 != 1063929058086059301800123393 ) = True";
+  char *example =
+      "( 1572420043744354063428931204 != 1063929058086059301800123393 ) = True";
   s21_decimal value_1 = {{0xB218CE84, 0x5FD6A612, 0x514ACE5, 0x0}};
   s21_decimal value_2 = {{0xF7B21C01, 0xCEAFACF2, 0x3700FBD, 0x0}};
   int code = 1;
@@ -87224,7 +88945,8 @@ START_TEST(s21_is_not_equal_8720) {
 }
 
 START_TEST(s21_is_not_equal_8721) {
-  char *example = "( 1095823119172658184140874819 != -93.54784526567067952 ) = True";
+  char *example =
+      "( 1095823119172658184140874819 != -93.54784526567067952 ) = True";
   s21_decimal value_1 = {{0x5023E443, 0x52C688C1, 0x38A7192, 0x0}};
   s21_decimal value_2 = {{0x9059D130, 0x81D2DEF6, 0x0, 0x80110000}};
   int code = 1;
@@ -87234,7 +88956,8 @@ START_TEST(s21_is_not_equal_8721) {
 }
 
 START_TEST(s21_is_not_equal_8722) {
-  char *example = "( 16245039663417675 != -595.11516155970187035802471 ) = True";
+  char *example =
+      "( 16245039663417675 != -595.11516155970187035802471 ) = True";
   s21_decimal value_1 = {{0xA80094B, 0x39B6C7, 0x0, 0x0}};
   s21_decimal value_2 = {{0xEBC1FB67, 0xC15578E7, 0x313A0D, 0x80170000}};
   int code = 1;
@@ -87254,7 +88977,8 @@ START_TEST(s21_is_not_equal_8723) {
 }
 
 START_TEST(s21_is_not_equal_8724) {
-  char *example = "( 176481218982505275 != 1117116443912748853620412861 ) = True";
+  char *example =
+      "( 176481218982505275 != 1117116443912748853620412861 ) = True";
   s21_decimal value_1 = {{0xCEFAEB3B, 0x272FCBB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x1CBC91BD, 0xC53DCBA2, 0x39C0E9B, 0x0}};
   int code = 1;
@@ -87404,7 +89128,8 @@ START_TEST(s21_is_not_equal_8738) {
 }
 
 START_TEST(s21_is_not_equal_8739) {
-  char *example = "( 1322301828910969702390784877 != -8.23699056877036430377 ) = True";
+  char *example =
+      "( 1322301828910969702390784877 != -8.23699056877036430377 ) = True";
   s21_decimal value_1 = {{0xBBB5636D, 0xC782EBF7, 0x445C84D, 0x0}};
   s21_decimal value_2 = {{0xC408E429, 0xA71EE815, 0x2C, 0x80140000}};
   int code = 1;
@@ -87554,7 +89279,8 @@ START_TEST(s21_is_not_equal_8753) {
 }
 
 START_TEST(s21_is_not_equal_8754) {
-  char *example = "( 1205209069840218849498421712 != 1232155550498712764061502619 ) = True";
+  char *example =
+      "( 1205209069840218849498421712 != 1232155550498712764061502619 ) = True";
   s21_decimal value_1 = {{0x3D84D9D0, 0x974BC615, 0x3E4ECF2, 0x0}};
   s21_decimal value_2 = {{0x168ECC9B, 0x3C0ABCFC, 0x3FB3716, 0x0}};
   int code = 1;
@@ -87574,7 +89300,8 @@ START_TEST(s21_is_not_equal_8755) {
 }
 
 START_TEST(s21_is_not_equal_8756) {
-  char *example = "( 1941782703857360021840591024 != 1338485635234224696086940204 ) = True";
+  char *example =
+      "( 1941782703857360021840591024 != 1338485635234224696086940204 ) = True";
   s21_decimal value_1 = {{0x27C9F8B0, 0x4D0443E2, 0x646347B, 0x0}};
   s21_decimal value_2 = {{0x340ECA2C, 0xAD969B99, 0x4532B5B, 0x0}};
   int code = 1;
@@ -87584,7 +89311,8 @@ START_TEST(s21_is_not_equal_8756) {
 }
 
 START_TEST(s21_is_not_equal_8757) {
-  char *example = "( 1213912415878142926758853309 != 10844915684970382 ) = True";
+  char *example =
+      "( 1213912415878142926758853309 != 10844915684970382 ) = True";
   s21_decimal value_1 = {{0x2D97BABD, 0xECD40A70, 0x3EC1FF3, 0x0}};
   s21_decimal value_2 = {{0xB3058F8E, 0x268764, 0x0, 0x0}};
   int code = 1;
@@ -87594,7 +89322,8 @@ START_TEST(s21_is_not_equal_8757) {
 }
 
 START_TEST(s21_is_not_equal_8758) {
-  char *example = "( -1.9789246061727550755561550 != 1653798812658230360969620534 ) = True";
+  char *example =
+      "( -1.9789246061727550755561550 != 1653798812658230360969620534 ) = True";
   s21_decimal value_1 = {{0x7FC633B, 0xB7C5AA33, 0x1A30D, 0x80180000}};
   s21_decimal value_2 = {{0x1AE8AC36, 0x46E2EC0A, 0x557FD85, 0x0}};
   int code = 1;
@@ -87624,7 +89353,8 @@ START_TEST(s21_is_not_equal_8760) {
 }
 
 START_TEST(s21_is_not_equal_8761) {
-  char *example = "( -5.54150261826932861 != 1069406273177962228995912789 ) = True";
+  char *example =
+      "( -5.54150261826932861 != 1069406273177962228995912789 ) = True";
   s21_decimal value_1 = {{0x2462507D, 0x7B0BCBA, 0x0, 0x80110000}};
   s21_decimal value_2 = {{0x3320F455, 0x3B826962, 0x3749796, 0x0}};
   int code = 1;
@@ -87664,7 +89394,8 @@ START_TEST(s21_is_not_equal_8764) {
 }
 
 START_TEST(s21_is_not_equal_8765) {
-  char *example = "( -385377044521.00516486980355 != -3.3641217664400198545019828 ) = True";
+  char *example =
+      "( -385377044521.00516486980355 != -3.3641217664400198545019828 ) = True";
   s21_decimal value_1 = {{0x769A2303, 0x24FC8C68, 0x1FE0AD, 0x800E0000}};
   s21_decimal value_2 = {{0xF25D93B4, 0x1057D1D2, 0x1BD3CE, 0x80190000}};
   int code = 1;
@@ -87704,7 +89435,8 @@ START_TEST(s21_is_not_equal_8768) {
 }
 
 START_TEST(s21_is_not_equal_8769) {
-  char *example = "( 14.70376223934833036191 != -4299.5243418757282118594 ) = True";
+  char *example =
+      "( 14.70376223934833036191 != -4299.5243418757282118594 ) = True";
   s21_decimal value_1 = {{0x17F10B9F, 0xB591B948, 0x4F, 0x140000}};
   s21_decimal value_2 = {{0xF63BBC2, 0xC6DD6ACC, 0x91A, 0x80130000}};
   int code = 1;
@@ -87734,7 +89466,8 @@ START_TEST(s21_is_not_equal_8771) {
 }
 
 START_TEST(s21_is_not_equal_8772) {
-  char *example = "( 1902456528047904913451575050 != 1557177931095366000667226268 ) = True";
+  char *example =
+      "( 1902456528047904913451575050 != 1557177931095366000667226268 ) = True";
   s21_decimal value_1 = {{0xCE86E70A, 0x9D719C3, 0x625ACD7, 0x0}};
   s21_decimal value_2 = {{0x33B7709C, 0xCAC0C54C, 0x5081140, 0x0}};
   int code = 1;
@@ -87744,7 +89477,8 @@ START_TEST(s21_is_not_equal_8772) {
 }
 
 START_TEST(s21_is_not_equal_8773) {
-  char *example = "( 1120066913034753132015241212 != 1956154343253495286807507543 ) = True";
+  char *example =
+      "( 1120066913034753132015241212 != 1956154343253495286807507543 ) = True";
   s21_decimal value_1 = {{0xD97DC7FC, 0x5A66B25, 0x39E7F65, 0x0}};
   s21_decimal value_2 = {{0x21A1B257, 0x6F01B3FE, 0x65217CB, 0x0}};
   int code = 1;
@@ -87764,7 +89498,8 @@ START_TEST(s21_is_not_equal_8774) {
 }
 
 START_TEST(s21_is_not_equal_8775) {
-  char *example = "( -6.4985944906831726780 != 1268320804943341528681070992 ) = True";
+  char *example =
+      "( -6.4985944906831726780 != 1268320804943341528681070992 ) = True";
   s21_decimal value_1 = {{0x1C7B2746, 0x5A2FA542, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xC0F8C190, 0x9B3D78B0, 0x4192160, 0x0}};
   int code = 1;
@@ -87804,7 +89539,8 @@ START_TEST(s21_is_not_equal_8778) {
 }
 
 START_TEST(s21_is_not_equal_8779) {
-  char *example = "( -87514.9636972961226523 != -4.71211184285286597725889 ) = True";
+  char *example =
+      "( -87514.9636972961226523 != -4.71211184285286597725889 ) = True";
   s21_decimal value_1 = {{0xDD6A5F1B, 0x71241615, 0x2F, 0x80100000}};
   s21_decimal value_2 = {{0x74C90EC1, 0x68D4039D, 0x63C8, 0x80170000}};
   int code = 1;
@@ -87824,7 +89560,8 @@ START_TEST(s21_is_not_equal_8780) {
 }
 
 START_TEST(s21_is_not_equal_8781) {
-  char *example = "( 1589417438615387982021333265 != 427.951909732774097069277723 ) = True";
+  char *example =
+      "( 1589417438615387982021333265 != 427.951909732774097069277723 ) = True";
   s21_decimal value_1 = {{0x50251111, 0xFF24F1C4, 0x522BC3B, 0x0}};
   s21_decimal value_2 = {{0x99E0021B, 0x83386C7B, 0x161FE57, 0x180000}};
   int code = 1;
@@ -87894,7 +89631,8 @@ START_TEST(s21_is_not_equal_8787) {
 }
 
 START_TEST(s21_is_not_equal_8788) {
-  char *example = "( 1477297980022561718721106932 != -459.8903896660543761678 ) = True";
+  char *example =
+      "( 1477297980022561718721106932 != -459.8903896660543761678 ) = True";
   s21_decimal value_1 = {{0x7554D3F4, 0xF7AA8111, 0x4C5FE03, 0x0}};
   s21_decimal value_2 = {{0xC3776D0E, 0x4E9CC7F9, 0xF9, 0x80130000}};
   int code = 1;
@@ -87944,7 +89682,8 @@ START_TEST(s21_is_not_equal_8792) {
 }
 
 START_TEST(s21_is_not_equal_8793) {
-  char *example = "( 1474680634286095628 != 1143912889844970663082534033 ) = True";
+  char *example =
+      "( 1474680634286095628 != 1143912889844970663082534033 ) = True";
   s21_decimal value_1 = {{0x43C53D0C, 0x14771E39, 0x0, 0x0}};
   s21_decimal value_2 = {{0x95ED2491, 0x3E4701A, 0x3B238FA, 0x0}};
   int code = 1;
@@ -87964,7 +89703,8 @@ START_TEST(s21_is_not_equal_8794) {
 }
 
 START_TEST(s21_is_not_equal_8795) {
-  char *example = "( 1929220695902189202693529562 != 1835690773418706005671308138 ) = True";
+  char *example =
+      "( 1929220695902189202693529562 != 1835690773418706005671308138 ) = True";
   s21_decimal value_1 = {{0xADB99FDA, 0x7C2CBAA5, 0x63BD05F, 0x0}};
   s21_decimal value_2 = {{0x54906B6A, 0x3A448200, 0x5EE72A4, 0x0}};
   int code = 1;
@@ -87994,7 +89734,8 @@ START_TEST(s21_is_not_equal_8797) {
 }
 
 START_TEST(s21_is_not_equal_8798) {
-  char *example = "( 1190151686300805391008796555 != 4.7669353748942674E-10 ) = True";
+  char *example =
+      "( 1190151686300805391008796555 != 4.7669353748942674E-10 ) = True";
   s21_decimal value_1 = {{0x11F20F8B, 0x31985AA4, 0x3D8786C, 0x0}};
   s21_decimal value_2 = {{0x50E0CF52, 0xA95B06, 0x0, 0x1A0000}};
   int code = 1;
@@ -88024,7 +89765,8 @@ START_TEST(s21_is_not_equal_8800) {
 }
 
 START_TEST(s21_is_not_equal_8801) {
-  char *example = "( 1616662419617936323379671196 != 1041603624687433265321628666 ) = True";
+  char *example =
+      "( 1616662419617936323379671196 != 1041603624687433265321628666 ) = True";
   s21_decimal value_1 = {{0xE347309C, 0x60535B90, 0x5394595, 0x0}};
   s21_decimal value_2 = {{0xB9E853FA, 0xA3433A30, 0x35D9825, 0x0}};
   int code = 1;
@@ -88094,7 +89836,8 @@ START_TEST(s21_is_not_equal_8807) {
 }
 
 START_TEST(s21_is_not_equal_8808) {
-  char *example = "( 103796339526804209932 != 125300623529174706505530247 ) = True";
+  char *example =
+      "( 103796339526804209932 != 125300623529174706505530247 ) = True";
   s21_decimal value_1 = {{0xF100810C, 0xA076ACDC, 0x5, 0x0}};
   s21_decimal value_2 = {{0x623E3B87, 0x698654B4, 0x67A570, 0x0}};
   int code = 1;
@@ -88184,7 +89927,8 @@ START_TEST(s21_is_not_equal_8816) {
 }
 
 START_TEST(s21_is_not_equal_8817) {
-  char *example = "( 1098090104250029078994665228 != -6125413.67786397 ) = True";
+  char *example =
+      "( 1098090104250029078994665228 != -6125413.67786397 ) = True";
   s21_decimal value_1 = {{0x33DEBF0C, 0xD4A48BE0, 0x38C519F, 0x0}};
   s21_decimal value_2 = {{0x66A31B9D, 0x22D1A, 0x0, 0x80080000}};
   int code = 1;
@@ -88204,7 +89948,8 @@ START_TEST(s21_is_not_equal_8818) {
 }
 
 START_TEST(s21_is_not_equal_8819) {
-  char *example = "( -848658.997527368 != 1881956567737513995779779049 ) = True";
+  char *example =
+      "( -848658.997527368 != 1881956567737513995779779049 ) = True";
   s21_decimal value_1 = {{0xD2154348, 0x303D9, 0x0, 0x80090000}};
   s21_decimal value_2 = {{0x6C5129E9, 0xF69581E9, 0x614B7CD, 0x0}};
   int code = 1;
@@ -88254,7 +89999,8 @@ START_TEST(s21_is_not_equal_8823) {
 }
 
 START_TEST(s21_is_not_equal_8824) {
-  char *example = "( -517.13690967267645894463 != 5.0457505975799792E-10 ) = True";
+  char *example =
+      "( -517.13690967267645894463 != 5.0457505975799792E-10 ) = True";
   s21_decimal value_1 = {{0x3AD8AF3F, 0x67A147DA, 0xAF3, 0x80140000}};
   s21_decimal value_2 = {{0x97F08FF0, 0xB342D5, 0x0, 0x1A0000}};
   int code = 1;
@@ -88294,7 +90040,8 @@ START_TEST(s21_is_not_equal_8827) {
 }
 
 START_TEST(s21_is_not_equal_8828) {
-  char *example = "( 10047432860519680 != 1938888650045097061635553391 ) = True";
+  char *example =
+      "( 10047432860519680 != 1938888650045097061635553391 ) = True";
   s21_decimal value_1 = {{0x428E4D00, 0x23B216, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF41B786F, 0x544E40F9, 0x643CFA4, 0x0}};
   int code = 1;
@@ -88354,7 +90101,8 @@ START_TEST(s21_is_not_equal_8833) {
 }
 
 START_TEST(s21_is_not_equal_8834) {
-  char *example = "( 1806790186968139405379202832 != -48.094240887681243950186862 ) = True";
+  char *example =
+      "( 1806790186968139405379202832 != -48.094240887681243950186862 ) = True";
   s21_decimal value_1 = {{0x55176F10, 0x4BFC3933, 0x5D68AB4, 0x0}};
   s21_decimal value_2 = {{0x3FED816E, 0x5D13106, 0x27C85A, 0x80180000}};
   int code = 1;
@@ -88374,7 +90122,8 @@ START_TEST(s21_is_not_equal_8835) {
 }
 
 START_TEST(s21_is_not_equal_8836) {
-  char *example = "( -177.94630085016914571199492 != 19072099259293194865 ) = True";
+  char *example =
+      "( -177.94630085016914571199492 != 19072099259293194865 ) = True";
   s21_decimal value_1 = {{0xE428404, 0xD4703C09, 0xEB828, 0x80170000}};
   s21_decimal value_2 = {{0x5F295A71, 0x8ADB53A, 0x1, 0x0}};
   int code = 1;
@@ -88384,7 +90133,8 @@ START_TEST(s21_is_not_equal_8836) {
 }
 
 START_TEST(s21_is_not_equal_8837) {
-  char *example = "( 113568806546949256839838120 != -5.414199753580960602689682 ) = True";
+  char *example =
+      "( 113568806546949256839838120 != -5.414199753580960602689682 ) = True";
   s21_decimal value_1 = {{0x8CF239A8, 0x56D864FE, 0x5DF121, 0x0}};
   s21_decimal value_2 = {{0x64B49092, 0x5B544E2D, 0x47A80, 0x80180000}};
   int code = 1;
@@ -88494,7 +90244,8 @@ START_TEST(s21_is_not_equal_8847) {
 }
 
 START_TEST(s21_is_not_equal_8848) {
-  char *example = "( -3458.1960997633546844538241 != -3740.69577740204882028390 ) = True";
+  char *example =
+      "( -3458.1960997633546844538241 != -3740.69577740204882028390 ) = True";
   s21_decimal value_1 = {{0x31CE8581, 0xDCB409C2, 0x1C9B03, 0x80160000}};
   s21_decimal value_2 = {{0x50040A57, 0xD5D290EA, 0x7EB, 0x80130000}};
   int code = 1;
@@ -88514,7 +90265,8 @@ START_TEST(s21_is_not_equal_8849) {
 }
 
 START_TEST(s21_is_not_equal_8850) {
-  char *example = "( 19316574418347436442498 != 1637409821273009049036208819 ) = True";
+  char *example =
+      "( 19316574418347436442498 != 1637409821273009049036208819 ) = True";
   s21_decimal value_1 = {{0xB4BA8382, 0x275229E3, 0x417, 0x0}};
   s21_decimal value_2 = {{0xA2993AB3, 0x460EE717, 0x54A6F04, 0x0}};
   int code = 1;
@@ -88584,7 +90336,8 @@ START_TEST(s21_is_not_equal_8856) {
 }
 
 START_TEST(s21_is_not_equal_8857) {
-  char *example = "( 1425381088908165496989273402 != -9.84198530072994233346 ) = True";
+  char *example =
+      "( 1425381088908165496989273402 != -9.84198530072994233346 ) = True";
   s21_decimal value_1 = {{0x44CFCD3A, 0xA92397B0, 0x49B0C2F, 0x0}};
   s21_decimal value_2 = {{0x166DBC02, 0x5A7F9498, 0x35, 0x80140000}};
   int code = 1;
@@ -88594,7 +90347,8 @@ START_TEST(s21_is_not_equal_8857) {
 }
 
 START_TEST(s21_is_not_equal_8858) {
-  char *example = "( -8.8274403430394160099598853 != 1521549834835758721500263246 ) = True";
+  char *example =
+      "( -8.8274403430394160099598853 != 1521549834835758721500263246 ) = True";
   s21_decimal value_1 = {{0x73CFA205, 0xFFAB1D7D, 0x4904D4, 0x80190000}};
   s21_decimal value_2 = {{0x62DD334E, 0xD2DDA498, 0x4EA98B5, 0x0}};
   int code = 1;
@@ -88634,7 +90388,8 @@ START_TEST(s21_is_not_equal_8861) {
 }
 
 START_TEST(s21_is_not_equal_8862) {
-  char *example = "( 12521625846108488 != 0.99797523335554958507248070 ) = True";
+  char *example =
+      "( 12521625846108488 != 0.99797523335554958507248070 ) = True";
   s21_decimal value_1 = {{0x34915148, 0x2C7C5A, 0x0, 0x0}};
   s21_decimal value_2 = {{0x87AFCDC7, 0x754276BD, 0x8414B, 0x190000}};
   int code = 1;
@@ -88664,7 +90419,8 @@ START_TEST(s21_is_not_equal_8864) {
 }
 
 START_TEST(s21_is_not_equal_8865) {
-  char *example = "( -5.6701042575469856102078349 != 147275024775867706654 ) = True";
+  char *example =
+      "( -5.6701042575469856102078349 != 147275024775867706654 ) = True";
   s21_decimal value_1 = {{0x4A70D78D, 0xAD581F10, 0x2EE6E9, 0x80190000}};
   s21_decimal value_2 = {{0xB472AD1E, 0xFBD9FEBC, 0x7, 0x0}};
   int code = 1;
@@ -88674,7 +90430,8 @@ START_TEST(s21_is_not_equal_8865) {
 }
 
 START_TEST(s21_is_not_equal_8866) {
-  char *example = "( 1672354493901153842885315717 != 1692991478842468946060115625 ) = True";
+  char *example =
+      "( 1672354493901153842885315717 != 1692991478842468946060115625 ) = True";
   s21_decimal value_1 = {{0x1FC4C85, 0xC5CE1E40, 0x56756D6, 0x0}};
   s21_decimal value_2 = {{0x6E4DFEA9, 0xF7D0540A, 0x57868E3, 0x0}};
   int code = 1;
@@ -88684,7 +90441,8 @@ START_TEST(s21_is_not_equal_8866) {
 }
 
 START_TEST(s21_is_not_equal_8867) {
-  char *example = "( 1672787495157667953278599227 != -449.64569293136175580725636 ) = True";
+  char *example =
+      "( 1672787495157667953278599227 != -449.64569293136175580725636 ) = True";
   s21_decimal value_1 = {{0xA3DE403B, 0xD15D12DA, 0x567B287, 0x0}};
   s21_decimal value_2 = {{0x7C124184, 0x2F85190D, 0x25319E, 0x80170000}};
   int code = 1;
@@ -88714,7 +90472,8 @@ START_TEST(s21_is_not_equal_8869) {
 }
 
 START_TEST(s21_is_not_equal_8870) {
-  char *example = "( 1117611388852069363790888387 != 1575306055389775228999656648 ) = True";
+  char *example =
+      "( 1117611388852069363790888387 != 1575306055389775228999656648 ) = True";
   s21_decimal value_1 = {{0xF12FBDC3, 0xCA15F8F5, 0x39C776A, 0x0}};
   s21_decimal value_2 = {{0xB8164C8, 0x61108398, 0x5171008, 0x0}};
   int code = 1;
@@ -88844,7 +90603,8 @@ START_TEST(s21_is_not_equal_8882) {
 }
 
 START_TEST(s21_is_not_equal_8883) {
-  char *example = "( 1568393283785720433482184808 != 154614638976797711 ) = True";
+  char *example =
+      "( 1568393283785720433482184808 != 154614638976797711 ) = True";
   s21_decimal value_1 = {{0x31A4B868, 0x47945D69, 0x5115832, 0x0}};
   s21_decimal value_2 = {{0xE9498C0F, 0x2254D31, 0x0, 0x0}};
   int code = 1;
@@ -88854,7 +90614,8 @@ START_TEST(s21_is_not_equal_8883) {
 }
 
 START_TEST(s21_is_not_equal_8884) {
-  char *example = "( 1083439376818609862305906448 != 17762835365205672681 ) = True";
+  char *example =
+      "( 1083439376818609862305906448 != 17762835365205672681 ) = True";
   s21_decimal value_1 = {{0xDE9FFF10, 0x4E1E90CB, 0x3803336, 0x0}};
   s21_decimal value_2 = {{0x32D482E9, 0xF68244A7, 0x0, 0x0}};
   int code = 1;
@@ -88894,7 +90655,8 @@ START_TEST(s21_is_not_equal_8887) {
 }
 
 START_TEST(s21_is_not_equal_8888) {
-  char *example = "( -20.552416397199008865998999 != -89358747.395932059 ) = True";
+  char *example =
+      "( -20.552416397199008865998999 != -89358747.395932059 ) = True";
   s21_decimal value_1 = {{0x84185897, 0xB9B2BB8D, 0x110024, 0x80180000}};
   s21_decimal value_2 = {{0xAC1BBF9B, 0x13D774E, 0x0, 0x80090000}};
   int code = 1;
@@ -88964,7 +90726,8 @@ START_TEST(s21_is_not_equal_8894) {
 }
 
 START_TEST(s21_is_not_equal_8895) {
-  char *example = "( 0.10699311176202767732566 != -52807.151498529194566724953 ) = True";
+  char *example =
+      "( 0.10699311176202767732566 != -52807.151498529194566724953 ) = True";
   s21_decimal value_1 = {{0x54D28F56, 0x2C52B60, 0x244, 0x170000}};
   s21_decimal value_2 = {{0x7AABAD59, 0x6B3B50A6, 0x2BAE59, 0x80150000}};
   int code = 1;
@@ -88984,7 +90747,8 @@ START_TEST(s21_is_not_equal_8896) {
 }
 
 START_TEST(s21_is_not_equal_8897) {
-  char *example = "( 0.27887241064574506248401824 != 1075608196937038564879859213 ) = True";
+  char *example =
+      "( 0.27887241064574506248401824 != 1075608196937038564879859213 ) = True";
   s21_decimal value_1 = {{0xC6FF73A0, 0x5E0A1EF2, 0x17115A, 0x1A0000}};
   s21_decimal value_2 = {{0x28117E0D, 0x317028F4, 0x379B8E5, 0x0}};
   int code = 1;
@@ -89014,7 +90778,8 @@ START_TEST(s21_is_not_equal_8899) {
 }
 
 START_TEST(s21_is_not_equal_8900) {
-  char *example = "( -6173220.93771508503 != -7.957696432261879686877822 ) = True";
+  char *example =
+      "( -6173220.93771508503 != -7.957696432261879686877822 ) = True";
   s21_decimal value_1 = {{0x6F404B17, 0x8912B2C, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x67ADD27E, 0x9686A383, 0x6951B, 0x80180000}};
   int code = 1;
@@ -89444,7 +91209,8 @@ START_TEST(s21_is_not_equal_8942) {
 }
 
 START_TEST(s21_is_not_equal_8943) {
-  char *example = "( 1471652082045816173492417735 != -225.69655231654177636385436 ) = True";
+  char *example =
+      "( 1471652082045816173492417735 != -225.69655231654177636385436 ) = True";
   s21_decimal value_1 = {{0xE683B4C7, 0x398F687F, 0x4C15273, 0x0}};
   s21_decimal value_2 = {{0x393C829C, 0x76334F20, 0x12AB4F, 0x80170000}};
   int code = 1;
@@ -89454,7 +91220,8 @@ START_TEST(s21_is_not_equal_8943) {
 }
 
 START_TEST(s21_is_not_equal_8944) {
-  char *example = "( 1747124395774118407833497213 != 9.4650248844097876E-10 ) = True";
+  char *example =
+      "( 1747124395774118407833497213 != 9.4650248844097876E-10 ) = True";
   s21_decimal value_1 = {{0xF8CDAE7D, 0x4668C543, 0x5A52FFB, 0x0}};
   s21_decimal value_2 = {{0x5C413954, 0x15043E6, 0x0, 0x1A0000}};
   int code = 1;
@@ -89474,7 +91241,8 @@ START_TEST(s21_is_not_equal_8945) {
 }
 
 START_TEST(s21_is_not_equal_8946) {
-  char *example = "( 62318.636371597078613 != 1559836470629916336118323705 ) = True";
+  char *example =
+      "( 62318.636371597078613 != 1559836470629916336118323705 ) = True";
   s21_decimal value_1 = {{0x7C83055, 0x60D8459A, 0x3, 0xF0000}};
   s21_decimal value_2 = {{0xC7A459F9, 0x824ACCB1, 0x50A4438, 0x0}};
   int code = 1;
@@ -89484,7 +91252,8 @@ START_TEST(s21_is_not_equal_8946) {
 }
 
 START_TEST(s21_is_not_equal_8947) {
-  char *example = "( 13470557567737749773757521 != -1036.9902451416625475280888 ) = True";
+  char *example =
+      "( 13470557567737749773757521 != -1036.9902451416625475280888 ) = True";
   s21_decimal value_1 = {{0xD02C2C51, 0x6393F8B4, 0xB2480, 0x0}};
   s21_decimal value_2 = {{0x7020DFF8, 0x89CEF985, 0x893E9, 0x80160000}};
   int code = 1;
@@ -89544,7 +91313,8 @@ START_TEST(s21_is_not_equal_8952) {
 }
 
 START_TEST(s21_is_not_equal_8953) {
-  char *example = "( -85.165197298802291585876810 != 1190651302491861344569607465 ) = True";
+  char *example =
+      "( -85.165197298802291585876810 != 1190651302491861344569607465 ) = True";
   s21_decimal value_1 = {{0xA9D00D21, 0x75AC1EAD, 0x70B71, 0x80170000}};
   s21_decimal value_2 = {{0x70A94529, 0x71147800, 0x3D8E238, 0x0}};
   int code = 1;
@@ -89554,7 +91324,8 @@ START_TEST(s21_is_not_equal_8953) {
 }
 
 START_TEST(s21_is_not_equal_8954) {
-  char *example = "( 1024100994667190087181964194 != 1258339495083351228510213457 ) = True";
+  char *example =
+      "( 1024100994667190087181964194 != 1258339495083351228510213457 ) = True";
   s21_decimal value_1 = {{0x58EC93A2, 0x29C35338, 0x34F1DD2, 0x0}};
   s21_decimal value_2 = {{0xD12D9551, 0xB6F5899F, 0x410DFC0, 0x0}};
   int code = 1;
@@ -89564,7 +91335,8 @@ START_TEST(s21_is_not_equal_8954) {
 }
 
 START_TEST(s21_is_not_equal_8955) {
-  char *example = "( -9.7616936067690876 != 1596768332736421437509932958 ) = True";
+  char *example =
+      "( -9.7616936067690876 != 1596768332736421437509932958 ) = True";
   s21_decimal value_1 = {{0xE60717C, 0x15ACE16, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0xFD73179E, 0xC3F42775, 0x528D0D8, 0x0}};
   int code = 1;
@@ -89574,7 +91346,8 @@ START_TEST(s21_is_not_equal_8955) {
 }
 
 START_TEST(s21_is_not_equal_8956) {
-  char *example = "( 1353902467645296191068648010 != 1323966195715892497637059336 ) = True";
+  char *example =
+      "( 1353902467645296191068648010 != 1323966195715892497637059336 ) = True";
   s21_decimal value_1 = {{0x2FBB324A, 0xD6753248, 0x45FEBFF, 0x0}};
   s21_decimal value_2 = {{0x9EF22B08, 0x48DD4FFC, 0x44728BF, 0x0}};
   int code = 1;
@@ -89644,7 +91417,8 @@ START_TEST(s21_is_not_equal_8962) {
 }
 
 START_TEST(s21_is_not_equal_8963) {
-  char *example = "( 1029829813147867829843906248 != 1137194974875970268252420796 ) = True";
+  char *example =
+      "( 1029829813147867829843906248 != 1137194974875970268252420796 ) = True";
   s21_decimal value_1 = {{0xA941CEC8, 0x906FE76, 0x353DAF2, 0x0}};
   s21_decimal value_2 = {{0x5B53ABC, 0x1D710D33, 0x3ACAA67, 0x0}};
   int code = 1;
@@ -89744,7 +91518,8 @@ START_TEST(s21_is_not_equal_8972) {
 }
 
 START_TEST(s21_is_not_equal_8973) {
-  char *example = "( 1037404965971500173488532178 != 1743303212085346003471752572 ) = True";
+  char *example =
+      "( 1037404965971500173488532178 != 1743303212085346003471752572 ) = True";
   s21_decimal value_1 = {{0x3177AAD2, 0xE4868451, 0x35A1F0B, 0x0}};
   s21_decimal value_2 = {{0x391EDD7C, 0x7E0075A1, 0x5A206D0, 0x0}};
   int code = 1;
@@ -89764,7 +91539,8 @@ START_TEST(s21_is_not_equal_8974) {
 }
 
 START_TEST(s21_is_not_equal_8975) {
-  char *example = "( -21.91127339915274 != -940.46369881781479696281917 ) = True";
+  char *example =
+      "( -21.91127339915274 != -940.46369881781479696281917 ) = True";
   s21_decimal value_1 = {{0x96C0D80A, 0x7C8D1, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xE0B4B13D, 0xED508958, 0x4DCB17, 0x80170000}};
   int code = 1;
@@ -89794,7 +91570,8 @@ START_TEST(s21_is_not_equal_8977) {
 }
 
 START_TEST(s21_is_not_equal_8978) {
-  char *example = "( 1100399319153381488378890674 != 1235190207893696517477810700 ) = True";
+  char *example =
+      "( 1100399319153381488378890674 != 1235190207893696517477810700 ) = True";
   s21_decimal value_1 = {{0x6EDC9B2, 0x9F12F9FA, 0x38E3A9E, 0x0}};
   s21_decimal value_2 = {{0xACE0C20C, 0x57705EBE, 0x3FDB9B3, 0x0}};
   int code = 1;
@@ -89814,7 +91591,8 @@ START_TEST(s21_is_not_equal_8979) {
 }
 
 START_TEST(s21_is_not_equal_8980) {
-  char *example = "( -3.33193778752481126671260 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( -3.33193778752481126671260 != -79228162514264337593543950335 ) = True";
   s21_decimal value_1 = {{0x856709F6, 0x3F418BE8, 0x70E, 0x80160000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -89834,7 +91612,8 @@ START_TEST(s21_is_not_equal_8981) {
 }
 
 START_TEST(s21_is_not_equal_8982) {
-  char *example = "( 1189984006718845077315132780 != 1764058612857742678355506333 ) = True";
+  char *example =
+      "( 1189984006718845077315132780 != 1764058612857742678355506333 ) = True";
   s21_decimal value_1 = {{0x72401D6C, 0x43EFDE3C, 0x3D854EA, 0x0}};
   s21_decimal value_2 = {{0xE362749D, 0x5C98A25, 0x5B331F1, 0x0}};
   int code = 1;
@@ -89944,7 +91723,8 @@ START_TEST(s21_is_not_equal_8992) {
 }
 
 START_TEST(s21_is_not_equal_8993) {
-  char *example = "( -14.360261759379992137602 != 1750134448670070005376257995 ) = True";
+  char *example =
+      "( -14.360261759379992137602 != 1750134448670070005376257995 ) = True";
   s21_decimal value_1 = {{0x7E6ECF82, 0x78AA623A, 0x30A, 0x80150000}};
   s21_decimal value_2 = {{0xB1D88FCB, 0x91CA2180, 0x5A7AD62, 0x0}};
   int code = 1;
@@ -90044,7 +91824,8 @@ START_TEST(s21_is_not_equal_9002) {
 }
 
 START_TEST(s21_is_not_equal_9003) {
-  char *example = "( 1073662331726666571 != 736950943.454890761273093091 ) = True";
+  char *example =
+      "( 1073662331726666571 != 736950943.454890761273093091 ) = True";
   s21_decimal value_1 = {{0xC3491B4B, 0xEE66A33, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5C662BE3, 0xB2091FF9, 0x261976E, 0x120000}};
   int code = 1;
@@ -90054,7 +91835,8 @@ START_TEST(s21_is_not_equal_9003) {
 }
 
 START_TEST(s21_is_not_equal_9004) {
-  char *example = "( 12612243500295629 != 1178965589675681819682343922 ) = True";
+  char *example =
+      "( 12612243500295629 != 1178965589675681819682343922 ) = True";
   s21_decimal value_1 = {{0xC5A7E5CD, 0x2CCEC4, 0x0, 0x0}};
   s21_decimal value_2 = {{0x278F0BF2, 0xAE3BE4B8, 0x3CF37AC, 0x0}};
   int code = 1;
@@ -90064,7 +91846,8 @@ START_TEST(s21_is_not_equal_9004) {
 }
 
 START_TEST(s21_is_not_equal_9005) {
-  char *example = "( 1235602902302450438064242166 != 3.9691672837493656E-10 ) = True";
+  char *example =
+      "( 1235602902302450438064242166 != 3.9691672837493656E-10 ) = True";
   s21_decimal value_1 = {{0x2C92FDF6, 0x8CDF83BF, 0x3FE1117, 0x0}};
   s21_decimal value_2 = {{0xBC051398, 0x8D035D, 0x0, 0x1A0000}};
   int code = 1;
@@ -90074,7 +91857,8 @@ START_TEST(s21_is_not_equal_9005) {
 }
 
 START_TEST(s21_is_not_equal_9006) {
-  char *example = "( 1173174182945091023281117755 != 1923865196584261185377487246 ) = True";
+  char *example =
+      "( 1173174182945091023281117755 != 1923865196584261185377487246 ) = True";
   s21_decimal value_1 = {{0x49ECDA3B, 0xE484A050, 0x3CA6D4B, 0x0}};
   s21_decimal value_2 = {{0xA0A9498E, 0x49091E95, 0x637624D, 0x0}};
   int code = 1;
@@ -90134,7 +91918,8 @@ START_TEST(s21_is_not_equal_9011) {
 }
 
 START_TEST(s21_is_not_equal_9012) {
-  char *example = "( -6589.540160188207054298 != -55.143567292128847537018 ) = True";
+  char *example =
+      "( -6589.540160188207054298 != -55.143567292128847537018 ) = True";
   s21_decimal value_1 = {{0xA4B7BDDA, 0x383D76CF, 0x165, 0x80120000}};
   s21_decimal value_2 = {{0xD511237A, 0x56B9D10C, 0xBAD, 0x80150000}};
   int code = 1;
@@ -90304,7 +92089,8 @@ START_TEST(s21_is_not_equal_9028) {
 }
 
 START_TEST(s21_is_not_equal_9029) {
-  char *example = "( -2.0422599985142428462571102 != 9.6664199212707118E-10 ) = True";
+  char *example =
+      "( -2.0422599985142428462571102 != 9.6664199212707118E-10 ) = True";
   s21_decimal value_1 = {{0xF0695E5E, 0x5D13E2EB, 0x10E4A7, 0x80190000}};
   s21_decimal value_2 = {{0xB8922D2E, 0x1576B93, 0x0, 0x1A0000}};
   int code = 1;
@@ -90374,7 +92160,8 @@ START_TEST(s21_is_not_equal_9035) {
 }
 
 START_TEST(s21_is_not_equal_9036) {
-  char *example = "( -9.125172754547969438 != 1672001281322077199444792736 ) = True";
+  char *example =
+      "( -9.125172754547969438 != 1672001281322077199444792736 ) = True";
   s21_decimal value_1 = {{0xE4E78D9E, 0x7EA32045, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0xCA8CD5A0, 0x1494E87D, 0x5670C0B, 0x0}};
   int code = 1;
@@ -90394,7 +92181,8 @@ START_TEST(s21_is_not_equal_9037) {
 }
 
 START_TEST(s21_is_not_equal_9038) {
-  char *example = "( -3.6966650479783614181758210 != -727.38231825556106878075985 ) = True";
+  char *example =
+      "( -3.6966650479783614181758210 != -727.38231825556106878075985 ) = True";
   s21_decimal value_1 = {{0xBE00554D, 0x9D21E57C, 0x30ECC, 0x80180000}};
   s21_decimal value_2 = {{0xD91B4451, 0x72CA6A44, 0x3C2AEB, 0x80170000}};
   int code = 1;
@@ -90414,7 +92202,8 @@ START_TEST(s21_is_not_equal_9039) {
 }
 
 START_TEST(s21_is_not_equal_9040) {
-  char *example = "( 85.73107693821148709 != 1448701637957295987209101685 ) = True";
+  char *example =
+      "( 85.73107693821148709 != 1448701637957295987209101685 ) = True";
   s21_decimal value_1 = {{0x7760BE25, 0x76F9CC06, 0x0, 0x110000}};
   s21_decimal value_2 = {{0xA6756175, 0x28679391, 0x4AE5681, 0x0}};
   int code = 1;
@@ -90464,7 +92253,8 @@ START_TEST(s21_is_not_equal_9044) {
 }
 
 START_TEST(s21_is_not_equal_9045) {
-  char *example = "( 1675063868107915027330066396 != 16734406479964324722195548 ) = True";
+  char *example =
+      "( 1675063868107915027330066396 != 16734406479964324722195548 ) = True";
   s21_decimal value_1 = {{0x95F67DC, 0x3E2377C7, 0x5699492, 0x0}};
   s21_decimal value_2 = {{0x7F453C5C, 0xFE37FA1C, 0xDD7A5, 0x0}};
   int code = 1;
@@ -90474,7 +92264,8 @@ START_TEST(s21_is_not_equal_9045) {
 }
 
 START_TEST(s21_is_not_equal_9046) {
-  char *example = "( 1270440477144672306806990896 != 1476200377511346048735591189 ) = True";
+  char *example =
+      "( 1270440477144672306806990896 != 1476200377511346048735591189 ) = True";
   s21_decimal value_1 = {{0x8E652830, 0x4445B664, 0x41AE23C, 0x0}};
   s21_decimal value_2 = {{0x5B733B15, 0xD0EB05C1, 0x4C51596, 0x0}};
   int code = 1;
@@ -90554,7 +92345,8 @@ START_TEST(s21_is_not_equal_9053) {
 }
 
 START_TEST(s21_is_not_equal_9054) {
-  char *example = "( 1273817033977553242704190227 != -1.2065618435729279750616513 ) = True";
+  char *example =
+      "( 1273817033977553242704190227 != -1.2065618435729279750616513 ) = True";
   s21_decimal value_1 = {{0x5DEE1B13, 0xC78522C8, 0x41DAD3F, 0x0}};
   s21_decimal value_2 = {{0xD3CDB5C1, 0x7C6BCD8B, 0x9FAFE, 0x80190000}};
   int code = 1;
@@ -90614,7 +92406,8 @@ START_TEST(s21_is_not_equal_9059) {
 }
 
 START_TEST(s21_is_not_equal_9060) {
-  char *example = "( 0.30242258139814620224 != -282.27634225674286940667866 ) = True";
+  char *example =
+      "( 0.30242258139814620224 != -282.27634225674286940667866 ) = True";
   s21_decimal value_1 = {{0x3D50EC40, 0xA3B2158C, 0x1, 0x140000}};
   s21_decimal value_2 = {{0xD91BFDA, 0x1E19BAF0, 0x17596F, 0x80170000}};
   int code = 1;
@@ -90624,7 +92417,8 @@ START_TEST(s21_is_not_equal_9060) {
 }
 
 START_TEST(s21_is_not_equal_9061) {
-  char *example = "( 1208726891562159049387060524 != 1056017307198755611462738636 ) = True";
+  char *example =
+      "( 1208726891562159049387060524 != 1056017307198755611462738636 ) = True";
   s21_decimal value_1 = {{0xF8C8AD2C, 0x16B2E469, 0x3E7D5E0, 0x0}};
   s21_decimal value_2 = {{0x97E622CC, 0xEEAF16FA, 0x369845C, 0x0}};
   int code = 1;
@@ -90634,7 +92428,8 @@ START_TEST(s21_is_not_equal_9061) {
 }
 
 START_TEST(s21_is_not_equal_9062) {
-  char *example = "( 1687644294308420815251738908 != -8.7375473924837977455518676 ) = True";
+  char *example =
+      "( 1687644294308420815251738908 != -8.7375473924837977455518676 ) = True";
   s21_decimal value_1 = {{0x2CC2911C, 0x837B251F, 0x573FC94, 0x0}};
   s21_decimal value_2 = {{0xAC2AE3D4, 0xEEBC72C8, 0x484679, 0x80190000}};
   int code = 1;
@@ -90664,7 +92459,8 @@ START_TEST(s21_is_not_equal_9064) {
 }
 
 START_TEST(s21_is_not_equal_9065) {
-  char *example = "( 1145120112063903318770216562 != -5528582934.083512 ) = True";
+  char *example =
+      "( 1145120112063903318770216562 != -5528582934.083512 ) = True";
   s21_decimal value_1 = {{0x87046E72, 0xA9AEFDE9, 0x3B3389D, 0x0}};
   s21_decimal value_2 = {{0x85E5B7B8, 0x13A437, 0x0, 0x80060000}};
   int code = 1;
@@ -90704,7 +92500,8 @@ START_TEST(s21_is_not_equal_9068) {
 }
 
 START_TEST(s21_is_not_equal_9069) {
-  char *example = "( 152136009816899606449349827 != 1748611193344199780004949960 ) = True";
+  char *example =
+      "( 152136009816899606449349827 != 1748611193344199780004949960 ) = True";
   s21_decimal value_1 = {{0xEB15E4C3, 0x9E2AA063, 0x7DD80D, 0x0}};
   s21_decimal value_2 = {{0x313A6FC8, 0xBB999B23, 0x5A66AD2, 0x0}};
   int code = 1;
@@ -90744,7 +92541,8 @@ START_TEST(s21_is_not_equal_9072) {
 }
 
 START_TEST(s21_is_not_equal_9073) {
-  char *example = "( 9.9130186611788873E-10 != 18769346296959259905279534 ) = True";
+  char *example =
+      "( 9.9130186611788873E-10 != 18769346296959259905279534 ) = True";
   s21_decimal value_1 = {{0x27838C49, 0x1602E61, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xED32C62E, 0x4D3359C6, 0xF8690, 0x0}};
   int code = 1;
@@ -90774,7 +92572,8 @@ START_TEST(s21_is_not_equal_9075) {
 }
 
 START_TEST(s21_is_not_equal_9076) {
-  char *example = "( 0.02700424046014625287745335 != -92916.99007750426 ) = True";
+  char *example =
+      "( 0.02700424046014625287745335 != -92916.99007750426 ) = True";
   s21_decimal value_1 = {{0xFDFAF37, 0x47E6D684, 0x23BD6, 0x1A0000}};
   s21_decimal value_2 = {{0x42B7811A, 0x2102C0, 0x0, 0x800B0000}};
   int code = 1;
@@ -90844,7 +92643,8 @@ START_TEST(s21_is_not_equal_9082) {
 }
 
 START_TEST(s21_is_not_equal_9083) {
-  char *example = "( -9207.7018464397467215532794 != -46.22714187657026146987 ) = True";
+  char *example =
+      "( -9207.7018464397467215532794 != -46.22714187657026146987 ) = True";
   s21_decimal value_1 = {{0xCB2112FA, 0x2C39A194, 0x4C2A11, 0x80160000}};
   s21_decimal value_2 = {{0xF7B12AB, 0x990BED7C, 0xFA, 0x80140000}};
   int code = 1;
@@ -90864,7 +92664,8 @@ START_TEST(s21_is_not_equal_9084) {
 }
 
 START_TEST(s21_is_not_equal_9085) {
-  char *example = "( 116999761151819069411 != -5.4014253947053609419904127 ) = True";
+  char *example =
+      "( 116999761151819069411 != -5.4014253947053609419904127 ) = True";
   s21_decimal value_1 = {{0x53B937E3, 0x57B2A6E0, 0x6, 0x0}};
   s21_decimal value_2 = {{0x54D947F, 0x92DFE6BC, 0x2CADF6, 0x80190000}};
   int code = 1;
@@ -90924,7 +92725,8 @@ START_TEST(s21_is_not_equal_9090) {
 }
 
 START_TEST(s21_is_not_equal_9091) {
-  char *example = "( 19662697714344330761 != 1742542489452292979558870672 ) = True";
+  char *example =
+      "( 19662697714344330761 != 1742542489452292979558870672 ) = True";
   s21_decimal value_1 = {{0xCD610609, 0x10DFEF64, 0x1, 0x0}};
   s21_decimal value_2 = {{0x2FC66E90, 0xA2B83D27, 0x5A165B9, 0x0}};
   int code = 1;
@@ -90984,7 +92786,8 @@ START_TEST(s21_is_not_equal_9096) {
 }
 
 START_TEST(s21_is_not_equal_9097) {
-  char *example = "( 1116598190814468555157149524 != 1051094904401824410168848525 ) = True";
+  char *example =
+      "( 1116598190814468555157149524 != 1051094904401824410168848525 ) = True";
   s21_decimal value_1 = {{0x10D61754, 0x36B6744C, 0x39BA0DD, 0x0}};
   s21_decimal value_2 = {{0xE111F08D, 0xF129DDCE, 0x3657200, 0x0}};
   int code = 1;
@@ -91054,7 +92857,8 @@ START_TEST(s21_is_not_equal_9103) {
 }
 
 START_TEST(s21_is_not_equal_9104) {
-  char *example = "( 1197953743530577061110292 != 12025914065500993210 ) = True";
+  char *example =
+      "( 1197953743530577061110292 != 12025914065500993210 ) = True";
   s21_decimal value_1 = {{0xEAC26214, 0x33DB361A, 0xFDAD, 0x0}};
   s21_decimal value_2 = {{0x658F76BA, 0xA6E4A120, 0x0, 0x0}};
   int code = 1;
@@ -91064,7 +92868,8 @@ START_TEST(s21_is_not_equal_9104) {
 }
 
 START_TEST(s21_is_not_equal_9105) {
-  char *example = "( 142751367895813966209 != 187058801430244297290699559 ) = True";
+  char *example =
+      "( 142751367895813966209 != 187058801430244297290699559 ) = True";
   s21_decimal value_1 = {{0xA717C981, 0xBD12BCC5, 0x7, 0x0}};
   s21_decimal value_2 = {{0x75CA5327, 0xF1D54170, 0x9ABB3D, 0x0}};
   int code = 1;
@@ -91074,7 +92879,8 @@ START_TEST(s21_is_not_equal_9105) {
 }
 
 START_TEST(s21_is_not_equal_9106) {
-  char *example = "( 1229467930230039689854549443 != 0.55706820893648055753536200 ) = True";
+  char *example =
+      "( 1229467930230039689854549443 != 0.55706820893648055753536200 ) = True";
   s21_decimal value_1 = {{0x322D7DC3, 0xC3ECD4A, 0x3F8FDF6, 0x0}};
   s21_decimal value_2 = {{0x18F09082, 0xBA65E9DD, 0x75F6, 0x180000}};
   int code = 1;
@@ -91214,7 +93020,8 @@ START_TEST(s21_is_not_equal_9119) {
 }
 
 START_TEST(s21_is_not_equal_9120) {
-  char *example = "( -850120.22914695540216270662 != 118159301302022480586 ) = True";
+  char *example =
+      "( -850120.22914695540216270662 != 118159301302022480586 ) = True";
   s21_decimal value_1 = {{0xA7518F46, 0xFF1F8A5C, 0x4651FE, 0x80140000}};
   s21_decimal value_2 = {{0xD766A2CA, 0x67CA2A7F, 0x6, 0x0}};
   int code = 1;
@@ -91224,7 +93031,8 @@ START_TEST(s21_is_not_equal_9120) {
 }
 
 START_TEST(s21_is_not_equal_9121) {
-  char *example = "( 1548538349466118835051572171 != -1402170.9844415563826893884 ) = True";
+  char *example =
+      "( 1548538349466118835051572171 != -1402170.9844415563826893884 ) = True";
   s21_decimal value_1 = {{0xFDF22BCB, 0x22276E46, 0x500EBC0, 0x0}};
   s21_decimal value_2 = {{0xE5CA943C, 0x69EC6D43, 0xB9936, 0x80130000}};
   int code = 1;
@@ -91244,7 +93052,8 @@ START_TEST(s21_is_not_equal_9122) {
 }
 
 START_TEST(s21_is_not_equal_9123) {
-  char *example = "( 1561816500717490568862909396 != -3.2481798063965658648135156 ) = True";
+  char *example =
+      "( 1561816500717490568862909396 != -3.2481798063965658648135156 ) = True";
   s21_decimal value_1 = {{0x3D1443D4, 0x27B35C72, 0x50BE782, 0x0}};
   s21_decimal value_2 = {{0xADE3C5F4, 0xCD25E2EC, 0x1ADE49, 0x80190000}};
   int code = 1;
@@ -91254,7 +93063,8 @@ START_TEST(s21_is_not_equal_9123) {
 }
 
 START_TEST(s21_is_not_equal_9124) {
-  char *example = "( 2.5718144406255E-10 != 1559607087194598808782820164 ) = True";
+  char *example =
+      "( 2.5718144406255E-10 != 1559607087194598808782820164 ) = True";
   s21_decimal value_1 = {{0xF8DC92EF, 0x1763, 0x0, 0x170000}};
   s21_decimal value_2 = {{0x1E92D344, 0x9BA674EE, 0x50A13A5, 0x0}};
   int code = 1;
@@ -91314,7 +93124,8 @@ START_TEST(s21_is_not_equal_9129) {
 }
 
 START_TEST(s21_is_not_equal_9130) {
-  char *example = "( -1178.5383168455029438277358 != 1467257207746001257654050697 ) = True";
+  char *example =
+      "( -1178.5383168455029438277358 != 1467257207746001257654050697 ) = True";
   s21_decimal value_1 = {{0xF087E6EE, 0xE6D879B1, 0x9BFA6, 0x80160000}};
   s21_decimal value_2 = {{0x6FF2DF89, 0x9C95D8D3, 0x4BDAFCC, 0x0}};
   int code = 1;
@@ -91334,7 +93145,8 @@ START_TEST(s21_is_not_equal_9131) {
 }
 
 START_TEST(s21_is_not_equal_9132) {
-  char *example = "( 0.12382945658244026554314141 != 1805450554974943214812465906 ) = True";
+  char *example =
+      "( 0.12382945658244026554314141 != 1805450554974943214812465906 ) = True";
   s21_decimal value_1 = {{0x92EED9D, 0xD447E307, 0xA3E30, 0x1A0000}};
   s21_decimal value_2 = {{0xFBBB0AF2, 0xB3716FC1, 0x5D56F06, 0x0}};
   int code = 1;
@@ -91344,7 +93156,8 @@ START_TEST(s21_is_not_equal_9132) {
 }
 
 START_TEST(s21_is_not_equal_9133) {
-  char *example = "( -33.808403005779125888255341 != 1748795598951917980163158634 ) = True";
+  char *example =
+      "( -33.808403005779125888255341 != 1748795598951917980163158634 ) = True";
   s21_decimal value_1 = {{0x861A856D, 0x3309080E, 0x1BF735, 0x80180000}};
   s21_decimal value_2 = {{0xB966B26A, 0x617E980E, 0x5A691DF, 0x0}};
   int code = 1;
@@ -91354,7 +93167,8 @@ START_TEST(s21_is_not_equal_9133) {
 }
 
 START_TEST(s21_is_not_equal_9134) {
-  char *example = "( -94.8845613188267104874 != 1725506970269228698618970062 ) = True";
+  char *example =
+      "( -94.8845613188267104874 != 1725506970269228698618970062 ) = True";
   s21_decimal value_1 = {{0xC65BDA6A, 0x6FE0C9FE, 0x33, 0x80130000}};
   s21_decimal value_2 = {{0x56AE3FCE, 0x4A4D191B, 0x5934E50, 0x0}};
   int code = 1;
@@ -91384,7 +93198,8 @@ START_TEST(s21_is_not_equal_9136) {
 }
 
 START_TEST(s21_is_not_equal_9137) {
-  char *example = "( -56.15367634742631714413 != 1557401414029183360039139033 ) = True";
+  char *example =
+      "( -56.15367634742631714413 != 1557401414029183360039139033 ) = True";
   s21_decimal value_1 = {{0x3C03CE6D, 0x68E1684E, 0x130, 0x80140000}};
   s21_decimal value_2 = {{0x21D436D9, 0xD37CB8DB, 0x5084093, 0x0}};
   int code = 1;
@@ -91414,7 +93229,8 @@ START_TEST(s21_is_not_equal_9139) {
 }
 
 START_TEST(s21_is_not_equal_9140) {
-  char *example = "( 172594394376757918311340107 != -1.7648286831145610833345336 ) = True";
+  char *example =
+      "( 172594394376757918311340107 != -1.7648286831145610833345336 ) = True";
   s21_decimal value_1 = {{0xFA6B584B, 0xDDFA989A, 0x8EC448, 0x0}};
   s21_decimal value_2 = {{0xC210BB38, 0x8BD067DF, 0xE992B, 0x80190000}};
   int code = 1;
@@ -91424,7 +93240,8 @@ START_TEST(s21_is_not_equal_9140) {
 }
 
 START_TEST(s21_is_not_equal_9141) {
-  char *example = "( -713754.58386736855294420825 != 1701056435187923301 ) = True";
+  char *example =
+      "( -713754.58386736855294420825 != 1701056435187923301 ) = True";
   s21_decimal value_1 = {{0x2DA82759, 0x5A2D3749, 0x3B0A57, 0x80140000}};
   s21_decimal value_2 = {{0xB244B965, 0x179B5DD0, 0x0, 0x0}};
   int code = 1;
@@ -91444,7 +93261,8 @@ START_TEST(s21_is_not_equal_9142) {
 }
 
 START_TEST(s21_is_not_equal_9143) {
-  char *example = "( 1750692153929578696268862506 != 15761014852203029311 ) = True";
+  char *example =
+      "( 1750692153929578696268862506 != 15761014852203029311 ) = True";
   s21_decimal value_1 = {{0x9724542A, 0xD50A538D, 0x5A8237B, 0x0}};
   s21_decimal value_2 = {{0xAD37A33F, 0xDABA5F80, 0x0, 0x0}};
   int code = 1;
@@ -91464,7 +93282,8 @@ START_TEST(s21_is_not_equal_9144) {
 }
 
 START_TEST(s21_is_not_equal_9145) {
-  char *example = "( 3.3143797764941037E-10 != -1.1676268969133025321390202 ) = True";
+  char *example =
+      "( 3.3143797764941037E-10 != -1.1676268969133025321390202 ) = True";
   s21_decimal value_1 = {{0xC44964ED, 0x75C01B, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0x1891907A, 0xCF23FE23, 0x9A88B, 0x80190000}};
   int code = 1;
@@ -91544,7 +93363,8 @@ START_TEST(s21_is_not_equal_9152) {
 }
 
 START_TEST(s21_is_not_equal_9153) {
-  char *example = "( 1324697962329627051330790143 != -7.507614517981967358497768 ) = True";
+  char *example =
+      "( 1324697962329627051330790143 != -7.507614517981967358497768 ) = True";
   s21_decimal value_1 = {{0x5A5662FF, 0x6EA79DE1, 0x447C3B4, 0x0}};
   s21_decimal value_2 = {{0xA42E13E8, 0x9939321D, 0x635CC, 0x80180000}};
   int code = 1;
@@ -91564,7 +93384,8 @@ START_TEST(s21_is_not_equal_9154) {
 }
 
 START_TEST(s21_is_not_equal_9155) {
-  char *example = "( 0.41624619949022510339024414 != 1981689373422373072 ) = True";
+  char *example =
+      "( 0.41624619949022510339024414 != 1981689373422373072 ) = True";
   s21_decimal value_1 = {{0x1A67661E, 0x2B3BC3B5, 0x226E5B, 0x1A0000}};
   s21_decimal value_2 = {{0x5601C8D0, 0x1B805FFC, 0x0, 0x0}};
   int code = 1;
@@ -91614,7 +93435,8 @@ START_TEST(s21_is_not_equal_9159) {
 }
 
 START_TEST(s21_is_not_equal_9160) {
-  char *example = "( -79.770067661106308208489747 != -7937.2671028338537903216615 ) = True";
+  char *example =
+      "( -79.770067661106308208489747 != -7937.2671028338537903216615 ) = True";
   s21_decimal value_1 = {{0x5EF57513, 0x86A7430, 0x41FBF8, 0x80180000}};
   s21_decimal value_2 = {{0xF3C8D7E7, 0x1E454F7F, 0x41A7D1, 0x80160000}};
   int code = 1;
@@ -91654,7 +93476,8 @@ START_TEST(s21_is_not_equal_9163) {
 }
 
 START_TEST(s21_is_not_equal_9164) {
-  char *example = "( 1792488252838955827973102033 != 1489268570410644774524259262 ) = True";
+  char *example =
+      "( 1792488252838955827973102033 != 1489268570410644774524259262 ) = True";
   s21_decimal value_1 = {{0x940499D1, 0xE4E62B51, 0x5CAB626, 0x0}};
   s21_decimal value_2 = {{0x5F8B8BBE, 0xF901908C, 0x4CFE4E2, 0x0}};
   int code = 1;
@@ -91674,7 +93497,8 @@ START_TEST(s21_is_not_equal_9165) {
 }
 
 START_TEST(s21_is_not_equal_9166) {
-  char *example = "( 149641176218063355 != 1888523168129981339857607223 ) = True";
+  char *example =
+      "( 149641176218063355 != 1888523168129981339857607223 ) = True";
   s21_decimal value_1 = {{0x603FD1FB, 0x213A1DB, 0x0, 0x0}};
   s21_decimal value_2 = {{0x10245A37, 0x15730AFE, 0x61A2656, 0x0}};
   int code = 1;
@@ -91784,7 +93608,8 @@ START_TEST(s21_is_not_equal_9176) {
 }
 
 START_TEST(s21_is_not_equal_9177) {
-  char *example = "( 1948684978262914732679650420 != 1378107622816373999285767881 ) = True";
+  char *example =
+      "( 1948684978262914732679650420 != 1378107622816373999285767881 ) = True";
   s21_decimal value_1 = {{0xDB1E5C74, 0x589BB6C7, 0x64BEA18, 0x0}};
   s21_decimal value_2 = {{0x1B230EC9, 0xEDC6F925, 0x473F1A3, 0x0}};
   int code = 1;
@@ -91804,7 +93629,8 @@ START_TEST(s21_is_not_equal_9178) {
 }
 
 START_TEST(s21_is_not_equal_9179) {
-  char *example = "( 110430583587579552 != 1507724461797425024863916021 ) = True";
+  char *example =
+      "( 110430583587579552 != 1507724461797425024863916021 ) = True";
   s21_decimal value_1 = {{0xDB13A6A0, 0x1885407, 0x0, 0x0}};
   s21_decimal value_2 = {{0x9C994FF5, 0xD979D5CE, 0x4DF2912, 0x0}};
   int code = 1;
@@ -91814,7 +93640,8 @@ START_TEST(s21_is_not_equal_9179) {
 }
 
 START_TEST(s21_is_not_equal_9180) {
-  char *example = "( -2343638.7222301564030445353 != 110612931946400376 ) = True";
+  char *example =
+      "( -2343638.7222301564030445353 != 110612931946400376 ) = True";
   s21_decimal value_1 = {{0xE8B86729, 0x18DA5606, 0x1362D9, 0x80130000}};
   s21_decimal value_2 = {{0x243ACA78, 0x188F9E0, 0x0, 0x0}};
   int code = 1;
@@ -91864,7 +93691,8 @@ START_TEST(s21_is_not_equal_9184) {
 }
 
 START_TEST(s21_is_not_equal_9185) {
-  char *example = "( 1127104819415655501270730922 != 1552427427830760825249994919 ) = True";
+  char *example =
+      "( 1127104819415655501270730922 != 1552427427830760825249994919 ) = True";
   s21_decimal value_1 = {{0xA319C8AA, 0xB103F7BC, 0x3A451BA, 0x0}};
   s21_decimal value_2 = {{0x430218A7, 0x7E776BE4, 0x504234B, 0x0}};
   int code = 1;
@@ -91874,7 +93702,8 @@ START_TEST(s21_is_not_equal_9185) {
 }
 
 START_TEST(s21_is_not_equal_9186) {
-  char *example = "( 19188085194281729138 != 1684683987743039040117202351 ) = True";
+  char *example =
+      "( 19188085194281729138 != 1684683987743039040117202351 ) = True";
   s21_decimal value_1 = {{0x45183C72, 0xA49C5D2, 0x1, 0x0}};
   s21_decimal value_2 = {{0x5FDADDAF, 0xF91EDEC8, 0x57189B5, 0x0}};
   int code = 1;
@@ -91884,7 +93713,8 @@ START_TEST(s21_is_not_equal_9186) {
 }
 
 START_TEST(s21_is_not_equal_9187) {
-  char *example = "( 198818715842434692384667610 != 5.9366125267900722E-10 ) = True";
+  char *example =
+      "( 198818715842434692384667610 != 5.9366125267900722E-10 ) = True";
   s21_decimal value_1 = {{0xF99B7DA, 0x2EAEF7B4, 0xA47580, 0x0}};
   s21_decimal value_2 = {{0x2848D932, 0xD2E92D, 0x0, 0x1A0000}};
   int code = 1;
@@ -91914,7 +93744,8 @@ START_TEST(s21_is_not_equal_9189) {
 }
 
 START_TEST(s21_is_not_equal_9190) {
-  char *example = "( 1147586725375706669348761194 != 1180465713777787037010708102 ) = True";
+  char *example =
+      "( 1147586725375706669348761194 != 1180465713777787037010708102 ) = True";
   s21_decimal value_1 = {{0xA9BB2E6A, 0x9D425A2, 0x3B542F1, 0x0}};
   s21_decimal value_2 = {{0x26114686, 0x92355749, 0x3D07556, 0x0}};
   int code = 1;
@@ -92044,7 +93875,8 @@ START_TEST(s21_is_not_equal_9202) {
 }
 
 START_TEST(s21_is_not_equal_9203) {
-  char *example = "( 8.0963283950423844E-10 != 262.090127769493940998075475 ) = True";
+  char *example =
+      "( 8.0963283950423844E-10 != 262.090127769493940998075475 ) = True";
   s21_decimal value_1 = {{0x83B6CF24, 0x11FA3AD, 0x0, 0x1A0000}};
   s21_decimal value_2 = {{0xA6DD7453, 0x4BB5408C, 0xD8CBBE, 0x180000}};
   int code = 1;
@@ -92074,7 +93906,8 @@ START_TEST(s21_is_not_equal_9205) {
 }
 
 START_TEST(s21_is_not_equal_9206) {
-  char *example = "( 1503983153802263172879106415 != -6695.21677315626 ) = True";
+  char *example =
+      "( 1503983153802263172879106415 != -6695.21677315626 ) = True";
   s21_decimal value_1 = {{0xDFA416F, 0x22FED168, 0x4DC10D2, 0x0}};
   s21_decimal value_2 = {{0x29BEEE2A, 0x260ED, 0x0, 0x800B0000}};
   int code = 1;
@@ -92104,7 +93937,8 @@ START_TEST(s21_is_not_equal_9208) {
 }
 
 START_TEST(s21_is_not_equal_9209) {
-  char *example = "( 1551149582793793046897716194 != -8.9194412269627518765164672 ) = True";
+  char *example =
+      "( 1551149582793793046897716194 != -8.9194412269627518765164672 ) = True";
   s21_decimal value_1 = {{0x98FB6BE2, 0x603132DD, 0x50314B3, 0x0}};
   s21_decimal value_2 = {{0xD0DAE880, 0xC71EE07D, 0x49C7A6, 0x80190000}};
   int code = 1;
@@ -92124,7 +93958,8 @@ START_TEST(s21_is_not_equal_9210) {
 }
 
 START_TEST(s21_is_not_equal_9211) {
-  char *example = "( 0.63979990336862982600394455 != 194874159146712340170175 ) = True";
+  char *example =
+      "( 0.63979990336862982600394455 != 194874159146712340170175 ) = True";
   s21_decimal value_1 = {{0x617806D7, 0x39D74C07, 0x34EC4A, 0x1A0000}};
   s21_decimal value_2 = {{0xA8DD05BF, 0x263AD863, 0x2944, 0x0}};
   int code = 1;
@@ -92184,7 +94019,8 @@ START_TEST(s21_is_not_equal_9216) {
 }
 
 START_TEST(s21_is_not_equal_9217) {
-  char *example = "( 1870268756238552311499414405 != 1921175244821183350757522585 ) = True";
+  char *example =
+      "( 1870268756238552311499414405 != 1921175244821183350757522585 ) = True";
   s21_decimal value_1 = {{0xAC155B85, 0x6EA9E78D, 0x60B0CD0, 0x0}};
   s21_decimal value_2 = {{0xF90DFC99, 0xB5411E8B, 0x63528AE, 0x0}};
   int code = 1;
@@ -92194,7 +94030,8 @@ START_TEST(s21_is_not_equal_9217) {
 }
 
 START_TEST(s21_is_not_equal_9218) {
-  char *example = "( 0.21097725337114792216800462 != -4.0823205818068719290321243 ) = True";
+  char *example =
+      "( 0.21097725337114792216800462 != -4.0823205818068719290321243 ) = True";
   s21_decimal value_1 = {{0xAC70ACCE, 0xFB74BE5E, 0x11739D, 0x1A0000}};
   s21_decimal value_2 = {{0x5E9C895B, 0x6BFA5747, 0x21C4A6, 0x80190000}};
   int code = 1;
@@ -92234,7 +94071,8 @@ START_TEST(s21_is_not_equal_9221) {
 }
 
 START_TEST(s21_is_not_equal_9222) {
-  char *example = "( 1134531948135527979504233988 != 140572199462460568821468 ) = True";
+  char *example =
+      "( 1134531948135527979504233988 != 140572199462460568821468 ) = True";
   s21_decimal value_1 = {{0x85A9EE04, 0x2569454E, 0x3AA767C, 0x0}};
   s21_decimal value_2 = {{0xD72ADEDC, 0x6F27E3AC, 0x1DC4, 0x0}};
   int code = 1;
@@ -92364,7 +94202,8 @@ START_TEST(s21_is_not_equal_9234) {
 }
 
 START_TEST(s21_is_not_equal_9235) {
-  char *example = "( -190863.35215032551189476626 != 1087632022141635536848767363 ) = True";
+  char *example =
+      "( -190863.35215032551189476626 != 1087632022141635536848767363 ) = True";
   s21_decimal value_1 = {{0x15677512, 0x4E249E2B, 0xFC9B0, 0x80140000}};
   s21_decimal value_2 = {{0xD2094983, 0x104409B1, 0x383AB0A, 0x0}};
   int code = 1;
@@ -92434,7 +94273,8 @@ START_TEST(s21_is_not_equal_9241) {
 }
 
 START_TEST(s21_is_not_equal_9242) {
-  char *example = "( 104360466625674094 != 107896409071112374421462391 ) = True";
+  char *example =
+      "( 104360466625674094 != 107896409071112374421462391 ) = True";
   s21_decimal value_1 = {{0x9DD13B6E, 0x172C34A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD24A9D77, 0xE506537, 0x593FF4, 0x0}};
   int code = 1;
@@ -92444,7 +94284,8 @@ START_TEST(s21_is_not_equal_9242) {
 }
 
 START_TEST(s21_is_not_equal_9243) {
-  char *example = "( 1556285202916512326753506749 != 0.72402778887684638296997137 ) = True";
+  char *example =
+      "( 1556285202916512326753506749 != 0.72402778887684638296997137 ) = True";
   s21_decimal value_1 = {{0x7570D5BD, 0xE6844E7C, 0x5075435, 0x0}};
   s21_decimal value_2 = {{0x476B7D11, 0x82197201, 0x3BE3E2, 0x1A0000}};
   int code = 1;
@@ -92514,7 +94355,8 @@ START_TEST(s21_is_not_equal_9249) {
 }
 
 START_TEST(s21_is_not_equal_9250) {
-  char *example = "( 1697592035797940100448826206 != -6.9326052290300537105211459 ) = True";
+  char *example =
+      "( 1697592035797940100448826206 != -6.9326052290300537105211459 ) = True";
   s21_decimal value_1 = {{0x24F6B35E, 0xA90A21A6, 0x57C3718, 0x0}};
   s21_decimal value_2 = {{0xCD52E043, 0xD33CFD50, 0x39585C, 0x80190000}};
   int code = 1;
@@ -92544,7 +94386,8 @@ START_TEST(s21_is_not_equal_9252) {
 }
 
 START_TEST(s21_is_not_equal_9253) {
-  char *example = "( 0.88245873869890855439407747 != 14599203676674856703951415 ) = True";
+  char *example =
+      "( 0.88245873869890855439407747 != 14599203676674856703951415 ) = True";
   s21_decimal value_1 = {{0x2F79A83, 0x687B43D3, 0x48FECA, 0x1A0000}};
   s21_decimal value_2 = {{0xE0F30237, 0x6AC9B7A2, 0xC1380, 0x0}};
   int code = 1;
@@ -92604,7 +94447,8 @@ START_TEST(s21_is_not_equal_9258) {
 }
 
 START_TEST(s21_is_not_equal_9259) {
-  char *example = "( 1504476585090321619247009781 != -85.632529458299002128 ) = True";
+  char *example =
+      "( 1504476585090321619247009781 != -85.632529458299002128 ) = True";
   s21_decimal value_1 = {{0x13C58FF5, 0x19B5738E, 0x4DC794F, 0x0}};
   s21_decimal value_2 = {{0x7C15DD10, 0xA463DBD7, 0x4, 0x80120000}};
   int code = 1;
@@ -92614,7 +94458,8 @@ START_TEST(s21_is_not_equal_9259) {
 }
 
 START_TEST(s21_is_not_equal_9260) {
-  char *example = "( 19944502237147830231 != 1735961666012412257379429842 ) = True";
+  char *example =
+      "( 19944502237147830231 != 1735961666012412257379429842 ) = True";
   s21_decimal value_1 = {{0x3B2E17D7, 0x14C91B1D, 0x1, 0x0}};
   s21_decimal value_2 = {{0x37BE2DD2, 0x7B6B9A8A, 0x59BF42E, 0x0}};
   int code = 1;
@@ -92634,7 +94479,8 @@ START_TEST(s21_is_not_equal_9261) {
 }
 
 START_TEST(s21_is_not_equal_9262) {
-  char *example = "( 1545296088470036698540410493 != -4.3157267514861325922797263 ) = True";
+  char *example =
+      "( 1545296088470036698540410493 != -4.3157267514861325922797263 ) = True";
   s21_decimal value_1 = {{0xAC46067D, 0xD008688E, 0x4FE3D2C, 0x0}};
   s21_decimal value_2 = {{0x10A306CF, 0x28EFB349, 0x23B2E8, 0x80190000}};
   int code = 1;
@@ -92674,7 +94520,8 @@ START_TEST(s21_is_not_equal_9265) {
 }
 
 START_TEST(s21_is_not_equal_9266) {
-  char *example = "( -747.36242998370666214460175 != 1360616785474197258230248479 ) = True";
+  char *example =
+      "( -747.36242998370666214460175 != 1360616785474197258230248479 ) = True";
   s21_decimal value_1 = {{0xA46A0B0F, 0xD9E27839, 0x3DD203, 0x80170000}};
   s21_decimal value_2 = {{0x24EB341F, 0xBC8FBF50, 0x46579CF, 0x0}};
   int code = 1;
@@ -92704,7 +94551,8 @@ START_TEST(s21_is_not_equal_9268) {
 }
 
 START_TEST(s21_is_not_equal_9269) {
-  char *example = "( 1384219818927191828281680951 != 1100067418507971570118647754 ) = True";
+  char *example =
+      "( 1384219818927191828281680951 != 1100067418507971570118647754 ) = True";
   s21_decimal value_1 = {{0xE3C7E437, 0xBE71630E, 0x478FFF2, 0x0}};
   s21_decimal value_2 = {{0x2135FCA, 0x405806A4, 0x38DF456, 0x0}};
   int code = 1;
@@ -92814,7 +94662,8 @@ START_TEST(s21_is_not_equal_9279) {
 }
 
 START_TEST(s21_is_not_equal_9280) {
-  char *example = "( -592267105.6452331638046428 != 117068914287493057 ) = True";
+  char *example =
+      "( -592267105.6452331638046428 != 117068914287493057 ) = True";
   s21_decimal value_1 = {{0x66633EDC, 0xA42D4B44, 0x4E62C, 0x80100000}};
   s21_decimal value_2 = {{0xAA58BFC1, 0x19FE98E, 0x0, 0x0}};
   int code = 1;
@@ -92834,7 +94683,8 @@ START_TEST(s21_is_not_equal_9281) {
 }
 
 START_TEST(s21_is_not_equal_9282) {
-  char *example = "( 1599765747471825626 != 121362956504154219224373848 ) = True";
+  char *example =
+      "( 1599765747471825626 != 121362956504154219224373848 ) = True";
   s21_decimal value_1 = {{0xADE53ADA, 0x16338278, 0x0, 0x0}};
   s21_decimal value_2 = {{0x5D921A58, 0xE17FA9A, 0x64639B, 0x0}};
   int code = 1;
@@ -92884,7 +94734,8 @@ START_TEST(s21_is_not_equal_9286) {
 }
 
 START_TEST(s21_is_not_equal_9287) {
-  char *example = "( 1386527743265958521731762313 != 1970333050879849454814884726 ) = True";
+  char *example =
+      "( 1386527743265958521731762313 != 1970333050879849454814884726 ) = True";
   s21_decimal value_1 = {{0x956B4889, 0x92B15C27, 0x47AE8AB, 0x0}};
   s21_decimal value_2 = {{0x1BB7F376, 0xB6D59085, 0x65DD240, 0x0}};
   int code = 1;
@@ -93004,7 +94855,8 @@ START_TEST(s21_is_not_equal_9298) {
 }
 
 START_TEST(s21_is_not_equal_9299) {
-  char *example = "( 1553339780629872438879849986 != -38.752792549996601238994076 ) = True";
+  char *example =
+      "( 1553339780629872438879849986 != -38.752792549996601238994076 ) = True";
   s21_decimal value_1 = {{0xE0CE0E02, 0x3D04B79A, 0x504E47E, 0x0}};
   s21_decimal value_2 = {{0x65E5BC9C, 0x17F81750, 0x200E39, 0x80180000}};
   int code = 1;
@@ -93054,7 +94906,8 @@ START_TEST(s21_is_not_equal_9303) {
 }
 
 START_TEST(s21_is_not_equal_9304) {
-  char *example = "( -1.7829533279414866499152669 != 120494424642707414985403 ) = True";
+  char *example =
+      "( -1.7829533279414866499152669 != 120494424642707414985403 ) = True";
   s21_decimal value_1 = {{0x56F92B1D, 0xEF9067EC, 0xEBF8C, 0x80190000}};
   s21_decimal value_2 = {{0x41E62ABB, 0x40EA5B8, 0x1984, 0x0}};
   int code = 1;
@@ -93064,7 +94917,8 @@ START_TEST(s21_is_not_equal_9304) {
 }
 
 START_TEST(s21_is_not_equal_9305) {
-  char *example = "( -911.60772646444918610328088 != 7.6295707355454854E-10 ) = True";
+  char *example =
+      "( -911.60772646444918610328088 != 7.6295707355454854E-10 ) = True";
   s21_decimal value_1 = {{0xA52FFA18, 0x632F0C22, 0x4B680B, 0x80170000}};
   s21_decimal value_2 = {{0xA6CF1D86, 0x10F0E8A, 0x0, 0x1A0000}};
   int code = 1;
@@ -93114,7 +94968,8 @@ START_TEST(s21_is_not_equal_9309) {
 }
 
 START_TEST(s21_is_not_equal_9310) {
-  char *example = "( 1827036009286546607104034533 != -756.114729342383 ) = True";
+  char *example =
+      "( 1827036009286546607104034533 != -756.114729342383 ) = True";
   s21_decimal value_1 = {{0x2C0B86E5, 0x861D64A7, 0x5E749EC, 0x0}};
   s21_decimal value_2 = {{0xADDA15AF, 0x2AFAE, 0x0, 0x800C0000}};
   int code = 1;
@@ -93204,7 +95059,8 @@ START_TEST(s21_is_not_equal_9318) {
 }
 
 START_TEST(s21_is_not_equal_9319) {
-  char *example = "( 1163053523525764827316017578 != -1.8853928510462583080695005 ) = True";
+  char *example =
+      "( 1163053523525764827316017578 != -1.8853928510462583080695005 ) = True";
   s21_decimal value_1 = {{0xA2FCD9AA, 0xD89F1ADB, 0x3C20E29, 0x0}};
   s21_decimal value_2 = {{0xAF4734DD, 0x83363F46, 0xF9879, 0x80190000}};
   int code = 1;
@@ -93224,7 +95080,8 @@ START_TEST(s21_is_not_equal_9320) {
 }
 
 START_TEST(s21_is_not_equal_9321) {
-  char *example = "( 1245111543482683954507575702 != 1231463988361193143158354636 ) = True";
+  char *example =
+      "( 1245111543482683954507575702 != 1231463988361193143158354636 ) = True";
   s21_decimal value_1 = {{0x60B07196, 0x5835603, 0x405EEA0, 0x0}};
   s21_decimal value_2 = {{0xD992B2CC, 0x93710820, 0x3FAA4A4, 0x0}};
   int code = 1;
@@ -93434,7 +95291,8 @@ START_TEST(s21_is_not_equal_9341) {
 }
 
 START_TEST(s21_is_not_equal_9342) {
-  char *example = "( -3.8903168831254820303957398 != -44.129572339669144454626623 ) = True";
+  char *example =
+      "( -3.8903168831254820303957398 != -44.129572339669144454626623 ) = True";
   s21_decimal value_1 = {{0xE00C6D96, 0x2177BFA, 0x202E11, 0x80190000}};
   s21_decimal value_2 = {{0x6670FD3F, 0xE8FAC240, 0x2480CC, 0x80180000}};
   int code = 1;
@@ -93454,7 +95312,8 @@ START_TEST(s21_is_not_equal_9343) {
 }
 
 START_TEST(s21_is_not_equal_9344) {
-  char *example = "( 1355558095794386461031094045 != 1089746330214964596433133 ) = True";
+  char *example =
+      "( 1355558095794386461031094045 != 1089746330214964596433133 ) = True";
   s21_decimal value_1 = {{0x91FF571D, 0x9E997A00, 0x4614A97, 0x0}};
   s21_decimal value_2 = {{0x9051E0ED, 0x4455C700, 0xE6C3, 0x0}};
   int code = 1;
@@ -93524,7 +95383,8 @@ START_TEST(s21_is_not_equal_9350) {
 }
 
 START_TEST(s21_is_not_equal_9351) {
-  char *example = "( 0.48864344261564089630984021 != 1467202066329134335194518615 ) = True";
+  char *example =
+      "( 0.48864344261564089630984021 != 1467202066329134335194518615 ) = True";
   s21_decimal value_1 = {{0xD2D40755, 0x6907ACED, 0x286B6D, 0x1A0000}};
   s21_decimal value_2 = {{0x89AF5457, 0x63B3E01B, 0x4BDA41F, 0x0}};
   int code = 1;
@@ -93574,7 +95434,8 @@ START_TEST(s21_is_not_equal_9355) {
 }
 
 START_TEST(s21_is_not_equal_9356) {
-  char *example = "( 1515855122459127582251214945 != 176158118327441980232 ) = True";
+  char *example =
+      "( 1515855122459127582251214945 != 176158118327441980232 ) = True";
   s21_decimal value_1 = {{0x97B2E861, 0xD8E059DA, 0x4E5E2CE, 0x0}};
   s21_decimal value_2 = {{0x8687B48, 0x8CAF5B4B, 0x9, 0x0}};
   int code = 1;
@@ -93594,7 +95455,8 @@ START_TEST(s21_is_not_equal_9357) {
 }
 
 START_TEST(s21_is_not_equal_9358) {
-  char *example = "( -3.082259935817921430753 != 1633642668027011123026500727 ) = True";
+  char *example =
+      "( -3.082259935817921430753 != 1633642668027011123026500727 ) = True";
   s21_decimal value_1 = {{0x58384E1, 0x16F3091D, 0xA7, 0x80150000}};
   s21_decimal value_2 = {{0x402A9C77, 0x7CABB54A, 0x547514A, 0x0}};
   int code = 1;
@@ -93664,7 +95526,8 @@ START_TEST(s21_is_not_equal_9364) {
 }
 
 START_TEST(s21_is_not_equal_9365) {
-  char *example = "( 3.58258285060984569390393087 != 144104023038635861163 ) = True";
+  char *example =
+      "( 3.58258285060984569390393087 != 144104023038635861163 ) = True";
   s21_decimal value_1 = {{0x68DF66FF, 0x8C77C4DF, 0x1285824, 0x1A0000}};
   s21_decimal value_2 = {{0x3298E4AB, 0xCFD85575, 0x7, 0x0}};
   int code = 1;
@@ -93694,7 +95557,8 @@ START_TEST(s21_is_not_equal_9367) {
 }
 
 START_TEST(s21_is_not_equal_9368) {
-  char *example = "( -979295.804768659167 != 1273203766504452710699871146 ) = True";
+  char *example =
+      "( -979295.804768659167 != 1273203766504452710699871146 ) = True";
   s21_decimal value_1 = {{0x8D4426DF, 0xD972858, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x5257ABAA, 0x7BA8B02D, 0x41D2B62, 0x0}};
   int code = 1;
@@ -93764,7 +95628,8 @@ START_TEST(s21_is_not_equal_9374) {
 }
 
 START_TEST(s21_is_not_equal_9375) {
-  char *example = "( 1141855251712537134784706298 != -97.89437331236399 ) = True";
+  char *example =
+      "( 1141855251712537134784706298 != -97.89437331236399 ) = True";
   s21_decimal value_1 = {{0xF489F6FA, 0x3A8151DD, 0x3B08541, 0x0}};
   s21_decimal value_2 = {{0xFEADE62F, 0x22C770, 0x0, 0x800E0000}};
   int code = 1;
@@ -93774,7 +95639,8 @@ START_TEST(s21_is_not_equal_9375) {
 }
 
 START_TEST(s21_is_not_equal_9376) {
-  char *example = "( -2.9615647510367656134292119 != 1257415187638337774487453153 ) = True";
+  char *example =
+      "( -2.9615647510367656134292119 != 1257415187638337774487453153 ) = True";
   s21_decimal value_1 = {{0xFDD7B297, 0x77F09DFE, 0x187F5B, 0x80190000}};
   s21_decimal value_2 = {{0x9B75BDE1, 0xE85E389D, 0x4101C05, 0x0}};
   int code = 1;
@@ -93854,7 +95720,8 @@ START_TEST(s21_is_not_equal_9383) {
 }
 
 START_TEST(s21_is_not_equal_9384) {
-  char *example = "( 11966839603776198691 != -3.4883331481667233475701859 ) = True";
+  char *example =
+      "( 11966839603776198691 != -3.4883331481667233475701859 ) = True";
   s21_decimal value_1 = {{0x73281823, 0xA612C137, 0x0, 0x0}};
   s21_decimal value_2 = {{0xB16FAC63, 0x30550D23, 0x1CDAD5, 0x80190000}};
   int code = 1;
@@ -93864,7 +95731,8 @@ START_TEST(s21_is_not_equal_9384) {
 }
 
 START_TEST(s21_is_not_equal_9385) {
-  char *example = "( 1295746472231526403420666194 != -5.1267020357170526597780286 ) = True";
+  char *example =
+      "( 1295746472231526403420666194 != -5.1267020357170526597780286 ) = True";
   s21_decimal value_1 = {{0x55A33952, 0x25A6FF2, 0x42FD0FD, 0x0}};
   s21_decimal value_2 = {{0xF1C9933E, 0xBE0E4372, 0x2A6836, 0x80190000}};
   int code = 1;
@@ -93894,7 +95762,8 @@ START_TEST(s21_is_not_equal_9387) {
 }
 
 START_TEST(s21_is_not_equal_9388) {
-  char *example = "( -656.5740710166923245801624 != -84.12920918655174372 ) = True";
+  char *example =
+      "( -656.5740710166923245801624 != -84.12920918655174372 ) = True";
   s21_decimal value_1 = {{0xD17C5098, 0x846077A3, 0x56E59, 0x80160000}};
   s21_decimal value_2 = {{0x7FE506E4, 0x74C0B300, 0x0, 0x80110000}};
   int code = 1;
@@ -93914,7 +95783,9 @@ START_TEST(s21_is_not_equal_9389) {
 }
 
 START_TEST(s21_is_not_equal_9390) {
-  char *example = "( -4465.1772586924454071263693 != 79228162514264337593543950335 ) = True";
+  char *example =
+      "( -4465.1772586924454071263693 != 79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0x15861CD, 0x71344178, 0x24EF61, 0x80160000}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   int code = 1;
@@ -93924,7 +95795,8 @@ START_TEST(s21_is_not_equal_9390) {
 }
 
 START_TEST(s21_is_not_equal_9391) {
-  char *example = "( 1458190774601031029869491831 != 1681840971495030155080512 ) = True";
+  char *example =
+      "( 1458190774601031029869491831 != 1681840971495030155080512 ) = True";
   s21_decimal value_1 = {{0xCF73B677, 0x4939C7EF, 0x4B62FE8, 0x0}};
   s21_decimal value_2 = {{0x46337340, 0xC820FF5D, 0x16424, 0x0}};
   int code = 1;
@@ -93984,7 +95856,8 @@ START_TEST(s21_is_not_equal_9396) {
 }
 
 START_TEST(s21_is_not_equal_9397) {
-  char *example = "( -98872154596271.0216 != -8400.3320672630190389511 ) = True";
+  char *example =
+      "( -98872154596271.0216 != -8400.3320672630190389511 ) = True";
   s21_decimal value_1 = {{0xF0E1E4C8, 0xDB8A501, 0x0, 0x80040000}};
   s21_decimal value_2 = {{0xE65C3907, 0xD4426B16, 0x11C9, 0x80130000}};
   int code = 1;
@@ -93994,7 +95867,8 @@ START_TEST(s21_is_not_equal_9397) {
 }
 
 START_TEST(s21_is_not_equal_9398) {
-  char *example = "( 1213643265748327130948885596 != 1689961891481195778838110287 ) = True";
+  char *example =
+      "( 1213643265748327130948885596 != 1689961891481195778838110287 ) = True";
   s21_decimal value_1 = {{0xDF62DC5C, 0x44703179, 0x3EBE6F5, 0x0}};
   s21_decimal value_2 = {{0x71BC204F, 0xB544CFDE, 0x575E759, 0x0}};
   int code = 1;
@@ -94014,7 +95888,8 @@ START_TEST(s21_is_not_equal_9399) {
 }
 
 START_TEST(s21_is_not_equal_9400) {
-  char *example = "( 1388430524395781585405304593 != 1931235186623229968221355 ) = True";
+  char *example =
+      "( 1388430524395781585405304593 != 1931235186623229968221355 ) = True";
   s21_decimal value_1 = {{0xC4295F11, 0x8B750BBC, 0x47C7B99, 0x0}};
   s21_decimal value_2 = {{0xAAC384AB, 0x78207F47, 0x198F4, 0x0}};
   int code = 1;
@@ -94034,7 +95909,8 @@ START_TEST(s21_is_not_equal_9401) {
 }
 
 START_TEST(s21_is_not_equal_9402) {
-  char *example = "( 1821529211247499502903464743 != 168726770892380122856742 ) = True";
+  char *example =
+      "( 1821529211247499502903464743 != 168726770892380122856742 ) = True";
   s21_decimal value_1 = {{0xCDB19327, 0x676DADC2, 0x5E2BBD0, 0x0}};
   s21_decimal value_2 = {{0xDBDF3D26, 0xB252EDDF, 0x23BA, 0x0}};
   int code = 1;
@@ -94054,7 +95930,8 @@ START_TEST(s21_is_not_equal_9403) {
 }
 
 START_TEST(s21_is_not_equal_9404) {
-  char *example = "( -6044.9148479180289371154424 != -391.6387489902277380366404 ) = True";
+  char *example =
+      "( -6044.9148479180289371154424 != -391.6387489902277380366404 ) = True";
   s21_decimal value_1 = {{0x2BC627F8, 0xE7C1D389, 0x32009A, 0x80160000}};
   s21_decimal value_2 = {{0x15956044, 0xCA8EDBE6, 0x33D53, 0x80160000}};
   int code = 1;
@@ -94104,7 +95981,8 @@ START_TEST(s21_is_not_equal_9408) {
 }
 
 START_TEST(s21_is_not_equal_9409) {
-  char *example = "( 1242224105720395682744069100 != 13974970311824875738687794 ) = True";
+  char *example =
+      "( 1242224105720395682744069100 != 13974970311824875738687794 ) = True";
   s21_decimal value_1 = {{0xDB36BEC, 0xB4F091C0, 0x4038B2F, 0x0}};
   s21_decimal value_2 = {{0xF930E932, 0xA89BA6B0, 0xB8F50, 0x0}};
   int code = 1;
@@ -94144,7 +96022,8 @@ START_TEST(s21_is_not_equal_9412) {
 }
 
 START_TEST(s21_is_not_equal_9413) {
-  char *example = "( -1.15355175584105 != 1107520455498515465817930066 ) = True";
+  char *example =
+      "( -1.15355175584105 != 1107520455498515465817930066 ) = True";
   s21_decimal value_1 = {{0x38438169, 0x68EA, 0x0, 0x800E0000}};
   s21_decimal value_2 = {{0xB1D9B952, 0x3238EFF6, 0x3941E94, 0x0}};
   int code = 1;
@@ -94214,7 +96093,8 @@ START_TEST(s21_is_not_equal_9419) {
 }
 
 START_TEST(s21_is_not_equal_9420) {
-  char *example = "( 1950582958511066741688459463 != 1632632130331979488051267923 ) = True";
+  char *example =
+      "( 1950582958511066741688459463 != 1632632130331979488051267923 ) = True";
   s21_decimal value_1 = {{0x50D360C7, 0xFC16AB3, 0x64D7C02, 0x0}};
   s21_decimal value_2 = {{0xDDCB0953, 0x20F7A030, 0x5467B4D, 0x0}};
   int code = 1;
@@ -94264,7 +96144,8 @@ START_TEST(s21_is_not_equal_9424) {
 }
 
 START_TEST(s21_is_not_equal_9425) {
-  char *example = "( 1655194440404427618792648890 != 14410346993885825862563036 ) = True";
+  char *example =
+      "( 1655194440404427618792648890 != 14410346993885825862563036 ) = True";
   s21_decimal value_1 = {{0xB9E30BA, 0x689B59BD, 0x559250E, 0x0}};
   s21_decimal value_2 = {{0x253D74DC, 0x79D1709A, 0xBEB82, 0x0}};
   int code = 1;
@@ -94404,7 +96285,8 @@ START_TEST(s21_is_not_equal_9438) {
 }
 
 START_TEST(s21_is_not_equal_9439) {
-  char *example = "( 100199637250943774 != 174315039947737297892363712 ) = True";
+  char *example =
+      "( 100199637250943774 != 174315039947737297892363712 ) = True";
   s21_decimal value_1 = {{0x8F72B1E, 0x163FB0A, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF25F4DC0, 0x401AFB67, 0x9030A5, 0x0}};
   int code = 1;
@@ -94434,7 +96316,8 @@ START_TEST(s21_is_not_equal_9441) {
 }
 
 START_TEST(s21_is_not_equal_9442) {
-  char *example = "( -3952.2071667604258517299716 != 172978702511576675806 ) = True";
+  char *example =
+      "( -3952.2071667604258517299716 != 172978702511576675806 ) = True";
   s21_decimal value_1 = {{0x1D723204, 0xCC540808, 0x20B11F, 0x80160000}};
   s21_decimal value_2 = {{0x2E7F75DE, 0x608FCD74, 0x9, 0x0}};
   int code = 1;
@@ -94444,7 +96327,8 @@ START_TEST(s21_is_not_equal_9442) {
 }
 
 START_TEST(s21_is_not_equal_9443) {
-  char *example = "( 1324186993920987949839 != 1172866637649752901824503930 ) = True";
+  char *example =
+      "( 1324186993920987949839 != 1172866637649752901824503930 ) = True";
   s21_decimal value_1 = {{0xB4D4EB0F, 0xC8C93F20, 0x47, 0x0}};
   s21_decimal value_2 = {{0xA1B607A, 0xD42B071A, 0x3CA2C2B, 0x0}};
   int code = 1;
@@ -94554,7 +96438,8 @@ START_TEST(s21_is_not_equal_9453) {
 }
 
 START_TEST(s21_is_not_equal_9454) {
-  char *example = "( -70.441081697480790524849951 != -72.587182479046649649933241 ) = True";
+  char *example =
+      "( -70.441081697480790524849951 != -72.587182479046649649933241 ) = True";
   s21_decimal value_1 = {{0xE3286F1F, 0xB0C024C3, 0x3A447A, 0x80180000}};
   s21_decimal value_2 = {{0x8931ABB9, 0xC02E5A7, 0x3C0AEF, 0x80180000}};
   int code = 1;
@@ -94594,7 +96479,8 @@ START_TEST(s21_is_not_equal_9457) {
 }
 
 START_TEST(s21_is_not_equal_9458) {
-  char *example = "( -4.7096308096167673076333545 != 11065359269675580128 ) = True";
+  char *example =
+      "( -4.7096308096167673076333545 != 11065359269675580128 ) = True";
   s21_decimal value_1 = {{0xA7E73BE9, 0xFA4A41F6, 0x26F507, 0x80190000}};
   s21_decimal value_2 = {{0x516BAE0, 0x99900DA1, 0x0, 0x0}};
   int code = 1;
@@ -94624,7 +96510,8 @@ START_TEST(s21_is_not_equal_9460) {
 }
 
 START_TEST(s21_is_not_equal_9461) {
-  char *example = "( -3145.991598080145442308 != -1.3572269666303099099579730 ) = True";
+  char *example =
+      "( -3145.991598080145442308 != -1.3572269666303099099579730 ) = True";
   s21_decimal value_1 = {{0xAA8B4604, 0x8B676246, 0xAA, 0x80120000}};
   s21_decimal value_2 = {{0x17B70D55, 0x6BD9959C, 0x11F67, 0x80180000}};
   int code = 1;
@@ -94644,7 +96531,8 @@ START_TEST(s21_is_not_equal_9462) {
 }
 
 START_TEST(s21_is_not_equal_9463) {
-  char *example = "( 175830457648372333834043230 != 1015841332248074386399411738 ) = True";
+  char *example =
+      "( 175830457648372333834043230 != 1015841332248074386399411738 ) = True";
   s21_decimal value_1 = {{0x7BA27F5E, 0x35651FE2, 0x91718C, 0x0}};
   s21_decimal value_2 = {{0xD785BE1A, 0xF758A885, 0x34848C4, 0x0}};
   int code = 1;
@@ -94654,7 +96542,8 @@ START_TEST(s21_is_not_equal_9463) {
 }
 
 START_TEST(s21_is_not_equal_9464) {
-  char *example = "( -4.2922778956827207868858857 != 1886496577848492674768851726 ) = True";
+  char *example =
+      "( -4.2922778956827207868858857 != 1886496577848492674768851726 ) = True";
   s21_decimal value_1 = {{0x989BC1E9, 0x827C0CE1, 0x238140, 0x80190000}};
   s21_decimal value_2 = {{0x5682530E, 0x678CAC8B, 0x6187930, 0x0}};
   int code = 1;
@@ -94724,7 +96613,8 @@ START_TEST(s21_is_not_equal_9470) {
 }
 
 START_TEST(s21_is_not_equal_9471) {
-  char *example = "( 1220466578877556732273334975 != 1734236963313208878439453 ) = True";
+  char *example =
+      "( 1220466578877556732273334975 != 1734236963313208878439453 ) = True";
   s21_decimal value_1 = {{0x446F9ABF, 0xD0312575, 0x3F18BD9, 0x0}};
   s21_decimal value_2 = {{0xB6941C1D, 0x2C95D822, 0x16F3D, 0x0}};
   int code = 1;
@@ -94734,7 +96624,8 @@ START_TEST(s21_is_not_equal_9471) {
 }
 
 START_TEST(s21_is_not_equal_9472) {
-  char *example = "( -35976.711542586256 != 15465734321035187149172626 ) = True";
+  char *example =
+      "( -35976.711542586256 != 15465734321035187149172626 ) = True";
   s21_decimal value_1 = {{0xE7AEBB90, 0x7FD0A0, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0x2C56F92, 0x2333093D, 0xCCAFF, 0x0}};
   int code = 1;
@@ -94854,7 +96745,8 @@ START_TEST(s21_is_not_equal_9483) {
 }
 
 START_TEST(s21_is_not_equal_9484) {
-  char *example = "( -9.98367309368984947068 != 1706147851635926435400799751 ) = True";
+  char *example =
+      "( -9.98367309368984947068 != 1706147851635926435400799751 ) = True";
   s21_decimal value_1 = {{0x5CDD497C, 0x1F21324B, 0x36, 0x80140000}};
   s21_decimal value_2 = {{0x76A45607, 0x5DC30B20, 0x5834ADC, 0x0}};
   int code = 1;
@@ -95054,7 +96946,8 @@ START_TEST(s21_is_not_equal_9503) {
 }
 
 START_TEST(s21_is_not_equal_9504) {
-  char *example = "( -6.6487688794808138431685028 != 1814585438708056948453135563 ) = True";
+  char *example =
+      "( -6.6487688794808138431685028 != 1814585438708056948453135563 ) = True";
   s21_decimal value_1 = {{0x54EF61A4, 0xD4ED254A, 0x36FF50, 0x80190000}};
   s21_decimal value_2 = {{0x403D4CB, 0xBD8A5268, 0x5DCFD69, 0x0}};
   int code = 1;
@@ -95064,7 +96957,8 @@ START_TEST(s21_is_not_equal_9504) {
 }
 
 START_TEST(s21_is_not_equal_9505) {
-  char *example = "( 1864609976928600738474492446 != -98058.559163454386005267090 ) = True";
+  char *example =
+      "( 1864609976928600738474492446 != -98058.559163454386005267090 ) = True";
   s21_decimal value_1 = {{0xB2D0021E, 0x64262054, 0x6065E85, 0x0}};
   s21_decimal value_2 = {{0xC717B75, 0x83AE58E6, 0x81C78, 0x80140000}};
   int code = 1;
@@ -95084,7 +96978,8 @@ START_TEST(s21_is_not_equal_9506) {
 }
 
 START_TEST(s21_is_not_equal_9507) {
-  char *example = "( -54239.924097603338701441851 != 1484168265938575548053736692 ) = True";
+  char *example =
+      "( -54239.924097603338701441851 != 1484168265938575548053736692 ) = True";
   s21_decimal value_1 = {{0x26810B3B, 0x2D56A803, 0x2CDDC0, 0x80150000}};
   s21_decimal value_2 = {{0xA4204CF4, 0xE9C998D0, 0x4CBACDA, 0x0}};
   int code = 1;
@@ -95124,7 +97019,8 @@ START_TEST(s21_is_not_equal_9510) {
 }
 
 START_TEST(s21_is_not_equal_9511) {
-  char *example = "( -55.345819182667991928166320 != 1173736569584101886892154766 ) = True";
+  char *example =
+      "( -55.345819182667991928166320 != 1173736569584101886892154766 ) = True";
   s21_decimal value_1 = {{0x53A03BF8, 0x497777E7, 0x493FE, 0x80170000}};
   s21_decimal value_2 = {{0x171B9F8E, 0xEEF5D094, 0x3CAE462, 0x0}};
   int code = 1;
@@ -95344,7 +97240,8 @@ START_TEST(s21_is_not_equal_9532) {
 }
 
 START_TEST(s21_is_not_equal_9533) {
-  char *example = "( 1900917134517445371450597 != -726.42408638470447838466519 ) = True";
+  char *example =
+      "( 1900917134517445371450597 != -726.42408638470447838466519 ) = True";
   s21_decimal value_1 = {{0x482954E5, 0xECA210FE, 0x19288, 0x0}};
   s21_decimal value_2 = {{0xAF9F11D7, 0xDCEEE8DD, 0x3C16A0, 0x80170000}};
   int code = 1;
@@ -95394,7 +97291,8 @@ START_TEST(s21_is_not_equal_9537) {
 }
 
 START_TEST(s21_is_not_equal_9538) {
-  char *example = "( -5.296099321068630314 != 17679192663865619780626689 ) = True";
+  char *example =
+      "( -5.296099321068630314 != 17679192663865619780626689 ) = True";
   s21_decimal value_1 = {{0xC77BB12A, 0x497F8645, 0x0, 0x80120000}};
   s21_decimal value_2 = {{0x43FE6901, 0xF467109A, 0xE9FB6, 0x0}};
   int code = 1;
@@ -95414,7 +97312,8 @@ START_TEST(s21_is_not_equal_9539) {
 }
 
 START_TEST(s21_is_not_equal_9540) {
-  char *example = "( -9.79381995603816628413 != 116589912527904848870384954 ) = True";
+  char *example =
+      "( -9.79381995603816628413 != 116589912527904848870384954 ) = True";
   s21_decimal value_1 = {{0x72AC40BD, 0x17A7D003, 0x35, 0x80140000}};
   s21_decimal value_2 = {{0x3E80253A, 0xD2980A9C, 0x6070DF, 0x0}};
   int code = 1;
@@ -95444,7 +97343,8 @@ START_TEST(s21_is_not_equal_9542) {
 }
 
 START_TEST(s21_is_not_equal_9543) {
-  char *example = "( 19473234171285482254 != 1330508767712813521709657572 ) = True";
+  char *example =
+      "( 19473234171285482254 != 1330508767712813521709657572 ) = True";
   s21_decimal value_1 = {{0x1F782B0E, 0xE3ED34E, 0x1, 0x0}};
   s21_decimal value_2 = {{0xCCB56DE4, 0xD2C14F95, 0x44C9230, 0x0}};
   int code = 1;
@@ -95454,7 +97354,8 @@ START_TEST(s21_is_not_equal_9543) {
 }
 
 START_TEST(s21_is_not_equal_9544) {
-  char *example = "( 101842830267449215722867665 != -30768.600714768934478006182 ) = True";
+  char *example =
+      "( 101842830267449215722867665 != -30768.600714768934478006182 ) = True";
   s21_decimal value_1 = {{0x80164BD1, 0xE432ECAC, 0x543E0E, 0x0}};
   s21_decimal value_2 = {{0x246BC7A6, 0x2FDCE914, 0x197381, 0x80150000}};
   int code = 1;
@@ -95464,7 +97365,8 @@ START_TEST(s21_is_not_equal_9544) {
 }
 
 START_TEST(s21_is_not_equal_9545) {
-  char *example = "( 1749405490108604741 != -70.015361309011411479794369 ) = True";
+  char *example =
+      "( 1749405490108604741 != -70.015361309011411479794369 ) = True";
   s21_decimal value_1 = {{0x460AA145, 0x18472306, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF22F92C1, 0x5788AF26, 0x39EA54, 0x80180000}};
   int code = 1;
@@ -95584,7 +97486,8 @@ START_TEST(s21_is_not_equal_9556) {
 }
 
 START_TEST(s21_is_not_equal_9557) {
-  char *example = "( 0.60470172773576823635490490 != -6.4027242182404191583532086 ) = True";
+  char *example =
+      "( 0.60470172773576823635490490 != -6.4027242182404191583532086 ) = True";
   s21_decimal value_1 = {{0x78054579, 0x76A5362B, 0x50081, 0x190000}};
   s21_decimal value_2 = {{0x4C48F436, 0xC0ED4CC0, 0x34F64B, 0x80190000}};
   int code = 1;
@@ -95624,7 +97527,8 @@ START_TEST(s21_is_not_equal_9560) {
 }
 
 START_TEST(s21_is_not_equal_9561) {
-  char *example = "( 0.99207776009773922641137530 != 0.538188959027827222030 ) = True";
+  char *example =
+      "( 0.99207776009773922641137530 != 0.538188959027827222030 ) = True";
   s21_decimal value_1 = {{0xD6756E59, 0x6E6F547A, 0x834CE, 0x190000}};
   s21_decimal value_2 = {{0xC917109B, 0xEAE320AD, 0x2, 0x140000}};
   int code = 1;
@@ -95654,7 +97558,8 @@ START_TEST(s21_is_not_equal_9563) {
 }
 
 START_TEST(s21_is_not_equal_9564) {
-  char *example = "( 143477223284864111 != -38407220.141963680626454397 ) = True";
+  char *example =
+      "( 143477223284864111 != -38407220.141963680626454397 ) = True";
   s21_decimal value_1 = {{0x3F40F46F, 0x1FDBBC6, 0x0, 0x0}};
   s21_decimal value_2 = {{0xD30F2F7D, 0x936B0E75, 0x1FC50B, 0x80120000}};
   int code = 1;
@@ -95694,7 +97599,8 @@ START_TEST(s21_is_not_equal_9567) {
 }
 
 START_TEST(s21_is_not_equal_9568) {
-  char *example = "( 1585820790872094920822033380 != 0.36381132710352507184377722 ) = True";
+  char *example =
+      "( 1585820790872094920822033380 != 0.36381132710352507184377722 ) = True";
   s21_decimal value_1 = {{0x361D0BE4, 0x54F1852B, 0x51FC29D, 0x0}};
   s21_decimal value_2 = {{0xBFB86F7A, 0x27F65360, 0x1E1801, 0x1A0000}};
   int code = 1;
@@ -95704,7 +97610,8 @@ START_TEST(s21_is_not_equal_9568) {
 }
 
 START_TEST(s21_is_not_equal_9569) {
-  char *example = "( 1522543911490432056269 != 1589417438615387982021333265 ) = True";
+  char *example =
+      "( 1522543911490432056269 != 1589417438615387982021333265 ) = True";
   s21_decimal value_1 = {{0x98FCBBCD, 0x898A94B7, 0x52, 0x0}};
   s21_decimal value_2 = {{0x50251111, 0xFF24F1C4, 0x522BC3B, 0x0}};
   int code = 1;
@@ -95734,7 +97641,8 @@ START_TEST(s21_is_not_equal_9571) {
 }
 
 START_TEST(s21_is_not_equal_9572) {
-  char *example = "( -8.914211531992714101063 != 1451869898823492990643393336 ) = True";
+  char *example =
+      "( -8.914211531992714101063 != 1451869898823492990643393336 ) = True";
   s21_decimal value_1 = {{0x9C62C147, 0x3D893ED4, 0x1E3, 0x80150000}};
   s21_decimal value_2 = {{0x7B3AD338, 0xEC6CEC40, 0x4B0F568, 0x0}};
   int code = 1;
@@ -95754,7 +97662,8 @@ START_TEST(s21_is_not_equal_9573) {
 }
 
 START_TEST(s21_is_not_equal_9574) {
-  char *example = "( 0.02655654081037021808545206 != 1178726723571493766472760933 ) = True";
+  char *example =
+      "( 0.02655654081037021808545206 != 1178726723571493766472760933 ) = True";
   s21_decimal value_1 = {{0x7165CDB6, 0x4BD3DCD3, 0x2325B, 0x1A0000}};
   s21_decimal value_2 = {{0x71217E65, 0xB920248B, 0x3CF0517, 0x0}};
   int code = 1;
@@ -95774,7 +97683,8 @@ START_TEST(s21_is_not_equal_9575) {
 }
 
 START_TEST(s21_is_not_equal_9576) {
-  char *example = "( -391.90381340986778489825891 != 4.7635234101133492E-10 ) = True";
+  char *example =
+      "( -391.90381340986778489825891 != 4.7635234101133492E-10 ) = True";
   s21_decimal value_1 = {{0xFE91AA63, 0xD45B8819, 0x206AE2, 0x80170000}};
   s21_decimal value_2 = {{0x376400B4, 0xA93BFE, 0x0, 0x1A0000}};
   int code = 1;
@@ -95804,7 +97714,8 @@ START_TEST(s21_is_not_equal_9578) {
 }
 
 START_TEST(s21_is_not_equal_9579) {
-  char *example = "( -645.57558738221965451421503 != 5.3916288771509050E-10 ) = True";
+  char *example =
+      "( -645.57558738221965451421503 != 5.3916288771509050E-10 ) = True";
   s21_decimal value_1 = {{0xDE37673F, 0x458F3F7B, 0x356698, 0x80170000}};
   s21_decimal value_2 = {{0x6BFBBAB9, 0x1327A8, 0x0, 0x190000}};
   int code = 1;
@@ -95814,7 +97725,8 @@ START_TEST(s21_is_not_equal_9579) {
 }
 
 START_TEST(s21_is_not_equal_9580) {
-  char *example = "( -18603.414796503396382799211 != -8.2176218425673447341517151 ) = True";
+  char *example =
+      "( -18603.414796503396382799211 != -8.2176218425673447341517151 ) = True";
   s21_decimal value_1 = {{0xDC61F56B, 0x230BEFEF, 0xF636D, 0x80150000}};
   s21_decimal value_2 = {{0xE643695F, 0xBA28FCE1, 0x43F97D, 0x80190000}};
   int code = 1;
@@ -95884,7 +97796,8 @@ START_TEST(s21_is_not_equal_9586) {
 }
 
 START_TEST(s21_is_not_equal_9587) {
-  char *example = "( -653758423.08707444278384039 != -88.731328281614906972559690 ) = True";
+  char *example =
+      "( -653758423.08707444278384039 != -88.731328281614906972559690 ) = True";
   s21_decimal value_1 = {{0x800355A7, 0x83513FDC, 0x3613DF, 0x80110000}};
   s21_decimal value_2 = {{0x74DAFC21, 0x7E946C50, 0x756F5, 0x80170000}};
   int code = 1;
@@ -95924,7 +97837,8 @@ START_TEST(s21_is_not_equal_9590) {
 }
 
 START_TEST(s21_is_not_equal_9591) {
-  char *example = "( 1428268587585999135258647603 != -7.9519567004520911784412722 ) = True";
+  char *example =
+      "( 1428268587585999135258647603 != -7.9519567004520911784412722 ) = True";
   s21_decimal value_1 = {{0xCD931C33, 0x4715D9B7, 0x49D6FA3, 0x0}};
   s21_decimal value_2 = {{0x90D48632, 0x5D754121, 0x41C6EC, 0x80190000}};
   int code = 1;
@@ -95974,7 +97888,8 @@ START_TEST(s21_is_not_equal_9595) {
 }
 
 START_TEST(s21_is_not_equal_9596) {
-  char *example = "( 11946068175700974525726 != -6.6688978712657418805757713 ) = True";
+  char *example =
+      "( 11946068175700974525726 != -6.6688978712657418805757713 ) = True";
   s21_decimal value_1 = {{0x774E5D1E, 0x98FFD0D1, 0x287, 0x0}};
   s21_decimal value_2 = {{0xD27EC711, 0xC7B1B184, 0x3729F0, 0x80190000}};
   int code = 1;
@@ -96004,7 +97919,8 @@ START_TEST(s21_is_not_equal_9598) {
 }
 
 START_TEST(s21_is_not_equal_9599) {
-  char *example = "( 0.61223440814245385726604636 != 1255050271452961550802264043 ) = True";
+  char *example =
+      "( 0.61223440814245385726604636 != 1255050271452961550802264043 ) = True";
   s21_decimal value_1 = {{0x3E7C355C, 0x607C00A1, 0x32A491, 0x1A0000}};
   s21_decimal value_2 = {{0x61969FEB, 0x8B5D37E5, 0x40E273B, 0x0}};
   int code = 1;
@@ -96084,7 +98000,8 @@ START_TEST(s21_is_not_equal_9606) {
 }
 
 START_TEST(s21_is_not_equal_9607) {
-  char *example = "( -73.4232788853449 != 1014850121738003481442175026 ) = True";
+  char *example =
+      "( -73.4232788853449 != 1014850121738003481442175026 ) = True";
   s21_decimal value_1 = {{0xE48FE2C9, 0x29BC7, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0x9DE0C832, 0x5636F564, 0x34776DF, 0x0}};
   int code = 1;
@@ -96144,7 +98061,8 @@ START_TEST(s21_is_not_equal_9612) {
 }
 
 START_TEST(s21_is_not_equal_9613) {
-  char *example = "( 12692941800386019604218 != 14955829780450299616085 ) = True";
+  char *example =
+      "( 12692941800386019604218 != 14955829780450299616085 ) = True";
   s21_decimal value_1 = {{0xFBD636FA, 0x15F3F55C, 0x2B0, 0x0}};
   s21_decimal value_2 = {{0xF4781B55, 0xC1D509EF, 0x32A, 0x0}};
   int code = 1;
@@ -96264,7 +98182,8 @@ START_TEST(s21_is_not_equal_9624) {
 }
 
 START_TEST(s21_is_not_equal_9625) {
-  char *example = "( 1874199449251331464455563911 != 136203825070640411951547608 ) = True";
+  char *example =
+      "( 1874199449251331464455563911 != 136203825070640411951547608 ) = True";
   s21_decimal value_1 = {{0xDA84AA87, 0xBA3B920F, 0x60E4D2B, 0x0}};
   s21_decimal value_2 = {{0x174CC4D8, 0x26F16A30, 0x70AA48, 0x0}};
   int code = 1;
@@ -96334,7 +98253,8 @@ START_TEST(s21_is_not_equal_9631) {
 }
 
 START_TEST(s21_is_not_equal_9632) {
-  char *example = "( 1533625566028088832339929810 != 0.55042661893371335 ) = True";
+  char *example =
+      "( 1533625566028088832339929810 != 0.55042661893371335 ) = True";
   s21_decimal value_1 = {{0xA27EEAD2, 0x85FA26EA, 0x4F495D8, 0x0}};
   s21_decimal value_2 = {{0x65A575C7, 0xC38D02, 0x0, 0x110000}};
   int code = 1;
@@ -96344,7 +98264,8 @@ START_TEST(s21_is_not_equal_9632) {
 }
 
 START_TEST(s21_is_not_equal_9633) {
-  char *example = "( 4582.5769075513551114013 != -3.4780296678047124513331734 ) = True";
+  char *example =
+      "( 4582.5769075513551114013 != -3.4780296678047124513331734 ) = True";
   s21_decimal value_1 = {{0x6A0E4F1D, 0x384CA2D9, 0x9B4, 0x130000}};
   s21_decimal value_2 = {{0xAAB79A16, 0xA930D66F, 0x1CC503, 0x80190000}};
   int code = 1;
@@ -96504,7 +98425,8 @@ START_TEST(s21_is_not_equal_9648) {
 }
 
 START_TEST(s21_is_not_equal_9649) {
-  char *example = "( 1125189752788965034 != 181353358657621772643588157 ) = True";
+  char *example =
+      "( 1125189752788965034 != 181353358657621772643588157 ) = True";
   s21_decimal value_1 = {{0x5FE556AA, 0xF9D7A1E, 0x0, 0x0}};
   s21_decimal value_2 = {{0x8073D83D, 0x45AF589B, 0x960311, 0x0}};
   int code = 1;
@@ -96544,7 +98466,8 @@ START_TEST(s21_is_not_equal_9652) {
 }
 
 START_TEST(s21_is_not_equal_9653) {
-  char *example = "( 1802208794728842322269951037 != 1297264402367392231894585980 ) = True";
+  char *example =
+      "( 1802208794728842322269951037 != 1297264402367392231894585980 ) = True";
   s21_decimal value_1 = {{0x5C53D43D, 0x869FB8E4, 0x5D2C08E, 0x0}};
   s21_decimal value_2 = {{0xF458927C, 0x2AAF9760, 0x431126C, 0x0}};
   int code = 1;
@@ -96614,7 +98537,8 @@ START_TEST(s21_is_not_equal_9659) {
 }
 
 START_TEST(s21_is_not_equal_9660) {
-  char *example = "( 1056869034074553568970118975 != 165355745216835343 ) = True";
+  char *example =
+      "( 1056869034074553568970118975 != 165355745216835343 ) = True";
   s21_decimal value_1 = {{0x839B973F, 0x238956D4, 0x36A38B9, 0x0}};
   s21_decimal value_2 = {{0x97382F0F, 0x24B762C, 0x0, 0x0}};
   int code = 1;
@@ -96654,7 +98578,8 @@ START_TEST(s21_is_not_equal_9663) {
 }
 
 START_TEST(s21_is_not_equal_9664) {
-  char *example = "( 1607026054069768053587767242 != 166633346402279104 ) = True";
+  char *example =
+      "( 1607026054069768053587767242 != 166633346402279104 ) = True";
   s21_decimal value_1 = {{0x651CEFCA, 0xF4027558, 0x5314D00, 0x0}};
   s21_decimal value_2 = {{0x4C0ADEC0, 0x2500025, 0x0, 0x0}};
   int code = 1;
@@ -96664,7 +98589,8 @@ START_TEST(s21_is_not_equal_9664) {
 }
 
 START_TEST(s21_is_not_equal_9665) {
-  char *example = "( -9348118659973.194 != 0.75741673633190751366678566 ) = True";
+  char *example =
+      "( -9348118659973.194 != 0.75741673633190751366678566 ) = True";
   s21_decimal value_1 = {{0x7C0BC04A, 0x213610, 0x0, 0x80030000}};
   s21_decimal value_2 = {{0xD04A0826, 0x5AE3E148, 0x3EA6EC, 0x1A0000}};
   int code = 1;
@@ -96674,7 +98600,8 @@ START_TEST(s21_is_not_equal_9665) {
 }
 
 START_TEST(s21_is_not_equal_9666) {
-  char *example = "( 1788986438187285330207844 != 1790777624543465788607919810 ) = True";
+  char *example =
+      "( 1788986438187285330207844 != 1790777624543465788607919810 ) = True";
   s21_decimal value_1 = {{0x4BDB2464, 0x262E22F5, 0x17AD5, 0x0}};
   s21_decimal value_2 = {{0xD2ED76C2, 0x8C657045, 0x5C94BE9, 0x0}};
   int code = 1;
@@ -97084,7 +99011,8 @@ START_TEST(s21_is_not_equal_9706) {
 }
 
 START_TEST(s21_is_not_equal_9707) {
-  char *example = "( 1045833367033706409563861748 != 1478816171060671214193936640 ) = True";
+  char *example =
+      "( 1045833367033706409563861748 != 1478816171060671214193936640 ) = True";
   s21_decimal value_1 = {{0x9CB132F4, 0x6E06A235, 0x36117D4, 0x0}};
   s21_decimal value_2 = {{0xCDEB0900, 0x44BEA0CB, 0x4C73F81, 0x0}};
   int code = 1;
@@ -97124,7 +99052,8 @@ START_TEST(s21_is_not_equal_9710) {
 }
 
 START_TEST(s21_is_not_equal_9711) {
-  char *example = "( 1441466849816723314326853374 != -59.758843496560164308325032 ) = True";
+  char *example =
+      "( 1441466849816723314326853374 != -59.758843496560164308325032 ) = True";
   s21_decimal value_1 = {{0x991F56FE, 0x81C1571B, 0x4A85A7A, 0x0}};
   s21_decimal value_2 = {{0x2A4112A8, 0x65AF8714, 0x316E6D, 0x80180000}};
   int code = 1;
@@ -97164,7 +99093,8 @@ START_TEST(s21_is_not_equal_9714) {
 }
 
 START_TEST(s21_is_not_equal_9715) {
-  char *example = "( -5739.5052717272464568286439 != -3922564810495.074 ) = True";
+  char *example =
+      "( -5739.5052717272464568286439 != -3922564810495.074 ) = True";
   s21_decimal value_1 = {{0xF3F2FCE7, 0xAD42136, 0x2F79E0, 0x80160000}};
   s21_decimal value_2 = {{0x4A235462, 0xDEF8D, 0x0, 0x80030000}};
   int code = 1;
@@ -97194,7 +99124,8 @@ START_TEST(s21_is_not_equal_9717) {
 }
 
 START_TEST(s21_is_not_equal_9718) {
-  char *example = "( 1362057097038294668060 != 0.294663752421020356666 ) = True";
+  char *example =
+      "( 1362057097038294668060 != 0.294663752421020356666 ) = True";
   s21_decimal value_1 = {{0xBF4FD31C, 0xD656E144, 0x49, 0x0}};
   s21_decimal value_2 = {{0xA691503A, 0xF947F1A1, 0xF, 0x150000}};
   int code = 1;
@@ -97244,7 +99175,8 @@ START_TEST(s21_is_not_equal_9722) {
 }
 
 START_TEST(s21_is_not_equal_9723) {
-  char *example = "( 1496914687218155409009973312 != -2.129342327967285358663 ) = True";
+  char *example =
+      "( 1496914687218155409009973312 != -2.129342327967285358663 ) = True";
   s21_decimal value_1 = {{0x307A9840, 0xCB9D5068, 0x4D63803, 0x0}};
   s21_decimal value_2 = {{0xD5DB047, 0x6E8F9D8C, 0x73, 0x80150000}};
   int code = 1;
@@ -97304,7 +99236,8 @@ START_TEST(s21_is_not_equal_9728) {
 }
 
 START_TEST(s21_is_not_equal_9729) {
-  char *example = "( -70.6055004439776 != -697.48655979423820407100851 ) = True";
+  char *example =
+      "( -70.6055004439776 != -697.48655979423820407100851 ) = True";
   s21_decimal value_1 = {{0x3DBB44E0, 0x28227, 0x0, 0x800D0000}};
   s21_decimal value_2 = {{0xAD47D5B3, 0x37900CA2, 0x39B1DA, 0x80170000}};
   int code = 1;
@@ -97314,7 +99247,8 @@ START_TEST(s21_is_not_equal_9729) {
 }
 
 START_TEST(s21_is_not_equal_9730) {
-  char *example = "( 1043909100418642608560318561 != 1614351727465123541750975776 ) = True";
+  char *example =
+      "( 1043909100418642608560318561 != 1614351727465123541750975776 ) = True";
   s21_decimal value_1 = {{0xD744A861, 0xBA41A327, 0x35F8059, 0x0}};
   s21_decimal value_2 = {{0x43190D20, 0x80F0900F, 0x5375C46, 0x0}};
   int code = 1;
@@ -97374,7 +99308,8 @@ START_TEST(s21_is_not_equal_9735) {
 }
 
 START_TEST(s21_is_not_equal_9736) {
-  char *example = "( 1600665839844051550009590668 != -246088214.653468874761 ) = True";
+  char *example =
+      "( 1600665839844051550009590668 != -246088214.653468874761 ) = True";
   s21_decimal value_1 = {{0xD0CC838C, 0xC92A760, 0x52C0A2D, 0x0}};
   s21_decimal value_2 = {{0x66171809, 0x5728F765, 0xD, 0x800C0000}};
   int code = 1;
@@ -97424,7 +99359,8 @@ START_TEST(s21_is_not_equal_9740) {
 }
 
 START_TEST(s21_is_not_equal_9741) {
-  char *example = "( 111199143698340946 != -1.1132883999573598049419739 ) = True";
+  char *example =
+      "( 111199143698340946 != -1.1132883999573598049419739 ) = True";
   s21_decimal value_1 = {{0x33779C52, 0x18B0F08, 0x0, 0x0}};
   s21_decimal value_2 = {{0x4A0441DB, 0xD9D5C8CB, 0x9357A, 0x80190000}};
   int code = 1;
@@ -97454,7 +99390,8 @@ START_TEST(s21_is_not_equal_9743) {
 }
 
 START_TEST(s21_is_not_equal_9744) {
-  char *example = "( -94292.30407243269980101864 != -4.7867572182581711331 ) = True";
+  char *example =
+      "( -94292.30407243269980101864 != -4.7867572182581711331 ) = True";
   s21_decimal value_1 = {{0xCB4D1CE8, 0x9AC85FF1, 0x7CCB7, 0x80140000}};
   s21_decimal value_2 = {{0x6B2711E3, 0x984BC749, 0x2, 0x80130000}};
   int code = 1;
@@ -97614,7 +99551,8 @@ START_TEST(s21_is_not_equal_9759) {
 }
 
 START_TEST(s21_is_not_equal_9760) {
-  char *example = "( -9.9982666580709339657847970 != 106780765112991692 ) = True";
+  char *example =
+      "( -9.9982666580709339657847970 != 106780765112991692 ) = True";
   s21_decimal value_1 = {{0x9AB246DD, 0x1F206C6F, 0x84537, 0x80180000}};
   s21_decimal value_2 = {{0x45677FCC, 0x17B5C8A, 0x0, 0x0}};
   int code = 1;
@@ -97814,7 +99752,8 @@ START_TEST(s21_is_not_equal_9779) {
 }
 
 START_TEST(s21_is_not_equal_9780) {
-  char *example = "( -7.5486112169254058711154414 != 15487546189307929016954945 ) = True";
+  char *example =
+      "( -7.5486112169254058711154414 != 15487546189307929016954945 ) = True";
   s21_decimal value_1 = {{0x78C57EEE, 0x571F2D87, 0x3E70CE, 0x80190000}};
   s21_decimal value_2 = {{0xEAE07041, 0x8FADCF10, 0xCCF9D, 0x0}};
   int code = 1;
@@ -97824,7 +99763,8 @@ START_TEST(s21_is_not_equal_9780) {
 }
 
 START_TEST(s21_is_not_equal_9781) {
-  char *example = "( 1788512551592474825196396429 != 1746428933290630741298417130 ) = True";
+  char *example =
+      "( 1788512551592474825196396429 != 1746428933290630741298417130 ) = True";
   s21_decimal value_1 = {{0xEA6D5F8D, 0xB29CF8D1, 0x5C76C43, 0x0}};
   s21_decimal value_2 = {{0xE4DA8DEA, 0x2DA29763, 0x5A49CB6, 0x0}};
   int code = 1;
@@ -97954,7 +99894,8 @@ START_TEST(s21_is_not_equal_9793) {
 }
 
 START_TEST(s21_is_not_equal_9794) {
-  char *example = "( -8.49253066681739114527 != 1598849912273363148767290 ) = True";
+  char *example =
+      "( -8.49253066681739114527 != 1598849912273363148767290 ) = True";
   s21_decimal value_1 = {{0x882FF81F, 0x9C0FC9C, 0x2E, 0x80140000}};
   s21_decimal value_2 = {{0x21EC803A, 0xD3D1AEBC, 0x15291, 0x0}};
   int code = 1;
@@ -98014,7 +99955,8 @@ START_TEST(s21_is_not_equal_9799) {
 }
 
 START_TEST(s21_is_not_equal_9800) {
-  char *example = "( -251.70437749083019088934462 != -5.5087500791055798338787150 ) = True";
+  char *example =
+      "( -251.70437749083019088934462 != -5.5087500791055798338787150 ) = True";
   s21_decimal value_1 = {{0xC906B63E, 0x2A1C9050, 0x14D20C, 0x80170000}};
   s21_decimal value_2 = {{0x6337E8BB, 0xF0AF21B9, 0x48E85, 0x80180000}};
   int code = 1;
@@ -98064,7 +100006,8 @@ START_TEST(s21_is_not_equal_9804) {
 }
 
 START_TEST(s21_is_not_equal_9805) {
-  char *example = "( -856.54870235329871199557841 != 1350228896479478213179989009 ) = True";
+  char *example =
+      "( -856.54870235329871199557841 != 1350228896479478213179989009 ) = True";
   s21_decimal value_1 = {{0x717B58D1, 0xD1D4F035, 0x46DA1F, 0x80170000}};
   s21_decimal value_2 = {{0x28A1DC11, 0x25525908, 0x45CE217, 0x0}};
   int code = 1;
@@ -98124,7 +100067,8 @@ START_TEST(s21_is_not_equal_9810) {
 }
 
 START_TEST(s21_is_not_equal_9811) {
-  char *example = "( -649.28098521330382362370564 != -3.3971662454226255832180232 ) = True";
+  char *example =
+      "( -649.28098521330382362370564 != -3.3971662454226255832180232 ) = True";
   s21_decimal value_1 = {{0xD39BE204, 0x460B3CAD, 0x35B50F, 0x80170000}};
   s21_decimal value_2 = {{0x89006608, 0x8304B917, 0x1C19C7, 0x80190000}};
   int code = 1;
@@ -98144,7 +100088,8 @@ START_TEST(s21_is_not_equal_9812) {
 }
 
 START_TEST(s21_is_not_equal_9813) {
-  char *example = "( 1968402901059283409778 != 0.76996754384680326785233692 ) = True";
+  char *example =
+      "( 1968402901059283409778 != 0.76996754384680326785233692 ) = True";
   s21_decimal value_1 = {{0xC6F75B72, 0xB513E977, 0x6A, 0x0}};
   s21_decimal value_2 = {{0xD25731C, 0x6B3DB23D, 0x3FB0B2, 0x1A0000}};
   int code = 1;
@@ -98214,7 +100159,8 @@ START_TEST(s21_is_not_equal_9819) {
 }
 
 START_TEST(s21_is_not_equal_9820) {
-  char *example = "( -39324.210773564460201795449 != 1609938875596648258008299396 ) = True";
+  char *example =
+      "( -39324.210773564460201795449 != 1609938875596648258008299396 ) = True";
   s21_decimal value_1 = {{0xC6B9DF79, 0xBCD346C7, 0x208739, 0x80150000}};
   s21_decimal value_2 = {{0xB47CB784, 0x5314E905, 0x533B5D1, 0x0}};
   int code = 1;
@@ -98244,7 +100190,8 @@ START_TEST(s21_is_not_equal_9822) {
 }
 
 START_TEST(s21_is_not_equal_9823) {
-  char *example = "( 313.61831870590628 != 1161389294235829973445607892 ) = True";
+  char *example =
+      "( 313.61831870590628 != 1161389294235829973445607892 ) = True";
   s21_decimal value_1 = {{0x8026EEA4, 0x6F6B6B, 0x0, 0xE0000}};
   s21_decimal value_2 = {{0x319581D4, 0xCBAC17C9, 0x3C0ADBF, 0x0}};
   int code = 1;
@@ -98274,7 +100221,8 @@ START_TEST(s21_is_not_equal_9825) {
 }
 
 START_TEST(s21_is_not_equal_9826) {
-  char *example = "( -7.5552418513600298950600418 != 1938449906531913608221497470 ) = True";
+  char *example =
+      "( -7.5552418513600298950600418 != 1938449906531913608221497470 ) = True";
   s21_decimal value_1 = {{0xB4C426E2, 0xD07FBA5D, 0x3E7ED8, 0x80190000}};
   s21_decimal value_2 = {{0x75C5187E, 0xFEED7B62, 0x64372BB, 0x0}};
   int code = 1;
@@ -98304,7 +100252,8 @@ START_TEST(s21_is_not_equal_9828) {
 }
 
 START_TEST(s21_is_not_equal_9829) {
-  char *example = "( 174183761649634880847655976 != 1270011613923779131153193153 ) = True";
+  char *example =
+      "( 174183761649634880847655976 != 1270011613923779131153193153 ) = True";
   s21_decimal value_1 = {{0x9D44B428, 0xA3BD957D, 0x9014D8, 0x0}};
   s21_decimal value_2 = {{0xCCA218C1, 0x8B7E82C6, 0x41A876B, 0x0}};
   int code = 1;
@@ -98374,7 +100323,8 @@ START_TEST(s21_is_not_equal_9835) {
 }
 
 START_TEST(s21_is_not_equal_9836) {
-  char *example = "( 1143932939460124754266528343 != -79.512402041956396080110853 ) = True";
+  char *example =
+      "( 1143932939460124754266528343 != -79.512402041956396080110853 ) = True";
   s21_decimal value_1 = {{0x3B79A57, 0xE8327356, 0x3B23D38, 0x0}};
   s21_decimal value_2 = {{0x7E711D05, 0xF3A0BE4D, 0x41C567, 0x80180000}};
   int code = 1;
@@ -98434,7 +100384,8 @@ START_TEST(s21_is_not_equal_9841) {
 }
 
 START_TEST(s21_is_not_equal_9842) {
-  char *example = "( -60917107.759959561183726391 != 1342487471749651982146586280 ) = True";
+  char *example =
+      "( -60917107.759959561183726391 != 1342487471749651982146586280 ) = True";
   s21_decimal value_1 = {{0xEDF08B37, 0x75BC5C0, 0x3263B3, 0x80120000}};
   s21_decimal value_2 = {{0xFE5FC6A8, 0xAB974A26, 0x4567AC7, 0x0}};
   int code = 1;
@@ -98444,7 +100395,8 @@ START_TEST(s21_is_not_equal_9842) {
 }
 
 START_TEST(s21_is_not_equal_9843) {
-  char *example = "( 1158108217043633335237951118 != 1850299531741530455032272527 ) = True";
+  char *example =
+      "( 1158108217043633335237951118 != 1850299531741530455032272527 ) = True";
   s21_decimal value_1 = {{0x9C7D3E8E, 0x3E9E2CF2, 0x3BDF6F4, 0x0}};
   s21_decimal value_2 = {{0xD5A1168F, 0x9A684C01, 0x5FA882A, 0x0}};
   int code = 1;
@@ -98464,7 +100416,8 @@ START_TEST(s21_is_not_equal_9844) {
 }
 
 START_TEST(s21_is_not_equal_9845) {
-  char *example = "( 1780485285250187012605501439 != 1375818012402038198856060574 ) = True";
+  char *example =
+      "( 1780485285250187012605501439 != 1375818012402038198856060574 ) = True";
   s21_decimal value_1 = {{0xC1385FFF, 0xB7A359E6, 0x5C0C86C, 0x0}};
   s21_decimal value_2 = {{0x8FE40E9E, 0xE648D69D, 0x4720CCB, 0x0}};
   int code = 1;
@@ -98494,7 +100447,8 @@ START_TEST(s21_is_not_equal_9847) {
 }
 
 START_TEST(s21_is_not_equal_9848) {
-  char *example = "( -15.52628005813195210 != 1813602805890128708927365333 ) = True";
+  char *example =
+      "( -15.52628005813195210 != 1813602805890128708927365333 ) = True";
   s21_decimal value_1 = {{0xCB7B5B61, 0x2279AB1, 0x0, 0x80100000}};
   s21_decimal value_2 = {{0x52B220D5, 0x1BCCD478, 0x5DC2D55, 0x0}};
   int code = 1;
@@ -98564,7 +100518,8 @@ START_TEST(s21_is_not_equal_9854) {
 }
 
 START_TEST(s21_is_not_equal_9855) {
-  char *example = "( 1969531796801494456761479805 != 1193817859193499707000387141 ) = True";
+  char *example =
+      "( 1969531796801494456761479805 != 1193817859193499707000387141 ) = True";
   s21_decimal value_1 = {{0xD286727D, 0xA4C132B2, 0x65D2894, 0x0}};
   s21_decimal value_2 = {{0xC6127645, 0xD31113A6, 0x3DB80C3, 0x0}};
   int code = 1;
@@ -98714,7 +100669,8 @@ START_TEST(s21_is_not_equal_9869) {
 }
 
 START_TEST(s21_is_not_equal_9870) {
-  char *example = "( -47430.062612635155 != -462.299261146537416390175 ) = True";
+  char *example =
+      "( -47430.062612635155 != -462.299261146537416390175 ) = True";
   s21_decimal value_1 = {{0x1B35E13, 0xA88164, 0x0, 0x800C0000}};
   s21_decimal value_2 = {{0xAB92F61F, 0x4B0CC650, 0x61E5, 0x80150000}};
   int code = 1;
@@ -98784,7 +100740,8 @@ START_TEST(s21_is_not_equal_9876) {
 }
 
 START_TEST(s21_is_not_equal_9877) {
-  char *example = "( 157558259967464659481 != 1477078289073158298254254825 ) = True";
+  char *example =
+      "( 157558259967464659481 != 1477078289073158298254254825 ) = True";
   s21_decimal value_1 = {{0x35615A19, 0x8A8F62A9, 0x8, 0x0}};
   s21_decimal value_2 = {{0x5D7522E9, 0x7F497331, 0x4C5CF7E, 0x0}};
   int code = 1;
@@ -98834,7 +100791,9 @@ START_TEST(s21_is_not_equal_9881) {
 }
 
 START_TEST(s21_is_not_equal_9882) {
-  char *example = "( 1564660545624410377364036087 != -79228162514264337593543950335 ) = True";
+  char *example =
+      "( 1564660545624410377364036087 != -79228162514264337593543950335 ) = "
+      "True";
   s21_decimal value_1 = {{0xFD3DD9F7, 0x236F4C4A, 0x50E41C2, 0x0}};
   s21_decimal value_2 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x80000000}};
   int code = 1;
@@ -98894,7 +100853,8 @@ START_TEST(s21_is_not_equal_9887) {
 }
 
 START_TEST(s21_is_not_equal_9888) {
-  char *example = "( 1626585811046083100953652099 != 119892163283250194 ) = True";
+  char *example =
+      "( 1626585811046083100953652099 != 119892163283250194 ) = True";
   s21_decimal value_1 = {{0xADE9AB83, 0x80E639F3, 0x5417AF1, 0x0}};
   s21_decimal value_2 = {{0x8BD9EC12, 0x1A9F149, 0x0, 0x0}};
   int code = 1;
@@ -98904,7 +100864,8 @@ START_TEST(s21_is_not_equal_9888) {
 }
 
 START_TEST(s21_is_not_equal_9889) {
-  char *example = "( 0.4050310024354016 != 1060445008104230220776372478 ) = True";
+  char *example =
+      "( 0.4050310024354016 != 1060445008104230220776372478 ) = True";
   s21_decimal value_1 = {{0x4A3B58E0, 0xE63BC, 0x0, 0x100000}};
   s21_decimal value_2 = {{0x3F7C78FE, 0x14539B55, 0x36D2DF7, 0x0}};
   int code = 1;
@@ -98964,7 +100925,8 @@ START_TEST(s21_is_not_equal_9894) {
 }
 
 START_TEST(s21_is_not_equal_9895) {
-  char *example = "( 79228162514264337593543950335 != 169912776388027641877 ) = True";
+  char *example =
+      "( 79228162514264337593543950335 != 169912776388027641877 ) = True";
   s21_decimal value_1 = {{0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x0}};
   s21_decimal value_2 = {{0x70C47015, 0x360371E3, 0x9, 0x0}};
   int code = 1;
@@ -99024,7 +100986,8 @@ START_TEST(s21_is_not_equal_9900) {
 }
 
 START_TEST(s21_is_not_equal_9901) {
-  char *example = "( 8.506398503142358E-10 != 1032224145002458607304782 ) = True";
+  char *example =
+      "( 8.506398503142358E-10 != 1032224145002458607304782 ) = True";
   s21_decimal value_1 = {{0x3D1903D6, 0x1E3886, 0x0, 0x190000}};
   s21_decimal value_2 = {{0xB158C04E, 0xFBA789D3, 0xDA94, 0x0}};
   int code = 1;
@@ -99034,7 +100997,8 @@ START_TEST(s21_is_not_equal_9901) {
 }
 
 START_TEST(s21_is_not_equal_9902) {
-  char *example = "( -765.4953193396572638774 != 1672575208759938150502 ) = True";
+  char *example =
+      "( -765.4953193396572638774 != 1672575208759938150502 ) = True";
   s21_decimal value_1 = {{0xC4CDCE36, 0xF9D0EBB6, 0x19E, 0x80130000}};
   s21_decimal value_2 = {{0x14EE7066, 0xABA4D2AF, 0x5A, 0x0}};
   int code = 1;
@@ -99064,7 +101028,8 @@ START_TEST(s21_is_not_equal_9904) {
 }
 
 START_TEST(s21_is_not_equal_9905) {
-  char *example = "( 1780485285250187012605501439 != 1526631826625636407577556770 ) = True";
+  char *example =
+      "( 1780485285250187012605501439 != 1526631826625636407577556770 ) = True";
   s21_decimal value_1 = {{0xC1385FFF, 0xB7A359E6, 0x5C0C86C, 0x0}};
   s21_decimal value_2 = {{0x33E3722, 0x269117DF, 0x4EECCDD, 0x0}};
   int code = 1;
@@ -99084,7 +101049,8 @@ START_TEST(s21_is_not_equal_9906) {
 }
 
 START_TEST(s21_is_not_equal_9907) {
-  char *example = "( 15199128670241402 != 1249404837807199705671785090 ) = True";
+  char *example =
+      "( 15199128670241402 != 1249404837807199705671785090 ) = True";
   s21_decimal value_1 = {{0xE949027A, 0x35FF86, 0x0, 0x0}};
   s21_decimal value_2 = {{0x26D1DA82, 0xF92528DF, 0x4097BC3, 0x0}};
   int code = 1;
@@ -99164,7 +101130,8 @@ START_TEST(s21_is_not_equal_9914) {
 }
 
 START_TEST(s21_is_not_equal_9915) {
-  char *example = "( 1538187871366889656422850478 != -7.7446028632690831942188440 ) = True";
+  char *example =
+      "( 1538187871366889656422850478 != -7.7446028632690831942188440 ) = True";
   s21_decimal value_1 = {{0x40F55FAE, 0x97622C9C, 0x4F85BF3, 0x0}};
   s21_decimal value_2 = {{0x5286595C, 0xC33136AE, 0x667FB, 0x80180000}};
   int code = 1;
@@ -99194,7 +101161,8 @@ START_TEST(s21_is_not_equal_9917) {
 }
 
 START_TEST(s21_is_not_equal_9918) {
-  char *example = "( 12423129161109146587 != 1705097581966185631289318608 ) = True";
+  char *example =
+      "( 12423129161109146587 != 1705097581966185631289318608 ) = True";
   s21_decimal value_1 = {{0xC6B50BDB, 0xAC67D226, 0x0, 0x0}};
   s21_decimal value_2 = {{0xF5AA1CD0, 0x2224ED0F, 0x5826C75, 0x0}};
   int code = 1;
@@ -99234,7 +101202,8 @@ START_TEST(s21_is_not_equal_9921) {
 }
 
 START_TEST(s21_is_not_equal_9922) {
-  char *example = "( 0.88600906939765270050212848 != 1487957935914951274339092356 ) = True";
+  char *example =
+      "( 0.88600906939765270050212848 != 1487957935914951274339092356 ) = True";
   s21_decimal value_1 = {{0x3C7F8BF0, 0xCA1708C8, 0x4949F8, 0x1A0000}};
   s21_decimal value_2 = {{0xE721C784, 0x5594CE79, 0x4CECF59, 0x0}};
   int code = 1;
@@ -99244,7 +101213,8 @@ START_TEST(s21_is_not_equal_9922) {
 }
 
 START_TEST(s21_is_not_equal_9923) {
-  char *example = "( -4.9905998734974633195628741 != 0.06599212308932239714185136 ) = True";
+  char *example =
+      "( -4.9905998734974633195628741 != 0.06599212308932239714185136 ) = True";
   s21_decimal value_1 = {{0x4F0468C5, 0x9CC7F1E3, 0x294801, 0x80190000}};
   s21_decimal value_2 = {{0x85046FB0, 0x41F4090, 0x57570, 0x1A0000}};
   int code = 1;
@@ -99274,7 +101244,8 @@ START_TEST(s21_is_not_equal_9925) {
 }
 
 START_TEST(s21_is_not_equal_9926) {
-  char *example = "( 1187843700957678772 != -922.7224182137963375844521 ) = True";
+  char *example =
+      "( 1187843700957678772 != -922.7224182137963375844521 ) = True";
   s21_decimal value_1 = {{0x74448CB4, 0x107C118D, 0x0, 0x0}};
   s21_decimal value_2 = {{0xC7815CA9, 0xD3413D84, 0x7A1F0, 0x80160000}};
   int code = 1;
@@ -99294,7 +101265,8 @@ START_TEST(s21_is_not_equal_9927) {
 }
 
 START_TEST(s21_is_not_equal_9928) {
-  char *example = "( 1438364963330054491673 != 1459229133131113574626729771 ) = True";
+  char *example =
+      "( 1438364963330054491673 != 1459229133131113574626729771 ) = True";
   s21_decimal value_1 = {{0x4FA90E19, 0xF952E15D, 0x4D, 0x0}};
   s21_decimal value_2 = {{0xA7EF9F2B, 0xD0931ABC, 0x4B70BC9, 0x0}};
   int code = 1;
@@ -99364,7 +101336,8 @@ START_TEST(s21_is_not_equal_9934) {
 }
 
 START_TEST(s21_is_not_equal_9935) {
-  char *example = "( 1302742152333235681322103735 != 1184623071433110727461 ) = True";
+  char *example =
+      "( 1302742152333235681322103735 != 1184623071433110727461 ) = True";
   s21_decimal value_1 = {{0xA8D073B7, 0x96604AD5, 0x4359A61, 0x0}};
   s21_decimal value_2 = {{0xFEC22B25, 0x37F29710, 0x40, 0x0}};
   int code = 1;
@@ -99394,7 +101367,8 @@ START_TEST(s21_is_not_equal_9937) {
 }
 
 START_TEST(s21_is_not_equal_9938) {
-  char *example = "( 0.19629538861133927370940038 != 13489887899564383 ) = True";
+  char *example =
+      "( 0.19629538861133927370940038 != 13489887899564383 ) = True";
   s21_decimal value_1 = {{0x4F435E86, 0x6F147F1B, 0x103CB7, 0x1A0000}};
   s21_decimal value_2 = {{0x4850395F, 0x2FECFB, 0x0, 0x0}};
   int code = 1;
@@ -99464,7 +101438,8 @@ START_TEST(s21_is_not_equal_9944) {
 }
 
 START_TEST(s21_is_not_equal_9945) {
-  char *example = "( 1738528527585745970520398033 != 1810593694214832231300121656 ) = True";
+  char *example =
+      "( 1738528527585745970520398033 != 1810593694214832231300121656 ) = True";
   s21_decimal value_1 = {{0x205818D1, 0x53AAC613, 0x59E13BC, 0x0}};
   s21_decimal value_2 = {{0x7CAAC438, 0xD67AF743, 0x5D9B020, 0x0}};
   int code = 1;
@@ -99484,7 +101459,8 @@ START_TEST(s21_is_not_equal_9946) {
 }
 
 START_TEST(s21_is_not_equal_9947) {
-  char *example = "( 0.39333312196063364999873593 != 1517326984643769147495330059 ) = True";
+  char *example =
+      "( 0.39333312196063364999873593 != 1517326984643769147495330059 ) = True";
   s21_decimal value_1 = {{0x97490439, 0x206F7C21, 0x208927, 0x1A0000}};
   s21_decimal value_2 = {{0xEEF0B10B, 0xA7F50948, 0x4E71A7C, 0x0}};
   int code = 1;
@@ -99554,7 +101530,8 @@ START_TEST(s21_is_not_equal_9953) {
 }
 
 START_TEST(s21_is_not_equal_9954) {
-  char *example = "( 1916346699426217053939409047 != -8498.282941672947641 ) = True";
+  char *example =
+      "( 1916346699426217053939409047 != -8498.282941672947641 ) = True";
   s21_decimal value_1 = {{0xEF91A097, 0xBCD7B6A0, 0x6312A32, 0x0}};
   s21_decimal value_2 = {{0x432D7FB9, 0x75EFF74F, 0x0, 0x800F0000}};
   int code = 1;
@@ -99644,7 +101621,8 @@ START_TEST(s21_is_not_equal_9962) {
 }
 
 START_TEST(s21_is_not_equal_9963) {
-  char *example = "( 176554646113664601269686 != -8.2791883030797686910611578 ) = True";
+  char *example =
+      "( 176554646113664601269686 != -8.2791883030797686910611578 ) = True";
   s21_decimal value_1 = {{0xB37DA5B6, 0xBEA4DC5, 0x2563, 0x0}};
   s21_decimal value_2 = {{0x1481F07A, 0xF8E92A80, 0x447BDC, 0x80190000}};
   int code = 1;
@@ -99824,7 +101802,8 @@ START_TEST(s21_is_not_equal_9980) {
 }
 
 START_TEST(s21_is_not_equal_9981) {
-  char *example = "( 1661780032906176956979190287 != 1412074198013680081111861862 ) = True";
+  char *example =
+      "( 1661780032906176956979190287 != 1412074198013680081111861862 ) = True";
   s21_decimal value_1 = {{0x1639A0F, 0x17EF5249, 0x55E979C, 0x0}};
   s21_decimal value_2 = {{0xECC3CA66, 0xA8EC72C7, 0x4900A57, 0x0}};
   int code = 1;
@@ -99844,7 +101823,8 @@ START_TEST(s21_is_not_equal_9982) {
 }
 
 START_TEST(s21_is_not_equal_9983) {
-  char *example = "( -53906.50583043064 != -726.75487421341514381583010 ) = True";
+  char *example =
+      "( -53906.50583043064 != -726.75487421341514381583010 ) = True";
   s21_decimal value_1 = {{0xA51C4BF8, 0x1326C4, 0x0, 0x800B0000}};
   s21_decimal value_2 = {{0x121849DD, 0x9B538785, 0x602F6, 0x80160000}};
   int code = 1;
@@ -99864,7 +101844,8 @@ START_TEST(s21_is_not_equal_9984) {
 }
 
 START_TEST(s21_is_not_equal_9985) {
-  char *example = "( 1228850941492561989544504036 != 1588103500818630690203930388 ) = True";
+  char *example =
+      "( 1228850941492561989544504036 != 1588103500818630690203930388 ) = True";
   s21_decimal value_1 = {{0xD67CEAE4, 0x5777FC0, 0x3F87B4F, 0x0}};
   s21_decimal value_2 = {{0xB9868F14, 0x49354FD0, 0x521A5FF, 0x0}};
   int code = 1;
@@ -100032,8 +102013,7 @@ START_TEST(s21_is_not_equal_10000) {
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_1(void)
-{
+Suite *s21_is_not_equal_case_1(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №1)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100147,8 +102127,7 @@ Suite *s21_is_not_equal_case_1(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_2(void)
-{
+Suite *s21_is_not_equal_case_2(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №2)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100262,8 +102241,7 @@ Suite *s21_is_not_equal_case_2(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_3(void)
-{
+Suite *s21_is_not_equal_case_3(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №3)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100377,8 +102355,7 @@ Suite *s21_is_not_equal_case_3(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_4(void)
-{
+Suite *s21_is_not_equal_case_4(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №4)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100492,8 +102469,7 @@ Suite *s21_is_not_equal_case_4(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_5(void)
-{
+Suite *s21_is_not_equal_case_5(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №5)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100607,8 +102583,7 @@ Suite *s21_is_not_equal_case_5(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_6(void)
-{
+Suite *s21_is_not_equal_case_6(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №6)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100722,8 +102697,7 @@ Suite *s21_is_not_equal_case_6(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_7(void)
-{
+Suite *s21_is_not_equal_case_7(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №7)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100837,8 +102811,7 @@ Suite *s21_is_not_equal_case_7(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_8(void)
-{
+Suite *s21_is_not_equal_case_8(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №8)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -100952,8 +102925,7 @@ Suite *s21_is_not_equal_case_8(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_9(void)
-{
+Suite *s21_is_not_equal_case_9(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №9)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101067,8 +103039,7 @@ Suite *s21_is_not_equal_case_9(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_10(void)
-{
+Suite *s21_is_not_equal_case_10(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №10)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101182,8 +103153,7 @@ Suite *s21_is_not_equal_case_10(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_11(void)
-{
+Suite *s21_is_not_equal_case_11(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №11)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101297,8 +103267,7 @@ Suite *s21_is_not_equal_case_11(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_12(void)
-{
+Suite *s21_is_not_equal_case_12(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №12)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101412,8 +103381,7 @@ Suite *s21_is_not_equal_case_12(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_13(void)
-{
+Suite *s21_is_not_equal_case_13(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №13)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101527,8 +103495,7 @@ Suite *s21_is_not_equal_case_13(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_14(void)
-{
+Suite *s21_is_not_equal_case_14(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №14)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101642,8 +103609,7 @@ Suite *s21_is_not_equal_case_14(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_15(void)
-{
+Suite *s21_is_not_equal_case_15(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №15)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101757,8 +103723,7 @@ Suite *s21_is_not_equal_case_15(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_16(void)
-{
+Suite *s21_is_not_equal_case_16(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №16)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101872,8 +103837,7 @@ Suite *s21_is_not_equal_case_16(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_17(void)
-{
+Suite *s21_is_not_equal_case_17(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №17)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -101987,8 +103951,7 @@ Suite *s21_is_not_equal_case_17(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_18(void)
-{
+Suite *s21_is_not_equal_case_18(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №18)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102102,8 +104065,7 @@ Suite *s21_is_not_equal_case_18(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_19(void)
-{
+Suite *s21_is_not_equal_case_19(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №19)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102217,8 +104179,7 @@ Suite *s21_is_not_equal_case_19(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_20(void)
-{
+Suite *s21_is_not_equal_case_20(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №20)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102332,8 +104293,7 @@ Suite *s21_is_not_equal_case_20(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_21(void)
-{
+Suite *s21_is_not_equal_case_21(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №21)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102447,8 +104407,7 @@ Suite *s21_is_not_equal_case_21(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_22(void)
-{
+Suite *s21_is_not_equal_case_22(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №22)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102562,8 +104521,7 @@ Suite *s21_is_not_equal_case_22(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_23(void)
-{
+Suite *s21_is_not_equal_case_23(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №23)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102677,8 +104635,7 @@ Suite *s21_is_not_equal_case_23(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_24(void)
-{
+Suite *s21_is_not_equal_case_24(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №24)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102792,8 +104749,7 @@ Suite *s21_is_not_equal_case_24(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_25(void)
-{
+Suite *s21_is_not_equal_case_25(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №25)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -102907,8 +104863,7 @@ Suite *s21_is_not_equal_case_25(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_26(void)
-{
+Suite *s21_is_not_equal_case_26(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №26)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103022,8 +104977,7 @@ Suite *s21_is_not_equal_case_26(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_27(void)
-{
+Suite *s21_is_not_equal_case_27(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №27)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103137,8 +105091,7 @@ Suite *s21_is_not_equal_case_27(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_28(void)
-{
+Suite *s21_is_not_equal_case_28(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №28)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103252,8 +105205,7 @@ Suite *s21_is_not_equal_case_28(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_29(void)
-{
+Suite *s21_is_not_equal_case_29(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №29)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103367,8 +105319,7 @@ Suite *s21_is_not_equal_case_29(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_30(void)
-{
+Suite *s21_is_not_equal_case_30(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №30)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103482,8 +105433,7 @@ Suite *s21_is_not_equal_case_30(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_31(void)
-{
+Suite *s21_is_not_equal_case_31(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №31)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103597,8 +105547,7 @@ Suite *s21_is_not_equal_case_31(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_32(void)
-{
+Suite *s21_is_not_equal_case_32(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №32)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103712,8 +105661,7 @@ Suite *s21_is_not_equal_case_32(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_33(void)
-{
+Suite *s21_is_not_equal_case_33(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №33)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103827,8 +105775,7 @@ Suite *s21_is_not_equal_case_33(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_34(void)
-{
+Suite *s21_is_not_equal_case_34(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №34)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -103942,8 +105889,7 @@ Suite *s21_is_not_equal_case_34(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_35(void)
-{
+Suite *s21_is_not_equal_case_35(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №35)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104057,8 +106003,7 @@ Suite *s21_is_not_equal_case_35(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_36(void)
-{
+Suite *s21_is_not_equal_case_36(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №36)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104172,8 +106117,7 @@ Suite *s21_is_not_equal_case_36(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_37(void)
-{
+Suite *s21_is_not_equal_case_37(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №37)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104287,8 +106231,7 @@ Suite *s21_is_not_equal_case_37(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_38(void)
-{
+Suite *s21_is_not_equal_case_38(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №38)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104402,8 +106345,7 @@ Suite *s21_is_not_equal_case_38(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_39(void)
-{
+Suite *s21_is_not_equal_case_39(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №39)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104517,8 +106459,7 @@ Suite *s21_is_not_equal_case_39(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_40(void)
-{
+Suite *s21_is_not_equal_case_40(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №40)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104632,8 +106573,7 @@ Suite *s21_is_not_equal_case_40(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_41(void)
-{
+Suite *s21_is_not_equal_case_41(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №41)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104747,8 +106687,7 @@ Suite *s21_is_not_equal_case_41(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_42(void)
-{
+Suite *s21_is_not_equal_case_42(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №42)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104862,8 +106801,7 @@ Suite *s21_is_not_equal_case_42(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_43(void)
-{
+Suite *s21_is_not_equal_case_43(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №43)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -104977,8 +106915,7 @@ Suite *s21_is_not_equal_case_43(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_44(void)
-{
+Suite *s21_is_not_equal_case_44(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №44)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105092,8 +107029,7 @@ Suite *s21_is_not_equal_case_44(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_45(void)
-{
+Suite *s21_is_not_equal_case_45(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №45)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105207,8 +107143,7 @@ Suite *s21_is_not_equal_case_45(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_46(void)
-{
+Suite *s21_is_not_equal_case_46(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №46)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105322,8 +107257,7 @@ Suite *s21_is_not_equal_case_46(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_47(void)
-{
+Suite *s21_is_not_equal_case_47(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №47)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105437,8 +107371,7 @@ Suite *s21_is_not_equal_case_47(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_48(void)
-{
+Suite *s21_is_not_equal_case_48(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №48)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105552,8 +107485,7 @@ Suite *s21_is_not_equal_case_48(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_49(void)
-{
+Suite *s21_is_not_equal_case_49(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №49)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105667,8 +107599,7 @@ Suite *s21_is_not_equal_case_49(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_50(void)
-{
+Suite *s21_is_not_equal_case_50(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №50)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105782,8 +107713,7 @@ Suite *s21_is_not_equal_case_50(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_51(void)
-{
+Suite *s21_is_not_equal_case_51(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №51)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -105897,8 +107827,7 @@ Suite *s21_is_not_equal_case_51(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_52(void)
-{
+Suite *s21_is_not_equal_case_52(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №52)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106012,8 +107941,7 @@ Suite *s21_is_not_equal_case_52(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_53(void)
-{
+Suite *s21_is_not_equal_case_53(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №53)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106127,8 +108055,7 @@ Suite *s21_is_not_equal_case_53(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_54(void)
-{
+Suite *s21_is_not_equal_case_54(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №54)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106242,8 +108169,7 @@ Suite *s21_is_not_equal_case_54(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_55(void)
-{
+Suite *s21_is_not_equal_case_55(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №55)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106357,8 +108283,7 @@ Suite *s21_is_not_equal_case_55(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_56(void)
-{
+Suite *s21_is_not_equal_case_56(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №56)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106472,8 +108397,7 @@ Suite *s21_is_not_equal_case_56(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_57(void)
-{
+Suite *s21_is_not_equal_case_57(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №57)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106587,8 +108511,7 @@ Suite *s21_is_not_equal_case_57(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_58(void)
-{
+Suite *s21_is_not_equal_case_58(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №58)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106702,8 +108625,7 @@ Suite *s21_is_not_equal_case_58(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_59(void)
-{
+Suite *s21_is_not_equal_case_59(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №59)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106817,8 +108739,7 @@ Suite *s21_is_not_equal_case_59(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_60(void)
-{
+Suite *s21_is_not_equal_case_60(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №60)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -106932,8 +108853,7 @@ Suite *s21_is_not_equal_case_60(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_61(void)
-{
+Suite *s21_is_not_equal_case_61(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №61)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107047,8 +108967,7 @@ Suite *s21_is_not_equal_case_61(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_62(void)
-{
+Suite *s21_is_not_equal_case_62(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №62)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107162,8 +109081,7 @@ Suite *s21_is_not_equal_case_62(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_63(void)
-{
+Suite *s21_is_not_equal_case_63(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №63)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107277,8 +109195,7 @@ Suite *s21_is_not_equal_case_63(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_64(void)
-{
+Suite *s21_is_not_equal_case_64(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №64)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107392,8 +109309,7 @@ Suite *s21_is_not_equal_case_64(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_65(void)
-{
+Suite *s21_is_not_equal_case_65(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №65)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107507,8 +109423,7 @@ Suite *s21_is_not_equal_case_65(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_66(void)
-{
+Suite *s21_is_not_equal_case_66(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №66)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107622,8 +109537,7 @@ Suite *s21_is_not_equal_case_66(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_67(void)
-{
+Suite *s21_is_not_equal_case_67(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №67)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107737,8 +109651,7 @@ Suite *s21_is_not_equal_case_67(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_68(void)
-{
+Suite *s21_is_not_equal_case_68(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №68)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107852,8 +109765,7 @@ Suite *s21_is_not_equal_case_68(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_69(void)
-{
+Suite *s21_is_not_equal_case_69(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №69)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -107967,8 +109879,7 @@ Suite *s21_is_not_equal_case_69(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_70(void)
-{
+Suite *s21_is_not_equal_case_70(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №70)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108082,8 +109993,7 @@ Suite *s21_is_not_equal_case_70(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_71(void)
-{
+Suite *s21_is_not_equal_case_71(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №71)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108197,8 +110107,7 @@ Suite *s21_is_not_equal_case_71(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_72(void)
-{
+Suite *s21_is_not_equal_case_72(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №72)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108312,8 +110221,7 @@ Suite *s21_is_not_equal_case_72(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_73(void)
-{
+Suite *s21_is_not_equal_case_73(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №73)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108427,8 +110335,7 @@ Suite *s21_is_not_equal_case_73(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_74(void)
-{
+Suite *s21_is_not_equal_case_74(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №74)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108542,8 +110449,7 @@ Suite *s21_is_not_equal_case_74(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_75(void)
-{
+Suite *s21_is_not_equal_case_75(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №75)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108657,8 +110563,7 @@ Suite *s21_is_not_equal_case_75(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_76(void)
-{
+Suite *s21_is_not_equal_case_76(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №76)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108772,8 +110677,7 @@ Suite *s21_is_not_equal_case_76(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_77(void)
-{
+Suite *s21_is_not_equal_case_77(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №77)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -108887,8 +110791,7 @@ Suite *s21_is_not_equal_case_77(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_78(void)
-{
+Suite *s21_is_not_equal_case_78(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №78)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109002,8 +110905,7 @@ Suite *s21_is_not_equal_case_78(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_79(void)
-{
+Suite *s21_is_not_equal_case_79(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №79)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109117,8 +111019,7 @@ Suite *s21_is_not_equal_case_79(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_80(void)
-{
+Suite *s21_is_not_equal_case_80(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №80)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109232,8 +111133,7 @@ Suite *s21_is_not_equal_case_80(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_81(void)
-{
+Suite *s21_is_not_equal_case_81(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №81)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109347,8 +111247,7 @@ Suite *s21_is_not_equal_case_81(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_82(void)
-{
+Suite *s21_is_not_equal_case_82(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №82)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109462,8 +111361,7 @@ Suite *s21_is_not_equal_case_82(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_83(void)
-{
+Suite *s21_is_not_equal_case_83(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №83)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109577,8 +111475,7 @@ Suite *s21_is_not_equal_case_83(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_84(void)
-{
+Suite *s21_is_not_equal_case_84(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №84)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109692,8 +111589,7 @@ Suite *s21_is_not_equal_case_84(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_85(void)
-{
+Suite *s21_is_not_equal_case_85(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №85)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109807,8 +111703,7 @@ Suite *s21_is_not_equal_case_85(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_86(void)
-{
+Suite *s21_is_not_equal_case_86(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №86)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -109922,8 +111817,7 @@ Suite *s21_is_not_equal_case_86(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_87(void)
-{
+Suite *s21_is_not_equal_case_87(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №87)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110037,8 +111931,7 @@ Suite *s21_is_not_equal_case_87(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_88(void)
-{
+Suite *s21_is_not_equal_case_88(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №88)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110152,8 +112045,7 @@ Suite *s21_is_not_equal_case_88(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_89(void)
-{
+Suite *s21_is_not_equal_case_89(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №89)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110267,8 +112159,7 @@ Suite *s21_is_not_equal_case_89(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_90(void)
-{
+Suite *s21_is_not_equal_case_90(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №90)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110382,8 +112273,7 @@ Suite *s21_is_not_equal_case_90(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_91(void)
-{
+Suite *s21_is_not_equal_case_91(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №91)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110497,8 +112387,7 @@ Suite *s21_is_not_equal_case_91(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_92(void)
-{
+Suite *s21_is_not_equal_case_92(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №92)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110612,8 +112501,7 @@ Suite *s21_is_not_equal_case_92(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_93(void)
-{
+Suite *s21_is_not_equal_case_93(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №93)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110727,8 +112615,7 @@ Suite *s21_is_not_equal_case_93(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_94(void)
-{
+Suite *s21_is_not_equal_case_94(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №94)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110842,8 +112729,7 @@ Suite *s21_is_not_equal_case_94(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_95(void)
-{
+Suite *s21_is_not_equal_case_95(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №95)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -110957,8 +112843,7 @@ Suite *s21_is_not_equal_case_95(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_96(void)
-{
+Suite *s21_is_not_equal_case_96(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №96)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -111072,8 +112957,7 @@ Suite *s21_is_not_equal_case_96(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_97(void)
-{
+Suite *s21_is_not_equal_case_97(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №97)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -111187,8 +113071,7 @@ Suite *s21_is_not_equal_case_97(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_98(void)
-{
+Suite *s21_is_not_equal_case_98(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №98)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -111302,8 +113185,7 @@ Suite *s21_is_not_equal_case_98(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_99(void)
-{
+Suite *s21_is_not_equal_case_99(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №99)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -111417,8 +113299,7 @@ Suite *s21_is_not_equal_case_99(void)
  *
  * @return Suite*
  */
-Suite *s21_is_not_equal_case_100(void)
-{
+Suite *s21_is_not_equal_case_100(void) {
   Suite *decimal = suite_create("\ns21_decimal (s21_is_not_equal case №100)\n");
 
   TCase *tc_s21_is_not_equal = tcase_create("s21_is_not_equal_test");
@@ -111538,7 +113419,8 @@ Suite *s21_is_not_equal_edge_case(void) {
   return decimal;
 }
 
-static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2, int code, char *text, int count) {
+static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2,
+                                  int code, char *text, int count) {
   int implement_code = s21_is_not_equal(value_1, value_2);
   int res = (implement_code == code);
 
@@ -111555,7 +113437,8 @@ static void s21_test_is_not_equal(s21_decimal value_1, s21_decimal value_2, int 
   if (res == 0) {
     printf("Test №%d: %s\n%s%s\n", count, RED "TEST_FAILED",
            RESET "Subformul:   ", text);
-    printf("Compare result = %s%d%s\nOrigin compare = %s%d%s\n\n", RED, implement_code, RESET, GREEN, code, RESET);
+    printf("Compare result = %s%d%s\nOrigin compare = %s%d%s\n\n", RED,
+           implement_code, RESET, GREEN, code, RESET);
     both_decimal_bits(value_1, value_2);
     print_line();
   }

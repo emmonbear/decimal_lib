@@ -38,7 +38,7 @@
  * @retval 1 - bit is set.
  * @retval 0 - bit is not set.
  */
-#define GET_BIT(uint, index) (((uint) >> (index)) & 1)
+#define GET_BIT(uint, index) (((uint) >> (index)) & 1u)
 
 /**
  * @brief Determines whether the bit is set in decimal.
@@ -68,14 +68,14 @@
  * @param index bit number to be set.
  */
 #define SET_BIT(Ldec, index) \
-  (Ldec.Lbits[(index) / UINT_BITS] |= 1 << ((index) % UINT_BITS))
+  (Ldec.Lbits[(index) / UINT_BITS] |= 1u << ((index) % UINT_BITS))
 
 /**
  * @brief Determines decimal number for an even number.
  *
  * @param Ldec defined decimal.
  */
-#define IS_EVEN(Ldec) (!(Ldec.Lbits[0] & 1))
+#define IS_EVEN(Ldec) (!(Ldec.Lbits[0] & 1u))
 
 /**
  * @brief Determines the power specified in the exponent of a decimal number.
@@ -83,7 +83,7 @@
  * @param uint service mantissa of decimal number.
  * @return uint - decimal power.
  */
-#define GET_POWER(uint) (((uint) << 1) >> 17)
+#define GET_POWER(uint) (((uint) << 1u) >> 17)
 
 /**
  * @brief Determines the sign of a decimal number.
