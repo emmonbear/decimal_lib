@@ -21,6 +21,13 @@ START_TEST(s21_from_decimal_to_int_edge_1) {
   int my_code = s21_from_decimal_to_int(value_1, &value_2);
   ck_assert_int_eq(code, my_code);
 }
+
+START_TEST(s21_from_decimal_to_int_edge_2) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x0}};
+  int code = 1;
+  int my_code = s21_from_decimal_to_int(value_1, NULL);
+  ck_assert_int_eq(code, my_code);
+}
 //#############################################################################
 
 START_TEST(s21_from_decimal_to_int_1) {
@@ -111532,6 +111539,7 @@ Suite *s21_from_decimal_to_int_edge_case(void) {
 
   TCase *tc_s21_from_decimal_to_int = tcase_create("s21_from_decimal_to_int_test");
   tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_edge_1);
+  tcase_add_test(tc_s21_from_decimal_to_int, s21_from_decimal_to_int_edge_2);
 
   suite_add_tcase(decimal, tc_s21_from_decimal_to_int);
 

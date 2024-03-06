@@ -21,7 +21,46 @@ START_TEST(s21_from_float_to_decimal_edge_1) {
   int my_code = s21_from_float_to_decimal(value_1, value_2);
   ck_assert_int_eq(code, my_code);
 }
-//#############################################################################
+
+START_TEST(s21_from_float_to_decimal_edge_2) {
+  float value_1 = 0.0/0.0;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_3) {
+  float value_1 = 1.0/0.0;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_4) {
+  float value_1 = -1.0/0.0;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_5) {
+  float value_1 = 9876543210987654321098765432109761.0;
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
+
+START_TEST(s21_from_float_to_decimal_edge_6) {
+  float value_1 = 1.14038529E-23;
+  s21_decimal value_2 = {{0}};
+  int code = 0;
+  int my_code = s21_from_float_to_decimal(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
 
 START_TEST(s21_from_float_to_decimal_1) {
   char *example = "float_to_decimal(0.659987) = 0.659987";
@@ -111532,6 +111571,11 @@ Suite *s21_from_float_to_decimal_edge_case(void) {
 
   TCase *tc_s21_from_float_to_decimal = tcase_create("s21_from_float_to_decimal_test");
   tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_1);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_2);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_3);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_4);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_5);
+  tcase_add_test(tc_s21_from_float_to_decimal, s21_from_float_to_decimal_edge_6);
 
   suite_add_tcase(decimal, tc_s21_from_float_to_decimal);
 
