@@ -29,10 +29,6 @@ int s21_truncate(s21_decimal value, s21_decimal *result) {
 
   *result = DCML_ZERO;
 
-  if (!is_correct(value)) {
-    return ROUND_ERROR;
-  }
-
   bool sign = GET_SIGN(value.bits[DEC_SIZE - 1]);
   uint8_t power = GET_POWER(value.bits[DEC_SIZE - 1]);
   value.bits[DEC_SIZE - 1] = 0;

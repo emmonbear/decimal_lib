@@ -1180,7 +1180,7 @@ int main(void) {
 
 #ifdef TEST_NEGATE
   Suite *(*s21_negate_cases[])(void) = {
-    s21_negate_case_1,
+    s21_negate_case_1, s21_negate_edge_case,
   };
   test_function(s21_negate_cases,
                 sizeof(s21_negate_cases) / sizeof(s21_negate_cases[0]),

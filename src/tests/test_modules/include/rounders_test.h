@@ -321,5 +321,6 @@ Suite *s21_truncate_case_100(void);
 Suite *s21_truncate_edge_case(void);
 
 Suite *s21_negate_case_1(void);
+Suite *s21_negate_edge_case(void);
 
 #endif  // ROUNDERS_TEST_H_

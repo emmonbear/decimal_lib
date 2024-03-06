@@ -21,6 +21,14 @@ START_TEST(s21_negate_edge_1) {
   int my_code = s21_negate(value_1, value_2);
   ck_assert_int_eq(code, my_code);
 }
+
+START_TEST(s21_negate_edge_2) {
+  s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
+  s21_decimal value_2 = {{0}};
+  int code = 1;
+  int my_code = s21_negate(value_1, &value_2);
+  ck_assert_int_eq(code, my_code);
+}
 //#############################################################################
 
 START_TEST(s21_negate_1) {
@@ -1147,6 +1155,7 @@ Suite *s21_negate_edge_case(void) {
 
   TCase *tc_s21_negate = tcase_create("s21_negate_test");
   tcase_add_test(tc_s21_negate, s21_negate_edge_1);
+  tcase_add_test(tc_s21_negate, s21_negate_edge_2);
 
   suite_add_tcase(decimal, tc_s21_negate);
 
