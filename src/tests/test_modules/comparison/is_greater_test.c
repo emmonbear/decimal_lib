@@ -17,7 +17,7 @@ static void s21_test_is_greater(s21_decimal value_1, s21_decimal value_2, int co
 START_TEST(s21_is_greater_edge_1) {
   s21_decimal value_1 = {{0xD487DA, 0x0, 0x0, 0x1D0000}};
   s21_decimal value_2 = {{0x342ED654, 0x114C, 0x0, 0x0}};
-  int code = 1;
+  int code = 0;
   int my_code = s21_is_greater(value_1, value_2);
   ck_assert_int_eq(code, my_code);
 }
