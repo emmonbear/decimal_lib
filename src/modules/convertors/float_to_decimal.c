@@ -45,7 +45,15 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   sprintf(str, "%.6E", fabsf(src));
   int exponent = get_char_exponent(str);
 
-  if (exponent < -(DCML_PRECISION + 1)) {
+  if (exponent == -(DCML_PRECISION + 1)) {
+    if((str[0] - '0') < 5) {
+      return CONVERSION_ERROR;
+    } else {
+      dst->bits[0] = 1;
+      SET_POWER(dst->bits[DEC_SIZE - 1], DCML_PRECISION);
+      return CONVERSION_OK;
+    }
+  } else if (exponent < -DCML_PRECISION) {
     return CONVERSION_ERROR;
   } else if (exponent <= -(DCML_PRECISION - FLT_PRECISION)) {
     int correct = (exponent >= -DCML_PRECISION) ? exponent + DCML_PRECISION : 0;
@@ -56,9 +64,7 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   get_clean_value(str);
   dst->bits[0] = atoi(str);
 
-  if (!dst->bits[0]) {
-    return CONVERSION_ERROR;
-  } else if (exponent <= 0) {
+  if (exponent <= 0) {
     SET_POWER(dst->bits[DEC_SIZE - 1], (FLT_PRECISION + abs(exponent)));
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = decimal_to_uint192(*dst);
