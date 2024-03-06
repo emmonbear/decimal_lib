@@ -129,8 +129,8 @@ $(TARGET): $(OBJ_DIR) $(TEST_O)
 	-./$@
 
 $(GCOV): $(OBJ_DIR) $(REPORT_DIR) $(TEST_O)
-	$(CC) $(TEST_OBJ_PATH) $(MODULES_C) $(LDFLAGS) $(GCOV_FLAGS) -o $(TARGET)
-	-./$(TARGET)
+	$(CC) $(TEST_OBJ_PATH) $(MODULES_C) $(LDFLAGS) $(GCOV_FLAGS) -o $(addprefix $(OBJ_DIR)/, $(TARGET))
+	-./$(addprefix $(OBJ_DIR)/, $(TARGET))
 	gcovr -r . --html --html-details -o $(REPORT_DIR)/coverage.html
 	xdg-open $(REPORT_DIR)/coverage.html
 
