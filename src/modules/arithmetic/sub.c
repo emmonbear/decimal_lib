@@ -29,6 +29,7 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return INCORRECT;
   }
 
+  *result = DCML_ZERO;
   int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
@@ -96,7 +97,13 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   uint192_t remainder = LDCML_ZERO;
   res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
   SET_POWER(remainder.Lbits[SERVICE], power_tmp);
-  res_tmp = bank_rouding(res_tmp, remainder, &err_code);
+
+  if (!res_power && binary_compare(res_tmp, dcml_max()) == EQUAL &&
+    !s21_is_equal(uint192_to_decimal(remainder), DCML_ZERO)) {
+    return (GET_SIGN(res_tmp.Lbits[SERVICE])) ? SMALL : BIG;
+  }
+
+  res_tmp = bank_rouding(res_tmp, remainder);
   SET_POWER(res_tmp.Lbits[SERVICE], res_power);
   *res = uint192_to_decimal(res_tmp);
 

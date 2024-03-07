@@ -92,7 +92,7 @@ bool dcml_is_zero(s21_decimal value);
 
 //============================= COMMON FUNCTIONS ===============================
 s21_decimal dabs(s21_decimal value);
-uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code);
+uint192_t bank_rouding(uint192_t integer, uint192_t fractional);
 bool is_correct(s21_decimal value);
 bool check_args(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 bool check_overflow(uint192_t value);

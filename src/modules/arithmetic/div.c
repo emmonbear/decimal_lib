@@ -41,6 +41,7 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return OK;
   }
 
+  *result = DCML_ZERO;
   int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
@@ -55,7 +56,6 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   uint192_t res = binary_div(Lvalue_1, Lvalue_2, &remainder);
 
   if (check_overflow(res)) {
-    *result = DCML_ZERO;
     return (sign_1 != sign_2) ? SMALL : BIG;
   }
 
@@ -94,7 +94,7 @@ static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remai
   uint8_t power_2 = calc_fract_part(&res_tmp, divider, &remainder);
   SET_POWER(res_tmp.Lbits[SERVICE], power_2);
 
-  quotient = bank_rouding(quotient, res_tmp, &err_code);
+  quotient = bank_rouding(quotient, res_tmp);
   SET_POWER(quotient.Lbits[SERVICE], power_1);
 
   *result = uint192_to_decimal(quotient);

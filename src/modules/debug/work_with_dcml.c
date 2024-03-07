@@ -92,7 +92,7 @@ s21_decimal filld(char *input) {
     scale = strlen(dot) - 1;
     dot[0] = '\0';
   }
-  char *bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
+  char *bit_ptr = decimal_bits((SERVICE)*UINT_BITS - 1);
   mantiss = divide(full, bit_ptr);
   free(bit_ptr);
   if (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {

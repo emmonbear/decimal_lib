@@ -34,7 +34,7 @@ int s21_round(s21_decimal value, s21_decimal *result) {
   uint192_t integer =
       binary_div(decimal_to_uint192(value), get_ten_pow(power), &fractional);
   SET_POWER(fractional.Lbits[SERVICE], power);
-  *result = uint192_to_decimal(bank_rouding(integer, fractional, NULL));
+  *result = uint192_to_decimal(bank_rouding(integer, fractional));
   SET_SIGN(result->bits[SERVICE], sign);
 
   return ROUND_OK;

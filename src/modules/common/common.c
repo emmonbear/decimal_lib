@@ -21,13 +21,7 @@
  * @param[out] code error code
  * @return uint192_t - rounded number
  */
-uint192_t bank_rouding(uint192_t integer, uint192_t fractional, int *code) {
-  if (binary_compare(integer, dcml_max()) == EQUAL &&
-      !s21_is_equal(uint192_to_decimal(fractional), DCML_ZERO)) {
-    *code = (GET_SIGN(integer.Lbits[SERVICE])) ? 2 : 1;
-    return LDCML_ZERO;
-  }
-
+uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
   uint192_t res = LDCML_ZERO;
   s21_decimal point_five = {{5}};
   SET_POWER(point_five.bits[SERVICE], 1);

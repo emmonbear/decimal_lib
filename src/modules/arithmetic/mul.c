@@ -36,6 +36,7 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     return OK;
   }
 
+  *result = DCML_ZERO;
   int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
@@ -114,7 +115,7 @@ static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *r
   uint192_t remainder = LDCML_ZERO;
   res_tmp = binary_div(res_tmp, get_ten_pow(power_tmp), &remainder);
   SET_POWER(remainder.Lbits[SERVICE], power_tmp);
-  res_tmp = bank_rouding(res_tmp, remainder, &err_code);
+  res_tmp = bank_rouding(res_tmp, remainder);
 
   *result = uint192_to_decimal(res_tmp);
 
