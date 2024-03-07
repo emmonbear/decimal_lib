@@ -11,6 +11,8 @@
 
 #include "../include/arithmetic.h"
 
+static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+
 /**
  * @brief Multiplication two decimals
  *
@@ -25,8 +27,6 @@
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
-  int err_code = OK;
-
   if (!check_args(value_1, value_2, result)) {
     return INCORRECT;
   }
@@ -35,6 +35,8 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     *result = DCML_ZERO;
     return OK;
   }
+
+  int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
   uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);
@@ -79,8 +81,7 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-int mul_positive(s21_decimal value_1, s21_decimal value_2,
-                 s21_decimal *result) {
+static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   int err_code = OK;
 
   int8_t power_1 = GET_POWER(value_1.bits[SERVICE]);

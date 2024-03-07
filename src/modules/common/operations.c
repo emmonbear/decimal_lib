@@ -11,6 +11,8 @@
 
 #include "../include/common.h"
 
+static int get_high_bit(uint192_t value);
+
 /**
  * @brief Bitwise addition of two positive numbers of uint192_t type
  *
@@ -232,16 +234,17 @@ uint192_t ten_mul(uint192_t num, uint8_t pow) {
 uint8_t get_divider(uint192_t value) {
   uint8_t res = 0;
   uint192_t quotient = binary_div(value, dcml_max(), NULL);
+  uint192_t pow = ONE;
+  int8_t compare = LESS;
 
-  while (1) {
-    int8_t compare = binary_compare(quotient, get_ten_pow(res));
-    if ((compare == LESS) || (compare == EQUAL)) {
+  for(; ; res++, pow = ten_mul(pow, 1)) {
+    compare = binary_compare(quotient, pow);
+    if (compare != GREATER) {
       break;
     }
-    res++;
   }
 
-  uint192_t tmp = binary_div(value, get_ten_pow(res), NULL);
+  uint192_t tmp = binary_div(value, pow, NULL);
   if (check_overflow(tmp)) {
     res++;
   }
@@ -255,15 +258,18 @@ uint8_t get_divider(uint192_t value) {
  * @param[in] value uint192_t type number
  * @return int - high bit index
  */
-int get_high_bit(uint192_t value) {
-  int res = 0;
+static int get_high_bit(uint192_t value) {
+  int16_t bit = MAX_BITS - 1;
 
-  for (int16_t i = MAX_BITS - 1; i >= 0; i--) {
-    if (IS_SET_BIT(value, i)) {
-      res = i;
+  for(int j = LDEC_SIZE - 1; !value.Lbits[j]; j--) {
+    bit -= UINT_BITS;
+  }
+
+  for (; bit >= 0; bit--) {
+    if (IS_SET_BIT(value, bit)) {
       break;
     }
   }
 
-  return res;
+  return bit;
 }

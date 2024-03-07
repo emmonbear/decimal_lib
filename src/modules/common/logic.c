@@ -74,16 +74,35 @@ uint192_t binary_not(uint192_t value) {
 int binary_compare(uint192_t value_1, uint192_t value_2) {
   int res = EQUAL;
 
-  for (int i = MAX_BITS - 1; i >= 0; i--) {
-    bool bit_1 = IS_SET_BIT(value_1, i);
-    bool bit_2 = IS_SET_BIT(value_2, i);
+  int16_t i = MAX_BITS - 1;
 
-    if ((!bit_1) && (bit_2)) {
+  for(int j = LDEC_SIZE - 1; j >= 0; j--) {
+    if(!value_1.Lbits[j] && value_2.Lbits[j]) {
       res = LESS;
       break;
-    } else if ((bit_1) && (!bit_2)) {
+    } else if(value_1.Lbits[j] && !value_2.Lbits[j]) {
       res = GREATER;
       break;
+    } else if(!value_1.Lbits[j] && !value_2.Lbits[j]) {
+      i -= UINT_BITS;
+    } else {
+      break;
+    }
+  }
+
+  if(res == EQUAL) {
+    bool bit_1 = false;
+    bool bit_2 = false; 
+
+    for (; (i >= 0) && (bit_1 == bit_2); i--) {
+      bit_1 = IS_SET_BIT(value_1, i);
+      bit_2 = IS_SET_BIT(value_2, i);
+    }
+  
+    if ((!bit_1) && (bit_2)) {
+      res = LESS;
+    } else if ((bit_1) && (!bit_2)) {
+      res = GREATER;
     }
   }
 

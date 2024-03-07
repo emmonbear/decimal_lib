@@ -25,11 +25,11 @@
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
-  int err_code = OK;
-
   if (!check_args(value_1, value_2, result)) {
     return INCORRECT;
   }
+
+  int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
   uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);

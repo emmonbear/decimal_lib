@@ -11,6 +11,9 @@
 
 #include "../include/arithmetic.h"
 
+static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder, s21_decimal *result);
+static int calc_fract_part(uint192_t *quotient, uint192_t divider, uint192_t *remainder);
+
 /**
  * @brief Division two decimals
  *
@@ -25,8 +28,6 @@
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
 int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
-  int err_code = OK;
-
   if (!check_args(value_1, value_2, result)) {
     return INCORRECT;
   }
@@ -39,6 +40,8 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
     *result = DCML_ZERO;
     return OK;
   }
+
+  int err_code = OK;
 
   uint8_t sign_1 = GET_SIGN(value_1.bits[SERVICE]);
   uint8_t sign_2 = GET_SIGN(value_2.bits[SERVICE]);
@@ -83,8 +86,7 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
-                   s21_decimal *result) {
+static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder, s21_decimal *result) {
   int err_code = OK;
 
   uint8_t power_1 = calc_fract_part(&quotient, divider, &remainder);
@@ -114,8 +116,7 @@ int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder,
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-int calc_fract_part(uint192_t *quotient, uint192_t divider,
-                    uint192_t *remainder) {
+static int calc_fract_part(uint192_t *quotient, uint192_t divider, uint192_t *remainder) {
   int power = 0;
   uint192_t number = *quotient;
   uint192_t remainder_tmp = *remainder;

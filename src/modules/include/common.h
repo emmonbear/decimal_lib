@@ -72,7 +72,6 @@ uint192_t binary_sub(uint192_t value_1, uint192_t value_2);
 uint192_t binary_mul(uint192_t value_1, uint192_t value_2);
 uint192_t binary_div(uint192_t value_1, uint192_t value_2,
                      uint192_t *remainder);
-int get_high_bit(uint192_t value);
 void binary_normalizaton(uint192_t *value_1, uint192_t *value_2);
 uint192_t decimal_to_uint192(s21_decimal value);
 uint192_t get_ten_pow(uint8_t pow);
