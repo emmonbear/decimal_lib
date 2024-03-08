@@ -2,7 +2,7 @@
  * @file is_equal.h
  * @author emmonbea (https://github.com/emmonbear)
  * @brief Comparison header
- * @version 0.1
+ * @version 1.0
  * @date 2024-02-28
  *
  * @copyright Copyright (c) 2024

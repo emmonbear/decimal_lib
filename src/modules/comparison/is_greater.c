@@ -1,8 +1,8 @@
 /**
  * @file is_greater.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief is_greater module
- * @version 0.1
+ * @brief Main module for s21_is_greater function
+ * @version 1.0
  * @date 2024-02-28
  *
  * @copyright Copyright (c) 2024

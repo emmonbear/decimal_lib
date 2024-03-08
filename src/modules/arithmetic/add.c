@@ -1,8 +1,8 @@
 /**
  * @file add.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Addition module
- * @version 0.1
+ * @brief Main module for s21_add function
+ * @version 1.0
  * @date 2024-02-26
  *
  * @copyright Copyright (c) 2024
@@ -91,13 +91,13 @@ int add_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   SET_POWER(remainder.Lbits[SERVICE], power_tmp);
 
   if (!res_power && binary_compare(res_tmp, dcml_max()) == EQUAL &&
-    !s21_is_equal(uint192_to_decimal(remainder), DCML_ZERO)) {
+      !s21_is_equal(uint192_to_decimal(remainder), DCML_ZERO)) {
     return (GET_SIGN(res_tmp.Lbits[SERVICE])) ? SMALL : BIG;
   }
 
   res_tmp = bank_rouding(res_tmp, remainder);
   SET_POWER(res_tmp.Lbits[SERVICE], res_power);
   *res = uint192_to_decimal(res_tmp);
-  
+
   return err_code;
 }

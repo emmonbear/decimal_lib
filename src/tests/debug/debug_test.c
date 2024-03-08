@@ -13,12 +13,22 @@
 
 #include <stdint.h>
 
+/**
+ * @brief Print sum of mantissas
+ *
+ * @param value number
+ */
 void calculator_write(s21_decimal value) {
   printf("   %d * (%u * 2^64 + %u * 2^32 + %u) / 10^%d\n",
          ((value.bits[3] >> 31) ? -1 : 1), value.bits[2], value.bits[1],
          value.bits[0], (value.bits[3] << 1) >> 17);
 }
 
+/**
+ * @brief Print int bits
+ *
+ * @param value number
+ */
 void print_decimal_bits(s21_decimal value) {
 #ifdef CALCULATOR
   calculator_write(value);
@@ -54,6 +64,12 @@ void print_decimal_bits(s21_decimal value) {
   printf(RESET " |\n");
 }
 
+/**
+ * @brief Print bits of two decimals
+ *
+ * @param value_1 first number
+ * @param value_2 second number
+ */
 void both_decimal_bits(s21_decimal value_1, s21_decimal value_2) {
   printf("implement:");
   print_decimal_bits(value_1);
@@ -61,16 +77,29 @@ void both_decimal_bits(s21_decimal value_1, s21_decimal value_2) {
   print_decimal_bits(value_2);
 }
 
+/**
+ * @brief Print two floats
+ *
+ * @param value_1 first number
+ * @param value_2 second number
+ */
 void both_float_values(float value_1, float value_2) {
   printf("implement: %f\n", value_1);
   printf("calculate: %f\n", value_2);
 }
 
+/**
+ * @brief Print two ints
+ *
+ * @param value_1 first number
+ * @param value_2 second number
+ */
 void both_int_values(int value_1, int value_2) {
   printf("implement: %d\n", value_1);
   printf("calculate: %d\n", value_2);
 }
 
+/// @brief print line between tests
 void print_line() {
   printf(ORANGE
          "\n-------------------------------------------------------------------"

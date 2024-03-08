@@ -1,7 +1,7 @@
 /**
  * @file char_arithmetic.c
  * @author kossadda (https://github.com/kossadda)
- * @brief
+ * @brief Includes string arithmetic functionality
  * @version 1.0
  * @date 2024-03-03
  *
@@ -9,14 +9,17 @@
  *
  */
 
-#include "debug.h"
+#include "./../include/debug.h"
+
+static void strrev(char* str);
+static int compare_strings(const char* num1, const char* num2);
 
 /**
- * @brief
+ * @brief Addition by char
  *
- * @param num_1
- * @param num_2
- * @return char*
+ * @param[in] num_1 str with first number
+ * @param[in] num_2 str with second number
+ * @return char* - result of operation
  */
 char* add(char* num_1, char* num_2) {
   int remind = 0;
@@ -53,11 +56,11 @@ char* add(char* num_1, char* num_2) {
 }
 
 /**
- * @brief
+ * @brief Subrtract by char
  *
- * @param num_1
- * @param num_2
- * @return char*
+ * @param[in] num_1 str with first number
+ * @param[in] num_2 str with second number
+ * @return char* - result of operation
  */
 char* subtract(char* num_1, char* num_2) {
   int borrow = 0;
@@ -106,65 +109,53 @@ char* subtract(char* num_1, char* num_2) {
 }
 
 /**
- * @brief
- * for divide
- * @param num1
- * @param num2
- * @return int
- */
-static int compareStrings(const char* num1, const char* num2) {
-  int len1 = strlen(num1), len2 = strlen(num2);
-  return (len1 != len2) ? len1 - len2 : strcmp(num1, num2);
-}
-
-/**
- * @brief
+ * @brief Divide by char
  *
- * @param num1
- * @param num2
- * @return char*
+ * @param[in] num_1 str with first number
+ * @param[in] num_2 str with second number
+ * @return char* - result of operation
  */
 char* divide(char* num1, char* num2) {
   int len1 = strlen(num1), len2 = strlen(num2);
 
-  if (compareStrings(num1, num2) < 0) {
+  if (compare_strings(num1, num2) < 0) {
     char* result = (char*)malloc(2);
     strcpy(result, "0");
     return result;
-  } else if (compareStrings(num1, num2) == 0) {
+  } else if (compare_strings(num1, num2) == 0) {
     char* result = (char*)malloc(2);
     strcpy(result, "1");
     return result;
   }
 
   char* result = calloc(len1 + 1, sizeof(char));
-  char* dividendPart = calloc(len2 + 2, sizeof(char));
+  char* div_part = calloc(len2 + 2, sizeof(char));
   int resultPos = 0;
 
-  strncpy(dividendPart, num1, len2 - 1);
+  strncpy(div_part, num1, len2 - 1);
 
   for (int i = len2 - 1; i < len1; i++) {
-    int dividendPartLen = strlen(dividendPart);
-    dividendPart[dividendPartLen] = num1[i];
-    dividendPart[dividendPartLen + 1] = '\0';
+    int div_part_len = strlen(div_part);
+    div_part[div_part_len] = num1[i];
+    div_part[div_part_len + 1] = '\0';
 
     int count = 0;
-    while (compareStrings(dividendPart, num2) >= 0) {
-      char* temp = subtract(dividendPart, num2);
-      strcpy(dividendPart, temp);
+    while (compare_strings(div_part, num2) >= 0) {
+      char* temp = subtract(div_part, num2);
+      strcpy(div_part, temp);
       free(temp);
       count++;
     }
 
     result[resultPos++] = count + '0';
 
-    char* temp = dividendPart;
+    char* temp = div_part;
     while (*temp == '0') temp++;
     if (strlen(temp) == 0) {
-      strcpy(dividendPart, "0");
+      strcpy(div_part, "0");
     } else {
-      if (temp != dividendPart) {
-        strcpy(dividendPart, temp);
+      if (temp != div_part) {
+        strcpy(div_part, temp);
       }
     }
   }
@@ -173,33 +164,18 @@ char* divide(char* num1, char* num2) {
   while (*tempResult == '0') tempResult++;
   char* finalResult = strdup(tempResult);
 
-  free(dividendPart);
+  free(div_part);
   free(result);
 
   return finalResult;
 }
 
 /**
- * @brief
- * for multiply
- * @param str
- */
-void strrev(char* str) {
-  int len = strlen(str);
-
-  for (int i = 0; i < len / 2; i++) {
-    char temp = str[i];
-    str[i] = str[len - 1 - i];
-    str[len - 1 - i] = temp;
-  }
-}
-
-/**
- * @brief
+ * @brief Multiply by char
  *
- * @param num1
- * @param num2
- * @return char*
+ * @param[in] num_1 str with first number
+ * @param[in] num_2 str with second number
+ * @return char* - result of operation
  */
 char* multiply(char* num1, char* num2) {
   int len1 = strlen(num1), len2 = strlen(num2);
@@ -229,4 +205,32 @@ char* multiply(char* num1, char* num2) {
   free(result);
 
   return finalResult;
+}
+
+/**
+ * @brief For expand string
+ *
+ * @param[out] str expandable string
+ */
+static void strrev(char* str) {
+  int len = strlen(str);
+
+  for (int i = 0; i < len / 2; i++) {
+    char temp = str[i];
+    str[i] = str[len - 1 - i];
+    str[len - 1 - i] = temp;
+  }
+}
+
+/**
+ * @brief Compare string sizes
+ *
+ * @param[in] num_1 str with first number
+ * @param[in] num_2 str with second number
+ * @retval first - difference between string lengths
+ * @retval second - the length of the string if they are equal
+ */
+static int compare_strings(const char* num1, const char* num2) {
+  int len1 = strlen(num1), len2 = strlen(num2);
+  return (len1 != len2) ? len1 - len2 : strcmp(num1, num2);
 }

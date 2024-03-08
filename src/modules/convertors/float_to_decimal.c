@@ -69,7 +69,6 @@ int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   } else if (exponent > FLT_PRECISION) {
     uint192_t long_dst = decimal_to_uint192(*dst);
     long_dst = ten_mul(long_dst, exponent - FLT_PRECISION);
-    // long_dst = binary_mul(long_dst, get_ten_pow(exponent - FLT_PRECISION));
     *dst = uint192_to_decimal(long_dst);
   } else {
     SET_POWER(dst->bits[SERVICE], (FLT_PRECISION - abs(exponent)));

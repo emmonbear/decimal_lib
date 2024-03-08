@@ -1,8 +1,8 @@
 /**
  * @file binary_operations.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Bit operations module
- * @version 0.1
+ * @brief Main module for operations functions
+ * @version 1.0
  * @date 2024-02-26
  *
  * @copyright Copyright (c) 2024
@@ -59,9 +59,9 @@ uint192_t binary_sub(uint192_t value_1, uint192_t value_2) {
 uint192_t binary_mul(uint192_t value_1, uint192_t value_2) {
   uint192_t res = LDCML_ZERO;
   uint192_t tmp = value_1;
-  uint8_t high_bit = get_high_bit(value_2);
+  uint16_t high_bit = get_high_bit(value_2);
 
-  for (uint8_t i = 0; i <= high_bit; i++) {
+  for (uint16_t i = 0; i <= high_bit; i++) {
     if (IS_SET_BIT(value_2, i)) {
       res = binary_add(res, tmp);
     }
@@ -135,8 +135,8 @@ uint192_t binary_div(uint192_t value_1, uint192_t value_2,
  * @param[out] value_2 Pointer to number of uint192_t type
  */
 void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
-  uint8_t power_1 = GET_POWER(Lvalue_1->Lbits[SERVICE]);
-  uint8_t power_2 = GET_POWER(Lvalue_2->Lbits[SERVICE]);
+  uint16_t power_1 = GET_POWER(Lvalue_1->Lbits[SERVICE]);
+  uint16_t power_2 = GET_POWER(Lvalue_2->Lbits[SERVICE]);
 
   zero_service_bits(Lvalue_1, Lvalue_2);
   if (power_1 > power_2) {
@@ -147,7 +147,7 @@ void binary_normalizaton(uint192_t *Lvalue_1, uint192_t *Lvalue_2) {
 }
 
 /**
- * @brief Zero out decimal_t[3]
+ * @brief Zero out decimal_t[SERVICE]
  *
  * @param[out] value_1
  * @param[out] value_2
@@ -198,7 +198,7 @@ s21_decimal uint192_to_decimal(uint192_t value) {
 uint192_t get_ten_pow(uint8_t pow) {
   uint192_t res = ONE;
 
-  for (uint8_t i = 0; i < pow; i++) {
+  for (uint16_t i = 0; i < pow; i++) {
     res = binary_add(shift_left(res, 3), shift_left(res, 1));
   }
 
@@ -213,7 +213,7 @@ uint192_t get_ten_pow(uint8_t pow) {
  * @return uint192_t - multiplication result
  */
 uint192_t ten_mul(uint192_t num, uint8_t pow) {
-  for (uint8_t i = 0; i < pow; i++) {
+  for (uint16_t i = 0; i < pow; i++) {
     num = binary_add(shift_left(num, 3), shift_left(num, 1));
   }
 
@@ -231,13 +231,13 @@ uint192_t ten_mul(uint192_t num, uint8_t pow) {
  * @param[in] value number to be reduced
  * @return uint8_t - power of ten
  */
-uint8_t get_divider(uint192_t value) {
-  uint8_t res = 0;
+uint16_t get_divider(uint192_t value) {
+  uint16_t res = 0;
   uint192_t quotient = binary_div(value, dcml_max(), NULL);
   uint192_t pow = ONE;
   int8_t compare = LESS;
 
-  for(; ; res++, pow = ten_mul(pow, 1)) {
+  for (;; res++, pow = ten_mul(pow, 1)) {
     compare = binary_compare(quotient, pow);
     if (compare != GREATER) {
       break;
@@ -261,7 +261,7 @@ uint8_t get_divider(uint192_t value) {
 static int get_high_bit(uint192_t value) {
   int16_t bit = MAX_BITS - 1;
 
-  for(int j = LDEC_SIZE - 1; !value.Lbits[j]; j--) {
+  for (int j = LDEC_SIZE - 1; !value.Lbits[j]; j--) {
     bit -= UINT_BITS;
   }
 

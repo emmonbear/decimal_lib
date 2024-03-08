@@ -2,7 +2,7 @@
  * @file arithmetic.h
  * @author emmonbea (https://github.com/emmonbear)
  * @brief Arithmetic header
- * @version 0.1
+ * @version 1.0
  * @date 2024-02-26
  *
  * @copyright Copyright (c) 2024
@@ -17,11 +17,11 @@
 
 /// @brief Enumeration of arithmetic error codes
 typedef enum {
-  OK,         ///< correct result
-  BIG,        ///< the number is too large or equal to infinity
-  SMALL,      ///< the number is too small or equal to negative infinity
-  ZERO_DIV,   ///< division by 0
-  INCORRECT,  ///< incorrect decimal_t
+  OK,         ///< Correct result
+  BIG,        ///< The number is too large or equal to infinity
+  SMALL,      ///< The number is too small or equal to negative infinity
+  ZERO_DIV,   ///< Division by 0
+  INCORRECT,  ///< Incorrect decimal_t
 } arithmetic_code;
 
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);

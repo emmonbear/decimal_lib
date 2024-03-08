@@ -1,12 +1,27 @@
-#include "./../include/common.h"
-#include "./debug.h"
+/**
+ * @file debug.c
+ * @author kossadda (https://github.com/kossadda)
+ * @brief Main module for printd function
+ * @version 1.0
+ * @date 2024-03-08
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+
+#include "./../include/debug.h"
 
 static char *pars_service_mantiss(s21_decimal value, char *math_str);
 static void insert_dot(char *str, int pos);
-static char *decimal_bits(int index);
 
+/**
+ * @brief Function for printing a decimal number
+ *
+ * @param[in] value printing number
+ * @param[in] new_line string elements to be appended to the end
+ */
 void printd(s21_decimal value, char *new_line) {
-  char result[100];
+  char result[1000];
   char *temp;
   char *bit;
   sprintf(result, "%s", "0");
@@ -25,6 +40,13 @@ void printd(s21_decimal value, char *new_line) {
   free(temp);
 }
 
+/**
+ * @brief Processing the service mantissa to set the sign and dot
+ *
+ * @param[in] value decimal number
+ * @param[in] math_str a copy of the resulting string
+ * @return char* - string with dot and sign set
+ */
 static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   char *result = (char *)calloc(strlen(math_str) + 1, sizeof(char));
   sprintf(result, "%s", math_str);
@@ -34,16 +56,16 @@ static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   int len = strlen(result);
 
   if (scale > (SERVICE)*10) {
-    sprintf(result, "%s", "0");
+    sprintf(result, "%s", "printd: Too small value\n\n");
   } else if (scale == len) {
-    result = (char *)realloc(result, 103 * sizeof(char));
+    result = (char *)realloc(result, 1000 * sizeof(char));
     sprintf(result, "0.%s", math_str);
   } else if (scale < len) {
-    result = (char *)realloc(result, 103 * sizeof(char));
+    result = (char *)realloc(result, 1000 * sizeof(char));
     insert_dot(result, len - scale);
   } else if (scale > len) {
-    result = (char *)realloc(result, 103 * sizeof(char));
-    char temp[scale + 4];
+    result = (char *)realloc(result, 1000 * sizeof(char));
+    char temp[scale + 10];
     for (int i = 0; i < scale - len; i++) {
       strcpy(temp, result);
       sprintf(result, "0%s", temp);
@@ -62,6 +84,12 @@ static char *pars_service_mantiss(s21_decimal value, char *math_str) {
   return result;
 }
 
+/**
+ * @brief Set point
+ *
+ * @param[out] str number as a string
+ * @param[in] pos where to set the point
+ */
 static void insert_dot(char *str, int pos) {
   for (int i = strlen(str); i >= pos; --i) {
     str[i + 1] = str[i];
@@ -72,98 +100,13 @@ static void insert_dot(char *str, int pos) {
   }
 }
 
-s21_decimal filld(char *input) {
-  s21_decimal num = {{0x0}};
-  char *mantiss;
-
-  int sign = 0;
-  int scale = 0;
-
-  if (input[0] == '-') {
-    sign = 1;
-    input++;
-  }
-
-  int len = strlen(input);
-  char full[len + 1];
-  sprintf(full, "%s", input);
-  char *dot = strchr(full, '.');
-  if (dot) {
-    scale = strlen(dot) - 1;
-    dot[0] = '\0';
-  }
-  char *bit_ptr = decimal_bits((SERVICE)*UINT_BITS - 1);
-  mantiss = divide(full, bit_ptr);
-  free(bit_ptr);
-  if (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
-    fprintf(stderr, "\nERROR: Number %s exceeds of decimal size.\n", input);
-    free(mantiss);
-    exit(1);
-  }
-  if (dot) {
-    int shift = len - strlen(full) - 1;
-    for (int i = 0; i < shift; i++) {
-      char remind = dot[i + 1];
-      dot[i + 1] = dot[i];
-      dot[i] = remind;
-    }
-  }
-
-  free(mantiss);
-  bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
-  mantiss = divide(full, bit_ptr);
-  free(bit_ptr);
-  while (strlen(mantiss) > 1 || mantiss[0] - '0' != 0) {
-    free(mantiss);
-    full[strlen(full) - 1] = '\0';
-    bit_ptr = decimal_bits((SERVICE)*UINT_BITS);
-    mantiss = divide(full, bit_ptr);
-    free(bit_ptr);
-    scale--;
-  }
-
-  for (int i = DEC_SIZE - 2; i >= 0; i--) {
-    free(mantiss);
-    if (i == 0) {
-      num.bits[i] = atoi(full);
-    } else {
-      bit_ptr = decimal_bits(i * 32);
-      mantiss = divide(full, bit_ptr);
-      free(bit_ptr);
-      num.bits[i] = atoi(mantiss);
-      bit_ptr = decimal_bits(i * 32);
-      char *temp = multiply(mantiss, bit_ptr);
-      char *temp2 = subtract(full, temp);
-      sprintf(full, "%s", temp2);
-      free(bit_ptr);
-      free(temp);
-      free(temp2);
-    }
-  }
-
-  num.bits[SERVICE] = (scale << 16) | (sign << (UINT_BITS - 1));
-
-  return num;
-}
-
-void printLd(uint192_t value, char *new_line) {
-  char result[100];
-  char *temp;
-  sprintf(result, "%s", "0");
-  for (int i = 0; i < (LDEC_SIZE * UINT_BITS); i++) {
-    if (IS_SET_BIT(value, i)) {
-      char *bit = decimal_bits(i);
-      temp = add(result, bit);
-      sprintf(result, "%s", temp);
-      free(temp);
-      free(bit);
-    }
-  }
-
-  printf("%s%s", result, new_line);
-}
-
-static char *decimal_bits(int index) {
+/**
+ * @brief Get 2 to the power index
+ *
+ * @param[in] index Power of two
+ * @return char* - number as a string
+ */
+char *decimal_bits(int index) {
   char bits[192][60] = {
       "1",                                                           // 2^0
       "2",                                                           // 2^1
@@ -359,8 +302,22 @@ static char *decimal_bits(int index) {
       "3138550867693340381917894711603833208051177722232017256448",  // 2^191
   };
 
-  char *need_bit = (char *)malloc(strlen(bits[index]) + 1);
-  sprintf(need_bit, "%s", bits[index]);
+  char *need_bit;
+  if (index > 191) {
+    need_bit = (char *)malloc(strlen(bits[191]) + 1);
+    sprintf(need_bit, "%s", bits[191]);
+    for (int i = 192; i <= index; i++) {
+      char temp[strlen(need_bit) + 1];
+      sprintf(temp, "%s", need_bit);
+      if (need_bit) {
+        free(need_bit);
+      }
+      need_bit = multiply(temp, "2");
+    }
+  } else {
+    need_bit = (char *)malloc(strlen(bits[index]) + 1);
+    sprintf(need_bit, "%s", bits[index]);
+  }
 
   return need_bit;
 }

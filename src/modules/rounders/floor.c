@@ -13,6 +13,17 @@
 #include "./../include/comparison.h"
 #include "./../include/rounders.h"
 
+/**
+ * @brief Rounds a specified Decimal number to the closest integer toward
+ * negative infinity
+ *
+ * @param[in] value decimal to be rounded
+ * @param[out] result rounded decimal
+ * @return int - ROUND_ERROR code
+ * @retval ROUND_OK = 0 - successful rounding. A valid number that fits
+ * into a decimal.
+ * @retval ROUND_ERROR = 1 - invalid number or does not fit into decimal.
+ */
 int s21_floor(s21_decimal value, s21_decimal *result) {
   if (!result || !is_correct(value)) {
     return ROUND_ERROR;

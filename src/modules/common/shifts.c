@@ -1,8 +1,8 @@
 /**
  * @file shifts.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Shift module
- * @version 0.1
+ * @brief Main module for shifting functions
+ * @version 1.0
  * @date 2024-02-28
  *
  * @copyright Copyright (c) 2024
@@ -14,8 +14,9 @@
 /**
  * @brief Shift value by shift bits to the left
  *
- * @param[out] value number of uint192_t type to be shifted to the left by shift
+ * @param[in] num number of uint192_t type to be shifted to the left by shift
  * @param[in] shift number specifying by how much to shift value to the left
+ * @return uint192_t - shifted number
  */
 uint192_t shift_left(uint192_t num, unsigned int shift) {
   for (; shift >= UINT_BITS; shift -= UINT_BITS) {
@@ -36,10 +37,11 @@ uint192_t shift_left(uint192_t num, unsigned int shift) {
 }
 
 /**
- * @brief Shift value by shift bits to the left
+ * @brief Shift value by shift bits to the right
  *
- * @param[out] value number of uint192_t type to be shifted to the left by shift
+ * @param[in] num number of uint192_t type to be shifted to the left by shift
  * @param[in] shift number specifying by how much to shift value to the left
+ * @return uint192_t - shifted number
  */
 uint192_t shift_right(uint192_t num, unsigned int shift) {
   for (; shift >= UINT_BITS; shift -= UINT_BITS) {

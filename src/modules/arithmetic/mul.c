@@ -1,8 +1,8 @@
 /**
  * @file mul.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Multiplication module
- * @version 0.1
+ * @brief Main module for s21_mul function
+ * @version 1.0
  * @date 2024-03-02
  *
  * @copyright Copyright (c) 2024
@@ -11,7 +11,8 @@
 
 #include "../include/arithmetic.h"
 
-static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+static int mul_positive(s21_decimal value_1, s21_decimal value_2,
+                        s21_decimal *result);
 
 /**
  * @brief Multiplication two decimals
@@ -82,11 +83,12 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
+static int mul_positive(s21_decimal value_1, s21_decimal value_2,
+                        s21_decimal *result) {
   int err_code = OK;
 
-  int8_t power_1 = GET_POWER(value_1.bits[SERVICE]);
-  int8_t power_2 = GET_POWER(value_2.bits[SERVICE]);
+  int16_t power_1 = GET_POWER(value_1.bits[SERVICE]);
+  int16_t power_2 = GET_POWER(value_2.bits[SERVICE]);
 
   uint192_t Lvalue_1 = decimal_to_uint192(value_1);
   uint192_t Lvalue_2 = decimal_to_uint192(value_2);
@@ -95,8 +97,8 @@ static int mul_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *r
 
   uint192_t res_tmp = binary_mul(Lvalue_1, Lvalue_2);
 
-  int8_t power_tmp = get_divider(res_tmp);
-  int8_t res_power = (power_1 + power_2) - power_tmp;
+  int16_t power_tmp = get_divider(res_tmp);
+  int16_t res_power = (power_1 + power_2) - power_tmp;
 
   if (res_power < 0) {
     return BIG;

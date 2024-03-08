@@ -12,11 +12,11 @@
 #include "./../include/rounders.h"
 
 /**
- * @brief Return the integer digits of the specified decimal_t number; any
- * fractional digits are discarded, including finite zeros.
+ * @brief Return the integer digits of the specified decimal number; any
+ * fractional digits are discarded, including finite zeros
  *
- * @param[in] value decimal_t to be truncate
- * @param[out] result truncated decimal_t
+ * @param[in] value decimal to be truncate
+ * @param[out] result truncated decimal
  * @return int - ROUND_ERROR code
  * @retval ROUND_OK = 0 - successful rounding. A valid number that fits
  * into a decimal.

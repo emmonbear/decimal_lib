@@ -2,7 +2,7 @@
  * @file common.h
  * @author emmonbea (https://github.com/emmonbear)
  * @brief Common header
- * @version 0.1
+ * @version 1.0
  * @date 2024-02-23
  *
  * @copyright Copyright (c) 2024
@@ -18,34 +18,34 @@
 #include "./macros.h"
 #include "stdbool.h"
 
-/// @brief Enumerations with array sizes.
+/// @brief Enumerations with array sizes
 typedef enum {
-  DEC_SIZE = 4,                    ///< Int array used for the final result.
-  LDEC_SIZE = (DEC_SIZE - 1) * 2,  ///< Int array used for precise calculations.
-  SERVICE = DEC_SIZE - 1,
-  MAX_SCALE = (DEC_SIZE * 9) - 8,
+  DEC_SIZE = 4,                    ///< Int array used for the final result
+  LDEC_SIZE = (DEC_SIZE - 1) * 2,  ///< Int array used for precise calculations
+  SERVICE = DEC_SIZE - 1,          ///< Index of service mantiss
+  MAX_SCALE = (DEC_SIZE * 9) - 8,  ///< Max scale about decimal size
 } array_size;
 
-/// @brief Decimal representation. Basic project type.
+/// @brief Decimal representation. Basic project type
 typedef struct {
-  unsigned int bits[DEC_SIZE];  ///< Bits: 96 - significant, 32 - service.
+  unsigned int bits[DEC_SIZE];  ///< Bits: 96 - significant, 32 - service
 } s21_decimal;
 
-/// @brief Long decimal representation. Intended for calculation accuracy.
+/// @brief Long decimal representation. Intended for calculation accuracy
 typedef struct {
-  unsigned int Lbits[LDEC_SIZE];  ///< Bits: twice of basic type significants.
+  unsigned int Lbits[LDEC_SIZE];  ///< Bits: twice of basic type significants
 } uint192_t;
 
-/// @brief Enumeration of decimal_t signs.
+/// @brief Enumeration of decimal_t signs
 typedef enum {
-  POSITIVE = 0,  ///< Positive sign.
-  NEGATIVE = 1,  ///< Negative sign.
+  POSITIVE = 0,  ///< Positive sign
+  NEGATIVE = 1,  ///< Negative sign
 } decimal_sign;
 
 /// @brief Enumeration of bits counts.
 typedef enum {
-  UINT_BITS = 32,                    ///< Number of bits in uint.
-  MAX_BITS = LDEC_SIZE * UINT_BITS,  ///< Number of bits in uint192_t.
+  UINT_BITS = 32,                    ///< Number of bits in uint
+  MAX_BITS = LDEC_SIZE * UINT_BITS,  ///< Number of bits in uint192_t
 } bits_count;
 
 /// @brief Enumeration of bit comparison codes
@@ -76,7 +76,7 @@ void binary_normalizaton(uint192_t *value_1, uint192_t *value_2);
 uint192_t decimal_to_uint192(s21_decimal value);
 uint192_t get_ten_pow(uint8_t pow);
 uint192_t ten_mul(uint192_t num, uint8_t pow);
-uint8_t get_divider(uint192_t value);
+uint16_t get_divider(uint192_t value);
 s21_decimal uint192_to_decimal(uint192_t value);
 void zero_service_bits(uint192_t *value_1, uint192_t *value_2);
 //==============================================================================

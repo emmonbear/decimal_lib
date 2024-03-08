@@ -1,8 +1,8 @@
 /**
  * @file bank_rouding.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Common module
- * @version 0.1
+ * @brief Main module for common functions
+ * @version 1.0
  * @date 2024-02-27
  *
  * @copyright Copyright (c) 2024
@@ -18,7 +18,6 @@
  *
  * @param[in] integer integer part of a number
  * @param[in] fractional fractional part of a number
- * @param[out] code error code
  * @return uint192_t - rounded number
  */
 uint192_t bank_rouding(uint192_t integer, uint192_t fractional) {
@@ -67,7 +66,7 @@ s21_decimal dabs(s21_decimal value) {
  */
 bool is_correct(s21_decimal value) {
   unsigned int empty = value.bits[SERVICE] & 0x7F00FFFF;
-  uint8_t power = GET_POWER(value.bits[SERVICE]);
+  uint16_t power = GET_POWER(value.bits[SERVICE]);
 
   return ((empty) || (power > MAX_SCALE)) ? false : true;
 }
@@ -147,11 +146,9 @@ bool dcml_is_zero(s21_decimal value) {
 }
 
 /**
- * @brief Check if all significant bits of a decimal_t number are zero
+ * @brief Get decimal maximum number
  *
- * @param[in] value Checked number decimal_t
- * @retval true - no significant bits
- * @retval false - contains significant bits
+ * @return uint192_t
  */
 uint192_t dcml_max() {
   uint192_t value = LDCML_ZERO;

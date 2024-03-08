@@ -1,8 +1,8 @@
 /**
  * @file is_not_equal.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Is_not_equal module
- * @version 0.1
+ * @brief Main module for s21_is_not_equal function
+ * @version 1.0
  * @date 2024-02-28
  *
  * @copyright Copyright (c) 2024

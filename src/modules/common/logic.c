@@ -1,8 +1,8 @@
 /**
  * @file binary_logic.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Binary logic module
- * @version 0.1
+ * @brief Main module for binary logic functions
+ * @version 1.0
  * @date 2024-02-25
  *
  * @copyright Copyright (c) 2024
@@ -76,29 +76,29 @@ int binary_compare(uint192_t value_1, uint192_t value_2) {
 
   int16_t i = MAX_BITS - 1;
 
-  for(int j = LDEC_SIZE - 1; j >= 0; j--) {
-    if(!value_1.Lbits[j] && value_2.Lbits[j]) {
+  for (int j = LDEC_SIZE - 1; j >= 0; j--) {
+    if (!value_1.Lbits[j] && value_2.Lbits[j]) {
       res = LESS;
       break;
-    } else if(value_1.Lbits[j] && !value_2.Lbits[j]) {
+    } else if (value_1.Lbits[j] && !value_2.Lbits[j]) {
       res = GREATER;
       break;
-    } else if(!value_1.Lbits[j] && !value_2.Lbits[j]) {
+    } else if (!value_1.Lbits[j] && !value_2.Lbits[j]) {
       i -= UINT_BITS;
     } else {
       break;
     }
   }
 
-  if(res == EQUAL) {
+  if (res == EQUAL) {
     bool bit_1 = false;
-    bool bit_2 = false; 
+    bool bit_2 = false;
 
     for (; (i >= 0) && (bit_1 == bit_2); i--) {
       bit_1 = IS_SET_BIT(value_1, i);
       bit_2 = IS_SET_BIT(value_2, i);
     }
-  
+
     if ((!bit_1) && (bit_2)) {
       res = LESS;
     } else if ((bit_1) && (!bit_2)) {

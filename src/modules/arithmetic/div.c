@@ -1,8 +1,8 @@
 /**
  * @file div.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Division two decimals
- * @version 0.1
+ * @brief Main module for s21_div function
+ * @version 1.0
  * @date 2024-03-04
  *
  * @copyright Copyright (c) 2024
@@ -11,8 +11,10 @@
 
 #include "../include/arithmetic.h"
 
-static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder, s21_decimal *result);
-static int calc_fract_part(uint192_t *quotient, uint192_t divider, uint192_t *remainder);
+static int div_additional(uint192_t divider, uint192_t quotient,
+                          uint192_t remainder, s21_decimal *result);
+static int calc_fract_part(uint192_t *quotient, uint192_t divider,
+                           uint192_t *remainder);
 
 /**
  * @brief Division two decimals
@@ -86,12 +88,13 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remainder, s21_decimal *result) {
+static int div_additional(uint192_t divider, uint192_t quotient,
+                          uint192_t remainder, s21_decimal *result) {
   int err_code = OK;
 
-  uint8_t power_1 = calc_fract_part(&quotient, divider, &remainder);
+  uint16_t power_1 = calc_fract_part(&quotient, divider, &remainder);
   uint192_t res_tmp = LDCML_ZERO;
-  uint8_t power_2 = calc_fract_part(&res_tmp, divider, &remainder);
+  uint16_t power_2 = calc_fract_part(&res_tmp, divider, &remainder);
   SET_POWER(res_tmp.Lbits[SERVICE], power_2);
 
   quotient = bank_rouding(quotient, res_tmp);
@@ -116,7 +119,8 @@ static int div_additional(uint192_t divider, uint192_t quotient, uint192_t remai
  * @retval ZERO_DIV = 3 - division by 0;
  * @retval INCORRECT = 4 - incorrect decimal_t;
  */
-static int calc_fract_part(uint192_t *quotient, uint192_t divider, uint192_t *remainder) {
+static int calc_fract_part(uint192_t *quotient, uint192_t divider,
+                           uint192_t *remainder) {
   int power = 0;
   uint192_t number = *quotient;
   uint192_t remainder_tmp = *remainder;

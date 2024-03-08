@@ -21,8 +21,8 @@
 
 /// @brief Enumeration of Rounders error codes
 typedef enum {
-  ROUND_OK,     ///< round error
-  ROUND_ERROR,  ///< round ok
+  ROUND_OK,     ///< Round error
+  ROUND_ERROR,  ///< Round ok
 } rounder_code;
 
 int s21_truncate(s21_decimal value, s21_decimal *result);

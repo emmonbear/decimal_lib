@@ -16,10 +16,9 @@
 
 #include "./common.h"
 
-#define DECIMAL_MAX \
-  79228162514264337593543950335.0  ///< {{0xFFFFFFF, 0xFFFFFFF, 0xFFFFFFF, 0}}
-#define IS_NAN(x) x != x           ///< is not a number check
-#define IS_INF(x) x == 1.0 / 0.0   ///< is infinity check
+#define DECIMAL_MAX 79228162514264337593543950335.0  ///< Decimal max num
+#define IS_NAN(x) x != x                             ///< Is not a number check
+#define IS_INF(x) x == 1.0 / 0.0                     ///< Is infinity check
 
 /// @brief INT_MAX as decimal
 #define DCML_INT_MAX \
@@ -35,15 +34,15 @@
 
 /// @brief Enumeration of conversion error codes
 typedef enum {
-  CONVERSION_OK,     ///< conversion error
-  CONVERSION_ERROR,  ///< conversion ok
+  CONVERSION_OK,     ///< Conversion error
+  CONVERSION_ERROR,  ///< Conversion ok
 } converter_code;
 
-/// @todo Добавить описание
+/// @brief Enumeration of main convertors constants
 typedef enum {
-  FLT_PRECISION = 6,
-  MIN_NEED_SIZE = 15,
-  EXP_LEN = 4,
+  FLT_PRECISION = 6,   ///< Precision of float value
+  MIN_NEED_SIZE = 15,  ///< Min need size for sprintf num with sciece notation
+  EXP_LEN = 4,         ///< Length of science write of sprintf
 } constants;
 
 int s21_from_int_to_decimal(int src, s21_decimal *dst);

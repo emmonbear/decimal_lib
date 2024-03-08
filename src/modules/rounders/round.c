@@ -12,10 +12,10 @@
 #include "./../include/rounders.h"
 
 /**
- * @brief Round decimal_t to the nearest integer.
+ * @brief Round decimal to the nearest integer
  *
- * @param[in] value decimal_t to be rounded
- * @param[out] result rounded decimal_t
+ * @param[in] value decimal to be rounded
+ * @param[out] result rounded decimal
  * @return int - ROUND_ERROR code
  * @retval ROUND_OK = 0 - successful rounding. A valid number that fits
  * into a decimal.

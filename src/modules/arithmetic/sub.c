@@ -1,8 +1,8 @@
 /**
  * @file sub.c
  * @author emmonbea (https://github.com/emmonbear)
- * @brief Subtraction module
- * @version 0.1
+ * @brief Main module for s21_sub function
+ * @version 1.0
  * @date 2024-02-28
  *
  * @copyright Copyright (c) 2024
@@ -91,7 +91,7 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
 
   binary_normalizaton(&Lvalue_1, &Lvalue_2);
   uint192_t res_tmp = binary_sub(Lvalue_1, Lvalue_2);
-  uint8_t power_tmp = get_divider(res_tmp);
+  uint16_t power_tmp = get_divider(res_tmp);
 
   int8_t res_power = GET_MAX(power_1, power_2) - power_tmp;
   uint192_t remainder = LDCML_ZERO;
@@ -99,7 +99,7 @@ int sub_positive(s21_decimal value_1, s21_decimal value_2, s21_decimal *res) {
   SET_POWER(remainder.Lbits[SERVICE], power_tmp);
 
   if (!res_power && binary_compare(res_tmp, dcml_max()) == EQUAL &&
-    !s21_is_equal(uint192_to_decimal(remainder), DCML_ZERO)) {
+      !s21_is_equal(uint192_to_decimal(remainder), DCML_ZERO)) {
     return (GET_SIGN(res_tmp.Lbits[SERVICE])) ? SMALL : BIG;
   }
 
